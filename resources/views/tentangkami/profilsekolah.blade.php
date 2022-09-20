@@ -97,6 +97,7 @@
                     </div>
                 </div>
             </section>
+            
             <section class="tf-section item-details-page">
                 <div class="container">
                     <div class="row">

@@ -173,17 +173,19 @@
             <div class="row">
                 <div class="col-12 col-md-6  wow fadeInRight">
                     <div class="text-video">
-
+                        <div class="text-center">
                         <h4>Sambutan</h4>
                         <br>
                         <h2 class="title-h2">Kepala Sekolah</h2>
+                        </div>
                         <br>
                         <br>
 
 
-                        <p>“Prakata KEPALA SMK MUHAMMADIYAH 1 GENTENG”
-
-                            ASSALAMUALAIKUM WARAHMATULLAHI WABARAKATUH</p>
+                        <p style="text-align: center;">“Prakata KEPALA SMK MUHAMMADIYAH 1 GENTENG”</p>
+                        <p style="text-align: center;">ASSALAMUALAIKUM WARAHMATULLAHI WABARAKATUH</p>
+                        <br>
+                        <br>
 
                         <p>Puji syukur kita panjatkan kepada Allah Subhanahu Wa Ta’ala yang telah memberikan Rahmat dan
                             Anugrah-Nya sehingga website SMK Muhammadiyah 1 Genteng ini dapat terbit. Salah satu tujuan
@@ -199,14 +201,13 @@
                             mengharapkan masukan dari berbagai pihak untuk sendiri agar kami terus belajar dan update
                             sehingga tampilan isi dan mutu website akan terus berkembang dan lebih baik terima kasih
                             atas kerjasamanya maju terus untuk SMK Muhammadiyah 1 Genteng yang lebih baik lagi.</p>
-                            <p>WASSALAMUALAIKUM WARAHMATULLAHI WABARAKTU</p>
+                            <p style="text-align: center;">WASSALAMUALAIKUM WARAHMATULLAHI WABARAKTU</p>
+                               <p style="text-align: center;"> Hormat kami,</p>
 
-                               <p> Hormat kami,</p>
-
-                              <p>  Kepala SMK Muhammadiyah 1 Genteng</p>
+                              <p style="text-align: center;">  Kepala SMK Muhammadiyah 1 Genteng</p>
 
 
-                        <p><strong>Taslim, S.Ag, M.Pd</strong></p>
+                        <p style="text-align: center;"><strong>Taslim, S.Ag, M.Pd</strong></p>
                     </div>
                 </div>
                 <div class="img-right">

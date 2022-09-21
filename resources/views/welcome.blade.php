@@ -2273,12 +2273,12 @@
                     <path opacity="0.3"
                         d="M21 16H3C2.4 16 2 15.6 2 15V14C2 13.4 2.4 13 3 13H21C21.6 13 22 13.4 22 14V15C22 15.6 21.6 16 21 16ZM14 20V19C14 18.4 13.6 18 13 18H3C2.4 18 2 18.4 2 19V20C2 20.6 2.4 21 3 21H13C13.6 21 14 20.6 14 20Z"
                         fill="currentColor" />
-                </svg>
+                </svg> 
             </span>
             <!--end::Svg Icon-->
         </div>
     </div>
     <!--end::Header menu toggle-->
 </div>
-    
+
 @endsection

@@ -34,18 +34,29 @@
                                         <li class="menu-item"><a href="creator.html">Fasilitas</a></li>
                                 </li>
                             </ul>
-                            </li>
+
                             <li class="menu-item menu-item-has-children">
                                 <a href="/kurikulum"> Kurikulum</a>
                                 <ul class="sub-menu">
                                     <li class="menu-item"><a href="/profilsekolah">Kalender Akademik</a></li>
                                     <li class="menu-item"><a href="explore-2.html">Jadwal Kegiatan</a></li>
-                                    <li class="menu-item"><a href="/kompetensi">Kompetensi Keahlian</a></li>
-                                    
+                                    <li class="menu-item menu-item-has-children">
+                                        <a href="/kompetensi"> Kompetensi Keahlian</a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item"><a href="/tkj">Teknik Komputer & Jaringan(TKJ)</a></li>
+                                            <li class="menu-item"><a href="/dkv">Otomasi Tata Kelola Perkantoran(OTKP)</a></li>
+                                            <li class="menu-item"><a href="/otkp">Bisnis Digital(BD)</a></li>
+                                            <li class="menu-item"><a href="/ph">Rekayasa Perangkat Lunak(RPL)</a></li>
+                                            <li class="menu-item"><a href="/akl">Perhotelan(PH)</a></li>
+                                            <li class="menu-item"><a href="/bdp">Usaha Layanan Pariwisata(ULP)</a></li>
+                                            <li class="menu-item"><a href="/bdp">Desain Komunikasi Visual(DKV)</a></li>
+                                            <li class="menu-item"><a href="/bdp">Akuntansi dan Keuangan Lembaga(AKL)</a></li>
+                                        </ul>
+                                    </li>
                                     <li class="menu-item"><a href="creator.html">Kelulusan</a></li>
+                                </ul>
                             </li>
-                            </ul>
-                            </li>
+
                             <li class="menu-item menu-item-has-children">
                                 <a href="/kesiswaan"> Kesiswaan</a>
                                 <ul class="sub-menu">
@@ -74,7 +85,7 @@
                             </li>
                             </ul>
                             </li>
-                            {{--  <li class="menu-item menu-item-has-children">
+                            {{-- <li class="menu-item menu-item-has-children">
                                 <a href="#">Pages</a>
                                 <ul class="sub-menu">
                                     <li class="menu-item"><a href="author.html">Authors</a></li>
@@ -88,7 +99,7 @@
                             </li>
                             <li class="menu-item ">
                                 <a href="contact.html">Contact</a>
-                            </li>  --}}
+                            </li> --}}
                             <li class="menu-item ">
                                 <a href="/ppdb">PPDB</a>
                             </li>

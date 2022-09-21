@@ -100,6 +100,19 @@
             <div class="tf-section sc-card-blog">
                 <div class="container">
                     <div class="row">
+                        <div class="col-md-12">
+                            <div class="sc-heading style-2">
+                                <div class="content-left">
+                                    <div class="inner">
+                                        <h3>Kompetensi Keahlian</h3>
+                                        <p class="desc">KLIK GAMBAR DIBAWAH INI UNTUK MENUJU KE MENU SELANJUTNYA!!! </p>
+                                        <br>
+                                        <br> 
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="col-lg-4 col-md-6">
                             <article class="sc-card-article">
                                 <div class="card-media">
@@ -160,6 +173,8 @@
             </div>
           @include('koneksi.footer')
         </div>
+        </div>
+
 
     </div>
 

@@ -41,6 +41,7 @@
                                     <li class="menu-item"><a href="/profilsekolah">Kalender Akademik</a></li>
                                     <li class="menu-item"><a href="explore-2.html">Jadwal Kegiatan</a></li>
                                     <li class="menu-item"><a href="/kompetensi">Kompetensi Keahlian</a></li>
+                                    
                                     <li class="menu-item"><a href="creator.html">Kelulusan</a></li>
                             </li>
                             </ul>

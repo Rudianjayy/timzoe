@@ -250,7 +250,7 @@
                 <div class="col-lg-4 col-md-6 col-12">
                     <div class="sc-category wow fadeInUp pl-19" data-wow-delay="400ms" data-wow-duration="1000ms">
                         <div class="card-media">
-                            <img src="{{ asset('landing/html/bidzend/assets/images/category/category-2.jpg') }}"
+                            <img src="{{ asset('landing/html/bidzend/assets/images/logo/') }}"
                                 alt="">
                         </div>
                         <div class="card-content">
@@ -262,7 +262,7 @@
                 <div class="col-lg-4 col-md-6 col-12">
                     <div class="sc-category wow fadeInUp pl-40" data-wow-delay="600ms" data-wow-duration="1000ms">
                         <div class="card-media">
-                            <img src="{{ asset('landing/html/bidzend/assets/images/category/category-3.jpg') }}"
+                            <img src="{{ asset('landing/html/bidzend/assets/images/logo/DKV-1.jpg') }}"
                                 alt="">
                         </div>
                         <div class="card-content">
@@ -274,7 +274,7 @@
                 <div class="col-lg-4 col-md-6 col-12">
                     <div class="sc-category wow fadeInUp mg-bt-0" data-wow-delay="200ms" data-wow-duration="1500ms">
                         <div class="card-media">
-                            <img src="{{ asset('landing/html/bidzend/assets/images/category/category-4.jpg') }}"
+                            <img src="{{ asset('landing/html/bidzend/assets/images/logo/mp.jpg') }}"
                                 alt="">
                         </div>
                         <div class="card-content">
@@ -287,7 +287,7 @@
                     <div class="sc-category wow fadeInUp mg-bt-0 pl-19" data-wow-delay="400ms"
                         data-wow-duration="1500ms">
                         <div class="card-media">
-                            <img src="{{ asset('landing/html/bidzend/assets/images/category/category-5.jpg') }}"
+                            <img src="{{ asset('landing/html/bidzend/assets/images/logo/PH.jpg') }}"
                                 alt="">
                         </div>
                         <div class="card-content">
@@ -300,7 +300,7 @@
                     <div class="sc-category wow fadeInUp mg-bt-0 pl-40 end" data-wow-delay="600ms"
                         data-wow-duration="1500ms">
                         <div class="card-media">
-                            <img src="{{ asset('landing/html/bidzend/assets/images/category/category-6.jpg') }}"
+                            <img src="{{ asset('landing/html/bidzend/assets/images/logo/AK.jpg') }}"
                                 alt="">
                         </div>
                         <div class="card-content">
@@ -400,6 +400,142 @@
             </div>
         </div>
     </section>
+
+    {{--  <div class="tf-section sc-card-blog">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <article class="sc-card-article">
+                        <div class="card-media">
+                            <a href="blog-details.html"><img
+                                    src="{{ asset('landing/html/bidzend/assets/images/background/bg1.jpg') }}"
+                                    alt=""></a>
+                        </div>
+                        <div class="content">
+                            <div class="meta-info">
+                                <div class="item author">
+                                </div>
+                                <div class="item date">Diterbitkan : Senin, 31 Jan 2022</div>
+                            </div>
+                            <div class="text-article">
+                                <h5><a href="blog-details.html">PEMUDA ISLAM HARUS MILIKI PERAN DI ERA DIGITAL</a></h5>
+                            </div>
+                            <a href="/detailmuhi"
+                                class="sc-button btn-bordered-white style letter"><span>Baca Selengkapnya</span></a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <article class="sc-card-article">
+                        <div class="card-media">
+                            <a href="/detailmuhi2"><img
+                                    src="{{ asset('landing/html/bidzend/assets/images/background/bg2.jpeg') }}"
+                                    alt=""></a>
+                        </div>
+                        <div class="content">
+                            <div class="meta-info">
+                                <div class="item author">
+                                </div>
+                                <div class="item date">Diterbitkan : Jumat, 4 Jun 2021</div>
+                            </div>
+                            <div class="text-article">
+                                <h5><a href="/detailmuhi2">LEPAS SISWA KELAS XII DENGAN DISIPLIN PROKES</a></h5>
+                            </div>
+                            <a href="/detailmuhi2"
+                                class="sc-button btn-bordered-white style letter"><span>Baca Selengkapnya</span></a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <article class="sc-card-article">
+                        <div class="card-media">
+                            <a href="blog-details.html"><img
+                                    src="{{ asset('landing/html/bidzend/assets/images/background/bg3.jpeg') }}"
+                                    alt=""></a>
+                        </div>
+                        <div class="content">
+                            <div class="meta-info">
+                                <div class="item author">
+                                </div>
+                                <div class="item date">Diterbitkan : Jumat, 4 Jun 2021</div>
+                            </div>
+                            <div class="text-article">
+                                <h5><a href="blog-details.html">LULUS DI TAHUN PANDEMI DENGAN PENUH PRESTASI</a></h5>
+                            </div>
+                            <a href="blog-details.html"
+                                class="sc-button btn-bordered-white style letter"><span>Baca Selengkapnya</span></a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <article class="sc-card-article">
+                        <div class="card-media">
+                            <a href="blog-details.html"><img
+                                    src="{{ asset('landing/html/bidzend/assets/images/background/bg4.jpg') }}"
+                                    alt=""></a>
+                        </div>
+                        <div class="content">
+                            <div class="meta-info">
+                                <div class="item author">
+                                </div>
+                                <div class="item date">Diterbitkan : Senin, 22 Feb 2021 </div>
+                            </div>
+                            <div class="text-article">
+                                <h5><a href="blog-details.html">SMK MUHI SABET JUARA 2 & 3 LOMBA PERPAJAKAN</a></h5>
+                            </div>
+                            <a href="blog-details.html"
+                                class="sc-button btn-bordered-white style letter"><span>Baca Selengkapnya</span></a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <article class="sc-card-article">
+                        <div class="card-media">
+                            <a href="blog-details.html"><img
+                                    src="{{ asset('landing/html/bidzend/assets/images/background/bg5.jpg') }}"
+                                    alt=""></a>
+                        </div>
+                        <div class="content">
+                            <div class="meta-info">
+                                <div class="item author">
+                                </div>
+                                <div class="item date">Diterbitkan : Jumat, 19 Feb 2021
+                                </div>
+                            </div>
+                            <div class="text-article">
+                                <h5><a href="blog-details.html">LAGI, SISWI SMK MUHI JUARA 2 LOMBA HOTEL RECEPTIONIST</a></h5>
+                            </div>
+                            <a href="blog-details.html"
+                                class="sc-button btn-bordered-white style letter"><span>Baca Selengkapnya</span></a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <article class="sc-card-article">
+                        <div class="card-media">
+                            <a href="blog-details.html"><img
+                                    src="{{ asset('landing/html/bidzend/assets/images/background/bg6.jpg') }}"
+                                    alt=""></a>
+                        </div>
+                        <div class="content">
+                            <div class="meta-info">
+                                <div class="item author">
+                                </div>
+                                <div class="item date">Diterbitkan : Kamis, 11 Feb 2021</div>
+                            </div>
+                            <div class="text-article">
+                                <h5><a href="blog-details.html">GUGUS COVID-19 SATGAS KEC. GENTENG KUNJUNGI SMK MUHI</a></h5>
+                            </div>
+                            <a href="blog-details.html"
+                                class="sc-button btn-bordered-white style letter"><span>Baca Selengkapnya</span></a>
+                        </div>
+                    </article>
+                </div>
+
+
+            </div>
+        </div>
+    </div>  --}}
     <section class="tf-live-auctions tf-section bg-color-1">
         <div class="container">
             <div class="row">

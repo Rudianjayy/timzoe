@@ -3,6 +3,7 @@
 use App\Http\Controllers\DataidentitasController;
 use App\Http\Controllers\DetailController;
 use App\Http\Controllers\KesiswaanController;
+use App\Http\Controllers\KompetensiController;
 use App\Http\Controllers\KurikulumController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MuhinewsController;
@@ -32,6 +33,11 @@ Route::get('/muhinews',[MuhinewsController::class,'index'])->name('muhinews');
 //tentangkami
 Route::get('/tentangkami',[TentangkamiController::class,'tentangkami'])->name('tentangkami');
 Route::get('/profilsekolah',[TentangkamiController::class,'profilsekolah'])->name('profilsekolah');
+
+//kompetensikeahlian
+Route::get('/kompetensi',[KompetensiController::class,'kompetensi'])->name('kompetensi');
+
+
 
 //kurikulum
 Route::get('/kurikulum',[KurikulumController::class,'kurikulum'])->name('kurikulum');

@@ -77,32 +77,45 @@
             </div>  --}}
       @include('koneksi.navbar')
 
-            <section class="fl-page-title">
-                <div class="overlay"></div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="page-title-inner flex">
-                                <div class="page-title-heading">
-                                    <h2 class="heading">Kesiswaan</h2>
-                                </div>
-                                <div class="breadcrumbs">
-                                    <ul>
-                                        <li><a href="index.html">Beranda</a></li>
-                                        <li>Kesiswaan</li>
-                                    </ul>
-                                </div>
+      <section class="fl-page-title">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="page-title-inner flex">
+                        <div class="page-title-heading">
+                            <h2 class="heading">Kesiswaan</h2>
+                        </div>
+                        <div class="breadcrumbs">
+                            <ul>
+                                <li><a href="index.html">Beranda</a></li>
+                                <li>Kesiswaan</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="tf-section sc-card-blog">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="sc-heading style-2">
+                        <div class="content-left">
+                            <div class="inner">
+                                <h3>Kesiswaan</h3>
+                                <p class="desc">KLIK GAMBAR DIBAWAH INI UNTUK MENUJU KE MENU SELANJUTNYA!!! </p>
+                                <br>
+                                <br>
+
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-            <div class="tf-section sc-card-blog">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6">
-                            <article class="sc-card-article">
-                                <div class="card-media">
+                <div class="col-lg-4 col-md-6">
+                    <article class="sc-card-article">
+                        <div class="card-media">
                                     <a href="blog-details.html"><img
                                             src="{{ asset('landing/html/bidzend/assets/images/logo/ekstra.png') }}"
                                             alt=""></a>

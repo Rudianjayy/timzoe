@@ -100,11 +100,24 @@
             <div class="tf-section sc-card-blog">
                 <div class="container">
                     <div class="row">
+                        <div class="col-md-12">
+                            <div class="sc-heading style-2">
+                                <div class="content-left">
+                                    <div class="inner">
+                                        <h3>Kurikulum</h3>
+                                        <p class="desc">KLIK GAMBAR DIBAWAH INI UNTUK MENUJU KE MENU SELANJUTNYA!!! </p>
+                                        <br>
+                                        <br>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="col-lg-4 col-md-6">
                             <article class="sc-card-article">
                                 <div class="card-media">
                                     <a href="blog-details.html"><img
-                                            src="{{ asset('landing/html/bidzend/assets/images/logo/kalender.png') }}"
+                                            src="{{ asset('landing/html/bidzend/assets/images/logo/kompetensi.png') }}"
                                             alt=""></a>
                                 </div>
                                 <div class="content">
@@ -113,7 +126,7 @@
                                         </div>
                                     </div>
                                     <div class="text-article">
-                                        <center>    <h5><a href="/profilsekolah">Kalender Akademik</a></h5></center>
+                                        <center>    <h5><a href="/profilsekolah">Kompetensi Kegiatan</a></h5></center>
                                     </div>
                                 </div>
                             </article>
@@ -140,7 +153,7 @@
                             <article class="sc-card-article">
                                 <div class="card-media">
                                     <a href="/fasilitas"><img
-                                            src="{{ asset('landing/html/bidzend/assets/images/logo/kompetensi.png') }}"
+                                            src="{{ asset('landing/html/bidzend/assets/images/logo/kalender.png') }}"
                                             alt=""></a>
                                 </div>
                                 <div class="content">
@@ -149,7 +162,7 @@
                                         </div>
                                     </div>
                                     <div class="text-article">
-                                     <center> <h5><a href="blog-details.html">Kompetensi Keahlian</a></h5><center>
+                                     <center> <h5><a href="blog-details.html">Kalender Akademik</a></h5><center>
                                     </div>
                                 </div>
                             </article>
@@ -178,6 +191,8 @@
             </div>
           @include('koneksi.footer')
         </div>
+        </div>
+
 
     </div>
 

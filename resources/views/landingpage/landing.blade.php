@@ -227,7 +227,7 @@
                     <div class="sc-heading style-2 wow fadeInUp">
                         <div class="content-left">
                             <div class="inner">
-                                <h3>Kompetensi Keahlian</h3>
+                                <h3>ppetensi Keahlian</h3>
                             </div>
                         </div>
                         <div class="content-right">

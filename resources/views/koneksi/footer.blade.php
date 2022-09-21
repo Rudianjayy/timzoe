@@ -42,9 +42,9 @@
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-6">
                     <div class="widget widget-menu menu-supports">
-                        <h5 class="title-widget">Supports</h5>
+                        <h5 class="title-widget">Admin</h5>
                         <ul>
-                            <li><a href="contact.html">Setting & Privacy </a></li>
+                            <li><a href="/login">Login Admin </a></li>
                             <li><a href="contact.html">Help & Support </a></li>
                             <li><a href="item.html">Live Auctions</a></li>
                             <li><a href="item-details.html"> Item Details</a></li>

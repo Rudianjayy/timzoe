@@ -50,23 +50,8 @@ Route::get('/upj',[UpjController::class,'upj'])->name('upj');
 
 
 
-
-//login&register
-Route::get('/login',[LoginController::class,'login'])->name('login');
-Route::post('/loginproses',[LoginController::class,'loginproses'])->name('loginproses');
-
-Route::get('/register',[LoginController::class,'register'])->name('register');
-Route::post('/registeruser',[LoginController::class,'registeruser'])->name('registeruser');
-
-Route::get('/logout',[LoginController::class,'logout'])->name('logout');
-
-
-
 //ppdb
-Route::get('/data-identitas',[DataidentitasController::class,'index'])->name('data-identitas');
-Route::get('/welcome', function () {
-    return view('welcome');
-});
+
 
 
 //detail blog
@@ -75,3 +60,53 @@ Route::get('/detailmuhi',[DetailController::class,'detailmuhi'])->name('detailmu
 Route::get('/detailmuhi2',[DetailController::class,'detailmuhi2'])->name('detailmuhi2');
 
 
+
+
+
+
+
+
+
+
+
+//template metronic
+Route::get('/data-identitas',[DataidentitasController::class,'index'])->name('data-identitas');
+Route::get('/welcome', function () {
+    return view('welcome');
+});
+Route::get('/welcome2', function () {
+    return view('welcome2');
+});
+
+
+
+//profil
+Route::get('/profil',[ProfilController::class, 'index'])->name('profil');
+
+
+// Route::group(['middleware'=> ['auth','hakakses:admin']],function() {
+    Route::get('/data-album',[AlbumController::class, 'loby'])->name('data-album');
+    Route::get('/tambahalbum',[AlbumController::class, 'tambahalbum'])->name('tambahalbum');
+    Route::post('/albumproses',[AlbumController::class, 'albumproses'])->name('albumproses');
+    Route::get('/editalbum/{id}',[AlbumController::class, 'editalbum'])->name('editalbum');
+    Route::post('/editproses/{id}',[AlbumController::class, 'editproses'])->name('editproses');
+    Route::get('/deletealbum/{id}',[AlbumController::class, 'delete'])->name('delete');
+    
+    
+    Route::get('/logout',[LoginController::class, 'logout'])->name('logout');
+    // });
+
+
+
+
+//login&register
+// Route::group(['middleware'=> ['auth','hakakses:admin,user']],function() {
+    Route::get('/data-identitas',[DataidentitasController::class, 'index'])->name('data-identitas');
+    Route::get('/register',[LoginController::class, 'register'])->name('register');
+    Route::post('/registeruser',[LoginController::class, 'registeruser'])->name('registeruser');
+    Route::get('/login',[LoginController::class, 'login'])->name('login')->middleware('guest');
+    Route::post('/loginproses',[LoginController::class, 'loginproses'])->name('loginproses');
+
+
+
+// });

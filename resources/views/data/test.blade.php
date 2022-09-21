@@ -13,7 +13,7 @@
                 <li class="breadcrumb-item">
                     <span class="bullet bg-gray-400 w-5px h-2px"></span>
                 </li>
-                <li class="breadcrumb-item text-muted">Data identitas</li>
+                <li class="breadcrumb-item text-muted">tes</li>
             </ul>
         </div>
     </div>
@@ -27,7 +27,6 @@
             <div class="card-body">
                 <!--begin:::Tabs-->
                 <ul class="nav nav-tabs nav-line-tabs nav-line-tabs-2x border-transparent fs-4 fw-semibold mb-15">
-                    
                     <!--begin:::Tab item-->
                     <li class="nav-item">
                         <a class="nav-link text-active-primary pb-5 active" data-bs-toggle="tab" href="#kt_ecommerce_settings_general">
@@ -37,7 +36,7 @@
                                 <path d="M11 2.375L2 9.575V20.575C2 21.175 2.4 21.575 3 21.575H9C9.6 21.575 10 21.175 10 20.575V14.575C10 13.975 10.4 13.575 11 13.575H13C13.6 13.575 14 13.975 14 14.575V20.575C14 21.175 14.4 21.575 15 21.575H21C21.6 21.575 22 21.175 22 20.575V9.575L13 2.375C12.4 1.875 11.6 1.875 11 2.375Z" fill="currentColor" />
                             </svg>
                         </span>
-                        <!--end::Svg Icon-->Jalur Reguler</a>
+                        <!--end::Svg Icon-->General</a>
                     </li>
                     <!--end:::Tab item-->
                     <!--begin:::Tab item-->
@@ -56,7 +55,7 @@
                                 <path d="M6 10C6 11.1 5.1 12 4 12C2.9 12 2 11.1 2 10H6ZM10 10C10 11.1 10.9 12 12 12C13.1 12 14 11.1 14 10H10ZM18 10C18 11.1 18.9 12 20 12C21.1 12 22 11.1 22 10H18ZM19 2H5C4.4 2 4 2.4 4 3V4H20V3C20 2.4 19.6 2 19 2ZM12 17C12 16.4 11.6 16 11 16H6C5.4 16 5 16.4 5 17C5 17.6 5.4 18 6 18H11C11.6 18 12 17.6 12 17Z" fill="currentColor" />
                             </svg>
                         </span>
-                        <!--end::Svg Icon-->Jalur Prestasi</a>
+                        <!--end::Svg Icon-->Store</a>
                     </li>
                     <!--end:::Tab item-->
                     <!--begin:::Tab item-->
@@ -69,7 +68,7 @@
                                 <path d="M12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2ZM19.9 11H13V8.8999C14.9 8.6999 16.7 8.00005 18.1 6.80005C19.1 8.00005 19.7 9.4 19.9 11ZM11 19.8999C9.7 19.6999 8.39999 19.2 7.39999 18.5C8.49999 17.7 9.7 17.2001 11 17.1001V19.8999ZM5.89999 6.90002C7.39999 8.10002 9.2 8.8 11 9V11.1001H4.10001C4.30001 9.4001 4.89999 8.00002 5.89999 6.90002ZM7.39999 5.5C8.49999 4.7 9.7 4.19998 11 4.09998V7C9.7 6.8 8.39999 6.3 7.39999 5.5ZM13 17.1001C14.3 17.3001 15.6 17.8 16.6 18.5C15.5 19.3 14.3 19.7999 13 19.8999V17.1001ZM13 4.09998C14.3 4.29998 15.6 4.8 16.6 5.5C15.5 6.3 14.3 6.80002 13 6.90002V4.09998ZM4.10001 13H11V15.1001C9.1 15.3001 7.29999 16 5.89999 17.2C4.89999 16 4.30001 14.6 4.10001 13ZM18.1 17.1001C16.6 15.9001 14.8 15.2 13 15V12.8999H19.9C19.7 14.5999 19.1 16.0001 18.1 17.1001Z" fill="currentColor" />
                             </svg>
                         </span>
-                        <!--end::Svg Icon-->--</a>
+                        <!--end::Svg Icon-->Localization</a>
                     </li>
                     <!--end:::Tab item-->
                     <!--begin:::Tab item-->
@@ -82,7 +81,7 @@
                                 <path d="M12 14C9.2 14 7 11.8 7 9V5C7 4.4 7.4 4 8 4C8.6 4 9 4.4 9 5V9C9 10.7 10.3 12 12 12C13.7 12 15 10.7 15 9V5C15 4.4 15.4 4 16 4C16.6 4 17 4.4 17 5V9C17 11.8 14.8 14 12 14Z" fill="currentColor" />
                             </svg>
                         </span>
-                        <!--end::Svg Icon-->--</a>
+                        <!--end::Svg Icon-->Products</a>
                     </li>
                     <!--end:::Tab item-->
                     <!--begin:::Tab item-->
@@ -97,7 +96,7 @@
                                 <rect opacity="0.3" x="6" y="5" width="6" height="6" rx="3" fill="currentColor" />
                             </svg>
                         </span>
-                        <!--end::Svg Icon-->--</a>
+                        <!--end::Svg Icon-->Customers</a>
                     </li>
                     <!--end:::Tab item-->
                 </ul>
@@ -112,30 +111,6 @@
                             <div class="row mb-7">
                                 <div class="col-md-9 offset-md-3">
                                     <h2>General Settings</h2>
-                                </div>
-                            </div>
-                            <div class="row fv-row mb-7">
-                                <div class="col-md-3 text-md-end">
-                                    <!--begin::Label-->
-                                    <label class="fs-6 fw-semibold form-label mt-3">
-                                        <span>Jalur pembayaran</span>
-                                        <i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip" title="Pembayaran online bisa transfer/memakai metode bayar online lainnya. Pembayaran offline akan langsung membayar di sekolah."></i>
-                                    </label>
-                                    <!--end::Label-->
-                                </div>
-                                <div class="col-md-9">
-                                    <div class="d-flex mt-3">
-                                        <!--begin::Radio-->
-                                        <div class="form-check form-check-custom form-check-solid me-5">
-                                            <input class="form-check-input" type="radio" value="" name="customers_online" id="customers_online_yes" checked="checked" />
-                                            <label class="form-check-label" for="customers_online_yes">Online</label>
-                                        </div>
-                                        <div class="form-check form-check-custom form-check-solid">
-                                            <input class="form-check-input" type="radio" value="" name="customers_online" id="customers_online_no" />
-                                            <label class="form-check-label" for="customers_online_no">Offline</label>
-                                        </div>
-                                        <!--end::Radio-->
-                                    </div>
                                 </div>
                             </div>
                             <!--end::Heading-->
@@ -1243,143 +1218,5 @@
     </div>
     <!--end::Content container-->
 </div>
-    <div id="kt_app_content" class="app-content flex-column-fluid">
-        <div id="kt_app_content_container" class="app-container container-xxl">
-            <div class="card mb-5 mb-xl-10">
-            </div>
-            <div class="card mb-5 mb-xl-10">
-                <div class="card-header border-0 cursor-pointer" role="button" data-bs-toggle="collapse"
-                    data-bs-target="#kt_account_profile_details" aria-expanded="true"
-                    aria-controls="kt_account_profile_details">
-                    <div class="card-title m-0">
-                        <h3 class="fw-bold m-0">Formulir Pendaftaran Online/Offline</h3>
-                    </div>
-                </div>
-                <div id="kt_account_settings_profile_details" class="collapse show">
-                    <form action="/submitdata" method="POST" enctype="multipart/form-data" id="kt_account_profile_details_form" class="form">
-                      @csrf
-                        <div class="card-body border-top p-9">
-                            <div class="row mb-6">
-                                <label class="col-lg-4 col-form-label fw-semibold fs-6">Foto</label>
-                                <div class="col-lg-8">
-                                    <div class="image-input image-input-outline" data-kt-image-input="true"
-                                        style="background-image: url('{{ asset('template/nopan/assets/media/svg/avatars/blank.svg') }}')">
-                                        <div class="image-input-wrapper w-125px h-125px"
-                                            style="background-image: url({{ asset('template/nopan/assets/media/avatars/300-1.jpg') }})"></div>
-                                        <label
-                                            class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
-                                            data-kt-image-input-action="change" data-bs-toggle="tooltip"
-                                            title="Change avatar">
-                                            <i class="bi bi-pencil-fill fs-7"></i>
-                                            <input type="file" name="avatar" accept=".png, .jpg, .jpeg" />
-                                            <input type="hidden" name="avatar_remove" />
-                                        </label>
-                                        <span
-                                            class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
-                                            data-kt-image-input-action="cancel" data-bs-toggle="tooltip"
-                                            title="Cancel avatar">
-                                            <i class="bi bi-x fs-2"></i>
-                                        </span>
-                                        <span
-                                            class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
-                                            data-kt-image-input-action="remove" data-bs-toggle="tooltip"
-                                            title="Remove avatar">
-                                            <i class="bi bi-x fs-2"></i>
-                                        </span>
-                                    </div>
-                                    <div class="form-text">File harus: png, jpg, jpeg.</div>
-                                </div>
-                            </div>
-                            <div class="row mb-6">
-                                <!--begin::Label-->
-                                <label class="col-lg-4 col-form-label required fw-semibold fs-6">Nama Lengkap</label>
-                                <!--end::Label-->
-                                <!--begin::Col-->
-                                <div class="col-lg-8">
-                                    <!--begin::Row-->
-                                    <div class="row">
-                                        <!--begin::Col-->
-                                        <div class="col-lg-6 fv-row">
-                                            <input type="text" name="fname"
-                                                class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
-                                                placeholder="Nama depan"  />
-                                        </div>
-                                        <!--end::Col-->
-                                        <!--begin::Col-->
-                                        <div class="col-lg-6 fv-row">
-                                            <input type="text" name="lname"
-                                                class="form-control form-control-lg form-control-solid"
-                                                placeholder="Nama belakang"  />
-                                        </div>
-                                        <!--end::Col-->
-                                    </div>
-                                    <!--end::Row-->
-                                </div>
-                                <!--end::Col-->
-                            </div>
-                            <!--end::Input group-->
-                            <!--begin::Input group-->
-                            <div class="row mb-6">
-                                <!--begin::Label-->
-                                <label class="col-lg-4 col-form-label required fw-semibold fs-6">Alumni sekolah</label>
-                                <!--end::Label-->
-                                <!--begin::Col-->
-                                <div class="col-lg-8 fv-row">
-                                    <input type="text" name="company"
-                                        class="form-control form-control-lg form-control-solid" placeholder="Alumni"
-                                         />
-                                </div>
-                                <!--end::Col-->
-                            </div>
-                            <!--end::Input group-->
-                            <!--begin::Input group-->
-                            <div class="row mb-6">
-                                <!--begin::Label-->
-                                <label class="col-lg-4 col-form-label fw-semibold fs-6">
-                                    <span class="required">Nomor telepon orang tua</span>
-                                    <i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip"
-                                        title="Nomor harus aktif"></i>
-                                </label>
-                                <!--end::Label-->
-                                <!--begin::Col-->
-                                <div class="col-lg-8 fv-row">
-                                    <input type="tel" name="phone"
-                                        class="form-control form-control-lg form-control-solid" placeholder="Nomor telepon"
-                                         />
-                                </div>
-                                <!--end::Col-->
-                            </div>
-                            <!--end::Input group-->
-                            <!--begin::Input group-->
-                            <div class="row mb-6">
-                                <!--begin::Label-->
-                                <label class="col-lg-4 col-form-label fw-semibold fs-6">Kota asal</label>
-                                <!--end::Label-->
-                                <!--begin::Col-->
-                                <div class="col-lg-8 fv-row">
-                                    <input type="text" name="website"
-                                        class="form-control form-control-lg form-control-solid"
-                                        placeholder="Kota asal"  />
-                                </div>
-                                <!--end::Col-->
-                            </div>
-                        </div>
-                        <!--end::Card body-->
-                        <!--begin::Actions-->
-                        <div class="card-footer d-flex justify-content-end py-6 px-9">
-                            {{-- <button type="reset" class="btn btn-light btn-active-light-primary me-2">Discard</button> --}}
-                            <button type="submit" class="btn btn-primary" id="kt_account_profile_details_submit">Kirim</button>
-                        </div>
-                        <!--end::Actions-->
-                    </form>
-                    <!--end::Form-->
-                </div>
-                <!--end::Content-->
-            </div>
-            <!--end::Basic info-->
-            <!--begin::Sign-in Method-->
-        </div>
-        <!--end::Content container-->
-    </div>
-
+    
 @endsection

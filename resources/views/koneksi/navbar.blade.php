@@ -38,8 +38,6 @@
                             <li class="menu-item menu-item-has-children">
                                 <a href="/kurikulum"> Kurikulum</a>
                                 <ul class="sub-menu">
-                                    <li class="menu-item"><a href="/profilsekolah">Kalender Akademik</a></li>
-                                    <li class="menu-item"><a href="explore-2.html">Jadwal Kegiatan</a></li>
                                     <li class="menu-item menu-item-has-children">
                                         <a href="/kompetensi"> Kompetensi Keahlian</a>
                                         <ul class="sub-menu">
@@ -52,7 +50,10 @@
                                             <li class="menu-item"><a href="/bdp">Desain Komunikasi Visual(DKV)</a></li>
                                             <li class="menu-item"><a href="/bdp">Akuntansi dan Keuangan Lembaga(AKL)</a></li>
                                         </ul>
-                                    </li>
+                                    </li> 
+                                    <li class="menu-item"><a href="/profilsekolah">Kalender Akademik</a></li>
+                                    <li class="menu-item"><a href="explore-2.html">Jadwal Kegiatan</a></li>
+                                    
                                     <li class="menu-item"><a href="creator.html">Kelulusan</a></li>
                                 </ul>
                             </li>

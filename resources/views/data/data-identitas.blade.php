@@ -1,7 +1,12 @@
 @extends('layout.main')
 
 @section('content')
-    
+<head>
+    @include('layout.css')
+</head>
+<body>
+
+
 <div class="container-fluid">
 
     <!-- start page title -->
@@ -63,7 +68,7 @@
                                 <div class="mb-3 col-lg-2">
                                     <label class="form-label" for="resume">Resume</label>
                                     <input type="file" class="form-control" id="resume">
-                                    
+
                                 </div>
                                 <!-- end col -->
                                 <div class="mb-3 col-lg-2 col-sm-8">
@@ -74,7 +79,7 @@
                                 <div class="col-lg-2 col-sm-4 align-self-center">
                                     <div class="d-grid">
                                         <input data-repeater-delete type="button" class="btn btn-primary mb-2" value="Delete"/>
-                                    </div>    
+                                    </div>
                                 </div>
                                 <!-- end col -->
                             </div>
@@ -116,9 +121,9 @@
                                             <div class="col-md-2 col-sm-4">
                                                 <div class="d-grid">
                                                     <input data-repeater-delete type="button" class="btn btn-primary inner mt-2 mt-sm-0" value="Delete"/>
-                                                </div>    
+                                                </div>
                                             </div>
-                                            
+
                                         </div>
                                     </div>
                                     <input data-repeater-create type="button" class="btn btn-success inner" value="Add Number"/>
@@ -153,7 +158,9 @@
         <!-- end col -->
     </div>
     <!-- end row -->
-    
+
 </div>
+@include('layout.script')
+</body>
 
 @endsection

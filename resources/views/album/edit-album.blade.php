@@ -1,6 +1,9 @@
 @extends('layout.main')
 
 @section('content')
+<head>
+    @include('layout.css')
+</head>
 
     <body>
         <h1 class="text-center mb-4">Edit Data Identitas</h1>
@@ -24,7 +27,7 @@
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
-                                
+
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Deskripsi :</label>
                                     <textarea class="form-control form-control-solid" rows="6x" name="deskripsi">{{ $data->deskripsi }}</textarea>
@@ -66,4 +69,5 @@
             document.getElementById('dosen').value = dosen;
         }
     </script>
+    @include('layout.script')
 @endsection

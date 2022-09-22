@@ -7,6 +7,12 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 @endpush
 @section('content')
+<head>
+    @include('layout.css')
+</head>
+<body>
+
+
     <div class="breadcrumbs">
 
         {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> --}}
@@ -152,6 +158,8 @@
                 toastr.success("{{ Session::get('success') }}")
             @endif
         </script>
+        @include('layout.script')
+    </body>
 
         {{-- @endpush --}}
     @endsection

@@ -1,18 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-=======
-use App\Http\Controllers\DataidentitasController;
-use App\Http\Controllers\DetailController;
-use App\Http\Controllers\KesiswaanController;
-use App\Http\Controllers\KompetensiController;
-use App\Http\Controllers\KurikulumController;
-use App\Http\Controllers\LoginController;
-use App\Http\Controllers\MuhinewsController;
-use App\Http\Controllers\TentangkamiController;
-use App\Http\Controllers\UpjController;
-use App\Http\Controllers\AlbumController;
->>>>>>> ad367d3c9522d4b7431da30bd41554a915b815a4
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UpjController;
 use App\Http\Controllers\PpdbController;

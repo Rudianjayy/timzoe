@@ -21,6 +21,7 @@
 
     <link rel="shortcut icon" href="{{ asset('landing/html/bidzend/assets/icon/muhi.jpg') }}">
     <link rel="apple-touch-icon-precomposed" href="{{ asset('landing/html/bidzend/assets/icon/muhi.jpg') }}">
+    
 </head>
 
 <body class="body header-fixed">
@@ -227,7 +228,7 @@
                     <div class="sc-heading style-2 wow fadeInUp">
                         <div class="content-left">
                             <div class="inner">
-                                <h3>ppetensi Keahlian</h3>
+                                <h3>Kompetensi Keahlian</h3>
                             </div>
                         </div>
                         <div class="content-right">
@@ -250,7 +251,7 @@
                 <div class="col-lg-4 col-md-6 col-12">
                     <div class="sc-category wow fadeInUp pl-19" data-wow-delay="400ms" data-wow-duration="1000ms">
                         <div class="card-media">
-                            <img src="{{ asset('landing/html/bidzend/assets/images/logo/') }}"
+                            <img src="{{ asset('landing/html/bidzend/assets/images/logo/rpl.jpg') }}"
                                 alt="">
                         </div>
                         <div class="card-content">
@@ -1116,6 +1117,7 @@
     <script src="{{ asset('landing/html/bidzend/assets/js/count-down.js') }}"></script>
     <script src="{{ asset('landing/html/bidzend/assets/js/shortcodes.js') }}"></script>
     <script src="{{ asset('landing/html/bidzend/assets/js/main.js') }}"></script>
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
 </body>
 
 <!-- Mirrored from themesflat.com/html/bidzend/bidzend/home-animation.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Sep 2022 01:12:48 GMT -->

@@ -1798,7 +1798,6 @@
         </div>
         <!--end::Row-->
     </div>
-<<<<<<< HEAD
     <!--end::Row-->
     <!--begin::Row-->
     <div class="row g-5 g-xl-10">
@@ -2390,6 +2389,3 @@
 </div>
 @endsection
 
-=======
-@endsection
->>>>>>> b78538454437c2030a5f0c5743b6e10c2421daad

@@ -9,6 +9,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MuhinewsController;
 use App\Http\Controllers\TentangkamiController;
 use App\Http\Controllers\UpjController;
+use App\Http\Controllers\AlbumController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -33,6 +34,10 @@ Route::get('/muhinews',[MuhinewsController::class,'index'])->name('muhinews');
 //tentangkami
 Route::get('/tentangkami',[TentangkamiController::class,'tentangkami'])->name('tentangkami');
 Route::get('/profilsekolah',[TentangkamiController::class,'profilsekolah'])->name('profilsekolah');
+Route::get('/identitas_sekolah',[TentangkamiController::class,'identitassekolah'])->name('identitassekolah');
+Route::get('/fasilitassekolah',[TentangkamiController::class,'fasilitassekolah'])->name('fasilitassekolah');
+
+
 
 //kompetensikeahlian
 Route::get('/kompetensi',[KompetensiController::class,'kompetensi'])->name('kompetensi');
@@ -41,6 +46,8 @@ Route::get('/kompetensi',[KompetensiController::class,'kompetensi'])->name('komp
 
 //kurikulum
 Route::get('/kurikulum',[KurikulumController::class,'kurikulum'])->name('kurikulum');
+Route::get('/kalenderakademik',[KurikulumController::class,'kalenderakademik'])->name('kalenderakademik');
+Route::get('/jadwalkegiatan',[KurikulumController::class,'jadwalkegiatan'])->name('jadwalkegiatan');
 
 
 //kesiswaan

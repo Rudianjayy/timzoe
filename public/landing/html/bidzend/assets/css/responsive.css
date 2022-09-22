@@ -10,12 +10,12 @@
     .header_1 .header_avatar .avatar_popup {
         left: -100px;
     }
-    
+
     .header_1 .header_avatar .avatar_popup:before {
         left: 38%;
     }
     .slider-inner {
-        padding: 60px 10% 78px 10%;
+        padding: 20px  10%;
     }
     .slider-inner.home-2 {
         padding-left: 10%;
@@ -150,7 +150,7 @@
         padding-right: 7%;
     }
     .slider-inner {
-        padding: 60px 7% 78px 7% ;
+        padding: 20px 7% ;
     }
     .slider .swiper-button-next,
     .slider .swiper-button-prev {
@@ -169,7 +169,7 @@
     .tf-col-3 {
         width: 23% !important;
     }
-    
+
     .tf-col-6 {
         width: 70% !important;
     }
@@ -190,11 +190,11 @@
     }
 
     .slider-inner.style-2.home-1 {
-        padding: 60px 0% 78px 0% ;
+        padding: 60px 0% ;
     }
 
     .slider-inner .slider-content {
-        width: 100%;
+        width: 50%;
         padding-top: 0;
     }
     .sc-author.style-2 {
@@ -334,7 +334,7 @@
     .best-seller-inner .sc-author {
         margin-bottom: 30px;
     }
-    .category-inner, 
+    .category-inner,
     .best-seller-inner {
         padding: 100px 50px;
     }
@@ -349,7 +349,7 @@
         margin-bottom: 0 !important;
     }
     .auctions-page .swiper-slide .sc-product-item.style-6 {
-        margin-bottom: 48px !important; 
+        margin-bottom: 48px !important;
     }
 }
 
@@ -446,7 +446,7 @@
         padding-left: 30px;
         padding-right: 30px;
     }
-    .style-2 .new-letter-content ,  
+    .style-2 .new-letter-content ,
     .style-2 .new-letter-img,
     .new-letter-content,
     .new-letter-img {
@@ -525,7 +525,7 @@
     .end {
         margin-bottom: 0 !important;
     }
-    .category-inner, 
+    .category-inner,
     .best-seller-inner {
         padding-left: 15px;
         padding-right: 15px;

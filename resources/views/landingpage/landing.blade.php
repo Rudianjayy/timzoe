@@ -21,6 +21,7 @@
 
     <link rel="shortcut icon" href="{{ asset('landing/html/bidzend/assets/icon/muhi.jpg') }}">
     <link rel="apple-touch-icon-precomposed" href="{{ asset('landing/html/bidzend/assets/icon/muhi.jpg') }}">
+
 </head>
 
 <body class="body header-fixed">
@@ -100,7 +101,7 @@
                             </div>
                             <div class="slider-img">
                                 <div class="img-home-1"><img
-                                        src="{{ asset('landing/html/bidzend/assets/images/product-item/remini2-removebg-previeww.png') }}"
+                                        src="{{ asset('landing/html/bidzend/assets/images/product-item/remini2-removebg-preview.png') }}"
                                         alt="Image" style="width:570 !important;"></div>
                             </div>
                         </div>
@@ -127,30 +128,13 @@
                                 <div class="slider-img flex">
                                     <div class="img-left">
                                         <div class="img-1"><img
-                                                src="{{ asset('landing/html/bidzend/assets/images/slider/img-slider-3.jpg') }}"
+                                                src="{{ asset('landing/html/bidzend/assets/images/slider/slider4.jpeg') }}"
                                                 alt="Image"></div>
-                                        <div class="img-2"><img
-                                                src="{{ asset('landing/html/bidzend/assets/images/slider/img-slider-4.jpg') }}"
-                                                alt="Image"></div>
+
                                     </div>
                                     <div class="img-right">
-                                        <img src="{{ asset('landing/html/bidzend/assets/images/slider/img-slider-5.jpg') }}"
-                                            alt="Image">
-                                        <div class="box-avatar flex">
-                                            <div class="list-avatar flex">
-                                                <img src="{{ asset('landing/html/bidzend/assets/images/avatar/avt-8.jpg') }}"
-                                                    alt="Image">
-                                                <img src="{{ asset('landing/html/bidzend/assets/images/avatar/avt-9.jpg') }}"
-                                                    alt="Image">
-                                                <img src="{{ asset('landing/html/bidzend/assets/images/avatar/avt-10.jpg') }}"
-                                                    alt="Image">
-                                                <img src="{{ asset('landing/html/bidzend/assets/images/avatar/avt-11.jpg') }}"
-                                                    alt="Image">
-                                            </div>
-                                            <div class="icon-plus">
-                                                <a href="#"><i class="fas fa-plus"></i></a>
-                                            </div>
-                                        </div>
+
+
                                     </div>
                                 </div>
                             </div>
@@ -250,7 +234,7 @@
                 <div class="col-lg-4 col-md-6 col-12">
                     <div class="sc-category wow fadeInUp pl-19" data-wow-delay="400ms" data-wow-duration="1000ms">
                         <div class="card-media">
-                            <img src="{{ asset('landing/html/bidzend/assets/images/logo/') }}"
+                            <img src="{{ asset('landing/html/bidzend/assets/images/logo/rpl.jpg') }}"
                                 alt="">
                         </div>
                         <div class="card-content">
@@ -1116,6 +1100,7 @@
     <script src="{{ asset('landing/html/bidzend/assets/js/count-down.js') }}"></script>
     <script src="{{ asset('landing/html/bidzend/assets/js/shortcodes.js') }}"></script>
     <script src="{{ asset('landing/html/bidzend/assets/js/main.js') }}"></script>
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
 </body>
 
 <!-- Mirrored from themesflat.com/html/bidzend/bidzend/home-animation.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Sep 2022 01:12:48 GMT -->

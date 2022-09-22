@@ -30,8 +30,8 @@
                                     <a href="/tentangkami">Tentang Kami</a>
                                     <ul class="sub-menu">
                                         <li class="menu-item"><a href="/profilsekolah">Profil Sekolah</a></li>
-                                        <li class="menu-item"><a href="explore-2.html">Identitas Sekolah</a></li>
-                                        <li class="menu-item"><a href="creator.html">Fasilitas</a></li>
+                                        <li class="menu-item"><a href="/identitas_sekolah">Identitas Sekolah</a></li>
+                                        <li class="menu-item"><a href="/fasilitassekolah">Fasilitas</a></li>
                                 </li>
                             </ul>
 
@@ -50,10 +50,10 @@
                                             <li class="menu-item"><a href="/dkv">Desain Komunikasi Visual(DKV)</a></li>
                                             <li class="menu-item"><a href="/ak">Akuntansi dan Keuangan Lembaga(AKL)</a></li>
                                         </ul>
-                                    </li> 
-                                    <li class="menu-item"><a href="/profilsekolah">Kalender Akademik</a></li>
-                                    <li class="menu-item"><a href="explore-2.html">Jadwal Kegiatan</a></li>
-                                    
+                                    </li>
+                                    <li class="menu-item"><a href="/kalenderakademik">Kalender Akademik</a></li>
+                                    <li class="menu-item"><a href="/jadwalkegiatan">Jadwal Kegiatan</a></li>
+
                                     <li class="menu-item"><a href="creator.html">Kelulusan</a></li>
                                 </ul>
                             </li>

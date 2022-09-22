@@ -26,262 +26,96 @@
 <body class="body header-fixed">
 
     <div class="preload preload-container">
-        {{--  <div class="preload-logo"></div>  --}}
-        <div class="preload-logo"><img
-            src="{{ asset('landing/html/bidzend/assets/images/logo/muhi.jpg') }}"
-            alt="Image" style="width:570 !important;"></div>
+        {{-- <div class="preload-logo"></div>  --}}
+        <div class="preload-logo"><img src="{{ asset('landing/html/bidzend/assets/images/logo/muhi.jpg') }}" alt="Image" style="width:570 !important;"></div>
     </div>
 
-    {{--  <div id="wrapper">
-        <div id="page" class="clearfix">
-            <div class="topbar">
-                <div class="container">
-                    <div class="topbar-inner flex">
-                        <div class="menu-options flex">
-                            <div class="ethereum">
-                                <div id="ethereum" class="dropdown">
-                                    <a href="#" class="btn-selector nolink">Ethereum</a>
-                                    <ul>
-                                        <li><span>Ethereum</span></li>
-                                        <li><span>Bitski</span></li>
-                                        <li><span>Fortmatic</span></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="english">
-                                <div id="english" class="dropdown">
-                                    <a href="#" class="btn-selector nolink">English</a>
-                                    <ul>
-                                        <li><span>English</span></li>
-                                        <li><span>USA</span></li>
-                                        <li><span>France</span></li>
-                                    </ul>
-                                </div>
-                            </div>
+
+    @include('koneksi.navbar')
+
+    <section class="fl-page-title">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="page-title-inner flex">
+                        <div class="page-title-heading">
+                            <h2 class="heading">Profil Sekolah</h2>
                         </div>
-                        <div class="topbar-right flex">
-                            <span>New Product Coming Soon</span>
-                            <div class="countdown">
-                                <span class="js-countdown" data-timer="516400" data-labels=" :  ,  : , : , "></span>
-                            </div>
-                            <ul class="socical-icon flex">
-                                <li><a href="#" class="active"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                        <div class="breadcrumbs">
+                            <ul>
+                                <li><a href="index.html">Beranda</a></li>
+                                <li>Profil Sekolah</li>
                             </ul>
                         </div>
                     </div>
                 </div>
-            </div>  --}}
-      @include('koneksi.navbar')
-
-            <section class="fl-page-title">
-                <div class="overlay"></div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="page-title-inner flex">
-                                <div class="page-title-heading">
-                                    <h2 class="heading">Profil Sekolah</h2>
-                                </div>
-                                <div class="breadcrumbs">
-                                    <ul>
-                                        <li><a href="index.html">Beranda</a></li>
-                                        <li>Profil Sekolah</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            <section class="tf-section item-details-page">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-6 col-lg-12 col-md-12">
-                            <div class="item-media">
-                                <div class="media">
-                                    <img src="{{ asset('landing/html/bidzend/assets/images/logo/muhi.jpg') }}" alt="">
-                                </div>
-                                {{--  <div class="countdown style-2">
-                                    <span class="js-countdown" data-timer="516400"
-                                        data-labels=" Days  , Hour , Mint ,Seco"></span>
-                                </div>  --}}
-                            </div>
-                        </div>
-                        <div class="col-xl-6 col-lg-12 col-md-12">
-                            <div class="content-item">
-                                <h1> Profil Sekolah</h1>
-                                <p class="mg-bt-42">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                    accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
-                                    inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
-                                    ipsam voluptatem quia voluptas sit aspernatur aut</p>
-                                <div class="author-item">
-                                    <div class="avatar">
-                                        <img src="{{ asset('landing/html/bidzend/assets/images/avatar/avt-4.jpg') }}" alt="">
-                                    </div>
-                                    <div class="infor">
-                                        <div class="create">Owner By</div>
-                                        <h6><a href="author.html">Duane M. Mendoza</a> </h6>
-                                        <div class="widget-social">
-                                            <ul>
-                                                <li><a href="#" class="active"><i
-                                                            class="fab fa-facebook-f"></i></a>
-                                                </li>
-                                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <ul class="list-details-item">
-                                    <li><span class="name">Current Price 1.5 ETH</span><span
-                                            class="price">$500.89</span> <span class="pagi">1 of 5</span> </li>
-                                    <li>Size 14000 x 14000 px</li>
-                                    <li> Volume Traded 64.1</li>
-                                </ul>
-                                <div class="author-bid">
-                                    <div class="author-item">
-                                        <div class="avatar">
-                                            <img src="{{ asset('landing/html/bidzend/assets/images/avatar/avt-6.jpg') }}" alt="">
-                                        </div>
-                                        <div class="infor">
-                                            <h6><a href="author.html">Keith J. Kelley</a> </h6>
-                                            <div class="create">Creators</div>
-                                        </div>
-                                    </div>
-                                    <div class="author-item">
-                                        <div class="avatar">
-                                            <img src="{{ asset('landing/html/bidzend/assets/images/avatar/avt-3.jpg') }}" alt="">
-                                        </div>
-                                        <div class="infor">
-                                            <h6><a href="author.html">David Michels</a> </h6>
-                                            <div class="create">Collection</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="infor-bid">
-                                    <div class="content-left">
-                                        <h6>Highest Bid</h6>
-                                        <div class="price">9.3 BNB</div>
-                                    </div>
-                                    <div class="pagi">1 Of 9</div>
-                                </div>
-                                <a href="#" data-toggle="modal" data-target="#popup_bid"
-                                    class="sc-button style letter style-2 style-item-details"><span>Place Bid</span>
-                                </a>
-                                <div class="flat-tabs themesflat-tabs">
-                                    <ul class="menu-tab tab-title">
-                                        <li class="item-title active">
-                                            <span class="inner">Bids</span>
-                                        </li>
-                                        <li class="item-title">
-                                            <span class="inner">History</span>
-                                        </li>
-                                        <li class="item-title">
-                                            <span class="inner">Details</span>
-                                        </li>
-                                    </ul>
-                                    <div class="content-tab">
-                                        <div class="content-inner tab-content">
-                                            <ul class="bid-history-list">
-                                                <li>
-                                                    <div class="content">
-                                                        <div class="author-item">
-                                                            <div class="avatar">
-                                                                <img src="{{ asset('landing/html/bidzend/assets/images/avatar/avt-6.jpg') }}"
-                                                                    alt="">
-                                                            </div>
-                                                            <div class="infor">
-                                                                <p>Bid listed for <span class="status">25 ETH 8</span>
-                                                                    hours ago
-                                                                    by <span class="creator">@Johnson</span> </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="content">
-                                                        <div class="author-item">
-                                                            <div class="avatar">
-                                                                <img src="{{ asset('landing/html/bidzend/assets/images/avatar/avt-2.jpg') }}"
-                                                                    alt="">
-                                                            </div>
-                                                            <div class="infor">
-                                                                <p>Bid listed for <span class="status">25 ETH 8</span>
-                                                                    hours ago
-                                                                    by <span class="creator">@Johnson</span> </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="content">
-                                                        <div class="author-item">
-                                                            <div class="avatar">
-                                                                <img src="{{ asset('landing/html/bidzend/assets/images/avatar/avt-4.jpg') }}"
-                                                                    alt="">
-                                                            </div>
-                                                            <div class="infor">
-                                                                <p>Bid listed for <span class="status">25 ETH 8</span>
-                                                                    hours ago
-                                                                    by <span class="creator">@Johnson</span> </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="content-inner tab-content">
-                                            <ul class="bid-history-list">
-                                                <li>
-                                                    <div class="content">
-                                                        <div class="client">
-                                                            <div class="author-item">
-                                                                <div class="avatar">
-                                                                    <img src="{{ asset('landing/html/bidzend/assets/images/avatar/avt-6.jpg') }}"
-                                                                        alt="">
-                                                                </div>
-                                                                <div class="infor">
-                                                                    <p>Bid listed for <span class="status">25 ETH
-                                                                            8</span> hours ago
-                                                                        by <span class="creator">@Johnson</span> </p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="content-inner tab-content">
-                                            <div class="provenance">
-                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting
-                                                    industry.
-                                                    Lorem Ipsum has been the industry's standard dummy text ever since
-                                                    the 1500s,
-                                                    when an unknown printer took a galley of type and scrambled it to
-                                                    make a type specimen book.
-                                                    It has survived not only five centuries, but also the leap into
-                                                    electronic typesetting,
-                                                    remaining essentially unchanged. It was popularised in the 1960s
-                                                    with the release of Letraset sheets containing Lorem Ipsum passages,
-                                                    and more recently with desktop publishing software like Aldus
-                                                    PageMaker including versions of Lorem Ipsum.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-          @include('koneksi.footer')
+            </div>
         </div>
+    </section>
+    <div class="container">
+        <div class="text-center">
+            <h3>Profil Sekolah</h3>
+            <p>Diterbitkan : Senin, 1 Feb 2021</p>
+            <img src="{{ asset('landing/html/bidzend/assets/images/logo/profilsekolah.png') }}" alt="">
+        </div>
+        <br>
+        <br>
+        <div class="text-center">
+            <h4 style="text-align: center;">SMK MUHAMMADIYAH 1 GENTENG</h4>
+        </div>
+        <div class="post-content">
+
+            <p>SMK Muhammadiyah 1 (Muhi) Genteng adalah sekolah kejuruan Muhammadiyah pertama di Banyuwangi yang telah berdiri sejak Tahun 1968. Awalnya, bernama SMEA Muhammadiyah, namun sejak tahun 2000 telah beralih nama menjadi SMK Muhammadiyah 1 Genteng.</p><br>
+            <p>Sebagai sekolah yang berpengalaman dalam bidang pendidikan, saat ini SMK Muhi Genteng telah terakreditasi “A”.</p><br>
+            <p>SMK Muhi Genteng menanamkan jiwa “Kreatif dan Inovatif” kepada seluruh elemen sekolah. Jiwa tersebut sebagai komitmen sekolah yang tidak hanya memberikan pelayanan pendidikan yang biasa, namun senantiasa memberikan pendidikan yang berenergi kreatif dan senantiasa tumbuh dengan inovatif.</p><br>
+            <p>Sebagai penyelenggara pendidikan yang unggul dan profesional, SMK Muhi Genteng memiliki visi dan misi berikut:
+
+            </p>
+        </div>
+        <br>
+        <div class="text-center">
+            <h4>Visi</h4>
+            <p>Menjadi Sekolah Unggul yang Berkemajuan dengan Mengedepankan Nilai-nilai Islami</p>
+            <h4>Misi</h4>
+            <ul>
+                <p>Menerapkan nilai-nilai Islami</p>
+                <p>Menerapkan nilai kejujuran, kedisippnan dan budaya kerja</p>
+                <p>Menyiapkan&nbsp; sumber daya manusia yang profesional</p>
+                <p>Meningkatkan kerjasama dengan DUDIKA dan lembaga lainnya</p>
+            </ul>
+
+        </div>
+        <br>
+        <div class="post-content">
+            <p>Dengan visi dan misi tersebut, SMK Muhammadiyah 1 Genteng memiliki tiga Jurusan dan enam Kompetensi Keahlian.</p>
+            <br>
+            <strong>Teknologi Informasi dan Komunikasi</strong>
+            <p>1. Teknik Jaringan Komputer & Telekomunikasi (TJKT)</p>
+            <p>2. Desain komunikasi visual (DKV)</p>
+            <p>3. Pengembangan Perangkat Lunak & GIM (PPLG)</p>
+            <br>
+            <strong>Bisnis dan Manajemen</strong>
+            <p>1.  Bisnis Digital (BD)</p>
+            <p>2. Manajemen Perkantoran (MP)</p>
+            <p>3. Akuntansi (AK)</p>
+            <br>
+            <strong>Pariwisata</strong>
+            <p>1. Perhotelan (PH)</p>
+        </div>
+    </div>
+    <div class="text-center">
+    <h3><img loading="lazy" class="aligncenter wp-image-1991 size-medium" src="https://smkmuhigtg.sch.id/wp-content/uploads/2022/07/MASKOT-1-300x206.png" alt="" width="300" height="206" srcset="https://smkmuhigtg.sch.id/wp-content/uploads/2022/07/MASKOT-1-300x206.png 300w, https://smkmuhigtg.sch.id/wp-content/uploads/2022/07/MASKOT-1-1024x702.png 1024w, https://smkmuhigtg.sch.id/wp-content/uploads/2022/07/MASKOT-1-768x526.png 768w, https://smkmuhigtg.sch.id/wp-content/uploads/2022/07/MASKOT-1-1536x1053.png 1536w, https://smkmuhigtg.sch.id/wp-content/uploads/2022/07/MASKOT-1-2048x1404.png 2048w" sizes="(max-width: 300px) 100vw, 300px" /></h3>
+    <h3 style="text-align: center;">SI MUHI</h3>
+<p style="text-align: center;">“Si Muhi” maskot baru yang akan menemani dalam mengabarkan informasi sekolah untukmu.<br />
+Si Muhi adalah burung hantu yang bermata bulat dan cerah. Ia mengenakan udeng batik hijau di kepalanya, serta gordon berlambang SMK Muh1 Genteng di lehernya. Bukan tanpa makna loh.<br />
+Si Muhi memiliki filosofi sebagai sosok yang cerdas, sedikit bicara banyak bekerja, serta bermanfaat bagi orang banyak. Udeng batik di kepalanya itu menunjukkan bahwa Si Muhi ini adalah putra daerah Banyuwangi. Sementara gordon yang dikenakan adalah simbol ketuntasan dalam mengenyam ilmu di SMK Muh1 Genteng, dan juga simbol prestasi yang diperoleh dengan berpijak pada tekad “kreatif dan inovatif”.<br />
+Tidak salah lagi, Si Muhi adalah gambaran siswa dan siswi SMK Muh1 Genteng yang senantiasa cerdas, penurut serta selalu bermanfaat. Tak hanya itu saja, ia juga gambaran kebulatan tekad siswa-siswi yang selalu kreatif dan penuh inovatif.</p>
+
+    </div>
+    </div>
+    @include('koneksi.footer')
+    </div>
 
     </div>
 

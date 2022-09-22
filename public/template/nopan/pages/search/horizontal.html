@@ -1,1 +1,0 @@
-Page not found: pages/search/horizontal

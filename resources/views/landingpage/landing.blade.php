@@ -227,11 +227,11 @@
                     <div class="sc-heading style-2 wow fadeInUp">
                         <div class="content-left">
                             <div class="inner">
-                                <h3>ppetensi Keahlian</h3>
+                                <h3>Kompetensi Keahlian</h3>
                             </div>
                         </div>
                         <div class="content-right">
-                            <button class="sc-button style letter style-2"><span>Baca Selengkapnya</span> </button>
+                            <button class="sc-button style letter style-2"><a href="/kompetensi"><span>Baca Selengkapnya</span></a> </button>
                         </div>
                     </div>
                 </div>

@@ -15,12 +15,12 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <link rel="stylesheet" type="text/css" href="{{ asset('template/nopan2/assets/css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('nopan2/assets/css/style.css') }}">
 
-    <link rel="stylesheet" type="text/css" href="{{ asset('template/nopan2/assets/css/responsive.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('nopan2/assets/css/responsive.css') }}">
 
-    <link rel="shortcut icon" href="{{ asset('template/nopan2/assets/icon/Favicon.png') }}">
-    <link rel="apple-touch-icon-precomposed" href="{{ asset('template/nopan2/assets/icon/Favicon.png') }}">
+    <link rel="shortcut icon" href="{{ asset('nopan2/assets/icon/Favicon.png') }}">
+    <link rel="apple-touch-icon-precomposed" href="{{ asset('nopan2/assets/icon/Favicon.png') }}">
 </head>
 
 <body class="body header-fixed">
@@ -219,6 +219,7 @@
                                             class="sc-button style letter style-2"><span>Masuk</span> </button>
 
                                         </div>
+                                        <a href="/" class="sc-button">Kembali</a>
                                         {{-- </form> --}}
                                         <div class="other-login">
                                             <div class="text">Atau</div>
@@ -235,7 +236,7 @@
                                     </form>
                                 </div>
                                 <div class="form-background">
-                                    <img src="{{ asset('template/nopan2/assets/images/background/img-login.jpg') }}"
+                                    <img src="{{ asset('nopan2/assets/images/background/img-login.jpg') }}"
                                         alt="">
                                 </div>
                             </div>
@@ -371,13 +372,13 @@
 
     <a id="scroll-top"></a>
 
-    <script src="{{ asset('template/nopan2/assets/js/jquery.min.js') }}"></script>
-    <script src="{{ asset('template/nopan2/assets/js/jquery.easing.js') }}"></script>
-    <script src="{{ asset('template/nopan2/assets/js/plugin.js') }}"></script>
-    <script src="{{ asset('template/nopan2/assets/js/jquery-validate.js') }}"></script>
-    <script src="{{ asset('template/nopan2/assets/js/count-down.js') }}"></script>
-    <script src="{{ asset('template/nopan2/assets/js/shortcodes.js') }}"></script>
-    <script src="{{ asset('template/nopan2/assets/js/main.js') }}"></script>
+    <script src="{{ asset('nopan2/assets/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('nopan2/assets/js/jquery.easing.js') }}"></script>
+    <script src="{{ asset('nopan2/assets/js/plugin.js') }}"></script>
+    <script src="{{ asset('nopan2/assets/js/jquery-validate.js') }}"></script>
+    <script src="{{ asset('nopan2/assets/js/count-down.js') }}"></script>
+    <script src="{{ asset('nopan2/assets/js/shortcodes.js') }}"></script>
+    <script src="{{ asset('nopan2/assets/js/main.js') }}"></script>
 </body>
 
 <!-- Mirrored from themesflat.com/html/bidzend/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Sep 2022 01:14:04 GMT -->

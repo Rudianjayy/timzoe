@@ -1,15 +1,17 @@
 <?php
 
-use App\Http\Controllers\DataidentitasController;
-use App\Http\Controllers\DetailController;
-use App\Http\Controllers\KesiswaanController;
-use App\Http\Controllers\KompetensiController;
-use App\Http\Controllers\KurikulumController;
-use App\Http\Controllers\LoginController;
-use App\Http\Controllers\MuhinewsController;
-use App\Http\Controllers\TentangkamiController;
-use App\Http\Controllers\UpjController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UpjController;
+use App\Http\Controllers\PpdbController;
+use App\Http\Controllers\AlbumController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\DetailController;
+use App\Http\Controllers\MuhinewsController;
+use App\Http\Controllers\KesiswaanController;
+use App\Http\Controllers\KurikulumController;
+use App\Http\Controllers\KompetensiController;
+use App\Http\Controllers\TentangkamiController;
+use App\Http\Controllers\DataidentitasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,6 +38,15 @@ Route::get('/profilsekolah',[TentangkamiController::class,'profilsekolah'])->nam
 
 //kompetensikeahlian
 Route::get('/kompetensi',[KompetensiController::class,'kompetensi'])->name('kompetensi');
+Route::get('/tkj',[KompetensiController::class,'tkj'])->name('tkj');
+Route::get('/rpl',[KompetensiController::class,'rpl'])->name('rpl');
+Route::get('/bd',[KompetensiController::class,'bd'])->name('bd');
+Route::get('/ak',[KompetensiController::class,'ak'])->name('ak');
+Route::get('/dkv',[KompetensiController::class,'dkv'])->name('dkv');
+Route::get('/mp',[KompetensiController::class,'mp'])->name('mp');
+Route::get('/ph',[KompetensiController::class,'ph'])->name('ph');
+Route::get('/ulp',[KompetensiController::class,'ulp'])->name('ulp');
+
 
 
 
@@ -51,7 +62,7 @@ Route::get('/upj',[UpjController::class,'upj'])->name('upj');
 
 
 //ppdb
-
+Route::get('/ppdb', [PpdbController::class, 'ppdb'])->name('ppdb');
 
 
 //detail blog

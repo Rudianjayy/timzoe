@@ -1,0 +1,19 @@
+HTTrack3.49-2+htsswf+htsjava launched on Thu, 22 Sep 2022 15:08:43 at https://themesbrand.com/veltrix/layouts/index.html +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://themesbrand.com/veltrix/layouts/index.html -O1 "C:\admin\admin" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+15:13:57	Warning: 	File not parsed, looks like binary: https://themesbrand.com/veltrix/layouts/assets/fonts/materialdesignicons-webfont.woff2?v=5.8.55
+15:13:57	Warning: 	File not parsed, looks like binary: https://themesbrand.com/veltrix/layouts/assets/fonts/ionicons.woff2?v=4.5.10-1
+15:13:58	Warning: 	File not parsed, looks like binary: https://themesbrand.com/veltrix/layouts/assets/fonts/fa-brands-400.woff2
+15:13:58	Warning: 	File not parsed, looks like binary: https://themesbrand.com/veltrix/layouts/assets/fonts/fa-regular-400.woff2
+15:13:58	Warning: 	File not parsed, looks like binary: https://themesbrand.com/veltrix/layouts/assets/fonts/fa-solid-900.woff2
+15:14:01	Error: 	"Not Found" (404) at link https://themesbrand.com/veltrix/layouts/assets/libs/summernote/summernote-bs4.min.css (from https://themesbrand.com/veltrix/layouts/email-compose.html)
+15:14:03	Error: 	"Not Found" (404) at link https://themesbrand.com/veltrix/layouts/assets/images/post-1.jpg (from https://themesbrand.com/veltrix/layouts/pages-profile.html)
+15:14:03	Error: 	"Not Found" (404) at link https://themesbrand.com/veltrix/layouts/assets/images/post-2.jpg (from https://themesbrand.com/veltrix/layouts/pages-profile.html)
+
+HTTrack Website Copier/3.49-2 mirror complete in 5 minutes 20 seconds : 319 links scanned, 315 files written (24422710 bytes overall) [14398568 bytes received at 44995 bytes/sec], 13146929 bytes transferred using HTTP compression in 212 files, ratio 22%, 6.9 requests per connection
+(3 errors, 5 warnings, 0 messages)

@@ -15,12 +15,12 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <link rel="stylesheet" type="text/css" href="{{ asset('template/nopan2/assets/css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('nopan2/assets/css/style.css') }}">
 
-    <link rel="stylesheet" type="text/css" href="{{ asset('template/nopan2/assets/css/responsive.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('nopan2/assets/css/responsive.css') }}">
 
-    <link rel="shortcut icon" href="{{ asset('template/nopan2/assets/icon/Favicon.png') }}">
-    <link rel="apple-touch-icon-precomposed" href="{{ asset('template/nopan2/assets/icon/Favicon.png') }}">
+    <link rel="shortcut icon" href="{{ asset('nopan2/assets/icon/Favicon.png') }}">
+    <link rel="apple-touch-icon-precomposed" href="{{ asset('nopan2/assets/icon/Favicon.png') }}">
 </head>
 
 <body class="body header-fixed ">
@@ -82,9 +82,9 @@
                                     <div id="site-logo-inner">
                                         <a href="index.html" rel="home" class="main-logo">
                                             <img id="logo_header"
-                                                src="{{ asset('template/nopan2/assets/images/logo/logo_dark.png') }}"
+                                                src="{{ asset('nopan2/assets/images/logo/logo_dark.png') }}"
                                                 alt="nft-gaming" width="151" height="45"
-                                                data-retina="{{ asset('template/nopan2/assets/images/logo/logo_dark@2x.png') }}"
+                                                data-retina="{{ asset('nopan2/assets/images/logo/logo_dark@2x.png') }}"
                                                 data-width="151" data-height="45">
                                         </a>
                                     </div>
@@ -145,7 +145,7 @@
                                 </div>
                                 <div class="button-connect-wallet">
                                     <a href="connect-wallet.html" class="sc-button wallet  style-2">
-                                        <img src="{{ asset('template/nopan2/assets/images/icon/connect-wallet.svg') }}"
+                                        <img src="{{ asset('nopan2/assets/images/icon/connect-wallet.svg') }}"
                                             alt="icon">
                                         <span>Connect Wallet</span>
                                     </a>
@@ -153,12 +153,12 @@
                                 <div class="mode_switcher">
                                     <h6><span>Dark Mode</span> <strong>Activate</strong></h6>
                                     <a href="#" class="light d-flex align-items-center">
-                                        <img src="{{ asset('template/nopan2/assets/images/icon/sun.png') }}"
+                                        <img src="{{ asset('nopan2/assets/images/icon/sun.png') }}"
                                             alt="">
                                     </a>
                                     <a href="#" class="dark d-flex align-items-center is_active">
                                         <img id="moon_dark"
-                                            src="{{ asset('template/nopan2/assets/images/icon/moon.png') }}"
+                                            src="{{ asset('nopan2/assets/images/icon/moon.png') }}"
                                             alt="">
                                     </a>
                                 </div>
@@ -256,7 +256,7 @@
                                     </form>
                                 </div>
                                 <div class="form-background">
-                                    <img src="{{ asset('template/nopan2/assets/images/background/img-register.jpg') }}"
+                                    <img src="{{ asset('nopan2/assets/images/background/img-register.jpg') }}"
                                         alt="">
                                 </div>
                             </div>
@@ -281,7 +281,7 @@
                             </div>
                         </div>
                         <div class="new-letter-img">
-                            <img src="{{ asset('template/nopan2/assets/images/background/img-newletter.png') }}"
+                            <img src="{{ asset('nopan2/assets/images/background/img-newletter.png') }}"
                                 alt="Image">
                         </div>
                     </div>
@@ -296,9 +296,9 @@
                                 <div class="logo-footer" id="logo-footer">
                                     <a href="index.html">
                                         <img id="logo_footer"
-                                            src="{{ asset('template/nopan2/assets/images/logo/logo_dark.png') }}"
+                                            src="{{ asset('nopan2/assets/images/logo/logo_dark.png') }}"
                                             alt="nft-gaming" width="151" height="45"
-                                            data-retina="{{ asset('template/nopan2/assets/images/logo/logo_dark@2x.png') }}"
+                                            data-retina="{{ asset('nopan2/assets/images/logo/logo_dark@2x.png') }}"
                                             data-width="151" data-height="45">
                                     </a>
                                 </div>
@@ -348,7 +348,7 @@
                                 <ul class="post-new">
                                     <li>
                                         <div class="post-img">
-                                            <img src="{{ asset('template/nopan2') }}assets/images/post/post-recent-new-4.jpg"
+                                            <img src="{{ asset('nopan2') }}assets/images/post/post-recent-new-4.jpg"
                                                 alt="Post New">
                                         </div>
                                         <div class="post-content">
@@ -361,7 +361,7 @@
                                     </li>
                                     <li>
                                         <div class="post-img">
-                                            <img src="{{ asset('template/nopan2') }}assets/images/post/post-recent-new-5.jpg"
+                                            <img src="{{ asset('nopan2') }}assets/images/post/post-recent-new-5.jpg"
                                                 alt="Post New">
                                         </div>
                                         <div class="post-content">
@@ -393,13 +393,13 @@
 
     <a id="scroll-top"></a>
 
-    <script src="{{ asset('template/nopan2/assets/js/jquery.min.js') }}"></script>
-    <script src="{{ asset('template/nopan2/assets/js/jquery.easing.js') }}"></script>
-    <script src="{{ asset('template/nopan2assets/js/plugin.js/') }}"></script>
-    <script src="{{ asset('template/nopan2/assets/js/count-down.js') }}"></script>
-    <script src="{{ asset('template/nopan2/assets/js/jquery-validate.js') }}"></script>
-    <script src="{{ asset('template/nopan2/assets/js/shortcodes.js') }}"></script>
-    <script src="{{ asset('template/nopan2/assets/js/main.js') }}"></script>
+    <script src="{{ asset('nopan2/assets/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('nopan2/assets/js/jquery.easing.js') }}"></script>
+    <script src="{{ asset('nopan2assets/js/plugin.js/') }}"></script>
+    <script src="{{ asset('nopan2/assets/js/count-down.js') }}"></script>
+    <script src="{{ asset('nopan2/assets/js/jquery-validate.js') }}"></script>
+    <script src="{{ asset('nopan2/assets/js/shortcodes.js') }}"></script>
+    <script src="{{ asset('nopan2/assets/js/main.js') }}"></script>
 </body>
 
 <!-- Mirrored from themesflat.com/html/bidzend/register.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Sep 2022 01:14:04 GMT -->

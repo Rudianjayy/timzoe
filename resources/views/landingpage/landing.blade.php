@@ -21,7 +21,7 @@
 
     <link rel="shortcut icon" href="{{ asset('landing/html/bidzend/assets/icon/muhi.jpg') }}">
     <link rel="apple-touch-icon-precomposed" href="{{ asset('landing/html/bidzend/assets/icon/muhi.jpg') }}">
-    
+
 </head>
 
 <body class="body header-fixed">
@@ -101,7 +101,7 @@
                             </div>
                             <div class="slider-img">
                                 <div class="img-home-1"><img
-                                        src="{{ asset('landing/html/bidzend/assets/images/product-item/remini2-removebg-previeww.png') }}"
+                                        src="{{ asset('landing/html/bidzend/assets/images/product-item/remini2-removebg-preview.png') }}"
                                         alt="Image" style="width:570 !important;"></div>
                             </div>
                         </div>
@@ -128,30 +128,13 @@
                                 <div class="slider-img flex">
                                     <div class="img-left">
                                         <div class="img-1"><img
-                                                src="{{ asset('landing/html/bidzend/assets/images/slider/img-slider-3.jpg') }}"
+                                                src="{{ asset('landing/html/bidzend/assets/images/slider/slider4.jpeg') }}"
                                                 alt="Image"></div>
-                                        <div class="img-2"><img
-                                                src="{{ asset('landing/html/bidzend/assets/images/slider/img-slider-4.jpg') }}"
-                                                alt="Image"></div>
+
                                     </div>
                                     <div class="img-right">
-                                        <img src="{{ asset('landing/html/bidzend/assets/images/slider/img-slider-5.jpg') }}"
-                                            alt="Image">
-                                        <div class="box-avatar flex">
-                                            <div class="list-avatar flex">
-                                                <img src="{{ asset('landing/html/bidzend/assets/images/avatar/avt-8.jpg') }}"
-                                                    alt="Image">
-                                                <img src="{{ asset('landing/html/bidzend/assets/images/avatar/avt-9.jpg') }}"
-                                                    alt="Image">
-                                                <img src="{{ asset('landing/html/bidzend/assets/images/avatar/avt-10.jpg') }}"
-                                                    alt="Image">
-                                                <img src="{{ asset('landing/html/bidzend/assets/images/avatar/avt-11.jpg') }}"
-                                                    alt="Image">
-                                            </div>
-                                            <div class="icon-plus">
-                                                <a href="#"><i class="fas fa-plus"></i></a>
-                                            </div>
-                                        </div>
+
+
                                     </div>
                                 </div>
                             </div>

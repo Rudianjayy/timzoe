@@ -2386,12 +2386,12 @@ blockquote .author::before {
 
 .slider-inner {
     justify-content: space-between;
-    padding: 60px 12.7% 78px 19.3%;
+    padding: 40px 12.7% 78px 19.3%;
 }
 
-.slider-inner.style-2.home-1 {
-    padding: 130px 0 150px 0;
-}
+/* .slider-inner.style-2.home-1 {
+
+} */
 
 .slider-inner .slider-content{
     width: 45.6%;
@@ -2406,7 +2406,6 @@ blockquote .author::before {
 .slider-inner .slider-content .heading {
     line-height: 1.07;
     letter-spacing: -2px;
-    margin-bottom: 28px;
 }
 
 .slider-inner .slider-content .sub-heading {
@@ -2414,7 +2413,6 @@ blockquote .author::before {
     line-height: 1.6;
     font-weight: 500;
     padding-right: 10%;
-    margin-bottom: 40px;
 }
 
 .slider-inner .slider-content .button-slider .sc-button.btn-bordered-white {
@@ -2492,7 +2490,7 @@ blockquote .author::before {
 }
 
 .slider-inner.style-2 .slider-content {
-    width: 50%;
+    width: 100%;
     padding-top: 31px;
 }
 

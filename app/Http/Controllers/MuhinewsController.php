@@ -22,21 +22,21 @@ class MuhinewsController extends Controller
     public function muhinewsproses(Request $request){
         // dd($request->all());
         $this->validate($request,[
-            'foto_muhinews' =>'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
+            'foto' =>'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
             'deskripsi_muhinews' =>'required',
         ],[
-            'foto_muhinews.required' =>'Harus diisi',
-            'foto_muhinews.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
+            'foto.required' =>'Harus diisi',
+            'foto.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
             'deskripsi_muhinews.required' =>'Harus diisi',
 
         ]);
         $data = Muhinews::create([
-            'foto_muhinews' =>$request->foto_muhinews,
+            'foto' =>$request->foto,
             'deskripsi_muhinews' =>$request->deskripsi_muhinews,
         ]);
-        if($request->hasFile('foto_muhinews')){
-            $request->file('foto_muhinews')->move('fotomahasiswa/', $request->file('foto_muhinews')->getClientOriginalName());
-            $data->foto = $request->file('foto_muhinews')->getClientOriginalName();
+        if($request->hasFile('foto')){
+            $request->file('foto')->move('fotomahasiswa/', $request->file('foto')->getClientOriginalName());
+            $data->foto = $request->file('foto')->getClientOriginalName();
             $data->save();
         }
 
@@ -51,10 +51,10 @@ class MuhinewsController extends Controller
 
     public function editproses2(Request $request, $id){
         $this->validate($request,[
-            'foto_muhinews' =>'mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
+            'foto' =>'mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
             'deskripsi_muhinews' =>'required',
         ],[
-            'foto_muhinews.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
+            'foto.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
             'deskripsi_muhinews' =>'harus diisi',
 
         ]);

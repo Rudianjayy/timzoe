@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('muhinews', function (Blueprint $table) {
             $table->id();
-            $table->string('foto_muhinews');
+            $table->string('foto');
             $table->string('deskripsi_muhinews');
             $table->timestamps();
         });

@@ -315,30 +315,28 @@
                 <div class="tf-section sc-card-blog">
                     <div class="container">
                         <div class="row">
+                            @foreach ($data as $d )
                             <div class="col-lg-4 col-md-6">
                                 <article class="sc-card-article">
-                                    @foreach ($data as $row )
-
-
                                     <div class="card-media">
-                                        <a href="blog-details.html"> <img src="{{ asset('fotomahasiswa/' . $row->foto) }}" alt=""></a>
+                                        <a href="blog-details.html"> <img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt=""></a>
                                     </div>
-                                    @endforeach
+
                                     <div class="content">
                                         <div class="meta-info">
                                             <div class="item author">
                                             </div>
                                             <div class="item date">Diterbitkan : Senin, 8 Feb 2021 </div>
                                         </div>
-                                        <div class="text-article">
-                                            <h5><a href="blog-details.html">{{ $row->deskripsi_muhinews }}</a></h5>
+                                          <div class="text-article">
+                                            <h5><a href="blog-details.html">{{ $d->deskripsi_muhinews }}</a></h5>
                                         </div>
                                         <a href="blog-details.html"
                                             class="sc-button btn-bordered-white style letter"><span>Baca Selengkapnya</span></a>
                                     </div>
                                 </article>
                             </div>
-
+                            @endforeach
                         </div>
                     </div>
                 </div>

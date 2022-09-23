@@ -21,9 +21,9 @@
                                     <label for="exampleInputEmail1" class="form-label">Ubah Foto :</label>
                                     <img class="img mb-3" src="{{ asset('fotomahasiswa/' . $data->foto) }}" alt=""
                                         style="width: 70px">
-                                    <input type="file" name="foto_muhinews" class="form-control" id="foto"
+                                    <input type="file" name="foto" class="form-control" id="foto"
                                         aria-describedby="emailHelp" value="{{ $data->foto }}">
-                                    @error('foto_muhinews')
+                                    @error('foto')
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>

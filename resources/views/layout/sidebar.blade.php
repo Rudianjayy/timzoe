@@ -16,6 +16,7 @@
                 <span>Data Identitas</span>
             </a>
         </li>
+@if (auth()->user()->role=="admin")
 
         <li>
             <a href="/data-album" class="waves-effect">
@@ -23,12 +24,15 @@
                 <span>Data Album</span>
             </a>
         </li>
+        @endif
+        @if (auth()->user()->role=="admin")
         <li>
             <a href="/muhinewsadmin" class="waves-effect">
                 <i class="mdi mdi-account-details-outline"></i> <span class="badge rounded-pill bg-primary float-end"></span>
                 <span>Muhinews</span>
             </a>
         </li>
+        @endif
 
         <li>
             <a href="/logout" class="waves-effect">

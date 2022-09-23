@@ -16,7 +16,7 @@
                     <img src="{{ asset('admin/zoee/layouts/assets/images/logo-sm.png') }}" alt="" height="22">
                 </span>
                 <span class="logo-lg">
-                    <img src="{{ asset('admin/zoee/layouts/assets/images/logo-light.png') }}" alt="" height="18">
+                    <img src="{{ asset('landing/html/bidzend/assets/images/logo/muhi2.png') }}" alt="" height="30">
                 </span>
             </a>
         </div>
@@ -58,7 +58,7 @@
             </button>
             <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
                 aria-labelledby="page-header-search-dropdown">
-    
+
                 <form class="p-3">
                     <div class="form-group m-0">
                         <div class="input-group">
@@ -78,7 +78,7 @@
                 <img class="me-2" src="{{ asset('admin/zoee/layouts/assets/images/flags/us_flag.jpg') }}" alt="Header Language" height="16"> English <span class="mdi mdi-chevron-down"></span>
             </button>
             <div class="dropdown-menu dropdown-menu-end">
-    
+
                 <!-- item-->
                 <a href="javascript:void(0);" class="dropdown-item notify-item">
                     <img src="{{ asset('admin/zoee/layouts/assets/images/flags/germany_flag.jpg') }}" alt="user-image" class="me-1" height="12"> <span class="align-middle"> German </span>
@@ -144,7 +144,7 @@
                             </div>
                         </div>
                     </a>
-        
+
                     <a href="#" class="text-reset notification-item">
                         <div class="d-flex">
                             <div class="flex-shrink-0 me-3">

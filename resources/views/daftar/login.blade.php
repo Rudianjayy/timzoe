@@ -19,14 +19,17 @@
 
     <link rel="stylesheet" type="text/css" href="{{ asset('nopan2/assets/css/responsive.css') }}">
 
-    <link rel="shortcut icon" href="{{ asset('nopan2/assets/icon/Favicon.png') }}">
-    <link rel="apple-touch-icon-precomposed" href="{{ asset('nopan2/assets/icon/Favicon.png') }}">
+    <link rel="shortcut icon" href="{{ asset('landing/html/bidzend/assets/icon/muhi.jpg') }}">
+    <link rel="apple-touch-icon-precomposed" href="{{ asset('landing/html/bidzend/assets/icon/muhi.jpg') }}">
 </head>
 
 <body class="body header-fixed">
 
     <div class="preload preload-container">
-        <div class="preload-logo"></div>
+        {{--  <div class="preload-logo"></div>  --}}
+        <div class="preload-logo"><img
+            src="{{ asset('landing/html/bidzend/assets/images/logo/muhi.jpg') }}"
+            alt="Image" style="width:570 !important;"></div>
     </div>
 
     <div id="wrapper">
@@ -194,8 +197,9 @@
                                         <div class="sc-heading">
                                             <h3>Login Disini</h3>
                                             <p class="desc">Silahkan daftar dibawah ini jika belum punya akun!! </p>
-                                            <a href="/register">Daftar disini</a>
-                                        </div>
+                                            <div class="content-right">
+                                            <a href="/register" class="sc-button style letter style-2"><span>Daftar</span> </button></a>
+                                        </div>                                          </div>
                                         {{-- <form id="create-item-1" action="#" method="GET" accept-charset="utf-8"> --}}
                                         <div class="input-group" id="create-item-1">
                                             <input name="email" value="" type="text"
@@ -206,7 +210,7 @@
                                             <input name="password" value="" type="password" placeholder="Masukkan password"
                                                 required="">
                                             </div>
-                                        
+
                                         {{-- <div class="input-group style-2 ">
                                             <div class="btn-check">
                                                 <input type="radio" id="html" name="fav_language"
@@ -219,8 +223,11 @@
                                             class="sc-button style letter style-2"><span>Masuk</span> </button>
 
                                         </div>
-                                        <a href="/" class="sc-button">Kembali</a>
-                                        {{-- </form> --}}
+                                        <br>
+                                        <br>
+                                        <div class="content-right">
+                                            <a href="/" class="sc-button style letter style-2"><span>Kembali</span> </button></a>
+                                        </div>                                        {{-- </form> --}}
                                         <div class="other-login">
                                             <div class="text">Atau</div>
                                             <div class="widget-social">

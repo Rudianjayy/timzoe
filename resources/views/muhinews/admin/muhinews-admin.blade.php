@@ -53,20 +53,20 @@
                                 @php
                                     $no = 1;
                                 @endphp
-                                @foreach ($data as $row)
+                                @foreach ($data as $d)
                                     <tr>
                                         <th>{{ $no++ }}</th>
                                         <td>
-                                            <img src="{{ asset('fotomahasiswa/' . $row->foto) }}" alt=""
+                                            <img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt=""
                                                 style="width: 50px;">
                                         </td>
-                                        <td>{{ $row->deskripsi_muhinews }}</td>
+                                        <td>{{ $d->deskripsi_muhinews }}</td>
 
-                                        {{-- <td>{{ $row->created_at->format('D M Y') }}</td> --}}
+                                        {{-- <td>{{ $d->created_at->format('D M Y') }}</td> --}}
                                         <td>
-                                            <a href="/editmuhinews/{{ $row->id }}" class="btn btn-warning">Edit</a>
-                                            <a href="#" class="btn btn-danger delete" data-id="{{ $row->id }}"
-                                                data-nama="{{ $row->nama }}">Delete</a>
+                                            <a href="/editmuhinews/{{ $d->id }}" class="btn btn-warning">Edit</a>
+                                            <a href="#" class="btn btn-danger delete" data-id="{{ $d->id }}"
+                                                data-nama="{{ $d->nama }}">Delete</a>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -112,14 +112,7 @@
         <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap4.min.js"></script> --}}
 
         <!-- Required datatable js -->
-        <script src="{{ asset('admin/zoee/layouts/assets/libs/datatables.net/js/jquery.dataTables.min.js') }}"></script>
-        <script src="{{ asset('admin/zoee/layouts/assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
-        <script src="{{ asset('admin/zoee/layouts/assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js') }}">
-        </script>
-
-        <script src="{{ asset('admin/zoee/layouts/assets/js/pages/datatables.init.js') }}"></script>
-
-        <script src="{{ asset('admin/zoee/layouts/assets/js/app.js') }}"></script>
+        
 
         <script>
             $(document).ready(function() {

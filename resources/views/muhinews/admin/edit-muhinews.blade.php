@@ -21,18 +21,18 @@
                                     <label for="exampleInputEmail1" class="form-label">Ubah Foto :</label>
                                     <img class="img mb-3" src="{{ asset('fotomahasiswa/' . $data->foto) }}" alt=""
                                         style="width: 70px">
-                                    <input type="file" name="foto_muhinews" class="form-control" id="foto"
+                                    <input type="file" name="foto" class="form-control" id="foto"
                                         aria-describedby="emailHelp" value="{{ $data->foto }}">
-                                    @error('foto_muhinews')
+                                    @error('foto')
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
 
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Deskripsi :</label>
-                                    <textarea class="form-control form-control-solid" rows="6x" name="deskripsi_muhinews">{{ $data->deskripsi }}</textarea>
+                                    <textarea class="form-control form-control-solid" rows="6x" name="deskripsi_muhinews">{{ $data->deskripsi_muhinews }}</textarea>
 
-                                    @error('deskripsi')
+                                    @error('deskripsi_muhinews')
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
@@ -47,6 +47,7 @@
 
         <!-- Optional JavaScript; choose one of the two! -->
 
+        @include('layout.script')
         <!-- Option 1: Bootstrap Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
@@ -69,5 +70,4 @@
             document.getElementById('dosen').value = dosen;
         }
     </script>
-    @include('layout.script')
 @endsection

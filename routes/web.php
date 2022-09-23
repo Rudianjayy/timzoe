@@ -12,6 +12,7 @@ use App\Http\Controllers\KurikulumController;
 use App\Http\Controllers\KompetensiController;
 use App\Http\Controllers\TentangkamiController;
 use App\Http\Controllers\DataidentitasController;
+use App\Http\Controllers\LandingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,13 +25,20 @@ use App\Http\Controllers\DataidentitasController;
 |
 */
 
-Route::get('/', function () {
-    return view('landingpage.landing');
-});
+// Route::get('/', function () {
+//     return view('landingpage.landing');
+// });
+Route::get('/',[LandingController::class,'index'])->name('landing');
 
 
 //muinews
-Route::get('/muhinews',[MuhinewsController::class,'index'])->name('muhinews');
+Route::get('/muhinews',[MuhinewsController::class, 'index'])->name('muhinews');
+Route::get('/muhinewsadmin',[MuhinewsController::class, 'indexadmin'])->name('muhinewsadmin');
+Route::get('/tambahmuhinews',[MuhinewsController::class, 'tambahmuhinews'])->name('tambahmuhinews');
+Route::post('/muhinewsproses',[MuhinewsController::class, 'muhinewsproses'])->name('muhinewsproses');
+Route::get('/editmuhinews/{id}',[MuhinewsController::class, 'editmuhinews'])->name('editmuhinews');
+Route::post('/editproses2/{id}',[MuhinewsController::class, 'editproses2'])->name('editproses2');
+Route::get('/deletemuhinews/{id}',[MuhinewsController::class, 'delete'])->name('delete');
 
 //tentangkami
 Route::get('/tentangkami',[TentangkamiController::class,'tentangkami'])->name('tentangkami');

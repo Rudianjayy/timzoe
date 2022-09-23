@@ -23,6 +23,12 @@
                 <span>Data Album</span>
             </a>
         </li>
+        <li>
+            <a href="/muhinewsadmin" class="waves-effect">
+                <i class="mdi mdi-account-details-outline"></i> <span class="badge rounded-pill bg-primary float-end"></span>
+                <span>Muhinews</span>
+            </a>
+        </li>
 
         <li>
             <a href="/logout" class="waves-effect">

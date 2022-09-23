@@ -1,7 +1,7 @@
 @extends('layout.main')
 @push('css')
     {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> --}}
-    <title>Data Dosen - Laravel</title>
+    <title>Muhinews - Laravel</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css"
         integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -32,7 +32,7 @@
                     <div class="card-body">
 
                         <div>
-                            <a href="/tambahalbum" class="btn btn-primary mt-5"
+                            <a href="/tambahmuhinews" class="btn btn-primary mt-5"
                                 id="kt_account_profile_details_submit">Tambah
                                 +</a>
                         </div>
@@ -60,11 +60,11 @@
                                             <img src="{{ asset('fotomahasiswa/' . $row->foto) }}" alt=""
                                                 style="width: 50px;">
                                         </td>
-                                        <td>{{ $row->deskripsi }}</td>
+                                        <td>{{ $row->deskripsi_muhinews }}</td>
 
                                         {{-- <td>{{ $row->created_at->format('D M Y') }}</td> --}}
                                         <td>
-                                            <a href="/editalbum/{{ $row->id }}" class="btn btn-warning">Edit</a>
+                                            <a href="/editmuhinews/{{ $row->id }}" class="btn btn-warning">Edit</a>
                                             <a href="#" class="btn btn-danger delete" data-id="{{ $row->id }}"
                                                 data-nama="{{ $row->nama }}">Delete</a>
                                         </td>
@@ -143,7 +143,7 @@
                     })
                     .then((willDelete) => {
                         if (willDelete) {
-                            window.location = "/deletealbum/" + zoe + ""
+                            window.location = "/deletemuhinews/" + zoe + ""
                             swal("Data berhasil dihapus!", {
                                 icon: "success",
                             });

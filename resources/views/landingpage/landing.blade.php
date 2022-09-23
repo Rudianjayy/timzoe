@@ -317,11 +317,13 @@
                         <div class="row">
                             <div class="col-lg-4 col-md-6">
                                 <article class="sc-card-article">
+                                    @foreach ($data as $row )
+
+
                                     <div class="card-media">
-                                        <a href="blog-details.html"><img
-                                                src="{{ asset('landing/html/bidzend/assets/images/background/bg7.jpg') }}"
-                                                alt=""></a>
+                                        <a href="blog-details.html"> <img src="{{ asset('fotomahasiswa/' . $row->foto) }}" alt=""></a>
                                     </div>
+                                    @endforeach
                                     <div class="content">
                                         <div class="meta-info">
                                             <div class="item author">
@@ -329,55 +331,14 @@
                                             <div class="item date">Diterbitkan : Senin, 8 Feb 2021 </div>
                                         </div>
                                         <div class="text-article">
-                                            <h5><a href="blog-details.html">PKL DI SMK MUHI GENTENG</a></h5>
+                                            <h5><a href="blog-details.html">{{ $row->deskripsi_muhinews }}</a></h5>
                                         </div>
                                         <a href="blog-details.html"
                                             class="sc-button btn-bordered-white style letter"><span>Baca Selengkapnya</span></a>
                                     </div>
                                 </article>
                             </div>
-                            <div class="col-lg-4 col-md-6">
-                                <article class="sc-card-article">
-                                    <div class="card-media">
-                                        <a href="blog-details.html"><img
-                                                src="{{ asset('landing/html/bidzend/assets/images/background/bg2.jpeg') }}"
-                                                alt=""></a>
-                                    </div>
-                                    <div class="content">
-                                        <div class="meta-info">
-                                            <div class="item author">
-                                            </div>
-                                            <div class="item date">Diterbitkan : Jumat, 4 Jun 2021</div>
-                                        </div>
-                                        <div class="text-article">
-                                            <h5><a href="blog-details.html">LEPAS SISWA KELAS XII DENGAN DISIPLIN PROKES</a></h5>
-                                        </div>
-                                        <a href="blog-details.html"
-                                            class="sc-button btn-bordered-white style letter"><span>Baca Selengkapnya</span></a>
-                                    </div>
-                                </article>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <article class="sc-card-article">
-                                    <div class="card-media">
-                                        <a href="blog-details.html"><img
-                                                src="{{ asset('landing/html/bidzend/assets/images/background/bg3.jpeg') }}"
-                                                alt=""></a>
-                                    </div>
-                                    <div class="content">
-                                        <div class="meta-info">
-                                            <div class="item author">
-                                            </div>
-                                            <div class="item date">Diterbitkan : Senin, 22 Feb 2021</div>
-                                        </div>
-                                        <div class="text-article">
-                                            <h5><a href="blog-details.html">LULUS DI TAHUN PANDEMI DENGAN PENUH PRESTASI</a></h5>
-                                        </div>
-                                        <a href="blog-details.html"
-                                            class="sc-button btn-bordered-white style letter"><span>Baca Selengkapnya</span></a>
-                                    </div>
-                                </article>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -899,174 +860,24 @@
                 <div class="col-md-12">
                     <div class="swiper-container trendy">
                         <div class="swiper-wrapper">
+                        @foreach ($data as $row)
+
                             <div class="swiper-slide wow fadeInUp">
                                 <div class="slider-item">
                                     <div class="sc-product-item style-2">
                                         <div class="product-img">
-                                            <img src="{{ asset('landing/html/bidzend/assets/images/product-item/album1.jpg') }}"
-                                                alt="Image">
+                                        <img src="{{ asset('fotomahasiswa/' . $row->foto) }}" alt="">
                                             <a href="#"
                                                 class="sc-button style letter"><span>Baca Selengkapnya</span></a>
-                                            <label>PANDA</label>
                                         </div>
-
+                                        <div class="card-content">
+                                        <h5 class="card-title">{{ $row->deskripsi }}</h5>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="swiper-slide wow fadeInUp">
-                                <div class="slider-item">
-                                    <div class="sc-product-item style-2">
-                                        <div class="product-img">
-                                            <img src="{{ asset('landing/html/bidzend/assets/images/product-item/album2.jpg') }}"
-                                                alt="Image">
-                                            <a href="#"
-                                                class="sc-button style letter"><span>Place Bid</span></a>
-                                            <label>PANDA</label>
-                                        </div>
+                            @endforeach
 
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide wow fadeInUp">
-                                <div class="slider-item">
-                                    <div class="sc-product-item style-2">
-                                        <div class="product-img">
-                                            <img src="{{ asset('landing/html/bidzend/assets/images/product-item/album3.jpg') }}"
-                                                alt="Image">
-                                            <a href="#"
-                                                class="sc-button style letter"><span>Place Bid</span></a>
-                                            <label>PANDA</label>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide wow fadeInUp">
-                                <div class="slider-item">
-                                    <div class="sc-product-item style-2">
-                                        <div class="product-img">
-                                            <img src="{{ asset('landing/html/bidzend/assets/images/product-item/album5.jpg') }}"
-                                                alt="Image">
-                                            <a href="#"
-                                                class="sc-button style letter"><span>Place Bid</span></a>
-                                            <label>PANDA</label>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide wow fadeInUp">
-                                <div class="slider-item">
-                                    <div class="sc-product-item style-2">
-                                        <div class="product-img">
-                                            <img src="{{ asset('landing/html/bidzend/assets/images/product-item/album6.jpg') }}"
-                                                alt="Image">
-                                            <a href="#"
-                                                class="sc-button style letter"><span>Place Bid</span></a>
-                                            <label>PANDA</label>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide wow fadeInUp">
-                                <div class="slider-item">
-                                    <div class="sc-product-item style-2">
-                                        <div class="product-img">
-                                            <img src="{{ asset('landing/html/bidzend/assets/images/product-item/album7.jpg') }}"
-                                                alt="Image">
-                                            <a href="#"
-                                                class="sc-button style letter"><span>Place Bid</span></a>
-                                            <label>PANDA</label>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide wow fadeInUp">
-                                <div class="slider-item">
-                                    <div class="sc-product-item style-2">
-                                        <div class="product-img">
-                                            <img src="{{ asset('landing/html/bidzend/assets/images/product-item/album8.jpg') }}"
-                                                alt="Image">
-                                            <a href="#"
-                                                class="sc-button style letter"><span>Place Bid</span></a>
-                                            <label>PANDA</label>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide wow fadeInUp">
-                                <div class="slider-item">
-                                    <div class="sc-product-item style-2">
-                                        <div class="product-img">
-                                            <img src="{{ asset('landing/html/bidzend/assets/images/product-item/album9.webp') }}"
-                                                alt="Image">
-                                            <a href="#"
-                                                class="sc-button style letter"><span>Place Bid</span></a>
-                                            <label>PANDA</label>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide wow fadeInUp">
-                                <div class="slider-item">
-                                    <div class="sc-product-item style-2">
-                                        <div class="product-img">
-                                            <img src="{{ asset('landing/html/bidzend/assets/images/product-item/album10.jpg') }}"
-                                                alt="Image">
-                                            <a href="#"
-                                                class="sc-button style letter"><span>Place Bid</span></a>
-                                            <label>PANDA</label>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide wow fadeInUp">
-                                <div class="slider-item">
-                                    <div class="sc-product-item style-2">
-                                        <div class="product-img">
-                                            <img src="{{ asset('landing/html/bidzend/assets/images/product-item/album11.jpg') }}"
-                                                alt="Image">
-                                            <a href="#"
-                                                class="sc-button style letter"><span>Place Bid</span></a>
-                                            <label>PANDA</label>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide wow fadeInUp">
-                                <div class="slider-item">
-                                    <div class="sc-product-item style-2">
-                                        <div class="product-img">
-                                            <img src="{{ asset('landing/html/bidzend/assets/images/product-item/album12.jpg') }}"
-                                                alt="Image">
-                                            <a href="#"
-                                                class="sc-button style letter"><span>Place Bid</span></a>
-                                            <label>PANDA</label>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide wow fadeInUp">
-                                <div class="slider-item">
-                                    <div class="sc-product-item style-2">
-                                        <div class="product-img">
-                                            <img src="{{ asset('landing/html/bidzend/assets/images/product-item/album13.jpg') }}"
-                                                alt="Image">
-                                            <a href="#"
-                                                class="sc-button style letter"><span>Place Bid</span></a>
-                                            <label>PANDA</label>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                         <div class="swiper-button-next btn-slide-next "></div>
                         <div class="swiper-button-prev btn-slide-prev"></div>

@@ -35,7 +35,7 @@
 
 
                 <button type="submit" class="btn btn-primary">Submit</button>
-                <a href="/data-album" class="btn btn-danger">Kembali</a>
+                <a href="/muhinewsadmin" class="btn btn-danger">Kembali</a>
               </form>
             </div>
           </div>

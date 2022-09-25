@@ -67,7 +67,6 @@
                                             <a href="/editalbum/{{ $row->id }}" class="btn btn-warning fas fa-pen-alt">Edit</a>
                                             <a href="/deletealbum/{{ $row->id }}" class="btn btn-danger fas fa-trash-alt" onclick="return confirm('yakin gen?')">Delete</a>
                                         </td>
-                                        mdi-delete
                                     </tr>
                                 @endforeach
                             </tbody>

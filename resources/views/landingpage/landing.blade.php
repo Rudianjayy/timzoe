@@ -312,32 +312,30 @@
                         </div>
                     </div>
                 </div>
-                <div class="tf-section sc-card-blog">
-                    <div class="container">
-                        <div class="row">
-                            @foreach ($d as $d )
-                            <div class="col-lg-4 col-md-6">
-                                <article class="sc-card-article">
-                                    <div class="card-media">
-                                        <a href="blog-details.html"> <img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt=""></a>
-                                    </div>
+                <div class="col-md-12">
+                    <div class="swiper-container trendy">
+                        <div class="swiper-wrapper">
+                        @foreach ($d as $d)
 
-                                    <div class="content">
-                                        <div class="meta-info">
-                                            <div class="item author">
-                                            </div>
-                                            <div class="item date">Diterbitkan : Senin, 8 Feb 2021 </div>
+                            <div class="swiper-slide wow fadeInUp">
+                                <div class="slider-item">
+                                    <div class="sc-product-item style-2">
+                                        <div class="product-img">
+                                        <img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt="">
+                                            <a href="#"
+                                                class="sc-button style letter"><span>Baca Selengkapnya</span></a>
                                         </div>
-                                          <div class="text-article">
-                                            <h5><a href="blog-details.html">{{ $d->deskripsi_muhinews }}</a></h5>
+                                        <div class="card-content">
+                                        <h5 class="card-title">{{ $d->deskripsi_muhinews }}</h5>
                                         </div>
-                                        <a href="blog-details.html"
-                                            class="sc-button btn-bordered-white style letter"><span>Baca Selengkapnya</span></a>
                                     </div>
-                                </article>
+                                </div>
                             </div>
                             @endforeach
+
                         </div>
+                        <div class="swiper-button-next btn-slide-next "></div>
+                        <div class="swiper-button-prev btn-slide-prev"></div>
                     </div>
                 </div>
             </div>

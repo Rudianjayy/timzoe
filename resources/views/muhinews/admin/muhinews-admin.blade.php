@@ -65,7 +65,11 @@
                                         {{-- <td>{{ $d->created_at->format('D M Y') }}</td> --}}
                                         <td>
                                             <a href="/editmuhinews/{{ $d->id }}" class="btn btn-warning">Edit</a>
+
                                             <a href="/deletemuhinews/{{ $d->id }}" class="btn btn-danger" onclick="return confirm('yakin gen?')">Delete</a>
+
+
+                                         
 
                                         </td>
                                     </tr>
@@ -112,6 +116,9 @@
         <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap4.min.js"></script> --}}
 
         <!-- Required datatable js -->
+
+
+
 
 
 

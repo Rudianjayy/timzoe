@@ -3,7 +3,7 @@
     <ul class="metismenu list-unstyled" id="side-menu">
         <li class="menu-title">Menu</li>
 
-        <li>
+        <li >
             <a href="/welcome" class="waves-effect">
                 <i class="ti-home"></i><span class="badge rounded-pill bg-primary float-end"></span>
                 <span>Dashboard</span>

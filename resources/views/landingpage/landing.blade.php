@@ -315,7 +315,7 @@
                 <div class="tf-section sc-card-blog">
                     <div class="container">
                         <div class="row">
-                            @foreach ($data as $d )
+                            @foreach ($d as $d )
                             <div class="col-lg-4 col-md-6">
                                 <article class="sc-card-article">
                                     <div class="card-media">

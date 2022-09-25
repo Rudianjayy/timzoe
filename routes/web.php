@@ -70,6 +70,7 @@ Route::get('/jadwalkegiatan',[KurikulumController::class,'jadwalkegiatan'])->nam
 
 //kesiswaan
 Route::get('/kesiswaan',[KesiswaanController::class,'kesiswaan'])->name('kesiswaan');
+Route::get('/ekstra',[KesiswaanController::class,'ekstra'])->name('ekstra');
 
 Route::get('/upj',[UpjController::class,'upj'])->name('upj');
 

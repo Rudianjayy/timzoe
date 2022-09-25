@@ -61,7 +61,7 @@
                             <li class="menu-item menu-item-has-children">
                                 <a href="/kesiswaan"> Kesiswaan</a>
                                 <ul class="sub-menu">
-                                    <li class="menu-item"><a href="/profilsekolah">Ekstra Kulikuler</a></li>
+                                    <li class="menu-item"><a href="/ekstra">Ekstra Kulikuler</a></li>
                                     <li class="menu-item"><a href="explore-2.html">Mikrotik Akademi</a></li>
                                     <li class="menu-item"><a href="creator.html">IPM/OSIS</a></li>
                                     <li class="menu-item"><a href="creator.html">Alumni</a></li>

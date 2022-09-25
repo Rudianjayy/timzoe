@@ -40,7 +40,7 @@ class MuhinewsController extends Controller
             $data->save();
         }
 
-        return redirect()->route('muhinewsadmin')->with('success',' Data Berhasil di Tambahkan!');
+        return redirect()->route('muhinewsadmin')->with('toast_success',' Data Berhasil di Tambahkan!');
     }
 
     public function editmuhinews($id){
@@ -68,14 +68,14 @@ class MuhinewsController extends Controller
             $data->save();
         }
 
-        return redirect('muhinewsadmin')->with('success',' Data Berhasil di Ubah!');
+        return redirect('muhinewsadmin')->with('toast_success',' Data Berhasil di Ubah!');
 
     }
 
     public function delete($id){
         $data = Muhinews::find($id);
         $data->delete();
-        return redirect('muhinewsadmin')->with('success',' Data Berhasil di Hapus!');
+        return redirect('muhinewsadmin')->with('toast_error',' Data Berhasil di Hapus!');
     }
 
 

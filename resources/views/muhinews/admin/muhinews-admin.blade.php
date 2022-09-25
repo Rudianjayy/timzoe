@@ -65,8 +65,8 @@
                                         {{-- <td>{{ $d->created_at->format('D M Y') }}</td> --}}
                                         <td>
                                             <a href="/editmuhinews/{{ $d->id }}" class="btn btn-warning">Edit</a>
-                                            <a href="#" class="btn btn-danger delete" data-id="{{ $d->id }}"
-                                                data-nama="{{ $d->nama }}">Delete</a>
+                                            <a href="/deletemuhinews/{{ $d->id }}" class="btn btn-danger" onclick="return confirm('yakin gen?')">Delete</a>
+
                                         </td>
                                     </tr>
                                 @endforeach
@@ -123,36 +123,8 @@
         </script>
 
         </body>
-        <script>
-            $('.delete').click(function() {
-                var zoe = $(this).attr('data-id');
-                var nama = $(this).attr('data-nama');
+        @include('sweetalert::alert')
 
-
-                swal({
-                        title: "Apa kamu yakin ingin menghapus data ini?",
-                        text: "Kamu akan menghapus data matkul dengan nama matkul " + nama + "! ",
-                        icon: "warning",
-                        buttons: true,
-                        dangerMode: true,
-                    })
-                    .then((willDelete) => {
-                        if (willDelete) {
-                            window.location = "/deletemuhinews/" + zoe + ""
-                            swal("Data berhasil dihapus!", {
-                                icon: "success",
-                            });
-                        } else {
-                            swal("Data tidak jadi dihapus!");
-                        }
-                    });
-            });
-        </script>
-        <script>
-            @if (Session::has('success'))
-                toastr.success("{{ Session::get('success') }}")
-            @endif
-        </script>
         @include('layout.script')
     </body>
 

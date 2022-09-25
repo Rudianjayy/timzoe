@@ -38,7 +38,7 @@ class AlbumController extends Controller
             $data->save();
         }
 
-        return redirect()->route('data-album')->with('success',' Data Berhasil di Tambahkan!');
+        return redirect()->route('data-album')->with('toast_success', 'Data Berhasil Di Tambahkan!');
     }
 
     public function editalbum($id){
@@ -66,14 +66,14 @@ class AlbumController extends Controller
             $data->save();
         }
 
-        return redirect('data-album')->with('success',' Data Berhasil di Ubah!');
+        return redirect('data-album')->with('toast_success',' Data Berhasil di Ubah!');
 
     }
 
     public function delete($id){
         $data = Album::find($id);
         $data->delete();
-        return redirect('data-album')->with('success',' Data Berhasil di Hapus!');
+        return redirect('data-album')->with('toast_error',' Data Berhasil di Hapus!');
     }
 
 }

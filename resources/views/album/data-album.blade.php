@@ -64,10 +64,10 @@
 
                                         {{-- <td>{{ $row->created_at->format('D M Y') }}</td> --}}
                                         <td>
-                                            <a href="/editalbum/{{ $row->id }}" class="btn btn-warning">Edit</a>
-                                            <a href="#" class="btn btn-danger delete" data-id="{{ $row->id }}"
-                                                data-nama="{{ $row->nama }}">Delete</a>
+                                            <a href="/editalbum/{{ $row->id }}" class="btn btn-warning fas fa-pen-alt">Edit</a>
+                                            <a href="/deletealbum/{{ $row->id }}" class="btn btn-danger fas fa-trash-alt" onclick="return confirm('yakin gen?')">Delete</a>
                                         </td>
+                                        mdi-delete
                                     </tr>
                                 @endforeach
                             </tbody>
@@ -128,7 +128,7 @@
         </script>
 
         </body>
-        <script>
+        {{--  <script>
             $('.delete').click(function() {
                 var zoe = $(this).attr('data-id');
                 var nama = $(this).attr('data-nama');
@@ -152,12 +152,13 @@
                         }
                     });
             });
-        </script>
-        <script>
+        </script>  --}}
+        @include('sweetalert::alert')
+        {{--  <script>
             @if (Session::has('success'))
                 toastr.success("{{ Session::get('success') }}")
             @endif
-        </script>
+        </script>  --}}
         @include('layout.script')
     </body>
 

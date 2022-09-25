@@ -30,9 +30,9 @@
 
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Deskripsi :</label>
-                                    <textarea class="form-control form-control-solid" rows="6x" name="deskripsi_muhinews">{{ $data->deskripsi }}</textarea>
+                                    <textarea class="form-control form-control-solid" rows="6x" name="deskripsi_muhinews">{{ $data->deskripsi_muhinews }}</textarea>
 
-                                    @error('deskripsi')
+                                    @error('deskripsi_muhinews')
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>

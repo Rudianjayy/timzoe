@@ -7,159 +7,414 @@
 <body>
 
 
-<div class="container-fluid">
-
-    <!-- start page title -->
-    <div class="page-title-box">
-        <div class="row align-items-center">
-            <div class="col-md-8">
-                <h6 class="page-title">Form Pendaftaran</h6>
-                {{-- <ol class="breadcrumb m-0">
-                    <li class="breadcrumb-item"><a href="#">Veltrix</a></li>
-                    <li class="breadcrumb-item"><a href="#">Forms</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Form Repeater</li>
-                </ol> --}}
-            </div>
-            <div class="col-md-4">
-                <div class="float-end d-none d-md-block">
-                    {{-- <div class="dropdown">
-                        <button class="btn btn-primary  dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="mdi mdi-cog me-2"></i> Settings
-                        </button>
-                        <div class="dropdown-menu dropdown-menu-end">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Separated link</a>
-                        </div>
-                    </div> --}}
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- end page title -->
-
-
-
-    {{-- <div class="row">
-        <div class="col-12">
+    <div class="row">
+        <div class="col-sm-12">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Example</h4>
-                    <form class="repeater" enctype="multipart/form-data">
-                        <div data-repeater-list="group-a">
-                            <div class="row" data-repeater-item>
-                                <div  class="mb-3 col-lg-2">
-                                    <label class="form-label" for="name">Name</label>
-                                    <input type="text" id="name" name="untyped-input" class="form-control" placeholder="Enter your name"/>
-                                </div>
-                                <!-- end col -->
-                                <div  class="mb-3 col-lg-2">
-                                    <label class="form-label" for="email">Email</label>
-                                    <input type="email" id="email" class="form-control" placeholder="Enter your email"/>
-                                </div>
-                                <!-- end col -->
-                                <div  class="mb-3 col-lg-2">
-                                    <label class="form-label" for="subject">Subject</label>
-                                    <input type="text" id="subject" class="form-control" placeholder="Enter your subject"/>
-                                </div>
-                                <!-- end col -->
-                                <div class="mb-3 col-lg-2">
-                                    <label class="form-label" for="resume">Resume</label>
-                                    <input type="file" class="form-control" id="resume">
 
+                    {{--  <h4 class="card-title">Jquery Steps Wizard</h4>  --}}
+
+
+                    <form id="form-horizontal" class="form-horizontal form-wizard-wrapper">
+                        <h4>Form PPDB</h4>
+                        <p class="card-title-desc">Silahkan melengkapi data profil kalian sesuai dengan form yang disediakan. Jika terdapat tanda bintang (*) . maka wajib diisi</p>
+                        <h3 class="text-center">Identitas Diri & Informasi Orang Tua</h3>
+
+                        <fieldset>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="row mb-3">
+                                        <label for="txtFirstNameBilling" class="col-lg-3 col-form-label">NISN *</label>
+                                        <div class="col-lg-9">
+                                            <input id="txtFirstNameBilling" name="txtFirstNameBilling" type="text" class="form-control" placeholder="NISN">
+                                        </div>
+                                    </div>
                                 </div>
                                 <!-- end col -->
-                                <div class="mb-3 col-lg-2 col-sm-8">
-                                    <label class="form-label" for="message">Message</label>
-                                    <textarea id="message" class="form-control" placeholder="Isi pesan..."></textarea>
+                                <div class="col-md-6">
+                                    <div class="row mb-3">
+                                        <label for="txtLastNameBilling" class="col-lg-3 col-form-label">Nama Ayah *</label>
+                                        <div class="col-lg-9">
+                                            <input id="txtLastNameBilling" name="txtLastNameBilling" type="text" class="form-control" placeholder="Enter your number">
+                                        </div>
+                                    </div>
+                                    <!-- end row -->
                                 </div>
                                 <!-- end col -->
-                                <div class="col-lg-2 col-sm-4 align-self-center">
-                                    <div class="d-grid">
-                                        <input data-repeater-delete type="button" class="btn btn-primary mb-2" value="Delete"/>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="row mb-3">
+                                        <label for="txtCompanyBilling" class="col-lg-3 col-form-label">Nama Lengkap *</label>
+                                        <div class="col-lg-9">
+                                            <input id="txtCompanyBilling" name="txtCompanyBilling" type="text" class="form-control" placeholder="Nama Lengkap">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row mb-3">
+                                        <label for="txtEmailAddressBilling" class="col-lg-3 col-form-label">Kerja Ayah</label>
+                                        <div class="col-lg-9">
+                                            <input id="txtEmailAddressBilling" name="txtEmailAddressBilling" type="text" class="form-control" placeholder="Enter your email">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="row mb-3">
+                                        <label for="txtAddress1Billing" class="col-lg-3 col-form-label">Panggilan *</label>
+                                        <div class="col-lg-9">
+                                            <input id="txtEmailAddressBilling" name="txtEmailAddressBilling" type="text" class="form-control" placeholder="Panggilan">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row mb-3">
+                                        <label for="txtAddress2Billing" class="col-lg-3 col-form-label">Telepon Ayah *</label>
+                                        <div class="col-lg-9">
+                                            <input id="txtEmailAddressBilling" name="txtEmailAddressBilling" type="text" class="form-control" placeholder="Enter your email">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="row mb-3">
+                                        <label for="txtCityBilling" class="col-lg-3 col-form-label">Jenis Kelamin *</label>
+                                        <div class="col-lg-9">
+                                            <input type="radio" id="txtCityBilling" name="txtCityBilling" class="form-check-input">
+                                            <label class="form-check-label" for="customRadioInline1">Laki-Laki</label>
+                                            <input type="radio" id="txtCityBilling" name="txtCityBilling" class="form-check-input">
+                                            <label class="form-check-label" for="customRadioInline1">Perempuan</label>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row mb-3">
+                                        <label for="txtStateProvinceBilling" class="col-lg-3 col-form-label">Alamat Ayah *</label>
+                                        <div class="col-lg-9">
+                                            <textarea id="txtAddress1Billing" name="txtAddress1Billing" rows="4" class="form-control" placeholder="Enter your first address"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                              <div class="row">
+                                <div class="col-md-6">
+                                    <div class="row mb-3">
+                                        <label for="txtTelephoneBilling" class="col-lg-3 col-form-label">Tempat Lahir *</label>
+                                        <div class="col-lg-9">
+                                            <input id="txtTelephoneBilling" name="txtTelephoneBilling" type="text" class="form-control" placeholder="Tempat Lahir">
+                                        </div>
+                                    </div>
+                                    <!-- end row -->
+                                </div>
+                                <!-- end col -->
+                                <div class="col-md-6">
+                                    <div class="row mb-3">
+                                        <label for="txtFaxBilling" class="col-lg-3 col-form-label">Nama Ibu *</label>
+                                        <div class="col-lg-9">
+                                            <input id="txtFaxBilling" name="txtFaxBilling" type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <!-- end row -->
+                                </div>
+                                <!-- end col -->
+                            </div>
+                            <!-- end row -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="row mb-3">
+                                        <label for="txtTelephoneBilling" class="col-lg-3 col-form-label">Tanggal Lahir *</label>
+                                        <div class="col-lg-9">
+                                            <input id="txtTelephoneBilling" name="txtTelephoneBilling" type="date" class="form-control" placeholder="Tanggal Lahir">
+                                        </div>
+                                    </div>
+                                    <!-- end row -->
+                                </div>
+                                <!-- end col -->
+                                <div class="col-md-6">
+                                    <div class="row mb-3">
+                                        <label for="txtFaxBilling" class="col-lg-3 col-form-label">Kerja Ibu *</label>
+                                        <div class="col-lg-9">
+                                            <input id="txtFaxBilling" name="txtFaxBilling" type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <!-- end row -->
+                                </div>
+                                <!-- end col -->
+                            </div>
+                            <!-- end row -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="row mb-3">
+                                        <label for="txtTelephoneBilling" class="col-lg-3 col-form-label">Agama *</label>
+                                        <div class="col-lg-9">
+                                            <select class="form-select" name="" id="" class="form-control">
+                                                <option value="">-Pilih-</option>
+                                                <option>Islam</option>
+                                                <option>Hindu</option>
+                                                <option>Kristen</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <!-- end row -->
+                                </div>
+                                <!-- end col -->
+                                <div class="col-md-6">
+                                    <div class="row mb-3">
+                                        <label for="txtFaxBilling" class="col-lg-3 col-form-label">Telepon Ibu *</label>
+                                        <div class="col-lg-9">
+                                            <input id="txtFaxBilling" name="txtFaxBilling" type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <!-- end row -->
+                                </div>
+                                <!-- end col -->
+                            </div>
+                            <!-- end row -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="row mb-3">
+                                        <label for="txtTelephoneBilling" class="col-lg-3 col-form-label">Alamat *</label>
+                                        <div class="col-lg-9">
+                                            <textarea id="txtAddress1Billing" name="txtAddress1Billing" rows="4" class="form-control" placeholder="Enter your first address"></textarea>
+                                        </div>
+                                    </div>
+                                    <!-- end row -->
+                                </div>
+                                <!-- end col -->
+                                <div class="col-md-6">
+                                    <div class="row mb-3">
+                                        <label for="txtFaxBilling" class="col-lg-3 col-form-label">Alamat Ibu *</label>
+                                        <div class="col-lg-9">
+                                            <textarea id="txtAddress1Billing" name="txtAddress1Billing" rows="4" class="form-control" placeholder="Enter your first address"></textarea>
+                                        </div>
+                                    </div>
+                                    <!-- end row -->
+                                </div>
+                                <!-- end col -->
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="row mb-3">
+                                        <label for="txtTelephoneBilling" class="col-lg-3 col-form-label">Provinsi *</label>
+                                        <div class="col-lg-9">
+                                            <input id="txtTelephoneBilling" name="txtTelephoneBilling" type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <!-- end row -->
+                                </div>
+                                <!-- end col -->
+                                <div class="col-md-6">
+                                    <div class="row mb-3">
+                                        <label for="txtFaxBilling" class="col-lg-3 col-form-label">Product Sub Category</label>
+                                        <div class="col-lg-9">
+                                            <input id="txtFaxBilling" name="txtFaxBilling" type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <!-- end row -->
+                                </div>
+                                <!-- end col -->
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="row mb-3">
+                                        <label for="txtTelephoneBilling" class="col-lg-3 col-form-label">Kota/kab *</label>
+                                        <div class="col-lg-9">
+                                            <input id="txtTelephoneBilling" name="txtTelephoneBilling" type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <!-- end row -->
+                                </div>
+                                <!-- end col -->
+                                <div class="col-md-6">
+                                    <div class="row mb-3">
+                                        <label for="txtFaxBilling" class="col-lg-3 col-form-label">Product Sub Category</label>
+                                        <div class="col-lg-9">
+                                            <input id="txtFaxBilling" name="txtFaxBilling" type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <!-- end row -->
+                                </div>
+                                <!-- end col -->
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="row mb-3">
+                                        <label for="txtTelephoneBilling" class="col-lg-3 col-form-label">Telepon *</label>
+                                        <div class="col-lg-9">
+                                            <input id="txtTelephoneBilling" name="txtTelephoneBilling" type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <!-- end row -->
+                                </div>
+                                <!-- end col -->
+                                <div class="col-md-6">
+                                    <div class="row mb-3">
+                                        <label for="txtFaxBilling" class="col-lg-3 col-form-label">Product Sub Category</label>
+                                        <div class="col-lg-9">
+                                            <input id="txtFaxBilling" name="txtFaxBilling" type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <!-- end row -->
+                                </div>
+                                <!-- end col -->
+                            </div>
+                            <!-- end row -->
+                        </fieldset>
+                        <h3>Company Document</h3>
+                        <fieldset>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="row mb-3">
+                                        <label for="txtFirstNameShipping" class="col-lg-3 col-form-label">PAN Card</label>
+                                        <div class="col-lg-9">
+                                            <input id="txtFirstNameShipping" name="txtFirstNameShipping" type="text" class="form-control" placeholder="Enter pancard number">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end col -->
+                                <div class="col-md-6">
+                                    <div class="row mb-3">
+                                        <label for="txtLastNameShipping" class="col-lg-3 col-form-label">VAT/TIN No.</label>
+                                        <div class="col-lg-9">
+                                            <input id="txtLastNameShipping" name="txtLastNameShipping" type="text" class="form-control" placeholder="Enter tin number">
+                                        </div>
                                     </div>
                                 </div>
                                 <!-- end col -->
                             </div>
                             <!-- end row -->
-                        </div>
-                        <input data-repeater-create type="button" class="btn btn-success mt-2 mt-sm-0" value="Add"/>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div> --}}
-    <!-- end row -->
-
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="card">
-                <div class="card-body">
-                    <h4 class="card-title">Masukkan data diri</h4>
-                    <form class="outer-repeater">
-                        <div data-repeater-list="outer-group" class="outer">
-                            <div data-repeater-item class="outer">
-                                <div class="mb-3">
-                                    <label class="form-label" for="formname">Nama :</label>
-                                    <input type="text" class="form-control" id="formname" placeholder="Isi namamu...">
-                                </div>
-
-                                <div class="mb-3">
-                                    <label class="form-label" for="formemail">Email :</label>
-                                    <input type="email" class="form-control" id="formemail" placeholder="Isi emailmu...">
-                                </div>
-
-                                <div class="inner-repeater mb-4">
-                                    <div data-repeater-list="inner-group" class="inner mb-3">
-                                        <label class="form-label">No telpon :</label>
-                                        <div data-repeater-item class="inner mb-3 row">
-                                            <div class="col-md-10 col-sm-8">
-                                                <input type="text" class="inner form-control" placeholder="Isi nomermu..."/>
-                                            </div>
-                                            <div class="col-md-2 col-sm-4">
-                                                <div class="d-grid">
-                                                    <input data-repeater-delete type="button" class="btn btn-primary inner mt-2 mt-sm-0" value="Delete"/>
-                                                </div>
-                                            </div>
-
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="row mb-3">
+                                        <label for="txtCompanyShipping" class="col-lg-3 col-form-label">CST No.</label>
+                                        <div class="col-lg-9">
+                                            <input id="txtCompanyShipping" name="txtCompanyShipping" type="text" class="form-control" placeholder="Enter csr number">
                                         </div>
                                     </div>
-                                    <input data-repeater-create type="button" class="btn btn-success inner" value="Add Number"/>
                                 </div>
-
-                                <div class="mb-3">
-                                    <label class="form-label mb-3 d-flex">Jenis kelamin :</label>
-                                    <div class="form-check form-check-inline">
-                                        <input type="radio" id="customRadioInline1" name="customRadioInline1" class="form-check-input">
-                                        <label class="form-check-label" for="customRadioInline1">Laki-laki</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input type="radio" id="customRadioInline2" name="customRadioInline1" class="form-check-input">
-                                        <label class="form-check-label" for="customRadioInline2">Perembuan</label>
+                                <!-- end col -->
+                                <div class="col-md-6">
+                                    <div class="row mb-3">
+                                        <label for="txtEmailAddressShipping" class="col-lg-3 col-form-label">Service Tax No.</label>
+                                        <div class="col-lg-9">
+                                            <input id="txtEmailAddressShipping" name="txtEmailAddressShipping" type="text" class="form-control" placeholder="Service tax number">
+                                        </div>
                                     </div>
                                 </div>
-
-                                <div class="mb-3">
-                                    <label class="form-label" for="formmessage">Pesan :</label>
-                                    <textarea id="formmessage" class="form-control" rows="3" placeholder="Isi pesan..."></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-primary">Kirim</button>
+                                <!-- end col -->
                             </div>
-                        </div>
+                            <!-- end row -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="row mb-3">
+                                        <label for="txtCityShipping" class="col-lg-3 col-form-label">Company UIN</label>
+                                        <div class="col-lg-9">
+                                            <input id="txtCityShipping" name="txtCityShipping" type="text" class="form-control" placeholder="Enter uin pin">
+                                        </div>
+                                    </div>
+                                    <!-- end row -->
+                                </div>
+                                <!-- end col -->
+                                <div class="col-md-6">
+                                    <div class="row mb-3">
+                                        <label for="txtStateProvinceShipping" class="col-lg-3 col-form-label">Declaration</label>
+                                        <div class="col-lg-9">
+                                            <input id="txtStateProvinceShipping" name="txtStateProvinceShipping" type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <!-- end row -->
+                                </div>
+                                <!-- end col -->
+                            </div>
+                            <!-- end row -->
+                        </fieldset>
+                        <h3>Bank Details</h3>
+                        <fieldset>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="row mb-3">
+                                        <label for="txtNameCard" class="col-lg-3 col-form-label">Name on Card</label>
+                                        <div class="col-lg-9">
+                                            <input id="txtNameCard" name="txtNameCard" type="text" class="form-control" placeholder="Enter card name">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end col -->
+                                <div class="col-md-6">
+                                    <div class="row mb-3">
+                                        <label for="ddlCreditCardType" class="col-lg-3 col-form-label">Credit Card Type</label>
+                                        <div class="col-lg-9">
+                                            <select id="ddlCreditCardType" name="ddlCreditCardType" class="form-select">
+                                                <option value="">--Please Select--</option>
+                                                <option value="AE">American Express</option>
+                                                <option value="VI">Visa</option>
+                                                <option value="MC">MasterCard</option>
+                                                <option value="DI">Discover</option>
+                                            </select>
+                                        </div>
+                                        <!-- end col -->
+                                    </div>
+                                </div>
+                                <!-- end col -->
+                            </div>
+                            <!-- end row -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="row mb-3">
+                                        <label for="txtCreditCardNumber" class="col-lg-3 col-form-label">Credit Card Number</label>
+                                        <div class="col-lg-9">
+                                            <input id="txtCreditCardNumber" name="txtCreditCardNumber" type="text" class="form-control" placeholder="Enter credit card number">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end col -->
+                                <div class="col-md-6">
+                                    <div class="row mb-3">
+                                        <label for="txtCardVerificationNumber" class="col-lg-3 col-form-label">Card Verification Number</label>
+                                        <div class="col-lg-9">
+                                            <input id="txtCardVerificationNumber" name="txtCardVerificationNumber" type="text" class="form-control" placeholder="Enter verification number">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end col -->
+                            </div>
+                            <!-- end row -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="row mb-3">
+                                        <label for="txtExpirationDate" class="col-lg-3 col-form-label">Expiration Date</label>
+                                        <div class="col-lg-9">
+                                            <input id="txtExpirationDate" name="txtExpirationDate" type="text" class="form-control" placeholder="DD /MM /YYYY">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end col -->
+                            </div>
+                            <!-- end row -->
+                        </fieldset>
+                        {{--  <h3>Confirm Detail</h3>  --}}
+                        <fieldset>
+                            <div class="p-3">
+                                {{--  <div class="">
+                                    <input type="checkbox" class="form-check-input me-2" id="customCheck1">
+                                    <label class="form-label" for="customCheck1">I agree with the Terms and Conditions.</label>
+                                </div>
+  --}}
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </fieldset>
                     </form>
                     <!-- end form -->
                 </div>
-                <!-- end cardbody -->
             </div>
-            <!-- end card -->
         </div>
-        <!-- end col -->
-    </div>
-    <!-- end row -->
-
-</div>
+    </div> <!-- row end -->
 @include('layout.script')
 </body>
 

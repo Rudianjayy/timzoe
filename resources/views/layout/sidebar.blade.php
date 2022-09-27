@@ -33,6 +33,17 @@
             </a>
         </li>
         @endif
+        <li>
+            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                <i class="ti-package"></i>
+                <span>Tentang Kami</span>
+            </a>
+            <ul class="sub-menu" aria-expanded="false">
+                <li><a href="/profilsekolahadmin">Profil Sekolah</a></li>
+                <li><a href="/identitas_admin">Identitas Sekolah</a></li>
+                <li><a href="ui-buttons.html">Fasilitas</a></li>
+            </ul>
+        </li>
 
         <li>
             <a href="/logout" class="waves-effect">

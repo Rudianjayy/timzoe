@@ -1,7 +1,7 @@
 @extends('layout.main')
 @push('css')
     {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> --}}
-    <title>Muhinews - Laravel</title>
+    <title>Data Dosen - Laravel</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css"
         integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -32,7 +32,7 @@
                     <div class="card-body">
 
                         <div>
-                            <a href="/tambahmuhinews" class="btn btn-primary mt-5"
+                            <a href="/tambahprofilsekolah" class="btn btn-primary mt-5"
                                 id="kt_account_profile_details_submit">Tambah
                                 +</a>
                         </div>
@@ -42,8 +42,12 @@
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">Foto</th>
+                                    <th scope="col">judul</th>
                                     <th scope="col">Deskripsi</th>
+                                    <th scope="col">foto</th>
+                                    <th scope="col">deskripsi_lanjutan</th>
+                                    <th scope="col">foto_simuhi</th>
+                                    <th scope="col">deskripsi_simuhi</th>
                                     <th scope="col">Aksi</th>
                                 </tr>
                             </thead>
@@ -53,24 +57,25 @@
                                 @php
                                     $no = 1;
                                 @endphp
-                                @foreach ($data as $d)
+                                @foreach ($data as $q)
                                     <tr>
                                         <th>{{ $no++ }}</th>
+                                        <td>{{ $q->judul }}</td>
+                                        <td>{{ $q->deskripsi }}</td>
                                         <td>
-                                            <img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt=""
+                                            <img src="{{ asset('fotomahasiswa/' . $q->foto) }}" alt=""
                                                 style="width: 50px;">
                                         </td>
-                                        <td>{{ $d->deskripsi_muhinews }}</td>
-
-                                        {{-- <td>{{ $d->created_at->format('D M Y') }}</td> --}}
+                                        <td>{{ $q->deskripsi_lanjutan }}</td>
                                         <td>
-                                            <a href="/editmuhinews/{{ $d->id }}" class="btn btn-warning">Edit</a>
-
-                                            <a href="/deletemuhinews/{{ $d->id }}" class="btn btn-danger" onclick="return confirm('yakin gen?')">Delete</a>
-
-
-
-
+                                            <img src="{{ asset('fotomahasiswa/' . $q->foto_simuhi) }}" alt=""
+                                                style="width: 50px;">
+                                        </td>
+                                        <td>{{ $q->deskripsi_simuhi }}</td>
+                                        {{-- <td>{{ $q->created_at->format('D M Y') }}</td> --}}
+                                        <td>
+                                            <a href="/editalbum/{{ $q->id }}" class="btn btn-warning fas fa-pen-alt">Edit</a>
+                                            <a href="/deletealbum/{{ $q->id }}" class="btn btn-danger fas fa-trash-alt" onclick="return confirm('yakin gen?')">Delete</a>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -116,12 +121,14 @@
         <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap4.min.js"></script> --}}
 
         <!-- Required datatable js -->
+        <script src="{{ asset('admin/zoee/layouts/assets/libs/datatables.net/js/jquery.dataTables.min.js') }}"></script>
+        <script src="{{ asset('admin/zoee/layouts/assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
+        <script src="{{ asset('admin/zoee/layouts/assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js') }}">
+        </script>
 
+        <script src="{{ asset('admin/zoee/layouts/assets/js/pages/datatables.init.js') }}"></script>
 
-
-
-
-
+        <script src="{{ asset('admin/zoee/layouts/assets/js/app.js') }}"></script>
 
         <script>
             $(document).ready(function() {
@@ -129,9 +136,37 @@
             });
         </script>
 
-        </body>
-        @include('sweetalert::alert')
+        {{--  <script>
+            $('.delete').click(function() {
+                var zoe = $(this).attr('data-id');
+                var nama = $(this).attr('data-nama');
 
+
+                swal({
+                        title: "Apa kamu yakin ingin menghapus data ini?",
+                        text: "Kamu akan menghapus data matkul dengan nama matkul " + nama + "! ",
+                        icon: "warning",
+                        buttons: true,
+                        dangerMode: true,
+                    })
+                    .then((willDelete) => {
+                        if (willDelete) {
+                            window.location = "/deletealbum/" + zoe + ""
+                            swal("Data berhasil dihapus!", {
+                                icon: "success",
+                            });
+                        } else {
+                            swal("Data tidak jadi dihapus!");
+                        }
+                    });
+            });
+        </script>  --}}
+        @include('sweetalert::alert')
+        {{--  <script>
+            @if (Session::has('success'))
+                toastr.success("{{ Session::get('success') }}")
+            @endif
+        </script>  --}}
         @include('layout.script')
     </body>
 

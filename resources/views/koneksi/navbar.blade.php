@@ -27,9 +27,10 @@
                                 </li>
 
                                 <li class="menu-item menu-item-has-children">
-                                    <a href="/tentangkami">Tentang Kami</a>
+                                    <a href="/">Tentang Kami</a>
                                     <ul class="sub-menu">
                                         <li class="menu-item"><a href="/profilsekolah">Profil Sekolah</a></li>
+                                        <li class="menu-item"><a href="/visimisi">Visi & Misi</a></li>
                                         <li class="menu-item"><a href="/identitas_sekolah">Identitas Sekolah</a></li>
                                         <li class="menu-item"><a href="/fasilitassekolah">Fasilitas</a></li>
                                 </li>
@@ -43,7 +44,7 @@
                                         <ul class="sub-menu">
                                             <li class="menu-item"><a href="/tkj">Teknik Komputer & Jaringan(TKJ)</a></li>
                                             <li class="menu-item"><a href="/mp">Otomasi Tata Kelola Perkantoran(OTKP)</a></li>
-                                            <li class="menu-item"><a href="/bd">Bisnis Digital(BD)</a></li>
+                                            <li class   ="menu-item"><a href="/bd">Bisnis Digital(BD)</a></li>
                                             <li class="menu-item"><a href="/rpl">Rekayasa Perangkat Lunak(RPL)</a></li>
                                             <li class="menu-item"><a href="/ph">Perhotelan(PH)</a></li>
                                             <li class="menu-item"><a href="/ulp">Usaha Layanan Pariwisata(ULP)</a></li>

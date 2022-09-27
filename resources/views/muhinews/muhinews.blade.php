@@ -60,28 +60,31 @@
             <div class="tf-section sc-card-blog">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-4 col-md-6">
-                            <article class="sc-card-article">
-                                <div class="card-media">
-                                    <a href="blog-details.html"><img
-                                            src="{{ asset('landing/html/bidzend/assets/images/background/bg1.jpg') }}"
-                                            alt=""></a>
-                                </div>
-                                <div class="content">
-                                    <div class="meta-info">
-                                        <div class="item author">
+                        @foreach ($d as $d)
+                            <div class="col-lg-4 col-md-6">
+
+                                <article class="sc-card-article">
+                                    <div class="card-media">
+                                        <img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt="" style="width: 350px; height:300px;">
+                                    </div>
+                                    <div class="content">
+                                        <div class="meta-info">
+                                            <div class="item author">
+                                            </div>
+                                            <div class="item date">Diterbitkan : Senin, 31 Jan 2022</div>
                                         </div>
-                                        <div class="item date">Diterbitkan : Senin, 31 Jan 2022</div>
+                                        <div class="text-article">
+                                            <h5><a href="blog-details.html">{{ $d->deskripsi_muhinews }}</a></h5>
+                                        </div>
+                                        <a href="/detailmuhi"
+                                            class="sc-button btn-bordered-white style letter"><span>Baca Selengkapnya</span></a>
                                     </div>
-                                    <div class="text-article">
-                                        <h5><a href="blog-details.html">PEMUDA ISLAM HARUS MILIKI PERAN DI ERA DIGITAL</a></h5>
-                                    </div>
-                                    <a href="/detailmuhi"
-                                        class="sc-button btn-bordered-white style letter"><span>Baca Selengkapnya</span></a>
-                                </div>
-                            </article>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
+
+                                </article>
+
+                            </div>
+                            @endforeach
+                        {{--  <div class="col-lg-4 col-md-6">
                             <article class="sc-card-article">
                                 <div class="card-media">
                                     <a href="/detailmuhi2"><img
@@ -250,7 +253,7 @@
                                         class="sc-button btn-bordered-white style letter"><span>Baca Selengkapnya</span></a>
                                 </div>
                             </article>
-                        </div>
+                        </div>  --}}
                         <div class="col-md-12">
                             <div class="wg-themesflat-pagination">
                                 <ul>

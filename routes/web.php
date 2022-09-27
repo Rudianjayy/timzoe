@@ -10,9 +10,11 @@ use App\Http\Controllers\MuhinewsController;
 use App\Http\Controllers\KesiswaanController;
 use App\Http\Controllers\KurikulumController;
 use App\Http\Controllers\KompetensiController;
-use App\Http\Controllers\TentangkamiController;
 use App\Http\Controllers\DataidentitasController;
+use App\Http\Controllers\FasilitasController;
+use App\Http\Controllers\IdentitasSekolahController;
 use App\Http\Controllers\LandingController;
+use App\Http\Controllers\ProfilSekolahController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,10 +43,29 @@ Route::post('/editproses2/{id}',[MuhinewsController::class, 'editproses2'])->nam
 Route::get('/deletemuhinews/{id}',[MuhinewsController::class, 'delete'])->name('delete');
 
 //tentangkami
-Route::get('/tentangkami',[TentangkamiController::class,'tentangkami'])->name('tentangkami');
-Route::get('/profilsekolah',[TentangkamiController::class,'profilsekolah'])->name('profilsekolah');
-Route::get('/identitas_sekolah',[TentangkamiController::class,'identitassekolah'])->name('identitassekolah');
-Route::get('/fasilitassekolah',[TentangkamiController::class,'fasilitassekolah'])->name('fasilitassekolah');
+Route::get('/profilsekolah',[ProfilSekolahController::class,'profilsekolah'])->name('profilsekolah');
+Route::get('/visimisi',[ProfilSekolahController::class,'visimisi'])->name('visimisi');
+Route::get('/identitas_sekolah',[IdentitasSekolahController::class,'identitassekolah'])->name('identitassekolah');
+Route::get('/fasilitassekolah',[FasilitasController::class,'fasilitassekolah'])->name('fasilitassekolah');
+
+//crudprofilsekolah
+Route::get('/profilsekolahadmin',[ProfilSekolahController::class,'profilsekolahadmin'])->name('profilsekolahadmin');
+Route::get('/tambahprofilsekolah',[ProfilSekolahController::class,'tambahprofilsekolah'])->name('tambahprofilsekolah');
+Route::post('/prosesprofilsekolah',[ProfilSekolahController::class,'prosesprofilsekolah'])->name('prosesprofilsekolah');
+Route::get('/editprofilsekolah',[ProfilSekolahController::class,'editprofilsekolah'])->name('editprofilsekolah');
+Route::post('/editprosesidentitas/{id}',[ProfilSekolahController::class,'editprosesidentitas'])->name('editprosesidentitas');
+
+
+
+//crudtentangkami
+Route::get('/identitas_admin',[IdentitasSekolahController::class,'identitassekolahadmin'])->name('identitassekolahadmin');
+Route::get('/tambahidentitas',[IdentitasSekolahController::class,'tambahidentitas'])->name('tambahidentitas');
+Route::post('/identitasproses',[IdentitasSekolahController::class, 'identitasproses'])->name('identitasproses');
+Route::get('/editidentitas',[IdentitasSekolahController::class,'editidentitas'])->name('editidentitas');
+Route::post('/editprosesidentitas/{id}',[IdentitasSekolahController::class, 'editprosesidentitas'])->name('editprosesidentitas');
+
+
+
 
 
 

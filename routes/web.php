@@ -4,15 +4,16 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UpjController;
 use App\Http\Controllers\PpdbController;
 use App\Http\Controllers\AlbumController;
+use App\Http\Controllers\IdukaController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DetailController;
+use App\Http\Controllers\LandingController;
 use App\Http\Controllers\MuhinewsController;
 use App\Http\Controllers\KesiswaanController;
 use App\Http\Controllers\KurikulumController;
 use App\Http\Controllers\KompetensiController;
 use App\Http\Controllers\TentangkamiController;
 use App\Http\Controllers\DataidentitasController;
-use App\Http\Controllers\LandingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -89,6 +90,14 @@ Route::get('/detailmuhi2',[DetailController::class,'detailmuhi2'])->name('detail
 
 
 
+//Iduka
+Route::get('/iduka',[IdukaController::class, 'index'])->name('iduka');
+Route::get('/idukaadmin',[IdukaController::class, 'indexadmin'])->name('idukaadmin');
+Route::get('/tambahiduka',[IdukaController::class, 'tambahiduka'])->name('tambahiduka');
+Route::post('/idukaproses',[IdukaController::class, 'idukaproses'])->name('idukaproses');
+Route::get('/editiduka/{id}',[IdukaController::class, 'editiduka'])->name('editiduka');
+Route::post('/editproses3/{id}',[IdukaController::class, 'editproses3'])->name('editproses3');
+Route::get('/deleteiduka/{id}',[IdukaController::class, 'delete'])->name('delete');
 
 
 

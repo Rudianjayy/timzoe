@@ -19,8 +19,8 @@
 
     <link rel="stylesheet" type="text/css" href="{{ asset('landing/html/bidzend/assets/css/responsive.css') }}">
 
-    <link rel="shortcut icon" href="{{ asset('landing/html/bidzend/assets/icon/muhi.jpg') }}">
-    <link rel="apple-touch-icon-precomposed" href="{{ asset('landing/html/bidzend/assets/icon/muhi.jpg') }}">
+    <link rel="shortcut icon" href="{{ asset('landing/html/bidzend/assets/icon/muhilog.png') }}">
+    <link rel="apple-touch-icon-precomposed" href="{{ asset('landing/html/bidzend/assets/icon/muhilog.png') }}">
 
 </head>
 
@@ -100,9 +100,11 @@
                                         </div> --}}
                             </div>
                             <div class="slider-img">
+                                <a href="/login">
                                 <div class="img-home-1"><img
                                         src="{{ asset('landing/html/bidzend/assets/images/product-item/remini2-removebg-preview.png') }}"
                                         alt="Image" style="width:570 !important;"></div>
+                                    </a>
                             </div>
                         </div>
                     </div>
@@ -128,7 +130,7 @@
                                 <div class="slider-img flex">
                                     <div class="img-left">
                                         <div class="img-1"><img
-                                                src="{{ asset('landing/html/bidzend/assets/images/slider/slider4.jpeg') }}"
+                                                src="{{ asset('landing/html/bidzend/assets/images/slider/p.png') }}"
                                                 alt="Image"></div>
 
                                     </div>
@@ -234,7 +236,7 @@
                 <div class="col-lg-4 col-md-6 col-12">
                     <div class="sc-category wow fadeInUp pl-19" data-wow-delay="400ms" data-wow-duration="1000ms">
                         <div class="card-media">
-                            <img src="{{ asset('landing/html/bidzend/assets/images/logo/rpl.jpg') }}"
+                            <img src="{{ asset('landing/html/bidzend/assets/images/logo/Rekayasa Perangkat Lunak.jpg') }}"
                                 alt="">
                         </div>
                         <div class="card-content">
@@ -246,7 +248,7 @@
                 <div class="col-lg-4 col-md-6 col-12">
                     <div class="sc-category wow fadeInUp pl-40" data-wow-delay="600ms" data-wow-duration="1000ms">
                         <div class="card-media">
-                            <img src="{{ asset('landing/html/bidzend/assets/images/logo/DKV-1.jpg') }}"
+                            <img src="{{ asset('landing/html/bidzend/assets/images/logo/dkvv.jpg') }}"
                                 alt="">
                         </div>
                         <div class="card-content">
@@ -258,7 +260,7 @@
                 <div class="col-lg-4 col-md-6 col-12">
                     <div class="sc-category wow fadeInUp mg-bt-0" data-wow-delay="200ms" data-wow-duration="1500ms">
                         <div class="card-media">
-                            <img src="{{ asset('landing/html/bidzend/assets/images/logo/mp.jpg') }}"
+                            <img src="{{ asset('landing/html/bidzend/assets/images/logo/maxresdefault.jpg') }}"
                                 alt="">
                         </div>
                         <div class="card-content">
@@ -284,7 +286,7 @@
                     <div class="sc-category wow fadeInUp mg-bt-0 pl-40 end" data-wow-delay="600ms"
                         data-wow-duration="1500ms">
                         <div class="card-media">
-                            <img src="{{ asset('landing/html/bidzend/assets/images/logo/AK.jpg') }}"
+                            <img src="{{ asset('landing/html/bidzend/assets/images/logo/R.jpg') }}"
                                 alt="">
                         </div>
                         <div class="card-content">
@@ -296,51 +298,51 @@
             </div>
         </div>
     </section>
-    <section class="tf-latest-collections tf-section bg-color-2">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="sc-heading style-2 wow fadeInUp">
-                        <div class="content-left">
-                            <div class="inner">
-                                <h3>Muhi News</h3>
-                                <p class="desc">Klik button disamping jika ingin melihat lebih banyak</p>
+        <section class="tf-latest-collections tf-section bg-color-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="sc-heading style-2 wow fadeInUp">
+                            <div class="content-left">
+                                <div class="inner">
+                                    <h3>Muhi News</h3>
+                                    <p class="desc">Klik button disamping jika ingin melihat lebih banyak</p>
+                                </div>
+                            </div>
+                            <div class="content-right">
+                                <a href="/muhinews" class="sc-button style letter style-2"><span>Lebih Banyak</span> </button></a>
                             </div>
                         </div>
-                        <div class="content-right">
-                            <a href="/muhinews" class="sc-button style letter style-2"><span>Lebih Banyak</span> </button></a>
-                        </div>
                     </div>
-                </div>
-                <div class="col-md-12">
-                    <div class="swiper-container trendy">
-                        <div class="swiper-wrapper">
-                        @foreach ($d as $d)
+                    <div class="col-md-12">
+                        <div class="swiper-container trendy">
+                            <div class="swiper-wrapper">
+                            @foreach ($d as $d)
 
-                            <div class="swiper-slide wow fadeInUp">
-                                <div class="slider-item">
-                                    <div class="sc-product-item style-2">
-                                        <div class="product-img">
-                                        <img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt="">
-                                            <a href="#"
-                                                class="sc-button style letter"><span>Baca Selengkapnya</span></a>
-                                        </div>
-                                        <div class="card-content">
-                                        <h5 class="card-title">{{ $d->deskripsi_muhinews }}</h5>
+                                <div class="swiper-slide wow fadeInUp">
+                                    <div class="slider-item">
+                                        <div class="sc-product-item style-2">
+                                            <div class="product-img">
+                                            <img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt="">
+                                                <a href="#"
+                                                    class="sc-button style letter"><span>Baca Selengkapnya</span></a>
+                                            </div>
+                                            <div class="card-content">
+                                            <h5 class="card-title">{{ $d->deskripsi_muhinews }}</h5>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            @endforeach
+                                @endforeach
 
+                            </div>
+                            <div class="swiper-button-next btn-slide-next "></div>
+                            <div class="swiper-button-prev btn-slide-prev"></div>
                         </div>
-                        <div class="swiper-button-next btn-slide-next "></div>
-                        <div class="swiper-button-prev btn-slide-prev"></div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
     {{--  <div class="tf-section sc-card-blog">
         <div class="container">
@@ -743,7 +745,7 @@
             </div>
         </div>
     </section>
-    <section class="tf-best-seller">
+    {{--  <section class="tf-best-seller">
         <div class="best-seller-inner">
             <div class="row">
                 <div class="col-md-12">
@@ -839,7 +841,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>  --}}
     <section class="tf-trendy-collections tf-section">
         <div class="container">
             <div class="row">

@@ -19,8 +19,8 @@
 
     <link rel="stylesheet" type="text/css" href="{{ asset('landing/html/bidzend/assets/css/responsive.css') }}">
 
-    <link rel="shortcut icon" href="{{ asset('landing/html/bidzend/assets/icon/muhi.jpg') }}">
-    <link rel="apple-touch-icon-precomposed" href="{{ asset('landing/html/bidzend/assets/icon/muhi.jpg') }}">
+    <link rel="shortcut icon" href="{{ asset('landing/html/bidzend/assets/icon/muhilog.png') }}">
+    <link rel="apple-touch-icon-precomposed" href="{{ asset('landing/html/bidzend/assets/icon/muhilog.png') }}">
 </head>
 
 <body class="body header-fixed">
@@ -32,8 +32,8 @@
             alt="Image" style="width:570 !important;"></div>
     </div>
 
-    {{--  <div id="wrapper">
-        <div id="page" class="clearfix">
+      <div id="wrapper">
+        {{--  <div id="page" class="clearfix">
             <div class="topbar">
                 <div class="container">
                     <div class="topbar-inner flex">

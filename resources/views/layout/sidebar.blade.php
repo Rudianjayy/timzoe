@@ -27,6 +27,12 @@
         @endif
         @if (auth()->user()->role=="admin")
         <li>
+            <a href="/idukaadmin" class="waves-effect">
+                <i class="mdi mdi-account-details-outline"></i> <span class="badge rounded-pill bg-primary float-end"></span>
+                <span>Iduka</span>
+            </a>
+        </li>
+        <li>
             <a href="/muhinewsadmin" class="waves-effect">
                 <i class="mdi mdi-account-details-outline"></i> <span class="badge rounded-pill bg-primary float-end"></span>
                 <span>Muhinews</span>

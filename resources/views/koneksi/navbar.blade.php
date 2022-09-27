@@ -69,7 +69,7 @@
                             </ul>
                             </li>
                             <li class="menu-item ">
-                                <a href="contact.html">Iduka</a>
+                                <a href="/iduka">Iduka</a>
                             </li>
                             <li class="menu-item">
                                 <a href="/muhinews">Muhi News</a>

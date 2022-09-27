@@ -1,7 +1,7 @@
 @extends('layout.main')
 @push('css')
     {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> --}}
-    <title>Muhinews - Laravel</title>
+    <title>Iduka - Admin</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css"
         integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -32,7 +32,7 @@
                     <div class="card-body">
 
                         <div>
-                            <a href="/tambahmuhinews" class="btn btn-primary mt-5"
+                            <a href="/tambahiduka" class="btn btn-primary mt-5"
                                 id="kt_account_profile_details_submit">Tambah
                                 +</a>
                         </div>
@@ -42,7 +42,7 @@
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">Foto</th>
+                                    <th scope="col">Judul</th>
                                     <th scope="col">Deskripsi</th>
                                     <th scope="col">Aksi</th>
                                 </tr>
@@ -56,17 +56,13 @@
                                 @foreach ($data as $d)
                                     <tr>
                                         <th>{{ $no++ }}</th>
-                                        <td>
-                                            <img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt=""
-                                                style="width: 50px;">
-                                        </td>
-                                        <td>{{ $d->deskripsi_muhinews }}</td>
+                                        <td>{{ $d->judul_iduka }}</td>
+                                        <td>{{ $d->deskripsi_iduka }}</td>
 
-                                        {{-- <td>{{ $d->created_at->format('D M Y') }}</td> --}}
                                         <td>
-                                            <a href="/editmuhinews/{{ $d->id }}" class="btn btn-warning">Edit</a>
+                                            <a href="/editiduka/{{ $d->id }}" class="btn btn-warning">Edit</a>
 
-                                            <a href="/deletemuhinews/{{ $d->id }}" class="btn btn-danger" onclick="return confirm('yakin gen?')">Delete</a>
+                                            <a href="/deleteiduka/{{ $d->id }}" class="btn btn-danger" onclick="return confirm('yakin gen?')">Delete</a>
 
 
 

@@ -27,13 +27,12 @@
 
     <div class="preload preload-container">
         {{--  <div class="preload-logo"></div>  --}}
-        <div class="preload-logo"><img
-            src="{{ asset('landing/html/bidzend/assets/images/logo/muhi.jpg') }}"
-            alt="Image" style="width:570 !important;"></div>
+        <div class="preload-logo"><img src="{{ asset('landing/html/bidzend/assets/images/logo/muhi.jpg') }}"
+                alt="Image" style="width:570 !important;"></div>
     </div>
 
-      <div id="wrapper">
-       {{-- <div id="page" class="clearfix">
+    {{--  <div id="wrapper">
+        <div id="page" class="clearfix">
             <div class="topbar">
                 <div class="container">
                     <div class="topbar-inner flex">
@@ -75,55 +74,74 @@
                     </div>
                 </div>
             </div>  --}}
-      @include('koneksi.navbar')
+    @include('koneksi.navbar')
 
-            <section class="fl-page-title">
-                <div class="overlay"></div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="page-title-inner flex">
-                                <div class="page-title-heading">
-                                    <h2 class="heading">Kurikulum</h2>
-                                </div>
-                                <div class="breadcrumbs">
-                                    <ul>
-                                        <li><a href="index.html">Beranda</a></li>
-                                        <li>Kurikulum</li>
-                                    </ul>
-                                </div>
+    <section class="fl-page-title">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="page-title-inner flex">
+                        <div class="page-title-heading">
+                            <h2 class="heading">Iduka</h2>
+                        </div>
+                        <div class="breadcrumbs">
+                            <ul>
+                                <li><a href="index.html">Beranda</a></li>
+                                <li>Iduka</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="tf-section sc-card-blog">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="sc-heading style-2">
+                        <div class="content-left">
+                            <div class="inner">
+                                <h3>IDUKA</h3>
+                                <p class="desc">Diterbitkan : Senin, 1 Nov 2021 </p>
+                                <br>
+                                <br>
+
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-            <div class="tf-section sc-card-blog">
                 <div class="container">
-                    <div class="row">
+                    @foreach ($i as $i)
+                        <h4 style="text-align: center;"><strong>{{ $i->judul_iduka }}</strong></h4>
+                        <br>
+                        <div class="container">
+                            <p style="text-decoration-color: blue;">{{ $i->deskripsi_iduka }}</p>
+                        </div>
+                        <p>&nbsp;</p>
+                    @endforeach
 
-                        <div class="col-lg-6">
-                            <div class="card">
-                                <div class="card-body">
+                    <ul>
+                        <li style="text-align: left;">
+                            <h4><strong>MOU Program Keahlian Teknik Komputer dan Jaringan</strong></h4>
+                        </li>
+                    </ul>
+                    <br>
+                    <ul>
+                        <li>
+                            <img src="{{ asset('nopan2/assets/images/logo/iduka1.jpeg') }}" alt="">
+                        </li>
+                    </ul>
 
-                                    <h4 class="card-title">Ratio video 16:9</h4>
-                                    <p class="card-title-desc">Aspect ratios can be customized with modifier classes.</p>
 
-                                    <!-- 16:9 aspect ratio -->
-                                    <div class="ratio ratio-16x9">
-                                        <iframe src="https://www.youtube.com/embed/1y_kfWUCFDQ" title="YouTube video" allowfullscreen></iframe>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> <!-- end col -->
-
-                         <!-- end col -->
-
-                    </div>
                 </div>
             </div>
-          @include('koneksi.footer')
         </div>
-        </div>
+    </div>
+    @include('koneksi.footer')
+    </div>
+    </div>
 
 
     </div>

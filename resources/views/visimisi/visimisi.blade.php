@@ -17,10 +17,17 @@
 
     <link rel="stylesheet" type="text/css" href="{{ asset('landing/html/bidzend/assets/css/style.css') }}">
 
-    <link rel="stylesheet" type="text/css" href="{{ asset('landing/html/bidzend/assets/css/responsive.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('landing/html/bidzend/assets/css/responsive.css') }}">
 
-    <link rel="shortcut icon" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
-    <link rel="apple-touch-icon-precomposed" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
+<link rel="shortcut icon" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
+
+<link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/animate.css') }}">
+<link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap-datepicker.min.css') }}">
+<link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap-select.min.css') }}">
+
+<!-- Template Styles -->
+<link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/style.css') }}">
 </head>
 
 <body class="body header-fixed">
@@ -38,17 +45,19 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="page-title-inner flex">
-                        <div class="page-title-heading">
-                            <h2 class="heading">Visi & Misi</h2>
-                        </div>
-                        <div class="breadcrumbs">
-                            <ul>
-                                <li><a href="index.html">Beranda</a></li>
-                                <li>Visi & Misi</li>
-                            </ul>
-                        </div>
-                    </div>
+
+            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/page-header-shape-1-1.png') }}" class="page-header__bg-shape-1" alt="">
+            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-2-circle-1-1.png') }}" class="page-header__bg-shape-2" alt="">
+            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-1.png') }}" class="page-header__bg-shape-3" alt="">
+            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-3.png') }}" class="page-header__bg-shape-4" alt="">
+            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-2-circle-1-2.png') }}" class="page-header__bg-shape-2" alt="">
+
+            <div class="breadcrumbs">
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li>Visi & Misi</li>
+                </ul>
+            </div>
                 </div>
             </div>
         </div>
@@ -71,24 +80,22 @@
                 </div>
             </div>
         </div>
+        @foreach ($v as $v )
+
+
         <div class="container">
             <div class="row">
                 <div class="content-item">
-                  <center> <h3> Visi & Misi</h3></center>
-                  <h3>Visi</h3>
-                
-                    <p class="desc">Menjadi Sekolah Unggul yang Berkemajuan dengan Mengedepankan Nilai-nilai Islami</p>
+                  <center> <h3>{{$v->judulvisi}}</h3></center>
+
+                   <center> <p class="desc">{{$v->deskripsivisi}}</p></center>
                     <br>
-                    <h3>Misi</h3>
-                    <p class="desc">1. Menerapkan nilai-nilai Islami</p>
-                    <p class="desc">2. Menerapkan nilai kejujuran, kedisiplinan dan budaya kerja</p>
-                    <p class="desc">3. Menyiapkan sumber daya manusia yang profesional</p>
-                    <p class="desc">4. Meningkatkan kerjasama dengan DUDIKA dan lembaga lainnya</p>
-                  
-                
+                    <center>  <h3>{{$v->judulmisi}}</h3></center>
+                    <center> <p class="desc">{{$v->deskripsimisi}}</p></center>
                 </div>
             </div>
         </div>
+        @endforeach
         </div>
     </section>
 

@@ -36,8 +36,7 @@
                                 id="kt_account_profile_details_submit">Tambah
                                 +</a>
                         </div>
-                        <table id="datatable" class="table table-bordered dt-responsive nowrap"
-                            style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                        <table id="example" class="table table-bordered dt-responsive nowrap">
 
                             <thead>
                                 <tr>
@@ -74,8 +73,8 @@
                                         <td>{{ $q->deskripsi_simuhi }}</td>
                                         {{-- <td>{{ $q->created_at->format('D M Y') }}</td> --}}
                                         <td>
-                                            <a href="/editalbum/{{ $q->id }}" class="btn btn-warning fas fa-pen-alt">Edit</a>
-                                            <a href="/deletealbum/{{ $q->id }}" class="btn btn-danger fas fa-trash-alt" onclick="return confirm('yakin gen?')">Delete</a>
+                                            <a href="/editprofilsekolah/{{ $q->id }}" class="btn btn-warning fas fa-pen-alt">Edit</a>
+                                            <a href="/deleteprofilsekolah/{{ $q->id }}" class="btn btn-danger fas fa-trash-alt" onclick="return confirm('yakin gen?')">Delete</a>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -120,19 +119,14 @@
         <script src="{{ asset('style/assets/js/jquery.dataTables.min.js') }}"></script>
         <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap4.min.js"></script> --}}
 
-        <!-- Required datatable js -->
-        <script src="{{ asset('admin/zoee/layouts/assets/libs/datatables.net/js/jquery.dataTables.min.js') }}"></script>
-        <script src="{{ asset('admin/zoee/layouts/assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
-        <script src="{{ asset('admin/zoee/layouts/assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js') }}">
-        </script>
-
-        <script src="{{ asset('admin/zoee/layouts/assets/js/pages/datatables.init.js') }}"></script>
-
         <script src="{{ asset('admin/zoee/layouts/assets/js/app.js') }}"></script>
-
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
         <script>
-            $(document).ready(function() {
-                $('#example').DataTable();
+            $(document).ready(function () {
+                $('#example').DataTable({
+                    scrollX: true,
+                });
             });
         </script>
 

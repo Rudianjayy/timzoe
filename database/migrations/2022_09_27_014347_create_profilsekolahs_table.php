@@ -18,9 +18,9 @@ return new class extends Migration
             $table->string('judul');
             $table->text('deskripsi');
             $table->string('foto');
-            $table->string('deskripsi_lanjutan');
+            $table->text('deskripsi_lanjutan');
             $table->string('foto_simuhi');
-            $table->string('deskripsi_simuhi');
+            $table->text('deskripsi_simuhi');
             $table->timestamps();
         });
     }

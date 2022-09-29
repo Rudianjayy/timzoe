@@ -8,7 +8,8 @@ use Illuminate\Http\Request;
 class IdentitasSekolahController extends Controller
 {
     public function identitassekolah(){
-        return view('identitassekolah.identitas_sekolah');
+        $i = identitassekolah::all();
+        return view('identitassekolah.identitas_sekolah',compact('i'));
     }
     public function identitassekolahadmin()
     {
@@ -17,40 +18,40 @@ class IdentitasSekolahController extends Controller
     }
     public function tambahidentitas()
     {
-        return view('identitassekolah.admin.tambah_identitas');
+        return view('identitassekolah.admin.tambahidentitas');
     }
     public function identitasproses(Request $request){
         // dd($request->all());
-        $this->validate($request,[
-            'namasekolah' =>'required',
-            'npsn' =>'required',
-            'alamat' =>'required',
-            'kecamatan' =>'required',
-            'kabupaten ' =>'required',
-            'provinsi' =>'required',
-            'kodepos' =>'required',
-            'telepon' =>'required',
-            'fax' =>'required',
-            'email' =>'required',
-            'facebook' =>'required',
-            'instagram' =>'required',
-            'youtube' =>'required',
-        ],[
-            'namasekolah.required' =>'Harus diisi',
-            'npsn.required' =>'Harus diisi',
-            'alamat.required' =>'Harus diisi',
-            'kecamatan.required' =>'Harus diisi',
-            'kabupaten.required' =>'Harus diisi',
-            'provinsi.required' =>'Harus diisi',
-            'kodepos.required' =>'Harus diisi',
-            'telepon.required' =>'Harus diisi',
-            'fax.required' =>'Harus diisi',
-            'email.required' =>'Harus diisi',
-            'facebook.required' =>'Harus diisi',
-            'instagram.required' =>'Harus diisi',
-            'youtube.required' =>'Harus diisi',
+        // $this->validate($request,[
+        //     'namasekolah' =>'required',
+        //     'npsn' =>'required',
+        //     'alamat' =>'required',
+        //     'kecamatan' =>'required',
+        //     'kabupaten ' =>'required',
+        //     'provinsi' =>'required',
+        //     'kodepos' =>'required',
+        //     'telepon' =>'required',
+        //     'fax' =>'required',
+        //     'email' =>'required',
+        //     'facebook' =>'required',
+        //     'instagram' =>'required',
+        //     'youtube' =>'required',
+        // ],[
+        //     'namasekolah.required' =>'Harus diisi',
+        //     'npsn.required' =>'Harus diisi',
+        //     'alamat.required' =>'Harus diisi',
+        //     'kecamatan.required' =>'Harus diisi',
+        //     'kabupaten.required' =>'Harus diisi',
+        //     'provinsi.required' =>'Harus diisi',
+        //     'kodepos.required' =>'Harus diisi',
+        //     'telepon.required' =>'Harus diisi',
+        //     'fax.required' =>'Harus diisi',
+        //     'email.required' =>'Harus diisi',
+        //     'facebook.required' =>'Harus diisi',
+        //     'instagram.required' =>'Harus diisi',
+        //     'youtube.required' =>'Harus diisi',
 
-        ]);
+        // ]);
         $data = IdentitasSekolah::create([
             'namasekolah' =>$request->namasekolah,
             'npsn' =>$request->npsn,
@@ -66,46 +67,19 @@ class IdentitasSekolahController extends Controller
             'instagram' =>$request->instagram,
             'youtube' =>$request->youtube,
         ]);
-        return redirect()->route('identitas_admin')->with('toast_success', 'Data Berhasil Di Tambahkan!');
+
+
+
+     return redirect('identitas_admin')->with('toast_success', 'Data Berhasil Di Tambahkan!');
     }
 
-    public function editalbum($id){
+    public function editidentitas($id){
 
         $data = IdentitasSekolah::findOrFail($id);
-        return view('identitassekolah.admin.edit_identitas', compact('data'));
+        return view('identitassekolah.admin.editidentitas', compact('data'));
     }
 
-    public function editproses(Request $request, $id){
-        $this->validate($request,[
-            'namasekolah' =>'required',
-            'npsn' =>'required',
-            'alamat' =>'required',
-            'kecamatan' =>'required',
-            'kabupaten ' =>'required',
-            'provinsi' =>'required',
-            'kodepos' =>'required',
-            'telepon' =>'required',
-            'fax' =>'required',
-            'email' =>'required',
-            'facebook' =>'required',
-            'instagram' =>'required',
-            'youtube' =>'required',
-        ],[
-            'namasekolah.required' =>'Harus diisi',
-            'npsn.required' =>'Harus diisi',
-            'alamat.required' =>'Harus diisi',
-            'kecamatan.required' =>'Harus diisi',
-            'kabupaten.required' =>'Harus diisi',
-            'provinsi.required' =>'Harus diisi',
-            'kodepos.required' =>'Harus diisi',
-            'telepon.required' =>'Harus diisi',
-            'fax.required' =>'Harus diisi',
-            'email.required' =>'Harus diisi',
-            'facebook.required' =>'Harus diisi',
-            'instagram.required' =>'Harus diisi',
-            'youtube.required' =>'Harus diisi',
-
-        ]);
+    public function editprosesidentitas(Request $request, $id){
         $data = IdentitasSekolah::find($id);
         $data->update([
             'namasekolah' =>$request->namasekolah,

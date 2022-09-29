@@ -21,6 +21,23 @@
 
     <link rel="shortcut icon" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
     <link rel="apple-touch-icon-precomposed" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&amp;display=swap">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/animate.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap-datepicker.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap-select.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/fontawesome-all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/hover-min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/swiper.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/jquery.mCustomScrollbar.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/owl.theme.default.min.css') }}">
+
+    <!-- Template Styles -->
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/responsive.css') }}">
 </head>
 
 <body class="body header-fixed ">
@@ -36,179 +53,58 @@
 
            @include('koneksi.navbar')
 
-            <section class="fl-page-title">
-                <div class="overlay"></div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="page-title-inner flex">
-                                <div class="page-title-heading">
-                                    <h2 class="heading">Fasilitas Sekolah</h2>
-                                </div>
-                                <div class="breadcrumbs">
-                                    <ul>
-                                        <li><a href="index.html">Home</a></li>
-                                        <li>Fasilitas Sekolah</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+           <section class="fl-page-title">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+
+            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/page-header-shape-1-1.png') }}" class="page-header__bg-shape-1" alt="">
+            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-2-circle-1-1.png') }}" class="page-header__bg-shape-2" alt="">
+            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-1.png') }}" class="page-header__bg-shape-3" alt="">
+            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-3.png') }}" class="page-header__bg-shape-4" alt="">
+            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-2-circle-1-2.png') }}" class="page-header__bg-shape-2" alt="">
+
+            <div class="breadcrumbs">
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li>Fasilitas Sekolah</li>
+                </ul>
+            </div>
                 </div>
-            </section>
+            </div>
+        </div>
+    </section>
 
+                        <section class="portfolio-grid">
+                            <div class="container">
+                                <div class="block-title text-center">
+                                    <h3>Fasilitas Sekolah</h3>
+                                </div><!-- /.block-title text-center -->
+                                @foreach ($q as $q )
+                                <div class="row high-gutters masonary-layout filter-layout">
+                                    <div class="col-lg-4 col-md-6 col-sm-12 filter-item masonary-item  strategy">
+                                        <div class="portfolio-one__single">
+                                            <div class="portfolio-one__image">
+                                                <img class="zoom" src="{{ asset('fotomahasiswa/' . $q->foto) }}" alt="" style="width: 1000px; height:200px">
+                                            </div><!-- /.portfolio-one__image -->
+                                            <div class="portfolio-one__content">
+                                               <center><h3><a href="portfolio-details.html"></a>{{$q->deskripsi}}</h3></center>
+                                            </div><!-- /.portfolio-one__content -->
+                                        </div><!-- /.portfolio-one__single -->
+                                    </div><!-- /.col-lg-4 col-md-6 col-sm-12 -->
+                                </div><!-- /.row -->
+                                @endforeach
 
-            <section class="hot-collections-page tf-section">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="sc-heading style-2">
-                                <div class="content-left">
-                                    <div class="inner">
-                                        <h3>FASILITAS SMK MUHAMMADIYAH 1 GENTENG</h3>
-                                        <p class="desc">Diterbitkan : Selasa, 28 Jun 2022 </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="swiper-container popular-coll">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="slider-item">
-                                            <div class="sc-author-card">
-                                                <div class="card-media">
-                                                    <img src="{{ asset('landing/html/bidzend/assets/images/img-collection/surya.jpeg') }}" alt="">
-                                                </div>
-
-                                                <div class="card-content">
-                                                    <h5><a href="#">Surya Mart</a> </h5>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="slider-item">
-                                            <div class="sc-author-card">
-                                                <div class="card-media">
-                                                    <img src="{{ asset('landing/html/bidzend/assets/images/img-collection/pegadaian.jpeg') }}" alt="">
-                                                </div>
-
-                                                <div class="card-content">
-                                                    <h5><a href="#">Pegadaian</a> </h5>
-
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="slider-item">
-                                            <div class="sc-author-card">
-                                                <div class="card-media">
-                                                    <img src="{{ asset('landing/html/bidzend/assets/images/img-collection/edotel.jpeg') }}" alt="">
-                                                </div>
-
-                                                <div class="card-content">
-                                                    <h5><a href="#">eDOTEL</a> </h5>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="slider-item">
-                                            <div class="sc-author-card">
-                                                <div class="card-media">
-                                                    <img src="{{ asset('landing/html/bidzend/assets/images/img-collection/muhiprinting.jpeg') }}" alt="">
-                                                </div>
-
-                                                <div class="card-content">
-                                                    <h5><a href="#">Muhi Printing</a> </h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="slider-item">
-                                            <div class="sc-author-card">
-                                                <div class="card-media">
-                                                    <img src="{{ asset('landing/html/bidzend/assets/images/img-collection/bsi.jpeg') }}" alt="">
-                                                </div>
-
-                                                <div class="card-content">
-                                                    <h5><a href="#">Bank Mini Sekolah</a> </h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="swiper-slide">
-                                        <div class="slider-item">
-                                            <div class="sc-author-card mg-bt-0">
-                                                <div class="card-media">
-                                                    <img src="{{ asset('landing/html/bidzend/assets/images/img-collection/upjtkj.jpeg') }}" alt="">
-                                                </div>
-
-                                                <div class="card-content">
-                                                    <h5><a href="#">UPJ TKJ</a> </h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="slider-item">
-                                            <div class="sc-author-card mg-bt-0">
-                                                <div class="card-media">
-                                                    <img src="{{ asset('landing/html/bidzend/assets/images/img-collection/lab.jpeg') }}" alt="">
-                                                </div>
-
-                                                <div class="card-content">
-                                                    <h5><a href="#">Lab Komputer</a> </h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="slider-item">
-                                            <div class="sc-author-card mg-bt-0">
-                                                <div class="card-media">
-                                                    <img src="{{ asset('landing/html/bidzend/assets/images/img-collection/aula.jpeg') }}" alt="">
-                                                </div>
-                                                <div class="card-content">
-                                                    <h5><a href="#">Aula</a> </h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="slider-item">
-                                            <div class="sc-author-card">
-                                                <div class="card-media">
-                                                    <img src="{{ asset('landing/html/bidzend/assets/images/img-collection/masjid.jpeg') }}" alt="">
-                                                </div>
-
-                                                <div class="card-content">
-                                                    <h5><a href="#">Masjid</a> </h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="swiper-pagination"></div>
-                                <div class="swiper-button-next btn-slide-next "></div>
-                                <div class="swiper-button-prev btn-slide-prev"></div>
-                            </div>
-                        </div>
+                            </div><!-- /.container -->
+                        </section><!-- /.portfolio-grid -->
                     </div>
                 </div>
             </section>
           @include('koneksi.footer')
         </div>
-
     </div>
+
 
     <a id="scroll-top"></a>
 
@@ -221,6 +117,12 @@
     <script src="{{ asset('landing/html/bidzend/assets/js/count-down.js') }}"></script>
     <script src="{{ asset('landing/html/bidzend/assets/js/shortcodes.js') }}"></script>
     <script src="{{ asset('landing/html/bidzend/assets/js/main.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
+    <script>
+        mediumZoom('.zoom', {
+
+          })
+    </script>
 </body>
 
 <!-- Mirrored from themesflat.com/html/bidzend/author.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Sep 2022 01:13:58 GMT -->

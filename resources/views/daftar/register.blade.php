@@ -19,8 +19,8 @@
 
     <link rel="stylesheet" type="text/css" href="{{ asset('nopan2/assets/css/responsive.css') }}">
 
-    <link rel="shortcut icon" href="{{ asset('nopan2/assets/icon/Favicon.png') }}">
-    <link rel="apple-touch-icon-precomposed" href="{{ asset('nopan2/assets/icon/Favicon.png') }}">
+    <link rel="shortcut icon" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
+    <link rel="apple-touch-icon-precomposed" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
 </head>
 
 <body class="body header-fixed ">

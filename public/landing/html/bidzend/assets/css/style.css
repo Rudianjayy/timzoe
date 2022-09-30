@@ -1042,7 +1042,7 @@ a:focus {
     --bg-body: #fff;
     --bg-topbar: #F9F9F9;
     --bg-header: #fff;
-    --bg-slider: linear-gradient(130.35deg, #2ea5cd 17.35%, #0b82aa 78.23%);
+    --bg-slider: linear-gradient(130.35deg, #0b82aa 17.35%, #2ea5cd 78.23%);
     --bg-slider-2: #14141F;
     --bg-footer: #14161B;
     --bg-section-color-1: #fff;

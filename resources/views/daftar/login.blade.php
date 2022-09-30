@@ -19,8 +19,8 @@
 
     <link rel="stylesheet" type="text/css" href="{{ asset('nopan2/assets/css/responsive.css') }}">
 
-    <link rel="shortcut icon" href="{{ asset('landing/html/bidzend/assets/icon/muhi.jpg') }}">
-    <link rel="apple-touch-icon-precomposed" href="{{ asset('landing/html/bidzend/assets/icon/muhi.jpg') }}">
+    <link rel="shortcut icon" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
+    <link rel="apple-touch-icon-precomposed" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
 </head>
 
 <body class="body header-fixed">
@@ -196,9 +196,9 @@
                                         @csrf
                                         <div class="sc-heading">
                                             <h3>Login Disini</h3>
-                                            <p class="desc">Silahkan daftar dibawah ini jika belum punya akun!! </p>
+                                            <!-- <p class="desc">Silahkan daftar dibawah ini jika belum punya akun!! </p> -->
                                             <div class="content-right">
-                                            <a href="/register" class="sc-button style letter style-2"><span>Daftar</span> </button></a>
+                                            <!-- <a href="/register" class="sc-button style letter style-2"><span>Daftar</span> </button></a> -->
                                         </div>                                          </div>
                                         {{-- <form id="create-item-1" action="#" method="GET" accept-charset="utf-8"> --}}
                                         <div class="input-group" id="create-item-1">
@@ -227,7 +227,11 @@
                                         <br>
                                         <div class="content-right">
                                             <a href="/" class="sc-button style letter style-2"><span>Kembali</span> </button></a>
-                                        </div>                                        {{-- </form> --}}
+                                        </div>
+
+                                        {{-- </form> --}}
+                                        <center> Belum Punya Akun?<a href="/register" class="sc-button style letter style-2">Daftar</a></center>
+
                                         <div class="other-login">
                                             <div class="text">Atau</div>
                                             <div class="widget-social">

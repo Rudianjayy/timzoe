@@ -19,8 +19,30 @@
 
     <link rel="stylesheet" type="text/css" href="{{ asset('landing/html/bidzend/assets/css/responsive.css') }}">
 
+
     <link rel="shortcut icon" href="{{ asset('landing/html/bidzend/assets/icon/muhilog.png') }}">
     <link rel="apple-touch-icon-precomposed" href="{{ asset('landing/html/bidzend/assets/icon/muhilog.png') }}">
+    <link rel="shortcut icon" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
+    <link rel="apple-touch-icon-precomposed" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
+
+
+    {{-- css juga kuambil dri ppdb landing --}}
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/animate.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap-datepicker.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap-select.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/fontawesome-all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/hover-min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/swiper.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/jquery.mCustomScrollbar.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/owl.theme.default.min.css') }}">
+
+    <!-- Template Styles -->
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/responsive.css') }}">
+
 
 </head>
 
@@ -28,9 +50,8 @@
 
     <div class="preload preload-container">
         {{--  <div class="preload-logo"></div>  --}}
-        <div class="preload-logo"><img
-            src="{{ asset('landing/html/bidzend/assets/images/logo/muhi.jpg') }}"
-            alt="Image" style="width:570 !important;"></div>
+        <div class="preload-logo"><img src="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}"
+                alt="Image" style="width:570 !important;"></div>
     </div>
 
     {{-- <div id="wrapper">
@@ -101,10 +122,10 @@
                             </div>
                             <div class="slider-img">
                                 <a href="/login">
-                                <div class="img-home-1"><img
-                                        src="{{ asset('landing/html/bidzend/assets/images/product-item/remini2-removebg-preview.png') }}"
-                                        alt="Image" style="width:570 !important;"></div>
-                                    </a>
+                                    <div class="img-home-1"><img
+                                            src="{{ asset('landing/html/bidzend/assets/images/product-item/remini2-removebg-preview.png') }}"
+                                            alt="Image" style="width:570 !important;"></div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -131,6 +152,7 @@
                                     <div class="img-left">
                                         <div class="img-1"><img
                                                 src="{{ asset('landing/html/bidzend/assets/images/slider/p.png') }}"
+                                                src="{{ asset('landing/html/bidzend/assets/images/slider/rigen.jpg') }}"
                                                 alt="Image"></div>
 
                                     </div>
@@ -160,9 +182,9 @@
                 <div class="col-12 col-md-6  wow fadeInRight">
                     <div class="text-video">
                         <div class="text-center">
-                        <h4>Sambutan</h4>
-                        <br>
-                        <h2 class="title-h2">Kepala Sekolah</h2>
+                            <h4>Sambutan</h4>
+                            <br>
+                            <h2 class="title-h2">Kepala Sekolah</h2>
                         </div>
                         <br>
                         <br>
@@ -187,10 +209,10 @@
                             mengharapkan masukan dari berbagai pihak untuk sendiri agar kami terus belajar dan update
                             sehingga tampilan isi dan mutu website akan terus berkembang dan lebih baik terima kasih
                             atas kerjasamanya maju terus untuk SMK Muhammadiyah 1 Genteng yang lebih baik lagi.</p>
-                            <p style="text-align: center;">WASSALAMUALAIKUM WARAHMATULLAHI WABARAKTU</p>
-                               <p style="text-align: center;"> Hormat kami,</p>
+                        <p style="text-align: center;">WASSALAMUALAIKUM WARAHMATULLAHI WABARAKTU</p>
+                        <p style="text-align: center;"> Hormat kami,</p>
 
-                              <p style="text-align: center;">  Kepala SMK Muhammadiyah 1 Genteng</p>
+                        <p style="text-align: center;"> Kepala SMK Muhammadiyah 1 Genteng</p>
 
 
                         <p style="text-align: center;"><strong>Taslim, S.Ag, M.Pd</strong></p>
@@ -217,15 +239,15 @@
                             </div>
                         </div>
                         <div class="content-right">
-                            <button class="sc-button style letter style-2"><a href="/kompetensi"><span>Baca Selengkapnya</span></a> </button>
+                            <button class="sc-button style letter style-2"><a href="/kompetensi"><span>Baca
+                                        Selengkapnya</span></a> </button>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-12">
                     <div class="sc-category wow fadeInUp pl-19" data-wow-delay="400ms" data-wow-duration="1000ms">
                         <div class="card-media">
-                            <img src="{{ asset('landing/html/bidzend/assets/images/logo/upj.png') }}"
-                                alt="">
+                            <img src="{{ asset('landing/html/bidzend/assets/images/logo/upj.png') }}" alt="">
                         </div>
                         <div class="card-content">
                             <h5><a href="#"> Teknik Komputer Dan Jaringan(TKJ)</a></h5>
@@ -273,8 +295,7 @@
                     <div class="sc-category wow fadeInUp mg-bt-0 pl-19" data-wow-delay="400ms"
                         data-wow-duration="1500ms">
                         <div class="card-media">
-                            <img src="{{ asset('landing/html/bidzend/assets/images/logo/PH.jpg') }}"
-                                alt="">
+                            <img src="{{ asset('landing/html/bidzend/assets/images/logo/PH.jpg') }}" alt="">
                         </div>
                         <div class="card-content">
                             <h5><a href="#">Perhotelan(PH)</a></h5>
@@ -286,8 +307,7 @@
                     <div class="sc-category wow fadeInUp mg-bt-0 pl-40 end" data-wow-delay="600ms"
                         data-wow-duration="1500ms">
                         <div class="card-media">
-                            <img src="{{ asset('landing/html/bidzend/assets/images/logo/R.jpg') }}"
-                                alt="">
+                            <img src="{{ asset('landing/html/bidzend/assets/images/logo/R.jpg') }}" alt="">
                         </div>
                         <div class="card-content">
                             <h5><a href="#">Akuntansi & Keuangan Lembaga(AKL)</a></h5>
@@ -298,52 +318,93 @@
             </div>
         </div>
     </section>
-        <section class="tf-latest-collections tf-section bg-color-2">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="sc-heading style-2 wow fadeInUp">
-                            <div class="content-left">
-                                <div class="inner">
-                                    <h3>Muhi News</h3>
-                                    <p class="desc">Klik button disamping jika ingin melihat lebih banyak</p>
-                                </div>
-                            </div>
-                            <div class="content-right">
-                                <a href="/muhinews" class="sc-button style letter style-2"><span>Lebih Banyak</span> </button></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="swiper-container trendy">
-                            <div class="swiper-wrapper">
-                            @foreach ($d as $d)
 
-                                <div class="swiper-slide wow fadeInUp">
-                                    <div class="slider-item">
-                                        <div class="sc-product-item style-2">
-                                            <div class="product-img">
-                                            <img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt="">
-                                                <a href="#"
-                                                    class="sc-button style letter"><span>Baca Selengkapnya</span></a>
-                                            </div>
-                                            <div class="card-content">
-                                            <h5 class="card-title">{{ $d->deskripsi_muhinews }}</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                @endforeach
+    <section class="banner-one banner-one__home-two">
+        <div class="particles-snow" id="banner-one-snow"></div><!-- /#cta-one-snow.particles-snow -->
 
-                            </div>
-                            <div class="swiper-button-next btn-slide-next "></div>
-                            <div class="swiper-button-prev btn-slide-prev"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-1.png') }}"
+            class="banner-one__home-two__bg-shape-1" alt="">
+        <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-2.png') }}"
+            class="banner-one__home-two__bg-shape-2" alt="">
+        <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-3.png') }}"
+            class="banner-one__home-two__bg-shape-3" alt="">
+        <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-4.png') }}"
+            class="banner-one__home-two__bg-shape-4" alt="">
+        <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-2.png') }}"
+            class="banner-one__home-two__bg-shape-5" alt="">
 
+        <div class="container">
+            <div class="blog-one__top">
+                <div class="block-title text-left">
+                    <p><span>Berita Terbaru</span></p>
+                    <h3>Cari semua informasi sekolah <br> <span>Di Muhinews.</span></h3>
+                </div><!-- /.block-title text-center -->
+
+                <div class="blog-one__carousel-btn">
+                    <a href="#" class="blog-one__carousel-btn-left"><i class="far fa-angle-left"></i></a>
+                    <a href="#" class="blog-one__carousel-btn-right"><i class="far fa-angle-right"></i></a>
+                </div><!-- /.blog-one__carousel-btn -->
+            </div><!-- /.blog-one__top -->
+
+
+            <div class="thm__owl-carousel blog-one__carousel owl-carousel owl-theme"
+                data-carousel-prev-btn=".blog-one__carousel-btn-left"
+                data-carousel-next-btn=".blog-one__carousel-btn-right"
+                data-options='{
+                "items": 3, "margin": 40, "smartSpeed": 700, "autoplay": true, "autoplayTimeout": 5000,
+                "autoplayHoverPause": true, "nav": false, "dots": false, "loop": true, "responsive": {
+                    "0": { "items": 1, "margin": 0},
+                    "575": { "items": 1, "margin": 0},
+                    "767": { "items": 1, "margin": 0},
+                    "991": { "items": 2, "margin": 40},
+                    "1199": { "items": 3, "margin": 40}
+                }
+            }'>
+            @foreach ($d as $d)
+                <div class="item">
+                   
+                        <div class="blog-one__single">
+                            <div class="blog-one__image">
+                                <img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt="">
+                                <a href=#"><i class="fal fa-plus"></i></a>
+                            </div><!-- /.blog-one__image -->
+                            <div class="blog-one__content">
+                                <div class="blog-one__meta">
+                                    {{-- <a href="blog-details.html">Sara dodly</a>
+                                <span>-</span> --}}
+                                    <a href="#">{{ $d->created_at }}</a>
+                                </div><!-- /.blog-one__meta -->
+                                <h3><a href="#">{{ $d->deskripsi_muhinews }}</a></h3>
+                                <a href="/muhinews" class="thm-btn blog-one__btn"><span>Baca Selengkapnya</span></a>
+                                <!-- /.thm-btn blog-one__btn -->
+                            </div><!-- /.blog-one__content -->
+                        </div><!-- /.blog-one__single -->
+
+                </div><!-- /.item -->
+                @endforeach
+
+
+
+            </div><!-- /.item -->
+        </div><!-- /.row -->
+        <!-- /.row -->
+        <div class="banner-one__images wow fadeInUp" data-wow-duration="1500ms">
+            <img src="{{ asset('landingppdb/ppdb/style/assets/images/mocups/banner-moc-2-1.png') }}"
+                class="banner-one__images-1 float-bob-x" alt="">
+            <img src="{{ asset('landingppdb/ppdb/style/assets/images/mocups/banner-moc-2-2.png') }}"
+                class="banner-one__images-2 float-bob-y" alt="">
+            <img src="{{ asset('landingppdb/ppdb/style/assets/images/mocups/banner-moc-2-3.png') }}"
+                class="banner-one__images-3 float-bob-y" alt="">
+            <img src="{{ asset('landingppdb/ppdb/style/assets/images/mocups/banner-moc-2-4.png') }}"
+                class="banner-one__images-4" alt="">
+            <img src="{{ asset('landingppdb/ppdb/style/assets/images/mocups/banner-moc-2-5.png') }}"
+                class="banner-one__images-5" alt="">
+            <img src="{{ asset('landingppdb/ppdb/style/assets/images/mocups/banner-moc-2-6.png') }}"
+                class="banner-one__images-6 float-bob-y" alt="">
+        </div><!-- /.banner-one__images -->
+        </div><!-- /.container -->
+    </section>
+    <br><br><br><br>
     {{--  <div class="tf-section sc-card-blog">
         <div class="container">
             <div class="row">
@@ -508,8 +569,8 @@
                                                 <span class="js-countdown" data-timer="516400"
                                                     data-labels=" :  ,  : , : , "></span>
                                             </div>
-                                            <a href="#"
-                                                class="sc-button style letter"><span>Place Bid</span></a>
+                                            <a href="#" class="sc-button style letter"><span>Place
+                                                    Bid</span></a>
                                             <label>BSC</label>
                                         </div>
                                         <div class="product-content">
@@ -542,8 +603,8 @@
                                                 <span class="js-countdown" data-timer="516400"
                                                     data-labels=" :  ,  : , : , "></span>
                                             </div>
-                                            <a href="#"
-                                                class="sc-button style letter"><span>Place Bid</span></a>
+                                            <a href="#" class="sc-button style letter"><span>Place
+                                                    Bid</span></a>
                                             <label>BSC</label>
                                         </div>
                                         <div class="product-content">
@@ -576,8 +637,8 @@
                                                 <span class="js-countdown" data-timer="516400"
                                                     data-labels=" :  ,  : , : , "></span>
                                             </div>
-                                            <a href="#"
-                                                class="sc-button style letter"><span>Place Bid</span></a>
+                                            <a href="#" class="sc-button style letter"><span>Place
+                                                    Bid</span></a>
                                             <label>BSC</label>
                                         </div>
                                         <div class="product-content">
@@ -610,8 +671,8 @@
                                                 <span class="js-countdown" data-timer="516400"
                                                     data-labels=" :  ,  : , : , "></span>
                                             </div>
-                                            <a href="#"
-                                                class="sc-button style letter"><span>Place Bid</span></a>
+                                            <a href="#" class="sc-button style letter"><span>Place
+                                                    Bid</span></a>
                                             <label>BSC</label>
                                         </div>
                                         <div class="product-content">
@@ -644,8 +705,8 @@
                                                 <span class="js-countdown" data-timer="516400"
                                                     data-labels=" :  ,  : , : , "></span>
                                             </div>
-                                            <a href="#"
-                                                class="sc-button style letter"><span>Place Bid</span></a>
+                                            <a href="#" class="sc-button style letter"><span>Place
+                                                    Bid</span></a>
                                             <label>BSC</label>
                                         </div>
                                         <div class="product-content">
@@ -678,8 +739,8 @@
                                                 <span class="js-countdown" data-timer="516400"
                                                     data-labels=" :  ,  : , : , "></span>
                                             </div>
-                                            <a href="#"
-                                                class="sc-button style letter"><span>Place Bid</span></a>
+                                            <a href="#" class="sc-button style letter"><span>Place
+                                                    Bid</span></a>
                                             <label>BSC</label>
                                         </div>
                                         <div class="product-content">
@@ -712,8 +773,8 @@
                                                 <span class="js-countdown" data-timer="516400"
                                                     data-labels=" :  ,  : , : , "></span>
                                             </div>
-                                            <a href="#"
-                                                class="sc-button style letter"><span>Place Bid</span></a>
+                                            <a href="#" class="sc-button style letter"><span>Place
+                                                    Bid</span></a>
                                             <label>BSC</label>
                                         </div>
                                         <div class="product-content">
@@ -858,22 +919,21 @@
                 <div class="col-md-12">
                     <div class="swiper-container trendy">
                         <div class="swiper-wrapper">
-                        @foreach ($data as $row)
-
-                            <div class="swiper-slide wow fadeInUp">
-                                <div class="slider-item">
-                                    <div class="sc-product-item style-2">
-                                        <div class="product-img">
-                                        <img src="{{ asset('fotomahasiswa/' . $row->foto) }}" alt="">
-                                            <a href="#"
-                                                class="sc-button style letter"><span>Baca Selengkapnya</span></a>
-                                        </div>
-                                        <div class="card-content">
-                                        <h5 class="card-title">{{ $row->deskripsi }}</h5>
+                            @foreach ($data as $row)
+                                <div class="swiper-slide wow fadeInUp">
+                                    <div class="slider-item">
+                                        <div class="sc-product-item style-2">
+                                            <div class="product-img">
+                                                <img src="{{ asset('fotomahasiswa/' . $row->foto) }}" alt="">
+                                                <a href="#" class="sc-button style letter"><span>Baca
+                                                        Selengkapnya</span></a>
+                                            </div>
+                                            <div class="card-content">
+                                                <h5 class="card-title">{{ $row->deskripsi }}</h5>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
                             @endforeach
 
                         </div>
@@ -910,6 +970,30 @@
     <script src="{{ asset('landing/html/bidzend/assets/js/shortcodes.js') }}"></script>
     <script src="{{ asset('landing/html/bidzend/assets/js/main.js') }}"></script>
     <script src="http://maps.googleapis.com/maps/api/js"></script>
+
+    {{-- js nya ppdb kuambil truh sini --}}
+    {{-- <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.min.js') }}"></script> --}}
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/bootstrap.bundle.min.js') }}"></script>
+    {{-- <script src="{{ asset('landingppdb/ppdb/style/assets/js/bootstrap-datepicker.min.js') }}"></script> --}}
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/bootstrap-select.min.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/isotope.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.ajaxchimp.min.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.circleType.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/waypoints.min.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.counterup.min.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.lettering.min.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.mCustomScrollbar.concat.min.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.validate.min.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/TweenMax.min.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/wow.min.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/swiper.min.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/particles.min.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/particel-config.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/theme.js') }}"></script>
+
+
 </body>
 
 <!-- Mirrored from themesflat.com/html/bidzend/bidzend/home-animation.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Sep 2022 01:12:48 GMT -->

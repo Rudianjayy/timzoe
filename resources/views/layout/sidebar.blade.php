@@ -27,10 +27,27 @@
         @endif
         @if (auth()->user()->role=="admin")
         <li>
-            <a href="/idukaadmin" class="waves-effect">
-                <i class="mdi mdi-account-details-outline"></i> <span class="badge rounded-pill bg-primary float-end"></span>
+            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                <i class="ti-package"></i>
                 <span>Iduka</span>
             </a>
+            <ul class="sub-menu" aria-expanded="false">
+                <li><a href="/idukaadmin">Iduka</a></li>
+                <li><a href="/mouadmin">Foto</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#" class="has-arrow waves-effect">
+                <i class="ti-package"></i>
+                <span>Kurikulum</span>
+            </a>
+            <ul class="sub-menu" aria-expanded="false">
+                <li><a href="/kompetensiadmin">Kompetensi Keahlian</a></li>
+                <li><a href="/fotokompetensiadmin">Foto Kompetensi</a></li>
+                <li><a href="/jadwaladmin">Jadwal Kegiatan</a></li>
+                <li><a href="/kalenderadmin">Kalender Akademik</a></li>
+                <li><a href="/kelulusanadmin">Kelulusan</a></li>
+            </ul>
         </li>
         <li>
             <a href="/muhinewsadmin" class="waves-effect">
@@ -39,6 +56,17 @@
             </a>
         </li>
         @endif
+        <li>
+            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                <i class="ti-package"></i>
+                <span>Tentang Kami</span>
+            </a>
+            <ul class="sub-menu" aria-expanded="false">
+                <li><a href="/profilsekolahadmin">Profil Sekolah</a></li>
+                <li><a href="/identitas_admin">Identitas Sekolah</a></li>
+                <li><a href="ui-buttons.html">Fasilitas</a></li>
+            </ul>
+        </li>
 
         <li>
             <a href="/logout" class="waves-effect">

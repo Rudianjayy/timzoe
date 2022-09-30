@@ -3,13 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Models\Iduka;
+use App\Models\Fotoiduka;
 use Illuminate\Http\Request;
 
 class IdukaController extends Controller
 {
     public function index(){
         $i = Iduka::all();
-        return view('iduka.iduka', compact('i'));
+        $f = Fotoiduka::all();
+        return view('iduka.iduka', compact('i','f'));
     }
     public function indexadmin() {
         $data = Iduka::all();
@@ -78,4 +80,21 @@ class IdukaController extends Controller
         $data->delete();
         return redirect('idukaadmin')->with('toast_error',' Data Berhasil di Hapus!');
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //FOTOOOOO MOUUU
+
+    
 }

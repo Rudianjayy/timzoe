@@ -21,6 +21,25 @@
 
     <link rel="shortcut icon" href="{{ asset('landing/html/bidzend/assets/icon/muhi.jpg') }}">
     <link rel="apple-touch-icon-precomposed" href="{{ asset('landing/html/bidzend/assets/icon/muhi.jpg') }}">
+
+    {{-- css juga kuambil dri ppdb landing --}}
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/animate.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap-datepicker.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap-select.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/fontawesome-all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/hover-min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/swiper.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/jquery.mCustomScrollbar.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/owl.theme.default.min.css') }}">
+
+    <!-- Template Styles -->
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/responsive.css') }}">
+
+
 </head>
 
 <body class="body header-fixed">
@@ -81,64 +100,161 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="page-title-inner flex">
-                        <div class="page-title-heading">
-                            <h2 class="heading">Iduka</h2>
-                        </div>
-                        <div class="breadcrumbs">
-                            <ul>
-                                <li><a href="index.html">Beranda</a></li>
-                                <li>Iduka</li>
-                            </ul>
-                        </div>
+                    <div class="particles-snow" id="header-snow"></div><!-- /#header-snow.particles-snow -->
+
+                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/page-header-shape-1-1.png') }}"
+                        class="page-header__bg-shape-1" alt="">
+                    <img src="" class="page-header__bg-shape-2" alt="">
+                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-1.png') }}"
+                        class="page-header__bg-shape-3" alt="">
+                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-3.png') }}"
+                        class="page-header__bg-shape-4" alt="">
+                    <div class="container text-center">
+                        <h2>IDUKA</h2>
+                        <ul class="list-unstyled thm-breadcrumb">
+                            <li><a href="/">Beranda</a></li>
+                            <li><span>IDUKA</span></li>
+                        </ul><!-- /.thm-breadcrumb -->
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <div class="tf-section sc-card-blog">
+    <br>
+    <br><br>
+    <section class="history-one">
         <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="sc-heading style-2">
-                        <div class="content-left">
-                            <div class="inner">
-                                <h3>IDUKA</h3>
-                                <p class="desc">Diterbitkan : Senin, 1 Nov 2021 </p>
-                                <br>
-                                <br>
-
-                            </div>
-                        </div>
-                    </div>
+            @foreach ($i as $i)
+                <div class="block-title text-center">
+                    <h3>{{ $i->judul_iduka }}</h3>
+                </div><!-- /.block-title text-center -->
+                <div class="block-title text-center">
+                    <h4>
+                        <p>{{ $i->deskripsi_iduka }}</p>
+                    </h4>
                 </div>
-                <div class="container">
-                    @foreach ($i as $i)
-                        <h4 style="text-align: center;"><strong>{{ $i->judul_iduka }}</strong></h4>
-                        <br>
-                        <div class="container">
-                            <p style="text-decoration-color: blue;">{{ $i->deskripsi_iduka }}</p>
-                        </div>
-                        <p>&nbsp;</p>
+            @endforeach
+            <br>
+            <br>
+            <br>
+            
+                <div class="history-one__row-wrap">
+                    <div class="history-one__row-circle"></div><!-- /.history-one__row-circle -->
+                    @foreach ($f as $f)
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="history-one__box wow fadeInLeft" data-wow-duration="1500ms">
+                                <div class="history-one__image">
+                                    <img class="zoom" src="{{ asset('fotomahasiswa/' . $f->foto_iduka) }}" alt="">
+                                </div><!-- /.history-one__image -->
+                                <!-- /.history-one__content -->
+                            </div><!-- /.history-one__box -->
+                        </div><!-- /.col-lg-6 -->
+                        <div class="col-lg-6 d-flex">
+                            <div class="my-auto">
+                                <div class="history-one__date">
+                                    <h3>{{ $f->jurusan_mou }}
+                                    </h3>
+                                </div><!-- /.history-one__date -->
+                            </div><!-- /.my-auto -->
+                        </div><!-- /.col-lg-6 d-flex -->
+                    </div><!-- /.row -->
                     @endforeach
 
-                    <ul>
-                        <li style="text-align: left;">
-                            <h4><strong>MOU Program Keahlian Teknik Komputer dan Jaringan</strong></h4>
-                        </li>
-                    </ul>
-                    <br>
-                    <ul>
-                        <li>
-                            <img src="{{ asset('nopan2/assets/images/logo/iduka1.jpeg') }}" alt="">
-                        </li>
-                    </ul>
+                    <!-- /.row -->
+                </div><!-- /.history-one__row-wrap -->
 
+        </div><!-- /.container -->
+    </section>
+    <section class="cta-one cta-one__about-one"
+        style="background-image: url{{ asset('landingppdb/ppdb/style/assets/images/shapes/cta-bg-2-1.png') }};">
+        <div class="particles-snow" id="cta-one-snow"></div><!-- /#cta-one-snow.particles-snow -->
 
-                </div>
+        <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-1.png') }}"
+            class="cta-one__bg-shape-1" alt="">
+        <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-2.png') }}"
+            class="cta-one__bg-shape-2" alt="">
+        <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-3.png') }}"
+            class="cta-one__bg-shape-3" alt="">
+        <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-4.png') }}"
+            class="cta-one__bg-shape-4" alt="">
+
+        <div class="error-404__bubble-1"></div><!-- /.error-404__bubble-1 -->
+        <div class="error-404__bubble-2"></div><!-- /.error-404__bubble-2 -->
+        <div class="error-404__bubble-3"></div><!-- /.error-404__bubble-3 -->
+        <div class="error-404__bubble-4"></div><!-- /.error-404__bubble-4 -->
+        <div class="error-404__bubble-5"></div><!-- /.error-404__bubble-5 -->
+        <div class="error-404__bubble-6"></div><!-- /.error-404__bubble-6 -->
+        <div class="error-404__bubble-7"></div><!-- /.error-404__bubble-7 -->
+        <div class="error-404__bubble-8"></div><!-- /.error-404__bubble-8 -->
+
+        <!-- /.container -->
+    </section>
+    {{-- <div class="tf-section sc-card-blog">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-md-12">
+                    <div class="sc-heading">
+                        <h3>Gencarkan MoU dengan Iduka</h3>
+                        <p class="desc">Baru-baru ini SMK Muhammadiyah 1 (Muh1) Genteng tengah menggencarkan
+                            Memorandum of Understanding (MoU) dengan Dunia Industri dan Dunia Kerja (Iduka). MoU ini
+                            terkait erat dengan penyelarasan kurikulum sekolah dengan kebutuhan di dunia kerja. Dengan
+                            penyelerasan tersebut SMK Muhi nantinya dapat mencetak peserta didik yang terampil sesuai
+                            kebutuhan Iduka.
+
+                            Adapun MoU tersebut telah dilakukan oleh seluruh Kompetensi Keahlian (KK) yang ada di SMK
+                            Muh1 Genteng. Kerjasama yang SMK Muh1 Genteng jalin meliputi penempatan Praktek Kerja
+                            Lapangan (PKL) bagi peserta didik, sinkronisasi kurikulum, kelas industri, guru magang,
+                            bahkan juga meliputi rekruitment kerja. </p>
+                    </div>
+                </div><!-- /.col-lg-6 -->
+
+                <!-- /.col-lg-6 -->
+            </div>
+            <div class="col-xl-6">
+                <div class="service-two__box-wrap">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="service-two__box  wow flipInY" data-wow-delay="0ms"
+                                data-wow-duration="1500ms">
+                                <div class="service-two__box-icon">
+                                    <div class="service-two__box-circle"></div>
+                                    <!-- /.service-two__box-circle -->
+                                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-2-i-1.png') }}" alt="">
+                                </div><!-- /.service-two__box-icon -->
+                                <h3><a href="service-d-seo.html">SEO Optimization</a></h3>
+                                <p>Lorem ipsum dolor amet consectetur adipisicing eiusmod tempor.</p>
+                            </div><!-- /.service-two__box -->
+                            <div class="service-two__box  wow flipInY" data-wow-delay="300ms"
+                                data-wow-duration="1500ms">
+                                <div class="service-two__box-icon">
+                                    <div class="service-two__box-circle"></div>
+                                    <!-- /.service-two__box-circle -->
+                                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-2-i-2.png') }}" alt="">
+                                </div><!-- /.service-two__box-icon -->
+                                <h3><a href="service-d-seo.html">SEO Optimization</a></h3>
+                                <p>Lorem ipsum dolor amet consectetur adipisicing eiusmod tempor.</p>
+                            </div><!-- /.service-two__box -->
+                        </div><!-- /.col-md-6 -->
+                        <div class="col-md-6 d-flex">
+                            <div class="my-auto">
+                                <div class="service-two__box  wow flipInY" data-wow-delay="600ms"
+                                    data-wow-duration="1500ms">
+                                    <div class="service-two__box-icon">
+                                        <div class="service-two__box-circle"></div>
+                                        <!-- /.service-two__box-circle -->
+                                        <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-2-i-3.png') }}" alt="">
+                                    </div><!-- /.service-two__box-icon -->
+                                    <h3><a href="service-d-seo.html">SEO Optimization</a></h3>
+                                    <p>Lorem ipsum dolor amet consectetur adipisicing eiusmod tempor.</p>
+                                </div><!-- /.service-two__box -->
+                            </div><!-- /.my-auto -->
+                        </div><!-- /.col-md-6 d-flex -->
+                    </div><!-- /.row -->
+                </div><!-- /.service-two__box-wrap -->
             </div>
         </div>
-    </div>
+    </div> --}}
     @include('koneksi.footer')
     </div>
     </div>
@@ -184,6 +300,35 @@
     <script src="{{ asset('landing/html/bidzend/assets/js/count-down.js') }}"></script>
     <script src="{{ asset('landing/html/bidzend/assets/js/shortcodes.js') }}"></script>
     <script src="{{ asset('landing/html/bidzend/assets/js/main.js') }}"></script>
+
+    {{-- js nya ppdb kuambil truh sini --}}
+    {{-- <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.min.js') }}"></script> --}}
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/bootstrap.bundle.min.js') }}"></script>
+    {{-- <script src="{{ asset('landingppdb/ppdb/style/assets/js/bootstrap-datepicker.min.js') }}"></script> --}}
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/bootstrap-select.min.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/isotope.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.ajaxchimp.min.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.circleType.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/waypoints.min.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.counterup.min.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.lettering.min.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.mCustomScrollbar.concat.min.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.validate.min.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/TweenMax.min.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/wow.min.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/swiper.min.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/particles.min.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/particel-config.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/theme.js') }}"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
+    <script>
+        mediumZoom('.zoom', {
+
+          })
+    </script>
 </body>
 
 <!-- Mirrored from themesflat.com/html/bidzend/item-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Sep 2022 01:13:11 GMT -->

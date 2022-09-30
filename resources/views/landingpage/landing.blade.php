@@ -848,7 +848,6 @@
                         <div class="content-left">
                             <div class="inner">
                                 <h3>Album Galeri</h3>
-                                <p class="desc">Most popular gaming digital nft market place </p>
                             </div>
                         </div>
                     </div>
@@ -862,9 +861,7 @@
                                 <div class="slider-item">
                                     <div class="sc-product-item style-2">
                                         <div class="product-img">
-                                        <img src="{{ asset('fotomahasiswa/' . $row->foto) }}" alt="">
-                                            <a href="#"
-                                                class="sc-button style letter"><span>Baca Selengkapnya</span></a>
+                                        <img src="{{ asset('fotomahasiswa/' . $row->foto) }}" alt="" style="width: 400px; height:28pes0px;">
                                         </div>
                                         <div class="card-content">
                                         <h5 class="card-title">{{ $row->deskripsi }}</h5>

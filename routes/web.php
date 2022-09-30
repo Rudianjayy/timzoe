@@ -46,26 +46,58 @@ Route::post('/editproses2/{id}',[MuhinewsController::class, 'editproses2'])->nam
 Route::get('/deletemuhinews/{id}',[MuhinewsController::class, 'delete'])->name('delete');
 
 //tentangkami
-Route::get('/profilsekolah',[ProfilSekolahController::class,'profilsekolah'])->name('profilsekolah');
-Route::get('/visimisi',[ProfilSekolahController::class,'visimisi'])->name('visimisi');
-Route::get('/identitas_sekolah',[IdentitasSekolahController::class,'identitassekolah'])->name('identitassekolah');
-Route::get('/fasilitassekolah',[FasilitasController::class,'fasilitassekolah'])->name('fasilitassekolah');
 
 //crudprofilsekolah
+Route::get('/profilsekolah',[ProfilSekolahController::class,'profilsekolah'])->name('profilsekolah');
 Route::get('/profilsekolahadmin',[ProfilSekolahController::class,'profilsekolahadmin'])->name('profilsekolahadmin');
 Route::get('/tambahprofilsekolah',[ProfilSekolahController::class,'tambahprofilsekolah'])->name('tambahprofilsekolah');
 Route::post('/prosesprofilsekolah',[ProfilSekolahController::class,'prosesprofilsekolah'])->name('prosesprofilsekolah');
-Route::get('/editprofilsekolah',[ProfilSekolahController::class,'editprofilsekolah'])->name('editprofilsekolah');
-Route::post('/editprosesidentitas/{id}',[ProfilSekolahController::class,'editprosesidentitas'])->name('editprosesidentitas');
+Route::get('/editprofilsekolah/{id}',[ProfilSekolahController::class, 'editprofilsekolah'])->name('editprofilsekolah');
+Route::post('/editprosessekolah/{id}',[ProfilSekolahController::class,'editprosessekolah'])->name('editprosessekolah');
+Route::get('/deleteprofilsekolah/{id}',[ProfilSekolahController::class, 'delete'])->name('delete');
+
+//visimisi
+Route::get('/visimisi',[ProfilSekolahController::class,'visimisi'])->name('visimisi');
+Route::get('/visimisiadmin',[ProfilSekolahController::class,'visimisiadmin'])->name('visimisiadmin');
+Route::get('/tambahvisimisi',[ProfilSekolahController::class,'tambahvisimisi'])->name('tambahvisimisi');
+Route::post('/prosesvisimisi',[ProfilSekolahController::class,'prosesvisimisi'])->name('prosesvisimisi');
+Route::get('/editvisimisi/{id}',[ProfilSekolahController::class, 'editvisimisi'])->name('editvisimisi');
+Route::post('/editprosesvisimisi/{id}',[ProfilSekolahController::class,'editprosesvisimisi'])->name('editprosesvisimisi');
+Route::get('/deletevisimisi/{id}',[ProfilSekolahController::class, 'deletevisimisi'])->name('delete');
 
 
 
-//crudtentangkami
+
+
+
+
+
+
+//identitassekolah
+Route::get('/identitas_sekolah',[IdentitasSekolahController::class,'identitassekolah'])->name('identitassekolah');
 Route::get('/identitas_admin',[IdentitasSekolahController::class,'identitassekolahadmin'])->name('identitassekolahadmin');
 Route::get('/tambahidentitas',[IdentitasSekolahController::class,'tambahidentitas'])->name('tambahidentitas');
 Route::post('/identitasproses',[IdentitasSekolahController::class, 'identitasproses'])->name('identitasproses');
-Route::get('/editidentitas',[IdentitasSekolahController::class,'editidentitas'])->name('editidentitas');
+Route::get('/editidentitas/{id}',[IdentitasSekolahController::class,'editidentitas'])->name('editidentitas');
 Route::post('/editprosesidentitas/{id}',[IdentitasSekolahController::class, 'editprosesidentitas'])->name('editprosesidentitas');
+Route::get('/deleteidentitas/{id}',[IdentitasSekolahController::class, 'delete'])->name('delete');
+
+
+//fasilitas sekolah dan crud
+Route::get('/fasilitassekolah',[FasilitasController::class,'fasilitassekolah'])->name('fasilitassekolah');
+Route::get('/fasilitasadmin',[FasilitasController::class,'fasilitasadmin'])->name('fasilitasadmin');
+Route::get('/tambahfasilitas',[FasilitasController::class,'tambahfasilitas'])->name('tambahfasilitas');
+Route::post('/prosesfasilitas',[FasilitasController::class,'prosesfasilitas'])->name('prosesfasilitas');
+Route::get('/editfasilitas/{id}',[FasilitasController::class,'editfasilitas'])->name('editfasilitas');
+Route::post('/editprosesfasilitas/{id}',[FasilitasController::class,'editprosesfasilitas'])->name('editprosesfasilitas');
+Route::get('/deletefasilitas/{id}',[FasilitasController::class, 'delete'])->name('delete');
+
+
+
+
+
+
+
 
 
 

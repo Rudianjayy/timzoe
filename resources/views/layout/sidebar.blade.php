@@ -63,8 +63,9 @@
             </a>
             <ul class="sub-menu" aria-expanded="false">
                 <li><a href="/profilsekolahadmin">Profil Sekolah</a></li>
+                <li><a href="/visimisiadmin">Visi & Misi</a></li>
                 <li><a href="/identitas_admin">Identitas Sekolah</a></li>
-                <li><a href="ui-buttons.html">Fasilitas</a></li>
+                <li><a href="/fasilitasadmin">Fasilitas Sekolah </a></li>
             </ul>
         </li>
 

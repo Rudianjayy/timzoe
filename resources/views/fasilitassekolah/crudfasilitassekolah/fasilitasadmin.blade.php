@@ -32,21 +32,18 @@
                     <div class="card-body">
 
                         <div>
-                            <a href="/tambahprofilsekolah" class="btn btn-primary mt-5"
+                            <a href="/tambahfasilitas" class="btn btn-primary mt-5"
                                 id="kt_account_profile_details_submit">Tambah
                                 +</a>
                         </div>
-                        <table id="example" class="table table-bordered dt-responsive nowrap">
+                        <table id="datatable" class="table table-bordered dt-responsive nowrap"
+                            style="border-collapse: collapse; border-spacing: 0; width: 100%;">
 
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">judul</th>
+                                    <th scope="col">Foto</th>
                                     <th scope="col">Deskripsi</th>
-                                    <th scope="col">foto</th>
-                                    <th scope="col">deskripsi_lanjutan</th>
-                                    <th scope="col">foto_simuhi</th>
-                                    <th scope="col">deskripsi_simuhi</th>
                                     <th scope="col">Aksi</th>
                                 </tr>
                             </thead>
@@ -56,25 +53,19 @@
                                 @php
                                     $no = 1;
                                 @endphp
-                                @foreach ($data as $q)
+                                @foreach ($data as $y)
                                     <tr>
                                         <th>{{ $no++ }}</th>
-                                        <td>{{ $q->judul }}</td>
-                                        <td>{{ $q->deskripsi }}</td>
                                         <td>
-                                            <img src="{{ asset('fotomahasiswa/' . $q->foto) }}" alt=""
+                                            <img src="{{ asset('fotomahasiswa/' . $y->foto) }}" alt=""
                                                 style="width: 50px;">
                                         </td>
-                                        <td>{{ $q->deskripsi_lanjutan }}</td>
+                                        <td>{{ $y->deskripsi }}</td>
+
+                                        {{-- <td>{{ $y->created_at->format('D M Y') }}</td> --}}
                                         <td>
-                                            <img src="{{ asset('fotomahasiswa/' . $q->foto_simuhi) }}" alt=""
-                                                style="width: 50px;">
-                                        </td>
-                                        <td>{{ $q->deskripsi_simuhi }}</td>
-                                        {{-- <td>{{ $q->created_at->format('D M Y') }}</td> --}}
-                                        <td>
-                                            <a href="/editprofilsekolah/{{ $q->id }}" class="btn btn-warning fas fa-pen-alt">Edit</a>
-                                            <a href="/deleteprofilsekolah/{{ $q->id }}" class="btn btn-danger fas fa-trash-alt" onclick="return confirm('yakin gen?')">Delete</a>
+                                            <a href="/editfasilitas/{{ $y->id }}" class="btn btn-warning fas fa-pen-alt">Edit</a>
+                                            <a href="/deletefasilitas/{{ $y->id }}" class="btn btn-danger fas fa-trash-alt" onclick="return confirm('yakin gen?')">Delete</a>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -119,17 +110,23 @@
         <script src="{{ asset('style/assets/js/jquery.dataTables.min.js') }}"></script>
         <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap4.min.js"></script> --}}
 
+        <!-- Required datatable js -->
+        <script src="{{ asset('admin/zoee/layouts/assets/libs/datatables.net/js/jquery.dataTables.min.js') }}"></script>
+        <script src="{{ asset('admin/zoee/layouts/assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
+        <script src="{{ asset('admin/zoee/layouts/assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js') }}">
+        </script>
+
+        <script src="{{ asset('admin/zoee/layouts/assets/js/pages/datatables.init.js') }}"></script>
+
         <script src="{{ asset('admin/zoee/layouts/assets/js/app.js') }}"></script>
-        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-        <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+
         <script>
-            $(document).ready(function () {
-                $('#example').DataTable({
-                    scrollX: true,
-                });
+            $(document).ready(function() {
+                $('#example').DataTable();
             });
         </script>
 
+        </body>
         {{--  <script>
             $('.delete').click(function() {
                 var zoe = $(this).attr('data-id');

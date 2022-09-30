@@ -17,10 +17,22 @@
 
     <link rel="stylesheet" type="text/css" href="{{ asset('landing/html/bidzend/assets/css/style.css') }}">
 
-    <link rel="stylesheet" type="text/css" href="{{ asset('landing/html/bidzend/assets/css/responsive.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('landing/html/bidzend/assets/css/responsive.css') }}">
 
-    <link rel="shortcut icon" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
-    <link rel="apple-touch-icon-precomposed" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
+<link rel="shortcut icon" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
+<link rel="apple-touch-icon-precomposed" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
+ <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('landingppdb/ppdb/style/assets/images/favicons/apple-touch-icon.png') }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ asset('landingppdb/ppdb/style/assets/images/favicons/favicon-32x32.png') }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ asset('landingppdb/ppdb/style/assets/images/favicons/favicon-16x16.png') }}">
+<link rel="manifest" href="{{ asset('landingppdb/ppdb/style/assets/images/favicons/site.webmanifest') }}">
+
+<link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/animate.css') }}">
+<link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap-datepicker.min.css') }}">
+<link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap-select.min.css') }}">
+
+<!-- Template Styles -->
+<link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/style.css') }}">
 </head>
 
 <body class="body header-fixed">
@@ -38,17 +50,19 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="page-title-inner flex">
-                        <div class="page-title-heading">
-                            <h2 class="heading">Profil Sekolah</h2>
-                        </div>
-                        <div class="breadcrumbs">
-                            <ul>
-                                <li><a href="index.html">Beranda</a></li>
-                                <li>Profil Sekolah</li>
-                            </ul>
-                        </div>
-                    </div>
+
+            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/page-header-shape-1-1.png') }}" class="page-header__bg-shape-1" alt="">
+            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-2-circle-1-1.png') }}" class="page-header__bg-shape-2" alt="">
+            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-1.png') }}" class="page-header__bg-shape-3" alt="">
+            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-3.png') }}" class="page-header__bg-shape-4" alt="">
+            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-2-circle-1-2.png') }}" class="page-header__bg-shape-2" alt="">
+
+            <div class="breadcrumbs">
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li>Profil Sekolah</li>
+                </ul>
+            </div>
                 </div>
             </div>
         </div>
@@ -81,14 +95,14 @@
                     </center>
                     {{-- <center><img src="{{ asset('landing/html/bidzend/assets/images/logo/muhi.jpg') }}" alt="" style="width: 200px; height:200px; margin-bottom:20px; "></center> --}}
                     <p class="desc mb-4">{{ $q->deskripsi }}</p>
-                    <center> <img src="{{ asset('fotomahasiswa/' . $q->foto) }}" alt="" style="width: 130px; height:130px; margin-bottom:20px; "></center>
+                    <center> <img class="zoom" src="{{ asset('fotomahasiswa/' . $q->foto) }}" alt="" style="width: 150px; height:130px; margin-bottom:20px; "></center>
 
 
                     <br>
                     <p class="desc">{{ $q->deskripsi_lanjutan }}</p>
                     <br>
                     <br>
-                    <center> <img src="{{ asset('fotomahasiswa/' . $q->foto_simuhi) }}" alt="" style="width: 150px; height:130px; margin-bottom:20px; "></center>
+                    <center> <img class="zoom" src="{{ asset('fotomahasiswa/' . $q->foto_simuhi) }}" alt="" style="width: 150px; height:130px; margin-bottom:20px; "></center>
                     <p class="desc">{{ $q->deskripsi_simuhi }}</p>
 
 
@@ -96,7 +110,7 @@
                 </div>
             </div>
         </div>
-@endforeach
+        @endforeach
         </div>
         </div>
         </div>
@@ -144,6 +158,12 @@
     <script src="{{ asset('landing/html/bidzend/assets/js/count-down.js') }}"></script>
     <script src="{{ asset('landing/html/bidzend/assets/js/shortcodes.js') }}"></script>
     <script src="{{ asset('landing/html/bidzend/assets/js/main.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
+    <script>
+        mediumZoom('.zoom', {
+
+          })
+    </script>
 </body>
 
 <!-- Mirrored from themesflat.com/html/bidzend/item-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Sep 2022 01:13:11 GMT -->

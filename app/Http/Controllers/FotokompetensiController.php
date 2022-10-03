@@ -4,12 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Fotokompetensi;
+use App\Models\Muhinews;
 
 class FotokompetensiController extends Controller
 {
     public function fotokompetensiadmin() {
         $data = Fotokompetensi::all();
-        return view('kurikulum.fotokompetensi.foto-kompetensi', compact('data'));
+        $f = Muhinews::all();
+        $foto = Fotokompetensi::all();
+        return view('kurikulum.fotokompetensi.foto-kompetensi', compact('data','foto','f'));
     }
     public function tambahfotokompetensi()
     {

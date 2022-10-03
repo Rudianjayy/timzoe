@@ -5,12 +5,12 @@
                 <div class="col-lg-3 col-md-6 col-12">
                     <div class="widget widget-logo">
                         <div class="logo-footer" id="logo-footer">
-                            <a href="index.html">
+                            <a href="#">
                                 <img id="logo_footer"
-                                    src="{{ asset('landing/html/bidzend/assets/images/logo/logo_dark.png') }}"
-                                    alt="nft-gaming" width="151" height="45"
-                                    data-retina="{{ asset('landing/html/bidzend/assets/images/logo/logo_dark@2x.png') }}"
-                                    data-width="151" data-height="45">
+                                    src="{{ asset('landing/html/bidzend/assets/icon/muhilog.png') }}"
+                                    alt="nft-gaming" width="110" height="45"
+                                    data-retina="{{ asset('landing/html/bidzend/assets/icon/muhilog.png') }}"
+                                    data-width="110" data-height="45">
                             </a>
                         </div>
                         <p class="sub-widget-logo">Sed ut perspiciatis unde omnis iste natus error sit
@@ -18,11 +18,11 @@
                             accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quaes</p>
                         <div class="widget-social">
                             <ul>
-                                <li><a href="#" class="active"><i class="fab fa-facebook-f"></i></a>
+                                <li><a href="https://www.facebook.com/smkmuhigenteng" class="active"><i class="fab fa-facebook-f"></i></a>
                                 </li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                {{--  <li><a href="#"><i class="fab fa-gmail"></i></a></li>  --}}
+                                <li><a href="https://www.instagram.com/muhi.ig/?next=%2F&hl=id"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a href="https://www.youtube.com/channel/UCJOjJCbfEcApeNYmDJ4tCCw"><i class="fab fa-youtube"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -55,34 +55,23 @@
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                     <div class="widget widget-post">
-                        <h5 class="title-widget">News & Post</h5>
+                        <h5 class="title-widget">Berita </h5>
                         <ul class="post-new">
+                            @foreach ($f as $f )
+
+
                             <li>
                                 <div class="post-img">
-                                    <img src="{{ asset('landing/html/bidzend/assets/images/post/post-recent-new-4.jpg') }}"
+                                    <img src="{{ asset('fotomahasiswa/' . $f->foto) }}"
                                         alt="Post New">
                                 </div>
                                 <div class="post-content">
-                                    <h6 class="title"><a href="blog-details.html">Roll Out New Features
-                                            Without
-                                            Hurting Loyal Users</a></h6>
-                                    <a href="blog-details.html" class="post-date"><i
-                                            class="far fa-calendar-week"></i> 25 JAN 2022</a>
+                                    <h6 class="title"><a href="/muhinews">{{ $f->deskripsi_muhinews }}</a></h6>
+                                    <a href="/muhinews" class="post-date"><i
+                                            class="far fa-calendar-week"></i>{{ $f->created_at }}</a>
                                 </div>
                             </li>
-                            <li>
-                                <div class="post-img">
-                                    <img src="{{ asset('landing/html/bidzend/assets/images/post/post-recent-new-5.jpg') }}"
-                                        alt="Post New">
-                                </div>
-                                <div class="post-content">
-                                    <h6 class="title"><a href="blog-details.html">An Overview The Most
-                                            Comon UX
-                                            Design Deliverables</a></h6>
-                                    <a href="blog-details.html" class="post-date"><i
-                                            class="far fa-calendar-week"></i> 25 JAN 2022</a>
-                                </div>
-                            </li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>
@@ -93,8 +82,8 @@
     <div class="bottom">
         <div class="container">
             <div class="bottom-inner">
-                Copyright © 2022 Bidzen | NFT Marketplace HTML Template. Designed by <a
-                    href="https://themeforest.net/user/themesflat/portfolio"> Themesflat</a>
+                Copyright © 2022 at SMK Muhammadiyah 1 Genteng. Supported by <a
+                    href="https://www.instagram.com/timzoe_/?next=%2F&hl=id"> Team Zoe</a>
             </div>
         </div>
     </div>
@@ -127,7 +116,7 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
-      
+
     </div>
 </div>
 </div>

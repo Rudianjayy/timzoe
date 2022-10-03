@@ -9,7 +9,8 @@ class MuhinewsController extends Controller
 {
     public function index() {
         $d = Muhinews::all();
-        return view('muhinews.muhinews',compact('d'));
+        $f = Muhinews::all();
+        return view('muhinews.muhinews',compact('d','f'));
     }
     public function indexadmin() {
         $data = Muhinews::all();

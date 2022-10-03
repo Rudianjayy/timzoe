@@ -2,14 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Muhinews;
 use Illuminate\Http\Request;
 
 class KesiswaanController extends Controller
 {
     public function kesiswaan() {
-        return view('kesiswaan.kesiswaan');
+        $f = Muhinews::all();
+        return view('kesiswaan.kesiswaan','f');
     }
     public function ekstra(){
-        return view('kesiswaan.ekstrakulikuler.ekstra');
+        $f = Muhinews::all();
+        return view('kesiswaan.ekstrakulikuler.ekstra', compact('f'));
     }
 }

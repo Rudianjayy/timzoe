@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Muhinews;
 use App\Models\profilsekolah;
 use App\Models\visimisi;
 use Illuminate\Http\Request;
@@ -10,7 +11,8 @@ class ProfilSekolahController extends Controller
 {
     public function profilsekolah(){
         $q = profilsekolah::all();
-        return view('profilsekolah.profilsekolah',compact('q'));
+        $f = Muhinews::all();
+        return view('profilsekolah.profilsekolah',compact('q','f'));
     }
     public function profilsekolahadmin(){
         $data = profilsekolah::all();
@@ -107,9 +109,35 @@ class ProfilSekolahController extends Controller
         $data->delete();
         return redirect('profilsekolahadmin')->with('toast_error',' Data Berhasil di Hapus!');
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public function visimisi(){
         $v = visimisi::all();
-        return view('visimisi.visimisi',compact('v'));
+        $f = Muhinews::all();
+        return view('visimisi.visimisi',compact('v','f'));
     }
     public function visimisiadmin(){
         $data = visimisi::all();

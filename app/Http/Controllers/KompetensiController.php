@@ -5,37 +5,47 @@ namespace App\Http\Controllers;
 use App\Models\Kompetensi;
 use Illuminate\Http\Request;
 use App\Models\Fotokompetensi;
+use App\Models\Muhinews;
 
 class KompetensiController extends Controller
 {
     public function kompetensi() {
         $kompetensi = Kompetensi::all();
         $foto = Fotokompetensi::all();
-        return view('kurikulum.kompetensi', compact('kompetensi','foto'));
+        $f = Muhinews::all();
+        return view('kurikulum.kompetensi', compact('kompetensi','foto','f'));
     }
     public function tkj(){
-        return view('kurikulum.kompetensi.tkj');
+        $f = Muhinews::all();
+        return view('kurikulum.kompetensi.tkj', compact('f'));
     }
     public function rpl(){
-        return view('kurikulum.kompetensi.rpl');
+        $f = Muhinews::all();
+        return view('kurikulum.kompetensi.rpl', compact('f'));
     }
     public function bd(){
-        return view('kurikulum.kompetensi.bd');
+        $f = Muhinews::all();
+        return view('kurikulum.kompetensi.bd', compact('f'));
     }
     public function ak(){
-        return view('kurikulum.kompetensi.ak');
+        $f = Muhinews::all();
+        return view('kurikulum.kompetensi.ak', compact('f'));
     }
     public function dkv(){
-        return view('kurikulum.kompetensi.dkv');
+        $f = Muhinews::all();
+        return view('kurikulum.kompetensi.dkv', compact('f'));
     }
     public function ulp(){
-        return view('kurikulum.kompetensi.ulp');
+        $f = Muhinews::all();
+        return view('kurikulum.kompetensi.ulp', 'f');
     }
     public function mp(){
-        return view('kurikulum.kompetensi.mp');
+        $f = Muhinews::all();
+        return view('kurikulum.kompetensi.mp', compact('f'));
     }
     public function ph(){
-        return view('kurikulum.kompetensi.ph');
+        $f = Muhinews::all();
+        return view('kurikulum.kompetensi.ph', compact('f'));
     }
 
 
@@ -84,7 +94,7 @@ class KompetensiController extends Controller
         // }
 
         return redirect()->route('kompetensiadmin')->with('toast_success',' Data Berhasil di Tambahkan!');
-    }   
+    }
     public function editkompetensi($id){
 
         $data = Kompetensi::findOrFail($id);
@@ -127,5 +137,5 @@ class KompetensiController extends Controller
 
 
 
- 
+
 }

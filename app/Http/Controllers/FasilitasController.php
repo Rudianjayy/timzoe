@@ -3,13 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Models\fasilitassekolah;
+use App\Models\Muhinews;
 use Illuminate\Http\Request;
 
 class FasilitasController extends Controller
 {
     public function fasilitassekolah(){
         $q = fasilitassekolah::all();
-        return view('fasilitassekolah.fasilitassekolah', compact('q'));
+        $f = Muhinews::all();
+        return view('fasilitassekolah.fasilitassekolah', compact('q','f'));
     }
     public function fasilitasadmin(){
         $data = fasilitassekolah::all();

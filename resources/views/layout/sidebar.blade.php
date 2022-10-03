@@ -36,6 +36,8 @@
                 <li><a href="/mouadmin">Foto</a></li>
             </ul>
         </li>
+
+
         <li>
             <a href="#" class="has-arrow waves-effect">
                 <i class="ti-package"></i>
@@ -49,6 +51,9 @@
                 <li><a href="/kelulusanadmin">Kelulusan</a></li>
             </ul>
         </li>
+
+
+        
         <li>
             <a href="/muhinewsadmin" class="waves-effect">
                 <i class="mdi mdi-account-details-outline"></i> <span class="badge rounded-pill bg-primary float-end"></span>

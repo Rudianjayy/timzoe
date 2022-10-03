@@ -3,14 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\Models\Fotoiduka;
+use App\Models\Muhinews;
 use Illuminate\Http\Request;
 
 class FotoidukaController extends Controller
 {
     public function mouadmin() {
-        $f = Fotoiduka::all();
+        $fotoiduka = Fotoiduka::all();
         $data = Fotoiduka::all();
-        return view('iduka.fotomou.foto-mou-admin', compact('data','f'));
+        $f = Muhinews::all();
+        return view('iduka.fotomou.foto-mou-admin', compact('data','fotoiduka','f'));
     }
     public function tambahfotomou()
     {
@@ -42,8 +44,8 @@ class FotoidukaController extends Controller
             $data->foto_iduka = $request->file('foto_iduka')->getClientOriginalName();
             $data->save();
         }
-        
-        
+
+
 
         return redirect()->route('mouadmin')->with('toast_success',' Data Berhasil di Tambahkan!');
     }

@@ -156,6 +156,10 @@ Route::get('/deletekurikulum/{id}',[KurikulumController::class, 'delete'])->name
 Route::get('/kesiswaan',[KesiswaanController::class,'kesiswaan'])->name('kesiswaan');
 Route::get('/ekstra',[KesiswaanController::class,'ekstra'])->name('ekstra');
 
+
+
+//upj
+Route::get('/indexupj',[UpjController::class,'indexupj'])->name('indexupj');
 Route::get('/upj',[UpjController::class,'upj'])->name('upj');
 
 

@@ -4,14 +4,16 @@ namespace App\Http\Controllers;
 
 use App\Models\Iduka;
 use App\Models\Fotoiduka;
+use App\Models\Muhinews;
 use Illuminate\Http\Request;
 
 class IdukaController extends Controller
 {
     public function index(){
         $i = Iduka::all();
-        $f = Fotoiduka::all();
-        return view('iduka.iduka', compact('i','f'));
+        $fotoiduka = Fotoiduka::all();
+        $f = Muhinews::all();
+        return view('iduka.iduka', compact('i','fotoiduka','f'));
     }
     public function indexadmin() {
         $data = Iduka::all();
@@ -96,5 +98,5 @@ class IdukaController extends Controller
 
     //FOTOOOOO MOUUU
 
-    
+
 }

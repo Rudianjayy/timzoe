@@ -195,7 +195,7 @@
                                     <form method="post" action="/loginproses">
                                         @csrf
                                         <div class="sc-heading">
-                                            <h3>Login Disini</h3>
+                                            <h3>Login</h3>
                                             <!-- <p class="desc">Silahkan daftar dibawah ini jika belum punya akun!! </p> -->
                                             <div class="content-right">
                                             <!-- <a href="/register" class="sc-button style letter style-2"><span>Daftar</span> </button></a> -->

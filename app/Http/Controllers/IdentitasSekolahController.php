@@ -3,13 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Models\IdentitasSekolah;
+use App\Models\Muhinews;
 use Illuminate\Http\Request;
 
 class IdentitasSekolahController extends Controller
 {
     public function identitassekolah(){
         $i = identitassekolah::all();
-        return view('identitassekolah.identitas_sekolah',compact('i'));
+        $f = Muhinews::all();
+        return view('identitassekolah.identitas_sekolah',compact('i','f'));
     }
     public function identitassekolahadmin()
     {

@@ -3,13 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Models\Album;
+use App\Models\Muhinews;
 use Illuminate\Http\Request;
 
 class AlbumController extends Controller
 {
     public function loby(){
         $data = Album::all();
-        return view ('album.data-album',compact('data'));
+        $f = Muhinews::all();
+        return view ('album.data-album',compact('data','f'));
     }
 
     public function tambahalbum()

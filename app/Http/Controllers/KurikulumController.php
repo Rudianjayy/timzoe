@@ -3,16 +3,19 @@
 namespace App\Http\Controllers;
 
 use App\Models\Kurikulum;
+use App\Models\Muhinews;
 use Illuminate\Http\Request;
 
 class KurikulumController extends Controller
 {
-    
+
     public function kalenderakademik(){
-        return view('kurikulum.kalenderakademik');
+        $f = Muhinews::all();
+        return view('kurikulum.kalenderakademik', compact('f'));
     }
     public function jadwalkegiatan(){
-        return view('kurikulum.jadwalkegiatan');
+        $f = Muhinews::all();
+        return view('kurikulum.jadwalkegiatan', compact('f'));
     }
 
 
@@ -99,7 +102,7 @@ class KurikulumController extends Controller
             $data->save();
         }
 
-        
+
 
         return redirect()->route('kurikulumadmin')->with('toast_success',' Data Berhasil di Tambahkan!');
     }

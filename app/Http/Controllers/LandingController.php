@@ -11,6 +11,7 @@ class LandingController extends Controller
     public function index () {
         $data = Album::all();
         $d = Muhinews::all();
-        return view('landingpage.landing', compact('data','d'));
+        $f = Muhinews::all();
+        return view('landingpage.landing', compact('data','d','f'));
     }
 }

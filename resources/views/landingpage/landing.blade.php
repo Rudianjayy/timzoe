@@ -97,7 +97,7 @@
                     </div>
                 </div>
             </div> --}}
-        
+
     @include('koneksi.navbar')
 
     <section class="tf-slider">
@@ -334,7 +334,7 @@
                                     <div class="slider-item">
                                         <div class="sc-product-item style-2">
                                             <div class="product-img">
-                                            <img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt="" style="width: 350px; height:300px;">
+                                            <img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt="" style="width: 400px; height:300px;">
                                                 <a href="#"
                                                     class="sc-button style letter"><span>Baca Selengkapnya</span></a>
                                             </div>
@@ -881,8 +881,8 @@
     <script src="{{ asset('landing/html/bidzend/assets/js/medium-zoom.min.js') }}"></script>
     <script src="{{ asset('landing/html/bidzend/assets/js/main2.js') }}"></script>
 
-   
-    
+
+
 
     {{-- js nya ppdb kuambil truh sini --}}
     {{-- <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.min.js') }}"></script> --}}

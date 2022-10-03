@@ -57,32 +57,21 @@
                     <div class="widget widget-post">
                         <h5 class="title-widget">Berita </h5>
                         <ul class="post-new">
+                            @foreach ($f as $f )
+
+
                             <li>
                                 <div class="post-img">
-                                    <img src="{{ asset('landing/html/bidzend/assets/images/post/post-recent-new-4.jpg') }}"
+                                    <img src="{{ asset('fotomahasiswa/' . $f->foto) }}"
                                         alt="Post New">
                                 </div>
                                 <div class="post-content">
-                                    <h6 class="title"><a href="blog-details.html">Roll Out New Features
-                                            Without
-                                            Hurting Loyal Users</a></h6>
-                                    <a href="blog-details.html" class="post-date"><i
-                                            class="far fa-calendar-week"></i> 25 JAN 2022</a>
+                                    <h6 class="title"><a href="/muhinews">{{ $f->deskripsi_muhinews }}</a></h6>
+                                    <a href="/muhinews" class="post-date"><i
+                                            class="far fa-calendar-week"></i>{{ $f->created_at }}</a>
                                 </div>
                             </li>
-                            <li>
-                                <div class="post-img">
-                                    <img src="{{ asset('landing/html/bidzend/assets/images/post/post-recent-new-5.jpg') }}"
-                                        alt="Post New">
-                                </div>
-                                <div class="post-content">
-                                    <h6 class="title"><a href="blog-details.html">An Overview The Most
-                                            Comon UX
-                                            Design Deliverables</a></h6>
-                                    <a href="blog-details.html" class="post-date"><i
-                                            class="far fa-calendar-week"></i> 25 JAN 2022</a>
-                                </div>
-                            </li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>

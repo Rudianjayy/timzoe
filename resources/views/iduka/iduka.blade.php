@@ -109,13 +109,12 @@
                         class="page-header__bg-shape-3" alt="">
                     <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-3.png') }}"
                         class="page-header__bg-shape-4" alt="">
-                    <div class="container text-center">
-                        <h2>IDUKA</h2>
-                        <ul class="list-unstyled thm-breadcrumb">
-                            <li><a href="/">Beranda</a></li>
-                            <li><span>IDUKA</span></li>
-                        </ul><!-- /.thm-breadcrumb -->
-                    </div>
+                        <div class="breadcrumbs">
+                            <ul>
+                                <li><a href="/">Beranda</a></li>
+                                <li>Iduka</li>
+                            </ul>
+                        </div>
                 </div>
             </div>
         </div>
@@ -137,15 +136,15 @@
             <br>
             <br>
             <br>
-            
+
                 <div class="history-one__row-wrap">
                     <div class="history-one__row-circle"></div><!-- /.history-one__row-circle -->
-                    @foreach ($f as $f)
+                    @foreach ($fotoiduka as $fa)
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="history-one__box wow fadeInLeft" data-wow-duration="1500ms">
                                 <div class="history-one__image">
-                                    <img class="zoom" src="{{ asset('fotomahasiswa/' . $f->foto_iduka) }}" alt="">
+                                    <img class="zoom" src="{{ asset('fotomahasiswa/' . $fa->foto_iduka) }}" alt="">
                                 </div><!-- /.history-one__image -->
                                 <!-- /.history-one__content -->
                             </div><!-- /.history-one__box -->
@@ -153,7 +152,7 @@
                         <div class="col-lg-6 d-flex">
                             <div class="my-auto">
                                 <div class="history-one__date">
-                                    <h3>{{ $f->jurusan_mou }}
+                                    <h3>{{ $fa->jurusan_mou }}
                                     </h3>
                                 </div><!-- /.history-one__date -->
                             </div><!-- /.my-auto -->

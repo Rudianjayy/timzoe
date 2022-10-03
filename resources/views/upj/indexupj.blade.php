@@ -114,8 +114,8 @@
                                         <!-- /.service-two__box-circle -->
                                         <img src="{{ asset('landing/html/bidzend/assets/images/bg/komputer-removebg-preview.png') }}" alt="">
                                     </div><!-- /.service-two__box-icon -->
-                                    <h3><a href="service-d-seo.html">SEO Optimization</a></h3>
-                                    <p>Lorem ipsum dolor amet consectetur adipisicing eiusmod tempor.</p>
+                                    <!-- <h3><a href="service-d-seo.html">SEO Optimization</a></h3>
+                                    <p>Lorem ipsum dolor amet consectetur adipisicing eiusmod tempor.</p> -->
                                 </div><!-- /.service-two__box -->
                             </div><!-- /.col-md-6 -->
 
@@ -128,8 +128,8 @@
                                             <!-- /.service-two__box-circle -->
                                             <img src="{{ asset('landing/html/bidzend/assets/images/bg/eko.png') }}" alt="">
                                         </div><!-- /.service-two__box-icon -->
-                                        <h3><a href="service-d-seo.html">EKO JANCOK</a></h3>
-                                        <p>Lorem ipsum dolor amet consectetur adipisicing eiusmod tempor.</p>
+                                        <!-- <h3><a href="service-d-seo.html">EKO JANCOK</a></h3>
+                                        <p>Lorem ipsum dolor amet consectetur adipisicing eiusmod tempor.</p> -->
                                     </div><!-- /.service-two__box -->
                                 </div><!-- /.my-auto -->
                             </div><!-- /.col-md-6 d-flex -->

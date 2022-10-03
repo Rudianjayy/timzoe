@@ -182,7 +182,7 @@
                 <div class="col-12 col-md-6  wow fadeInRight">
                     <div class="text-video">
                         <div class="text-center">
-                            <h4>Sambutan</h4>
+                            <h1>Sambutan</h1>
                             <br>
                             <h2 class="title-h2">Kepala Sekolah</h2>
                         </div>

@@ -1969,11 +1969,7 @@ a:focus {
 }
 
 .banner-one__home-two .container {
-<<<<<<< HEAD
 	padding-top: 100px;
-=======
-	padding-top: 195px;
->>>>>>> 683a1a026219736f1259b900f49139d45de22d04
 	padding-bottom: 452px;
 }
 
@@ -5217,13 +5213,8 @@ a:focus {
 	content: '\f309';
 	font-family: 'Font Awesome 5 Pro';
 	font-weight: 400;
-<<<<<<< HEAD
 	width: 40px;
 	height: 40px;
-=======
-	width: 20px;
-	height: 20px;
->>>>>>> 683a1a026219736f1259b900f49139d45de22d04
 	color: #fff;
 	font-size: 16px;
 	display: flex;

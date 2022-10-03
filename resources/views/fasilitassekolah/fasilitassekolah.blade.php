@@ -94,7 +94,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-12 filter-item masonary-item  strategy">
                         <div class="portfolio-one__single">
                             <div class="portfolio-one__image">
-                                <img src="{{ asset('fotomahasiswa/' . $q->foto) }}" alt="" style="width: 450px; height:200px;">
+                                <img src="{{ asset('fotomahasiswa/' . $q->foto) }}" alt="" style="width: 400px; height:200px;">
                                 <a class="img-popup" href="{{ asset('fotomahasiswa/' . $q->foto) }}"><i
                                         class="fal fa-plus"></i></a>
                             </div><!-- /.portfolio-one__image -->

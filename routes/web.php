@@ -4,17 +4,20 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UpjController;
 use App\Http\Controllers\PpdbController;
 use App\Http\Controllers\AlbumController;
+use App\Http\Controllers\IdukaController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DetailController;
+use App\Http\Controllers\LandingController;
 use App\Http\Controllers\MuhinewsController;
+use App\Http\Controllers\FasilitasController;
+use App\Http\Controllers\FotoidukaController;
 use App\Http\Controllers\KesiswaanController;
 use App\Http\Controllers\KurikulumController;
 use App\Http\Controllers\KompetensiController;
 use App\Http\Controllers\DataidentitasController;
-use App\Http\Controllers\FasilitasController;
-use App\Http\Controllers\IdentitasSekolahController;
-use App\Http\Controllers\LandingController;
 use App\Http\Controllers\ProfilSekolahController;
+use App\Http\Controllers\FotokompetensiController;
+use App\Http\Controllers\IdentitasSekolahController;
 
 /*
 |--------------------------------------------------------------------------
@@ -101,6 +104,7 @@ Route::get('/deletefasilitas/{id}',[FasilitasController::class, 'delete'])->name
 
 
 
+
 //kompetensikeahlian
 Route::get('/kompetensi',[KompetensiController::class,'kompetensi'])->name('kompetensi');
 Route::get('/tkj',[KompetensiController::class,'tkj'])->name('tkj');
@@ -112,6 +116,24 @@ Route::get('/mp',[KompetensiController::class,'mp'])->name('mp');
 Route::get('/ph',[KompetensiController::class,'ph'])->name('ph');
 Route::get('/ulp',[KompetensiController::class,'ulp'])->name('ulp');
 
+Route::get('/kompetensiadmin',[KompetensiController::class, 'kompetensiadmin'])->name('kompetensiadmin');
+Route::get('/tambahkompetensi',[KompetensiController::class, 'tambahkompetensi'])->name('tambahkompetensi');
+Route::post('/kompetensiproses',[KompetensiController::class, 'kompetensiproses'])->name('kompetensiproses');
+Route::get('/editkompetensi/{id}',[KompetensiController::class, 'editkompetensi'])->name('editkompetensi');
+Route::post('/editproseskompetensi/{id}',[KompetensiController::class, 'editproseskompetensi'])->name('editproseskompetensi');
+Route::get('/deletekompetensi/{id}',[KompetensiController::class, 'delete'])->name('delete');
+
+Route::get('/fotokompetensiadmin',[FotokompetensiController::class, 'fotokompetensiadmin'])->name('fotokompetensiadmin');
+Route::get('/tambahfotokompetensi',[FotokompetensiController::class, 'tambahfotokompetensi'])->name('tambahfotokompetensi');
+Route::post('/fotokompetensiproses',[FotokompetensiController::class, 'fotokompetensiproses'])->name('fotokompetensiproses');
+Route::get('/editfotokompetensi/{id}',[FotokompetensiController::class, 'editfotokompetensi'])->name('editfotokompetensi');
+Route::post('/editprosesfotokompetensi/{id}',[FotokompetensiController::class, 'editprosesfotokompetensi'])->name('editprosesfotokompetensi');
+Route::get('/deletefotokompetensi/{id}',[FotokompetensiController::class, 'delete'])->name('delete');
+
+
+
+
+
 
 
 
@@ -121,10 +143,23 @@ Route::get('/kalenderakademik',[KurikulumController::class,'kalenderakademik'])-
 Route::get('/jadwalkegiatan',[KurikulumController::class,'jadwalkegiatan'])->name('jadwalkegiatan');
 
 
+Route::get('/kurikulumadmin',[KurikulumController::class, 'kurikulumadmin'])->name('kurikulumadmin');
+Route::get('/tambahkurikulum',[KurikulumController::class, 'tambahkurikulum'])->name('tambahkurikulum');
+Route::post('/kurikulumproses',[KurikulumController::class, 'kurikulumproses'])->name('kurikulumproses');
+Route::get('/editkurikulum/{id}',[KurikulumController::class, 'editkurikulum'])->name('editkurikulum');
+Route::post('/editproses4/{id}',[KurikulumController::class, 'editproses4'])->name('editproses4');
+Route::get('/deletekurikulum/{id}',[KurikulumController::class, 'delete'])->name('delete');
+
+
+
 //kesiswaan
 Route::get('/kesiswaan',[KesiswaanController::class,'kesiswaan'])->name('kesiswaan');
 Route::get('/ekstra',[KesiswaanController::class,'ekstra'])->name('ekstra');
 
+
+
+//upj
+Route::get('/indexupj',[UpjController::class,'indexupj'])->name('indexupj');
 Route::get('/upj',[UpjController::class,'upj'])->name('upj');
 
 
@@ -140,6 +175,24 @@ Route::get('/detailmuhi2',[DetailController::class,'detailmuhi2'])->name('detail
 
 
 
+
+
+//Iduka
+Route::get('/iduka',[IdukaController::class, 'index'])->name('iduka');
+Route::get('/idukaadmin',[IdukaController::class, 'indexadmin'])->name('idukaadmin');
+Route::get('/tambahiduka',[IdukaController::class, 'tambahiduka'])->name('tambahiduka');
+Route::post('/idukaproses',[IdukaController::class, 'idukaproses'])->name('idukaproses');
+Route::get('/editiduka/{id}',[IdukaController::class, 'editiduka'])->name('editiduka');
+Route::post('/editproses3/{id}',[IdukaController::class, 'editproses3'])->name('editproses3');
+Route::get('/deleteiduka/{id}',[IdukaController::class, 'delete'])->name('delete');
+
+
+Route::get('/mouadmin',[FotoidukaController::class, 'mouadmin'])->name('mouadmin');
+Route::get('/tambahfotomou',[FotoidukaController::class, 'tambahfotomou'])->name('tambahfotomou');
+Route::post('/fotomouproses',[FotoidukaController::class, 'fotomouproses'])->name('fotomouproses');
+Route::get('/editfotomou/{id}',[FotoidukaController::class, 'editfotomou'])->name('editfotomou');
+Route::post('/editproses4/{id}',[FotoidukaController::class, 'editproses4'])->name('editproses4');
+Route::get('/deletefotomou/{id}',[FotoidukaController::class, 'delete'])->name('delete');
 
 
 

@@ -37,7 +37,7 @@
                             </ul>
 
                             <li class="menu-item menu-item-has-children">
-                                <a href="/kurikulum"> Kurikulum</a>
+                                <a href="#"> Kurikulum</a>
                                 <ul class="sub-menu">
                                     <li class="menu-item menu-item-has-children">
                                         <a href="/kompetensi"> Kompetensi Keahlian</a>
@@ -70,15 +70,15 @@
                             </ul>
                             </li>
                             <li class="menu-item ">
-                                <a href="contact.html">Iduka</a>
+                                <a href="/iduka">Iduka</a>
                             </li>
                             <li class="menu-item">
                                 <a href="/muhinews">Muhi News</a>
                             </li>
                             <li class="menu-item menu-item-has-children">
-                                <a href="/upj"> UPJ</a>
+                                <a href=""> UPJ</a>
                                 <ul class="sub-menu">
-                                    <li class="menu-item"><a href="/profilsekolah">UPJ TKJ</a></li>
+                                    <li class="menu-item"><a href="/indexupj">UPJ TKJ</a></li>
                                     <li class="menu-item"><a href="explore-2.html">Bank Mini Sekolah(BSI)</a></li>
                                     <li class="menu-item"><a href="creator.html">Muhi Printing</a></li>
                                     <li class="menu-item"><a href="creator.html">Pegadaian</a></li>

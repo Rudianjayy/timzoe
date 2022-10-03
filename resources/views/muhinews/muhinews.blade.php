@@ -71,7 +71,7 @@
                                         <div class="meta-info">
                                             <div class="item author">
                                             </div>
-                                            <div class="item date">Diterbitkan : Senin, 31 Jan 2022</div>
+                                            <div class="item date">Diterbitkan : {{ $d->created_at }}</div>
                                         </div>
                                         <div class="text-article">
                                             <h5><a href="blog-details.html">{{ $d->deskripsi_muhinews }}</a></h5>

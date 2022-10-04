@@ -9,7 +9,7 @@
                 <span>Dashboard</span>
             </a>
         </li>
-
+        
         <li>
             <a href="/data-identitas" class="waves-effect">
                 <i class="mdi mdi-book-edit-outline"></i><span class="badge rounded-pill bg-primary float-end"></span>
@@ -60,7 +60,7 @@
                 <span>Muhinews</span>
             </a>
         </li>
-        @endif
+
         <li>
             <a href="javascript: void(0);" class="has-arrow waves-effect">
                 <i class="ti-package"></i>
@@ -74,6 +74,28 @@
             </ul>
         </li>
 
+        <li class="menu-title">Manajemen Beranda</li>
+
+        <li>
+            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                <i class="ti-package"></i>
+                <span>Slider</span>
+            </a>
+            <ul class="sub-menu" aria-expanded="false">
+                <li><a href="/slideradmin">Deskripsi Slider</a></li>
+                <li><a href="/fotoslideradmin">Foto Slider</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="/sambutanadmin" class="waves-effect">
+                <i class="mdi mdi-account-details-outline"></i> <span class="badge rounded-pill bg-primary float-end"></span>
+                <span>Sambutan Kepsek</span>
+            </a>
+        </li>
+
+        @endif
+        
         <li>
             <a href="/logout" class="waves-effect">
                 <i class="mdi mdi-chevron-left"></i> <span class="badge rounded-pill bg-primary float-end"></span>

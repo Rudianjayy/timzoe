@@ -7,8 +7,11 @@ use App\Http\Controllers\AlbumController;
 use App\Http\Controllers\IdukaController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DetailController;
+use App\Http\Controllers\KepsekController;
+use App\Http\Controllers\SliderController;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\MuhinewsController;
+use App\Http\Controllers\SambutanController;
 use App\Http\Controllers\FasilitasController;
 use App\Http\Controllers\FotoidukaController;
 use App\Http\Controllers\KesiswaanController;
@@ -34,6 +37,47 @@ use App\Http\Controllers\IdentitasSekolahController;
 //     return view('landingpage.landing');
 // });
 Route::get('/',[LandingController::class,'index'])->name('landing');
+
+
+
+
+
+//manajemen beranda
+
+Route::get('/slideradmin',[SliderController::class, 'slideradmin'])->name('slideradmin');
+Route::get('/editslider/{id}',[SliderController::class, 'editslider'])->name('editslider');
+Route::post('/prosesslider/{id}',[SliderController::class, 'prosesslider'])->name('prosesslider');
+Route::get('/deleteslider/{id}',[SliderController::class, 'delete'])->name('delete');
+
+
+Route::get('/fotoslideradmin',[SliderController::class, 'fotoslideradmin'])->name('fotoslideradmin');
+Route::get('/tambahfotoslider',[SliderController::class, 'tambahfotoslider'])->name('tambahfotoslider');
+Route::post('/fotosliderproses',[SliderController::class, 'fotosliderproses'])->name('fotosliderproses');
+Route::get('/editfotoslider/{id}',[SliderController::class, 'editfotoslider'])->name('editfotoslider');
+Route::post('/prosesfotoslider/{id}',[SliderController::class, 'prosesfotoslider'])->name('prosesfotoslider');
+Route::get('/deletefotoslider/{id}',[SliderController::class, 'delete2'])->name('delete');
+
+
+
+Route::get('/sambutanadmin',[SambutanController::class, 'sambutanadmin'])->name('sambutanadmin');
+Route::get('/tambahsambutan',[SambutanController::class, 'tambahsambutan'])->name('tambahsambutan');
+Route::post('/tambahsambutanproses',[SambutanController::class, 'tambahsambutanproses'])->name('tambahsambutanproses');
+Route::get('/editsambutan/{id}',[SambutanController::class, 'editsambutan'])->name('editsambutan');
+Route::post('/proseseditsambutan/{id}',[SambutanController::class, 'proseseditsambutan'])->name('proseseditsambutan');
+Route::get('/deletesambutan/{id}',[SambutanController::class, 'delete'])->name('delete');
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //muinews

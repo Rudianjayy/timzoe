@@ -27,19 +27,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-6 col-sm-6 col-6">
-                    <div class="widget widget-menu menu-marketplace">
-                        <h5 class="title-widget">Marketplace</h5>
-                        <ul>
-                            <li><a href="item.html">Gaming </a></li>
-                            <li><a href="item.html">Product </a></li>
-                            <li><a href="item.html">All NFTs</a></li>
-                            <li><a href="item.html">Social Network</a></li>
-                            <li><a href="item.html">Domain Names</a></li>
-                            <li><a href="item.html">Collectibles</a></li>
-                        </ul>
-                    </div>
-                </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-6">
                     <div class="widget widget-menu menu-supports">
                         <h5 class="title-widget">Admin</h5>
@@ -72,6 +59,15 @@
                                 </div>
                             </li>
                             @endforeach
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 col-sm-6 col-6">
+                    <div class="widget widget-menu menu-marketplace">
+                        <h5 class="title-widget">Visitor</h5>
+                        <ul>
+                            
                         </ul>
                     </div>
                 </div>

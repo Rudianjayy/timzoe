@@ -6,7 +6,7 @@
 </head>
 
     <body>
-        <h1 class="text-center mb-4">Edit Data Identitas</h1>
+        <h1 class="text-center mb-4">Edit Alumni</h1>
 
         <div class="container">
 
@@ -14,15 +14,9 @@
                 <div class="col-8">
                     <div class="card">
                         <div class="card-body">
-                            <form action="/editproses2/{{ $data->id }}" method="POST" enctype="multipart/form-data">
+                            <form action="/editproses6/{{ $data->id }}" method="POST" enctype="multipart/form-data">
                                 @csrf
-                                <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Judul :</label>
-                                    <input type="text" name="judul" class="form-control" value="{{ $data->judul }}">
-                                    @error('judul')
-                                      <div class="alert alert-danger">{{ $message }}</div>
-                                    @enderror
-                                  </div>
+
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Ubah Foto :</label>
                                     <img class="img mb-3" src="{{ asset('fotomahasiswa/' . $data->foto) }}" alt=""
@@ -36,9 +30,9 @@
 
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Deskripsi :</label>
-                                    <textarea class="form-control form-control-solid" rows="6x" name="deskripsi_muhinews">{{ $data->deskripsi_muhinews }}</textarea>
+                                    <textarea class="form-control form-control-solid" rows="6x" name="deskripsi_alumni">{{ $data->deskripsi_alumni }}</textarea>
 
-                                    @error('deskripsi_muhinews')
+                                    @error('deskripsi_alumni')
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>

@@ -166,7 +166,7 @@
                         <div class="about-one__box-wrapper">
                             <div class="about-one__box">
                                 <div class="about-one__box-icon">
-                                    <i class="fa fa-check"></i>
+                                    <i class="fas fa-computer-speaker"></i>
                                 </div><!-- /.about-one__box-icon -->
                                 <div class="about-one__box-content">
                                     <h3>SERVICE PC/LAPTOP, PRINTER & INSTALASI</h3>
@@ -175,8 +175,7 @@
                             </div><!-- /.about-one__box -->
                             <div class="about-one__box">
                                 <div class="about-one__box-icon">
-                                    <i class="fa fa-check"></i>
-
+                                    <i class="fas fa-wifi"></i>
                                 </div><!-- /.about-one__box-icon -->
                                 <div class="about-one__box-content">
                                     <h3>PEMASANGAN WIFI</h3>
@@ -185,7 +184,7 @@
                             </div><!-- /.about-one__box -->
                             <div class="about-one__box">
                                 <div class="about-one__box-icon">
-                                    <i class="fa fa-check"></i>
+                                    <i class="fad fa-network-wired"></i>
                                 </div><!-- /.about-one__box-icon -->
                                 <div class="about-one__box-content">
                                     <h3>PAKET PEMASANGAN & PERAWATAN LAB. KOMPUTER</h3>
@@ -194,17 +193,18 @@
                             </div><!-- /.about-one__box -->
                             <div class="about-one__box">
                                 <div class="about-one__box-icon">
-                                    <i class="fa fa-check"></i>
+                                    <i class="fas fa-mobile-android-alt"></i>
                                 </div><!-- /.about-one__box-icon -->
                                 <div class="about-one__box-content">
-                                    <h3>SERVICE HANDPHONE </h3>
-                                    <!-- <p>UPJ TEKAJE Menerima jasa Service Handphone dilakukan oleh tenaga teknisi yang perpengalaman dibidangnya dengan kualitas terjamin dan bergaransi.</p> -->
+                                    <h3>SERVICE HANDPHONE</h3>
+                                    <!-- <p>UPJ TEKAJE menawarkan Paket Jasa Pemasangan & Perawatan Lab Komputer yang sangat menguntungkan bagi pelanggan karena kami Menjamin kualitas dengan pelayanan yang mudah dan cepat.</p> -->
                                 </div><!-- /.about-one__box-content -->
                             </div><!-- /.about-one__box -->
 
+
                             <div class="about-one__box">
                                 <div class="about-one__box-icon">
-                                    <i class="fa fa-check"></i>
+                                    <i class="fas fa-file-code"></i>
                                 </div><!-- /.about-one__box-icon -->
                                 <div class="about-one__box-content">
                                     <h3>SOFTWARE DEVELOPMENT</h3>
@@ -239,7 +239,7 @@
             <br>
             <br>
             <h1>Klik button dibawah ini untuk menuju ke website UPJ TEKAJE <br> <a href="/upj" class="thm-btn cta-one__btn"><span>Klik</span></a><!-- /.thm-btn cta-one__btn -->
-</h1>
+            </h1>
         </div><!-- /.block-title text-center -->
     </section><!-- /.about-one -->
 

@@ -297,7 +297,7 @@
 }
 
 .sc-card-article .content {
-    padding      : 26px 35px 33px 35px;
+    padding      : 22px 35px 3px 35px;
     background   : var(--color-4);
     box-shadow   : 4px 4px 60px rgba(99, 69, 237, 0.1);
     border-radius: 0px 0px 7px 7px;
@@ -1321,7 +1321,7 @@ blockquote .author::before {
 }
 
 .sc-product-item.style-2 .product-img {
-    margin-bottom: 37px;
+    margin-bottom: 3px;
 }
 
 .sc-product-item.style-2 .product-content {

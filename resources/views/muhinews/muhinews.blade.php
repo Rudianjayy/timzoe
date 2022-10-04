@@ -76,36 +76,45 @@
             </div>
         </div>
     </section>
-            <div class="tf-section sc-card-blog">
-                <div class="container">
-                    <div class="row">
-                        @foreach ($d as $d)
-                            <div class="col-lg-4 col-md-6">
 
-                                <article class="sc-card-article">
-                                    <div class="card-media">
-                                        <img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt="" style="width: 350px; height:300px;">
-                                    </div>
-                                    <div class="content">
-                                        <div class="meta-info">
-                                            <div class="item author">
-                                            </div>
-                                            <div class="item date">Diterbitkan : {{ $d->created_at }}</div>
-                                        </div>
-                                        <div class="text-article">
-                                            <h1><a href="blog-details.html">{{ $d->deskripsi_muhinews }}</a></1>
-                                        </div>
-                                        <a href="/detailmuhi"
-                                            class="sc-button btn-bordered-white style letter"><span>Baca Selengkapnya</span></a>
-                                    </div>
-
-                                </article>
-
+    <div class="tf-section sc-card-blog">
+        <div class="container">
+            <div class="row">
+                @foreach ($d as $d )
+                <div class="col-lg-4 col-md-6">
+                    <article class="sc-card-article">
+                        <div class="card-media">
+                            <img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt="" style="width: 366px; height:183px;">
+                        </div>
+                        <div class="content">
+                            <div class="meta-info">
+                                <div class="item author">
+                                  <b><strong>{{$d->judul}}</strong></b>
+                                </div>
+                                <div class="item date">{{$d->created_at}}</div>
                             </div>
-                            @endforeach
+                            <div class="text-article">
+                                <h3>{{$d->deskripsi_muhinews}}</h5>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                @endforeach
+                <div class="col-md-12">
+                    <div class="wg-themesflat-pagination">
+                        <ul>
+                            <li><a href="#" class="page-numbers prev active"></a></li>
+                            <li><a href="#" class="page-numbers">01</a></li>
+                            <li><a href="#" class="page-numbers">02</a></li>
+                            <li><a href="#" class="page-numbers current">03</a></li>
+                            <li><a href="#" class="page-numbers">04</a></li>
+                            <li><a href="#" class="page-numbers next"></a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
         </div>
     </div>
 

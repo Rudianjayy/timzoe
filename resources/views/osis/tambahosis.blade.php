@@ -6,7 +6,7 @@
 </head>
 
 <body>
-  <h1 class="text-center mb-4">Tambah Muhi News</h1>
+  <h1 class="text-center mb-4">Tambah osis</h1>
 
   <div class="container" mb-5>
 
@@ -14,16 +14,8 @@
         <div class="col-8">
           <div class="card">
             <div class="card-body">
-              <form action="/muhinewsproses" method="POST" enctype="multipart/form-data">
+              <form action="/osisproses3" method="POST" enctype="multipart/form-data">
                 @csrf
-                
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Judul :</label>
-                    <input type="text" name="judul" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
-                    @error('foto')
-                      <div class="alert alert-danger">{{ $message }}</div>
-                    @enderror
-                  </div>
                 <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label">Foto :</label>
                   <input type="file" name="foto" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
@@ -34,8 +26,8 @@
 
                 <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label">Deskripsi :</label>
-                  <textarea class="form-control form-control-solid" name="deskripsi_muhinews"></textarea>
-                  @error('deskripsi_muhinews')
+                  <textarea class="form-control form-control-solid" name="deskripsi_osis"></textarea>
+                  @error('deskripsi_osis')
                     <div class="alert alert-danger">{{ $message }}</div>
                   @enderror
                 </div>
@@ -43,7 +35,7 @@
 
 
                 <button type="submit" class="btn btn-primary">Submit</button>
-                <a href="/muhinewsadmin" class="btn btn-danger">Kembali</a>
+                <a href="/osisadmin" class="btn btn-danger">Kembali</a>
               </form>
             </div>
           </div>

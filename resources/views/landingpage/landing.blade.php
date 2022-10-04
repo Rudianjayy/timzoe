@@ -27,7 +27,7 @@
 
 
     {{-- css juga kuambil dri ppdb landing --}}
-     <!-- <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/animate.css') }}">
+    <!-- <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/animate.css') }}">
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap-datepicker.min.css') }}">
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap-select.min.css') }}">
@@ -310,50 +310,50 @@
     </section>
 
     <section class="tf-latest-collections tf-section bg-color-2">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="sc-heading style-2 wow fadeInUp">
-                            <div class="content-left">
-                                <div class="inner">
-                                    <h3>Muhi News</h3>
-                                    <p class="desc">Klik button disamping jika ingin melihat lebih banyak</p>
-                                </div>
-                            </div>
-                            <div class="content-right">
-                                <a href="/muhinews" class="sc-button style letter style-2"><span>Lebih Banyak</span> </button></a>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="sc-heading style-2 wow fadeInUp">
+                        <div class="content-left">
+                            <div class="inner">
+                                <h3>Muhi News</h3>
+                                <p class="desc">Klik button disamping jika ingin melihat lebih banyak</p>
                             </div>
                         </div>
+                        <div class="content-right">
+                            <a href="/muhinews" class="sc-button style letter style-2"><span>Lebih Banyak</span> </button></a>
+                        </div>
                     </div>
-                    <div class="col-md-12">
-                        <div class="swiper-container trendy">
-                            <div class="swiper-wrapper">
-                            @foreach ($d as $d)
-
-                                <div class="swiper-slide wow fadeInUp">
-                                    <div class="slider-item">
-                                        <div class="sc-product-item style-2">
-                                            <div class="product-img">
-                                            <img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt="" style="width: 400px; height:300px;">
-                                                <a href="#"
-                                                    class="sc-button style letter"><span>Baca Selengkapnya</span></a>
+                </div>
+                <div class="tf-section sc-card-blog">
+                    <div class="container">
+                        <div class="row">
+                            @foreach ($d as $d )
+                            <div class="col-lg-4 col-md-6">
+                                <article class="sc-card-article">
+                                    <div class="card-media">
+                                        <img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt="" style="width: 366px; height:183px;">
+                                    </div>
+                                    <div class="content">
+                                        <div class="meta-info">
+                                            <div class="item author">
+                                                <b><strong>{{$d->judul}}</strong></b>
                                             </div>
-                                            <div class="card-content">
-                                            <h5 class="card-title">{{ $d->deskripsi_muhinews }}</h5>
-                                            </div>
+                                            <div class="item date">{{$d->created_at}}</div>
+                                        </div>
+                                        <div class="text-article">
+                                            <p>{{$d->deskripsi_muhinews}}</p>
                                         </div>
                                     </div>
-                                </div>
-                                @endforeach
-
+                                </article>
                             </div>
-                            <div class="swiper-button-next btn-slide-next "></div>
-                            <div class="swiper-button-prev btn-slide-prev"></div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
     {{-- <div class="tf-section sc-card-blog">
         <div class="container">
             <div class="row">
@@ -496,13 +496,7 @@
                                 <div class="slider-item">
                                     <div class="sc-product-item">
                                         <div class="product-img active">
-                                            <img src="{{ asset('landing/html/bidzend/assets/images/product-item/item-1.jpg') }}" alt="Image">
-                                            <div class="countdown">
-                                                <span class="js-countdown" data-timer="516400" data-labels=" :  ,  : , : , "></span>
-                                            </div>
-                                            <a href="#" class="sc-button style letter"><span>Place
-                                                    Bid</span></a>
-                                            <label>BSC</label>
+                                            <img src="{{ asset('landing/html/bidzend/assets/images/post/logo1.jpeg') }}" alt="Image" style="width: 300px; height:220px;">
                                         </div>
                                         <div class="product-content">
                                             <h5 class="title"><a href="item-details.html">‘’3D Space Rocket
@@ -838,7 +832,12 @@
                                             <img src="{{ asset('fotomahasiswa/' . $row->foto) }}" alt="" style="width: 400px; height:200px;">
                                         </div>
                                         <div class="card-content">
-                                            <h5 class="card-title">{{ $row->deskripsi }}</h5>
+                                            <div class="item author">
+                                                <b>
+                                                    <h4>{{$row->judul_album}}</h4>
+                                                </b>
+                                            </div>
+                                            <h5 class="card-title">{!! $row->deskripsi !!}</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -846,7 +845,7 @@
                             @endforeach
                         </div>
                         <div class="swiper-button-next btn-slide-next "></div>
-                    <div class="swiper-button-prev btn-slide-prev"></div>
+                        <div class="swiper-button-prev btn-slide-prev"></div>
                     </div>
 
                 </div>

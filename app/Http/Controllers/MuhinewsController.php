@@ -24,15 +24,18 @@ class MuhinewsController extends Controller
     public function muhinewsproses(Request $request){
         // dd($request->all());
         $this->validate($request,[
+            'judul' =>'required',
             'foto' =>'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
             'deskripsi_muhinews' =>'required',
         ],[
+            'judul.required' =>'Harus diisi',
             'foto.required' =>'Harus diisi',
             'foto.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
             'deskripsi_muhinews.required' =>'Harus diisi',
 
         ]);
         $data = Muhinews::create([
+            'judul' =>$request->judul,
             'foto' =>$request->foto,
             'deskripsi_muhinews' =>$request->deskripsi_muhinews,
         ]);
@@ -53,9 +56,11 @@ class MuhinewsController extends Controller
 
     public function editproses2(Request $request, $id){
         $this->validate($request,[
+            'judul' =>'required',
             'foto' =>'mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
             'deskripsi_muhinews' =>'required',
         ],[
+            'judul' =>'harus diisi',
             'foto.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
             'deskripsi_muhinews' =>'harus diisi',
 

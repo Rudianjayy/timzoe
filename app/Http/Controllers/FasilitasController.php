@@ -9,8 +9,8 @@ use Illuminate\Http\Request;
 class FasilitasController extends Controller
 {
     public function fasilitassekolah(){
-        $q = fasilitassekolah::all();
-        $f = Muhinews::all();
+        $q = fasilitassekolah::paginate(6);
+        $f = Muhinews::paginate(3);
         return view('fasilitassekolah.fasilitassekolah', compact('q','f'));
     }
     public function fasilitasadmin(){
@@ -26,15 +26,18 @@ class FasilitasController extends Controller
         // dd($request->all());
         $this->validate($request,[
             'foto' =>'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
+            'judul_fasilitas' =>'required',
             'deskripsi' =>'required',
         ],[
             'foto.required' =>'Harus diisi',
             'foto.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
+            'judul_fasilitas.required' =>'Harus diisi',
             'deskripsi.required' =>'Harus diisi',
 
         ]);
         $data = fasilitassekolah::create([
             'foto' =>$request->foto,
+            'judul_fasilitas' =>$request->judul_fasilitas,
             'deskripsi' =>$request->deskripsi,
         ]);
         if($request->hasFile('foto')){
@@ -55,14 +58,17 @@ class FasilitasController extends Controller
     public function editprosesfasilitas(Request $request, $id){
         $this->validate($request,[
             'foto' =>'mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
+            'judul_fasilitas' =>'required',
             'deskripsi' =>'required',
         ],[
             'foto.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
+            'judul_fasilitas' =>'harus diisi',
             'deskripsi' =>'harus diisi',
 
         ]);
         $data = fasilitassekolah::find($id);
         $data->update([
+            'judul_fasilitas' =>$request->judul_fasilitas,
             'deskripsi' =>$request->deskripsi,
         ]);
         if($request->hasFile('foto')){

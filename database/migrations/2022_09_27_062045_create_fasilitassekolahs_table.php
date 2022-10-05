@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('fasilitassekolahs', function (Blueprint $table) {
             $table->id();
             $table->string('foto');
+            $table->string('judul');
             $table->string('deskripsi');
             $table->timestamps();
         });

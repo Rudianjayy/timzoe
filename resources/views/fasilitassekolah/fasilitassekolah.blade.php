@@ -22,8 +22,7 @@
     <link rel="shortcut icon" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
     <link rel="apple-touch-icon-precomposed" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
 
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&amp;display=swap">
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/animate.css') }}">
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap-datepicker.min.css') }}">
@@ -44,8 +43,7 @@
 <body class="body header-fixed ">
     <div class="preload preload-container">
         {{-- <div class="preload-logo"></div>  --}}
-        <div class="preload-logo"><img src="{{ asset('landing/html/bidzend/assets/images/logo/muhi.jpg') }}"
-                alt="Image" style="width:570 !important;"></div>
+        <div class="preload-logo"><img src="{{ asset('landing/html/bidzend/assets/images/logo/muhi.jpg') }}" alt="Image" style="width:570 !important;"></div>
     </div>
 
     <div id="wrapper">
@@ -59,16 +57,11 @@
                     <div class="row">
                         <div class="col-md-12">
 
-                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/page-header-shape-1-1.png') }}"
-                                class="page-header__bg-shape-1" alt="">
-                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-2-circle-1-1.png') }}"
-                                class="page-header__bg-shape-2" alt="">
-                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-1.png') }}"
-                                class="page-header__bg-shape-3" alt="">
-                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-3.png') }}"
-                                class="page-header__bg-shape-4" alt="">
-                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-2-circle-1-2.png') }}"
-                                class="page-header__bg-shape-2" alt="">
+                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/page-header-shape-1-1.png') }}" class="page-header__bg-shape-1" alt="">
+                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-2-circle-1-1.png') }}" class="page-header__bg-shape-2" alt="">
+                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-1.png') }}" class="page-header__bg-shape-3" alt="">
+                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-3.png') }}" class="page-header__bg-shape-4" alt="">
+                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-2-circle-1-2.png') }}" class="page-header__bg-shape-2" alt="">
 
                             <div class="breadcrumbs">
                                 <ul>
@@ -80,34 +73,45 @@
                     </div>
                 </div>
             </section>
+            <div class="tf-section sc-card-blog">
+                <div class="container">
+                    <div class="row">
+                        @foreach ($q as $p )
+                        <div class="col-lg-4 col-md-6">
+                            <article class="sc-card-article">
+                                <div class="card-media">
+                                    <img src="{{ asset('fotomahasiswa/' . $p->foto) }}" alt="" style="width: 366px; height:183px;">
+                                </div>
+                                <div class="content">
+                                    <div class="meta-info">
+                                        <div class="item author">
+                                            <b><strong>{{$p->judul_fasilitas}}</strong></b>
+                                        </div>
+                                        <div class="item date">{{$p->created_at}}</div>
+                                    </div>
+                                    <div class="text-article">
+                                        <h3>{!!$p->deskripsi!!}</h5>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        @endforeach
 
-            <section class="portfolio-grid">
-            <div class="container">
-                <div class="block-title text-center">
-                    <h3>Fasilitas Sekolah</h3>
-                </div><!-- /.block-title text-center -->
-
-
-
-                <div class="row high-gutters masonary-layout filter-layout">
-                @foreach ($q as $q )
-                    <div class="col-lg-4 col-md-6 col-sm-12 filter-item masonary-item  strategy">
-                        <div class="portfolio-one__single">
-                            <div class="portfolio-one__image">
-                                <img src="{{ asset('fotomahasiswa/' . $q->foto) }}" alt="" style="width: 400px; height:200px;">
-                                <a class="img-popup" href="{{ asset('fotomahasiswa/' . $q->foto) }}"><i
-                                        class="fal fa-plus"></i></a>
-                            </div><!-- /.portfolio-one__image -->
-                            <div class="portfolio-one__content">
-                                <h3><a href="portfolio-details.html">{{$q->deskripsi}}</a></h3>
-                            </div><!-- /.portfolio-one__content -->
-                        </div><!-- /.portfolio-one__single -->
-                    </div><!-- /.col-lg-4 col-md-6 col-sm-12 -->
-                    @endforeach
-                </div><!-- /.row -->
-
-            </div><!-- /.container -->
-        </section><!-- /.portfolio-grid -->
+                        <div class="col-md-12">
+                            <div class="wg-themesflat-pagination">
+                                <ul>
+                                    <li><a href="#" class="page-numbers prev active"></a></li>
+                                    <li><a href="#" class="page-numbers">01</a></li>
+                                    <li><a href="#" class="page-numbers">02</a></li>
+                                    <li><a href="#" class="page-numbers current">03</a></li>
+                                    <li><a href="#" class="page-numbers">04</a></li>
+                                    <li><a href="#" class="page-numbers next"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -127,25 +131,7 @@
     <script src="{{ asset('landing/html/bidzend/assets/js/shortcodes.js') }}"></script>
     <script src="{{ asset('landing/html/bidzend/assets/js/main.js') }}"></script>
 
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/bootstrap-datepicker.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/bootstrap-select.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/isotope.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.ajaxchimp.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.circleType.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/waypoints.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.counterup.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.lettering.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.magnific-popup.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.mCustomScrollbar.concat.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.validate.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/owl.carousel.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/TweenMax.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/wow.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/swiper.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/particles.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/particel-config.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/theme.js') }}"></script>
+
 
 </body>
 

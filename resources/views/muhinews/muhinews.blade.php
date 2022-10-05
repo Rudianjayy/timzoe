@@ -21,8 +21,7 @@
     <link rel="shortcut icon" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
     <link rel="apple-touch-icon-precomposed" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
 
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&amp;display=swap">
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/animate.css') }}">
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap-datepicker.min.css') }}">
@@ -43,83 +42,72 @@
 <body class="body header-fixed">
 
     <div class="preload preload-container">
-        {{--  <div class="preload-logo"></div>  --}}
-        <div class="preload-logo"><img
-            src="{{ asset('landing/html/bidzend/assets/images/logo/muhi.jpg') }}"
-            alt="Image" style="width:570 !important;"></div>
+        {{-- <div class="preload-logo"></div>  --}}
+        <div class="preload-logo"><img src="{{ asset('landing/html/bidzend/assets/images/logo/muhi.jpg') }}" alt="Image" style="width:570 !important;"></div>
     </div>
 
     <div id="wrapper">
         <div id="page" class="clearfix">
 
-           @include('koneksi.navbar')
+            @include('koneksi.navbar')
 
-           <section class="fl-page-title">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
+            <section class="fl-page-title">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
 
-                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/page-header-shape-1-1.png') }}" class="page-header__bg-shape-1" alt="">
-                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-2-circle-1-1.png') }}" class="page-header__bg-shape-2" alt="">
-                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-1.png') }}" class="page-header__bg-shape-3" alt="">
-                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-3.png') }}" class="page-header__bg-shape-4" alt="">
-                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-2-circle-1-2.png') }}" class="page-header__bg-shape-2" alt="">
+                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/page-header-shape-1-1.png') }}" class="page-header__bg-shape-1" alt="">
+                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-2-circle-1-1.png') }}" class="page-header__bg-shape-2" alt="">
+                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-1.png') }}" class="page-header__bg-shape-3" alt="">
+                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-3.png') }}" class="page-header__bg-shape-4" alt="">
+                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-2-circle-1-2.png') }}" class="page-header__bg-shape-2" alt="">
 
-                    <div class="breadcrumbs">
-                        <ul>
-                            <li><a href="index.html">Beranda</a></li>
-                            <li>Muhi News</li>
-                        </ul>
+                            <div class="breadcrumbs">
+                                <ul>
+                                    <li><a href="index.html">Beranda</a></li>
+                                    <li>Muhi News</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <div class="tf-section sc-card-blog">
-        <div class="container">
-            <div class="row">
-                @foreach ($d as $d )
-                <div class="col-lg-4 col-md-6">
-                    <article class="sc-card-article">
-                        <div class="card-media">
-                            <img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt="" style="width: 366px; height:183px;">
-                        </div>
-                        <div class="content">
-                            <div class="meta-info">
-                                <div class="item author">
-                                  <b><strong>{{$d->judul}}</strong></b>
+            <div class="tf-section sc-card-blog">
+                <div class="container">
+                    <div class="row">
+                        @foreach ($k as $d )
+                        <div class="col-lg-4 col-md-6">
+                            <article class="sc-card-article">
+                                <div class="card-media">
+                                    <img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt="" style="width: 366px; height:183px;">
                                 </div>
-                                <div class="item date">{{$d->created_at}}</div>
-                            </div>
-                            <div class="text-article">
-                                <h3>{{$d->deskripsi_muhinews}}</h5>
-                            </div>
+                                <div class="content">
+                                    <div class="meta-info">
+                                        <div class="item author">
+                                            <b><strong>{{$d->judul}}</strong></b>
+                                        </div>
+                                        <div class="item date">{{$d->created_at}}</div>
+                                    </div>
+                                    <div class="text-article">
+                                        <h3>{{$d->deskripsi_muhinews}}</h5>
+                                    </div>
+                                </div>
+                            </article>
                         </div>
-                    </article>
-                </div>
-                @endforeach
-                <div class="col-md-12">
-                    <div class="wg-themesflat-pagination">
-                        <ul>
-                            <li><a href="#" class="page-numbers prev active"></a></li>
-                            <li><a href="#" class="page-numbers">01</a></li>
-                            <li><a href="#" class="page-numbers">02</a></li>
-                            <li><a href="#" class="page-numbers current">03</a></li>
-                            <li><a href="#" class="page-numbers">04</a></li>
-                            <li><a href="#" class="page-numbers next"></a></li>
-                        </ul>
+                        @endforeach
+                        <div class="col-md-12">
+                            {!! $k->links() !!}
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-        </div>
-    </div>
 
 
-   @include('koneksi.footer')
+    @include('koneksi.footer')
 
     <a id="scroll-top"></a>
 

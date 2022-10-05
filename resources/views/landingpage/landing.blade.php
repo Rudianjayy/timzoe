@@ -129,38 +129,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="swiper-slide wow fadeInUp">
-                    <div class="slider-item ">
-                        <div class="overlay "></div>
-                        <div class="container">
-                            <div class="slider-inner style-2 home-1 flex">
-                                {{-- <div class="slider-content">
-                                            <h1 class="heading">Discover and collect your favorite digital NTFs</h1>
-                                            <p class="sub-heading">Quis autem vel eum iure reprehenderit qui in ea
-                                                voluptates esse quam nihil molestiae consequatur veillum </p>
-                                            <div class="button-slider">
-                                                <a href="explore-1.html"
-                                                    class="sc-button btn-bordered-white style letter "><span>Explore
-                                                        More</span></a>
-                                                <a href="create-item.html"
-                                                    class="sc-button btn-bordered-white style file"><span>Create
-                                                        Now</span></a>
-                                            </div>
-                                        </div> --}}
-                                <div class="slider-img flex">
-                                    <div class="img-left">
-                                        <div class="img-1"><img src="{{ asset('landing/html/bidzend/assets/images/slider/p.png') }}" src="{{ asset('landing/html/bidzend/assets/images/slider/rigen.jpg') }}" alt="Image"></div>
 
-                                    </div>
-                                    <div class="img-right">
-
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+               
             </div>
             <div class="swiper-pagination"></div>
             <div class="swiper-button-next btn-slide-next "></div>

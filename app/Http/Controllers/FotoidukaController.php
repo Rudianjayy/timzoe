@@ -11,7 +11,7 @@ class FotoidukaController extends Controller
     public function mouadmin() {
         $fotoiduka = Fotoiduka::all();
         $data = Fotoiduka::all();
-        $f = Muhinews::all();
+        $f = Muhinews::paginate(4);
         return view('iduka.fotomou.foto-mou-admin', compact('data','fotoiduka','f'));
     }
     public function tambahfotomou()

@@ -88,10 +88,10 @@
                 <div class="content-item">
                   <center> <h3>{{$v->judulvisi}}</h3></center>
 
-                   <center> <p class="desc">{{$v->deskripsivisi}}</p></center>
+                   <center> <p class="desc">{!!$v->deskripsivisi!!}</p></center>
                     <br>
                     <center>  <h3>{{$v->judulmisi}}</h3></center>
-                    <center> <p class="desc">{{$v->deskripsimisi}}</p></center>
+                    <center> <p class="desc">{!!$v->deskripsimisi!!}</p></center>
                 </div>
             </div>
         </div>

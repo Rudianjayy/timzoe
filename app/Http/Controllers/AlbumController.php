@@ -10,7 +10,7 @@ class AlbumController extends Controller
 {
     public function loby(){
         $data = Album::all();
-        $f = Muhinews::all();
+        $f = Muhinews::paginate(4);
         return view ('album.data-album',compact('data','f'));
     }
 

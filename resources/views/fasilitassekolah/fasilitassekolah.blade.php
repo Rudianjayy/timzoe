@@ -98,16 +98,7 @@
                         @endforeach
 
                         <div class="col-md-12">
-                            <div class="wg-themesflat-pagination">
-                                <ul>
-                                    <li><a href="#" class="page-numbers prev active"></a></li>
-                                    <li><a href="#" class="page-numbers">01</a></li>
-                                    <li><a href="#" class="page-numbers">02</a></li>
-                                    <li><a href="#" class="page-numbers current">03</a></li>
-                                    <li><a href="#" class="page-numbers">04</a></li>
-                                    <li><a href="#" class="page-numbers next"></a></li>
-                                </ul>
-                            </div>
+                           {!! $q->links() !!}
                         </div>
                     </div>
                 </div>

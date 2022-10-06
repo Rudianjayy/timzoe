@@ -11,13 +11,9 @@ use Illuminate\Http\Request;
 
 class KesiswaanController extends Controller
 {
-    public function kesiswaan() {
-        $f = Muhinews::all();
-        return view('kesiswaan.kesiswaan','f');
-    }
     public function ekstra(){
         $f = Muhinews::all();
-        return view('kesiswaan.ekstrakulikuler.ekstra', compact('f'));
+        return view('kesiswaan.ekstrakulikuler.ekstra ', compact('f'));
     }
     public function ekstrakulikuleradmin() {
         $data = ekstrakulikuler::all();
@@ -213,7 +209,8 @@ class KesiswaanController extends Controller
 
     public function osis() {
         $b = osis::all();
-        return view('kesiswaan.osis.osis',compact('b'));
+        $f = Muhinews::paginate(4);
+        return view('kesiswaan.ipm.osis',compact('b','f'));
     }
     public function osisadmin() {
         $data = osis::all();
@@ -304,7 +301,8 @@ class KesiswaanController extends Controller
 
     public function alumni() {
         $l = alumni::all();
-        return view('kesiswaan.alumni.alumni',compact('l'));
+        $f = Muhinews::paginate(4);
+        return view('kesiswaan.alumni.alumni',compact('l','f'));
     }
     public function alumniadmin() {
         $data = alumni::all();

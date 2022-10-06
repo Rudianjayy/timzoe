@@ -45,6 +45,10 @@ Route::get('/editmuhinews/{id}',[MuhinewsController::class, 'editmuhinews'])->na
 Route::post('/editproses2/{id}',[MuhinewsController::class, 'editproses2'])->name('editproses2');
 Route::get('/deletemuhinews/{id}',[MuhinewsController::class, 'delete'])->name('delete');
 
+//muhiblog
+Route::get('/muhiblog',[MuhinewsController::class, 'muhiblog'])->name('muhiblog');
+
+
 //tentangkami
 
 //crudprofilsekolah
@@ -153,8 +157,9 @@ Route::get('/deletekurikulum/{id}',[KurikulumController::class, 'delete'])->name
 
 
 //kesiswaan
-Route::get('/kesiswaan',[KesiswaanController::class,'kesiswaan'])->name('kesiswaan');
 Route::get('/ekstra',[KesiswaanController::class,'ekstra'])->name('ekstra');
+Route::get('/osis',[KesiswaanController::class,'osis'])->name('osis');
+Route::get('/alumni',[KesiswaanController::class,'alumni'])->name('alumni');
 
 
 
@@ -168,10 +173,6 @@ Route::get('/upj',[UpjController::class,'upj'])->name('upj');
 Route::get('/ppdb', [PpdbController::class, 'ppdb'])->name('ppdb');
 
 
-//detail blog
-
-Route::get('/detailmuhi',[DetailController::class,'detailmuhi'])->name('detailmuhi');
-Route::get('/detailmuhi2',[DetailController::class,'detailmuhi2'])->name('detailmuhi2');
 
 
 

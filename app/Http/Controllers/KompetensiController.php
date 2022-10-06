@@ -14,7 +14,7 @@ class KompetensiController extends Controller
     public function kompetensi() {
         $kompetensi = Kompetensi::all();
         $foto = Fotokompetensi::all();
-        $f = Muhinews::all();
+        $f = Muhinews::paginate(4 );
         $kh = Jurusan::all();
         $pj = Personaljurusan::all();
         return view('kurikulum.kompetensi', compact('kompetensi','foto','f','kh','pj'));

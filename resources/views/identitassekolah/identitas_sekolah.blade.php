@@ -75,7 +75,7 @@
                     <center><img src="{{ asset('landing/html/bidzend/assets/images/logo/muhi.jpg') }}" alt="" style="width: 200px; height:200px; margin-bottom:20px; "></center>
 
                 </div><!-- /.block-title text-center -->
-               
+
                     @foreach ($i as $i )
 
                 <div class="row high-gutters">

@@ -9,10 +9,11 @@ use Illuminate\Http\Request;
 class MuhinewsController extends Controller
 {
     public function index() {
-        $d = Muhinews::all();
-        $f = Muhinews::all();
+        $k = Muhinews::paginate(6);
+        $f = Muhinews::paginate(3);
         $kh = Jurusan::all();
-        return view('muhinews.muhinews',compact('d','f','kh'));
+        return view('muhinews.muhinews',compact('k','f','kh'));
+        
     }
     public function indexadmin() {
         $data = Muhinews::all();

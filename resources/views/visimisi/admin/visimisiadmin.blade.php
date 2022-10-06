@@ -52,9 +52,9 @@
                                     <tr>
                                         <th>{{ $no++ }}</th>
                                         <td>{{ $v->judulvisi }}</td>
-                                        <td>{{ $v->deskripsivisi }}</td>
+                                        <td>{!! $v->deskripsivisi !!}</td>
                                         <td>{{ $v->judulmisi }}</td>
-                                        <td>{{ $v->deskripsimisi }}</td>
+                                        <td>{!! $v->deskripsimisi !!}</td>
 
                                         {{-- <td>{{ $v->created_at->format('D M Y') }}</td> --}}
                                         <td>

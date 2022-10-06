@@ -11,7 +11,7 @@ class FotokompetensiController extends Controller
 {
     public function fotokompetensiadmin() {
         $data = Fotokompetensi::all();
-        $f = Muhinews::all();
+        $f = Muhinews::paginate(4);
         $foto = Fotokompetensi::all();
         $kh = Jurusan::all();
         return view('kurikulum.fotokompetensi.foto-kompetensi', compact('data','foto','f','kh'));

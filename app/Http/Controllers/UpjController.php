@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class UpjController extends Controller
 {
     public function indexupj() {
-        $f = Muhinews::all();
+        $f = Muhinews::paginate(3);
         return view('upj.indexupj', compact('f'));
     }
     public function upj() {

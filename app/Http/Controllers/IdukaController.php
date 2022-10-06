@@ -13,7 +13,7 @@ class IdukaController extends Controller
     public function index(){
         $i = Iduka::all();
         $fotoiduka = Fotoiduka::all();
-        $f = Muhinews::all();
+        $f = Muhinews::paginate(4);
         $kh = Jurusan::all();
         return view('iduka.iduka', compact('i','fotoiduka','f','kh'));
     }

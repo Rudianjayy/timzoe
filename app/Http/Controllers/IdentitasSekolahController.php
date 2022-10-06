@@ -10,7 +10,7 @@ class IdentitasSekolahController extends Controller
 {
     public function identitassekolah(){
         $i = identitassekolah::all();
-        $f = Muhinews::all();
+        $f = Muhinews::paginate(4);
         $kh = Jurusan::all();
         return view('identitassekolah.identitas_sekolah',compact('i','f','kh'));
     }

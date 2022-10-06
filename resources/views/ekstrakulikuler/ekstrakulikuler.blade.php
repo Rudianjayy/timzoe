@@ -10,7 +10,7 @@
 
     <meta charset="utf-8">
     <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
-    <title>Kompetensi Keahlian</title>
+    <title>Ekstra Kulikuler</title>
     <meta name="author" content="themesflat.com">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -19,8 +19,8 @@
 
     <link rel="stylesheet" type="text/css" href="{{ asset('landing/html/bidzend/assets/css/responsive.css') }}">
 
-    <link rel="shortcut icon" href="{{ asset('landing/html/bidzend/assets/icon/muhilog.png') }}">
-    <link rel="apple-touch-icon-precomposed" href="{{ asset('landing/html/bidzend/assets/icon/muhilog.png') }}">
+    <link rel="shortcut icon" href="{{ asset('landing/html/bidzend/assets/icon/muhi.jpg') }}">
+    <link rel="apple-touch-icon-precomposed" href="{{ asset('landing/html/bidzend/assets/icon/muhi.jpg') }}">
 </head>
 
 <body class="body header-fixed ">
@@ -43,12 +43,12 @@
                         <div class="col-md-12">
                             <div class="page-title-inner flex">
                                 <div class="page-title-heading">
-                                    <h2 class="heading">ULP</h2>
+                                    <h2 class="heading">Ekstra Kulikuler</h2>
                                 </div>
                                 <div class="breadcrumbs">
                                     <ul>
-                                        <li><a href="index.html">Home</a></li>
-                                        <li>ULP</li>
+                                        <li><a href="/">Kesiswaan</a></li>
+                                        <li>Ekstra Kulikuler</li>
                                     </ul>
                                 </div>
                             </div>
@@ -65,10 +65,37 @@
                             <div class="sc-heading style-2">
                                 <div class="content-left">
                                     <div class="inner">
-                                        <h3>USAHA LAYANAN PARIWISATA (ULP)</h3>
-                                        <p class="desc">Dibuat hari kamis 2022</p>
+                                        <h3>Ekstra Kulikuler SMK MUHAMMADIYAH 1 GENTENG</h3>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="swiper-container popular-coll">
+
+                                <div class="swiper-wrapper">
+                                    @foreach ($d as $d )
+                                    <div class="swiper-slide">
+                                        <div class="slider-item">
+                                            <div class="sc-author-card">
+                                                <div class="card-media">
+                                                    <img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt="" style="width: 400px; height:400px">
+                                                </div>
+
+                                                <div class="card-content">
+                                                    <h5><a href="#">{{ $d->deskripsi }}</a> </h5>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    @endforeach
+                                </div>
+
+                                <div class="swiper-pagination"></div>
+                                <div class="swiper-button-next btn-slide-next "></div>
+                                <div class="swiper-button-prev btn-slide-prev"></div>
                             </div>
                         </div>
                     </div>

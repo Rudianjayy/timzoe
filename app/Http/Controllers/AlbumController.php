@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Album;
+use App\Models\Jurusan;
 use App\Models\Muhinews;
 use Illuminate\Http\Request;
 
@@ -11,7 +12,8 @@ class AlbumController extends Controller
     public function loby(){
         $data = Album::all();
         $f = Muhinews::all();
-        return view ('album.data-album',compact('data','f'));
+        $kh = Jurusan::all();
+        return view ('album.data-album',compact('data','f','kh'));
     }
 
     public function tambahalbum()
@@ -23,15 +25,18 @@ class AlbumController extends Controller
         // dd($request->all());
         $this->validate($request,[
             'foto' =>'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
+            'judul_album' =>'required',
             'deskripsi' =>'required',
         ],[
             'foto.required' =>'Harus diisi',
             'foto.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
+            'judul_album.required' =>'Harus diisi',
             'deskripsi.required' =>'Harus diisi',
 
         ]);
         $data = Album::create([
             'foto' =>$request->foto,
+            'judul_album' =>$request->judul_album,
             'deskripsi' =>$request->deskripsi,
         ]);
         if($request->hasFile('foto')){
@@ -50,16 +55,21 @@ class AlbumController extends Controller
     }
 
     public function editproses(Request $request, $id){
+        // dd('aaa');
         $this->validate($request,[
-            'foto' =>'mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
+            // 'foto' =>'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
+            // 'judul_album' =>'required',
             'deskripsi' =>'required',
         ],[
-            'foto.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
-            'deskripsi' =>'harus diisi',
+            // 'foto.required' =>'Harus diisi',
+            // 'foto.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
+            // 'judul_album.required' =>'Harus diisi',
+            'deskripsi.required' =>'Harus diisi',
 
         ]);
         $data = Album::find($id);
         $data->update([
+            // 'judul_album' =>$request->judul_album,
             'deskripsi' =>$request->deskripsi,
         ]);
         if($request->hasFile('foto')){

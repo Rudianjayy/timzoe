@@ -2,17 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Jurusan;
 use App\Models\Muhinews;
-use App\Models\profilsekolah;
 use App\Models\visimisi;
 use Illuminate\Http\Request;
+use App\Models\profilsekolah;
 
 class ProfilSekolahController extends Controller
 {
     public function profilsekolah(){
         $q = profilsekolah::all();
         $f = Muhinews::all();
-        return view('profilsekolah.profilsekolah',compact('q','f'));
+        $kh = Jurusan::all();
+        return view('profilsekolah.profilsekolah',compact('q','f','kh'));
     }
     public function profilsekolahadmin(){
         $data = profilsekolah::all();

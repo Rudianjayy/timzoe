@@ -66,7 +66,7 @@
                                                 style="width: 50px;">
                                         </td>
 
-                                        <td>{{ $d->sambutan }}</td>
+                                        <td>{!! $d->deskripsi !!}</td>
 
                                         {{-- <td>{{ $d->created_at->format('D M Y') }}</td> --}}
                                         <td>

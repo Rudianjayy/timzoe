@@ -14,16 +14,16 @@
                 <div class="col-8">
                     <div class="card">
                         <div class="card-body">
-                            <form action="/editprosessambutan/{{ $data->id }}" method="POST" enctype="multipart/form-data">
+                            <form action="/submitedit2/{{ $data->id }}" method="POST" enctype="multipart/form-data">
                                 @csrf
 
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Ubah Foto :</label>
-                                    <img class="img mb-3" src="{{ asset('fotomahasiswa/' . $data->foto_kepsek) }}" alt=""
+                                    <img class="img mb-3" src="{{ asset('fotomahasiswa/' . $data->foto) }}" alt=""
                                         style="width: 70px">
-                                    <input type="file" name="foto_kepsek" class="form-control" id="foto_kepsek"
-                                        aria-describedby="emailHelp" value="{{ $data->foto_kepsek }}">
-                                    @error('foto_kepsek')
+                                    <input type="file" name="foto" class="form-control" id="foto"
+                                        aria-describedby="emailHelp" value="{{ $data->foto }}">
+                                    @error('foto')
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
@@ -37,7 +37,7 @@
                                                         Deskripsi
                                                     </div>
                                                     <div class="card-body">
-                                                            <textarea name="mytextarea" id="mytextarea">{!! $data->sambutan !!}</textarea>
+                                                            <textarea name="deskripsi" id="mytextarea">{!! $data->deskripsi !!}</textarea>
                                                         
                                                     </div>
                                                 </div>

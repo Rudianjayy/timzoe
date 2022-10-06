@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Kurikulum;
+use App\Models\Jurusan;
 use App\Models\Muhinews;
+use App\Models\Kurikulum;
 use Illuminate\Http\Request;
 
 class KurikulumController extends Controller
@@ -11,18 +12,21 @@ class KurikulumController extends Controller
 
     public function kalenderakademik(){
         $f = Muhinews::all();
-        return view('kurikulum.kalenderakademik', compact('f'));
+        $kh = Jurusan::all();
+        return view('kurikulum.kalenderakademik', compact('f','kh'));
     }
     public function jadwalkegiatan(){
         $f = Muhinews::all();
-        return view('kurikulum.jadwalkegiatan', compact('f'));
+        $kh = Jurusan::all();
+        return view('kurikulum.jadwalkegiatan', compact('f','kh'));
     }
 
 
 
     public function kurikulumadmin(){
         $data = Kurikulum::all();
-        return view('kurikulum.k.kurikulum-admin', compact('data'));
+        $kh = Jurusan::all();
+        return view('kurikulum.k.kurikulum-admin', compact('data','kh'));
     }
     public function tambahkurikulum(){
         return view('kurikulum.k.tambah-kurikulum');

@@ -39,46 +39,44 @@
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/responsive.css') }}">
 
-
 </head>
 
 <body class="body header-fixed ">
     <div class="preload preload-container">
         {{--  <div class="preload-logo"></div>  --}}
-        <div class="preload-logo"><img
-            src="{{ asset('landing/html/bidzend/assets/images/logo/muhi.jpg') }}"
-            alt="Image" style="width:570 !important;"></div>
+        <div class="preload-logo"><img src="{{ asset('landing/html/bidzend/assets/images/logo/muhi.jpg') }}"
+                alt="Image" style="width:570 !important;"></div>
     </div>
 
     <div id="wrapper">
         <div id="page" class="clearfix">
 
-           @include('koneksi.navbar')
+            @include('koneksi.navbar')
 
             <section class="fl-page-title">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="particles-snow" id="header-snow"></div><!-- /#header-snow.particles-snow -->
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="particles-snow" id="header-snow"></div><!-- /#header-snow.particles-snow -->
 
-                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/page-header-shape-1-1.png') }}"
-                        class="page-header__bg-shape-1" alt="">
-                    <img src="" class="page-header__bg-shape-2" alt="">
-                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-1.png') }}"
-                        class="page-header__bg-shape-3" alt="">
-                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-3.png') }}"
-                        class="page-header__bg-shape-4" alt="">
-                        <div class="breadcrumbs">
-                            <ul>
-                                <li><a href="/">Beranda</a></li>
-                                <li>MP</li>
-                            </ul>
+                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/page-header-shape-1-1.png') }}"
+                                class="page-header__bg-shape-1" alt="">
+                            <img src="" class="page-header__bg-shape-2" alt="">
+                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-1.png') }}"
+                                class="page-header__bg-shape-3" alt="">
+                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-3.png') }}"
+                                class="page-header__bg-shape-4" alt="">
+                            <div class="breadcrumbs">
+                                <ul>
+                                    <li><a href="/">Beranda</a></li>
+                                    <li>Jurusan</li>
+                                </ul>
+                            </div>
                         </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
 
             <section class="hot-collections-page tf-section">
@@ -88,8 +86,8 @@
                             <div class="sc-heading style-2">
                                 <div class="content-left">
                                     <div class="inner">
-                                        <h3>MANAJEMEN PERKANTORAN (MP)</h3>
-                                        <p class="desc">Dibuat hari kamis 2022</p>
+                                        <h3>{{ $data->personal->nama_jurusan }}</h3>
+                                        <p class="desc">{{ $data->created_at }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -97,73 +95,19 @@
                         <div class="col-md-12">
                             <div class="swiper-container popular-coll">
                                 <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="slider-item">
-                                            <div class="sc-author-card">
-                                                <div class="card-media">
-                                                    <img width="500" height="500" src="{{ asset('landing/html/bidzend/assets/images/logo/mp1.jpeg') }}"
-                                                        alt="">
+                                    @foreach($foto as $ft)
+                                        <div class="swiper-slide">
+                                            <div class="slider-item">
+                                                <div class="sc-author-card">
+                                                    <div class="card-media">
+                                                        <img width="500" height="500"
+                                                            src="{{ asset('fotojurusan/'.$ft->foto) }}"
+                                                            alt="">
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="slider-item">
-                                            <div class="sc-author-card">
-                                                <div class="card-media">
-                                                    <img width="500" height="500" src="{{ asset('landing/html/bidzend/assets/images/logo/mp2.jpeg') }}"
-                                                        alt="">
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="slider-item">
-                                            <div class="sc-author-card">
-                                                <div class="card-media">
-                                                    <img width="500" height="500" src="{{ asset('landing/html/bidzend/assets/images/logo/mp3.jpeg') }}"
-                                                        alt="">
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="slider-item">
-                                            <div class="sc-author-card">
-                                                <div class="card-media">
-                                                    <img width="500" height="500" src="{{ asset('landing/html/bidzend/assets/images/logo/mp4.jpeg') }}"
-                                                        alt="">
-                                                </div>
-
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="slider-item">
-                                            <div class="sc-author-card">
-                                                <div class="card-media">
-                                                    <img width="500" height="500" src="{{ asset('landing/html/bidzend/assets/images/logo/mp5.jpeg') }}"
-                                                        alt="">
-                                                </div>
-
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="slider-item">
-                                            <div class="sc-author-card mg-bt-0">
-                                                <div class="card-media">
-                                                    <img width="500" height="500" src="{{ asset('landing/html/bidzend/assets/images/logo/mp6.jpeg') }}"
-                                                        alt="">
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @endforeach
 
                                 </div>
 
@@ -172,7 +116,7 @@
                     </div>
                 </div>
             </section>
-          @include('koneksi.footer')
+            @include('koneksi.footer')
         </div>
 
     </div>

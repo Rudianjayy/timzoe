@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Fotoiduka;
+use App\Models\Jurusan;
 use App\Models\Muhinews;
+use App\Models\Fotoiduka;
 use Illuminate\Http\Request;
 
 class FotoidukaController extends Controller
@@ -12,7 +13,8 @@ class FotoidukaController extends Controller
         $fotoiduka = Fotoiduka::all();
         $data = Fotoiduka::all();
         $f = Muhinews::all();
-        return view('iduka.fotomou.foto-mou-admin', compact('data','fotoiduka','f'));
+        $kh = Jurusan::all();
+        return view('iduka.fotomou.foto-mou-admin', compact('data','fotoiduka','f','kh'));
     }
     public function tambahfotomou()
     {

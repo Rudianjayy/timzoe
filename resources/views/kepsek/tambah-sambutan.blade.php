@@ -14,7 +14,7 @@
         <div class="col-8">
           <div class="card">
             <div class="card-body">
-              <form action="/tambahsambutanproses" method="POST" enctype="multipart/form-data">
+              <form action="/submitdata2" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label">Foto :</label>
@@ -33,7 +33,7 @@
                                         Deskripsi
                                     </div>
                                     <div class="card-body">
-                                            <textarea name="mytextarea" id="mytextarea"></textarea>
+                                            <textarea name="deskripsi" id="mytextarea"></textarea>
                                         
                                     </div>
                                 </div>

@@ -43,6 +43,7 @@
                                 <tr>
                                     <th scope="col">#</th>
                                     <th scope="col">Foto</th>
+                                    <th scope="col">judul</th>
                                     <th scope="col">Deskripsi</th>
                                     <th scope="col">Dibuat</th>
                                     <th scope="col">Aksi</th>
@@ -61,6 +62,8 @@
                                             <img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt=""
                                                 style="width: 50px;">
                                         </td>
+
+                                        <td>{{ $d->judul }}</td>
                                         <td>{{ $d->deskripsi_muhinews }}</td>
                                         <td>{{ $d->created_at }}</td>
 

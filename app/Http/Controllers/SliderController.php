@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Slider;
+use App\Models\Jurusan;
 use App\Models\Fotoslider;
 use Illuminate\Http\Request;
 
@@ -11,7 +12,8 @@ class SliderController extends Controller
     public function slideradmin(){
         $data = Slider::all();
         $ss = Slider::all();
-        return view('slider.slider-admin', compact('data','ss'));
+        $kh = Jurusan::all();
+        return view('slider.slider-admin', compact('data','ss','kh'));
     }
     public function editslider($id){
 

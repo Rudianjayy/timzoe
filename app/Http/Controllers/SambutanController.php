@@ -2,14 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Jurusan;
 use App\Models\Sambutan;
 use Illuminate\Http\Request;
 
 class SambutanController extends Controller
 {
-    public function sambutanadmin(){
+    public function loby2(){
         $data = Sambutan::all();
-        return view ('kepsek.kepsek',compact('data'));
+        $sa = Sambutan::all();
+        $kh = Jurusan::all();
+        return view ('kepsek.kepsek',compact('data','sa','kh'));
     }
 
     public function tambahsambutan()
@@ -17,7 +20,7 @@ class SambutanController extends Controller
         return view('kepsek.tambah-sambutan');
     }
 
-    public function tambahsambutanproses(Request $request){
+    public function submitdata2(Request $request){
         // dd($request->all());
         $this->validate($request,[
             // 'foto' =>'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
@@ -44,10 +47,10 @@ class SambutanController extends Controller
     public function editsambutan($id){
 
         $data = Sambutan::findOrFail($id);
-        return view('kepsek.edit-sambutan', compact('data'));
+        return view('kepsek.edit-kepsek', compact('data'));
     }
 
-    public function proseseditsambutan(Request $request, $id){
+    public function submitedit2(Request $request, $id){
         $this->validate($request,[
             'foto' =>'mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
             'deskripsi' =>'required',

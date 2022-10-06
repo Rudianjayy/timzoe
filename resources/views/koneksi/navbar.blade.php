@@ -42,14 +42,9 @@
                                     <li class="menu-item menu-item-has-children">
                                         <a href="/kompetensi"> Kompetensi Keahlian</a>
                                         <ul class="sub-menu">
-                                            <li class="menu-item"><a href="/tkj">Teknik Komputer & Jaringan(TKJ)</a></li>
-                                            <li class="menu-item"><a href="/mp">Otomasi Tata Kelola Perkantoran(OTKP)</a></li>
-                                            <li class   ="menu-item"><a href="/bd">Bisnis Digital(BD)</a></li>
-                                            <li class="menu-item"><a href="/rpl">Rekayasa Perangkat Lunak(RPL)</a></li>
-                                            <li class="menu-item"><a href="/ph">Perhotelan(PH)</a></li>
-                                            <li class="menu-item"><a href="/ulp">Usaha Layanan Pariwisata(ULP)</a></li>
-                                            <li class="menu-item"><a href="/dkv">Desain Komunikasi Visual(DKV)</a></li>
-                                            <li class="menu-item"><a href="/ak">Akuntansi dan Keuangan Lembaga(AKL)</a></li>
+                                            @foreach ($kh as $k )
+                                            <li class="menu-item"><a href="/indexjurusan/{{ $k->id }}">{{ $k->personal->nama_jurusan }}</a></li>
+                                            @endforeach
                                         </ul>
                                     </li>
                                     <li class="menu-item"><a href="/kalenderakademik">Kalender Akademik</a></li>

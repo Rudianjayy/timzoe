@@ -4,9 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Models\Album;
 use App\Models\Slider;
+use App\Models\Jurusan;
 use App\Models\Muhinews;
+use App\Models\Sambutan;
 use App\Models\Fotoslider;
 use Illuminate\Http\Request;
+use App\Models\Personaljurusan;
 
 class LandingController extends Controller
 {
@@ -16,6 +19,10 @@ class LandingController extends Controller
         $f = Muhinews::all();
         $ss = Slider::all();
         $fs = Fotoslider::all();
-        return view('landingpage.landing', compact('data','d','f','ss','fs'));
+        $sa = Sambutan::all();
+        $js = Jurusan::all();
+        $personal = Personaljurusan::all();
+        $kh = Jurusan::all();
+        return view('landingpage.landing', compact('data','d','f','ss','fs','sa','js','personal','kh'));
     }
 }

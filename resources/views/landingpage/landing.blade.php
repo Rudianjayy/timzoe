@@ -10,7 +10,7 @@
 
     <meta charset="utf-8">
     <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
-    <title>Smk Muhammadiyah 1 Genteng</title>
+    <title>SMK Muhammadiyah 1 Genteng</title>
     <meta name="author" content="themesflat.com">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -177,19 +177,21 @@
         <!--container-->
         <div class="container">
             <div class="row">
+                @foreach ($sa as $sa )
+                    
+                
                 <div class="col-12 col-md-6  wow fadeInRight">
                     <div class="text-video">
-                        <div class="text-center">
+                        {{-- <div class="text-center">
                             <h1>Sambutan</h1>
                             <br>
                             <h2 class="title-h2">Kepala Sekolah</h2>
-                        </div>
-                        <br>
-                        <br>
+                        </div> --}}
+                        
 
 
-                        <p style="text-align: center;">“Prakata KEPALA SMK MUHAMMADIYAH 1 GENTENG”</p>
-                        <p style="text-align: center;">ASSALAMUALAIKUM WARAHMATULLAHI WABARAKATUH</p>
+                        <p style="text-align: center;">{!! $sa->deskripsi !!}</p>
+                        {{-- <p style="text-align: center;">ASSALAMUALAIKUM WARAHMATULLAHI WABARAKATUH</p>
                         <br>
                         <br>
 
@@ -213,14 +215,15 @@
                         <p style="text-align: center;"> Kepala SMK Muhammadiyah 1 Genteng</p>
 
 
-                        <p style="text-align: center;"><strong>Taslim, S.Ag, M.Pd</strong></p>
+                        <p style="text-align: center;"><strong>Taslim, S.Ag, M.Pd</strong></p> --}}
                     </div>
                 </div>
                 <div class="img-right">
 
-                    <img src="{{ asset('landing/html/bidzend/assets/images/avatar/kepsek.jpeg') }}" alt=""
-                        width="450px">
+                    <img src="{{ asset('fotomahasiswa/' . $sa->foto) }}" alt=""
+                        width="450px" style="margin-left: 80px;">
                 </div>
+                @endforeach
             </div>
         </div>
     </section>
@@ -242,77 +245,21 @@
                         </div>
                     </div>
                 </div>
+                @foreach ( $js as $j)
                 <div class="col-lg-4 col-md-6 col-12">
                     <div class="sc-category wow fadeInUp pl-19" data-wow-delay="400ms" data-wow-duration="1000ms">
                         <div class="card-media">
-                            <img src="{{ asset('landing/html/bidzend/assets/images/logo/upj.png') }}" alt="">
+                            <img src="{{ asset('fotojurusan/'. $j->foto) }}" alt="">
                         </div>
                         <div class="card-content">
-                            <h5><a href="#"> Teknik Komputer Dan Jaringan(TKJ)</a></h5>
-                            <p>Sed ut perspiciatis unde omnis natus error sit voluptatem</p>
+                            <h5><a href="/indexjurusan/{{ $j->id }}"> {{ $j->personal->nama_jurusan }}</a></h5>
+                            <p>{!! $j->deskripsi !!}</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="sc-category wow fadeInUp pl-19" data-wow-delay="400ms" data-wow-duration="1000ms">
-                        <div class="card-media">
-                            <img src="{{ asset('landing/html/bidzend/assets/images/logo/Rekayasa Perangkat Lunak.jpg') }}"
-                                alt="">
-                        </div>
-                        <div class="card-content">
-                            <h5><a href="#">Rekayasa Perangkat Lunak(RPL)</a></h5>
-                            <p>Sed ut perspiciatis unde omnis natus error sit voluptatem</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="sc-category wow fadeInUp pl-40" data-wow-delay="600ms" data-wow-duration="1000ms">
-                        <div class="card-media">
-                            <img src="{{ asset('landing/html/bidzend/assets/images/logo/dkvv.jpg') }}"
-                                alt="">
-                        </div>
-                        <div class="card-content">
-                            <h5><a href="#">Desain Komunikasi Visual(DKV)</a></h5>
-                            <p>Sed ut perspiciatis unde omnis natus error sit voluptatem</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="sc-category wow fadeInUp mg-bt-0" data-wow-delay="200ms" data-wow-duration="1500ms">
-                        <div class="card-media">
-                            <img src="{{ asset('landing/html/bidzend/assets/images/logo/maxresdefault.jpg') }}"
-                                alt="">
-                        </div>
-                        <div class="card-content">
-                            <h5><a href="#">Otomasi & Tata Kelola Perkantoran(OTKP)</a></h5>
-                            <p>Sed ut perspiciatis unde omnis natus error sit voluptatem</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="sc-category wow fadeInUp mg-bt-0 pl-19" data-wow-delay="400ms"
-                        data-wow-duration="1500ms">
-                        <div class="card-media">
-                            <img src="{{ asset('landing/html/bidzend/assets/images/logo/PH.jpg') }}" alt="">
-                        </div>
-                        <div class="card-content">
-                            <h5><a href="#">Perhotelan(PH)</a></h5>
-                            <p>Sed ut perspiciatis unde omnis natus error sit voluptatem</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="sc-category wow fadeInUp mg-bt-0 pl-40 end" data-wow-delay="600ms"
-                        data-wow-duration="1500ms">
-                        <div class="card-media">
-                            <img src="{{ asset('landing/html/bidzend/assets/images/logo/R.jpg') }}" alt="">
-                        </div>
-                        <div class="card-content">
-                            <h5><a href="#">Akuntansi & Keuangan Lembaga(AKL)</a></h5>
-                            <p>Sed ut perspiciatis unde omnis natus error sit voluptatem</p>
-                        </div>
-                    </div>
-                </div>
+                    
+                @endforeach
+                
             </div>
         </div>
     </section>
@@ -329,32 +276,33 @@
                             </div>
                         </div>
                         <div class="content-right">
-                            <a href="/muhinews" class="sc-button style letter style-2"><span>Lebih Banyak</span>
-                                </button></a>
+                            <a href="/muhinews" class="sc-button style letter style-2"><span>Lebih Banyak</span> </button></a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-12">
-                    <div class="swiper-container trendy">
-                        <div class="swiper-wrapper">
-                            @foreach ($d as $d)
-                                <div class="swiper-slide wow fadeInUp">
-                                    <div class="slider-item">
-                                        <div class="sc-product-item style-2">
-                                            <div class="product-img">
-                                                <img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt=""
-                                                    style="width: 400px; height:300px;">
-                                                <a href="#" class="sc-button style letter"><span>Baca
-                                                        Selengkapnya</span></a>
+                <div class="tf-section sc-card-blog">
+                    <div class="container">
+                        <div class="row">
+                            @foreach ($d as $d )
+                            <div class="col-lg-4 col-md-6">
+                                <article class="sc-card-article">
+                                    <div class="card-media">
+                                        <img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt="" style="width: 366px; height:183px;">
+                                    </div>
+                                    <div class="content">
+                                        <div class="meta-info">
+                                            <div class="item author">
+                                                <b><strong>{{$d->judul}}</strong></b>
                                             </div>
-                                            <div class="card-content">
-                                                <h5 class="card-title">{{ $d->deskripsi_muhinews }}</h5>
-                                            </div>
+                                            <div class="item date">{{$d->created_at}}</div>
+                                        </div>
+                                        <div class="text-article">
+                                            <p>{{$d->deskripsi_muhinews}}</p>
                                         </div>
                                     </div>
-                                </div>
+                                </article>
+                            </div>
                             @endforeach
-
                         </div>
                         <div class="swiper-button-next btn-slide-next "></div>
                         <div class="swiper-button-prev btn-slide-prev"></div>
@@ -505,15 +453,7 @@
                                 <div class="slider-item">
                                     <div class="sc-product-item">
                                         <div class="product-img active">
-                                            <img src="{{ asset('landing/html/bidzend/assets/images/product-item/item-1.jpg') }}"
-                                                alt="Image">
-                                            <div class="countdown">
-                                                <span class="js-countdown" data-timer="516400"
-                                                    data-labels=" :  ,  : , : , "></span>
-                                            </div>
-                                            <a href="#" class="sc-button style letter"><span>Place
-                                                    Bid</span></a>
-                                            <label>BSC</label>
+                                            <img src="{{ asset('landing/html/bidzend/assets/images/post/logo1.jpeg') }}" alt="Image" style="width: 300px; height:220px;">
                                         </div>
                                         <div class="product-content">
                                             <h5 class="title"><a href="item-details.html">‘’3D Space Rocket
@@ -861,15 +801,20 @@
                             @foreach ($data as $row)
                                 <div class="swiper-slide wow fadeInUp">
 
-                                    <div class="slider-item">
-                                        <div class="sc-product-item style-2">
-                                            <div class="product-img">
-                                                <img src="{{ asset('fotomahasiswa/' . $row->foto) }}" alt=""
-                                                    style="width: 400px; height:200px;">
+                            <div class="swiper-slide wow fadeInUp">
+
+                                <div class="slider-item">
+                                    <div class="sc-product-item style-2">
+                                        <div class="product-img">
+                                            <img src="{{ asset('fotomahasiswa/' . $row->foto) }}" alt="" style="width: 400px; height:200px;">
+                                        </div>
+                                        <div class="card-content">
+                                            <div class="item author">
+                                                <b>
+                                                    <h4>{{$row->judul_album}}</h4>
+                                                </b>
                                             </div>
-                                            <div class="card-content">
-                                                <h5 class="card-title">{{ $row->deskripsi }}</h5>
-                                            </div>
+                                            <h5 class="card-title">{!! $row->deskripsi !!}</h5>
                                         </div>
                                     </div>
                                 </div>

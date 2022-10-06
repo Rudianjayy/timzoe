@@ -11,7 +11,8 @@ class IdentitasSekolahController extends Controller
     public function identitassekolah(){
         $i = identitassekolah::all();
         $f = Muhinews::all();
-        return view('identitassekolah.identitas_sekolah',compact('i','f'));
+        $kh = Jurusan::all();
+        return view('identitassekolah.identitas_sekolah',compact('i','f','kh'));
     }
     public function identitassekolahadmin()
     {

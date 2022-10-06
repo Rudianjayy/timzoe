@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Kepsek;
+use App\Models\Jurusan;
 use Illuminate\Http\Request;
 use App\Models\Sambutankepsek;
 
@@ -10,7 +11,8 @@ class KepsekController extends Controller
 {
     public function sambutanadmin(){
         $data = Sambutankepsek::all();
-        return view('kepsek.kepsek', compact('data'));
+        $kh = Jurusan::all();
+        return view('kepsek.kepsek', compact('data','kh'));
     }
     public function tambahsambutan()
     {

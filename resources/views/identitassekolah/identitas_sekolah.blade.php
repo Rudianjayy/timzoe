@@ -68,23 +68,26 @@
         </div>
     </section>
         <section class="faq-one">
+        <div class="content-center">
             <div class="container">
                 <div class="block-title text-center">
                     <h3>Identitas Sekolah</h3>
                     <center><img src="{{ asset('landing/html/bidzend/assets/images/logo/muhi.jpg') }}" alt="" style="width: 200px; height:200px; margin-bottom:20px; "></center>
 
                 </div><!-- /.block-title text-center -->
+               
                     @foreach ($i as $i )
 
                 <div class="row high-gutters">
-                    <div class="col-lg-6">
+                    <div class="col-lg-6  ">
                         <div class="accrodion-grp" data-grp-name="career-one__accrodion">
-                            <div class="accrodion ">
+                            <div class="accrodion">
                                 <div class="accrodion-title">
                                     <h4>Nama Sekolah :</h4>
                                 </div>
                                 <div class="accrodion-content">
                                     <div class="inner">
+                                    <label for="" class="namasekolah"><i class="fas fa-school"></i></label>
                                         <p>{{$i->namasekolah}}</p>
                                     </div><!-- /.inner -->
                                 </div>
@@ -95,6 +98,7 @@
                                 </div>
                                 <div class="accrodion-content">
                                     <div class="inner">
+                                    <label for="" class="npsn"><i class="far fa-sort-numeric-down-alt"></i></label>
                                         <p>{{$i->npsn}}</p>
                                     </div><!-- /.inner -->
                                 </div>
@@ -105,6 +109,7 @@
                                 </div>
                                 <div class="accrodion-content">
                                     <div class="inner">
+                                    <label for="" class="alamat"><i class="far fa-map-marker-alt"></i></label>
                                     <p>{{$i->alamat}}</p>
                                     </div><!-- /.inner -->
                                 </div>
@@ -115,6 +120,7 @@
                                 </div>
                                 <div class="accrodion-content">
                                     <div class="inner">
+                                    <label for="" class="kecamatan"><i class="far fa-location-arrow"></i></label>
                                     <p>{{$i->kecamatan}}</p>
                                     </div><!-- /.inner -->
                                 </div>
@@ -125,6 +131,7 @@
                                 </div>
                                 <div class="accrodion-content">
                                     <div class="inner">
+                                    <label for="" class="fax"><i class="fas fa-phone-office"></i></label>
                                     <p>{{$i->fax}}</p>
                                     </div><!-- /.inner -->
                                 </div>
@@ -135,12 +142,14 @@
                                 </div>
                                 <div class="accrodion-content">
                                     <div class="inner">
+                                    <label for="" class="facebook"><i class="fab fa-facebook"></i></label>
                                     <p>{{$i->facebook}}</p>
                                     </div><!-- /.inner -->
                                 </div>
                             </div>
                             <div class="accrodion">
                                 <div class="accrodion-title">
+                                <label for="" class="youtube"><i class="fab fa-youtube"></i></label>
                                     <h4>Youtube :</h4>
                                 </div>
                                 <div class="accrodion-content">
@@ -159,6 +168,7 @@
                                 </div>
                                 <div class="accrodion-content">
                                     <div class="inner">
+                                    <label for="" class="kabupaten"><i class="fas fa-city"></i></label>
                                     <p>{{$i->kabupaten}}</p>
                                     </div><!-- /.inner -->
                                 </div>
@@ -169,6 +179,7 @@
                                 </div>
                                 <div class="accrodion-content">
                                     <div class="inner">
+                                    <label for="" class="provinsi"><i class="fas fa-location"></i></label>
                                     <p>{{$i->provinsi}}</p>
                                     </div><!-- /.inner -->
                                 </div>
@@ -179,6 +190,7 @@
                                 </div>
                                 <div class="accrodion-content">
                                     <div class="inner">
+                                    <label for="" class="kodepos"><i class="far fa-mailbox"></i></label>
                                     <p>{{$i->kodepos}}</p>
                                     </div><!-- /.inner -->
                                 </div>
@@ -189,6 +201,7 @@
                                 </div>
                                 <div class="accrodion-content">
                                     <div class="inner">
+                                    <label for="" class="telepon"><i class="fas fa-phone-square-alt"></i></label>
                                     <p>{{$i->telepon}}</p>
                                     </div><!-- /.inner -->
                                 </div>
@@ -200,6 +213,7 @@
                                 </div>
                                 <div class="accrodion-content">
                                     <div class="inner">
+                                    <label for="" class="email"><i class="fas fa-envelope"></i></label>
                                     <p>{{$i->email}}</p>
                                     </div><!-- /.inner -->
                                 </div>
@@ -211,6 +225,7 @@
                                 </div>
                                 <div class="accrodion-content">
                                     <div class="inner">
+                                    <label for="" class="instagram"><i class="fab fa-instagram"></i></label>
                                     <p>{{$i->instagram}}</p>
                                     </div><!-- /.inner -->
                                 </div>
@@ -222,6 +237,9 @@
 
                 @endforeach
             </div><!-- /.container -->
+</div>
+
+
         </section><!-- /.faq-one -->
 
 

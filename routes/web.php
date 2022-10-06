@@ -9,6 +9,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DetailController;
 use App\Http\Controllers\KepsekController;
 use App\Http\Controllers\SliderController;
+use App\Http\Controllers\JurusanController;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\MuhinewsController;
 use App\Http\Controllers\SambutanController;
@@ -20,6 +21,7 @@ use App\Http\Controllers\KompetensiController;
 use App\Http\Controllers\DataidentitasController;
 use App\Http\Controllers\ProfilSekolahController;
 use App\Http\Controllers\FotokompetensiController;
+use App\Http\Controllers\PersonaljurusanController;
 use App\Http\Controllers\IdentitasSekolahController;
 
 /*
@@ -59,14 +61,31 @@ Route::get('/deletefotoslider/{id}',[SliderController::class, 'delete2'])->name(
 
 
 
-Route::get('/sambutanadmin',[SambutanController::class, 'sambutanadmin'])->name('sambutanadmin');
+Route::get('/sambutanadmin',[SambutanController::class, 'loby2'])->name('sambutanadmin');
 Route::get('/tambahsambutan',[SambutanController::class, 'tambahsambutan'])->name('tambahsambutan');
-Route::post('/tambahsambutanproses',[SambutanController::class, 'tambahsambutanproses'])->name('tambahsambutanproses');
+Route::post('/submitdata2',[SambutanController::class, 'submitdata2'])->name('submitdata2');
 Route::get('/editsambutan/{id}',[SambutanController::class, 'editsambutan'])->name('editsambutan');
-Route::post('/proseseditsambutan/{id}',[SambutanController::class, 'proseseditsambutan'])->name('proseseditsambutan');
+Route::post('/submitedit2/{id}',[SambutanController::class, 'submitedit2'])->name('submitedit2');
 Route::get('/deletesambutan/{id}',[SambutanController::class, 'delete'])->name('delete');
 
 
+
+
+Route::get('/datajurusan',[JurusanController::class, 'loby3'])->name('datajurusan');
+Route::get('/indexjurusan/{id}',[JurusanController::class, 'indexjurusan'])->name('indexjurusan');
+Route::get('/tambahjurusan',[JurusanController::class, 'tambahjurusan'])->name('tambahjurusan');
+Route::post('/submitdata3',[JurusanController::class, 'submitdata3'])->name('submitdata3');
+// Route::get('/editsambutan/{id}',[JurusanController::class, 'editsambutan'])->name('editsambutan');
+// Route::post('/submitedit2/{id}',[JurusanController::class, 'submitedit2'])->name('submitedit2');
+Route::get('/deletejurusan/{id}',[JurusanController::class, 'delete'])->name('delete');
+
+
+
+Route::get('/adminfotojurusan',[PersonaljurusanController::class, 'loby4'])->name('adminfotojurusan');
+Route::get('/indexfotojurusan/{id}',[PersonaljurusanController::class, 'indexfotojurusan'])->name('indexfotojurusan');
+Route::get('/tambahfotojurusan',[PersonaljurusanController::class, 'tambahfotojurusan'])->name('tambahfotojurusan');
+Route::post('/submitdata4',[PersonaljurusanController::class, 'submitdata4'])->name('submitdata4');
+Route::get('/deletefotojurusan/{id}',[PersonaljurusanController::class, 'delete'])->name('delete');
 
 
 

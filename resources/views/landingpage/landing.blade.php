@@ -229,7 +229,7 @@
                             </div>
                             @endforeach
                         </div>
-                        <!-- <div class="col-md-12">
+                        <!-- <div class="col-m   d-12">
                         <div class="swiper-button-next btn-slide-next"></div>
                         <div class="swiper-button-prev btn-slide-prev"></div>
                         </div> -->
@@ -703,7 +703,7 @@
 
                 <div class="col-md-12">
                     <div class="swiper-container trendy">
-                        
+
                         <div class="swiper-wrapper">
                             @foreach ($data as $row)
                             <div class="swiper-slide wow fadeInUp">
@@ -725,14 +725,14 @@
                                     </div>
                                 </div>
                             </div>
-                            @endforeach      
+                            @endforeach
                         </div>
                         <div class="col-md-12">
                         {!! $data->links() !!}
                     </div>
                     </div>
                 </div>
-               
+
             </div>
         </div>
     </section>

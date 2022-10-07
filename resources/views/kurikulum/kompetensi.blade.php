@@ -102,22 +102,28 @@
                         <div class="col-md-12">
                             <div class="swiper-container popular-coll">
                                 <div class="swiper-wrapper">
-                                    @foreach ($foto as $foto )
-
+                                    @foreach ($pj as $khj )
                                     <div class="swiper-slide">
                                         <div class="slider-item">
                                             <div class="sc-author-card">
                                                 <div class="card-media">
-                                                    <a href="/tkj">
-                                                    <img src="{{ asset('fotomahasiswa/' . $foto->fotokompetensi) }}"
+                                                    @php
+                                                        $foto = App\Models\Jurusan::where('personaljurusans_id',$khj->id)->first();
+                                                    @endphp
+                                                    <a href="/indexjurusan/{{ $khj->id }}">
+                                                     @if($foto != null)   
+                                                        <img src="{{ asset('fotojurusan/'. $foto->foto) }}"
+                                                            alt="">
+                                                    @else
+                                                        <img src="{{ asset('fotomahasiswa/album1.jpg') }}"
                                                         alt="">
+                                                    @endif
                                                     </a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     @endforeach
-
 
                                 </div>
 

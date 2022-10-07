@@ -44,21 +44,28 @@
 
        @include('koneksi.navbar')
 
-        <section class="page-header">
-            <div class="particles-snow" id="header-snow"></div><!-- /#header-snow.particles-snow -->
+       <section class="fl-page-title">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
 
-            <img src="assets/images/shapes/page-header-shape-1-1.png" class="page-header__bg-shape-1" alt="">
-            <img src="assets/images/shapes/page-header-shape-1-2.png" class="page-header__bg-shape-2" alt="">
-            <img src="assets/images/shapes/footer-shape-1-1.png" class="page-header__bg-shape-3" alt="">
-            <img src="assets/images/shapes/footer-shape-1-3.png" class="page-header__bg-shape-4" alt="">
-            <div class="container text-center">
-                <h2>Blog Details</h2>
-                <ul class="list-unstyled thm-breadcrumb">
-                    <li><a href="index.html">Home</a></li>
-                    <li><span>Blog Details</span></li>
-                </ul><!-- /.thm-breadcrumb -->
-            </div><!-- /.container text-center -->
-        </section><!-- /.page-header -->
+            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/page-header-shape-1-1.png') }}" class="page-header__bg-shape-1" alt="">
+            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-2-circle-1-1.png') }}" class="page-header__bg-shape-2" alt="">
+            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-1.png') }}" class="page-header__bg-shape-3" alt="">
+            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-3.png') }}" class="page-header__bg-shape-4" alt="">
+            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-2-circle-1-2.png') }}" class="page-header__bg-shape-2" alt="">
+
+            <div class="breadcrumbs">
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li>Blog Detail</li>
+                </ul>
+            </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
         <section class="blog-standard blog-details">
             <img src="assets/images/shapes/bg-shape-1-1.png" class="section__bg-shape-1" alt="">

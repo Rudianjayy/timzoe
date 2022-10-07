@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\fasilitassekolah;
 use App\Models\Muhinews;
+use App\Models\Jurusan;
 use Illuminate\Http\Request;
 
 class FasilitasController extends Controller
@@ -11,7 +12,10 @@ class FasilitasController extends Controller
     public function fasilitassekolah(){
         $q = fasilitassekolah::paginate(6);
         $f = Muhinews::paginate(3);
-        return view('fasilitassekolah.fasilitassekolah', compact('q','f'));
+        $kh = Jurusan::all();
+
+        return view('fasilitassekolah.fasilitassekolah', compact('q','f','kh'));
+
     }
     public function fasilitasadmin(){
         $data = fasilitassekolah::all();

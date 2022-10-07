@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Jurusan;
+use App\Models\Muhinews;
 use Illuminate\Http\Request;
 use App\Models\Fotokompetensi;
-use App\Models\Muhinews;
 
 class FotokompetensiController extends Controller
 {
@@ -12,7 +13,8 @@ class FotokompetensiController extends Controller
         $data = Fotokompetensi::all();
         $f = Muhinews::paginate(4);
         $foto = Fotokompetensi::all();
-        return view('kurikulum.fotokompetensi.foto-kompetensi', compact('data','foto','f'));
+        $kh = Jurusan::all();
+        return view('kurikulum.fotokompetensi.foto-kompetensi', compact('data','foto','f','kh'));
     }
     public function tambahfotokompetensi()
     {

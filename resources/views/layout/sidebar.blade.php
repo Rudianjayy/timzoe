@@ -1,7 +1,7 @@
 <div id="sidebar-menu">
     <!-- Left Menu Start -->
     <ul class="metismenu list-unstyled" id="side-menu">
-        <li class="menu-title">Menu</li>
+        <li class="menu-title">Ppdb</li>
 
         <li >
             <a href="/welcome" class="waves-effect">
@@ -9,7 +9,7 @@
                 <span>Dashboard</span>
             </a>
         </li>
-
+        
         <li>
             <a href="/data-identitas" class="waves-effect">
                 <i class="mdi mdi-book-edit-outline"></i><span class="badge rounded-pill bg-primary float-end"></span>
@@ -18,12 +18,7 @@
         </li>
 @if (auth()->user()->role=="admin")
 
-        <li>
-            <a href="/data-album" class="waves-effect">
-                <i class="mdi mdi-account-details-outline"></i> <span class="badge rounded-pill bg-primary float-end"></span>
-                <span>Data Album</span>
-            </a>
-        </li>
+<li class="menu-title">Menu</li>
         @endif
         @if (auth()->user()->role=="admin")
         <li>
@@ -60,7 +55,7 @@
                 <span>Muhinews</span>
             </a>
         </li>
-        @endif
+
         <li>
             <a href="javascript: void(0);" class="has-arrow waves-effect">
                 <i class="ti-package"></i>
@@ -74,6 +69,46 @@
             </ul>
         </li>
 
+        <li class="menu-title">Manajemen Beranda</li>
+
+        <li>
+            <a href="/data-album" class="waves-effect">
+                <i class="mdi mdi-account-details-outline"></i> <span class="badge rounded-pill bg-primary float-end"></span>
+                <span>Data Album</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                <i class="ti-package"></i>
+                <span>Slider</span>
+            </a>
+            <ul class="sub-menu" aria-expanded="false">
+                <li><a href="/slideradmin">Deskripsi Slider</a></li>
+                <li><a href="/fotoslideradmin">Foto Slider</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="/sambutanadmin" class="waves-effect">
+                <i class="mdi mdi-account-details-outline"></i> <span class="badge rounded-pill bg-primary float-end"></span>
+                <span>Sambutan Kepsek</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                <i class="ti-package"></i>
+                <span>Jurusan</span>
+            </a>
+            <ul class="sub-menu" aria-expanded="false">
+                <li><a href="/datajurusan">Data Jurusan</a></li>
+                <li><a href="/adminfotojurusan">Masing jurusan</a></li>
+            </ul>
+        </li>
+
+        @endif
+        
         <li>
             <a href="/logout" class="waves-effect">
                 <i class="mdi mdi-chevron-left"></i> <span class="badge rounded-pill bg-primary float-end"></span>

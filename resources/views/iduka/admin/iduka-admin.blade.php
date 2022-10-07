@@ -57,7 +57,7 @@
                                     <tr>
                                         <th>{{ $no++ }}</th>
                                         <td>{{ $d->judul_iduka }}</td>
-                                        <td>{{ $d->deskripsi_iduka }}</td>
+                                        <td>{!! $d->deskripsi_iduka !!}</td>
 
                                         <td>
                                             <a href="/editiduka/{{ $d->id }}" class="btn btn-warning">Edit</a>
@@ -112,7 +112,16 @@
         <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap4.min.js"></script> --}}
 
         <!-- Required datatable js -->
-
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+        <script src="https://cdn.tiny.cloud/1/z3vshivvjuw47heg0vg12ouq5rr8i7ckkxmmjadvrhgsynq8/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+       
+        <script>
+           tinymce.init({
+               selector:'#mytextarea'
+           });
+        </script>
 
 
 

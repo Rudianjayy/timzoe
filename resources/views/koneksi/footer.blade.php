@@ -11,12 +11,14 @@
                                 data-width="110" data-height="45">
                         </a>
                     </div>
-                    <p class="sub-widget-logo">Sed ut perspiciatis unde omnis iste natus error sit
-                        voluptate
-                        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quaes</p>
+                    <p class="sub-widget-logo">Dari SMK Muhammadiyah 1 Genteng <br>
+                        "SMKS Muhammadiyah 1 Genteng di dirikan pada tahun 02 Januari 1968. SMK yang terdiri dari
+                        beberapa jurusan antara lain : 1. Teknik Komputer Jaringan dan Telekomunikasi 2. Desain
+                        Komunikasi Visual 3. Manajemen Perkantoran dan Layanan Bisnis 4. Akuntansi dan Keuangan Lembaga
+                        5. Pemasaran 6. Perhotelan"</p>
                     <div class="widget-social">
                         <ul>
-                            <li><a href="https://www.facebook.com/smkmuhigenteng" class="active"><i
+                            <li><a href="https://www.facebook.com/smkmuhigenteng"><i
                                         class="fab fa-facebook-f"></i></a>
                             </li>
                             {{--  <li><a href="#"><i class="fab fa-gmail"></i></a></li>  --}}
@@ -31,19 +33,6 @@
             <div class="col-lg-2 col-md-6 col-sm-6 col-6">
                 <script src="https://apps.elfsight.com/p/platform.js" defer></script>
                 <div class="elfsight-app-7e06bf3a-c3dd-4ad3-a974-4f6c4b30ba1e"></div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-6">
-                <div class="widget widget-menu menu-supports">
-                    <h5 class="title-widget">Admin</h5>
-                    <ul>
-                        <li><a href="/login">Login Admin </a></li>
-                        <li><a href="contact.html">Help & Support </a></li>
-                        <li><a href="item.html">Live Auctions</a></li>
-                        <li><a href="item-details.html"> Item Details</a></li>
-                        <li><a href="contact.html"> 24/7 Supports</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                    </ul>
-                </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                 <div class="widget widget-post">
@@ -64,7 +53,18 @@
                     </ul>
                 </div>
             </div>
-            <h2>kkkkkkk</h2>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-6">
+                <div class="widget widget-menu menu-supports">
+                    <h5 class="title-widget">Admin</h5>
+                    <ul>
+                        <li><a href="/login">Login Admin </a></li>
+                        <li><a href="contact.html">Help & Support </a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
         </div>
     </div>
 </footer>

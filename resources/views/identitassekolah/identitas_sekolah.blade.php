@@ -79,7 +79,7 @@
                     @foreach ($i as $i )
 
                 <div class="row high-gutters">
-                    <div class="col-lg-6  ">
+                    <div class="col-lg-6">
                         <div class="accrodion-grp" data-grp-name="career-one__accrodion">
                             <div class="accrodion">
                                 <div class="accrodion-title">

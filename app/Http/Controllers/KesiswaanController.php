@@ -1,13 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\ekstrakulikuler;
-use App\Models\Mikrotik;
 use App\Models\osis;
 use App\Models\alumni;
+use App\Models\Jurusan;
+use App\Models\Mikrotik;
 
 use App\Models\Muhinews;
 use Illuminate\Http\Request;
+use App\Models\ekstrakulikuler;
 
 class KesiswaanController extends Controller
 {

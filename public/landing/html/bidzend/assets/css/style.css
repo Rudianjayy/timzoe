@@ -1593,7 +1593,7 @@ a:focus {
 }
 
 #main-nav-mobi ul>li>a {
-    color: var(--color-1);
+    color: #E250E5;
     display: inline-block;
     font-size: 16px;
     line-height: 48px;

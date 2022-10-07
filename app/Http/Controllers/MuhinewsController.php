@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Jurusan;
 use App\Models\Muhinews;
 use Illuminate\Http\Request;
 
@@ -10,7 +11,9 @@ class MuhinewsController extends Controller
     public function index() {
         $k = Muhinews::paginate(6);
         $f = Muhinews::paginate(3);
-        return view('muhinews.muhinews',compact('k','f'));
+        $kh = Jurusan::all();
+        return view('muhinews.muhinews',compact('k','f','kh'));
+
     }
     public function indexadmin() {
         $data = Muhinews::all();

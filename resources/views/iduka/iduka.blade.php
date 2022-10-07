@@ -10,7 +10,7 @@
 
     <meta charset="utf-8">
     <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
-    <title>Smk Muhammadiyah 1 Genteng</title>
+    <title>SMK Muhammadiyah 1 Genteng</title>
     <meta name="author" content="themesflat.com">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -169,8 +169,8 @@
         style="background-image: url{{ asset('landingppdb/ppdb/style/assets/images/shapes/cta-bg-2-1.png') }};">
         <div class="particles-snow" id="cta-one-snow"></div><!-- /#cta-one-snow.particles-snow -->
 
-        <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-1.png') }}"
-            class="cta-one__bg-shape-1" alt="">
+        {{-- <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-1.png') }}"
+            class="cta-one__bg-shape-1" alt=""> --}}
         <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-2.png') }}"
             class="cta-one__bg-shape-2" alt="">
         <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-3.png') }}"

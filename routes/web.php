@@ -24,6 +24,7 @@ use App\Http\Controllers\ProfilSekolahController;
 use App\Http\Controllers\FotokompetensiController;
 use App\Http\Controllers\PersonaljurusanController;
 use App\Http\Controllers\IdentitasSekolahController;
+use App\Http\Controllers\MuhiblogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -120,6 +121,10 @@ Route::get('/editmuhinews/{id}',[MuhinewsController::class, 'editmuhinews'])->na
 Route::post('/editproses2/{id}',[MuhinewsController::class, 'editproses2'])->name('editproses2');
 Route::get('/deletemuhinews/{id}',[MuhinewsController::class, 'delete'])->name('delete');
 
+//muhiblog
+Route::get('/muhiblog',[MuhiblogController::class, 'muhiblog'])->name('muhiblog');
+
+
 //tentangkami
 
 //crudprofilsekolah
@@ -182,14 +187,6 @@ Route::get('/deletefasilitas/{id}',[FasilitasController::class, 'delete'])->name
 
 //kompetensikeahlian
 Route::get('/kompetensi',[KompetensiController::class,'kompetensi'])->name('kompetensi');
-Route::get('/tkj',[KompetensiController::class,'tkj'])->name('tkj');
-Route::get('/rpl',[KompetensiController::class,'rpl'])->name('rpl');
-Route::get('/bd',[KompetensiController::class,'bd'])->name('bd');
-Route::get('/ak',[KompetensiController::class,'ak'])->name('ak');
-Route::get('/dkv',[KompetensiController::class,'dkv'])->name('dkv');
-Route::get('/mp',[KompetensiController::class,'mp'])->name('mp');
-Route::get('/ph',[KompetensiController::class,'ph'])->name('ph');
-Route::get('/ulp',[KompetensiController::class,'ulp'])->name('ulp');
 
 Route::get('/kompetensiadmin',[KompetensiController::class, 'kompetensiadmin'])->name('kompetensiadmin');
 Route::get('/tambahkompetensi',[KompetensiController::class, 'tambahkompetensi'])->name('tambahkompetensi');
@@ -229,8 +226,9 @@ Route::get('/deletekurikulum/{id}',[KurikulumController::class, 'delete'])->name
 
 
 //kesiswaan
-Route::get('/kesiswaan',[KesiswaanController::class,'kesiswaan'])->name('kesiswaan');
 Route::get('/ekstra',[KesiswaanController::class,'ekstra'])->name('ekstra');
+Route::get('/osis',[KesiswaanController::class,'osis'])->name('osis');
+Route::get('/alumni',[KesiswaanController::class,'alumni'])->name('alumni');
 
 
 
@@ -244,10 +242,6 @@ Route::get('/upj',[UpjController::class,'upj'])->name('upj');
 Route::get('/ppdb', [PpdbController::class, 'ppdb'])->name('ppdb');
 
 
-//detail blog
-
-Route::get('/detailmuhi',[DetailController::class,'detailmuhi'])->name('detailmuhi');
-Route::get('/detailmuhi2',[DetailController::class,'detailmuhi2'])->name('detailmuhi2');
 
 
 

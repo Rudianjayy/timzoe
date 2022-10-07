@@ -15,7 +15,7 @@ class FasilitasController extends Controller
         $kh = Jurusan::all();
 
         return view('fasilitassekolah.fasilitassekolah', compact('q','f','kh'));
-        
+
     }
     public function fasilitasadmin(){
         $data = fasilitassekolah::all();

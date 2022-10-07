@@ -26,6 +26,7 @@
     <link rel="apple-touch-icon-precomposed" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
 
 
+
     {{-- css juga kuambil dri ppdb landing --}}
     <!-- <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/animate.css') }}">
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap.min.css') }}">
@@ -55,49 +56,6 @@
                 alt="Image" style="width:570 !important;"></div>
     </div>
 
-    {{-- <div id="wrapper">
-        <div id="page" class="clearfix">
-            {{--  <div class="topbar">
-                <div class="container">
-                    <div class="topbar-inner flex">
-                        <div class="menu-options flex">
-                            <div class="ethereum">
-                                <div id="ethereum" class="dropdown">
-                                    <a href="#" class="btn-selector nolink">Ethereum</a>
-                                    <ul>
-                                        <li><span>Ethereum</span></li>
-                                        <li><span>Bitski</span></li>
-                                        <li><span>Fortmatic</span></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="english">
-                                <div id="english" class="dropdown">
-                                    <a href="#" class="btn-selector nolink">English</a>
-                                    <ul>
-                                        <li><span>English</span></li>
-                                        <li><span>USA</span></li>
-                                        <li><span>France</span></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="topbar-right flex">
-                            <span>New Product Coming Soon</span>
-                            <div class="countdown">
-                                <span class="js-countdown" data-timer="516400" data-labels=" :  ,  : , : , "></span>
-                            </div>
-                            <ul class="socical-icon flex">
-                                <li><a href="#" class="active"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div> --}}
 
     @include('koneksi.navbar')
 
@@ -308,8 +266,10 @@
                                 </div>
                             @endforeach
                         </div>
-                        <div class="swiper-button-next btn-slide-next "></div>
+                        <!-- <div class="col-md-12">
+                        <div class="swiper-button-next btn-slide-next"></div>
                         <div class="swiper-button-prev btn-slide-prev"></div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -599,20 +559,17 @@
                 </div>
 
                 <div class="col-md-12">
-
                     <div class="swiper-container trendy">
 
                         <div class="swiper-wrapper">
                             @foreach ($data as $row)
                                 <div class="swiper-slide wow fadeInUp">
-
                                     <div class="swiper-slide wow fadeInUp">
-
                                         <div class="slider-item">
                                             <div class="sc-product-item style-2">
                                                 <div class="product-img">
                                                     <img src="{{ asset('fotomahasiswa/' . $row->foto) }}"
-                                                        alt="" style="width: 400px; height:200px;">
+                                                        alt="" style="width: 366px; height:183px;">
                                                 </div>
                                                 <div class="card-content">
                                                     <div class="item author">
@@ -624,24 +581,25 @@
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
+                                </div>
                             @endforeach
                         </div>
-                        <div class="swiper-button-next btn-slide-next "></div>
-                        <div class="swiper-button-prev btn-slide-prev"></div>
                     </div>
-
+                    <div class="col-md-12">
+                        {!! $data->links() !!}
+                    </div>
                 </div>
-
             </div>
     </section>
-    <section>
-        <div class="container-fluid">
-            <div class="row">
-                <iframe class="map-contact"
-                    src="https://maps.google.com/maps?q=smk%20muhammadiyah%201%20genteng&#038;t=m&#038;z=10&#038;output=embed&#038;iwloc=near"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <iframe class="map-contact"
+                src="https://maps.google.com/maps?q=smk%20muhammadiyah%201%20genteng&#038;t=m&#038;z=10&#038;output=embed&#038;iwloc=near"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
+    </div>
     </section>
 
 

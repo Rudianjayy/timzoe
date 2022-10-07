@@ -139,7 +139,8 @@ class ProfilSekolahController extends Controller
     public function visimisi(){
         $v = visimisi::all();
         $f = Muhinews::all();
-        return view('visimisi.visimisi',compact('v','f'));
+        $kh = Jurusan::all();
+        return view('visimisi.visimisi',compact('v','f','kh'));
     }
     public function visimisiadmin(){
         $data = visimisi::all();

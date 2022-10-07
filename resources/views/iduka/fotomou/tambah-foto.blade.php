@@ -6,7 +6,7 @@
 </head>
 
 <body>
-  <h1 class="text-center mb-4">Tambah Muhi News</h1>
+  <h1 class="text-center mb-4">Tambah Mou</h1>
 
   <div class="container" mb-5>
 

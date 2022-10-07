@@ -24,11 +24,11 @@
                 <div class="card">
                     <div class="card-body">
 
-                        <div>
+                        {{-- <div>
                             <a href="/tambahvisimisi" class="btn btn-primary mt-5"
                                 id="kt_account_profile_details_submit">Tambah
                                 +</a>
-                        </div>
+                        </div> --}}
                         <table id="datatable" class="table table-bordered dt-responsive nowrap"
                             style="border-collapse: collapse; border-spacing: 0; width: 100%;">
 

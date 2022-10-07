@@ -88,7 +88,7 @@ class SliderController extends Controller
     public function fotosliderproses(Request $request){
         // dd($request->all());
         $this->validate($request,[
-            'foto_slider' =>'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
+            'foto_slider' =>'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:5000',
         ],[
             'foto_slider.required' =>'Harus diisi',
             'foto_slider.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
@@ -113,7 +113,7 @@ class SliderController extends Controller
 
     public function prosesfotoslider(Request $request, $id){
         $this->validate($request,[
-            'foto' =>'mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
+            'foto' =>'mimes:jpg,jpeg,bmp,gif,png,webp|max:5000',
         ],[
             'foto.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
 

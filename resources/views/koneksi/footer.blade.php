@@ -18,7 +18,7 @@
                         5. Pemasaran 6. Perhotelan"</p>
                     <div class="widget-social">
                         <ul>
-                            <li><a href="https://www.facebook.com/smkmuhigenteng" class="active"><i
+                            <li><a href="https://www.facebook.com/smkmuhigenteng"><i
                                         class="fab fa-facebook-f"></i></a>
                             </li>
                             {{--  <li><a href="#"><i class="fab fa-gmail"></i></a></li>  --}}
@@ -66,8 +66,8 @@
                     </ul>
                 </div>
             </div>
-            
-            
+
+
         </div>
     </div>
 </footer>

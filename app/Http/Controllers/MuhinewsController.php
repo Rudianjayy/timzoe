@@ -13,7 +13,7 @@ class MuhinewsController extends Controller
         $f = Muhinews::paginate(3);
         $kh = Jurusan::all();
         return view('muhinews.muhinews',compact('k','f','kh'));
-        
+
     }
     public function indexadmin() {
         $data = Muhinews::all();
@@ -70,6 +70,7 @@ class MuhinewsController extends Controller
         ]);
         $data = Muhinews::find($id);
         $data->update([
+            'judul' =>$request->judul,
             'deskripsi_muhinews' =>$request->deskripsi_muhinews,
         ]);
         if($request->hasFile('foto')){

@@ -69,7 +69,7 @@
                     <div class="breadcrumbs">
                         <ul>
                             <li><a href="index.html">Beranda</a></li>
-                            <li>Profil Sekolah</li>
+                            <li>IPM/OSIS</li>
                         </ul>
                     </div>
                 </div>
@@ -94,38 +94,6 @@
                 </div>
             </div>
         </div>
-        @foreach ($q as $q)
-            <div class="container">
-                <div class="row">
-                    <div class="content-item">
-
-                        <center>
-                            <h3> {{ $q->judul }}</h3>
-                        </center>
-                        {{-- <center><img src="{{ asset('landing/html/bidzend/assets/images/logo/muhi.jpg') }}" alt="" style="width: 200px; height:200px; margin-bottom:20px; "></center> --}}
-                        <p class="desc mb-4">{{ $q->deskripsi }}</p>
-                        <center> <img class="zoom" src="{{ asset('fotomahasiswa/' . $q->foto) }}" alt=""
-                                style="width: 150px; height:130px; margin-bottom:20px; "></center>
-
-
-                        <br>
-                        <p class="desc">{{ $q->deskripsi_lanjutan }}</p>
-                        <br>
-                        <br>
-                        <center> <img class="zoom" src="{{ asset('fotomahasiswa/' . $q->foto_simuhi) }}"
-                                alt="" style="width: 150px; height:130px; margin-bottom:20px; "></center>
-                        <p class="desc">{{ $q->deskripsi_simuhi }}</p>
-
-
-
-                    </div>
-                </div>
-            </div>
-        @endforeach
-        </div>
-        </div>
-        </div>
-
     </section>
 
     @include('koneksi.footer')

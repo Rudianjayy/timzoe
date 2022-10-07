@@ -186,7 +186,7 @@
                 </div>
                 <div class="img-right">
 
-                    <img src="{{ asset('landing/html/bidzend/assets/images/avatar/kepsek.jpeg') }}" alt="" width="450px">
+                    <img src="{{ asset('landing/html/bidzend/assets/images/product-item/kepalasekolah.jpeg') }}" alt="" width="450px">
                 </div>
             </div>
         </div>

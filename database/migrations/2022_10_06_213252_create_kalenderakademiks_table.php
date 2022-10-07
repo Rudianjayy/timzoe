@@ -13,11 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('alumnis', function (Blueprint $table) {
+        Schema::create('kalenderakademiks', function (Blueprint $table) {
             $table->id();
-            $table->string('judul_alumni');
             $table->string('foto');
-            $table->string('deskripsi_alumni');
             $table->timestamps();
         });
     }
@@ -29,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('alumnis');
+        Schema::dropIfExists('kalenderakademiks');
     }
 };

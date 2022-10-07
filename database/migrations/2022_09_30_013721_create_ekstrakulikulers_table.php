@@ -16,7 +16,8 @@ return new class extends Migration
         Schema::create('ekstrakulikulers', function (Blueprint $table) {
             $table->id();
             $table->string('foto');
-            $table->string('deskripsi_ekstrakulikuler');
+            $table->string('judul_ekstra');
+            $table->text('deskripsi_ekstrakulikuler');
             $table->timestamps();
         });
     }

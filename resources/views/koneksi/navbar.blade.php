@@ -60,12 +60,18 @@
                             </li>
 
                             <li class="menu-item menu-item-has-children">
-                                <a href="/kesiswaan"> Kesiswaan</a>
+                                <a href="#"> Kesiswaan</a>
                                 <ul class="sub-menu">
                                     <li class="menu-item"><a href="/ekstra">Ekstra Kulikuler</a></li>
-                                    <li class="menu-item"><a href="explore-2.html">Mikrotik Akademi</a></li>
-                                    <li class="menu-item"><a href="creator.html">IPM/OSIS</a></li>
-                                    <li class="menu-item"><a href="creator.html">Alumni</a></li>
+                                    <li class="menu-item"><a href="#"> Akademi</a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item"><a href="#">Hummasoft Akademi</a></li>
+                                            <li class="menu-item"><a href="#">Mikrotik Akademi</a></li>
+                                           
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item"><a href="/osis">IPM/OSIS</a></li>
+                                    <li class="menu-item"><a href="/alumni">Alumni</a></li>
                             </li>
                             </ul>
                             </li>

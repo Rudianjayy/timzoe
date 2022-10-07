@@ -298,39 +298,3 @@
 
 
 
-<div class="container">
-        <div class="row">
-            <table>
-                <thead>
-                <tr class="row-1 odd" role="row"><th class="column-1 sorting_disabled" rowspan="1" colspan="1" style="width: 212.516px;">NAMA SEKOLAH</th><th class="column-2 sorting_disabled" rowspan="1" colspan="1" style="width: 19.75px;">:</th><th class="column-3 sorting_disabled" rowspan="1" colspan="1" style="width: 422.391px;">SMK Muhammadiyah 1 Genteng</th></tr>
-                </thead>
-                <tbody class="row-hover">
-                <tr class="row-2 even" role="row">
-                    <td class="column-1">NPSN</td><td class="column-2">:</td><td class="column-3">20525597</td>
-                </tr><tr class="row-3 odd" role="row">
-                    <td class="column-1">ALAMAT</td><td class="column-2">:</td><td class="column-3">KH. AHMAD DAHLAN NO 10</td>
-                </tr><tr class="row-4 even" role="row">
-                    <td class="column-1">KECAMATAN</td><td class="column-2">:</td><td class="column-3">GENTENG</td>
-                </tr><tr class="row-5 odd" role="row">
-                    <td class="column-1">KABUPATEN</td><td class="column-2">:</td><td class="column-3">BANYUWANGI</td>
-                </tr><tr class="row-6 even" role="row">
-                    <td class="column-1">PROVINSI</td><td class="column-2">:</td><td class="column-3">JAWA TIMUR</td>
-                </tr><tr class="row-7 odd" role="row">
-                    <td class="column-1">KODE POS</td><td class="column-2">:</td><td class="column-3">68465</td>
-                </tr><tr class="row-8 even" role="row">
-                    <td class="column-1">TELEPON</td><td class="column-2">:</td><td class="column-3">(0333) 845605</td>
-                </tr><tr class="row-9 odd" role="row">
-                    <td class="column-1">FAX</td><td class="column-2">:</td><td class="column-3">(0333) 847370</td>
-                </tr><tr class="row-10 even" role="row">
-                    <td class="column-1">EMAIL</td><td class="column-2">:</td><td class="column-3">smkmuhi.genteng1968@gmail.com</td>
-                </tr><tr class="row-11 odd" role="row">
-                    <td class="column-1">FACEBOOK</td><td class="column-2">:</td><td class="column-3">smkmuhigenteng</td>
-                </tr><tr class="row-12 even" role="row">
-                    <td class="column-1">INSTAGRAM</td><td class="column-2">:</td><td class="column-3">muhi.ig</td>
-                </tr><tr class="row-13 odd" role="row">
-                    <td class="column-1">YOUTUBE</td><td class="column-2">:</td><td class="column-3">MUHI.TV</td>
-                </tr></tbody>
-                </table>
-        </div>
-    </div>
-

@@ -32,7 +32,7 @@
                     <div class="card-body">
 
                         <div>
-                            <a href="/tambahosis" class="btn btn-primary mt-5"
+                            <a href="/tambahalumni" class="btn btn-primary mt-5"
                                 id="kt_account_profile_details_submit">Tambah
                                 +</a>
                         </div>
@@ -42,6 +42,7 @@
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
+                                    <th scope="col">Judul Alumni</th>
                                     <th scope="col">Foto</th>
                                     <th scope="col">Deskripsi</th>
                                     <th scope="col">Aksi</th>
@@ -56,17 +57,18 @@
                                 @foreach ($data as $d)
                                     <tr>
                                         <th>{{ $no++ }}</th>
+                                        <td>{{ $d->judul_alumni }}</td>
                                         <td>
                                             <img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt=""
                                                 style="width: 50px;">
                                         </td>
-                                        <td>{{ $d->deskripsi_osis }}</td>
+                                        <td>{{ $d->deskripsi_alumni }}</td>
 
-                                        {{--  <td>{{ $d->created_at->format('D M Y') }}</td>  --}}
+                                        {{-- <td>{{ $d->created_at->format('D M Y') }}</td> --}}
                                         <td>
-                                            <a href="/editosis/{{ $d->id }}" class="btn btn-warning">Edit</a>
+                                            <a href="/editalumni/{{ $d->id }}" class="btn btn-warning">Edit</a>
 
-                                            <a href="/deleteosis/{{ $d->id }}" class="btn btn-danger" onclick="return confirm('apakah anda yakin?')">Delete</a>
+                                            <a href="/deletealumni/{{ $d->id }}" class="btn btn-danger" onclick="return confirm('apakah anda yakin?')">Delete</a>
 
 
 

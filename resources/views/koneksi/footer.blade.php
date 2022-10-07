@@ -2,31 +2,31 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-md-6 col-12">
+                @foreach ( $ft as $ft )
                 <div class="widget widget-logo">
                     <div class="logo-footer" id="logo-footer">
                         <a href="#">
-                            <img id="logo_footer" src="{{ asset('landing/html/bidzend/assets/icon/muhilog.png') }}"
-                                alt="nft-gaming" width="110" height="45"
-                                data-retina="{{ asset('landing/html/bidzend/assets/icon/muhilog.png') }}"
-                                data-width="110" data-height="45">
+                            <img id="logo_footer" src="{{ asset('fotomahasiswa/' .$ft->foto) }}"
+                                alt="nft-gaming" width="120" height="100">
                         </a>
                     </div>
-                    <p class="sub-widget-logo">Sed ut perspiciatis unde omnis iste natus error sit
-                        voluptate
-                        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quaes</p>
+                    <p class="sub-widget-logo">{!! $ft->deskripsi_footeer !!}</p>
                     <div class="widget-social">
                         <ul>
-                            <li><a href="https://www.facebook.com/smkmuhigenteng" class="active"><i
+                            <li><a href="https://www.facebook.com/smkmuhigenteng"><i
                                         class="fab fa-facebook-f"></i></a>
                             </li>
                             {{--  <li><a href="#"><i class="fab fa-gmail"></i></a></li>  --}}
                             <li><a href="https://www.instagram.com/muhi.ig/?next=%2F&hl=id"><i
-                                        class="fab fa-linkedin-in"></i></a></li>
+                                        class="fab fa-instagram"></i></a></li>
+                                        <li><a href="#"><i class="fal fa-envelope"></i></a></li>
                             <li><a href="https://www.youtube.com/channel/UCJOjJCbfEcApeNYmDJ4tCCw"><i
                                         class="fab fa-youtube"></i></a></li>
                         </ul>
                     </div>
                 </div>
+
+                @endforeach
             </div>
             <div class="col-lg-2 col-md-6 col-sm-6 col-6">
                 <script src="https://apps.elfsight.com/p/platform.js" defer></script>
@@ -37,11 +37,8 @@
                     <h5 class="title-widget">Admin</h5>
                     <ul>
                         <li><a href="/login">Login Admin </a></li>
-                        <li><a href="contact.html">Help & Support </a></li>
-                        <li><a href="item.html">Live Auctions</a></li>
-                        <li><a href="item-details.html"> Item Details</a></li>
-                        <li><a href="contact.html"> 24/7 Supports</a></li>
-                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="https://sekolah.data.kemdikbud.go.id/index.php/chome/profil/39108646-470a-4aac-bee3-bc8ea91b8973">DAPODIK</a></li>
+                        <li><a href="https://sekolah.data.kemdikbud.go.id/index.php/chome/profil/39108646-470a-4aac-bee3-bc8ea91b8973">UPJ TKJ</a></li>
                     </ul>
                 </div>
             </div>

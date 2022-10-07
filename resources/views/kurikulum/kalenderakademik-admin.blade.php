@@ -32,7 +32,7 @@
                     <div class="card-body">
 
                         <div>
-                            <a href="/tambahalumni" class="btn btn-primary mt-5"
+                            <a href="/tambahkalenderakademik" class="btn btn-primary mt-5"
                                 id="kt_account_profile_details_submit">Tambah
                                 +</a>
                         </div>
@@ -43,7 +43,6 @@
                                 <tr>
                                     <th scope="col">#</th>
                                     <th scope="col">Foto</th>
-                                    <th scope="col">Deskripsi</th>
                                     <th scope="col">Aksi</th>
                                 </tr>
                             </thead>
@@ -60,13 +59,11 @@
                                             <img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt=""
                                                 style="width: 50px;">
                                         </td>
-                                        <td>{{ $d->deskripsi_alumni }}</td>
-
                                         {{-- <td>{{ $d->created_at->format('D M Y') }}</td> --}}
                                         <td>
-                                            <a href="/editalumni/{{ $d->id }}" class="btn btn-warning">Edit</a>
+                                            <a href="/editkalenderakademik/{{ $d->id }}" class="btn btn-warning">Edit</a>
 
-                                            <a href="/deletealumni/{{ $d->id }}" class="btn btn-danger" onclick="return confirm('apakah anda yakin?')">Delete</a>
+                                            <a href="/delete/{{ $d->id }}" class="btn btn-danger" onclick="return confirm('apakah anda yakin?')">Delete</a>
 
 
 

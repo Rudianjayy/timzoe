@@ -21,9 +21,12 @@
 
     <link rel="shortcut icon" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
     <link rel="apple-touch-icon-precomposed" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('landingppdb/ppdb/style/assets/images/favicons/apple-touch-icon.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('landingppdb/ppdb/style/assets/images/favicons/favicon-32x32.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('landingppdb/ppdb/style/assets/images/favicons/favicon-16x16.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="{{ asset('landingppdb/ppdb/style/assets/images/favicons/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="{{ asset('landingppdb/ppdb/style/assets/images/favicons/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="{{ asset('landingppdb/ppdb/style/assets/images/favicons/favicon-16x16.png') }}">
     <link rel="manifest" href="{{ asset('landingppdb/ppdb/style/assets/images/favicons/site.webmanifest') }}">
 
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/animate.css') }}">
@@ -39,7 +42,8 @@
 
     <div class="preload preload-container">
         {{-- <div class="preload-logo"></div>  --}}
-        <div class="preload-logo"><img src="{{ asset('landing/html/bidzend/assets/images/logo/muhi.jpg') }}" alt="Image" style="width:570 !important;"></div>
+        <div class="preload-logo"><img src="{{ asset('landing/html/bidzend/assets/images/logo/muhi.jpg') }}"
+                alt="Image" style="width:570 !important;"></div>
     </div>
 
 
@@ -51,16 +55,21 @@
             <div class="row">
                 <div class="col-md-12">
 
-                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/page-header-shape-1-1.png') }}" class="page-header__bg-shape-1" alt="">
-                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-2-circle-1-1.png') }}" class="page-header__bg-shape-2" alt="">
-                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-1.png') }}" class="page-header__bg-shape-3" alt="">
-                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-3.png') }}" class="page-header__bg-shape-4" alt="">
-                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-2-circle-1-2.png') }}" class="page-header__bg-shape-2" alt="">
+                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/page-header-shape-1-1.png') }}"
+                        class="page-header__bg-shape-1" alt="">
+                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-2-circle-1-1.png') }}"
+                        class="page-header__bg-shape-2" alt="">
+                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-1.png') }}"
+                        class="page-header__bg-shape-3" alt="">
+                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-3.png') }}"
+                        class="page-header__bg-shape-4" alt="">
+                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-2-circle-1-2.png') }}"
+                        class="page-header__bg-shape-2" alt="">
 
                     <div class="breadcrumbs">
                         <ul>
-                            <li><a href="index.html">Beranda</a></li>
-                            <li>Ekstra Kulikuler</li>
+                            <li><a href="/alumni">Kesiswaan</a></li>
+                            <li>Alumni</li>
                         </ul>
                     </div>
                 </div>
@@ -89,21 +98,21 @@
     <div class="tf-section sc-card-blog">
         <div class="container">
             <div class="row">
-                @foreach ($d as $d )
+                @foreach ($l as $l )
                 <div class="col-lg-4 col-md-6">
                     <article class="sc-card-article">
                         <div class="card-media">
-                            <img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt="" style="width: 366px; height:183px;">
+                            <img src="{{ asset('fotomahasiswa/' . $l->foto) }}" alt="" style="width: 366px; height:183px;">
                         </div>
                         <div class="content">
                             <div class="meta-info">
                                 <div class="item author">
-                                    <b><strong>{{$d->judul_ekstra}}</strong></b>
+                                    <b><strong>{{$l->judul_alumni}}</strong></b>
                                 </div>
-                                <div class="item date">{{$d->created_at}}</div>
+                                <div class="item date">{{$l->created_at}}</div>
                             </div>
                             <div class="text-article">
-                                <h3>{!!$d ->deskripsi_ekstrakulikuler!!}</h5>
+                                <h3>{!!$l ->deskripsi_alumni!!}</h5>
                             </div>
                         </div>
                     </article>
@@ -114,13 +123,12 @@
     </div>
     </div>
 
-
-
     @include('koneksi.footer')
 
 
     <a id="scroll-top"></a>
 
+   
 
     <script src="{{ asset('landing/html/bidzend/assets/js/jquery.min.js') }}"></script>
     <script src="{{ asset('landing/html/bidzend/assets/js/jquery.easing.js') }}"></script>

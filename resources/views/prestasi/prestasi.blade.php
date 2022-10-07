@@ -1,7 +1,7 @@
 @extends('layout.main')
 @push('css')
     {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> --}}
-    <title>Data Dosen - Laravel</title>
+    <title>Prestasi - Admin</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css"
         integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -18,14 +18,21 @@
         {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> --}}
 
         {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" /> --}}
-    
+        <div class="col-md-8">
+            <h6 class="page-title">Data tables</h6>
+            <ol class="breadcrumb m-0">
+                <li class="breadcrumb-item"><a href="#">Veltrix</a></li>
+                <li class="breadcrumb-item"><a href="#">Tables</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Data tables</li>
+            </ol>
+        </div>
         <div class="row">
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
 
                         <div>
-                            <a href="/tambahjurusan" class="btn btn-primary mt-5"
+                            <a href="/tambahprestasi" class="btn btn-primary mt-5"
                                 id="kt_account_profile_details_submit">Tambah
                                 +</a>
                         </div>
@@ -36,7 +43,7 @@
                                 <tr>
                                     <th scope="col">#</th>
                                     <th scope="col">Foto</th>
-                                    <th scope="col">Nama</th>
+                                    <th scope="col">Judul</th>
                                     <th scope="col">Deskripsi</th>
                                     <th scope="col">Aksi</th>
                                 </tr>
@@ -47,20 +54,20 @@
                                 @php
                                     $no = 1;
                                 @endphp
-                                @foreach ($data as $row)
+                                @foreach ($data as $d)
                                     <tr>
                                         <th>{{ $no++ }}</th>
                                         <td>
-                                            <img src="{{ asset('fotojurusan/' . $row->foto) }}" alt=""
+                                            <img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt=""
                                                 style="width: 50px;">
-                                        </td>   
-                                        <td>{{ $row->personal ? $row->personal->nama_jurusan : 'Data tidak ada' }}</td>
-                                        <td>{!! $row->deskripsi !!}</td>
-
-                                        {{-- <td>{{ $row->created_at->format('D M Y') }}</td> --}}
+                                        </td> 
+                                        <td>{{ $d->judul_prestasi }}</td>
+                                        <td>{!! $d->deskripsi_prestasi !!}</td>
+                                        
                                         <td>
-                                            <a href="/editjurusan/{{ $row->id }}" class="btn btn-warning fas fa-pen-alt">Edit</a>
-                                            <a href="/deletejurusan/{{ $row->id }}" class="btn btn-danger fas fa-trash-alt" onclick="return confirm('yakin gen?')">Delete</a>
+                                            <a href="/editprestasi/{{ $d->id }}" class="btn btn-warning">Edit</a>
+
+                                            <a href="/deleteprestasi/{{ $d->id }}" class="btn btn-danger" onclick="return confirm('yakin gen?')">Delete</a>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -106,14 +113,21 @@
         <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap4.min.js"></script> --}}
 
         <!-- Required datatable js -->
-        <script src="{{ asset('admin/zoee/layouts/assets/libs/datatables.net/js/jquery.dataTables.min.js') }}"></script>
-        <script src="{{ asset('admin/zoee/layouts/assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
-        <script src="{{ asset('admin/zoee/layouts/assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js') }}">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+        <script src="https://cdn.tiny.cloud/1/z3vshivvjuw47heg0vg12ouq5rr8i7ckkxmmjadvrhgsynq8/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+       
+        <script>
+           tinymce.init({
+               selector:'#mytextarea'
+           });
         </script>
 
-        <script src="{{ asset('admin/zoee/layouts/assets/js/pages/datatables.init.js') }}"></script>
 
-        <script src="{{ asset('admin/zoee/layouts/assets/js/app.js') }}"></script>
+
+
+
 
         <script>
             $(document).ready(function() {
@@ -122,37 +136,8 @@
         </script>
 
         </body>
-        {{--  <script>
-            $('.delete').click(function() {
-                var zoe = $(this).attr('data-id');
-                var nama = $(this).attr('data-nama');
-
-
-                swal({
-                        title: "Apa kamu yakin ingin menghapus data ini?",
-                        text: "Kamu akan menghapus data matkul dengan nama matkul " + nama + "! ",
-                        icon: "warning",
-                        buttons: true,
-                        dangerMode: true,
-                    })
-                    .then((willDelete) => {
-                        if (willDelete) {
-                            window.location = "/deletealbum/" + zoe + ""
-                            swal("Data berhasil dihapus!", {
-                                icon: "success",
-                            });
-                        } else {
-                            swal("Data tidak jadi dihapus!");
-                        }
-                    });
-            });
-        </script>  --}}
         @include('sweetalert::alert')
-        {{--  <script>
-            @if (Session::has('success'))
-                toastr.success("{{ Session::get('success') }}")
-            @endif
-        </script>  --}}
+
         @include('layout.script')
     </body>
 

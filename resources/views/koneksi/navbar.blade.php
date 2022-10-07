@@ -41,9 +41,12 @@
                                 <ul class="sub-menu">
                                     <li class="menu-item menu-item-has-children">
                                         <a href="/kompetensi"> Kompetensi Keahlian</a>
+                                        @php
+                                            $personal = \App\Models\Personaljurusan::all();
+                                        @endphp
                                         <ul class="sub-menu">
-                                            @foreach ($kh as $k )
-                                            <li class="menu-item"><a href="/indexjurusan/{{ $k->id }}">{{ $k->personal->nama_jurusan }}</a></li>
+                                            @foreach ($personal as $p )
+                                            <li class="menu-item"><a href="/indexjurusan/{{ $p->id }}">{{ $p->nama_jurusan }}</a></li>
                                             @endforeach
                                         </ul>
                                     </li>

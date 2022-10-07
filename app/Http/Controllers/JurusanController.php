@@ -59,28 +59,26 @@ class JurusanController extends Controller
         return redirect()->route('datajurusan')->with('toast_success', 'Data Berhasil Di Tambahkan!');
     }
 
-    public function editalbum($id){
+    public function editjurusan($id){
 
-        $data = Album::findOrFail($id);
-        return view('album.edit-album', compact('data'));
+        $data = Jurusan::findOrFail($id);
+        $personal = Personaljurusan::all();
+        return view('kurikulum.kompetensi.edit-jurusan', compact('data','personal'));
     }
 
-    public function editproses(Request $request, $id){
+    public function submitedit3(Request $request, $id){
         // dd('aaa');
         $this->validate($request,[
-            // 'foto' =>'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
-            // 'judul_album' =>'required',
+            'personaljurusans_id' =>'required',
             'deskripsi' =>'required',
         ],[
-            // 'foto.required' =>'Harus diisi',
-            // 'foto.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
-            // 'judul_album.required' =>'Harus diisi',
+            'personaljurusans_id.required' =>'Harus diisi',
             'deskripsi.required' =>'Harus diisi',
 
         ]);
-        $data = Album::find($id);
+        $data = Jurusan::find($id);
         $data->update([
-            // 'judul_album' =>$request->judul_album,
+            'personaljurusans_id' =>$request->personaljurusans_id,
             'deskripsi' =>$request->deskripsi,
         ]);
         if($request->hasFile('foto')){
@@ -89,7 +87,7 @@ class JurusanController extends Controller
             $data->save();
         }
 
-        return redirect('data-album')->with('toast_success',' Data Berhasil di Ubah!');
+        return redirect('datajurusan')->with('toast_success',' Data Berhasil di Ubah!');
 
     }
 

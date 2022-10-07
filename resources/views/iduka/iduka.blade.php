@@ -120,7 +120,6 @@
         </div>
     </section>
     <br>
-    <br><br>
     <section class="history-one">
         <div class="container">
             @foreach ($i as $i)
@@ -129,7 +128,7 @@
                 </div><!-- /.block-title text-center -->
                 <div class="block-title text-center">
                     <h4>
-                        <p>{{ $i->deskripsi_iduka }}</p>
+                        <p>{!! $i->deskripsi_iduka !!}</p>
                     </h4>
                 </div>
             @endforeach

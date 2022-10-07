@@ -12,6 +12,7 @@ use App\Http\Controllers\SliderController;
 use App\Http\Controllers\JurusanController;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\MuhinewsController;
+use App\Http\Controllers\PrestasiController;
 use App\Http\Controllers\SambutanController;
 use App\Http\Controllers\FasilitasController;
 use App\Http\Controllers\FotoidukaController;
@@ -75,8 +76,8 @@ Route::get('/datajurusan',[JurusanController::class, 'loby3'])->name('datajurusa
 Route::get('/indexjurusan/{id}',[JurusanController::class, 'indexjurusan'])->name('indexjurusan');
 Route::get('/tambahjurusan',[JurusanController::class, 'tambahjurusan'])->name('tambahjurusan');
 Route::post('/submitdata3',[JurusanController::class, 'submitdata3'])->name('submitdata3');
-// Route::get('/editsambutan/{id}',[JurusanController::class, 'editsambutan'])->name('editsambutan');
-// Route::post('/submitedit2/{id}',[JurusanController::class, 'submitedit2'])->name('submitedit2');
+Route::get('/editjurusan/{id}',[JurusanController::class, 'editjurusan'])->name('editjurusan');
+Route::post('/submitedit3/{id}',[JurusanController::class, 'submitedit3'])->name('submitedit3');
 Route::get('/deletejurusan/{id}',[JurusanController::class, 'delete'])->name('delete');
 
 
@@ -86,6 +87,17 @@ Route::get('/indexfotojurusan/{id}',[PersonaljurusanController::class, 'indexfot
 Route::get('/tambahfotojurusan',[PersonaljurusanController::class, 'tambahfotojurusan'])->name('tambahfotojurusan');
 Route::post('/submitdata4',[PersonaljurusanController::class, 'submitdata4'])->name('submitdata4');
 Route::get('/deletefotojurusan/{id}',[PersonaljurusanController::class, 'delete'])->name('delete');
+
+
+Route::get('/indexprestasi',[PrestasiController::class, 'indexprestasi'])->name('indexprestasi');
+Route::get('/tambahprestasi',[PrestasiController::class, 'tambahprestasi'])->name('tambahprestasi');
+Route::post('/submitdata5',[PrestasiController::class, 'submitdata5'])->name('submitdata5');
+Route::get('/editprestasi/{id}',[PrestasiController::class, 'editprestasi'])->name('editprestasi');
+Route::post('/submitedit5/{id}',[PrestasiController::class, 'submitedit5'])->name('submitedit5');
+Route::get('/deleteprestasi/{id}',[PrestasiController::class, 'delete'])->name('delete');
+
+
+
 
 
 
@@ -192,6 +204,7 @@ Route::post('/fotokompetensiproses',[FotokompetensiController::class, 'fotokompe
 Route::get('/editfotokompetensi/{id}',[FotokompetensiController::class, 'editfotokompetensi'])->name('editfotokompetensi');
 Route::post('/editprosesfotokompetensi/{id}',[FotokompetensiController::class, 'editprosesfotokompetensi'])->name('editprosesfotokompetensi');
 Route::get('/deletefotokompetensi/{id}',[FotokompetensiController::class, 'delete'])->name('delete');
+
 
 
 

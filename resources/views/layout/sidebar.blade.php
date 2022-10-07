@@ -40,7 +40,7 @@
             </a>
             <ul class="sub-menu" aria-expanded="false">
                 <li><a href="/kompetensiadmin">Kompetensi Keahlian</a></li>
-                <li><a href="/fotokompetensiadmin">Foto Kompetensi</a></li>
+                {{-- <li><a href="/fotokompetensiadmin">Foto Kompetensi</a></li> --}}
                 <li><a href="/jadwaladmin">Jadwal Kegiatan</a></li>
                 <li><a href="/kalenderadmin">Kalender Akademik</a></li>
                 <li><a href="/kelulusanadmin">Kelulusan</a></li>
@@ -79,6 +79,20 @@
         </li>
 
         <li>
+            <a href="/indexprestasi" class="waves-effect">
+                <i class="mdi mdi-account-details-outline"></i> <span class="badge rounded-pill bg-primary float-end"></span>
+                <span>Prestasi</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="/sambutanadmin" class="waves-effect">
+                <i class="mdi mdi-account-details-outline"></i> <span class="badge rounded-pill bg-primary float-end"></span>
+                <span>Sambutan Kepsek</span>
+            </a>
+        </li>
+        
+        <li>
             <a href="javascript: void(0);" class="has-arrow waves-effect">
                 <i class="ti-package"></i>
                 <span>Slider</span>
@@ -89,12 +103,7 @@
             </ul>
         </li>
 
-        <li>
-            <a href="/sambutanadmin" class="waves-effect">
-                <i class="mdi mdi-account-details-outline"></i> <span class="badge rounded-pill bg-primary float-end"></span>
-                <span>Sambutan Kepsek</span>
-            </a>
-        </li>
+        
 
         <li>
             <a href="javascript: void(0);" class="has-arrow waves-effect">
@@ -106,6 +115,8 @@
                 <li><a href="/adminfotojurusan">Masing jurusan</a></li>
             </ul>
         </li>
+
+        
 
         @endif
         

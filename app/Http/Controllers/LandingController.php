@@ -6,6 +6,7 @@ use App\Models\Album;
 use App\Models\Slider;
 use App\Models\Jurusan;
 use App\Models\Muhinews;
+use App\Models\Prestasi;
 use App\Models\Sambutan;
 use App\Models\Fotoslider;
 use Illuminate\Http\Request;
@@ -23,6 +24,7 @@ class LandingController extends Controller
         $js = Jurusan::all();
         $personal = Personaljurusan::all();
         $kh = Jurusan::all();
-        return view('landingpage.landing', compact('data','d','f','ss','fs','sa','js','personal','kh'));
+        $ps = Prestasi::all();
+        return view('landingpage.landing', compact('data','d','f','ss','fs','sa','js','personal','kh','ps'));
     }
 }

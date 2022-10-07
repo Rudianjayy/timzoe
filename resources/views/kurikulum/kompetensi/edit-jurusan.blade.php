@@ -6,7 +6,7 @@
 </head>
 
     <body>
-        <h1 class="text-center mb-4">Edit Foto Kompetensi</h1>
+        <h1 class="text-center mb-4">Edit Jurusan</h1>
 
         <div class="container">
 
@@ -14,17 +14,40 @@
                 <div class="col-8">
                     <div class="card">
                         <div class="card-body">
-                            <form action="/editproseskompetensi/{{ $data->id }}" method="POST" enctype="multipart/form-data">
+                            <form action="/submitedit3/{{ $data->id }}" method="POST" enctype="multipart/form-data">
                                 @csrf
 
-                                <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Judul :</label>
-                                    <textarea class="form-control form-control-solid" rows="6x" name="judul_kompetensi">{{ $data->judul_kompetensi }}</textarea>
 
-                                    @error('judul_kompetensi')
+
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Ubah Foto :</label>
+                                    <img class="img mb-3" src="{{ asset('fotojurusan/' . $data->foto) }}" alt=""
+                                        style="width: 70px">
+                                    <input type="file" name="foto" class="form-control" id="foto"
+                                        aria-describedby="emailHelp" value="{{ $data->foto }}">
+                                    @error('foto')
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
+
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Jurusan :</label>
+                                    <select name="personaljurusans_id" class="form-control" id="matkul">
+                                        <option value="" <?php if ($data->personaljurusans_id == '') {
+                                            echo 'selected';
+                                        } ?>></option>
+                                        @foreach ($personal as $p)
+                                            <option value="{{ $p->id }}"
+                                                <?php if ($data->personaljurusans_id == $p->id) {
+                                                    echo 'selected';
+                                                } ?>>{{ $p->nama_jurusan }}</option>
+                                        @endforeach
+                                        @error('personaljurusans_id')
+                                            <div class="alert alert-danger">{{ $message }}</div>
+                                        @enderror
+                                    </select>
+                                </div>
+
                                 <section style="padding-top:60px;">
                                     <div class="container">
                                         <div class="row">
@@ -35,7 +58,7 @@
                                                     </div>
                                                     <div class="card-body">
                                                         {{--  <form method="POST" enctype="multipart/form-data">  --}}
-                                                            <textarea name="deskripsi_kompetensi" id="mytextarea">{{ $data->deskripsi_kompetensi }}</textarea>
+                                                            <textarea name="deskripsi" id="mytextarea">{{ $data->deskripsi }}</textarea>
                                                     </div>
                                                 </div>
                                             </div>

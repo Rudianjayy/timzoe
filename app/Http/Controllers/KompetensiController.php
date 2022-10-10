@@ -17,7 +17,8 @@ class KompetensiController extends Controller
         $f = Muhinews::paginate(4 );
         $kh = Jurusan::all();
         $pj = Personaljurusan::all();
-        return view('kurikulum.kompetensi', compact('kompetensi','foto','f','kh','pj'));
+        $kp = Kompetensi::all();
+        return view('kurikulum.kompetensi', compact('kompetensi','foto','f','kh','pj','kp'));
     }
     public function tkj(){
         $f = Muhinews::all();

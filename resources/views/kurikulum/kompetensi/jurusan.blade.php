@@ -79,7 +79,7 @@
             </section>
 
 
-            <section class="hot-collections-page tf-section">
+            {{-- <section class="hot-collections-page tf-section">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
@@ -95,7 +95,7 @@
                         <div class="col-md-12">
                             <div class="swiper-container popular-coll">
                                 <div class="swiper-wrapper">
-                                    @foreach($foto as $ft)
+                                    @foreach ($foto as $ft)
                                         <div class="swiper-slide">
                                             <div class="slider-item">
                                                 <div class="sc-author-card">
@@ -115,7 +115,95 @@
                         </div>
                     </div>
                 </div>
+            </section> --}}
+
+            <section class="blog-standard blog-details">
+                <img src="assets/images/shapes/bg-shape-1-1.png" class="section__bg-shape-1" alt="">
+                <img src="assets/images/shapes/bg-shape-1-2.png" class="section__bg-shape-2" alt="">
+                <img src="assets/images/shapes/bg-shape-1-3.png" class="section__bg-shape-3" alt="">
+
+
+                <div class="section__bubble-1"></div><!-- /.section__bubble-1 -->
+                <div class="section__bubble-2"></div><!-- /.section__bubble-2 -->
+                <div class="section__bubble-3"></div><!-- /.section__bubble-3 -->
+                <div class="section__bubble-4"></div><!-- /.section__bubble-4 -->
+                <div class="section__bubble-5"></div><!-- /.section__bubble-5 -->
+                <div class="section__bubble-6"></div><!-- /.section__bubble-6 -->
+                <div class="section__bubble-7"></div><!-- /.section__bubble-7 -->
+                <div class="section__bubble-8"></div><!-- /.section__bubble-8 -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="blog-details__main">
+                                <div class="blog-two__meta">
+                                    {{-- <a href="blog-details.html">Sara dodly</a>
+                                    <span>-</span> --}}
+                                    <a href="blog-details.html">{{ $data->created_at }}</a>
+                                </div><!-- /.blog-two__meta -->
+                                <h3>{{ $data->personal->nama_jurusan }}</h3>
+                                {{-- <img src="{{ asset('landingppdb/ppdb/style/assets/images/blog/blog-2-1.jpg') }}"
+                                    class="img-fluid" alt=""> --}}
+                                <p>{!! $data->deskripsi!!}</p>
+
+                                
+                                {{-- <blockquote>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+                                </blockquote>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt
+                                    ut labore et commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                    velit esse cillum dolore eu fugiat nulla pariatur.</p> --}}
+                            </div><!-- /.blog-details__main -->
+
+                            <div class="blog-details__meta">
+                                <div class="blog-details__tags">
+                                    <span>Tags</span>
+                                    {{-- <a href="#">Marketing</a>
+                                    <a href="#">Business</a>
+                                    <a href="#">App Design</a> --}}
+                                </div><!-- /.blog-details__tags -->
+                                <div class="blog-details__social">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                                </div><!-- /.blog-details__social -->
+                            </div><!-- /.blog-details__meta -->
+                        </div><!-- /.col-lg-8 -->
+                        <div class="col-lg-4">
+                            <div class="sidebar sidebar__right">
+                                {{-- <div class="sidebar__single sidebar__search">
+                                    <form action="#" class="sidebar__search-form">
+                                        <input type="text" placeholder="Search">
+                                        <button type="submit" class="sidebar__search-btn"><i
+                                                class="fa fa-search"></i></button><!-- /.sidebar__search-btn -->
+                                    </form><!-- /.sidebar__search-form -->
+                                </div><!-- /.sidebar__single --> --}}
+                                <div class="sidebar__single sidebar__category">
+                                    <h3 class="sidebar__title">Foto</h3>
+                                    <ul class="list-unstyled sidebar__category-list">
+                                        @foreach ($foto as $ft )
+                                        <li>
+                                            <div class="sc-author-card">
+                                                <div class="card-media">
+                                                    <img width="500" height="500"
+                                                        src="{{ asset('fotojurusan/'.$ft->foto) }}"
+                                                        alt="">
+                                                </div>
+                                            </div>
+                                        </li>
+                                        
+                                    @endforeach
+                                    </ul><!-- /.list-unstyled sidebar__category-list -->
+                                </div><!-- /.sidebar__single -->
+
+                            </div><!-- /.sidebar -->
+                        </div><!-- /.col-lg-4 -->
+                    </div><!-- /.row -->
+                </div><!-- /.container -->
             </section>
+
+
             @include('koneksi.footer')
         </div>
 

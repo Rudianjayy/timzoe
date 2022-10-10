@@ -19,8 +19,8 @@
 
     <link rel="stylesheet" type="text/css" href="{{ asset('landing/html/bidzend/assets/css/responsive.css') }}">
 
-    <link rel="shortcut icon" href="{{ asset('landing/html/bidzend/assets/icon/muhi.jpg') }}">
-    <link rel="apple-touch-icon-precomposed" href="{{ asset('landing/html/bidzend/assets/icon/muhi.jpg') }}">
+    <link rel="shortcut icon" href="{{ asset('landing/html/bidzend/assets/icon/muhilog.png') }}">
+    <link rel="apple-touch-icon-precomposed" href="{{ asset('landing/html/bidzend/assets/icon/muhilog.png') }}">
 
     {{-- css juga kuambil dri ppdb landing --}}
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/animate.css') }}">
@@ -120,7 +120,6 @@
         </div>
     </section>
     <br>
-    <br><br>
     <section class="history-one">
         <div class="container">
             @foreach ($i as $i)
@@ -129,7 +128,7 @@
                 </div><!-- /.block-title text-center -->
                 <div class="block-title text-center">
                     <h4>
-                        <p>{{ $i->deskripsi_iduka }}</p>
+                        <p>{!! $i->deskripsi_iduka !!}</p>
                     </h4>
                 </div>
             @endforeach

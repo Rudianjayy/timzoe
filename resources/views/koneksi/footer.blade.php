@@ -37,16 +37,19 @@
             <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                 <div class="widget widget-post">
                     <h5 class="title-widget">Berita </h5>
+                    @php
+                        $muhiberita = \App\Models\Muhinews::all();
+                    @endphp
                     <ul class="post-new">
-                        @foreach ($f as $f)
+                        @foreach ($muhiberita as $mb)
                             <li>
                                 <div class="post-img">
-                                    <img src="{{ asset('fotomahasiswa/' . $f->foto) }}" alt="Post New">
+                                    <img src="{{ asset('fotomahasiswa/' . $mb->foto) }}" alt="Post New">
                                 </div>
                                 <div class="post-content">
-                                    <h6 class="title"><a href="/muhinews">{{ $f->deskripsi_muhinews }}</a></h6>
+                                    <h6 class="title"><a href="/muhinews">{{ $mb->deskripsi_muhinews }}</a></h6>
                                     <a href="/muhinews" class="post-date"><i
-                                            class="far fa-calendar-week"></i>{{ $f->created_at }}</a>
+                                            class="far fa-calendar-week"></i>{{ $mb->created_at }}</a>
                                 </div>
                             </li>
                         @endforeach

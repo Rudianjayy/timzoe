@@ -57,7 +57,7 @@
                                     <tr>
                                         <th>{{ $no++ }}</th>
                                         <td>{{ $d->judul_kompetensi }}</td>
-                                        <td>{{ $d->deskripsi_kompetensi }}</td>
+                                        <td>{!! $d->deskripsi_kompetensi !!}</td>
 
                                         <td>
                                             <a href="/editkompetensi/{{ $d->id }}" class="btn btn-warning">Edit</a>

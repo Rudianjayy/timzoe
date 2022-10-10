@@ -9,7 +9,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Details || Inovex || Marketing Agency HTML5 Template</title>
+    <title>Muhinews Detail</title>
     <!-- favicons -->
     <link rel="stylesheet" type="text/css" href="{{ asset('landing/html/bidzend/assets/css/style.css') }}">
 
@@ -34,38 +34,37 @@
 
 <body>
 
-<div class="preload preload-container">
+    <div class="preload preload-container">
         {{-- <div class="preload-logo"></div>  --}}
-        <div class="preload-logo"><img src="{{ asset('landing/html/bidzend/assets/images/logo/muhi.jpg') }}"
-                alt="Image" style="width:570 !important;"></div>
+        <div class="preload-logo"><img src="{{ asset('landing/html/bidzend/assets/images/logo/muhi.jpg') }}" alt="Image" style="width:570 !important;"></div>
     </div>
 
     <div class="page-wrapper">
 
-       @include('koneksi.navbar')
+        @include('koneksi.navbar')
 
-       <section class="fl-page-title">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
+        <section class="fl-page-title">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
 
-            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/page-header-shape-1-1.png') }}" class="page-header__bg-shape-1" alt="">
-            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-2-circle-1-1.png') }}" class="page-header__bg-shape-2" alt="">
-            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-1.png') }}" class="page-header__bg-shape-3" alt="">
-            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-3.png') }}" class="page-header__bg-shape-4" alt="">
-            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-2-circle-1-2.png') }}" class="page-header__bg-shape-2" alt="">
+                        <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/page-header-shape-1-1.png') }}" class="page-header__bg-shape-1" alt="">
+                        <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-2-circle-1-1.png') }}" class="page-header__bg-shape-2" alt="">
+                        <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-1.png') }}" class="page-header__bg-shape-3" alt="">
+                        <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-3.png') }}" class="page-header__bg-shape-4" alt="">
+                        <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-2-circle-1-2.png') }}" class="page-header__bg-shape-2" alt="">
 
-            <div class="breadcrumbs">
-                <ul>
-                    <li><a href="index.html">Beranda</a></li>
-                    <li>Blog Detail</li>
-                </ul>
-            </div>
+                        <div class="breadcrumbs">
+                            <ul>
+                                <li><a href="index.html">Beranda</a></li>
+                                <li>Blog Detail </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
         <section class="blog-standard blog-details">
             <img src="assets/images/shapes/bg-shape-1-1.png" class="section__bg-shape-1" alt="">
@@ -84,113 +83,14 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8">
+
                         <div class="blog-details__main">
                             <div class="blog-two__meta">
-                                <a href="blog-details.html">Sara dodly</a>
-                                <span>-</span>
-                                <a href="blog-details.html">Mar 15, 2020</a>
+                                <a href="blog-details.html">{{$blog->created_at}}</a>
                             </div><!-- /.blog-two__meta -->
-                            <h3>Additional Services that will <br> Grow Business</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-
-                            <img src="assets/images/blog/blog-2-1.jpg" class="img-fluid" alt="">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                reprehenderit in voluptate velit esse cillum deserunt mollit anim id est laborum."Lorem
-                                ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                                labore et dolore magna aliqua. Ut enim ad minim veniam, sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua. </p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, <br> sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. </p>
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <img src="assets/images/blog/blog-d-1-1.jpg" alt="" class="img-fluid">
-                                </div><!-- /.col-md-4 -->
-                                <div class="col-sm-4">
-                                    <img src="assets/images/blog/blog-d-1-2.jpg" alt="" class="img-fluid">
-                                </div><!-- /.col-md-4 -->
-                                <div class="col-sm-4">
-                                    <img src="assets/images/blog/blog-d-1-3.jpg" alt="" class="img-fluid">
-                                </div><!-- /.col-md-4 -->
-                            </div><!-- /.row -->
-                            <h4>SEO is a Cost-Effective Advertising Strategy</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                            <blockquote>
-                                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
-                            </blockquote>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut labore et commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                                velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                        </div><!-- /.blog-details__main -->
-
-                        <div class="blog-details__meta">
-                            <div class="blog-details__tags">
-                                <span>Tags</span>
-                                <a href="#">Marketing</a>
-                                <a href="#">Business</a>
-                                <a href="#">App Design</a>
-                            </div><!-- /.blog-details__tags -->
-                            <div class="blog-details__social">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-google-plus-g"></i></a>
-                            </div><!-- /.blog-details__social -->
-                        </div><!-- /.blog-details__meta -->
-                        <div class="blog-post__navigations">
-                            <a class="blog-post__navigations-left" href="#">Previous Post <i class="far fa-angle-left"></i></a>
-                            <a class="blog-post__navigations-right" href="#">Next Post <i class="far fa-angle-right"></i></a>
-                        </div><!-- /.blog-post__navigations -->
-
-
-                        <div class="comment-one">
-                            <h3 class="comment-one__title">3 Comments</h3>
-                            <div class="comment-one__single">
-                                <div class="comment-one__image">
-                                    <img src="assets/images/blog/comment-1-1.jpg" alt="">
-                                </div><!-- /.comment-one__image -->
-                                <div class="comment-one__content">
-                                    <h3>Thomas Jamie</h3>
-                                    <span class="comment-one__date">Mar 15, 2020</span>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipcing elit sed do eiusmod tempor
-                                        incididunt labore et dolore magna aliqua.</p>
-                                    <a href="#" class="thm-btn comment-one__btn"><span>Reply</span></a>
-                                    <!-- /.thm-btn comment-one__btn -->
-                                </div><!-- /.comment-one__content -->
-                            </div><!-- /.comment-one__single -->
-                            <div class="comment-one__single">
-                                <div class="comment-one__image">
-                                    <img src="assets/images/blog/comment-1-2.jpg" alt="">
-                                </div><!-- /.comment-one__image -->
-                                <div class="comment-one__content">
-                                    <h3>Lydia Sparks</h3>
-                                    <span class="comment-one__date">Mar 15, 2020</span>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipcing elit sed do eiusmod tempor
-                                        incididunt labore et dolore magna aliqua.</p>
-                                    <a href="#" class="thm-btn comment-one__btn"><span>Reply</span></a>
-                                    <!-- /.thm-btn comment-one__btn -->
-                                </div><!-- /.comment-one__content -->
-                            </div><!-- /.comment-one__single -->
-                            <div class="comment-one__single">
-                                <div class="comment-one__image">
-                                    <img src="assets/images/blog/comment-1-3.jpg" alt="">
-                                </div><!-- /.comment-one__image -->
-                                <div class="comment-one__content">
-                                    <h3>Owen Thornton</h3>
-                                    <span class="comment-one__date">Mar 15, 2020</span>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipcing elit sed do eiusmod tempor
-                                        incididunt labore et dolore magna aliqua.</p>
-                                    <a href="#" class="thm-btn comment-one__btn"><span>Reply</span></a>
-                                    <!-- /.thm-btn comment-one__btn -->
-                                </div><!-- /.comment-one__content -->
-                            </div><!-- /.comment-one__single -->
+                            <h3>{{$blog->judul}}</h3>
+                            <img src="{{ asset('fotomahasiswa/' . $blog->foto) }}" class="img-fluid" alt="">
+                            <p>{!!$blog->deskripsi_detail!!}</p>
                         </div><!-- /.comment-one -->
                         <div class="contact-two__form-wrap">
                             <h3>Leave a Comment</h3>
@@ -230,70 +130,30 @@
                                 </form><!-- /.sidebar__search-form -->
                             </div><!-- /.sidebar__single -->
                             <div class="sidebar__single sidebar__category">
-                                <h3 class="sidebar__title">Categories</h3>
+                                <h3 class="sidebar__title">Kategori</h3>
                                 <ul class="list-unstyled sidebar__category-list">
                                     <li>
-                                        <a href="#">Social Marketing</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Content Marketing</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">SEO Optimization</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">PPC Advertising</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">SMM Marketing</a>
+
                                     </li>
                                 </ul><!-- /.list-unstyled sidebar__category-list -->
                             </div><!-- /.sidebar__single -->
+
+
                             <div class="sidebar__single sidebar__post">
-                                <h3 class="sidebar__title">Recent Posts</h3>
+                                <h3 class="sidebar__title">Muhi News</h3>
                                 <div class="sidebar__post-wrap">
+                                    @foreach ($d as $d )
                                     <div class="sidebar__post-single">
                                         <div class="sidebar__post-image">
-                                            <img src="assets/images/blog/lp-1-1.jpg" alt="">
+                                            <img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt="">
                                         </div><!-- /.sidebar__post-image -->
                                         <div class="sidebar__post-content">
-                                            <h3><a href="#">Additional Services that will Grow Your...</a></h3>
-                                            <span>Mar 15, 2020</span>
+                                            <h3><a href="#">{{$d->judul}}</a></h3>
+                                            <span>{{$d->created_at}}</span>
                                         </div><!-- /.sidebar__post-content -->
                                     </div><!-- /.sidebar__post-single -->
-                                    <div class="sidebar__post-single">
-                                        <div class="sidebar__post-image">
-                                            <img src="assets/images/blog/lp-1-2.jpg" alt="">
-                                        </div><!-- /.sidebar__post-image -->
-                                        <div class="sidebar__post-content">
-                                            <h3><a href="#">Additional Services that will Grow Your...</a></h3>
-                                            <span>Mar 15, 2020</span>
-                                        </div><!-- /.sidebar__post-content -->
-                                    </div><!-- /.sidebar__post-single -->
-                                    <div class="sidebar__post-single">
-                                        <div class="sidebar__post-image">
-                                            <img src="assets/images/blog/lp-1-3.jpg" alt="">
-                                        </div><!-- /.sidebar__post-image -->
-                                        <div class="sidebar__post-content">
-                                            <h3><a href="#">Additional Services that will Grow Your...</a></h3>
-                                            <span>Mar 15, 2020</span>
-                                        </div><!-- /.sidebar__post-content -->
-                                    </div><!-- /.sidebar__post-single -->
+                                    @endforeach
                                 </div><!-- /.sidebar__post-wrap -->
-                            </div><!-- /.sidebar__single -->
-                            <div class="sidebar__single sidebar__archive">
-                                <h3 class="sidebar__title">Archivesh</h3>
-                                <ul class="list-unstyled sidebar__archive-list">
-                                    <li>
-                                        <a href="#">December 2017 <span>7</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="#">November 2017 <span>3</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="#">October 2017 <span>4</span></a>
-                                    </li>
-                                </ul><!-- /.list-unstyled sidebar__archive-list -->
                             </div><!-- /.sidebar__single -->
                             <div class="sidebar__single sidebar__tags">
                                 <h3 class="sidebar__title">Tags</h3>
@@ -334,7 +194,7 @@
             </div><!-- /.container -->
         </section><!-- /.mailchimp-one -->
 
-      @include('koneksi.footer')
+        @include('koneksi.footer')
 
 
 
@@ -393,27 +253,7 @@
     <script src="{{ asset('landing/html/bidzend/assets/js/main.js') }}"></script>
 
 
-    {{-- js nya ppdb kuambil truh sini --}}
-    {{-- <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.min.js') }}"></script> --}}
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/bootstrap.bundle.min.js') }}"></script>
-    {{-- <script src="{{ asset('landingppdb/ppdb/style/assets/js/bootstrap-datepicker.min.js') }}"></script> --}}
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/bootstrap-select.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/isotope.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.ajaxchimp.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.circleType.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/waypoints.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.counterup.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.lettering.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.magnific-popup.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.mCustomScrollbar.concat.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.validate.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/owl.carousel.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/TweenMax.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/wow.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/swiper.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/particles.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/particel-config.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/theme.js') }}"></script>
+
 </body>
 
 

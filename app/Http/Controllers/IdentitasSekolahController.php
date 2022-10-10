@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\IdentitasSekolah;
-use App\Models\Muhinews;
 use App\Models\Jurusan;
+use App\Models\Muhinews;
 use Illuminate\Http\Request;
+use App\Models\IdentitasSekolah;
 
 class IdentitasSekolahController extends Controller
 {

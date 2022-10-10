@@ -38,7 +38,7 @@
                 <div class="widget widget-post">
                     <h5 class="title-widget">Berita </h5>
                     @php
-                        $muhiberita = \App\Models\Muhinews::all();
+                        $muhiberita = \App\Models\Muhinews::paginate(3);
                     @endphp
                     <ul class="post-new">
                         @foreach ($muhiberita as $mb)

@@ -70,6 +70,7 @@
                             @foreach ($ss as $ss)
                                 <div class="slider-content">
                                     <h1 class="heading">{{ $ss->deskripsi1_slider }}</h1>
+                                    <br>
                                     <p class="sub-heading">{{ $ss->deskripsi2_slider }} </p>
                                     <p class="sub-heading">{{ $ss->deskripsi3_slider }} </p>
 
@@ -85,9 +86,10 @@
 
 
                                 <div class="slider-img">
-                                    <a href="/login">
+                                    <a href="#">
                                         <div class="img-home-1"><img src="{{ asset('fotomahasiswa/' . $ss->foto) }}"
-                                                alt="Image" style="width:570 !important;"></div>
+                                                alt="Image" style="width:900px !important; margin-top: 15px; margin-left: 10px;">
+                                        </div>
                                     </a>
                                 </div>
                             @endforeach
@@ -214,7 +216,7 @@
                             <div class="card-content">
                                 <h5><a href="/indexjurusan/{{ $p->id }}"> {{ $p->nama_jurusan }}</a>
                                 </h5>
-                                <p>{!! $p->deskripsi !!}</p>
+                                <p> <a href="/indexjurusan/{{ $p->id }}">{!! $p->deskripseh !!}Selengkapnya...</a></p>
                             </div>
                         </div>
                     </div>

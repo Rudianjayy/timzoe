@@ -22,7 +22,9 @@ class JurusanController extends Controller
         // $gambar = DB::table('s's)->where('nama_jurusan',);
         $personal = Personaljurusan::all();
         $kh = Jurusan::all();
-        return view ('kurikulum.kompetensi.jurusan',compact('data','f','personal','kh','foto'));
+        $pj = Personaljurusan::all();
+
+        return view ('kurikulum.kompetensi.jurusan',compact('data','f','personal','kh','foto','pj'));
     }
 
     public function tambahjurusan()

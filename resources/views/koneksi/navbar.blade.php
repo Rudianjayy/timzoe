@@ -46,7 +46,7 @@
                                         @endphp
                                         <ul class="sub-menu">
                                             @foreach ($personal as $p )
-                                            <li class="menu-item"><a href="/indexjurusan/{{ $p->id }}">{{ $p->nama_jurusan }}</a></li>
+                                            <li class="menu-item "><a href="/indexjurusan/{{ $p->id }}">{{ $p->nama_jurusan }}</a></li>
                                             @endforeach
                                         </ul>
                                     </li>

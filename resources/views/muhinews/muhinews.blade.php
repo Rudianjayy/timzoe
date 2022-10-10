@@ -74,35 +74,38 @@
                 </div>
             </section>
 
-            <div class="tf-section sc-card-blog">
+            <section class="blog-grid">
                 <div class="container">
-                    <div class="row">
+                    <div class="row high-gutters">
                         @foreach ($k as $d )
-                        <div class="col-lg-4 col-md-6">
-                            <article class="sc-card-article">
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="blog-one__single">
                                 <div class="card-media">
-                                    <img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt="" style="width: 366px; height:183px;">
+
+                                    <a href="/muhiblog/{{ $d->id }}">
+                                        <img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt="" style="width: 366px; height:183px;">
+                                    </a>
                                 </div>
-                                <div class="content">
-                                    <div class="meta-info">
-                                        <div class="item author">
-                                            <b><strong>{{$d->judul}}</strong></b>
-                                        </div>
-                                        <div class="item date">{{$d->created_at}}</div>
-                                    </div>
-                                    <div class="text-article">
-                                        <h3>{{$d->deskripsi_muhinews}}</h5>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
+                                <div class="blog-one__content">
+                                    <div class="blog-one__meta">
+                                        <h4>{{$d->judul}}</h4>
+                                        <span>-</span>
+                                        <a href="#">{{$d->created_at}}</a>
+                                    </div><!-- /.blog-one__meta --> 
+                                    <p><a href="#">{{$d->deskripsi_muhinews}}</a></p>
+                                    <a href="/muhiblog/{{ $d->id }}" class="thm-btn blog-one__btn"><span>Baca selengkapnya</span></a>
+                                    <!-- /.thm-btn blog-one__btn -->
+                                </div><!-- /.blog-one__content -->
+                            </div><!-- /.blog-one__single -->
+                        </div><!-- /.col-lg-4 col-md-6 col-sm-12 -->
                         @endforeach
-                        <div class="col-md-12">
-                            {!! $k->links() !!}
-                        </div>
+                    </div><!-- /.row -->
+
+                    <div class="col-md-12">
+                        {!! $k->links() !!}
                     </div>
-                </div>
-            </div>
+                </div><!-- /.container -->
+            </section><!-- /.blog-grid -->
         </div>
     </div>
 
@@ -113,10 +116,14 @@
 
     <script src="{{ asset('landing/html/bidzend/assets/js/jquery.min.js') }}"></script>
     <script src="{{ asset('landing/html/bidzend/assets/js/jquery.easing.js') }}"></script>
+    <script src="{{ asset('landing/html/bidzend/assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('landing/html/bidzend/assets/js/swiper-bundle.min.js') }}"></script>
+    <script src="{{ asset('landing/html/bidzend/assets/js/swiper.js') }}"></script>
     <script src="{{ asset('landing/html/bidzend/assets/js/plugin.js') }}"></script>
     <script src="{{ asset('landing/html/bidzend/assets/js/count-down.js') }}"></script>
     <script src="{{ asset('landing/html/bidzend/assets/js/shortcodes.js') }}"></script>
     <script src="{{ asset('landing/html/bidzend/assets/js/main.js') }}"></script>
+
 </body>
 
 <!-- Mirrored from themesflat.com/html/bidzend/blog.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Sep 2022 01:13:29 GMT -->

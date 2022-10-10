@@ -122,7 +122,15 @@ Route::post('/editproses2/{id}',[MuhinewsController::class, 'editproses2'])->nam
 Route::get('/deletemuhinews/{id}',[MuhinewsController::class, 'delete'])->name('delete');
 
 //muhiblog
-Route::get('/muhiblog',[MuhiblogController::class, 'muhiblog'])->name('muhiblog');
+Route::get('/muhiblog/{id}',[MuhiblogController::class, 'muhiblog'])->name('muhiblog');
+Route::get('/muhiblogadmin',[MuhiblogController::class, 'muhiblogadmin'])->name('muhiblogadmin');
+Route::get('/tambahmuhiblog',[MuhiblogController::class, 'tambahmuhiblog'])->name('tambahmuhiblog');
+Route::post('/muhiblogproses',[MuhiblogController::class, 'muhiblogproses'])->name('muhiblogproses');
+Route::get('/editmuhiblog/{id}',[MuhiblogController::class, 'editmuhiblog'])->name('editmuhiblog');
+Route::post('/editmuhiblogproses/{id}',[MuhiblogController::class, 'editmuhiblogproses'])->name('editmuhiblogproses');
+Route::get('/deletemuhiblog/{id}',[MuhiblogController::class, 'delete'])->name('delete');
+
+
 
 
 //tentangkami

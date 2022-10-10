@@ -268,7 +268,7 @@
                                 </div>
                             @endforeach
                         </div>
-                        <!-- <div class="col-md-12">
+                        <!-- <div class="col-m   d-12">
                         <div class="swiper-button-next btn-slide-next"></div>
                         <div class="swiper-button-prev btn-slide-prev"></div>
                         </div> -->
@@ -585,7 +585,8 @@
                                         </div>
                                     </div>
                                 </div>
-                            @endforeach
+                                @endforeach
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-12">

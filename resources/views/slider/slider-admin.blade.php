@@ -35,11 +35,11 @@
                 <div class="card">
                     <div class="card-body">
 
-                        {{-- <div>
-                            <a href="/tambahmuhinews" class="btn btn-primary mt-5"
-                                id="kt_account_profile_details_submit">Tambah
-                                +</a>
-                        </div> --}}
+                            {{--  <div>
+                                <a href="/tambahfotoslider" class="btn btn-primary mt-5"
+                                    id="kt_account_profile_details_submit">Tambah
+                                    +</a>
+                            </div>  --}}
                         <table id="" class="table table-bordered dt-responsive nowrap"
                             style="border-collapse: collapse; border-spacing: 0; width: 100%;">
 

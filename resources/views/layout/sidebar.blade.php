@@ -9,7 +9,7 @@
                 <span>Dashboard</span>
             </a>
         </li>
-        
+
         <li>
             <a href="/data-identitas" class="waves-effect">
                 <i class="mdi mdi-book-edit-outline"></i><span class="badge rounded-pill bg-primary float-end"></span>
@@ -48,12 +48,15 @@
         </li>
 
 
-        
+
         <li>
-            <a href="/muhinewsadmin" class="waves-effect">
+            <a href="/muhinewsadmin" class="has-arrow waves-effect">
                 <i class="mdi mdi-account-details-outline"></i> <span class="badge rounded-pill bg-primary float-end"></span>
                 <span>Muhinews</span>
             </a>
+            <ul class="sub-menu" aria-expanded="false">
+                <li><a href="/muhiblogadmin">Muhinews Detail</a></li>
+            </ul>
         </li>
 
         <li>
@@ -91,7 +94,7 @@
                 <span>Sambutan Kepsek</span>
             </a>
         </li>
-        
+
         <li>
             <a href="javascript: void(0);" class="has-arrow waves-effect">
                 <i class="ti-package"></i>
@@ -103,7 +106,7 @@
             </ul>
         </li>
 
-        
+
 
         <li>
             <a href="javascript: void(0);" class="has-arrow waves-effect">
@@ -116,10 +119,10 @@
             </ul>
         </li>
 
-        
+
 
         @endif
-        
+
         <li>
             <a href="/logout" class="waves-effect">
                 <i class="mdi mdi-chevron-left"></i> <span class="badge rounded-pill bg-primary float-end"></span>

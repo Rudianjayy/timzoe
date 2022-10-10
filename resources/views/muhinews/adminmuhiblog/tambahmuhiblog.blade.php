@@ -4,12 +4,10 @@
 
     <head>
         @include('layout.css')
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-            integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     </head>
 
     <body>
-        <h1 class="text-center mb-4">Tambah Data Jurusan</h1>
+        <h1 class="text-center mb-4">Tambah Muhinews detail</h1>
 
         <div class="container" mb-5>
 
@@ -17,38 +15,24 @@
                 <div class="col-8">
                     <div class="card">
                         <div class="card-body">
-                            <form action="/submitdata3" method="POST" enctype="multipart/form-data">
+                            <form action="/muhiblogproses" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Judul Muhiblog :</label>
+                                    <select name="muhinews_id" class="form-control" id="muhinews_id">
+                                        <option value=""></option>
+                                        @foreach ($judulblog as $j)
+                                            <option value="{{ $j->id }}">{{ $j->judul }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Foto :</label>
-                                    <input type="file" name="foto" class="form-control" id="foto"
-                                        aria-describedby="emailHelp">
+                                    <input type="file" name="foto" class="form-control">
                                     @error('foto')
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
-
-                                <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Nama jurusan :</label>
-                                    <select name="personaljurusans_id" class="form-control" id="jurusan">
-                                        <option value=""></option>
-                                        @foreach ($personal as $pe)
-                                            <option value="{{ $pe->id }}" data-="">{{ $pe->nama_jurusan }}
-                                            </option>
-                                        @endforeach
-                                    </select>
-                                    @error('personaljurusans_id')
-                                        <div class="alert alert-danger">{{ $message }}</div>
-                                    @enderror
-                                </div>
-
-                                {{--  <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">Deskripsi :</label>
-                  <textarea class="form-control form-control-solid" name="deskripsi"></textarea>
-                  @error('deskripsi')
-                    <div class="alert alert-danger">{{ $message }}</div>
-                  @enderror
-                </div>  --}}
                                 <section style="padding-top:60px;">
                                     <div class="container">
                                         <div class="row">
@@ -59,15 +43,31 @@
                                                     </div>
                                                     <div class="card-body">
                                                         {{--  <form method="POST" enctype="multipart/form-data">  --}}
-                                                        <textarea name="deskripsi" id="mytextarea"></textarea>
+                                                            <textarea name="deskripsi_blog" id="mytextarea"></textarea>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </section>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Kategori Muhiblog :</label>
+                                    <input type="text" name="kategori_blog" class="form-control">
+                                    @error('kategori_blog')
+                                        <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Muhinews blog :</label>
+                                    <input type="text" name="muhinews_blog" class="form-control">
+                                    @error('muhinews_blog')
+                                        <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
+
+
                                 <button type="submit" class="btn btn-primary">Submit</button>
-                                <a href="/data-album" class="btn btn-danger">Kembali</a>
+                                <a href="/muhiblogadmin" class="btn btn-danger">Kembali</a>
                             </form>
                         </div>
                     </div>
@@ -106,14 +106,6 @@
         </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
             integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
-        </script>
-
-        <script>
-            const selection = document.getElementById('jurusan')
-            selection.onchange = function(e) {
-                const mytextarea = e.target.options[e.target.selectedIndex].dataset.mytextarea
-                document.getElementById('mytextarea').value = mytextarea;
-            }
         </script>
         @include('layout.script')
     </body>

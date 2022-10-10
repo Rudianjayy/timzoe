@@ -169,7 +169,7 @@ Route::get('/tambahekstrakulikuler',[KesiswaanController::class, 'tambahekstraku
 Route::post('/ekstrakulikulerproses1',[KesiswaanController::class, 'ekstrakulikulerproses1'])->name('ekstrakulikulerproses1');
 Route::get('/editekstrakulikuler/{id}',[KesiswaanController::class, 'editekstrakulikuler'])->name('editekstrakulikuler');
 Route::post('/editproses3/{id}',[KesiswaanController::class,'editproses3'])->name('editproses3');
-Route::get('/deleteekstra/{id}',[KesiswaanController::class,'delete'])->name('delete');
+Route::get('/delete/{id}',[KesiswaanController::class,'delete'])->name('delete');
 
 
 Route::get('/osis',[KesiswaanController::class,'osis'])->name('osis');

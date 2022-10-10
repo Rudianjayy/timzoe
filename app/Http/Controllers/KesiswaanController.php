@@ -7,6 +7,7 @@ use App\Models\osis;
 use App\Models\alumni;
 // use App\Models\jurusan;
 use App\Models\Muhinews;
+use App\Models\Footeer;
 use Illuminate\Http\Request;
 
 class KesiswaanController extends Controller
@@ -14,8 +15,9 @@ class KesiswaanController extends Controller
     public function ekstra(){
         $f = Muhinews::all();
         $d = ekstrakulikuler::all();
+        $ft = Footeer::all();
         // $kh= jurusan::all();
-        return view('kesiswaan.ekstrakulikuler.ekstra ', compact('f','d',));
+        return view('kesiswaan.ekstrakulikuler.ekstra ', compact('f','d','ft'));
     }
     public function ekstrakulikuleradmin() {
         $data = ekstrakulikuler::all();
@@ -219,7 +221,8 @@ class KesiswaanController extends Controller
         $b = osis::all();
         $f = Muhinews::paginate(4);
         // $kh= jurusan::all();
-        return view('kesiswaan.osis.osis',compact('b','f',));
+        $ft = Footeer::all();
+        return view('kesiswaan.osis.osis',compact('b','f','ft'));
     }
     public function osisadmin() {
         $data = osis::all();
@@ -318,7 +321,8 @@ class KesiswaanController extends Controller
         $l = alumni::all();
         $f = Muhinews::paginate(4);
         // $kh= jurusan::all();
-        return view('kesiswaan.alumni.alumni',compact('l','f',));
+        $ft = Footeer::all();
+        return view('kesiswaan.alumni.alumni',compact('l','f','ft'));
     }
     public function alumniadmin() {
         $data = alumni::all();

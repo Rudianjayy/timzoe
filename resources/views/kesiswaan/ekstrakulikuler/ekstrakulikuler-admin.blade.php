@@ -61,7 +61,7 @@
                                         <td>
                                             <a href="/editekstrakulikuler/{{ $d->id }}" class="btn btn-warning">Edit</a>
 
-                                            <a href="/deleteekstrakulikuler/{{ $d->id }}" class="btn btn-danger" onclick="return confirm('apakah anda yakin?')">Delete</a>
+                                            <a href="/delete/{{ $d->id }}" class="btn btn-danger" onclick="return confirm('apakah anda yakin?')">Delete</a>
 
 
 

@@ -17,7 +17,7 @@ class JurusanController extends Controller
     }
     public function indexjurusan($id){
         $data= Jurusan::where('personaljurusans_id',$id)->firstOrFail();
-        $foto= Jurusan::where('personaljurusans_id',$id)->get();
+        $foto= Jurusan::where('personaljurusans_id',$id)->paginate(2);
         $f = Muhinews::all();
         // $gambar = DB::table('s's)->where('nama_jurusan',);
         $personal = Personaljurusan::all();

@@ -22,36 +22,45 @@
                     <div id="site-menu">
                         <nav id="main-nav" class="main-nav">
                             <ul id="menu-primary-menu" class="menu">
-                                <li class="menu-item {{ Route::is('landing') ? 'current-item' : '' }}" >
+                                <li class="menu-item {{ Route::is('landing') ? 'current-item' : '' }}">
                                     <a href="/">Beranda</a>
                                 </li>
 
                                 <li class="menu-item menu-item-has-children">
                                     <a href="/">Tentang Kami</a>
                                     <ul class="sub-menu">
-                                        <li class="menu-item {{ Route::is('profilsekolah') ? 'current-item' : '' }}"><a href="/profilsekolah">Profil Sekolah</a></li>
-                                        <li class="menu-item {{ Route::is('visimisi') ? 'current-item' : '' }}"><a href="/visimisi">Visi & Misi</a></li>
-                                        <li class="menu-item {{ Route::is('identitassekolah') ? 'current-item' : '' }}"><a href="/identitas_sekolah">Identitas Sekolah</a></li>
-                                        <li class="menu-item {{ Route::is('fasilitassekolah') ? 'current-item' : '' }}"><a href="/fasilitassekolah">Fasilitas</a></li>
+                                        <li class="menu-item {{ Route::is('profilsekolah') ? 'current-item' : '' }}"><a
+                                                href="/profilsekolah">Profil Sekolah</a></li>
+                                        <li class="menu-item {{ Route::is('visimisi') ? 'current-item' : '' }}"><a
+                                                href="/visimisi">Visi & Misi</a></li>
+                                        <li class="menu-item {{ Route::is('identitassekolah') ? 'current-item' : '' }}">
+                                            <a href="/identitas_sekolah">Identitas Sekolah</a></li>
+                                        <li class="menu-item {{ Route::is('fasilitassekolah') ? 'current-item' : '' }}">
+                                            <a href="/fasilitassekolah">Fasilitas</a></li>
                                 </li>
                             </ul>
 
                             <li class="menu-item menu-item-has-children">
                                 <a href="#"> Kurikulum</a>
                                 <ul class="sub-menu">
-                                    <li class="menu-item menu-item-has-children {{ Route::is('kompetensi') ? 'current-item' : '' }}">
+                                    <li
+                                        class="menu-item menu-item-has-children {{ Route::is('kompetensi') ? 'current-item' : '' }}">
                                         <a href="/kompetensi"> Kompetensi Keahlian</a>
                                         @php
                                             $personal = \App\Models\Personaljurusan::all();
                                         @endphp
                                         <ul class="sub-menu">
-                                            @foreach ($personal as $p )
-                                            <li class="menu-item "><a href="/indexjurusan/{{ $p->id }}">{{ $p->nama_jurusan }}</a></li>
+                                            @foreach ($personal as $p)
+                                                <li class="menu-item "><a
+                                                        href="/indexjurusan/{{ $p->id }}">{{ $p->nama_jurusan }}</a>
+                                                </li>
                                             @endforeach
                                         </ul>
                                     </li>
-                                    <li class="menu-item {{ Route::is('kalenderakademik') ? 'current-item' : '' }}"><a href="/kalenderakademik">Kalender Akademik</a></li>
-                                    <li class="menu-item {{ Route::is('jadwalkegiatan') ? 'current-item' : '' }}"><a href="/jadwalkegiatan">Jadwal Kegiatan</a></li>
+                                    <li class="menu-item {{ Route::is('kalenderakademik') ? 'current-item' : '' }}"><a
+                                            href="/kalenderakademik">Kalender Akademik</a></li>
+                                    <li class="menu-item {{ Route::is('jadwalkegiatan') ? 'current-item' : '' }}"><a
+                                            href="/jadwalkegiatan">Jadwal Kegiatan</a></li>
 
                                     <li class="menu-item"><a href="creator.html">Kelulusan</a></li>
                                 </ul>
@@ -60,10 +69,27 @@
                             <li class="menu-item menu-item-has-children">
                                 <a href="#"> Kesiswaan</a>
                                 <ul class="sub-menu">
-                                    <li class="menu-item {{ Route::is('ekstra') ? 'current-item' : '' }}"><a href="/ekstra">Ekstra Kulikuler</a></li>
-                                    <li class="menu-item"><a href="explore-2.html">Mikrotik Akademi</a></li>
-                                    <li class="menu-item {{ Route::is('osis') ? 'current-item' : '' }}"><a href="/osis">IPM/OSIS</a></li>
-                                    <li class="menu-item {{ Route::is('alumni') ? 'current-item' : '' }}"><a href="/alumni">Alumni</a></li>
+                                  
+                                    <li
+                                        class="menu-item menu-item-has-children {{ Route::is('kompetensi') ? 'current-item' : '' }}">
+                                        <a href="/indexakademi"> Akademi</a>
+                                        @php
+                                            $akademi = \App\Models\Akademi::all();
+                                        @endphp
+                                        <ul class="sub-menu">
+                                            @foreach ($akademi as $ami)
+                                                <li class="menu-item "><a
+                                                        href="/detailakademi/{{ $ami->id }}">{{ $ami->judul_akademi }}</a>
+                                                </li>
+                                            @endforeach
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item {{ Route::is('ekstra') ? 'current-item' : '' }}"><a
+                                            href="/ekstra">Ekstra Kulikuler</a></li>
+                                    <li class="menu-item {{ Route::is('osis') ? 'current-item' : '' }}"><a
+                                            href="/osis">IPM/OSIS</a></li>
+                                    <li class="menu-item {{ Route::is('alumni') ? 'current-item' : '' }}"><a
+                                            href="/alumni">Alumni</a></li>
                             </li>
                             </ul>
                             </li>
@@ -76,7 +102,8 @@
                             <li class="menu-item menu-item-has-children">
                                 <a href=""> UPJ</a>
                                 <ul class="sub-menu">
-                                    <li class="menu-item {{ Route::is(' indexupj') ? 'current-item' : '' }}"><a href="/indexupj">UPJ TKJ</a></li>
+                                    <li class="menu-item {{ Route::is(' indexupj') ? 'current-item' : '' }}"><a
+                                            href="/indexupj">UPJ TKJ</a></li>
                                     <li class="menu-item"><a href="explore-2.html">Bank Mini Sekolah(BSI)</a></li>
                                     <li class="menu-item"><a href="creator.html">Muhi Printing</a></li>
                                     <li class="menu-item"><a href="creator.html">Pegadaian</a></li>
@@ -124,4 +151,3 @@
         </div>
     </div>
 </header>
-

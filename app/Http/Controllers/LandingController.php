@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Album;
 use App\Models\Slider;
+use App\Models\Akademi;
 use App\Models\Jurusan;
 use App\Models\Muhinews;
 use App\Models\Prestasi;
@@ -26,6 +27,7 @@ class LandingController extends Controller
         $personal = Personaljurusan::all();
         $kh = Jurusan::all();
         $ps = Prestasi::all();
-        return view('landingpage.landing', compact('data','d','f','ss','fs','sa','js','personal','kh','ps'));
+        $akademi = Akademi::all();
+        return view('landingpage.landing', compact('data','d','f','ss','fs','sa','js','personal','kh','ps','akademi'));
     }
 }

@@ -68,7 +68,7 @@
 
                     <div class="breadcrumbs">
                         <ul>
-                            <li><a href="index.html">Beranda</a></li>
+                            <li><a href="index.html">Kesiswaan</a></li>
                             <li>IPM/OSIS</li>
                         </ul>
                     </div>
@@ -76,7 +76,7 @@
             </div>
         </div>
     </section>
-    <section class="tf-section item-details-page">
+    <!-- <section class="tf-section item-details-page">
         <div class="author-item">
             <div class="avatar">
                 <img src="assets/images/avatar/avt-4.jpg" alt="">
@@ -94,39 +94,40 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
+    <div class="tf-section sc-card-blog">
+        <div class="container">
+            <div class="row">
+                @foreach ($b as $b )
+                <div class="col-lg-4 col-md-6">
+                    <article class="sc-card-article">
+                        <div class="card-media">
+                            <img src="{{ asset('fotomahasiswa/' . $b->foto) }}" alt="" style="width: 366px; height:183px;">
+                        </div>
+                        <div class="content">
+                            <div class="meta-info">
+                                <div class="item author">
+                                    <b><strong>{{$b->judul_osis}}</strong></b>
+                                </div>
+                                <div class="item date">{{$b->created_at}}</div>
+                            </div>
+                            <div class="text-article">
+                                <h3>{!!$b ->deskripsi_osis!!}</h5>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+    </div>
 
     @include('koneksi.footer')
 
 
     <a id="scroll-top"></a>
 
-    <div class="modal fade popup" id="popup_bid_success" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <div class="modal-body space-y-20 pd-40">
-                    <h3 class="text-center">Your Bidding
-                        Successfuly Added</h3>
-                    <p class="text-center">your bid <span class="price color-popup">(4ETH) </span> has been listing to
-                        our database</p>
-                    <a href="#" class="btn btn-primary"> Watch the listings</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade popup" id="popup_bid" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-
-            </div>
-        </div>
-    </div>
 
     <script src="{{ asset('landing/html/bidzend/assets/js/jquery.min.js') }}"></script>
     <script src="{{ asset('landing/html/bidzend/assets/js/jquery.easing.js') }}"></script>

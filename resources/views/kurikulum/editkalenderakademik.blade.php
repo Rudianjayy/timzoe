@@ -6,7 +6,7 @@
 </head>
 
     <body>
-        <h1 class="text-center mb-4">Edit osis</h1>
+        <h1 class="text-center mb-4">Edit Kalender Akademik</h1>
 
         <div class="container">
 
@@ -14,16 +14,9 @@
                 <div class="col-8">
                     <div class="card">
                         <div class="card-body">
-                            <form action="/editproses5/{{ $data->id }}" method="POST" enctype="multipart/form-data">
+                            <form action="/editproses9/{{ $data->id }}" method="POST" enctype="multipart/form-data">
                                 @csrf
-                                <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Judul:</label>
-                                    <textarea class="form-control form-control-solid" rows="6x" name="judul_osis">{{ $data->judul_osis }}</textarea>
-
-                                    @error('judul_osis')
-                                        <div class="alert alert-danger">{{ $message }}</div>
-                                    @enderror
-                                </div>
+          
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Ubah Foto :</label>
                                     <img class="img mb-3" src="{{ asset('fotomahasiswa/' . $data->foto) }}" alt=""
@@ -35,15 +28,7 @@
                                     @enderror
                                 </div>
 
-                                <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Deskripsi :</label>
-                                    <textarea class="form-control form-control-solid" rows="6x" name="deskripsi_osis">{{ $data->deskripsi_osis }}</textarea>
-
-                                    @error('deskripsi_osis')
-                                        <div class="alert alert-danger">{{ $message }}</div>
-                                    @enderror
-                                </div>
-
+                                
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </form>
                         </div>

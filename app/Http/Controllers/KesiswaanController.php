@@ -2,19 +2,23 @@
 
 namespace App\Http\Controllers;
 use App\Models\osis;
-use App\Models\alumni;
 use App\Models\Jurusan;
 use App\Models\Mikrotik;
-
 use App\Models\Muhinews;
+use App\Models\Footeer;
 use Illuminate\Http\Request;
 use App\Models\ekstrakulikuler;
+use App\Models\alumni;
+
 
 class KesiswaanController extends Controller
 {
     public function ekstra(){
         $f = Muhinews::all();
-        return view('kesiswaan.ekstrakulikuler.ekstra ', compact('f'));
+        $d = Muhinews::paginate(6);
+        $ft = Footeer::all();
+        $data = ekstrakulikuler::all();
+        return view('kesiswaan.ekstrakulikuler.ekstra',compact('data','f','d','ft'));
     }
     public function ekstrakulikuleradmin() {
         $data = ekstrakulikuler::all();
@@ -29,15 +33,18 @@ class KesiswaanController extends Controller
         // dd($request->all());
         $this->validate($request,[
             'foto' =>'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
+            'judul_ekstra' =>'required',
             'deskripsi_ekstrakulikuler' =>'required',
         ],[
             'foto.required' =>'Harus diisi',
             'foto.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
+            'judul_ekstra.required' =>'Harus diisi',
             'deskripsi_ekstrakulikuler.required' =>'Harus diisi',
 
         ]);
         $data = ekstrakulikuler::create([
             'foto' =>$request->foto,
+            'judul_ekstra' =>$request->judul_ekstra,
             'deskripsi_ekstrakulikuler' =>$request->deskripsi_ekstrakulikuler,
         ]);
         if($request->hasFile('foto')){
@@ -58,14 +65,17 @@ class KesiswaanController extends Controller
     public function editproses3(Request $request, $id){
         $this->validate($request,[
             'foto' =>'mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
+            'judul_ekstra' =>'required',
             'deskripsi_ekstrakulikuler' =>'required',
         ],[
             'foto.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
+            'judul_ekstra' =>'harus diisi',
             'deskripsi_ekstrakulikuler' =>'harus diisi',
 
         ]);
         $data = ekstrakulikuler::find($id);
         $data->update([
+            'judul_ekstra' =>$request->judul_ekstra,
             'deskripsi_ekstrakulikuler' =>$request->deskripsi_ekstrakulikuler,
         ]);
         if($request->hasFile('foto')){
@@ -211,7 +221,9 @@ class KesiswaanController extends Controller
     public function osis() {
         $b = osis::all();
         $f = Muhinews::paginate(4);
-        return view('kesiswaan.ipm.osis',compact('b','f'));
+        // $kh= jurusan::all();
+        $ft = Footeer::all();
+        return view('kesiswaan.osis.osis',compact('b','f','ft'));
     }
     public function osisadmin() {
         $data = osis::all();
@@ -226,15 +238,18 @@ class KesiswaanController extends Controller
         // dd($request->all());
         $this->validate($request,[
             'foto' =>'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
+            'judul_osis' =>'required',
             'deskripsi_osis' =>'required',
         ],[
             'foto.required' =>'Harus diisi',
             'foto.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
+            'judul_osis.required' =>'Harus diisi',
             'deskripsi_osis.required' =>'Harus diisi',
 
         ]);
         $data = osis::create([
             'foto' =>$request->foto,
+            'judul_osis' =>$request->judul_osis,
             'deskripsi_osis' =>$request->deskripsi_osis,
         ]);
         if($request->hasFile('foto')){
@@ -255,14 +270,17 @@ class KesiswaanController extends Controller
     public function editproses5(Request $request, $id){
         $this->validate($request,[
             'foto' =>'mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
+            'judul_osis' =>'required',
             'deskripsi_osis' =>'required',
         ],[
             'foto.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
+            'judul_osis' =>'harus diisi',
             'deskripsi_osis' =>'harus diisi',
 
         ]);
         $data = osis::find($id);
         $data->update([
+            'judul_osis' =>$request->judul_osis,
             'deskripsi_osis' =>$request->deskripsi_osis,
         ]);
         if($request->hasFile('foto')){
@@ -300,33 +318,38 @@ class KesiswaanController extends Controller
 
 
 
-    public function alumni() {
+    public function alumni(Request $request) {
         $l = alumni::all();
+        $ft = Footeer::all();
         $f = Muhinews::paginate(4);
-        return view('kesiswaan.alumni.alumni',compact('l','f'));
+        return view('kesiswaan.alumni.alumni',compact('l','f','ft'));
     }
-    public function alumniadmin() {
+        public function alumniadmin() {
         $data = alumni::all();
         return view('kesiswaan.alumni.alumni-admin', compact('data'));
     }
-    public function tambahalumni()
+        public function tambahalumni()
     {
         return view('kesiswaan.alumni.tambahalumni');
     }
 
-    public function alumniproses4(Request $request){
+    public function alumniproses6(Request $request){
         // dd($request->all());
+ 
         $this->validate($request,[
             'foto' =>'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
+            'judul_alumni' =>'required',
             'deskripsi_alumni' =>'required',
         ],[
             'foto.required' =>'Harus diisi',
             'foto.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
+            'judul_alumni.required' =>'Harus diisi',
             'deskripsi_alumni.required' =>'Harus diisi',
 
         ]);
         $data = alumni::create([
             'foto' =>$request->foto,
+            'judul_alumni' =>$request->judul_alumni,
             'deskripsi_alumni' =>$request->deskripsi_alumni,
         ]);
         if($request->hasFile('foto')){
@@ -346,15 +369,20 @@ class KesiswaanController extends Controller
 
     public function editproses6(Request $request, $id){
         $this->validate($request,[
-            'foto' =>'mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
+            'foto' =>'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
+            'judul_alumni' =>'required',
             'deskripsi_alumni' =>'required',
         ],[
+            'foto.required' =>'Harus diisi',
             'foto.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
-            'deskripsi_alumni' =>'harus diisi',
+            'judul_alumni.required' =>'Harus diisi',
+            'deskripsi_alumni.required' =>'Harus diisi',
+
 
         ]);
         $data = alumni::find($id);
         $data->update([
+            'judul_alumni' =>$request->judul_alumni,
             'deskripsi_alumni' =>$request->deskripsi_alumni,
         ]);
         if($request->hasFile('foto')){

@@ -46,9 +46,6 @@
                                     <li
                                         class="menu-item menu-item-has-children {{ Route::is('kompetensi') ? 'current-item' : '' }}">
                                         <a href="/kompetensi"> Kompetensi Keahlian</a>
-                                        @php
-                                            $personal = \App\Models\Personaljurusan::all();
-                                        @endphp
                                         <ul class="sub-menu">
                                             @foreach ($personal as $p)
                                                 <li class="menu-item "><a
@@ -93,10 +90,10 @@
                             </li>
                             </ul>
                             </li>
-                            <li class="menu-item {{ Route::is('iduka') ? 'current-item' : '' }}">
+                            <li class="menu-item ">
                                 <a href="/iduka">Iduka</a>
                             </li>
-                            <li class="menu-item {{ Route::is('muhinews') ? 'current-item' : '' }}">
+                            <li class="menu-item">
                                 <a href="/muhinews">Muhi News</a>
                             </li>
                             <li class="menu-item menu-item-has-children">

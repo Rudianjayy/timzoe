@@ -6,7 +6,7 @@
 </head>
 
 <body>
-  <h1 class="text-center mb-4">Tambah osis</h1>
+  <h1 class="text-center mb-4">Tambah Kalender Akademi</h1>
 
   <div class="container" mb-5>
 
@@ -14,7 +14,7 @@
         <div class="col-8">
           <div class="card">
             <div class="card-body">
-              <form action="/osisproses3" method="POST" enctype="multipart/form-data">
+              <form action="/kalenderakademikproses9" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label">Foto :</label>
@@ -22,43 +22,9 @@
                   @error('foto')
                     <div class="alert alert-danger">{{ $message }}</div>
                   @enderror
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Judul IPM/OSIS :</label>
-                    <input type="text" name="judul_osis" class="form-control" id="exampleInputEmail1"
-                        aria-describedby="emailHelp">
-                    @error('judul_osis')
-                        <div class="alert alert-danger">{{ $message }}</div>
-                    @enderror
-                </div>
-
-                <section style="padding-top:60px;">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="card">
-                                    <div class="card-header">
-                                        Deskripsi
-                                    </div>
-                                    <div class="card-body">
-                                        {{--  <form method="POST" enctype="multipart/form-data">  --}}
-                                        <textarea name="deskripsi_osis" id="mytextarea"></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">Deskripsi :</label>
-                  <textarea class="form-control form-control-solid" name="deskripsi_osis"></textarea>
-                  @error('deskripsi_osis')
-                    <div class="alert alert-danger">{{ $message }}</div>
-                  @enderror
-                </div>
 
                 <button type="submit" class="btn btn-primary">Submit</button>
-                <a href="/osisadmin" class="btn btn-danger">Kembali</a>
+                <a href="/kalenderakademiadmin" class="btn btn-danger">Kembali</a>
               </form>
             </div>
           </div>

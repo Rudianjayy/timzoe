@@ -10,6 +10,7 @@ use App\Models\Muhinews;
 use App\Models\Prestasi;
 use App\Models\Sambutan;
 use App\Models\Fotoslider;
+use App\Models\Footeer;
 use Illuminate\Http\Request;
 use App\Models\Personaljurusan;
 
@@ -22,6 +23,7 @@ class LandingController extends Controller
         $f = Muhinews::paginate(3);
         $ss = Slider::all();
         $fs = Fotoslider::all();
+        $ft = Footeer::all();
         $sa = Sambutan::all();
         $js = Jurusan::all();
         $personal = Personaljurusan::all();

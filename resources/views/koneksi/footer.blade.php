@@ -2,13 +2,12 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-md-6 col-12">
+                @foreach ( $ft as $ft )
                 <div class="widget widget-logo">
                     <div class="logo-footer" id="logo-footer">
                         <a href="#">
-                            <img id="logo_footer" src="{{ asset('landing/html/bidzend/assets/icon/muhilog.png') }}"
-                                alt="nft-gaming" width="110" height="45"
-                                data-retina="{{ asset('landing/html/bidzend/assets/icon/muhilog.png') }}"
-                                data-width="110" data-height="45">
+                            <img id="logo_footer" src="{{ asset('fotomahasiswa/' .$ft->foto) }}"
+                                alt="nft-gaming" width="120" height="100">
                         </a>
                     </div>
                     <p class="sub-widget-logo">Dari SMK Muhammadiyah 1 Genteng <br>
@@ -23,16 +22,29 @@
                             </li>
                             {{--  <li><a href="#"><i class="fab fa-gmail"></i></a></li>  --}}
                             <li><a href="https://www.instagram.com/muhi.ig/?next=%2F&hl=id"><i
-                                        class="fab fa-linkedin-in"></i></a></li>
+                                        class="fab fa-instagram"></i></a></li>
+                                        <li><a href="#"><i class="fal fa-envelope"></i></a></li>
                             <li><a href="https://www.youtube.com/channel/UCJOjJCbfEcApeNYmDJ4tCCw"><i
                                         class="fab fa-youtube"></i></a></li>
                         </ul>
                     </div>
                 </div>
+
+                @endforeach
             </div>
             <div class="col-lg-2 col-md-6 col-sm-6 col-6">
                 <script src="https://apps.elfsight.com/p/platform.js" defer></script>
                 <div class="elfsight-app-7e06bf3a-c3dd-4ad3-a974-4f6c4b30ba1e"></div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-6">
+                <div class="widget widget-menu menu-supports">
+                    <h5 class="title-widget">Admin</h5>
+                    <ul>
+                        <li><a href="/login">Login Admin </a></li>
+                        <li><a href="https://sekolah.data.kemdikbud.go.id/index.php/chome/profil/39108646-470a-4aac-bee3-bc8ea91b8973">DAPODIK</a></li>
+                        <li><a href="https://sekolah.data.kemdikbud.go.id/index.php/chome/profil/39108646-470a-4aac-bee3-bc8ea91b8973">UPJ TKJ</a></li>
+                    </ul>
+                </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                 <div class="widget widget-post">
@@ -55,18 +67,7 @@
                         @endforeach
                     </ul>
                 </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-6">
-                <div class="widget widget-menu menu-supports">
-                    <h5 class="title-widget">Admin</h5>
-                    <ul>
-                        <li><a href="/login">Login Admin </a></li>
-                        <li><a href="contact.html">Help & Support </a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                    </ul>
-                </div>
-            </div>
-
+            </div>  
 
         </div>
     </div>

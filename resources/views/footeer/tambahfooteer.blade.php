@@ -7,7 +7,7 @@
     </head>
 
     <body>
-        <h1 class="text-center mb-4">Tambah Ekstrakulikuler</h1>
+        <h1 class="text-center mb-4">Tambah Footer</h1>
 
         <div class="container" mb-5>
 
@@ -15,16 +15,10 @@
                 <div class="col-8">
                     <div class="card">
                         <div class="card-body">
-                            <form action="/ekstrakulikulerproses1" method="POST" enctype="multipart/form-data">
+                            <form action="/footeerproses7" method="POST" enctype="multipart/form-data">
                                 @csrf
-                                <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Judul Ekstra :</label>
-                                    <input type="text" name="judul_ekstra" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp">
-                                    @error('judul_ekstra')
-                                        <div class="alert alert-danger">{{ $message }}</div>
-                                    @enderror
-                                </div>
+
+
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Foto :</label>
                                     <input type="file" name="foto" class="form-control" id="exampleInputEmail1"
@@ -44,7 +38,7 @@
                                                     </div>
                                                     <div class="card-body">
                                                         {{--  <form method="POST" enctype="multipart/form-data">  --}}
-                                                        <textarea name="deskripsi_ekstrakulikuler" id="mytextarea"></textarea>
+                                                        <textarea name="deskripsi_footeer" id="mytextarea"></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -55,7 +49,7 @@
 
 
                                 <button type="submit" class="btn btn-primary">Submit</button>
-                                <a href="/ekstrakulikuleradmin" class="btn btn-danger">Kembali</a>
+                                <a href="/footeeradmin" class="btn btn-danger">Kembali</a>
                             </form>
                         </div>
                     </div>

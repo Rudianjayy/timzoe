@@ -47,6 +47,7 @@
                                 @php
                                     $no = 1;
                                 @endphp
+
                                 @foreach ($data as $d)
                                     <tr>
                                         <th>{{ $no++ }}</th>

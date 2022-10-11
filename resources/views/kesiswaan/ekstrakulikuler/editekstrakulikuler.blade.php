@@ -18,9 +18,9 @@
                                 @csrf
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">judul :</label>
-                                    <textarea class="form-control form-control-solid" rows="6x" name="judul_ekstrakulikuler">{{ $data->judul_ekstrakulikuler }}</textarea>
+                                    <textarea class="form-control form-control-solid" rows="6x" name="judul_ekstra">{{ $data->judul_ekstra }}</textarea>
 
-                                    @error('judul_ekstrakulikuler')
+                                    @error('judul_ekstra')
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
@@ -35,23 +35,14 @@
                                     @enderror
                                 </div>
 
-                                <section style="padding-top:60px;">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="card">
-                                                    <div class="card-header">
-                                                        Deskripsi
-                                                    </div>
-                                                    <div class="card-body">
-                                                        {{--  <form method="POST" enctype="multipart/form-data">  --}}
-                                                        <textarea name="deskripsi_ekstrakulikuler" id="mytextarea"></textarea>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Deskripsi :</label>
+                                    <textarea class="form-control form-control-solid" rows="6x" name="deskripsi_ekstrakulikuler">{{ $data->deskripsi_ekstrakulikuler }}</textarea>
+
+                                    @error('deskripsi_ekstrakulikuler')
+                                        <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
 
 
 

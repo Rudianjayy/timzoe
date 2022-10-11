@@ -79,7 +79,7 @@
                     @foreach ($i as $i )
 
                 <div class="row high-gutters">
-                    <div class="col-lg-6  ">
+                    <div class="col-lg-6">
                         <div class="accrodion-grp" data-grp-name="career-one__accrodion">
                             <div class="accrodion">
                                 <div class="accrodion-title">
@@ -295,6 +295,9 @@
 <!-- Mirrored from themesflat.com/html/bidzend/item-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Sep 2022 01:13:11 GMT -->
 
 </html>
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 8f0894d7d4d4ac9bcf4dc6f17e995012c01662a9

@@ -7,8 +7,13 @@ use App\Http\Controllers\AlbumController;
 use App\Http\Controllers\IdukaController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DetailController;
+use App\Http\Controllers\KepsekController;
+use App\Http\Controllers\SliderController;
+use App\Http\Controllers\JurusanController;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\MuhinewsController;
+use App\Http\Controllers\PrestasiController;
+use App\Http\Controllers\SambutanController;
 use App\Http\Controllers\FasilitasController;
 use App\Http\Controllers\FotoidukaController;
 use App\Http\Controllers\KesiswaanController;
@@ -17,6 +22,7 @@ use App\Http\Controllers\KompetensiController;
 use App\Http\Controllers\DataidentitasController;
 use App\Http\Controllers\ProfilSekolahController;
 use App\Http\Controllers\FotokompetensiController;
+use App\Http\Controllers\PersonaljurusanController;
 use App\Http\Controllers\IdentitasSekolahController;
 use App\Http\Controllers\FooteerController;
 
@@ -37,6 +43,75 @@ use App\Http\Controllers\FooteerController;
 Route::get('/',[LandingController::class,'index'])->name('landing');
 
 
+
+
+
+//manajemen beranda
+
+Route::get('/slideradmin',[SliderController::class, 'slideradmin'])->name('slideradmin');
+Route::get('/editslider/{id}',[SliderController::class, 'editslider'])->name('editslider');
+Route::post('/prosesslider/{id}',[SliderController::class, 'prosesslider'])->name('prosesslider');
+Route::get('/deleteslider/{id}',[SliderController::class, 'delete'])->name('delete');
+
+
+Route::get('/fotoslideradmin',[SliderController::class, 'fotoslideradmin'])->name('fotoslideradmin');
+Route::get('/tambahfotoslider',[SliderController::class, 'tambahfotoslider'])->name('tambahfotoslider');
+Route::post('/fotosliderproses',[SliderController::class, 'fotosliderproses'])->name('fotosliderproses');
+Route::get('/editfotoslider/{id}',[SliderController::class, 'editfotoslider'])->name('editfotoslider');
+Route::post('/prosesfotoslider/{id}',[SliderController::class, 'prosesfotoslider'])->name('prosesfotoslider');
+Route::get('/deletefotoslider/{id}',[SliderController::class, 'delete2'])->name('delete');
+
+
+
+Route::get('/sambutanadmin',[SambutanController::class, 'loby2'])->name('sambutanadmin');
+Route::get('/tambahsambutan',[SambutanController::class, 'tambahsambutan'])->name('tambahsambutan');
+Route::post('/submitdata2',[SambutanController::class, 'submitdata2'])->name('submitdata2');
+Route::get('/editsambutan/{id}',[SambutanController::class, 'editsambutan'])->name('editsambutan');
+Route::post('/submitedit2/{id}',[SambutanController::class, 'submitedit2'])->name('submitedit2');
+Route::get('/deletesambutan/{id}',[SambutanController::class, 'delete'])->name('delete');
+
+
+
+
+Route::get('/datajurusan',[JurusanController::class, 'loby3'])->name('datajurusan');
+Route::get('/indexjurusan/{id}',[JurusanController::class, 'indexjurusan'])->name('indexjurusan');
+Route::get('/tambahjurusan',[JurusanController::class, 'tambahjurusan'])->name('tambahjurusan');
+Route::post('/submitdata3',[JurusanController::class, 'submitdata3'])->name('submitdata3');
+Route::get('/editjurusan/{id}',[JurusanController::class, 'editjurusan'])->name('editjurusan');
+Route::post('/submitedit3/{id}',[JurusanController::class, 'submitedit3'])->name('submitedit3');
+Route::get('/deletejurusan/{id}',[JurusanController::class, 'delete'])->name('delete');
+
+
+
+Route::get('/adminfotojurusan',[PersonaljurusanController::class, 'loby4'])->name('adminfotojurusan');
+Route::get('/indexfotojurusan/{id}',[PersonaljurusanController::class, 'indexfotojurusan'])->name('indexfotojurusan');
+Route::get('/tambahfotojurusan',[PersonaljurusanController::class, 'tambahfotojurusan'])->name('tambahfotojurusan');
+Route::post('/submitdata4',[PersonaljurusanController::class, 'submitdata4'])->name('submitdata4');
+Route::get('/deletefotojurusan/{id}',[PersonaljurusanController::class, 'delete'])->name('delete');
+
+
+Route::get('/indexprestasi',[PrestasiController::class, 'indexprestasi'])->name('indexprestasi');
+Route::get('/tambahprestasi',[PrestasiController::class, 'tambahprestasi'])->name('tambahprestasi');
+Route::post('/submitdata5',[PrestasiController::class, 'submitdata5'])->name('submitdata5');
+Route::get('/editprestasi/{id}',[PrestasiController::class, 'editprestasi'])->name('editprestasi');
+Route::post('/submitedit5/{id}',[PrestasiController::class, 'submitedit5'])->name('submitedit5');
+Route::get('/deleteprestasi/{id}',[PrestasiController::class, 'delete'])->name('delete');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //muinews
 Route::get('/muhinews',[MuhinewsController::class, 'index'])->name('muhinews');
 Route::get('/muhinewsadmin',[MuhinewsController::class, 'indexadmin'])->name('muhinewsadmin');
@@ -45,6 +120,18 @@ Route::post('/muhinewsproses',[MuhinewsController::class, 'muhinewsproses'])->na
 Route::get('/editmuhinews/{id}',[MuhinewsController::class, 'editmuhinews'])->name('editmuhinews');
 Route::post('/editproses2/{id}',[MuhinewsController::class, 'editproses2'])->name('editproses2');
 Route::get('/deletemuhinews/{id}',[MuhinewsController::class, 'delete'])->name('delete');
+
+//muhiblog
+Route::get('/muhiblog/{id}',[MuhiblogController::class, 'muhiblog'])->name('muhiblog');
+Route::get('/muhiblogadmin',[MuhiblogController::class, 'muhiblogadmin'])->name('muhiblogadmin');
+Route::get('/tambahmuhiblog',[MuhiblogController::class, 'tambahmuhiblog'])->name('tambahmuhiblog');
+Route::post('/muhiblogproses',[MuhiblogController::class, 'muhiblogproses'])->name('muhiblogproses');
+Route::get('/editmuhiblog/{id}',[MuhiblogController::class, 'editmuhiblog'])->name('editmuhiblog');
+Route::post('/editmuhiblogproses/{id}',[MuhiblogController::class, 'editmuhiblogproses'])->name('editmuhiblogproses');
+Route::get('/deletemuhiblog/{id}',[MuhiblogController::class, 'delete'])->name('delete');
+
+
+
 
 //tentangkami
 
@@ -108,14 +195,6 @@ Route::get('/deletefasilitas/{id}',[FasilitasController::class, 'delete'])->name
 
 //kompetensikeahlian
 Route::get('/kompetensi',[KompetensiController::class,'kompetensi'])->name('kompetensi');
-Route::get('/tkj',[KompetensiController::class,'tkj'])->name('tkj');
-Route::get('/rpl',[KompetensiController::class,'rpl'])->name('rpl');
-Route::get('/bd',[KompetensiController::class,'bd'])->name('bd');
-Route::get('/ak',[KompetensiController::class,'ak'])->name('ak');
-Route::get('/dkv',[KompetensiController::class,'dkv'])->name('dkv');
-Route::get('/mp',[KompetensiController::class,'mp'])->name('mp');
-Route::get('/ph',[KompetensiController::class,'ph'])->name('ph');
-Route::get('/ulp',[KompetensiController::class,'ulp'])->name('ulp');
 
 Route::get('/kompetensiadmin',[KompetensiController::class, 'kompetensiadmin'])->name('kompetensiadmin');
 Route::get('/tambahkompetensi',[KompetensiController::class, 'tambahkompetensi'])->name('tambahkompetensi');
@@ -130,6 +209,7 @@ Route::post('/fotokompetensiproses',[FotokompetensiController::class, 'fotokompe
 Route::get('/editfotokompetensi/{id}',[FotokompetensiController::class, 'editfotokompetensi'])->name('editfotokompetensi');
 Route::post('/editprosesfotokompetensi/{id}',[FotokompetensiController::class, 'editprosesfotokompetensi'])->name('editprosesfotokompetensi');
 Route::get('/deletefotokompetensi/{id}',[FotokompetensiController::class, 'delete'])->name('delete');
+
 
 
 
@@ -209,10 +289,6 @@ Route::get('/upj',[UpjController::class,'upj'])->name('upj');
 Route::get('/ppdb', [PpdbController::class, 'ppdb'])->name('ppdb');
 
 
-//detail blog
-
-Route::get('/detailmuhi',[DetailController::class,'detailmuhi'])->name('detailmuhi');
-Route::get('/detailmuhi2',[DetailController::class,'detailmuhi2'])->name('detailmuhi2');
 
 
 

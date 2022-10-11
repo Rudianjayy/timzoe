@@ -10,7 +10,11 @@
                                 alt="nft-gaming" width="120" height="100">
                         </a>
                     </div>
-                    <p class="sub-widget-logo">{!! $ft->deskripsi_footeer !!}</p>
+                    <p class="sub-widget-logo">Dari SMK Muhammadiyah 1 Genteng <br>
+                        "SMKS Muhammadiyah 1 Genteng di dirikan pada tahun 02 Januari 1968. SMK yang terdiri dari
+                        beberapa jurusan antara lain : 1. Teknik Komputer Jaringan dan Telekomunikasi 2. Desain
+                        Komunikasi Visual 3. Manajemen Perkantoran dan Layanan Bisnis 4. Akuntansi dan Keuangan Lembaga
+                        5. Pemasaran 6. Perhotelan"</p>
                     <div class="widget-social">
                         <ul>
                             <li><a href="https://www.facebook.com/smkmuhigenteng"><i
@@ -45,23 +49,26 @@
             <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                 <div class="widget widget-post">
                     <h5 class="title-widget">Berita </h5>
+                    @php
+                        $muhiberita = \App\Models\Muhinews::paginate(3);
+                    @endphp
                     <ul class="post-new">
-                        @foreach ($f as $f)
+                        @foreach ($muhiberita as $mb)
                             <li>
                                 <div class="post-img">
-                                    <img src="{{ asset('fotomahasiswa/' . $f->foto) }}" alt="Post New">
+                                    <img src="{{ asset('fotomahasiswa/' . $mb->foto) }}" alt="Post New">
                                 </div>
                                 <div class="post-content">
-                                    <h6 class="title"><a href="/muhinews">{{ $f->deskripsi_muhinews }}</a></h6>
+                                    <h6 class="title"><a href="/muhinews">{{ $mb->deskripsi_muhinews }}</a></h6>
                                     <a href="/muhinews" class="post-date"><i
-                                            class="far fa-calendar-week"></i>{{ $f->created_at }}</a>
+                                            class="far fa-calendar-week"></i>{{ $mb->created_at }}</a>
                                 </div>
                             </li>
                         @endforeach
                     </ul>
                 </div>
-            </div>
-            <h2>kkkkkkk</h2>
+            </div>  
+
         </div>
     </div>
 </footer>

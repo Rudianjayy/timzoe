@@ -2,61 +2,29 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Jurusan;
+use App\Models\Muhinews;
 use App\Models\Kompetensi;
 use Illuminate\Http\Request;
 use App\Models\Fotokompetensi;
-use App\Models\Muhinews;
-
+use App\Models\Personaljurusan;
+use App\Models\Footeer;
 class KompetensiController extends Controller
 {
     public function kompetensi() {
         $kompetensi = Kompetensi::all();
         $foto = Fotokompetensi::all();
         $f = Muhinews::paginate(4 );
-        return view('kurikulum.kompetensi', compact('kompetensi','foto','f'));
+        $kh = Jurusan::all();
+        $pj = Personaljurusan::all();
+        $kp = Kompetensi::all();
+        $ft = Footeer::all();
+        return view('kurikulum.kompetensi', compact('kompetensi','foto','f','kh','pj','kp','ft'));
     }
     public function tkj(){
         $f = Muhinews::all();
         return view('kurikulum.kompetensi.tkj', compact('f'));
     }
-    public function rpl(){
-        $f = Muhinews::all();
-        return view('kurikulum.kompetensi.rpl', compact('f'));
-    }
-    public function bd(){
-        $f = Muhinews::all();
-        return view('kurikulum.kompetensi.bd', compact('f'));
-    }
-    public function ak(){
-        $f = Muhinews::all();
-        return view('kurikulum.kompetensi.ak', compact('f'));
-    }
-    public function dkv(){
-        $f = Muhinews::all();
-        return view('kurikulum.kompetensi.dkv', compact('f'));
-    }
-    public function ulp(){
-        $f = Muhinews::all();
-        return view('kurikulum.kompetensi.ulp', 'f');
-    }
-    public function mp(){
-        $f = Muhinews::all();
-        return view('kurikulum.kompetensi.mp', compact('f'));
-    }
-    public function ph(){
-        $f = Muhinews::all();
-        return view('kurikulum.kompetensi.ph', compact('f'));
-    }
-
-
-
-
-
-
-
-
-
-
 
 
 

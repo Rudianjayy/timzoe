@@ -3,31 +3,31 @@
 namespace App\Http\Controllers;
 
 use App\Models\Album;
+use App\Models\Slider;
+use App\Models\Jurusan;
 use App\Models\Muhinews;
-use App\Models\footeer;
+use App\Models\Prestasi;
+use App\Models\Sambutan;
+use App\Models\Fotoslider;
+use App\Models\Footeer;
 use Illuminate\Http\Request;
-// use App\Models\Slider;
-// use App\Models\Fotoslider;
-// use App\Models\Sambutan;
-// use App\Models\Jurusan;
-// use App\Models\Personaljurusan;
-// use App\Models\jurusan;p
-
+use App\Models\Personaljurusan;
 
 class LandingController extends Controller
 {
     public function index () {
-        $data = Album::all();
-        $d = Muhinews::all();
-        $f = Muhinews::all();
-        $ft = footeer::all();
-        // $ss = Slider::all();
-        // $fs = Fotoslider::all();
-        // $sa = Sambutan::all();
-        // $js = Jurusan::all();
-        // $personal = Personaljurusan::all();
-        // $kh = Jurusan::all();
-
-        return view('landingpage.landing', compact('data','d','f','ft'));
+        $data = Album::paginate(2);
+        $k = Muhinews::paginate(6);
+        $d = Muhinews::paginate(6);
+        $f = Muhinews::paginate(3);
+        $ss = Slider::all();
+        $fs = Fotoslider::all();
+        $ft = Footeer::all();
+        $sa = Sambutan::all();
+        $js = Jurusan::all();
+        $personal = Personaljurusan::all();
+        $kh = Jurusan::all();
+        $ps = Prestasi::all();
+        return view('landingpage.landing', compact('data','d','f','ss','fs','ft','sa','js','personal','kh','ps'));
     }
 }

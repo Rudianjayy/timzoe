@@ -18,4 +18,7 @@ class Muhinews extends Model
         return Carbon::parse($this->attributes['created_at'])
             ->translatedFormat(' d F Y');
     }
+    public function judul(){
+        return $this->hasMany(Muhiblog::class);
+    }
 }

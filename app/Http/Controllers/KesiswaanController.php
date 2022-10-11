@@ -1,23 +1,24 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\ekstrakulikuler;
-use App\Models\Mikrotik;
 use App\Models\osis;
-use App\Models\alumni;
-// use App\Models\jurusan;
+use App\Models\Jurusan;
+use App\Models\Mikrotik;
 use App\Models\Muhinews;
 use App\Models\Footeer;
 use Illuminate\Http\Request;
+use App\Models\ekstrakulikuler;
+use App\Models\alumni;
+
 
 class KesiswaanController extends Controller
 {
     public function ekstra(){
         $f = Muhinews::all();
-        $d = ekstrakulikuler::all();
+        $d = Muhinews::paginate(6);
         $ft = Footeer::all();
-        // $kh= jurusan::all();
-        return view('kesiswaan.ekstrakulikuler.ekstra ', compact('f','d','ft'));
+        $data = ekstrakulikuler::all();
+        return view('kesiswaan.ekstrakulikuler.ekstra',compact('data','f','d','ft'));
     }
     public function ekstrakulikuleradmin() {
         $data = ekstrakulikuler::all();
@@ -317,24 +318,24 @@ class KesiswaanController extends Controller
 
 
 
-    public function alumni() {
+    public function alumni(Request $request) {
         $l = alumni::all();
-        $f = Muhinews::paginate(4);
-        // $kh= jurusan::all();
         $ft = Footeer::all();
+        $f = Muhinews::paginate(4);
         return view('kesiswaan.alumni.alumni',compact('l','f','ft'));
     }
-    public function alumniadmin() {
+        public function alumniadmin() {
         $data = alumni::all();
         return view('kesiswaan.alumni.alumni-admin', compact('data'));
     }
-    public function tambahalumni()
+        public function tambahalumni()
     {
         return view('kesiswaan.alumni.tambahalumni');
     }
 
     public function alumniproses6(Request $request){
         // dd($request->all());
+ 
         $this->validate($request,[
             'foto' =>'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
             'judul_alumni' =>'required',

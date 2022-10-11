@@ -2,16 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\IdentitasSekolah;
+use App\Models\Jurusan;
 use App\Models\Muhinews;
 use Illuminate\Http\Request;
+use App\Models\IdentitasSekolah;
 
 class IdentitasSekolahController extends Controller
 {
     public function identitassekolah(){
         $i = identitassekolah::all();
         $f = Muhinews::paginate(4);
-        return view('identitassekolah.identitas_sekolah',compact('i','f'));
+        $kh = Jurusan::all();
+        return view('identitassekolah.identitas_sekolah',compact('i','f','kh'));
     }
     public function identitassekolahadmin()
     {

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Album;
+use App\Models\Jurusan;
 use App\Models\Muhinews;
 use Illuminate\Http\Request;
 
@@ -11,7 +12,8 @@ class AlbumController extends Controller
     public function loby(){
         $data = Album::all();
         $f = Muhinews::paginate(4);
-        return view ('album.data-album',compact('data','f'));
+        $kh = Jurusan::all();
+        return view ('album.data-album',compact('data','f','kh'));
     }
 
     public function tambahalbum()

@@ -128,7 +128,6 @@
 
     <a id="scroll-top"></a>
 
-   
 
     <script src="{{ asset('landing/html/bidzend/assets/js/jquery.min.js') }}"></script>
     <script src="{{ asset('landing/html/bidzend/assets/js/jquery.easing.js') }}"></script>

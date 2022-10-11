@@ -128,7 +128,32 @@
 
     <a id="scroll-top"></a>
 
-   
+    <div class="modal fade popup" id="popup_bid_success" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="modal-body space-y-20 pd-40">
+                    <h3 class="text-center">Your Bidding
+                        Successfuly Added</h3>
+                    <p class="text-center">your bid <span class="price color-popup">(4ETH) </span> has been listing to
+                        our database</p>
+                    <a href="#" class="btn btn-primary"> Watch the listings</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade popup" id="popup_bid" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+
+            </div>
+        </div>
+    </div>
 
     <script src="{{ asset('landing/html/bidzend/assets/js/jquery.min.js') }}"></script>
     <script src="{{ asset('landing/html/bidzend/assets/js/jquery.easing.js') }}"></script>

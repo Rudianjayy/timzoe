@@ -10,7 +10,7 @@
 
     <meta charset="utf-8">
     <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
-    <title>Smk Muhammadiyah 1 Genteng</title>
+    <title>SMK Muhammadiyah 1 Genteng</title>
     <meta name="author" content="themesflat.com">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -24,6 +24,7 @@
     <link rel="apple-touch-icon-precomposed" href="{{ asset('landing/html/bidzend/assets/icon/muhilog.png') }}">
     <link rel="shortcut icon" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
     <link rel="apple-touch-icon-precomposed" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
+
 
 
     {{-- css juga kuambil dri ppdb landing --}}
@@ -51,52 +52,10 @@
 
     <div class="preload preload-container">
         {{-- <div class="preload-logo"></div>  --}}
-        <div class="preload-logo"><img src="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}" alt="Image" style="width:570 !important;"></div>
+        <div class="preload-logo"><img src="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}"
+                alt="Image" style="width:570 !important;"></div>
     </div>
 
-    {{-- <div id="wrapper">
-        <div id="page" class="clearfix">
-            {{--  <div class="topbar">
-                <div class="container">
-                    <div class="topbar-inner flex">
-                        <div class="menu-options flex">
-                            <div class="ethereum">
-                                <div id="ethereum" class="dropdown">
-                                    <a href="#" class="btn-selector nolink">Ethereum</a>
-                                    <ul>
-                                        <li><span>Ethereum</span></li>
-                                        <li><span>Bitski</span></li>
-                                        <li><span>Fortmatic</span></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="english">
-                                <div id="english" class="dropdown">
-                                    <a href="#" class="btn-selector nolink">English</a>
-                                    <ul>
-                                        <li><span>English</span></li>
-                                        <li><span>USA</span></li>
-                                        <li><span>France</span></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="topbar-right flex">
-                            <span>New Product Coming Soon</span>
-                            <div class="countdown">
-                                <span class="js-countdown" data-timer="516400" data-labels=" :  ,  : , : , "></span>
-                            </div>
-                            <ul class="socical-icon flex">
-                                <li><a href="#" class="active"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div> --}}
 
     @include('koneksi.navbar')
 
@@ -107,12 +66,15 @@
                     <div class="slider-item">
                         <div class="overlay"></div>
                         <div class="slider-inner flex home-1">
-                            <div class="slider-content">
-                                <h1 class="heading">Selamat Datang</h1>
-                                <p class="sub-heading">Anda sekarang berada di website sekolah </p>
-                                <p class="sub-heading">SMK Muhammadiyah 1 Genteng </p>
 
-                                {{-- <div class="button-slider">
+                            @foreach ($ss as $ss)
+                                <div class="slider-content">
+                                    <h1 class="heading">{{ $ss->deskripsi1_slider }}</h1>
+                                    <br>
+                                    <p class="sub-heading">{{ $ss->deskripsi2_slider }} </p>
+                                    <p class="sub-heading">{{ $ss->deskripsi3_slider }} </p>
+
+                                    {{-- <div class="button-slider">
                                             <a href="explore-1.html"
                                                 class="sc-button btn-bordered-white style letter "><span>Explore
                                                     More</span></a>
@@ -120,17 +82,47 @@
                                                 class="sc-button btn-bordered-white style file"><span>Create
                                                     Now</span></a>
                                         </div> --}}
-                            </div>
-                            <div class="slider-img">
-                                <a href="/login">
-                                    <div class="img-home-1"><img src="{{ asset('landing/html/bidzend/assets/images/product-item/remini2-removebg-preview.png') }}" alt="Image" style="width:570 !important;"></div>
-                                </a>
-                            </div>
+                                </div>
+
+
+                                <div class="slider-img">
+                                    <a href="#">
+                                        <div class="img-home-1"><img src="{{ asset('fotomahasiswa/' . $ss->foto) }}"
+                                                alt="Image" style="width:900px !important; margin-top: 15px; margin-left: 10px;">
+                                        </div>
+                                    </a>
+                                </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
+                @foreach ($fs as $fs)
+                    <div class="swiper-slide wow fadeInUp">
+                        <div class="slider-item ">
+                            <div class="overlay "></div>
+                            <div class="container">
 
-               
+
+                                <div class="slider-inner style-2 home-1 flex">
+                                    <div class="slider-img flex">
+
+                                        <div class="img-left">
+                                            <div class="img-1"><img
+                                                    src="{{ asset('fotomahasiswa/' . $fs->foto_slider) }}"
+                                                    {{-- src="{{ asset('landing/html/bidzend/assets/images/slider/rigen.jpg') }}" --}} alt="Image"></div>
+                                        </div>
+
+
+
+                                        <div class="img-right">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
             </div>
             <div class="swiper-pagination"></div>
             <div class="swiper-button-next btn-slide-next "></div>
@@ -145,19 +137,19 @@
         <!--container-->
         <div class="container">
             <div class="row">
-                <div class="col-12 col-md-6  wow fadeInRight">
-                    <div class="text-video">
-                        <div class="text-center">
-                            <h4>Sambutan</h4>
+                @foreach ($sa as $sa)
+                    <div class="col-12 col-md-6  wow fadeInRight">
+                        <div class="text-video">
+                            {{-- <div class="text-center">
+                            <h1>Sambutan</h1>
                             <br>
                             <h2 class="title-h2">Kepala Sekolah</h2>
-                        </div>
-                        <br>
-                        <br>
+                        </div> --}}
 
 
-                        <p style="text-align: center;">“Prakata KEPALA SMK MUHAMMADIYAH 1 GENTENG”</p>
-                        <p style="text-align: center;">ASSALAMUALAIKUM WARAHMATULLAHI WABARAKATUH</p>
+
+                            <p style="text-align: center;">{!! $sa->deskripsi !!}</p>
+                            {{-- <p style="text-align: center;">ASSALAMUALAIKUM WARAHMATULLAHI WABARAKATUH</p>
                         <br>
                         <br>
 
@@ -181,13 +173,15 @@
                         <p style="text-align: center;"> Kepala SMK Muhammadiyah 1 Genteng</p>
 
 
-                        <p style="text-align: center;"><strong>Taslim, S.Ag, M.Pd</strong></p>
+                        <p style="text-align: center;"><strong>Taslim, S.Ag, M.Pd</strong></p> --}}
+                        </div>
                     </div>
-                </div>
-                <div class="img-right">
+                    <div class="img-right">
 
-                    <img src="{{ asset('landing/html/bidzend/assets/images/product-item/kepalasekolah.jpeg') }}" alt="" width="450px">
-                </div>
+                        <img src="{{ asset('fotomahasiswa/' . $sa->foto) }}" alt="" width="450px"
+                            style="margin-left: 80px;">
+                    </div>
+                @endforeach
             </div>
         </div>
     </section>
@@ -209,72 +203,25 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="sc-category wow fadeInUp pl-19" data-wow-delay="400ms" data-wow-duration="1000ms">
-                        <div class="card-media">
-                            <img src="{{ asset('landing/html/bidzend/assets/images/logo/upj.png') }}" alt="">
-                        </div>
-                        <div class="card-content">
-                            <h5><a href="#"> Teknik Komputer Dan Jaringan(TKJ)</a></h5>
-                            <p>Sed ut perspiciatis unde omnis natus error sit voluptatem</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="sc-category wow fadeInUp pl-19" data-wow-delay="400ms" data-wow-duration="1000ms">
-                        <div class="card-media">
-                            <img src="{{ asset('landing/html/bidzend/assets/images/logo/Rekayasa Perangkat Lunak.jpg') }}" alt="">
-                        </div>
-                        <div class="card-content">
-                            <h5><a href="#">Rekayasa Perangkat Lunak(RPL)</a></h5>
-                            <p>Sed ut perspiciatis unde omnis natus error sit voluptatem</p>
+                @php
+                    $personal = \App\Models\Personaljurusan::all();
+                @endphp
+                @foreach ($personal as $p)
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="sc-category wow fadeInUp pl-19" data-wow-delay="400ms"
+                            data-wow-duration="1000ms">
+                            <div class="card-media">
+                                <img src="{{ asset('fotojurusan/' . $p->foto) }}" alt="">
+                            </div>
+                            <div class="card-content">
+                                <h5><a href="/indexjurusan/{{ $p->id }}"> {{ $p->nama_jurusan }}</a>
+                                </h5>
+                                <p> <a href="/indexjurusan/{{ $p->id }}">{!! $p->deskripseh !!}Selengkapnya...</a></p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="sc-category wow fadeInUp pl-40" data-wow-delay="600ms" data-wow-duration="1000ms">
-                        <div class="card-media">
-                            <img src="{{ asset('landing/html/bidzend/assets/images/logo/dkvv.jpg') }}" alt="">
-                        </div>
-                        <div class="card-content">
-                            <h5><a href="#">Desain Komunikasi Visual(DKV)</a></h5>
-                            <p>Sed ut perspiciatis unde omnis natus error sit voluptatem</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="sc-category wow fadeInUp mg-bt-0" data-wow-delay="200ms" data-wow-duration="1500ms">
-                        <div class="card-media">
-                            <img src="{{ asset('landing/html/bidzend/assets/images/logo/maxresdefault.jpg') }}" alt="">
-                        </div>
-                        <div class="card-content">
-                            <h5><a href="#">Otomasi & Tata Kelola Perkantoran(OTKP)</a></h5>
-                            <p>Sed ut perspiciatis unde omnis natus error sit voluptatem</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="sc-category wow fadeInUp mg-bt-0 pl-19" data-wow-delay="400ms" data-wow-duration="1500ms">
-                        <div class="card-media">
-                            <img src="{{ asset('landing/html/bidzend/assets/images/logo/PH.jpg') }}" alt="">
-                        </div>
-                        <div class="card-content">
-                            <h5><a href="#">Perhotelan(PH)</a></h5>
-                            <p>Sed ut perspiciatis unde omnis natus error sit voluptatem</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="sc-category wow fadeInUp mg-bt-0 pl-40 end" data-wow-delay="600ms" data-wow-duration="1500ms">
-                        <div class="card-media">
-                            <img src="{{ asset('landing/html/bidzend/assets/images/logo/R.jpg') }}" alt="">
-                        </div>
-                        <div class="card-content">
-                            <h5><a href="#">Akuntansi & Keuangan Lembaga(AKL)</a></h5>
-                            <p>Sed ut perspiciatis unde omnis natus error sit voluptatem</p>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
+
             </div>
         </div>
     </section>
@@ -291,34 +238,40 @@
                             </div>
                         </div>
                         <div class="content-right">
-                            <a href="/muhinews" class="sc-button style letter style-2"><span>Lebih Banyak</span> </button></a>
+                            <a href="/muhinews" class="sc-button style letter style-2"><span>Lebih Banyak</span>
+                                </button></a>
                         </div>
                     </div>
                 </div>
                 <div class="tf-section sc-card-blog">
                     <div class="container">
                         <div class="row">
-                            @foreach ($d as $d )
-                            <div class="col-lg-4 col-md-6">
-                                <article class="sc-card-article">
-                                    <div class="card-media">
-                                        <img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt="" style="width: 366px; height:183px;">
-                                    </div>
-                                    <div class="content">
-                                        <div class="meta-info">
-                                            <div class="item author">
-                                                <b><strong>{{$d->judul}}</strong></b>
+                            @foreach ($d as $d)
+                                <div class="col-lg-4 col-md-6">
+                                    <article class="sc-card-article">
+                                        <div class="card-media">
+                                            <img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt=""
+                                                style="width: 366px; height:183px;">
+                                        </div>
+                                        <div class="content">
+                                            <div class="meta-info">
+                                                <div class="item author">
+                                                    <b><strong>{{ $d->judul }}</strong></b>
+                                                </div>
+                                                <div class="item date">{{ $d->created_at }}</div>
                                             </div>
-                                            <div class="item date">{{$d->created_at}}</div>
+                                            <div class="text-article">
+                                                <p>{{ $d->deskripsi_muhinews }}</p>
+                                            </div>
                                         </div>
-                                        <div class="text-article">
-                                            <p>{{$d->deskripsi_muhinews}}</p>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
+                                    </article>
+                                </div>
                             @endforeach
                         </div>
+                        <!-- <div class="col-m   d-12">
+                        <div class="swiper-button-next btn-slide-next"></div>
+                        <div class="swiper-button-prev btn-slide-prev"></div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -454,7 +407,7 @@
                                     <div class="icon"><i class="ripple"></i></div>
                                     <h3>Prestasi</h3>
                                 </div>
-                                <p class="desc">Most popular gaming digital nft market place </p>
+                                {{-- <p class="desc">Most popular gaming digital nft market place </p> --}}
                             </div>
                         </div>
                     </div>
@@ -462,217 +415,37 @@
                 <div class="col-md-12">
                     <div class="swiper-container live-auc">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide wow fadeInUp wow fadeInUp">
-                                <div class="slider-item">
-                                    <div class="sc-product-item">
-                                        <div class="product-img active">
-                                            <img src="{{ asset('landing/html/bidzend/assets/images/post/logo1.jpeg') }}" alt="Image" style="width: 300px; height:220px;">
-                                        </div>
-                                        <div class="product-content">
-                                            <h5 class="title"><a href="item-details.html">‘’3D Space Rocket
-                                                    With
-                                                    Smoke Premium’’</a> </h5>
-                                            <div class="product-author flex">
-                                                <div class="avatar">
-                                                    <img src="{{ asset('landing/html/bidzend/assets/images/avatar/avt-7.jpg') }}" alt="Image">
-                                                </div>
-                                                <div class="infor">
-                                                    <div class="author-name"><a href="author.html">Daniel M.
-                                                            Bivens</a></div>
-                                                    <span>Creator</span>
-                                                </div>
-                                            </div>
+                            @foreach ($ps as $ps)
+                                <div class="swiper-slide wow fadeInUp wow fadeInUp">
+                                    <div class="slider-item">
 
+
+                                        <div class="sc-product-item" style="">
+                                            <div class="product-img active">
+                                                <img src="{{ asset('fotomahasiswa/' . $ps->foto) }}" alt="Image"
+                                                    style="width: 300px; height:220px;">
+                                            </div>
+                                            <div class="product-content">
+                                                <h5 class="author-name"><a
+                                                        href="item-details.html">{!! $ps->judul_prestasi !!}</a> </h5>
+                                                <div class="product-author flex">
+                                                    <div class="infor">
+                                                        <div class="tittle"><a
+                                                                href="author.html">{!! $ps->deskripsi_prestasi !!}</a></div>
+                                                        <br>
+                                                        <div class="avatar">
+                                                            <img src="{{ asset('landing/html/bidzend/assets/images/avatar/avt-7.jpg') }}"
+                                                                alt="Image">
+                                                            <span>Sang juara</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="swiper-slide wow fadeInUp wow fadeInUp">
-                                <div class="slider-item">
-                                    <div class="sc-product-item">
-                                        <div class="product-img ">
-                                            <img src="{{ asset('landing/html/bidzend/assets/images/product-item/item-2.jpg') }}" alt="Image">
-                                            <div class="countdown">
-                                                <span class="js-countdown" data-timer="516400" data-labels=" :  ,  : , : , "></span>
-                                            </div>
-                                            <a href="#" class="sc-button style letter"><span>Place
-                                                    Bid</span></a>
-                                            <label>BSC</label>
-                                        </div>
-                                        <div class="product-content">
-                                            <h5 class="title"><a href="item-details.html">‘’3D Space Rocket
-                                                    With
-                                                    Smoke Premium’’</a> </h5>
-                                            <div class="product-author flex">
-                                                <div class="avatar">
-                                                    <img src="{{ asset('landing/html/bidzend/assets/images/avatar/avt-7.jpg') }}" alt="Image">
-                                                </div>
-                                                <div class="infor">
-                                                    <div class="author-name"><a href="author.html">Daniel M.
-                                                            Bivens</a></div>
-                                                    <span>Creator</span>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide wow fadeInUp wow fadeInUp">
-                                <div class="slider-item">
-                                    <div class="sc-product-item">
-                                        <div class="product-img ">
-                                            <img src="{{ asset('landing/html/bidzend/assets/images/product-item/item-3.jpg') }}" alt="Image">
-                                            <div class="countdown">
-                                                <span class="js-countdown" data-timer="516400" data-labels=" :  ,  : , : , "></span>
-                                            </div>
-                                            <a href="#" class="sc-button style letter"><span>Place
-                                                    Bid</span></a>
-                                            <label>BSC</label>
-                                        </div>
-                                        <div class="product-content">
-                                            <h5 class="title"><a href="item-details.html">‘’3D Space Rocket
-                                                    With
-                                                    Smoke Premium’’</a> </h5>
-                                            <div class="product-author flex">
-                                                <div class="avatar">
-                                                    <img src="{{ asset('landing/html/bidzend/assets/images/avatar/avt-7.jpg') }}" alt="Image">
-                                                </div>
-                                                <div class="infor">
-                                                    <div class="author-name"><a href="author.html">Daniel M.
-                                                            Bivens</a></div>
-                                                    <span>Creator</span>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide wow fadeInUp wow fadeInUp">
-                                <div class="slider-item">
-                                    <div class="sc-product-item">
-                                        <div class="product-img ">
-                                            <img src="{{ asset('landing/html/bidzend/assets/images/product-item/item-1.jpg') }}" alt="Image">
-                                            <div class="countdown">
-                                                <span class="js-countdown" data-timer="516400" data-labels=" :  ,  : , : , "></span>
-                                            </div>
-                                            <a href="#" class="sc-button style letter"><span>Place
-                                                    Bid</span></a>
-                                            <label>BSC</label>
-                                        </div>
-                                        <div class="product-content">
-                                            <h5 class="title"><a href="item-details.html">‘’3D Space Rocket
-                                                    With
-                                                    Smoke Premium’’</a> </h5>
-                                            <div class="product-author flex">
-                                                <div class="avatar">
-                                                    <img src="{{ asset('landing/html/bidzend/assets/images/avatar/avt-7.jpg') }}" alt="Image">
-                                                </div>
-                                                <div class="infor">
-                                                    <div class="author-name"><a href="author.html">Daniel M.
-                                                            Bivens</a></div>
-                                                    <span>Creator</span>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide wow fadeInUp wow fadeInUp">
-                                <div class="slider-item">
-                                    <div class="sc-product-item">
-                                        <div class="product-img ">
-                                            <img src="{{ asset('landing/html/bidzend/assets/images/product-item/item-1.jpg') }}" alt="Image">
-                                            <div class="countdown">
-                                                <span class="js-countdown" data-timer="516400" data-labels=" :  ,  : , : , "></span>
-                                            </div>
-                                            <a href="#" class="sc-button style letter"><span>Place
-                                                    Bid</span></a>
-                                            <label>BSC</label>
-                                        </div>
-                                        <div class="product-content">
-                                            <h5 class="title"><a href="item-details.html">‘’3D Space Rocket
-                                                    With
-                                                    Smoke Premium’’</a> </h5>
-                                            <div class="product-author flex">
-                                                <div class="avatar">
-                                                    <img src="{{ asset('landing/html/bidzend/assets/images/avatar/avt-7.jpg') }}" alt="Image">
-                                                </div>
-                                                <div class="infor">
-                                                    <div class="author-name"><a href="author.html">Daniel M.
-                                                            Bivens</a></div>
-                                                    <span>Creator</span>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide wow fadeInUp wow fadeInUp">
-                                <div class="slider-item">
-                                    <div class="sc-product-item">
-                                        <div class="product-img ">
-                                            <img src="{{ asset('landing/html/bidzend/assets/images/product-item/item-2.jpg') }}" alt="Image">
-                                            <div class="countdown">
-                                                <span class="js-countdown" data-timer="516400" data-labels=" :  ,  : , : , "></span>
-                                            </div>
-                                            <a href="#" class="sc-button style letter"><span>Place
-                                                    Bid</span></a>
-                                            <label>BSC</label>
-                                        </div>
-                                        <div class="product-content">
-                                            <h5 class="title"><a href="item-details.html">‘’3D Space Rocket
-                                                    With
-                                                    Smoke Premium’’</a> </h5>
-                                            <div class="product-author flex">
-                                                <div class="avatar">
-                                                    <img src="{{ asset('landing/html/bidzend/assets/images/avatar/avt-7.jpg') }}" alt="Image">
-                                                </div>
-                                                <div class="infor">
-                                                    <div class="author-name"><a href="author.html">Daniel M.
-                                                            Bivens</a></div>
-                                                    <span>Creator</span>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide wow fadeInUp wow fadeInUp">
-                                <div class="slider-item">
-                                    <div class="sc-product-item">
-                                        <div class="product-img ">
-                                            <img src="{{ asset('landing/html/bidzend/assets/images/product-item/item-3.jpg') }}" alt="Image">
-                                            <div class="countdown">
-                                                <span class="js-countdown" data-timer="516400" data-labels=" :  ,  : , : , "></span>
-                                            </div>
-                                            <a href="#" class="sc-button style letter"><span>Place
-                                                    Bid</span></a>
-                                            <label>BSC</label>
-                                        </div>
-                                        <div class="product-content">
-                                            <h5 class="title"><a href="item-details.html">‘’3D Space Rocket
-                                                    With
-                                                    Smoke Premium’’</a> </h5>
-                                            <div class="product-author flex">
-                                                <div class="avatar">
-                                                    <img src="{{ asset('landing/html/bidzend/assets/images/avatar/avt-7.jpg') }}" alt="Image">
-                                                </div>
-                                                <div class="infor">
-                                                    <div class="author-name"><a href="author.html">Daniel M.
-                                                            Bivens</a></div>
-                                                    <span>Creator</span>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                         <div class="swiper-pagination"></div>
                         <div class="swiper-button-next btn-slide-next "></div>
@@ -788,46 +561,48 @@
                 </div>
 
                 <div class="col-md-12">
-
                     <div class="swiper-container trendy">
 
                         <div class="swiper-wrapper">
                             @foreach ($data as $row)
-
-                            <div class="swiper-slide wow fadeInUp">
-
-                                <div class="slider-item">
-                                    <div class="sc-product-item style-2">
-                                        <div class="product-img">
-                                            <img src="{{ asset('fotomahasiswa/' . $row->foto) }}" alt="" style="width: 400px; height:200px;">
-                                        </div>
-                                        <div class="card-content">
-                                            <div class="item author">
-                                                <b>
-                                                    <h4>{{$row->judul_album}}</h4>
-                                                </b>
+                                <div class="swiper-slide wow fadeInUp">
+                                    <div class="swiper-slide wow fadeInUp">
+                                        <div class="slider-item">
+                                            <div class="sc-product-item style-2">
+                                                <div class="product-img">
+                                                    <img src="{{ asset('fotomahasiswa/' . $row->foto) }}"
+                                                        alt="" style="width: 366px; height:183px;">
+                                                </div>
+                                                <div class="card-content">
+                                                    <div class="item author">
+                                                        <b>
+                                                            <h4>{{ $row->judul_album }}</h4>
+                                                        </b>
+                                                    </div>
+                                                    <h5 class="card-title">{!! $row->deskripsi !!}</h5>
+                                                </div>
                                             </div>
-                                            <h5 class="card-title">{!! $row->deskripsi !!}</h5>
                                         </div>
                                     </div>
                                 </div>
+                                @endforeach
                             </div>
-                            @endforeach
                         </div>
-                        <div class="swiper-button-next btn-slide-next "></div>
-                        <div class="swiper-button-prev btn-slide-prev"></div>
                     </div>
-
+                    <div class="col-md-12">
+                        {!! $data->links() !!}
+                    </div>
                 </div>
-
             </div>
     </section>
-    <section>
-        <div class="container-fluid">
-            <div class="row">
-                <iframe class="map-contact" src="https://maps.google.com/maps?q=smk%20muhammadiyah%201%20genteng&#038;t=m&#038;z=10&#038;output=embed&#038;iwloc=near" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <iframe class="map-contact"
+                src="https://maps.google.com/maps?q=smk%20muhammadiyah%201%20genteng&#038;t=m&#038;z=10&#038;output=embed&#038;iwloc=near"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
+    </div>
     </section>
 
 

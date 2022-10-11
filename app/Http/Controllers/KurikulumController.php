@@ -6,6 +6,8 @@ use App\Models\kurikulum;
 use App\Models\Muhinews;
 use App\Models\kalenderakademik;
 use App\Models\footeer;
+use App\Models\Jurusan;
+
 
 use Illuminate\Http\Request;
 
@@ -94,14 +96,16 @@ class KurikulumController extends Controller
 
     public function jadwalkegiatan(){
         $f = Muhinews::all();
-        return view('kurikulum.jadwalkegiatan', compact('f'));
+        $kh = Jurusan::all();
+        return view('kurikulum.jadwalkegiatan', compact('f','kh'));
     }
 
 
 
     public function kurikulumadmin(){
         $data = Kurikulum::all();
-        return view('kurikulum.k.kurikulum-admin', compact('data'));
+        $kh = Jurusan::all();
+        return view('kurikulum.k.kurikulum-admin', compact('data','kh'));
     }
     public function tambahkurikulum(){
         return view('kurikulum.k.tambah-kurikulum');

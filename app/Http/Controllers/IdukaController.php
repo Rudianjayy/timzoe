@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Iduka;
-use App\Models\Fotoiduka;
+use App\Models\Jurusan;
 use App\Models\Muhinews;
+use App\Models\Fotoiduka;
 use Illuminate\Http\Request;
 
 class IdukaController extends Controller
@@ -12,8 +13,8 @@ class IdukaController extends Controller
     public function index(){
         $i = Iduka::all();
         $fotoiduka = Fotoiduka::all();
-        $f = Muhinews::paginate(4);
-        return view('iduka.iduka', compact('i','fotoiduka','f'));
+        $kh = Jurusan::all();
+        return view('iduka.iduka', compact('i','fotoiduka','kh'));
     }
     public function indexadmin() {
         $data = Iduka::all();

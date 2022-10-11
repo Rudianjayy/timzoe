@@ -45,53 +45,52 @@
 <body class="body header-fixed ">
     <div class="preload preload-container">
         {{--  <div class="preload-logo"></div>  --}}
-        <div class="preload-logo"><img
-            src="{{ asset('landing/html/bidzend/assets/images/logo/muhi.jpg') }}"
-            alt="Image" style="width:570 !important;"></div>
+        <div class="preload-logo"><img src="{{ asset('landing/html/bidzend/assets/images/logo/muhi.jpg') }}"
+                alt="Image" style="width:570 !important;"></div>
     </div>
 
     <div id="wrapper">
         <div id="page" class="clearfix">
 
-           @include('koneksi.navbar')
+            @include('koneksi.navbar')
 
 
-    <section class="fl-page-title">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="particles-snow" id="header-snow"></div><!-- /#header-snow.particles-snow -->
+            <section class="fl-page-title">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="particles-snow" id="header-snow"></div><!-- /#header-snow.particles-snow -->
 
-                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/page-header-shape-1-1.png') }}"
-                        class="page-header__bg-shape-1" alt="">
-                    <img src="" class="page-header__bg-shape-2" alt="">
-                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-1.png') }}"
-                        class="page-header__bg-shape-3" alt="">
-                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-3.png') }}"
-                        class="page-header__bg-shape-4" alt="">
-                        <div class="breadcrumbs">
-                            <ul>
-                                <li><a href="/">Beranda</a></li>
-                                <li>Kompetensi</li>
-                            </ul>
+                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/page-header-shape-1-1.png') }}"
+                                class="page-header__bg-shape-1" alt="">
+                            <img src="" class="page-header__bg-shape-2" alt="">
+                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-1.png') }}"
+                                class="page-header__bg-shape-3" alt="">
+                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-3.png') }}"
+                                class="page-header__bg-shape-4" alt="">
+                            <div class="breadcrumbs">
+                                <ul>
+                                    <li><a href="/">Beranda</a></li>
+                                    <li>Kompetensi</li>
+                                </ul>
+                            </div>
                         </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
 
-            <section class="hot-collections-page tf-section">
+            {{-- <section class="hot-collections-page tf-section">
                 <div class="container">
                     <div class="row">
 
-                        @foreach ($kompetensi as $k )
+                        @foreach ($kompetensi as $k)
                         <div class="col-md-12">
                             <div class="sc-heading style-2">
                                 <div class="content-left">
                                     <div class="inner">
-                                        <h3>{{ $k->judul_kompetensi }}</h3>
+                                        <h1>{{ $k->judul_kompetensi }}</h1>
                                         <p class="desc">{{ $k->deskripsi_kompetensi }} </p>
                                     </div>
                                 </div>
@@ -102,15 +101,22 @@
                         <div class="col-md-12">
                             <div class="swiper-container popular-coll">
                                 <div class="swiper-wrapper">
-                                    @foreach ($foto as $foto )
-
+                                    @foreach ($pj as $khj)
                                     <div class="swiper-slide">
                                         <div class="slider-item">
                                             <div class="sc-author-card">
                                                 <div class="card-media">
-                                                    <a href="/tkj">
-                                                    <img src="{{ asset('fotomahasiswa/' . $foto->fotokompetensi) }}"
-                                                        alt="">
+                                                    @php
+                                                        $foto = App\Models\Jurusan::where('personaljurusans_id',$khj->id)->first();
+                                                    @endphp
+                                                    <a href="/indexjurusan/{{ $khj->id }}">
+                                                     @if ($foto != null)   
+                                                        <img src="{{ asset('fotojurusan/'. $foto->foto) }}"
+                                                            class="img-fluid" alt="">
+                                                    @else
+                                                        <img src="{{ asset('fotomahasiswa/album1.jpg') }}"
+                                                        class="img-fluid" alt="">
+                                                    @endif
                                                     </a>
                                                 </div>
                                             </div>
@@ -118,15 +124,181 @@
                                     </div>
                                     @endforeach
 
-
                                 </div>
 
                             </div>
                         </div>
                     </div>
                 </div>
+            </section> --}}
+
+            <section class="tf-section connect-wallet">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            <div class="sc-heading">
+                                <h1>Kompetensi</h1>
+                                {{-- <p class="desc">{!! $kp->deskripsi_kompetensi !!} </p> --}}
+                            </div>
+
+                        </div>
+                        <br><br><br>
+                        @foreach ($pj as $khj)
+                            <div class="col-lg-4 col-md-4">
+                                <div class="sc-wallet">
+                                    <div class="icon">
+                                        @php
+                                            $foto = App\Models\Jurusan::where('personaljurusans_id', $khj->id)->first();
+                                        @endphp
+                                        <a href="/indexjurusan/{{ $khj->id }}">
+                                            @if ($foto != null)
+                                                <img src="{{ asset('fotojurusan/' . $foto->foto) }}" class="img-fluid"
+                                                    alt="" style="border-radius: 50%">
+                                            @else
+                                                <img src="{{ asset('fotomahasiswa/ppkosong.webp') }}" class="img-fluid"
+                                                    alt="" style="border-radius: 50%">
+                                            @endif
+                                        </a>
+                                    </div>
+                                    <div class="content">
+                                        <h4><a href="/indexjurusan/{{ $khj->id }}""> {{ $khj->nama_jurusan }}</a>
+                                        </h4>
+
+                                        <p>{!! $khj->deskripseh !!}</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
             </section>
-          @include('koneksi.footer')
+
+            <section class="brand-one brand-one__pricing-page brand-one__home-three">
+                <div class="container">
+                    <div class="block-title text-center">
+                        <p class="color-2"><span>Bekerja sama dengan</span></p>
+                        {{-- <h3>Trusted by Over 25,000 World’s <br> <span>Leading Companies</span></h3> --}}
+                    </div><!-- /.block-title text-center -->
+
+                    <div class="brand-one__carousel owl-carousel thm__owl-carousel owl-theme"
+                        data-options='{
+                "items": 5, "margin": 95, "smartSpeed": 700, "loop": true, "autoplay": true, "autoplayTimeout": 5000, "autoplayHoverPause": false, "nav": false, "dots": false, "responsive": {"0": { "margin": 20, "items": 2 }, "575": { "margin": 30, "items": 3 },"767": { "margin": 40, "items": 4 },   "991": { "margin": 70, "items": 4 }, "1199": { "margin": 95, "items": 5 } } }'>
+                        <div class="item">
+                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/brand/brand-1-1.png') }}"
+                                alt="">
+                        </div><!-- /.item -->
+                        <div class="item">
+                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/brand/brand-1-2.png') }}"
+                                alt="">
+                        </div><!-- /.item -->
+                        <div class="item">
+                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/brand/brand-1-3.png') }}"
+                                alt="">
+                        </div><!-- /.item -->
+                        <div class="item">
+                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/brand/brand-1-4.png') }}"
+                                alt="">
+                        </div><!-- /.item -->
+                        <div class="item">
+                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/brand/brand-1-5.png') }}"
+                                alt="">
+                        </div><!-- /.item -->
+                        <div class="item">
+                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/brand/brand-1-1.png') }}"
+                                alt="">
+                        </div><!-- /.item -->
+                        <div class="item">
+                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/brand/brand-1-2.png') }}"
+                                alt="">
+                        </div><!-- /.item -->
+                        <div class="item">
+                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/brand/brand-1-3.png') }}"
+                                alt="">
+                        </div><!-- /.item -->
+                        <div class="item">
+                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/brand/brand-1-4.png') }}"
+                                alt="">
+                        </div><!-- /.item -->
+                        <div class="item">
+                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/brand/brand-1-5.png') }}"
+                                alt="">
+                        </div><!-- /.item -->
+                    </div><!-- /.brand-one__carousel owl-carousel thm__owl-carousel owl-theme -->
+                </div><!-- /.container -->
+            </section><!-- /.brand-one -->
+            {{-- <section class="blog-standard blog-details">
+                <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/bg-shape-1-1.png') }}" class="section__bg-shape-1" alt="">
+                <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/bg-shape-1-2.png') }}" class="section__bg-shape-2" alt="">
+                <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/bg-shape-1-3.png') }}" class="section__bg-shape-3" alt="">
+    
+    
+                <div class="section__bubble-1"></div><!-- /.section__bubble-1 -->
+                <div class="section__bubble-2"></div><!-- /.section__bubble-2 -->
+                <div class="section__bubble-3"></div><!-- /.section__bubble-3 -->
+                <div class="section__bubble-4"></div><!-- /.section__bubble-4 -->
+                <div class="section__bubble-5"></div><!-- /.section__bubble-5 -->
+                <div class="section__bubble-6"></div><!-- /.section__bubble-6 -->
+                <div class="section__bubble-7"></div><!-- /.section__bubble-7 -->
+                <div class="section__bubble-8"></div><!-- /.section__bubble-8 -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="blog-details__main">
+                                <div class="blog-two__meta">
+                                    <a href="blog-details.html">Sara dodly</a>
+                                    <span>-</span>
+                                    <a href="blog-details.html">Mar 15, 2020</a>
+                                </div><!-- /.blog-two__meta -->
+                                <h3>Additional Services that will <br> Grow Business</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                    ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+    
+                                <img src="{{ asset('landingppdb/ppdb/style/assets/images/blog/blog-2-1.jpg') }}" class="img-fluid" alt="">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                                    reprehenderit in voluptate velit esse cillum deserunt mollit anim id est laborum."Lorem
+                                    ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                    labore et dolore magna aliqua. Ut enim ad minim veniam, sed do eiusmod tempor incididunt
+                                    ut labore et dolore magna aliqua. </p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, <br> sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. </p>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <img src="{{ asset('landingppdb/ppdb/style/assets/images/blog/blog-d-1-1.jpg') }}" alt="" class="img-fluid">
+                                    </div><!-- /.col-md-4 -->
+                                    <div class="col-sm-4">
+                                        <img src="{{ asset('landingppdb/ppdb/style/assets/images/blog/blog-d-1-2.jpg') }}" alt="" class="img-fluid">
+                                    </div><!-- /.col-md-4 -->
+                                    <div class="col-sm-4">
+                                        <img src="{{ asset('landingppdb/ppdb/style/assets/images/blog/blog-d-1-3.jpg') }}" alt="" class="img-fluid">
+                                    </div><!-- /.col-md-4 -->
+                                </div><!-- /.row -->
+                                <h4>SEO is a Cost-Effective Advertising Strategy</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                <blockquote>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+                                </blockquote>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                    ut labore et commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                    velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                            </div><!-- /.blog-details__main -->
+    
+                            
+                        </div><!-- /.col-lg-8 -->
+                        
+                    </div><!-- /.row -->
+                </div><!-- /.container -->
+            </section> --}}
+            @include('koneksi.footer')
         </div>
 
     </div>

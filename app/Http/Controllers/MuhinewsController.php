@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Jurusan;
 use App\Models\Muhinews;
 use Illuminate\Http\Request;
 
@@ -10,7 +11,9 @@ class MuhinewsController extends Controller
     public function index() {
         $k = Muhinews::paginate(6);
         $f = Muhinews::paginate(3);
-        return view('muhinews.muhinews',compact('k','f'));
+        $kh = Jurusan::all();
+        return view('muhinews.muhinews',compact('k','f','kh'));
+
     }
     public function indexadmin() {
         $data = Muhinews::all();
@@ -27,17 +30,20 @@ class MuhinewsController extends Controller
             'judul' =>'required',
             'foto' =>'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
             'deskripsi_muhinews' =>'required',
+            'deskripsi_detail' =>'required',
         ],[
             'judul.required' =>'Harus diisi',
             'foto.required' =>'Harus diisi',
             'foto.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
             'deskripsi_muhinews.required' =>'Harus diisi',
+            'deskripsi_detail.required' =>'Harus diisi',
 
         ]);
         $data = Muhinews::create([
             'judul' =>$request->judul,
             'foto' =>$request->foto,
             'deskripsi_muhinews' =>$request->deskripsi_muhinews,
+            'deskripsi_detail' =>$request->deskripsi_detail,
         ]);
         if($request->hasFile('foto')){
             $request->file('foto')->move('fotomahasiswa/', $request->file('foto')->getClientOriginalName());
@@ -57,17 +63,21 @@ class MuhinewsController extends Controller
     public function editproses2(Request $request, $id){
         $this->validate($request,[
             'judul' =>'required',
-            'foto' =>'mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
+            'foto' =>'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
             'deskripsi_muhinews' =>'required',
+            'deskripsi_detail' =>'required',
         ],[
-            'judul' =>'harus diisi',
+            'judul.required' =>'Harus diisi',
+            'foto.required' =>'Harus diisi',
             'foto.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
-            'deskripsi_muhinews' =>'harus diisi',
-
+            'deskripsi_muhinews.required' =>'Harus diisi',
+            'deskripsi_detail.required' =>'Harus diisi',
         ]);
         $data = Muhinews::find($id);
         $data->update([
+            'judul' =>$request->judul,
             'deskripsi_muhinews' =>$request->deskripsi_muhinews,
+            'deskripsi_detail' =>$request->deskripsi_detail,
         ]);
         if($request->hasFile('foto')){
             $request->file('foto')->move('fotomahasiswa/',$request->file('foto')->getClientOriginalName());

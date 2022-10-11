@@ -9,8 +9,10 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DetailController;
 use App\Http\Controllers\KepsekController;
 use App\Http\Controllers\SliderController;
+use App\Http\Controllers\AkademiController;
 use App\Http\Controllers\JurusanController;
 use App\Http\Controllers\LandingController;
+use App\Http\Controllers\MuhiblogController;
 use App\Http\Controllers\MuhinewsController;
 use App\Http\Controllers\PrestasiController;
 use App\Http\Controllers\SambutanController;
@@ -20,11 +22,11 @@ use App\Http\Controllers\KesiswaanController;
 use App\Http\Controllers\KurikulumController;
 use App\Http\Controllers\KompetensiController;
 use App\Http\Controllers\DataidentitasController;
+use App\Http\Controllers\DetailakademiController;
 use App\Http\Controllers\ProfilSekolahController;
 use App\Http\Controllers\FotokompetensiController;
 use App\Http\Controllers\PersonaljurusanController;
 use App\Http\Controllers\IdentitasSekolahController;
-use App\Http\Controllers\FooteerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -278,6 +280,32 @@ Route::get('/editfooteer/{id}',[FooteerController::class, 'editfooteer'])->name(
 Route::post('/editproses7/{id}',[FooteerController::class,'editproses7'])->name('editproses7');
 Route::get('/deletefooteer/{id}',[FooteerController::class,'deletefooteer'])->name('deletefooteer');
  
+
+
+
+
+Route::get('/indexakademi',[AkademiController::class,'indexakademi'])->name('indexakademi');
+
+Route::get('/dataakademi',[AkademiController::class, 'loby6'])->name('dataakademi');
+Route::get('/tambahakademi',[AkademiController::class, 'tambahakademi'])->name('tambahakademi');
+Route::post('/submitdata6',[AkademiController::class, 'submitdata6'])->name('submitdata6');
+Route::get('/editakademi/{id}',[AkademiController::class, 'editakademi'])->name('editakademi');
+Route::post('/submitedit6/{id}',[AkademiController::class, 'submitedit6'])->name('submitedit6');
+Route::get('/deleteakademi/{id}',[AkademiController::class, 'delete'])->name('delete');
+
+
+
+
+Route::get('/detailakademi/{id}',[DetailakademiController::class,'detailakademi'])->name('detailakademi');
+
+Route::get('/admindetailakademi',[DetailakademiController::class, 'loby7'])->name('admindetailakademi');
+Route::get('/tambahdetailakademi',[DetailakademiController::class, 'tambahdetailakademi'])->name('tambahdetailakademi');
+Route::post('/submitdata7',[DetailakademiController::class, 'submitdata7'])->name('submitdata7');
+Route::get('/editdetailakademi/{id}',[DetailakademiController::class, 'editdetailakademi'])->name('editdetailakademi');
+Route::post('/submitedit7/{id}',[DetailakademiController::class, 'submitedit7'])->name('submitedit7');
+Route::get('/deletedetailakademi/{id}',[DetailakademiController::class, 'delete'])->name('delete');
+
+
 
 //upj
 Route::get('/indexupj',[UpjController::class,'indexupj'])->name('indexupj');

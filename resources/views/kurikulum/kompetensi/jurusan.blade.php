@@ -197,6 +197,9 @@
                                     @endforeach
                                     </ul><!-- /.list-unstyled sidebar__category-list -->
                                 </div><!-- /.sidebar__single -->
+                                <div class="col-md-12">
+                                    {!! $foto->links() !!}
+                                </div>
 
                             </div><!-- /.sidebar -->
                         </div><!-- /.col-lg-4 -->

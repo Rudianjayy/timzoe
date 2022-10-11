@@ -151,7 +151,7 @@
                                         @php
                                             $foto = App\Models\Jurusan::where('personaljurusans_id', $khj->id)->first();
                                         @endphp
-                                        <a href="/indexjurusan/{{ $khj->id }}">
+                                        <a href="/detailakademi/{{ $khj->id }}">
                                             @if ($foto != null)
                                                 <img src="{{ asset('fotojurusan/' . $foto->foto) }}" class="img-fluid"
                                                     alt="" style="border-radius: 50%">
@@ -162,7 +162,7 @@
                                         </a>
                                     </div>
                                     <div class="content">
-                                        <h4><a href="/indexjurusan/{{ $khj->id }}""> {{ $khj->nama_jurusan }}</a>
+                                        <h4><a href="/detailakademi/{{ $khj->id }}"> {{ $khj->nama_jurusan }}</a>
                                         </h4>
 
                                         <p>{!! $khj->deskripseh !!}</p>

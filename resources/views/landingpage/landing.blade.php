@@ -52,8 +52,7 @@
 
     <div class="preload preload-container">
         {{-- <div class="preload-logo"></div>  --}}
-        <div class="preload-logo"><img src="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}"
-                alt="Image" style="width:570 !important;"></div>
+        <div class="preload-logo"><img src="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}" alt="Image" style="width:570 !important;"></div>
     </div>
 
 
@@ -68,12 +67,12 @@
                         <div class="slider-inner flex home-1">
 
                             @foreach ($ss as $ss)
-                                <div class="slider-content">
-                                    <h1 class="heading">{{ $ss->deskripsi1_slider }}</h1>
-                                    <p class="sub-heading">{{ $ss->deskripsi2_slider }} </p>
-                                    <p class="sub-heading">{{ $ss->deskripsi3_slider }} </p>
+                            <div class="slider-content">
+                                <h1 class="heading">{{ $ss->deskripsi1_slider }}</h1>
+                                <p class="sub-heading">{{ $ss->deskripsi2_slider }} </p>
+                                <p class="sub-heading">{{ $ss->deskripsi3_slider }} </p>
 
-                                    {{-- <div class="button-slider">
+                                {{-- <div class="button-slider">
                                             <a href="explore-1.html"
                                                 class="sc-button btn-bordered-white style letter "><span>Explore
                                                     More</span></a>
@@ -81,45 +80,42 @@
                                                 class="sc-button btn-bordered-white style file"><span>Create
                                                     Now</span></a>
                                         </div> --}}
-                                </div>
+                            </div>
 
 
-                                <div class="slider-img">
-                                    <a href="/login">
-                                        <div class="img-home-1"><img src="{{ asset('fotomahasiswa/' . $ss->foto) }}"
-                                                alt="Image" style="width:570 !important;"></div>
-                                    </a>
-                                </div>
+                            <div class="slider-img">
+                                <a href="/login">
+                                    <div class="img-home-1"><img src="{{ asset('fotomahasiswa/' . $ss->foto) }}" alt="Image" style="width:570 !important;"></div>
+                                </a>
+                            </div>
                             @endforeach
                         </div>
                     </div>
                 </div>
                 @foreach ($fs as $fs)
-                    <div class="swiper-slide wow fadeInUp">
-                        <div class="slider-item ">
-                            <div class="overlay "></div>
-                            <div class="container">
+                <div class="swiper-slide wow fadeInUp">
+                    <div class="slider-item ">
+                        <div class="overlay "></div>
+                        <div class="container">
 
 
-                                <div class="slider-inner style-2 home-1 flex">
-                                    <div class="slider-img flex">
+                            <div class="slider-inner style-2 home-1 flex">
+                                <div class="slider-img flex">
 
-                                        <div class="img-left">
-                                            <div class="img-1"><img
-                                                    src="{{ asset('fotomahasiswa/' . $fs->foto_slider) }}"
-                                                    {{-- src="{{ asset('landing/html/bidzend/assets/images/slider/rigen.jpg') }}" --}} alt="Image"></div>
-                                        </div>
+                                    <div class="img-left">
+                                        <div class="img-1"><img src="{{ asset('fotomahasiswa/' . $fs->foto_slider) }}" {{-- src="{{ asset('landing/html/bidzend/assets/images/slider/rigen.jpg') }}" --}} alt="Image"></div>
+                                    </div>
 
 
 
-                                        <div class="img-right">
-                                        </div>
+                                    <div class="img-right">
                                     </div>
                                 </div>
-
                             </div>
+
                         </div>
                     </div>
+                </div>
                 @endforeach
             </div>
             <div class="swiper-pagination"></div>
@@ -136,9 +132,9 @@
         <div class="container">
             <div class="row">
                 @foreach ($sa as $sa)
-                    <div class="col-12 col-md-6  wow fadeInRight">
-                        <div class="text-video">
-                            {{-- <div class="text-center">
+                <div class="col-12 col-md-6  wow fadeInRight">
+                    <div class="text-video">
+                        {{-- <div class="text-center">
                             <h1>Sambutan</h1>
                             <br>
                             <h2 class="title-h2">Kepala Sekolah</h2>
@@ -146,8 +142,8 @@
 
 
 
-                            <p style="text-align: center;">{!! $sa->deskripsi !!}</p>
-                            {{-- <p style="text-align: center;">ASSALAMUALAIKUM WARAHMATULLAHI WABARAKATUH</p>
+                        <p style="text-align: center;">{!! $sa->deskripsi !!}</p>
+                        {{-- <p style="text-align: center;">ASSALAMUALAIKUM WARAHMATULLAHI WABARAKATUH</p>
                         <br>
                         <br>
 
@@ -172,13 +168,12 @@
 
 
                         <p style="text-align: center;"><strong>Taslim, S.Ag, M.Pd</strong></p> --}}
-                        </div>
                     </div>
-                    <div class="img-right">
+                </div>
+                <div class="img-right">
 
-                        <img src="{{ asset('fotomahasiswa/' . $sa->foto) }}" alt="" width="450px"
-                            style="margin-left: 80px;">
-                    </div>
+                    <img src="{{ asset('fotomahasiswa/' . $sa->foto) }}" alt="" width="450px" style="margin-left: 80px;">
+                </div>
                 @endforeach
             </div>
         </div>
@@ -202,22 +197,21 @@
                     </div>
                 </div>
                 @php
-                    $personal = \App\Models\Personaljurusan::all();
+                $personal = \App\Models\Personaljurusan::all();
                 @endphp
                 @foreach ($personal as $p)
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="sc-category wow fadeInUp pl-19" data-wow-delay="400ms"
-                            data-wow-duration="1000ms">
-                            <div class="card-media">
-                                <img src="{{ asset('fotojurusan/' . $p->foto) }}" alt="">
-                            </div>
-                            <div class="card-content">
-                                <h5><a href="/indexjurusan/{{ $p->id }}"> {{ $p->nama_jurusan }}</a>
-                                </h5>
-                                <p>{!! $p->deskripsi !!}</p>
-                            </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="sc-category wow fadeInUp pl-19" data-wow-delay="400ms" data-wow-duration="1000ms">
+                        <div class="card-media">
+                            <img src="{{ asset('fotojurusan/' . $p->foto) }}" alt="">
+                        </div>
+                        <div class="card-content">
+                            <h5><a href="/indexjurusan/{{ $p->id }}"> {{ $p->nama_jurusan }}</a>
+                            </h5>
+                            <p>{!! $p->deskripsi !!}</p>
                         </div>
                     </div>
+                </div>
                 @endforeach
 
             </div>
@@ -245,25 +239,24 @@
                     <div class="container">
                         <div class="row">
                             @foreach ($d as $d)
-                                <div class="col-lg-4 col-md-6">
-                                    <article class="sc-card-article">
-                                        <div class="card-media">
-                                            <img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt=""
-                                                style="width: 366px; height:183px;">
-                                        </div>
-                                        <div class="content">
-                                            <div class="meta-info">
-                                                <div class="item author">
-                                                    <b><strong>{{ $d->judul }}</strong></b>
-                                                </div>
-                                                <div class="item date">{{ $d->created_at }}</div>
-                                            </div>
-                                            <div class="text-article">
-                                                <p>{{ $d->deskripsi_muhinews }}</p>
+                            <div class="col-lg-4 col-md-6">
+                                <article class="sc-card-article">
+                                    <div class="card-media">
+                                        <img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt="" style="width: 366px; height:183px;">
+                                    </div>
+                                    <div class="content">
+                                        <div class="item date">{{ $d->created_at }}</div>
+                                        <div class="meta-info">
+                                            <div class="item author">
+                                                <b><strong>{{ $d->judul }}</strong></b>
                                             </div>
                                         </div>
-                                    </article>
-                                </div>
+                                        <div class="text-article">
+                                            <p>{{ $d->deskripsi_muhinews }}</p>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
                             @endforeach
                         </div>
                         <!-- <div class="col-m   d-12">
@@ -414,35 +407,31 @@
                     <div class="swiper-container live-auc">
                         <div class="swiper-wrapper">
                             @foreach ($ps as $ps)
-                                <div class="swiper-slide wow fadeInUp wow fadeInUp">
-                                    <div class="slider-item">
+                            <div class="swiper-slide wow fadeInUp wow fadeInUp">
+                                <div class="slider-item">
 
 
-                                        <div class="sc-product-item" style="">
-                                            <div class="product-img active">
-                                                <img src="{{ asset('fotomahasiswa/' . $ps->foto) }}" alt="Image"
-                                                    style="width: 300px; height:220px;">
-                                            </div>
-                                            <div class="product-content">
-                                                <h5 class="author-name"><a
-                                                        href="item-details.html">{!! $ps->judul_prestasi !!}</a> </h5>
-                                                <div class="product-author flex">
-                                                    <div class="infor">
-                                                        <div class="tittle"><a
-                                                                href="author.html">{!! $ps->deskripsi_prestasi !!}</a></div>
-                                                        <br>
-                                                        <div class="avatar">
-                                                            <img src="{{ asset('landing/html/bidzend/assets/images/avatar/avt-7.jpg') }}"
-                                                                alt="Image">
-                                                            <span>Sang juara</span>
-                                                        </div>
+                                    <div class="sc-product-item" style="">
+                                        <div class="product-img active">
+                                            <img src="{{ asset('fotomahasiswa/' . $ps->foto) }}" alt="Image" style="width: 300px; height:220px;">
+                                        </div>
+                                        <div class="product-content">
+                                            <h5 class="author-name"><a href="item-details.html">{!! $ps->judul_prestasi !!}</a> </h5>
+                                            <div class="product-author flex">
+                                                <div class="infor">
+                                                    <div class="tittle"><a href="author.html">{!! $ps->deskripsi_prestasi !!}</a></div>
+                                                    <br>
+                                                    <div class="avatar">
+                                                        <img src="{{ asset('landing/html/bidzend/assets/images/avatar/avt-7.jpg') }}" alt="Image">
+                                                        <span>Sang juara</span>
                                                     </div>
                                                 </div>
-
                                             </div>
+
                                         </div>
                                     </div>
                                 </div>
+                            </div>
                             @endforeach
                         </div>
                         <div class="swiper-pagination"></div>
@@ -563,42 +552,39 @@
 
                         <div class="swiper-wrapper">
                             @foreach ($data as $row)
+                            <div class="swiper-slide wow fadeInUp">
                                 <div class="swiper-slide wow fadeInUp">
-                                    <div class="swiper-slide wow fadeInUp">
-                                        <div class="slider-item">
-                                            <div class="sc-product-item style-2">
-                                                <div class="product-img">
-                                                    <img src="{{ asset('fotomahasiswa/' . $row->foto) }}"
-                                                        alt="" style="width: 366px; height:183px;">
+                                    <div class="slider-item">
+                                        <div class="sc-product-item style-2">
+                                            <div class="product-img">
+                                                <img src="{{ asset('fotomahasiswa/' . $row->foto) }}" alt="" style="width: 366px; height:183px;">
+                                            </div>
+                                            <div class="card-content">
+                                                <div class="item author">
+                                                    <b>
+                                                        <h4>{{ $row->judul_album }}</h4>
+                                                    </b>
                                                 </div>
-                                                <div class="card-content">
-                                                    <div class="item author">
-                                                        <b>
-                                                            <h4>{{ $row->judul_album }}</h4>
-                                                        </b>
-                                                    </div>
-                                                    <h5 class="card-title">{!! $row->deskripsi !!}</h5>
-                                                </div>
+                                                <h5 class="card-title">{!! $row->deskripsi !!}</h5>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                @endforeach
                             </div>
+                            @endforeach
                         </div>
                     </div>
-                    <div class="col-md-12">
-                        {!! $data->links() !!}
-                    </div>
+                </div>
+                <div class="col-md-12">
+                    {!! $data->links() !!}
                 </div>
             </div>
+        </div>
     </section>
 
     <div class="container-fluid">
         <div class="row">
-            <iframe class="map-contact"
-                src="https://maps.google.com/maps?q=smk%20muhammadiyah%201%20genteng&#038;t=m&#038;z=10&#038;output=embed&#038;iwloc=near"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe class="map-contact" src="https://maps.google.com/maps?q=smk%20muhammadiyah%201%20genteng&#038;t=m&#038;z=10&#038;output=embed&#038;iwloc=near" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </div>
     </section>
@@ -625,28 +611,6 @@
 
 
 
-
-    {{-- js nya ppdb kuambil truh sini --}}
-    {{-- <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.min.js') }}"></script> --}}
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/bootstrap.bundle.min.js') }}"></script>
-    {{-- <script src="{{ asset('landingppdb/ppdb/style/assets/js/bootstrap-datepicker.min.js') }}"></script> --}}
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/bootstrap-select.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/isotope.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.ajaxchimp.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.circleType.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/waypoints.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.counterup.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.lettering.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.magnific-popup.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.mCustomScrollbar.concat.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.validate.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/owl.carousel.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/TweenMax.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/wow.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/swiper.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/particles.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/particel-config.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/theme.js') }}"></script>
 
 
 </body>

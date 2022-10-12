@@ -39,7 +39,7 @@
 
     <div class="preload preload-container">
         {{-- <div class="preload-logo"></div>  --}}
-        <div class="preload-logo"><img src="{{ asset('landing/html/bidzend/assets/images/logo/muhi.jpg') }}" alt="Image" style="width:570 !important;"></div>
+        <div class="preload-logo"><img src="{{ asset('landing/html/bidzend/assets/images/logo/0.png') }}" alt="Image" style="width:570 !important;"></div>
     </div>
 
 

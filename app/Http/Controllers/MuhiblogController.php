@@ -12,7 +12,8 @@ class MuhiblogController extends Controller
     {
         $blog =Muhinews::findOrFail($id);
         $d = Muhinews::paginate(3);
-        return view('muhinews.muhiblog',compact('d','blog'));
+        $kategori = Muhinews::all();
+        return view('muhinews.muhiblog',compact('d','blog','kategori'));
     }
     public function muhiblogadmin()
     {

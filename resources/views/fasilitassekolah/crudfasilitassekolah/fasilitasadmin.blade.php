@@ -34,6 +34,7 @@
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
+                                    <th scope="col">Fasilitas Sekolah</th>
                                     <th scope="col">Foto</th>
                                     <th scope="col">Judul Fasilitas</th>
                                     <th scope="col">Deskripsi</th>
@@ -49,9 +50,15 @@
                                 @foreach ($data as $y)
                                     <tr>
                                         <th>{{ $no++ }}</th>
+                                        <td>{{ $y->fasilitas_sekolah }}</td>
                                         <td>
-                                            <img src="{{ asset('fotomahasiswa/' . $y->foto) }}" alt=""
-                                                style="width: 50px;">
+                                            {{--  @php
+                                                dd(explode(',',$y->foto));
+                                            @endphp  --}}
+                                            @foreach (explode(',',$y->foto) as $ft)
+                                                <img src="{{ asset('files/' . $ft) }}" alt=""
+                                                    style="width: 50px;">
+                                            @endforeach
                                         </td>
                                         <td>{{ $y->judul_fasilitas }}</td>
                                         <td>{!! $y->deskripsi !!}</td>
@@ -59,7 +66,7 @@
                                         {{-- <td>{{ $y->created_at->format('D M Y') }}</td> --}}
                                         <td>
                                             <a href="/editfasilitas/{{ $y->id }}" class="btn btn-warning fas fa-pen-alt">Edit</a>
-                                            <a href="/deletefasilitas/{{ $y->id }}" class="btn btn-danger fas fa-trash-alt" onclick="return confirm('yakin gen?')">Delete</a>
+                                            <a href="/deletefasilitas/{{ $y->id }}" class="btn btn-danger fas fa-trash-alt" onclick="return confirm('yakin mau hapus?')">Delete</a>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -113,6 +120,9 @@
         <script src="{{ asset('admin/zoee/layouts/assets/js/pages/datatables.init.js') }}"></script>
 
         <script src="{{ asset('admin/zoee/layouts/assets/js/app.js') }}"></script>
+
+        <script src="{{ asset('admin/zoee/layouts/assets/js/app.js') }}"></script>
+        @yield('scripts')
 
         <script>
             $(document).ready(function() {

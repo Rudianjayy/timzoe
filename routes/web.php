@@ -178,7 +178,7 @@ Route::get('/tambahfasilitas',[FasilitasController::class,'tambahfasilitas'])->n
 Route::post('/prosesfasilitas',[FasilitasController::class,'prosesfasilitas'])->name('prosesfasilitas');
 Route::get('/editfasilitas/{id}',[FasilitasController::class,'editfasilitas'])->name('editfasilitas');
 Route::post('/editprosesfasilitas/{id}',[FasilitasController::class,'editprosesfasilitas'])->name('editprosesfasilitas');
-Route::get('/deletefasilitas/{id}',[FasilitasController::class, 'delete'])->name('delete');
+Route::get('/deletefasilitas/{id}',[FasilitasController::class, 'deletefasilitas'])->name('delete');
 
 
 

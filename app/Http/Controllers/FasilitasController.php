@@ -7,6 +7,7 @@ use App\Models\Muhinews;
 use Illuminate\Http\Request;
 use App\Models\fasilitassekolah;
 
+
 class FasilitasController extends Controller
 {
     public function fasilitassekolah(){
@@ -29,29 +30,46 @@ class FasilitasController extends Controller
     public function prosesfasilitas(Request $request){
         // dd($request->all());
         $this->validate($request,[
-            'foto' =>'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
+            'foto' => 'required',
+            'foto.*' => 'required',
             'judul_fasilitas' =>'required',
+            'fasilitas_sekolah' => 'required',
             'deskripsi' =>'required',
         ],[
             'foto.required' =>'Harus diisi',
+            'fasilitas_sekolah.required' =>'Harus diisi',
             'foto.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
             'judul_fasilitas.required' =>'Harus diisi',
             'deskripsi.required' =>'Harus diisi',
 
         ]);
-        $data = fasilitassekolah::create([
-            'foto' =>$request->foto,
-            'judul_fasilitas' =>$request->judul_fasilitas,
-            'deskripsi' =>$request->deskripsi,
-        ]);
-        if($request->hasFile('foto')){
-            $request->file('foto')->move('fotomahasiswa/', $request->file('foto')->getClientOriginalName());
-            $data->foto = $request->file('foto')->getClientOriginalName();
-            $data->save();
+            // dd($request->all());
+        $no = 1;
+        if ($request->file('foto')) {
+            foreach ($request->file('foto') as $file ) {
+                    $name =  time().rand(1,100). $no++ .'.'.$file->extension();
+                    $file->move(public_path('files'), $name);
+                    $files[] = $name;
+            }
+            $file = implode(',',$files);
         }
+        // $file = new fasilitassekolah();
+        // $file->foto = $files;
+        // $file->save();
 
-        return redirect()->route('fasilitasadmin')->with('toast_success', 'Data Berhasil Di Tambahkan!');
+        $data = fasilitassekolah::create([
+            'foto' =>$file,
+           'judul_fasilitas' =>$request->judul_fasilitas,
+           'fasilitas_sekolah' =>$request->fasilitas_sekolah,
+           'deskripsi' =>$request->deskripsi,
+       ]);
+
+        return redirect('fasilitasadmin')->with('toast_success',' Data Berhasil di tambahkan!');
     }
+
+
+
+
 
     public function editfasilitas($id){
 
@@ -85,7 +103,7 @@ class FasilitasController extends Controller
 
     }
 
-    public function delete($id){
+    public function deletefasilitas($id){
         $data = fasilitassekolah::find($id);
         $data->delete();
         return redirect('fasilitasadmin')->with('toast_error',' Data Berhasil di Hapus!');

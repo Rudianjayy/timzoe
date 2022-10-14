@@ -10,7 +10,7 @@
 
     <meta charset="utf-8">
     <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
-    <title>Kompetensi Keahlian</title>
+    <title>Akademi</title>
     <meta name="author" content="themesflat.com">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -112,14 +112,14 @@
 
                 </div><!-- /.container -->
             </section><!-- /.service-one -->
-    
+
             <section class="pricing-one">
                 <div class="container">
                     <div class="block-title text-center">
                         <p class="color-2"><span>Pricing Plan</span></p>
                         <h3>No Any Hidden Charge Select <br> <span>Your Pricing Plan</span></h3>
                     </div><!-- /.block-title text-center -->
-    
+
                     <div class="row high-gutters">
                         <div class="col-lg-4 wow fadeInLeft" data-wow-duration="1500ms">
                             <div class="pricing-one__single">
@@ -175,8 +175,8 @@
                     </div><!-- /.row -->
                 </div><!-- /.container -->
             </section><!-- /.pricing-one -->
-    
-    
+
+
             <section class="brand-one brand-one__service-page">
                 <div class="container">
                     <div class="brand-one__carousel owl-carousel thm__owl-carousel owl-theme"
@@ -204,8 +204,8 @@
                     </div><!-- /.brand-one__carousel owl-carousel thm__owl-carousel owl-theme -->
                 </div><!-- /.container -->
             </section><!-- /.brand-one -->
-           
-            
+
+
             @include('koneksi.footer')
         </div>
 
@@ -223,28 +223,6 @@
     <script src="{{ asset('landing/html/bidzend/assets/js/shortcodes.js') }}"></script>
     <script src="{{ asset('landing/html/bidzend/assets/js/main.js') }}"></script>
 
-
-    {{-- js nya ppdb kuambil truh sini --}}
-    {{-- <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.min.js') }}"></script> --}}
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/bootstrap.bundle.min.js') }}"></script>
-    {{-- <script src="{{ asset('landingppdb/ppdb/style/assets/js/bootstrap-datepicker.min.js') }}"></script> --}}
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/bootstrap-select.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/isotope.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.ajaxchimp.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.circleType.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/waypoints.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.counterup.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.lettering.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.magnific-popup.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.mCustomScrollbar.concat.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.validate.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/owl.carousel.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/TweenMax.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/wow.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/swiper.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/particles.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/particel-config.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/theme.js') }}"></script>
 
 </body>
 

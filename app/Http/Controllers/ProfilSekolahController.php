@@ -7,6 +7,8 @@ use App\Models\Muhinews;
 use App\Models\visimisi;
 use Illuminate\Http\Request;
 use App\Models\profilsekolah;
+use App\Models\personaljurusan;
+use App\Models\Footeer;
 
 class ProfilSekolahController extends Controller
 {
@@ -14,7 +16,10 @@ class ProfilSekolahController extends Controller
         $q = profilsekolah::all();
         $f = Muhinews::all();
         $kh = Jurusan::all();
-        return view('profilsekolah.profilsekolah',compact('q','f','kh'));
+        $personal = Personaljurusan::all();
+        $ft = Footeer::all();
+        $logo = footeer::all();
+        return view('profilsekolah.profilsekolah',compact('q','f','kh','personal','ft','logo'));
     }
     public function profilsekolahadmin(){
         $data = profilsekolah::all();
@@ -140,7 +145,10 @@ class ProfilSekolahController extends Controller
         $v = visimisi::all();
         $f = Muhinews::all();
         $kh = Jurusan::all();
-        return view('visimisi.visimisi',compact('v','f','kh'));
+        $personal = Personaljurusan::all();
+        $ft = Footeer::all();
+        $logo = footeer::all();
+        return view('visimisi.visimisi',compact('v','f','kh','personal','ft','logo'));
     }
     public function visimisiadmin(){
         $data = visimisi::all();

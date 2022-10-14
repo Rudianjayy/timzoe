@@ -57,7 +57,7 @@
                                         </td>
                                         <td>{{ $d->judul_ekstra }}</td>
                                         <td>{!! $d->deskripsi_ekstrakulikuler !!}</td>
-                                        
+
                                         {{-- <td>{{ $d->created_at->format('D M Y') }}</td> --}}
                                         <td>
                                             <a href="/editekstrakulikuler/{{ $d->id }}" class="btn btn-warning">Edit</a>

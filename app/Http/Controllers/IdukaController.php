@@ -7,6 +7,8 @@ use App\Models\Jurusan;
 use App\Models\Muhinews;
 use App\Models\Fotoiduka;
 use Illuminate\Http\Request;
+use App\Models\PersonalJurusan;
+use App\Models\footeer;
 
 class IdukaController extends Controller
 {
@@ -14,7 +16,10 @@ class IdukaController extends Controller
         $i = Iduka::all();
         $fotoiduka = Fotoiduka::all();
         $kh = Jurusan::all();
-        return view('iduka.iduka', compact('i','fotoiduka','kh'));
+        $personal = Personaljurusan::all();
+        $ft = footeer::all();
+        $logo = footeer::all();
+        return view('iduka.iduka', compact('i','fotoiduka','kh','personal','ft','logo'));
     }
     public function indexadmin() {
         $data = Iduka::all();

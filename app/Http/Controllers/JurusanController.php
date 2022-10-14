@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\footeer;
 use App\Models\Jurusan;
 use App\Models\Muhinews;
 use Illuminate\Http\Request;
@@ -23,8 +24,10 @@ class JurusanController extends Controller
         $personal = Personaljurusan::all();
         $kh = Jurusan::all();
         $pj = Personaljurusan::all();
+        $ft = footeer::all();
+        $logo = footeer::all();
 
-        return view ('kurikulum.kompetensi.jurusan',compact('data','f','personal','kh','foto','pj'));
+        return view ('kurikulum.kompetensi.jurusan',compact('data','f','personal','kh','foto','pj','ft','logo'));
     }
 
     public function tambahjurusan()

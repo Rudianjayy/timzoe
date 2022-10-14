@@ -7,7 +7,7 @@ use App\Models\Muhinews;
 use App\Models\kalenderakademik;
 use App\Models\footeer;
 use App\Models\Jurusan;
-
+use App\Models\Personaljurusan;
 
 use Illuminate\Http\Request;
 
@@ -18,7 +18,9 @@ class KurikulumController extends Controller
         $d = kalenderakademik::all();
         $f = Muhinews::all();
         $ft = footeer::all();
-        return view('kurikulum.kalenderakademik', compact('d','f','ft'));
+        $personal = Personaljurusan::all();
+        $logo = footeer::all();
+        return view('kurikulum.kalenderakademik', compact('d','f','ft','personal','logo'));
     }
    
     public function kalenderakademikadmin() {
@@ -97,7 +99,10 @@ class KurikulumController extends Controller
     public function jadwalkegiatan(){
         $f = Muhinews::all();
         $kh = Jurusan::all();
-        return view('kurikulum.jadwalkegiatan', compact('f','kh'));
+        $ft = Footeer::all();
+        $personal = Personaljurusan::all();
+        $logo = footeer::all();
+        return view('kurikulum.jadwalkegiatan', compact('f','kh','ft','personal','logo'));
     }
 
 
@@ -105,7 +110,8 @@ class KurikulumController extends Controller
     public function kurikulumadmin(){
         $data = Kurikulum::all();
         $kh = Jurusan::all();
-        return view('kurikulum.k.kurikulum-admin', compact('data','kh'));
+        $personal = Personaljurusan::all();
+        return view('kurikulum.k.kurikulum-admin', compact('data','kh','personal'));
     }
     public function tambahkurikulum(){
         return view('kurikulum.k.tambah-kurikulum');

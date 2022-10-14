@@ -6,6 +6,10 @@ use App\Models\Jurusan;
 use App\Models\Muhinews;
 use Illuminate\Http\Request;
 use App\Models\IdentitasSekolah;
+use App\Models\Personaljurusan;
+use App\Models\Footeer;
+
+
 
 class IdentitasSekolahController extends Controller
 {
@@ -13,7 +17,10 @@ class IdentitasSekolahController extends Controller
         $i = identitassekolah::all();
         $f = Muhinews::paginate(4);
         $kh = Jurusan::all();
-        return view('identitassekolah.identitas_sekolah',compact('i','f','kh'));
+        $personal = Personaljurusan::all();
+        $ft = footeer::all();
+        $logo = footeer::all();
+        return view('identitassekolah.identitas_sekolah',compact('i','f','kh','personal','ft','logo'));
     }
     public function identitassekolahadmin()
     {

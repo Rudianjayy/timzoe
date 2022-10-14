@@ -5,11 +5,12 @@ use App\Models\osis;
 use App\Models\Jurusan;
 use App\Models\Mikrotik;
 use App\Models\Muhinews;
-use App\Models\Footeer;
+use App\Models\footeer;
+
 use Illuminate\Http\Request;
 use App\Models\ekstrakulikuler;
 use App\Models\alumni;
-
+use App\Models\Personaljurusan;
 
 class KesiswaanController extends Controller
 {
@@ -18,7 +19,9 @@ class KesiswaanController extends Controller
         $d = Muhinews::paginate(6);
         $ft = Footeer::all();
         $data = ekstrakulikuler::all();
-        return view('kesiswaan.ekstrakulikuler.ekstra',compact('data','f','d','ft'));
+        $personal = personaljurusan::all();
+        $logo = footeer::all();
+        return view('kesiswaan.ekstrakulikuler.ekstra',compact('data','f','d','ft','personal','logo'));
     }
     public function ekstrakulikuleradmin() {
         $data = ekstrakulikuler::all();
@@ -101,129 +104,14 @@ class KesiswaanController extends Controller
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public function mikrotik() {
-        $m = Mikrotik::all();
-        return view('kesiswaan.mikrotik.mikrotik',compact('m'));
-    }
-    public function mikrotikadmin() {
-        $data = Mikrotik::all();
-        return view('kesiswaan.mikrotik.mikrotik-admin', compact('data'));
-    }
-    public function tambahmikrotik()
-    {
-        return view('kesiswaan.mikrotik.tambahmikrotik');
-    }
-
-    public function mikrotikproses2(Request $request){
-        // dd($request->all());
-        $this->validate($request,[
-            'foto' =>'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
-            'deskripsi_mikrotik' =>'required',
-        ],[
-            'foto.required' =>'Harus diisi',
-            'foto.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
-            'deskripsi_mikrotik.required' =>'Harus diisi',
-
-        ]);
-        $data = Mikrotik::create([
-            'foto' =>$request->foto,
-            'deskripsi_mikrotik' =>$request->deskripsi_mikrotik,
-        ]);
-        if($request->hasFile('foto')){
-            $request->file('foto')->move('fotomahasiswa/', $request->file('foto')->getClientOriginalName());
-            $data->foto = $request->file('foto')->getClientOriginalName();
-            $data->save();
-        }
-
-        return redirect()->route('mikrotikadmin')->with('toast_success',' Data Berhasil di Tambahkan!');
-    }
-
-    public function editmikrotik($id){
-
-        $data = Mikrotik::findOrFail($id);
-        return view('kesiswaan.mikrotik.editmikrotik', compact('data'));
-    }
-
-    public function editproses4(Request $request, $id){
-        $this->validate($request,[
-            'foto' =>'mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
-            'deskripsi_mikrotik' =>'required',
-        ],[
-            'foto.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
-            'deskripsi_mikrotik' =>'harus diisi',
-
-        ]);
-        $data = Mikrotik::find($id);
-        $data->update([
-            'deskripsi_mikrotik' =>$request->deskripsi_mikrotik,
-        ]);
-        if($request->hasFile('foto')){
-            $request->file('foto')->move('fotomikrotik/',$request->file('foto')->getClientOriginalName());
-            $data->foto = $request->file('foto')->getClientOriginalName();
-            $data->save();
-        }
-
-        return redirect('mikrotikadmin')->with('toast_success',' Data Berhasil di Ubah!');
-
-    }
-
-    public function deletemikrotik($id){
-        $data = Mikrotik::find($id);
-        $data->delete();
-        return redirect('mikrotikadmin')->with('toast_error',' Data Berhasil di Hapus!');
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     public function osis() {
         $b = osis::all();
         $f = Muhinews::paginate(4);
         // $kh= jurusan::all();
         $ft = Footeer::all();
-        return view('kesiswaan.osis.osis',compact('b','f','ft'));
+        $personal = personaljurusan::all();
+        $logo = footeer::all();
+        return view('kesiswaan.osis.osis',compact('b','f','ft','personal','logo'));
     }
     public function osisadmin() {
         $data = osis::all();
@@ -322,7 +210,9 @@ class KesiswaanController extends Controller
         $l = alumni::all();
         $ft = Footeer::all();
         $f = Muhinews::paginate(4);
-        return view('kesiswaan.alumni.alumni',compact('l','f','ft'));
+        $personal = Personaljurusan::all();
+        $logo = footeer::all();
+        return view('kesiswaan.alumni.alumni',compact('l','f','ft','personal','logo'));
     }
         public function alumniadmin() {
         $data = alumni::all();

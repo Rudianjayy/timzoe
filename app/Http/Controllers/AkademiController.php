@@ -9,6 +9,7 @@ use App\Models\Kompetensi;
 use Illuminate\Http\Request;
 use App\Models\Fotokompetensi;
 use App\Models\Personaljurusan;
+use App\Models\Footeer;
 
 class AkademiController extends Controller
 {
@@ -18,10 +19,13 @@ class AkademiController extends Controller
         $f = Muhinews::paginate(4 );
         $kh = Jurusan::all();
         $pj = Personaljurusan::all();
+        $personal = personaljurusan::all();
+        $ft = Footeer::all();
         $kp = Kompetensi::all();
         $akdm = Akademi::all();
         $akademi = Akademi::all();
-        return view('akademi.akademi', compact('kompetensi','foto','f','kh','pj','kp','akdm','akademi'));
+        $logo = footeer::all();
+        return view('akademi.akademi', compact('kompetensi','foto','f','kh','pj','kp','akdm','akademi','personal','ft','logo'));
     }
 
     public function loby6(){

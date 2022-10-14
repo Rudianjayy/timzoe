@@ -66,7 +66,7 @@
                             <li class="menu-item menu-item-has-children">
                                 <a href="#"> Kesiswaan</a>
                                 <ul class="sub-menu">
-                                  
+
                                     <li
                                         class="menu-item menu-item-has-children {{ Route::is('kompetensi') ? 'current-item' : '' }}">
                                         <a href="/indexakademi"> Akademi</a>
@@ -81,6 +81,9 @@
                                             @endforeach
                                         </ul>
                                     </li>
+
+                                    
+
                                     <li class="menu-item {{ Route::is('ekstra') ? 'current-item' : '' }}"><a
                                             href="/ekstra">Ekstra Kulikuler</a></li>
                                     <li class="menu-item {{ Route::is('osis') ? 'current-item' : '' }}"><a
@@ -101,11 +104,11 @@
                                 <ul class="sub-menu">
                                     <li class="menu-item {{ Route::is(' indexupj') ? 'current-item' : '' }}"><a
                                             href="/indexupj">UPJ TKJ</a></li>
-                                    <li class="menu-item"><a href="explore-2.html">Bank Mini Sekolah(BSI)</a></li>
-                                    <li class="menu-item"><a href="creator.html">Muhi Printing</a></li>
-                                    <li class="menu-item"><a href="creator.html">Pegadaian</a></li>
-                                    <li class="menu-item"><a href="creator.html">Surya Mart</a></li>
-                                    <li class="menu-item"><a href="creator.html">EDOTEL</a></li>
+                                    <li class="menu-item"><a href="/indexBsi">Bank Mini Sekolah(BSI)</a></li>
+                                    <li class="menu-item"><a href="/indexMuhiPrinting">Muhi Printing</a></li>
+                                    <li class="menu-item"><a href="/indexPegadaian">Pegadaian</a></li>
+                                    <li class="menu-item"><a href="/indexSuryamart">Surya Mart</a></li>
+                                    <li class="menu-item"><a href="/indexEdotel">EDOTEL</a></li>
                             </li>
                             </ul>
                             </li>

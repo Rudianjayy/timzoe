@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use App\Models\Personaljurusan;
 use App\Models\footeer;
 
-class MuhinewsController extends Controller
+class bsiController extends Controller
 {
     public function index() {
         $k = Muhinews::paginate(6);

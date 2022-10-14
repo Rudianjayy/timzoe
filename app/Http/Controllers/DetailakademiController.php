@@ -2,18 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Akademi;
+use App\Models\akademi;
+use App\Models\Personaljurusan;
 use Illuminate\Http\Request;
 use App\Models\Detailakademi;
+use App\Models\footeer;
 
 class DetailakademiController extends Controller
 {
     public function detailakademi($id){
         $data= Detailakademi::where('akademis_id',$id)->firstOrFail();
         $foto= Detailakademi::where('akademis_id',$id)->paginate(2);
-
-        $akademi = Akademi::all();
-        return view('akademi.detail.detail-akademi', compact('data','akademi','foto'));
+        $personal = Personaljurusan::all();
+        $akademi = akademi::all();
+        $ft = footeer::all();
+        $logo = footeer::all();
+        return view('akademi.detail.detail-akademi', compact('data','akademi','foto','personal','ft','logo'));
     }
     public function loby7(){
         $data = Detailakademi::with('akademi')->get();
@@ -21,7 +25,7 @@ class DetailakademiController extends Controller
     }
 
     public function tambahdetailakademi(){
-        $akademi = Akademi::all();
+        $akademi = akademi::all();
         return view('akademi.detail.tambah-detail-akademi', compact('akademi'));
     }
 

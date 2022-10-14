@@ -6,6 +6,8 @@ use App\Models\Jurusan;
 use App\Models\Muhinews;
 use Illuminate\Http\Request;
 use App\Models\fasilitassekolah;
+use App\Models\Personaljurusan;
+use App\Models\Footeer;
 
 class FasilitasController extends Controller
 {
@@ -13,8 +15,11 @@ class FasilitasController extends Controller
         $q = fasilitassekolah::paginate(6);
         $f = Muhinews::paginate(3);
         $kh = Jurusan::all();
+        $personal = personaljurusan::all();
+        $ft = Footeer::all();
+        $logo = footeer::all();
 
-        return view('fasilitassekolah.fasilitassekolah', compact('q','f','kh'));
+        return view('fasilitassekolah.fasilitassekolah', compact('q','f','kh','personal','ft','logo'));
 
     }
     public function fasilitasadmin(){

@@ -2,11 +2,11 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-md-6 col-12">
-                @foreach ( $ft as $ft )
+                @foreach ( $logo as $lg )
                 <div class="widget widget-logo">
                     <div class="logo-footer" id="logo-footer">
                         <a href="#">
-                            <img id="logo_footer" src="{{ asset('fotomahasiswa/' .$ft->foto) }}"
+                            <img id="logo_footer" src="{{ asset('fotomahasiswa/' .$lg->foto) }}"
                                 alt="nft-gaming" width="120" height="100">
                         </a>
                     </div>
@@ -38,7 +38,7 @@
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6 col-6">
                 <div class="widget widget-menu menu-supports">
-                    <h5 class="title-widget">Admin</h5>
+                    <h5 class="title-widget">Lainnya</h5>
                     <ul>
                         <li><a href="/login">Login Admin </a></li>
                         <li><a href="https://sekolah.data.kemdikbud.go.id/index.php/chome/profil/39108646-470a-4aac-bee3-bc8ea91b8973">DAPODIK</a></li>

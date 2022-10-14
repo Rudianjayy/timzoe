@@ -19,6 +19,7 @@ use App\Http\Controllers\SambutanController;
 use App\Http\Controllers\FasilitasController;
 use App\Http\Controllers\FotoidukaController;
 use App\Http\Controllers\KesiswaanController;
+use App\Http\Controllers\DetailEkstrakulikulerController;
 use App\Http\Controllers\KurikulumController;
 use App\Http\Controllers\KompetensiController;
 use App\Http\Controllers\DataidentitasController;
@@ -27,6 +28,7 @@ use App\Http\Controllers\ProfilSekolahController;
 use App\Http\Controllers\FotokompetensiController;
 use App\Http\Controllers\PersonaljurusanController;
 use App\Http\Controllers\IdentitasSekolahController;
+use App\Http\Controllers\footeerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -71,6 +73,7 @@ Route::post('/submitdata2',[SambutanController::class, 'submitdata2'])->name('su
 Route::get('/editsambutan/{id}',[SambutanController::class, 'editsambutan'])->name('editsambutan');
 Route::post('/submitedit2/{id}',[SambutanController::class, 'submitedit2'])->name('submitedit2');
 Route::get('/deletesambutan/{id}',[SambutanController::class, 'delete'])->name('delete');
+
 
 
 
@@ -216,10 +219,6 @@ Route::get('/deletefotokompetensi/{id}',[FotokompetensiController::class, 'delet
 
 
 
-
-
-
-
 //kurikulum
 Route::get('/kurikulum',[KurikulumController::class,'kurikulum'])->name('kurikulum');
 
@@ -254,6 +253,23 @@ Route::post('/editproses3/{id}',[KesiswaanController::class,'editproses3'])->nam
 Route::get('/delete/{id}',[KesiswaanController::class,'delete'])->name('delete');
 
 
+
+
+Route::get('/detailekstrakulikuler/{id}',[DetailEkstrakulikulerController::class,'detailekstrakulikuler'])->name('detailekstrakulikuler');
+
+Route::get('/admindetailekstrakulikuler',[DetailEkstrakulikulerController::class, 'loby1'])->name('admindetailekstrakulikuler');
+Route::get('/tambahdetailekstrakulikuler',[DetailEkstrakulikulerController::class, 'tambahdetailekstrakulikuler'])->name('tambahdetailekstrakulikuler');
+Route::post('/tambahdetail1',[DetailEkstrakulikulerController::class, 'tambahdetail1'])->name('tambahdetail1');
+Route::get('/editdetailekstrakulikuler/{id}',[DetailEkstrakulikulerController::class, 'editdetailekstrakulikuler'])->name('editdetailekstrakulikuler');
+Route::post('/editdetail1/{id}',[DetailEkstrakulikulerController::class, 'editdetail1'])->name('editdetail1');
+Route::get('/deletedetailekstrakulikuler/{id}',[DetailEkstrakulikulerController::class, 'delete'])->name('delete');
+
+
+
+
+
+
+
 Route::get('/osis',[KesiswaanController::class,'osis'])->name('osis');
 Route::get('/osisadmin',[KesiswaanController::class,'osisadmin'])->name('osisadmin');
 Route::get('/tambahosis',[KesiswaanController::class, 'tambahosis'])->name('tambahosis');
@@ -261,7 +277,7 @@ Route::post('/osisproses3',[KesiswaanController::class, 'osisproses3'])->name('o
 Route::get('/editosis/{id}',[KesiswaanController::class, 'editosis'])->name('editosis');
 Route::post('/editproses5/{id}',[KesiswaanController::class,'editproses5'])->name('editproses5');
 Route::get('/deleteosis/{id}',[KesiswaanController::class,'deleteosis'])->name('deleteosis');
- 
+
 Route::get('/alumni',[KesiswaanController::class,'alumni'])->name('alumni');
 Route::get('/alumniadmin',[KesiswaanController::class,'alumniadmin'])->name('alumniadmin');
 Route::get('/tambahalumni',[KesiswaanController::class, 'tambahalumni'])->name('tambahalumni');
@@ -269,7 +285,7 @@ Route::post('/alumniproses6',[KesiswaanController::class, 'alumniproses6'])->nam
 Route::get('/editalumni/{id}',[KesiswaanController::class, 'editalumni'])->name('editalumni');
 Route::post('/editproses6/{id}',[KesiswaanController::class,'editproses6'])->name('editproses6');
 Route::get('/deletealumni/{id}',[KesiswaanController::class,'deletealumni'])->name('deletealumni');
- 
+
 
 
 //footeer
@@ -279,7 +295,7 @@ Route::post('/footeerproses7',[FooteerController::class, 'footeerproses7'])->nam
 Route::get('/editfooteer/{id}',[FooteerController::class, 'editfooteer'])->name('editfooteer');
 Route::post('/editproses7/{id}',[FooteerController::class,'editproses7'])->name('editproses7');
 Route::get('/deletefooteer/{id}',[FooteerController::class,'deletefooteer'])->name('deletefooteer');
- 
+
 
 
 
@@ -310,6 +326,7 @@ Route::get('/deletedetailakademi/{id}',[DetailakademiController::class, 'delete'
 //upj
 Route::get('/indexupj',[UpjController::class,'indexupj'])->name('indexupj');
 Route::get('/upj',[UpjController::class,'upj'])->name('upj');
+
 
 
 

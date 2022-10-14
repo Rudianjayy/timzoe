@@ -76,7 +76,7 @@
                                         <td>
                                             <a href="/editslider/{{ $d->id }}" class="btn btn-warning">Edit</a>
 
-                                            {{-- <a href="/deletemuhinews/{{ $d->id }}" class="btn btn-danger" onclick="return confirm('yakin gen?')">Delete</a> --}}
+                                            {{-- <a href="/deletemuhinews/{{ $d->id }}" class="btn btn-danger" onclick="return confirm('apakah anda yakin?')">Delete</a> --}}
 
 
 

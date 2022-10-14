@@ -74,6 +74,21 @@
 
         <li>
             <a href="javascript: void(0);" class="has-arrow waves-effect">
+                <i class="mdi mdi-account-details-outline"></i> <span class="badge rounded-pill bg-primary float-end"></span>
+                <span>UPJ</span>
+            </a>
+            <ul class="sub-menu" aria-expanded="false">
+                <li><a href="javascript: void(0);">UPJ</a></li>
+                <li><a href="/adminbsi">BSI</a></li>
+                <li><a href="/adminmuhiprint">Muhi Printing</a></li>
+                <li><a href="/adminpegadaian">Pegadaian</a></li>
+                <li><a href="/adminsuryamart">Suryamart</a></li>
+                <li><a href="/adminedotel">Edotel</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="javascript: void(0);" class="has-arrow waves-effect">
                 <i class="ti-package"></i>
                 <span>Tentang Kami</span>
             </a>

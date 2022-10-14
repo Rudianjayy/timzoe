@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\footeer;
 use App\Models\Jurusan;
 use App\Models\Muhinews;
 use Illuminate\Http\Request;
@@ -13,8 +14,9 @@ class FasilitasController extends Controller
         $q = fasilitassekolah::paginate(6);
         $f = Muhinews::paginate(3);
         $kh = Jurusan::all();
+        $logo= footeer::all();
 
-        return view('fasilitassekolah.fasilitassekolah', compact('q','f','kh'));
+        return view('fasilitassekolah.fasilitassekolah', compact('q','f','kh','logo'));
 
     }
     public function fasilitasadmin(){

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\footeer;
 use App\Models\Jurusan;
 use App\Models\Muhinews;
 use Illuminate\Http\Request;
@@ -17,14 +18,16 @@ class JurusanController extends Controller
     }
     public function indexjurusan($id){
         $data= Jurusan::where('personaljurusans_id',$id)->firstOrFail();
-        $foto= Jurusan::where('personaljurusans_id',$id)->paginate(2);
+        $foto= Jurusan::where('personaljurusans_id',$id)->paginate(4);
         $f = Muhinews::all();
         // $gambar = DB::table('s's)->where('nama_jurusan',);
         $personal = Personaljurusan::all();
         $kh = Jurusan::all();
         $pj = Personaljurusan::all();
+        $ft = footeer::all();
+        $logo = footeer::all();
 
-        return view ('kurikulum.kompetensi.jurusan',compact('data','f','personal','kh','foto','pj'));
+        return view ('kurikulum.kompetensi.jurusan',compact('data','ft','personal','kh','foto','pj','f','logo'));
     }
 
     public function tambahjurusan()

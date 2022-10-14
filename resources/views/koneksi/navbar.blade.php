@@ -47,6 +47,9 @@
                                         class="menu-item menu-item-has-children {{ Route::is('kompetensi') ? 'current-item' : '' }}">
                                         <a href="/kompetensi"> Kompetensi Keahlian</a>
                                         <ul class="sub-menu">
+                                            @php
+                                                $personal = \App\Models\Personaljurusan::all();
+                                            @endphp
                                             @foreach ($personal as $p)
                                                 <li class="menu-item "><a
                                                         href="/indexjurusan/{{ $p->id }}">{{ $p->nama_jurusan }}</a>
@@ -101,11 +104,11 @@
                                 <ul class="sub-menu">
                                     <li class="menu-item {{ Route::is(' indexupj') ? 'current-item' : '' }}"><a
                                             href="/indexupj">UPJ TKJ</a></li>
-                                    <li class="menu-item"><a href="explore-2.html">Bank Mini Sekolah(BSI)</a></li>
-                                    <li class="menu-item"><a href="creator.html">Muhi Printing</a></li>
-                                    <li class="menu-item"><a href="creator.html">Pegadaian</a></li>
-                                    <li class="menu-item"><a href="creator.html">Surya Mart</a></li>
-                                    <li class="menu-item"><a href="creator.html">EDOTEL</a></li>
+                                    <li class="menu-item"><a href="/indexbsi">Bank Mini Sekolah(BSI)</a></li>
+                                    <li class="menu-item"><a href="/indexmuhiprint">Muhi Printing</a></li>
+                                    <li class="menu-item"><a href="/indexpegadaian">Pegadaian</a></li>
+                                    <li class="menu-item"><a href="/indexsuryamart">Surya Mart</a></li>
+                                    <li class="menu-item"><a href="/indexedotel">Edotel</a></li>
                             </li>
                             </ul>
                             </li>

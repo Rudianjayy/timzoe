@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\Iduka;
+use App\Models\footeer;
 use App\Models\Jurusan;
 use App\Models\Muhinews;
 use App\Models\Fotoiduka;
 use Illuminate\Http\Request;
+use App\Models\Personaljurusan;
 
 class IdukaController extends Controller
 {
@@ -14,7 +16,9 @@ class IdukaController extends Controller
         $i = Iduka::all();
         $fotoiduka = Fotoiduka::all();
         $kh = Jurusan::all();
-        return view('iduka.iduka', compact('i','fotoiduka','kh'));
+        $personal = Personaljurusan::all();
+        $logo = footeer::all();
+        return view('iduka.iduka', compact('i','fotoiduka','kh','personal','logo'));
     }
     public function indexadmin() {
         $data = Iduka::all();

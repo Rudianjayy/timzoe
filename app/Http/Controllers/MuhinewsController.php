@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\footeer;
 use App\Models\Jurusan;
 use App\Models\Muhinews;
 use Illuminate\Http\Request;
+use App\Models\Personaljurusan;
 
 class MuhinewsController extends Controller
 {
@@ -12,7 +14,9 @@ class MuhinewsController extends Controller
         $k = Muhinews::paginate(6);
         $f = Muhinews::paginate(3);
         $kh = Jurusan::all();
-        return view('muhinews.muhinews',compact('k','f','kh'));
+        $personal = Personaljurusan::all();
+        $logo = footeer::all();
+        return view('muhinews.muhinews',compact('k','f','kh','personal','logo'));
 
     }
     public function indexadmin() {

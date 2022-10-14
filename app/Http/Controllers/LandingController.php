@@ -23,13 +23,14 @@ class LandingController extends Controller
         $f = Muhinews::paginate(3);
         $ss = Slider::all();
         $fs = Fotoslider::all();
-        $ft = Footeer::all();
+        $ft = footeer::all();
+        $logo = footeer::all();
         $sa = Sambutan::all();
         $js = Jurusan::all();
         $personal = Personaljurusan::all();
         $kh = Jurusan::all();
         $ps = Prestasi::all();
         $akademi = Akademi::all();
-        return view('landingpage.landing', compact('data','d','f','ss','fs','sa','js','personal','kh','ps','akademi'));
+        return view('landingpage.landing', compact('data','d','f','ss','fs','ft','logo','sa','js','personal','kh','ps','akademi'));
     }
 }

@@ -37,6 +37,7 @@
                                     <th scope="col">#</th>
                                     <th scope="col">Foto</th>
                                     <th scope="col">Nama</th>
+                                    <th scope="col">Deskripsi</th>
                                     <th scope="col">Aksi</th>
                                 </tr>
                             </thead>
@@ -54,6 +55,7 @@
                                                 style="width: 50px;">
                                         </td>   
                                         <td>{{ $row->nama_jurusan }}</td>
+                                        <td>{!! $row->deskripseh !!}</td>
 
                                         {{-- <td>{{ $row->created_at->format('D M Y') }}</td> --}}
                                         <td>

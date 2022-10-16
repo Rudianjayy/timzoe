@@ -12,13 +12,8 @@ class fasilitassekolah extends Model
     use HasFactory;
 
     protected $guarded = [];
-    protected $fillable = [
-        'foto', 'fasilitas_sekolah', 'judul_fasilitas', 'deskripsi'
-    ];
-    public function setFotoAttribute($value)
-    {
-        $this->attributes['foto'] = json_encode($value);
-    }
+    protected $fillable = ['foto', 'foto_sampul', 'judul_fasilitas', 'deskripsi'];
+
 
     public function getCreatedAtAttribute()
     {

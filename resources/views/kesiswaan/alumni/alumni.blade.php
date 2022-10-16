@@ -68,7 +68,7 @@
 
                     <div class="breadcrumbs">
                         <ul>
-                            <li><a href="index.html">Beranda</a></li>
+                            <li><a href="/alumni">Kesiswaan</a></li>
                             <li>Alumni</li>
                         </ul>
                     </div>
@@ -76,7 +76,7 @@
             </div>
         </div>
     </section>
-    <section class="tf-section item-details-page">
+    <!-- <section class="tf-section item-details-page">
         <div class="author-item">
             <div class="avatar">
                 <img src="assets/images/avatar/avt-4.jpg" alt="">
@@ -94,7 +94,34 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
+    <div class="tf-section sc-card-blog">
+        <div class="container">
+            <div class="row">
+                @foreach ($l as $l )
+                <div class="col-lg-4 col-md-6">
+                    <article class="sc-card-article">
+                        <div class="card-media">
+                            <img src="{{ asset('fotomahasiswa/' . $l->foto) }}" alt="" style="width: 366px; height:183px;">
+                        </div>
+                        <div class="content">
+                            <div class="meta-info">
+                                <div class="item author">
+                                    <b><strong>{{$l->judul_alumni}}</strong></b>
+                                </div>
+                                <div class="item date">{{$l->created_at}}</div>
+                            </div>
+                            <div class="text-article">
+                                <h3>{!!$l ->deskripsi_alumni!!}</h5>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+    </div>
 
     @include('koneksi.footer')
 

@@ -17,12 +17,14 @@ class JurusanController extends Controller
     }
     public function indexjurusan($id){
         $data= Jurusan::where('personaljurusans_id',$id)->firstOrFail();
-        $foto= Jurusan::where('personaljurusans_id',$id)->get();
+        $foto= Jurusan::where('personaljurusans_id',$id)->paginate(2);
         $f = Muhinews::all();
         // $gambar = DB::table('s's)->where('nama_jurusan',);
         $personal = Personaljurusan::all();
         $kh = Jurusan::all();
-        return view ('kurikulum.kompetensi.jurusan',compact('data','f','personal','kh','foto'));
+        $pj = Personaljurusan::all();
+
+        return view ('kurikulum.kompetensi.jurusan',compact('data','f','personal','kh','foto','pj'));
     }
 
     public function tambahjurusan()

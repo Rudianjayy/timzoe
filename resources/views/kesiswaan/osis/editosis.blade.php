@@ -16,7 +16,14 @@
                         <div class="card-body">
                             <form action="/editproses5/{{ $data->id }}" method="POST" enctype="multipart/form-data">
                                 @csrf
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Judul:</label>
+                                    <textarea class="form-control form-control-solid" rows="6x" name="judul_osis">{{ $data->judul_osis }}</textarea>
 
+                                    @error('judul_osis')
+                                        <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Ubah Foto :</label>
                                     <img class="img mb-3" src="{{ asset('fotomahasiswa/' . $data->foto) }}" alt=""

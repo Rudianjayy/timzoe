@@ -10,7 +10,7 @@
     .header_1 .header_avatar .avatar_popup {
         left: -100px;
     }
-    
+
     .header_1 .header_avatar .avatar_popup:before {
         left: 38%;
     }
@@ -169,7 +169,7 @@
     .tf-col-3 {
         width: 23% !important;
     }
-    
+
     .tf-col-6 {
         width: 70% !important;
     }
@@ -334,7 +334,7 @@
     .best-seller-inner .sc-author {
         margin-bottom: 30px;
     }
-    .category-inner, 
+    .category-inner,
     .best-seller-inner {
         padding: 100px 50px;
     }
@@ -349,7 +349,7 @@
         margin-bottom: 0 !important;
     }
     .auctions-page .swiper-slide .sc-product-item.style-6 {
-        margin-bottom: 48px !important; 
+        margin-bottom: 48px !important;
     }
 }
 
@@ -446,7 +446,7 @@
         padding-left: 30px;
         padding-right: 30px;
     }
-    .style-2 .new-letter-content ,  
+    .style-2 .new-letter-content ,
     .style-2 .new-letter-img,
     .new-letter-content,
     .new-letter-img {
@@ -525,7 +525,7 @@
     .end {
         margin-bottom: 0 !important;
     }
-    .category-inner, 
+    .category-inner,
     .best-seller-inner {
         padding-left: 15px;
         padding-right: 15px;

@@ -15,6 +15,33 @@ class SliderController extends Controller
         $kh = Jurusan::all();
         return view('slider.slider-admin', compact('data','ss','kh'));
     }
+    public function tambahslider()
+    {
+        return view('slider.tambah-slider');
+    }
+
+    public function sliderproses(Request $request){
+        // dd($request->all());
+        $this->validate($request,[
+            'deskripsi1_slider' =>'required',
+        ],[
+            'deskripsi1_slider' =>'harus diisi',
+
+
+        ]);
+        $data = Slider::create([
+            'deskripsi1_slider' =>$request->deskripsi1_slider,
+            'foto' =>$request->foto,
+        ]);
+        if($request->hasFile('foto')){
+            $request->file('foto')->move('fotomahasiswa/', $request->file('foto')->getClientOriginalName());
+            $data->foto = $request->file('foto')->getClientOriginalName();
+            $data->save();
+        }
+
+        return redirect()->route('slideradmin')->with('toast_success',' Data Berhasil di Tambahkan!');
+    }
+
     public function editslider($id){
 
         $data = Slider::findOrFail($id);
@@ -24,20 +51,14 @@ class SliderController extends Controller
     public function prosesslider(Request $request, $id){
         $this->validate($request,[
             'deskripsi1_slider' =>'required',
-            'deskripsi2_slider' =>'required',
-            'deskripsi3_slider' =>'required',
         ],[
             'deskripsi1_slider' =>'harus diisi',
-            'deskripsi2_slider' =>'harus diisi',
-            'deskripsi3_slider' =>'harus diisi',
 
 
         ]);
         $data = Slider::find($id);
         $data->update([
             'deskripsi1_slider' =>$request->deskripsi1_slider,
-            'deskripsi2_slider' =>$request->deskripsi2_slider,
-            'deskripsi3_slider' =>$request->deskripsi3_slider,
 
         ]);
         if($request->hasFile('foto')){

@@ -38,6 +38,7 @@
     <!-- Template Styles -->
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/responsive.css') }}">
+
 </head>
 
 <body class="body header-fixed ">
@@ -56,13 +57,6 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-
-                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/page-header-shape-1-1.png') }}" class="page-header__bg-shape-1" alt="">
-                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-2-circle-1-1.png') }}" class="page-header__bg-shape-2" alt="">
-                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-1.png') }}" class="page-header__bg-shape-3" alt="">
-                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-3.png') }}" class="page-header__bg-shape-4" alt="">
-                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-2-circle-1-2.png') }}" class="page-header__bg-shape-2" alt="">
-
                             <div class="breadcrumbs">
                                 <ul>
                                     <li><a href="index.html">Beranda</a></li>
@@ -73,6 +67,35 @@
                     </div>
                 </div>
             </section>
+            <section class="service-one">
+                <div class="container">
+                    <div class="block-title text-center">
+                        <h3>Fasilitas Sekolah<br> <span>SMK Muhammadiyah 1 Genteng</span></h3>
+                    </div><!-- /.block-title text-center -->
+                    <div class="row high-gutters">
+                        @foreach ($q as $y )
+                        <div class="col-lg-6 col-md-12 wow fadeInLeft" data-wow-duration="1500ms">
+                            <div class="service-one__single">
+                                <div class="service-one__icon">
+                                    <div class="service-one__icon-inner">
+                                        <img class="zoom" src="{{ asset('fotomahasiswa/' . $y->foto_sampul) }}" alt="" style="width: 250px; height:130px;">
+                                    </div><!-- /.service-one__icon-inner -->
+                                </div><!-- /.service-one__icon -->
+                                <div class="service-one__content">
+                                    <a href="/detailfoto/{{ $y->id }}">
+                                        <h3>{{$y->judul_fasilitas}}</h3>
+                                    </a>
+                                    <p>{!!$y->deskripsi!!}</p>
+                                </div><!-- /.service-one__content -->
+                            </div><!-- /.service-one__single -->
+                        </div><!-- /.col-lg-6 col-md-12 -->
+                        @endforeach
+                        <div class="col-md-12">
+                            {!! $q->links() !!}
+                        </div>
+                    </div><!-- /.row -->
+                </div><!-- /.container -->
+            </section><!-- /.service-one -->
         </div>
     </div>
     @include('koneksi.footer')
@@ -90,7 +113,12 @@
     <script src="{{ asset('landing/html/bidzend/assets/js/count-down.js') }}"></script>
     <script src="{{ asset('landing/html/bidzend/assets/js/shortcodes.js') }}"></script>
     <script src="{{ asset('landing/html/bidzend/assets/js/main.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
+    <script>
+        mediumZoom('.zoom', {
 
+        })
+    </script>
 
 
 </body>

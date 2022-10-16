@@ -83,7 +83,6 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8">
-
                         <div class="blog-details__main">
                             <div class="blog-two__meta">
                                 <a href="blog-details.html">{{$blog->created_at}}</a>

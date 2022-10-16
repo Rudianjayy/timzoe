@@ -69,10 +69,10 @@
     </section>
         <section class="faq-one">
         <div class="content-center">
-            <div class="container">
+            <div class="container-riski">
                 <div class="block-title text-center">
-                    <h3>Identitas Sekolah</h3>
-                    <center><img src="{{ asset('landing/html/bidzend/assets/images/logo/muhi.jpg') }}" alt="" style="width: 200px; height:200px; margin-bottom:20px; "></center>
+                    <h3 style="margin-right: 300px;">Identitas Sekolah</h3>
+                    <center><img src="{{ asset('landing/html/bidzend/assets/images/logo/muhi.jpg') }}" alt="" style="width: 200px; height:200px; margin-bottom:20px; margin-right:300px; "></center>
 
                 </div><!-- /.block-title text-center -->
 
@@ -295,3 +295,6 @@
 <!-- Mirrored from themesflat.com/html/bidzend/item-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Sep 2022 01:13:11 GMT -->
 
 </html>
+
+
+

@@ -21,6 +21,23 @@
 <li class="menu-title">Menu</li>
         @endif
         @if (auth()->user()->role=="admin")
+
+        <li>
+            <a href="#" class="has-arrow waves-effect">
+                <i class="ti-package"></i>
+                <span>Kurikulum</span>
+            </a>
+            <ul class="sub-menu" aria-expanded="false">
+                <li><a href="/kompetensiadmin">Kompetensi Keahlian</a></li>
+                <li><a href="/fotokompetensiadmin">Foto Kompetensi</a></li>
+                <li><a href="/jadwaladmin">Jadwal Kegiatan</a></li>
+                <li><a href="/kalenderakademikadmin">Kalender Akademik</a></li>
+                <li><a href="/kelulusanadmin">Kelulusan</a></li>
+            </ul>
+        </li>
+
+        @endif
+        @if (auth()->user()->role=="admin")
         <li>
             <a href="javascript: void(0);" class="has-arrow waves-effect">
                 <i class="ti-package"></i>
@@ -36,18 +53,14 @@
         <li>
             <a href="#" class="has-arrow waves-effect">
                 <i class="ti-package"></i>
-                <span>Kurikulum</span>
+                <span>Kesiswaan</span>
             </a>
             <ul class="sub-menu" aria-expanded="false">
-                <li><a href="/kompetensiadmin">Kompetensi Keahlian</a></li>
-                {{-- <li><a href="/fotokompetensiadmin">Foto Kompetensi</a></li> --}}
-                <li><a href="/jadwaladmin">Jadwal Kegiatan</a></li>
-                <li><a href="/kalenderadmin">Kalender Akademik</a></li>
-                <li><a href="/kelulusanadmin">Kelulusan</a></li>
+                <li><a href="/ekstrakulikuleradmin">Ekstra Kurikuler</a></li>
+                <li><a href="/osisadmin">IPM/OSIS</a></li>
+                <li><a href="/alumniadmin">Alumni</a></li>
             </ul>
         </li>
-
-
 
         <li>
             <a href="/muhinewsadmin" class="waves-effect">
@@ -116,10 +129,27 @@
             </ul>
         </li>
 
+        <li>
+            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                <i class="ti-package"></i>
+                <span>Akademi</span>
+            </a>
+            <ul class="sub-menu" aria-expanded="false">
+                <li><a href="/dataakademi">Akademi</a></li>
+                <li><a href="/admindetailakademi">Detail Akademi</a></li>
+            </ul>
+        </li>
+
 
 
         @endif
 
+        <li>
+            <a href="/footeeradmin" class="waves-effect">
+                <i class="mdi mdi-account-details-outline"></i> <span class="badge rounded-pill bg-primary float-end"></span>
+                <span>Footer</span>
+            </a>
+        </li>
         <li>
             <a href="/logout" class="waves-effect">
                 <i class="mdi mdi-chevron-left"></i> <span class="badge rounded-pill bg-primary float-end"></span>

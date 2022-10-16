@@ -3,7 +3,10 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\User;
+use Illuminate\Support\Str;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -20,5 +23,18 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+        $adminzoe = [
+            [
+                'name' => 'Admin Sekolah',
+                'email' => 'admin@gmail.com',
+                'password' => Hash::make ('adminsekolah'),
+                'status' => '1',
+                'token' => '1000',
+                'foto' => 'default.png',
+                'remember_token' => Str::random (60),
+            ],
+        ];
+        User::insert($adminzoe);
     }
 }

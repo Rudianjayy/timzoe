@@ -42,6 +42,7 @@
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
+                                    <th scope="col">Judul Alumni</th>
                                     <th scope="col">Foto</th>
                                     <th scope="col">Deskripsi</th>
                                     <th scope="col">Aksi</th>
@@ -56,6 +57,7 @@
                                 @foreach ($data as $d)
                                     <tr>
                                         <th>{{ $no++ }}</th>
+                                        <td>{{ $d->judul_alumni }}</td>
                                         <td>
                                             <img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt=""
                                                 style="width: 50px;">

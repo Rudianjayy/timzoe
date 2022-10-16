@@ -31,15 +31,18 @@ class PersonaljurusanController extends Controller
         $this->validate($request,[
             'foto' =>'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
             'nama_jurusan' =>'required',
+            'deskripseh' =>'required',
         ],[
             'foto.required' =>'Harus diisi',
             'foto.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
             'nama_jurusan.required' =>'Harus diisi',
+            'deskripseh.required' =>'Harus diisi',
 
         ]);
         $data = Personaljurusan::create([
             'foto' =>$request->foto,
             'nama_jurusan' =>$request->nama_jurusan,
+            'deskripseh' =>$request->deskripseh,
         ]);
         if($request->hasFile('foto')){
             $request->file('foto')->move('fotojurusan/', $request->file('foto')->getClientOriginalName());

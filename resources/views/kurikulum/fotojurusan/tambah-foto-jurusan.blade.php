@@ -32,6 +32,24 @@
                     @enderror
                   </div>
 
+                  <section style="padding-top:60px;">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        Deskripsi
+                                    </div>
+                                    <div class="card-body">
+                                        {{--  <form method="POST" enctype="multipart/form-data">  --}}
+                                            <textarea name="deskripseh" id="mytextarea"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 
                 <button type="submit" class="btn btn-primary">Submit</button>
                 <a href="/fotojurusan" class="btn btn-danger">Kembali</a>

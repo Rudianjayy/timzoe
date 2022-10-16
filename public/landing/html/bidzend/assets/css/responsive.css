@@ -139,8 +139,8 @@
     .seclect-box .sc-button {
         width: 150px;
     }
-    .item-details-page .content-item  {
-        padding-left: 20px;
+    .content  {
+        padding-left: 300px;
     }
     .item-details-page .author-bid .author-item:first-child  {
         margin-right: 20px;

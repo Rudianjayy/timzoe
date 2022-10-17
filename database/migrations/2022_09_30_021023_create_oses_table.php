@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('judul_osis');
             $table->string('foto');
-            $table->string('deskripsi_osis');
+            $table->text('deskripsi_osis');
             $table->timestamps();
         });
     }

@@ -60,15 +60,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="particles-snow" id="header-snow"></div><!-- /#header-snow.particles-snow -->
-
-                            <img src="{{ asset('landingppdb/ppdb/sassets/images/shapes/page-header-shatyle/pe-1-1.png') }}"
-                                class="page-header__bg-shape-1" alt="">
-                            <img src="" class="page-header__bg-shape-2" alt="">
-                            <img src="{{ asset('landingppdb/ppdb/sassets/images/shapes/footer-shape-1-tyle/1.png') }}"
-                                class="page-header__bg-shape-3" alt="">
-                            <img src="{{ asset('landingppdb/ppdb/sassets/images/shapes/footer-shape-1-tyle/3.png') }}"
-                                class="page-header__bg-shape-4" alt="">
+                            
                             <div class="breadcrumbs">
                                 <ul>
                                     <li><a href="/">Beranda</a></li>
@@ -88,7 +80,7 @@
                         <div class="col-lg-4">
                             <div class="sidebar sidebar__left">
 
-                                <div class="sidebar__single sidebar__category">
+                                {{-- <div class="sidebar__single sidebar__category">
                                     <ul class="list-unstyled sidebar__category-list">
                                         <li>
                                             <a href="service-d-social.html">Social Marketing</a>
@@ -106,7 +98,7 @@
                                             <a href="service-d-smm.html">SMM Marketing</a>
                                         </li>
                                     </ul><!-- /.list-unstyled sidebar__category-list -->
-                                </div><!-- /.sidebar__single -->
+                                </div><!-- /.sidebar__single --> --}}
                                 <div class="sidebar__single sidebar__contact">
                                     <h3 class="sidebar__title">Contact</h3>
                                     <ul class="list-unstyled sidebar__contact-list">
@@ -124,8 +116,8 @@
                                         </li>
                                     </ul><!-- /.list-unstyled sidebar__category-list -->
                                 </div><!-- /.sidebar__single -->
-                                <div class="sidebar__single sidebar__brouchers">
-                                    <h3 class="sidebar__title">Brochures</h3>
+                                {{-- <div class="sidebar__single sidebar__brouchers">
+                                    <h3 class="sidebar__title">Foto</h3>
                                     <ul class="list-unstyled sidebar__category-list">
                                         <li>
                                             <a href="#">Download Now <i class="far fa-download"></i></a>
@@ -134,7 +126,7 @@
                                             <a href="#">Characteristics <i class="far fa-file-pdf"></i></a>
                                         </li>
                                     </ul><!-- /.list-unstyled sidebar__category-list -->
-                                </div><!-- /.sidebar__single -->
+                                </div><!-- /.sidebar__single --> --}}
 
                             </div><!-- /.sidebar -->
                         </div><!-- /.col-lg-4 -->
@@ -154,19 +146,19 @@
                                         <li><i class="fa fa-check-circle"></i>Best Solution of the Year</li>
                                         <li><i class="fa fa-check-circle"></i>Labore et dolore magna aliqua</li>
                                     </ul><!-- /.service-details__list list-unstyled --> --}}
-                                    <div class="row">
+                                    {{-- <div class="row">
                                         @foreach ($foto as $ft )
 
                                         <div class="col-md-6">
                                             <img src="{{ asset('fotomahasiswa/'.$ft->foto) }}" alt="">
                                         </div><!-- /.col-lg-6 -->
                                         @endforeach
-                                    </div><!-- /.row -->
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    </div><!-- /.row --> --}}
+                                    {{-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <br>sed do
                                         eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor
                                         sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                                        labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+                                        labore et dolore magna aliqua. Ut enim ad minim veniam,</p> --}}
                                 </div><!-- /.service-details__content -->
                             </div><!-- /.service-details__main -->
                         </div><!-- /.col-lg-8 -->

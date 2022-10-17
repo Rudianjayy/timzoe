@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Akademi;
+use App\Models\footeer;
 use App\Models\Jurusan;
 use App\Models\Muhinews;
 use App\Models\Kompetensi;
@@ -18,10 +19,14 @@ class AkademiController extends Controller
         $f = Muhinews::paginate(4 );
         $kh = Jurusan::all();
         $pj = Personaljurusan::all();
+        $personal = Personaljurusan::all();
         $kp = Kompetensi::all();
         $akdm = Akademi::all();
         $akademi = Akademi::all();
-        return view('akademi.akademi', compact('kompetensi','foto','f','kh','pj','kp','akdm','akademi'));
+        $ft= footeer::all();
+        $logo= footeer::all();
+
+        return view('akademi.akademi', compact('kompetensi','foto','f','kh','pj','kp','akdm','akademi','personal','ft','logo'));
     }
 
     public function loby6(){

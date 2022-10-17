@@ -10,6 +10,7 @@ use App\Http\Controllers\DetailController;
 use App\Http\Controllers\KepsekController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\AkademiController;
+use App\Http\Controllers\FooteerController;
 use App\Http\Controllers\JurusanController;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\MuhiblogController;
@@ -313,6 +314,69 @@ Route::get('/deletedetailakademi/{id}',[DetailakademiController::class, 'delete'
 //upj
 Route::get('/indexupj',[UpjController::class,'indexupj'])->name('indexupj');
 Route::get('/upj',[UpjController::class,'upj'])->name('upj');
+
+
+
+
+
+Route::get('/indexbsi',[UpjController::class,'indexbsi'])->name('indexbsi');
+
+Route::get('/adminbsi',[UpjController::class, 'loby8'])->name('adminbsi');
+Route::get('/tambahbsi',[UpjController::class, 'tambahbsi'])->name('tambahbsi');
+Route::post('/submitdata8',[UpjController::class, 'submitdata8'])->name('submitdata8');
+Route::get('/editbsi/{id}',[UpjController::class, 'editbsi'])->name('editbsi');
+Route::post('/submitedit8/{id}',[UpjController::class, 'submitedit8'])->name('submitedit8');
+Route::get('/deletebsi/{id}',[UpjController::class, 'deletebsi'])->name('deletebsi');
+
+
+
+
+Route::get('/indexmuhiprint',[UpjController::class,'indexmuhiprint'])->name('indexmuhiprint');
+
+Route::get('/adminmuhiprint',[UpjController::class, 'loby9'])->name('adminmuhiprint');
+Route::get('/tambahmuhiprint',[UpjController::class, 'tambahmuhiprint'])->name('tambahmuhiprint');
+Route::post('/submitdata9',[UpjController::class, 'submitdata9'])->name('submitdata9');
+Route::get('/editmuhiprint/{id}',[UpjController::class, 'editmuhiprint'])->name('editmuhiprint');
+Route::post('/submitedit9/{id}',[UpjController::class, 'submitedit9'])->name('submitedit9');
+Route::get('/deletemuhiprint/{id}',[UpjController::class, 'deletemuhiprint'])->name('deletemuhiprint');
+
+
+
+
+Route::get('/indexpegadaian',[UpjController::class,'indexpegadaian'])->name('indexpegadaian');
+
+Route::get('/adminpegadaian',[UpjController::class, 'loby10'])->name('adminpegadaian');
+Route::get('/tambahpegadaian',[UpjController::class, 'tambahpegadaian'])->name('tambahpegadaian');
+Route::post('/submitdata10',[UpjController::class, 'submitdata10'])->name('submitdata10');
+Route::get('/editpegadaian/{id}',[UpjController::class, 'editpegadaian'])->name('editpegadaian');
+Route::post('/submitedit10/{id}',[UpjController::class, 'submitedit10'])->name('submitedit10');
+Route::get('/deletepegadaian/{id}',[UpjController::class, 'deletepegadaian'])->name('deletepegadaian');
+
+
+
+Route::get('/indexsuryamart',[UpjController::class,'indexsuryamart'])->name('indexsuryamart');
+
+Route::get('/adminsuryamart',[UpjController::class, 'loby11'])->name('adminsuryamart');
+Route::get('/tambahsuryamart',[UpjController::class, 'tambahsuryamart'])->name('tambahsuryamart');
+Route::post('/submitdata11',[UpjController::class, 'submitdata11'])->name('submitdata11');
+Route::get('/editsuryamart/{id}',[UpjController::class, 'editsuryamart'])->name('editsuryamart');
+Route::post('/submitedit11/{id}',[UpjController::class, 'submitedit11'])->name('submitedit11');
+Route::get('/deletesuryamart/{id}',[UpjController::class, 'deletesuryamart'])->name('deletesuryamart');
+
+
+
+
+Route::get('/indexedotel',[UpjController::class,'indexedotel'])->name('indexedotel');
+
+Route::get('/adminedotel',[UpjController::class, 'loby12'])->name('adminedotel');
+Route::get('/tambahedotel',[UpjController::class, 'tambahedotel'])->name('tambahedotel');
+Route::post('/submitdata12',[UpjController::class, 'submitdata12'])->name('submitdata12');
+Route::get('/editedotel/{id}',[UpjController::class, 'editedotel'])->name('editedotel');
+Route::post('/submitedit12/{id}',[UpjController::class, 'submitedit12'])->name('submitedit12');
+Route::get('/deleteedotel/{id}',[UpjController::class, 'deleteedotel'])->name('deleteedotel');
+
+
+
 
 
 

@@ -58,15 +58,6 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="particles-snow" id="header-snow"></div><!-- /#header-snow.particles-snow -->
-
-                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/page-header-shape-1-1.png') }}"
-                                class="page-header__bg-shape-1" alt="">
-                            <img src="" class="page-header__bg-shape-2" alt="">
-                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-1.png') }}"
-                                class="page-header__bg-shape-3" alt="">
-                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-3.png') }}"
-                                class="page-header__bg-shape-4" alt="">
                             <div class="breadcrumbs">
                                 <ul>
                                     <li><a href="/">Beranda</a></li>
@@ -119,7 +110,7 @@
             </section> --}}
 
             <section class="blog-standard blog-details" style="margin-top: 5px;">
-                <img src="assets/images/shapes/bg-shape-1-1.png" class="section__bg-shape-1" alt="">
+                {{-- <img src="assets/images/shapes/bg-shape-1-1.png" class="section__bg-shape-1" alt="">
                 <img src="assets/images/shapes/bg-shape-1-2.png" class="section__bg-shape-2" alt="">
                 <img src="assets/images/shapes/bg-shape-1-3.png" class="section__bg-shape-3" alt="">
 
@@ -131,7 +122,7 @@
                 <div class="section__bubble-5"></div><!-- /.section__bubble-5 -->
                 <div class="section__bubble-6"></div><!-- /.section__bubble-6 -->
                 <div class="section__bubble-7"></div><!-- /.section__bubble-7 -->
-                <div class="section__bubble-8"></div><!-- /.section__bubble-8 -->
+                <div class="section__bubble-8"></div><!-- /.section__bubble-8 --> --}}
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-8">
@@ -207,49 +198,7 @@
                 </div><!-- /.container -->
             </section>
 
-            <section class="brand-one brand-one__pricing-page brand-one__home-three">
-                <div class="container">
-                    <div class="block-title text-center">
-                        <p class="color-2"><span>Bekerja sama dengan</span></p>
-                        {{-- <h3>Trusted by Over 25,000 World’s <br> <span>Leading Companies</span></h3> --}}
-                    </div><!-- /.block-title text-center -->
-    
-                    <div class="brand-one__carousel owl-carousel thm__owl-carousel owl-theme"
-                        data-options='{
-                "items": 5, "margin": 95, "smartSpeed": 700, "loop": true, "autoplay": true, "autoplayTimeout": 5000, "autoplayHoverPause": false, "nav": false, "dots": false, "responsive": {"0": { "margin": 20, "items": 2 }, "575": { "margin": 30, "items": 3 },"767": { "margin": 40, "items": 4 },   "991": { "margin": 70, "items": 4 }, "1199": { "margin": 95, "items": 5 } } }'>
-                        <div class="item">
-                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/brand/brand-1-1.png') }}" alt="">
-                        </div><!-- /.item -->
-                        <div class="item">
-                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/brand/brand-1-2.png') }}" alt="">
-                        </div><!-- /.item -->
-                        <div class="item">
-                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/brand/brand-1-3.png') }}" alt="">
-                        </div><!-- /.item -->
-                        <div class="item">
-                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/brand/brand-1-4.png') }}" alt="">
-                        </div><!-- /.item -->
-                        <div class="item">
-                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/brand/brand-1-5.png') }}" alt="">
-                        </div><!-- /.item -->
-                        <div class="item">
-                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/brand/brand-1-1.png') }}" alt="">
-                        </div><!-- /.item -->
-                        <div class="item">
-                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/brand/brand-1-2.png') }}" alt="">
-                        </div><!-- /.item -->
-                        <div class="item">
-                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/brand/brand-1-3.png') }}" alt="">
-                        </div><!-- /.item -->
-                        <div class="item">
-                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/brand/brand-1-4.png') }}" alt="">
-                        </div><!-- /.item -->
-                        <div class="item">
-                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/brand/brand-1-5.png') }}" alt="">
-                        </div><!-- /.item -->
-                    </div><!-- /.brand-one__carousel owl-carousel thm__owl-carousel owl-theme -->
-                </div><!-- /.container -->
-            </section><!-- /.brand-one -->
+           @include('koneksi.mitra')
 
 
             @include('koneksi.footer')

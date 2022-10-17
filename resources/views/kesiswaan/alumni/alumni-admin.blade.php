@@ -62,7 +62,7 @@
                                             <img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt=""
                                                 style="width: 50px;">
                                         </td>
-                                        <td>{{ $d->deskripsi_alumni }}</td>
+                                        <td>{!! $d->deskripsi_alumni !!}</td>
 
                                         {{-- <td>{{ $d->created_at->format('D M Y') }}</td> --}}
                                         <td>

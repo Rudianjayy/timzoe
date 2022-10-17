@@ -10,7 +10,7 @@
 
     <meta charset="utf-8">
     <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
-    <title>Kompetensi Keahlian</title>
+    <title>SMK Muhammadiyah 1 Genteng</title>
     <meta name="author" content="themesflat.com">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -60,15 +60,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="particles-snow" id="header-snow"></div><!-- /#header-snow.particles-snow -->
-
-                            <img src="{{ asset('landingppdb/ppdb/sassets/images/shapes/page-header-shatyle/pe-1-1.png') }}"
-                                class="page-header__bg-shape-1" alt="">
-                            <img src="" class="page-header__bg-shape-2" alt="">
-                            <img src="{{ asset('landingppdb/ppdb/sassets/images/shapes/footer-shape-1-tyle/1.png') }}"
-                                class="page-header__bg-shape-3" alt="">
-                            <img src="{{ asset('landingppdb/ppdb/sassets/images/shapes/footer-shape-1-tyle/3.png') }}"
-                                class="page-header__bg-shape-4" alt="">
+                            
                             <div class="breadcrumbs">
                                 <ul>
                                     <li><a href="/">Beranda</a></li>

@@ -50,12 +50,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-
+{{--
             <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/page-header-shape-1-1.png') }}" class="page-header__bg-shape-1" alt="">
             <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-2-circle-1-1.png') }}" class="page-header__bg-shape-2" alt="">
             <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-1.png') }}" class="page-header__bg-shape-3" alt="">
             <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-3.png') }}" class="page-header__bg-shape-4" alt="">
-            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-2-circle-1-2.png') }}" class="page-header__bg-shape-2" alt="">
+            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-2-circle-1-2.png') }}" class="page-header__bg-shape-2" alt=""> --}}
 
             <div class="breadcrumbs">
                 <ul>
@@ -69,7 +69,7 @@
     </section>
         <section class="faq-one">
         <div class="content-center">
-            <div class="container-riski">
+        <div class="container-riski">
                 <div class="block-title text-center">
                     <h3 style="margin-right: 300px;">Identitas Sekolah</h3>
                     <center><img src="{{ asset('landing/html/bidzend/assets/images/logo/muhi.jpg') }}" alt="" style="width: 200px; height:200px; margin-bottom:20px; margin-right:300px; "></center>

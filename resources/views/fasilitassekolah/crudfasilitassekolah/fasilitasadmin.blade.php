@@ -37,6 +37,7 @@
                                     <tr>
                                         <th scope="col">#</th>
                                         <th scope="col">Foto Sampul</th>
+                                        <th scope="col">Foto</th>
                                         <th scope="col">Judul Fasilitas</th>
                                         <th scope="col">Deskripsi</th>
                                         <th scope="col">Aksi</th>
@@ -53,6 +54,10 @@
                                             <th>{{ $no++ }}</th>
                                             <td>
                                                 <img src="{{ asset('fotomahasiswa/' . $y->foto_sampul) }}" alt=""
+                                                    style="width: 50px;">
+                                            </td>
+                                            <td>
+                                                <img src="{{ asset('fotomahasiswa/' . $y->foto) }}" alt=""
                                                     style="width: 50px;">
                                             </td>
                                             <td>{{  $y->judulfasilitas ? $y->judulfasilitas->judulfasilitas : 'Data tidak ada'}}</td>

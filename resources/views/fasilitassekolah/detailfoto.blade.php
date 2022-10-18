@@ -99,10 +99,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="particles-snow" id="header-snow"></div><!-- /#header-snow.particles-snow -->
                     <div class="breadcrumbs">
                         <ul>
-                            <li><a href="/">Beranda</a></li>
+                            <li><a href="index.html">Beranda</a></li>
                             <li>Detail Foto</li>
                         </ul>
                     </div>
@@ -121,7 +120,7 @@
                     <div class="portfolio-two__single">
                         <div class="portfolio-two__image">
                         <!-- @foreach (explode(',', $detailfoto->foto) as $detailfoto) -->
-                            <img src="{{ asset('files/' . $detailfoto) }}" alt="">
+                            <img src="{{ asset('fotomahasiswa/' . $detailfoto) }}" alt="">
                         <!-- @endforeach -->
                             <a class="img-popup" href=""><i class="fal fa-plus"></i></a>
                         </div><!-- /.portfolio-two__image -->

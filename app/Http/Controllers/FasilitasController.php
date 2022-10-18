@@ -57,6 +57,7 @@ class FasilitasController extends Controller
 
 
         $data = fasilitassekolah::create([
+            'foto' => $request->foto,
             'foto_sampul' => $request->foto_sampul,
             'fasilitas_id' => $request->fasilitas_id,
             'deskripsi' => $request->deskripsi,
@@ -64,6 +65,11 @@ class FasilitasController extends Controller
         if ($request->hasFile('foto_sampul')) {
             $request->file('foto_sampul')->move('fotomahasiswa/', $request->file('foto_sampul')->getClientOriginalName());
             $data->foto_sampul = $request->file('foto_sampul')->getClientOriginalName();
+            $data->save();
+        }
+        if ($request->hasFile('foto')) {
+            $request->file('foto')->move('fotomahasiswa/', $request->file('foto')->getClientOriginalName());
+            $data->foto = $request->file('foto')->getClientOriginalName();
             $data->save();
         }
 
@@ -97,6 +103,7 @@ class FasilitasController extends Controller
 
         $data = fasilitassekolah::find($id);
         $data->update([
+            'foto' => $request->foto,
             'foto_sampul' => $request->foto_sampul,
             'judul_fasilitas' => $request->judul_fasilitas,
             'deskripsi' => $request->deskripsi,
@@ -104,6 +111,11 @@ class FasilitasController extends Controller
         if ($request->hasFile('foto_sampul')) {
             $request->file('foto_sampul')->move('fotomahasiswa/', $request->file('foto_sampul')->getClientOriginalName());
             $data->foto_sampul = $request->file('foto_sampul')->getClientOriginalName();
+            $data->save();
+        }
+        if ($request->hasFile('foto')) {
+            $request->file('foto')->move('fotomahasiswa/', $request->file('foto')->getClientOriginalName());
+            $data->foto = $request->file('foto')->getClientOriginalName();
             $data->save();
         }
 

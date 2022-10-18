@@ -12,7 +12,7 @@ class fasilitassekolah extends Model
     use HasFactory;
 
     protected $guarded = [];
-    protected $fillable = ['foto_sampul', 'fasilitas_id', 'deskripsi'];
+    protected $fillable = ['foto_sampul','foto', 'fasilitas_id', 'deskripsi'];
 
 
     public function getCreatedAtAttribute()

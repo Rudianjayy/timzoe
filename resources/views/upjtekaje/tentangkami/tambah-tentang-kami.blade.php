@@ -7,7 +7,7 @@
     </head>
 
     <body>
-        <h1 class="text-center mb-4">Tambah Fasilitas Sekolah</h1>
+        <h1 class="text-center mb-4">Tambah Tentang Kami</h1>
 
         <div class="container" mb-5>
 
@@ -15,39 +15,18 @@
                 <div class="col-8">
                     <div class="card">
                         <div class="card-body">
-                            <form action="/prosesfasilitas" method="POST" enctype="multipart/form-data">
+                            <form action="/submitdata13" method="POST" enctype="multipart/form-data">
                                 @csrf
-                                {{--  <form action="{{ route('prosesfasilitas') }}" method="post" enctype="multipart/form-data">  --}}
+
                                 <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Foto Sampul :</label>
-                                    <input type="file" name="foto_sampul" class="form-control" id="exampleInputEmail1"
+                                    <label for="exampleInputEmail1" class="form-label">Foto :</label>
+                                    <input type="file" name="foto_tentangkami" class="form-control" id="exampleInputEmail1"
                                         aria-describedby="emailHelp">
-                                    @error('foto_sampul')
+                                    @error('foto_tentangkami')
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
-                                <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Foto:</label>
-                                    <input type="file" name="foto" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp">
-                                    @error('foto')
-                                        <div class="alert alert-danger">{{ $message }}</div>
-                                    @enderror
-                                </div>
-                                <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Judul Fasilitas :</label>
-                                    <select name="fasilitas_id" class="form-control" id="fasilitas_id">
-                                        <option value=""></option>
-                                        @foreach ($judul as $j)
-                                            <option value="{{ $j->id }}">{{ $j->judulfasilitas }}</option>
-                                        @endforeach
-                                    </select>
-                                    <div class="text-danger">
-                                        @error('fasilitas_id')
-                                            {{ $message }}
-                                        @enderror
-                                    </div>
-                                </div>
+
                                 <section style="padding-top:60px;">
                                     <div class="container">
                                         <div class="row">
@@ -58,7 +37,7 @@
                                                     </div>
                                                     <div class="card-body">
                                                         {{--  <form method="POST" enctype="multipart/form-data">  --}}
-                                                        <textarea name="deskripsi" id="mytextarea"></textarea>
+                                                        <textarea name="deskripsi_tentangkami" id="mytextarea" ></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -69,7 +48,7 @@
 
 
                                 <button type="submit" class="btn btn-primary">Submit</button>
-                                <a href="/data-album" class="btn btn-danger">Kembali</a>
+                                <a href="/admintentangkami" class="btn btn-danger">Kembali</a>
                             </form>
                         </div>
                     </div>
@@ -77,6 +56,9 @@
             </div>
         </div>
 
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
         </script>
@@ -107,19 +89,12 @@
         </script>
 
         <script>
-            //uploadimage
-            $(document).ready(function() {
-                $('.btn-success').click(function() {
-                    var htmlData = $('.clone').html();
-                    $('.increment').after(htmlData);
-                });
-                //removeimage
-                $('body').on('click', 'btn-danger', function() {
-                    $(this).parents('.xpress').remove();
-                });
-            })
+            const selection = document.getElementById('matkul')
+            selection.onchange = function(e) {
+                const dosen = e.target.options[e.target.selectedIndex].dataset.dosen
+                document.getElementById('dosen').value = dosen;
+            }
         </script>
-
         @include('layout.script')
     </body>
 @endsection

@@ -21,6 +21,7 @@ use App\Http\Controllers\FasilitasController;
 use App\Http\Controllers\FotoidukaController;
 use App\Http\Controllers\KesiswaanController;
 use App\Http\Controllers\KurikulumController;
+use App\Http\Controllers\UpjtekajeController;
 use App\Http\Controllers\KompetensiController;
 use App\Http\Controllers\DataidentitasController;
 use App\Http\Controllers\DetailakademiController;
@@ -402,6 +403,17 @@ Route::post('/submitdata12',[UpjController::class, 'submitdata12'])->name('submi
 Route::get('/editedotel/{id}',[UpjController::class, 'editedotel'])->name('editedotel');
 Route::post('/submitedit12/{id}',[UpjController::class, 'submitedit12'])->name('submitedit12');
 Route::get('/deleteedotel/{id}',[UpjController::class, 'deleteedotel'])->name('deleteedotel');
+
+
+
+
+
+Route::get('/tentangkami',[UpjtekajeController::class, 'loby13'])->name('tentangkami');
+Route::get('/tambahtentangkami',[UpjtekajeController::class, 'tambahtentangkami'])->name('tambahtentangkami');
+Route::post('/submitdata13',[UpjtekajeController::class, 'submitdata13'])->name('submitdata13');
+Route::get('/edittentangkami/{id}',[UpjtekajeController::class, 'edittentangkami'])->name('edittentangkami');
+Route::post('/submitedit13/{id}',[UpjtekajeController::class, 'submitedit13'])->name('submitedit13');
+Route::get('/deletetentangkami/{id}',[UpjtekajeController::class, 'deletetentangkami'])->name('deletetentangkami');
 
 
 

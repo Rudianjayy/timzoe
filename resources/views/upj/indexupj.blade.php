@@ -10,7 +10,7 @@
 
     <meta charset="utf-8">
     <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
-    <title>Smk Muhammadiyah 1 Genteng</title>
+    <title>SMK Muhammadiyah 1 Genteng</title>
     <meta name="author" content="themesflat.com">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -106,7 +106,7 @@
                     </div>
                     </div><!-- /.service-two__box-wrap -->
                 </div><!-- /.col-lg-6 -->
-                
+
             </div><!-- /.row no-gutters -->
         </div><!-- /.container -->
     </section><!-- /.service-two -->
@@ -192,7 +192,7 @@
 
         })
     </script>
-   
+
 </body>
 
 <!-- Mirrored from themesflat.com/html/bidzend/item-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Sep 2022 01:13:11 GMT -->

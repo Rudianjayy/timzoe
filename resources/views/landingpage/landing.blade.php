@@ -413,7 +413,7 @@
 
                                     <div class="sc-product-item" style="">
                                         <div class="product-img active">
-                                            <img src="{{ asset('fotomahasiswa/' . $ps->foto) }}" alt="Image" style="width: 300px; height:220px;">
+                                            <img src="{{ asset('fotomahasiswa/' . $ps->foto) }}" alt="Image" style= height:220px;">
                                         </div>
                                         <div class="product-content">
                                             <h5 class="author-name"><a href="item-details.html">{!! $ps->judul_prestasi !!}</a> </h5>
@@ -541,7 +541,7 @@
                     </div><!-- /.block-title text-center -->
                     <ul class="portfolio-filter list-unstyled post-filter ">
                         <li data-filter=".filter-item" class="active"><span>All</span></li>
-                       
+
                     </ul><!-- /.portfolio-filter list-unstyled -->
                     <div class="row masonary-layout filter-layout">
                         @foreach ($data as $row )
@@ -555,12 +555,9 @@
                                 </div><!-- /.portfolio-two__content -->
                             </div><!-- /.portfolio-two__single -->
                         </div><!-- /.col-lg-4 col-md-6 col-sm-12 -->
-                        @endforeach 
+                        @endforeach
                     </div><!-- /.row -->
-                    <div class="text-center">
-                        <a href="#" class="thm-btn portfolio-column__more-btn"><span>Load More</span></a>
-                        <!-- /.thm-btn portfolio-grid__more-btn -->
-                    </div><!-- /.text-center -->
+                   
                 </div><!-- /.container -->
             </section><!-- /.portfolio-grid -->
 

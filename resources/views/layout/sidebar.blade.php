@@ -32,7 +32,7 @@
                 <li><a href="/identitas_admin">Identitas Sekolah</a></li>
                 <li><a href="/fasilitasadmin">Fasilitas Sekolah </a></li>
                 <li><a href="/judulfasilitas">Judul Fasilitas</a></li>
-                <li><a href="/fotofasilitas">Foto Fasilitas</a></li>
+                {{--  <li><a href="/fotofasilitas">Foto Fasilitas</a></li>  --}}
             </ul>
         </li>
 

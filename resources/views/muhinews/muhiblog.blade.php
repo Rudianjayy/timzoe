@@ -49,11 +49,6 @@
                 <div class="row">
                     <div class="col-md-12">
 
-                        <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/page-header-shape-1-1.png') }}" class="page-header__bg-shape-1" alt="">
-                        <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-2-circle-1-1.png') }}" class="page-header__bg-shape-2" alt="">
-                        <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-1.png') }}" class="page-header__bg-shape-3" alt="">
-                        <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-3.png') }}" class="page-header__bg-shape-4" alt="">
-                        <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-2-circle-1-2.png') }}" class="page-header__bg-shape-2" alt="">
 
                         <div class="breadcrumbs">
                             <ul>
@@ -133,7 +128,7 @@
                                 @foreach ($kategori as $kategori)
                                 <ul class="list-unstyle d sidebar__category-list">
                                     <li>
-                                        <a href="#">{{$kategori->Kategori}}</a>
+                                        <a href="#">{{$kategori->kategori}}</a>
                                     </li>
                                 </ul><!-- /.list-unstyled sidebar__category-list -->
                                 @endforeach
@@ -149,7 +144,7 @@
                                             <img class="zoom" src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt="">
                                         </div><!-- /.sidebar__post-image -->
                                         <div class="sidebar__post-content">
-                                            <h3><a href="#">{{$d->judul}}</a></h3>
+                                            <h3><a href="/muhiblog/{{ $d->id }}">{{$d->judul}}</a></h3>
                                             <span>{{$d->created_at}}</span>
                                         </div><!-- /.sidebar__post-content -->
                                     </div><!-- /.sidebar__post-single -->

@@ -1,12 +1,13 @@
 @extends('layout.main')
 
 @section('content')
-<head>
-    @include('layout.css')
-</head>
+
+    <head>
+        @include('layout.css')
+    </head>
 
     <body>
-        <h1 class="text-center mb-4">Edit Data Identitas</h1>
+        <h1 class="text-center mb-4">Edit Fasilitas Sekolah</h1>
 
         <div class="container">
 
@@ -14,35 +15,64 @@
                 <div class="col-8">
                     <div class="card">
                         <div class="card-body">
-                            <form action="/editprosesfasilitas/{{ $data->id }}" method="POST" enctype="multipart/form-data">
+                            <form action="/editprosesfasilitas/{{ $data->id }}" method="POST"
+                                enctype="multipart/form-data">
                                 @csrf
 
                                 <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Ubah Foto :</label>
-                                    <img class="img mb-3" src="{{ asset('fotomahasiswa/' . $data->foto) }}" alt=""
-                                        style="width: 70px">
-                                    <input type="file" name="foto" class="form-control" id="foto"
-                                        aria-describedby="emailHelp" value="{{ $data->foto }}">
-                                @error('foto')
+                                    <label for="exampleInputEmail1" class="form-label">Foto Sampul :</label>
+                                    <img class="img mb-3" src="{{ asset('fotomahasiswa/' . $data->foto_sampul) }}"
+                                        alt="" style="width: 70px">
+                                    <input type="file" name="foto_sampul" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp">
+                                    @error('foto_sampul')
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
-
                                 <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Deskripsi :</label>
-                                    <textarea class="form-control form-control-solid" rows="6x" name="deskripsi">{{ $data->deskripsi }}</textarea>
-
-                                    @error('deskripsi')
+                                    <label for="exampleInputEmail1" class="form-label">Judul Fasilitas :</label>
+                                    <input type="text" name="judul_fasilitas" class="form-control"
+                                        id="exampleInputEmail1" aria-describedby="emailHelp"
+                                        value="{{ $data->judul_fasilitas }}">
+                                    @error('judul_fasiitas')
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
-
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                            </form>
-                        </div>
+                                <label for="exampleInputEmail1" class="form-label">Foto :</label>
+                                <img class="img mb-3" src="{{ asset('files/' . $data->foto) }}" alt=""
+                                    style="width: 70px">
+                                <input type="file" name="foto[]" class="my frm form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" multiple>
+                                <div class="input-group-btn">
+                                    {{--  <button class="btn btn-success" type="button">Tambah</button>  --}}
+                                </div>
+                                @error('foto')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror
+                        <section style="padding-top:60px;">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                Deskripsi
+                                            </div>
+                                            <div class="card-body">
+                                                {{--  <form method="POST" enctype="multipart/form-data">  --}}
+                                                <textarea name="deskripsi" id="mytextarea">{{ $data->deskripsi }}</textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <a href="/identitas_admin" class="btn btn-danger">Kembali</a>
+                        </form>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
 
         <!-- Optional JavaScript; choose one of the two! -->

@@ -37,7 +37,7 @@
                                             <a href="/identitas_sekolah">Identitas Sekolah</a></li>
                                         <li class="menu-item {{ Route::is('fasilitassekolah') ? 'current-item' : '' }}">
                                             <a href="/fasilitassekolah">Fasilitas</a></li>
-                                </li>
+                                </li>  
                             </ul>
 
                             <li class="menu-item menu-item-has-children">
@@ -69,7 +69,7 @@
                             <li class="menu-item menu-item-has-children">
                                 <a href="#"> Kesiswaan</a>
                                 <ul class="sub-menu">
-                                  
+
                                     <li
                                         class="menu-item menu-item-has-children {{ Route::is('kompetensi') ? 'current-item' : '' }}">
                                         <a href="/indexakademi"> Akademi</a>

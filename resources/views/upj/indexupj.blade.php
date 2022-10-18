@@ -10,7 +10,7 @@
 
     <meta charset="utf-8">
     <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
-    <title>Smk Muhammadiyah 1 Genteng</title>
+    <title>SMK Muhammadiyah 1 Genteng</title>
     <meta name="author" content="themesflat.com">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -201,7 +201,7 @@
                             <div class="elementor-element elementor-element-b838dac elementor-widget elementor-widget-image" data-id="b838dac" data-element_type="widget" data-widget_type="image.default">
                                 <div class="elementor-widget-container" style="margin-left: 100px;">
                                     <figure class="wp-caption">
-                                        <a href="https://upjtekaje.smkmuhigtg.sch.id/">
+                                        <a href="/upj">
                                             <img width="400" height="330" src="https://smkmuhigtg.sch.id/wp-content/uploads/2021/11/UPJ-1-221x300.png" class="attachment-medium size-medium" alt="" loading="lazy" srcset="https://smkmuhigtg.sch.id/wp-content/uploads/2021/11/UPJ-1-221x300.png 221w, https://smkmuhigtg.sch.id/wp-content/uploads/2021/11/UPJ-1-754x1024.png 754w, https://smkmuhigtg.sch.id/wp-content/uploads/2021/11/UPJ-1-768x1043.png 768w, https://smkmuhigtg.sch.id/wp-content/uploads/2021/11/UPJ-1.png 1072w" sizes="(max-width: 221px) 100vw, 221px" /> </a>
                                     </figure>
                                 </div>

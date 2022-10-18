@@ -46,6 +46,7 @@
                                     <th scope="col">judul</th>
                                     <th scope="col">Deskripsi</th>
                                     <th scope="col">Deskripsi Detail</th>
+                                    <th scope="col">Kategori</th>
                                     <th scope="col">Dibuat</th>
                                     <th scope="col">Aksi</th>
                                 </tr>
@@ -66,7 +67,12 @@
 
                                         <td>{{ $d->judul }}</td>
                                         <td>{{ $d->deskripsi_muhinews }}</td>
-                                        <td>{{ $d->deskripsi_detail }}</td>
+                                        <td>{!! $d->deskripsi_detail !!}</td>
+                                        <td>{{ $d->Kategori }}
+                                               {{--  @php
+                                                dd($d->kategori);
+                                               @endphp  --}}
+                                        </td>
                                         <td>{{ $d->created_at }}</td>
 
                                         {{-- <td>{{ $d->created_at->format('D M Y') }}</td> --}}

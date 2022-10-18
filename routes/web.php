@@ -21,6 +21,7 @@ use App\Http\Controllers\FasilitasController;
 use App\Http\Controllers\FotoidukaController;
 use App\Http\Controllers\KesiswaanController;
 use App\Http\Controllers\KurikulumController;
+use App\Http\Controllers\UpjtekajeController;
 use App\Http\Controllers\KompetensiController;
 use App\Http\Controllers\DataidentitasController;
 use App\Http\Controllers\DetailakademiController;
@@ -52,9 +53,11 @@ Route::get('/',[LandingController::class,'index'])->name('landing');
 //manajemen beranda
 
 Route::get('/slideradmin',[SliderController::class, 'slideradmin'])->name('slideradmin');
+Route::get('/tambahslider',[SliderController::class, 'tambahslider'])->name('tambahslider');
+Route::post('/sliderproses',[SliderController::class, 'sliderproses'])->name('sliderproses');
 Route::get('/editslider/{id}',[SliderController::class, 'editslider'])->name('editslider');
 Route::post('/prosesslider/{id}',[SliderController::class, 'prosesslider'])->name('prosesslider');
-Route::get('/deleteslider/{id}',[SliderController::class, 'delete'])->name('delete');
+Route::get('/deleteslider/{id}',[SliderController::class, 'deleteslider'])->name('deleteslider');
 
 
 Route::get('/fotoslideradmin',[SliderController::class, 'fotoslideradmin'])->name('fotoslideradmin');
@@ -177,11 +180,12 @@ Route::get('/deleteidentitas/{id}',[IdentitasSekolahController::class, 'delete']
 //fasilitas sekolah dan crud
 Route::get('/fasilitassekolah',[FasilitasController::class,'fasilitassekolah'])->name('fasilitassekolah');
 Route::get('/fasilitasadmin',[FasilitasController::class,'fasilitasadmin'])->name('fasilitasadmin');
+Route::get('/detailfoto/{id}',[FasilitasController::class, 'detailfoto'])->name('detailfoto');
 Route::get('/tambahfasilitas',[FasilitasController::class,'tambahfasilitas'])->name('tambahfasilitas');
 Route::post('/prosesfasilitas',[FasilitasController::class,'prosesfasilitas'])->name('prosesfasilitas');
 Route::get('/editfasilitas/{id}',[FasilitasController::class,'editfasilitas'])->name('editfasilitas');
 Route::post('/editprosesfasilitas/{id}',[FasilitasController::class,'editprosesfasilitas'])->name('editprosesfasilitas');
-Route::get('/deletefasilitas/{id}',[FasilitasController::class, 'delete'])->name('delete');
+Route::get('/deletefasilitas/{id}',[FasilitasController::class, 'deletefasilitas'])->name('delete');
 
 
 
@@ -262,7 +266,7 @@ Route::post('/osisproses3',[KesiswaanController::class, 'osisproses3'])->name('o
 Route::get('/editosis/{id}',[KesiswaanController::class, 'editosis'])->name('editosis');
 Route::post('/editproses5/{id}',[KesiswaanController::class,'editproses5'])->name('editproses5');
 Route::get('/deleteosis/{id}',[KesiswaanController::class,'deleteosis'])->name('deleteosis');
- 
+
 Route::get('/alumni',[KesiswaanController::class,'alumni'])->name('alumni');
 Route::get('/alumniadmin',[KesiswaanController::class,'alumniadmin'])->name('alumniadmin');
 Route::get('/tambahalumni',[KesiswaanController::class, 'tambahalumni'])->name('tambahalumni');
@@ -270,7 +274,7 @@ Route::post('/alumniproses6',[KesiswaanController::class, 'alumniproses6'])->nam
 Route::get('/editalumni/{id}',[KesiswaanController::class, 'editalumni'])->name('editalumni');
 Route::post('/editproses6/{id}',[KesiswaanController::class,'editproses6'])->name('editproses6');
 Route::get('/deletealumni/{id}',[KesiswaanController::class,'deletealumni'])->name('deletealumni');
- 
+
 
 
 //footeer
@@ -280,7 +284,7 @@ Route::post('/footeerproses7',[FooteerController::class, 'footeerproses7'])->nam
 Route::get('/editfooteer/{id}',[FooteerController::class, 'editfooteer'])->name('editfooteer');
 Route::post('/editproses7/{id}',[FooteerController::class,'editproses7'])->name('editproses7');
 Route::get('/deletefooteer/{id}',[FooteerController::class,'deletefooteer'])->name('deletefooteer');
- 
+
 
 
 
@@ -371,6 +375,17 @@ Route::post('/submitdata12',[UpjController::class, 'submitdata12'])->name('submi
 Route::get('/editedotel/{id}',[UpjController::class, 'editedotel'])->name('editedotel');
 Route::post('/submitedit12/{id}',[UpjController::class, 'submitedit12'])->name('submitedit12');
 Route::get('/deleteedotel/{id}',[UpjController::class, 'deleteedotel'])->name('deleteedotel');
+
+
+
+
+
+Route::get('/tentangkami',[UpjtekajeController::class, 'loby13'])->name('tentangkami');
+Route::get('/tambahtentangkami',[UpjtekajeController::class, 'tambahtentangkami'])->name('tambahtentangkami');
+Route::post('/submitdata13',[UpjtekajeController::class, 'submitdata13'])->name('submitdata13');
+Route::get('/edittentangkami/{id}',[UpjtekajeController::class, 'edittentangkami'])->name('edittentangkami');
+Route::post('/submitedit13/{id}',[UpjtekajeController::class, 'submitedit13'])->name('submitedit13');
+Route::get('/deletetentangkami/{id}',[UpjtekajeController::class, 'deletetentangkami'])->name('deletetentangkami');
 
 
 

@@ -10,8 +10,11 @@ use Illuminate\Support\Carbon;
 class fasilitassekolah extends Model
 {
     use HasFactory;
-    
+
     protected $guarded = [];
+    protected $fillable = ['foto', 'foto_sampul', 'judul_fasilitas', 'deskripsi'];
+
+
     public function getCreatedAtAttribute()
     {
         return Carbon::parse($this->attributes['created_at'])

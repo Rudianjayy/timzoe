@@ -8,10 +8,12 @@ use App\Models\Muhinews;
 use Illuminate\Http\Request;
 use App\Models\fasilitassekolah;
 
+
 class FasilitasController extends Controller
 {
-    public function fasilitassekolah(){
-        $q = fasilitassekolah::paginate(6);
+    public function fasilitassekolah()
+    {
+        $q = fasilitassekolah::paginate(4);
         $f = Muhinews::paginate(3);
         $kh = Jurusan::all();
         $logo= footeer::all();
@@ -19,77 +21,124 @@ class FasilitasController extends Controller
         return view('fasilitassekolah.fasilitassekolah', compact('q','f','kh','logo'));
 
     }
-    public function fasilitasadmin(){
+    public function detailfoto($id)
+    {
+        $detailfoto = fasilitassekolah::findOrFail($id);
+        return view('fasilitassekolah.detailfoto', compact('detailfoto'));
+    }
+    public function fasilitasadmin()
+    {
         $data = fasilitassekolah::all();
-        return view('fasilitassekolah.crudfasilitassekolah.fasilitasadmin',compact('data'));
+        return view('fasilitassekolah.crudfasilitassekolah.fasilitasadmin', compact('data'));
     }
     public function tambahfasilitas()
     {
         return view('fasilitassekolah.crudfasilitassekolah.tambahfasilitas');
     }
 
-    public function prosesfasilitas(Request $request){
+    public function prosesfasilitas(Request $request)
+    {
         // dd($request->all());
-        $this->validate($request,[
-            'foto' =>'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
-            'judul_fasilitas' =>'required',
-            'deskripsi' =>'required',
-        ],[
-            'foto.required' =>'Harus diisi',
-            'foto.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
-            'judul_fasilitas.required' =>'Harus diisi',
-            'deskripsi.required' =>'Harus diisi',
+        $this->validate($request, [
+            'foto' => 'required',
+            'foto.*' => 'required',
+            'foto_sampul' => 'required',
+            'judul_fasilitas' => 'required',
+            'deskripsi' => 'required',
+        ], [
+            'foto.required' => 'Harus diisi',
+            'foto_sampul.required' => 'Harus diisi',
+            'foto.mimes' => 'Harus jpg,jpeg,bmp,gif,png,webp',
+            'judul_fasilitas.required' => 'Harus diisi',
+            'deskripsi.required' => 'Harus diisi',
 
         ]);
+        // dd($request->all());
+        $no = 1;
+        if ($request->file('foto')) {
+            foreach ($request->file('foto') as $file) {
+                $name =  time() . rand(1, 100) . $no++ . '.' . $file->extension();
+                $file->move(public_path('files'), $name);
+                $files[] = $name;
+            }
+            $file = implode(',', $files);
+        }
+        // $file = new fasilitassekolah();
+        // $file->foto = $files;
+        // $file->save();
+
         $data = fasilitassekolah::create([
-            'foto' =>$request->foto,
-            'judul_fasilitas' =>$request->judul_fasilitas,
-            'deskripsi' =>$request->deskripsi,
+            'foto' => $file,
+            'foto_sampul' => $request->foto_sampul,
+            'judul_fasilitas' => $request->judul_fasilitas,
+            'deskripsi' => $request->deskripsi,
         ]);
-        if($request->hasFile('foto')){
-            $request->file('foto')->move('fotomahasiswa/', $request->file('foto')->getClientOriginalName());
-            $data->foto = $request->file('foto')->getClientOriginalName();
+        if ($request->hasFile('foto_sampul')) {
+            $request->file('foto_sampul')->move('fotomahasiswa/', $request->file('foto_sampul')->getClientOriginalName());
+            $data->foto_sampul = $request->file('foto_sampul')->getClientOriginalName();
             $data->save();
         }
 
-        return redirect()->route('fasilitasadmin')->with('toast_success', 'Data Berhasil Di Tambahkan!');
+        return redirect('fasilitasadmin')->with('toast_success', ' Data Berhasil di tambahkan!');
     }
 
-    public function editfasilitas($id){
+
+
+
+
+    public function editfasilitas($id)
+    {
 
         $data = fasilitassekolah::findOrFail($id);
         return view('fasilitassekolah.crudfasilitassekolah.editfasilitas', compact('data'));
     }
 
-    public function editprosesfasilitas(Request $request, $id){
-        $this->validate($request,[
-            'foto' =>'mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
-            'judul_fasilitas' =>'required',
-            'deskripsi' =>'required',
-        ],[
-            'foto.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
-            'judul_fasilitas' =>'harus diisi',
-            'deskripsi' =>'harus diisi',
+    public function editprosesfasilitas(Request $request, $id)
+    {
+        $this->validate($request, [
+            'foto' => 'required',
+            'foto.*' => 'required',
+            'foto_sampul' => 'required',
+            'judul_fasilitas' => 'required',
+            'deskripsi' => 'required',
+        ], [
+            'foto.required' => 'Harus diisi',
+            'foto_sampul.required' => 'Harus diisi',
+            'foto.mimes' => 'Harus jpg,jpeg,bmp,gif,png,webp',
+            'judul_fasilitas.required' => 'Harus diisi',
+            'deskripsi.required' => 'Harus diisi',
 
         ]);
+        // dd($request->all());
+        $no = 1;
+        if ($request->file('foto')) {
+            foreach ($request->file('foto') as $file) {
+                $name =  time() . rand(1, 100) . $no++ . '.' . $file->extension();
+                $file->move(public_path('files'), $name);
+                $files[] = $name;
+            }
+            $file = implode(',', $files);
+        }
         $data = fasilitassekolah::find($id);
         $data->update([
-            'judul_fasilitas' =>$request->judul_fasilitas,
-            'deskripsi' =>$request->deskripsi,
+            'foto' => $file,
+            'foto_sampul' => $request->foto_sampul,
+            'judul_fasilitas' => $request->judul_fasilitas,
+            'deskripsi' => $request->deskripsi,
         ]);
-        if($request->hasFile('foto')){
-            $request->file('foto')->move('fotomahasiswa/',$request->file('foto')->getClientOriginalName());
-            $data->foto = $request->file('foto')->getClientOriginalName();
+        if ($request->hasFile('foto_sampul')) {
+            $request->file('foto_sampul')->move('fotomahasiswa/', $request->file('foto_sampul')->getClientOriginalName());
+            $data->foto_sampul = $request->file('foto_sampul')->getClientOriginalName();
             $data->save();
         }
 
-        return redirect('fasilitasadmin')->with('toast_success',' Data Berhasil di Ubah!');
-
+        return redirect('fasilitasadmin')->with('toast_success', ' Data Berhasil di Ubah!');
     }
 
-    public function delete($id){
+    public function deletefasilitas($id)
+    {
         $data = fasilitassekolah::find($id);
         $data->delete();
-        return redirect('fasilitasadmin')->with('toast_error',' Data Berhasil di Hapus!');
+        return redirect('fasilitasadmin')->with('toast_error', ' Data Berhasil di Hapus!');
     }
 }

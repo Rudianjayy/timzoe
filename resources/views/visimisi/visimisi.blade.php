@@ -62,30 +62,19 @@
             <div class="avatar">
                 <img src="assets/images/avatar/avt-4.jpg" alt="">
             </div>
-            <div class="infor">
-                <h6><a href="author.html">Bagikan</a> </h6>
-                <div class="widget-social">
-                    <ul>
-                        <li><a href="#" class="active"><i class="fab fa-facebook-f"></i></a>
-                        </li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                    </ul>
-                </div>
-            </div>
+
         </div>
         @foreach ($v as $v )
 
 
         <div class="container">
             <div class="row">
-                <div class="content-item">
-                  <center> <h3>{{$v->judulvisi}}</h3></center>
+                <div class="content">
+                  <center> <h1>{{$v->judulvisi}}</h1></center>
 
                    <center> <p class="desc">{!!$v->deskripsivisi!!}</p></center>
                     <br>
-                    <center>  <h3>{{$v->judulmisi}}</h3></center>
+                    <center>  <h1   >{{$v->judulmisi}}</h1 ></center>
                     <center> <p class="desc">{!!$v->deskripsimisi!!}</p></center>
                 </div>
             </div>

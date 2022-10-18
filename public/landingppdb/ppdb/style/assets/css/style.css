@@ -112,6 +112,12 @@ a:focus {
 		max-width: 1200px;
 	}
 }
+@media (min-width: 1200px) {
+	.container-riski {
+		max-width: 1200px;
+        margin-left: 300px;
+	}
+}
 
 /* block title */
 
@@ -1416,6 +1422,8 @@ a:focus {
 }
 
 
+
+
 .main-nav-one.stricked-menu .main-nav__navigation-box>li {
 	padding: 22.5px 0;
 }
@@ -1423,7 +1431,7 @@ a:focus {
 /* main nav home three */
 
 .main-nav-one__home-three .main-nav__navigation-box>li>a {
-	color: #162f62;
+	color: #fff;
 }
 
 @media(max-width: 1915px) {
@@ -3214,7 +3222,7 @@ a:focus {
 --------------------------------------------------------------*/
 
 .blog-grid {
-	padding-top: 170px;
+	padding-top: 40px;
 	padding-bottom: 170px;
 }
 
@@ -4596,7 +4604,7 @@ a:focus {
 }
 
 .portfolio-column {
-	padding-top: 170px;
+	padding-top: 17px;
 }
 
 /*--------------------------------------------------------------
@@ -4774,7 +4782,7 @@ a:focus {
 --------------------------------------------------------------*/
 
 .testimonials-one {
-	padding-top: 170px;
+	padding-top: 50px;
 	padding-bottom: 95px;
 	position: relative;
 }
@@ -4944,6 +4952,7 @@ a:focus {
 
 .team-one .container {
 	position: relative;
+	padding-bottom: 150px;
 }
 
 .team-one .row.high-gutters {
@@ -5109,6 +5118,7 @@ a:focus {
 	position: absolute;
 	top: 40%;
 	left: 0;
+	/* padding-top: 10000px; */
 }
 
 .team-one__home-two {
@@ -5747,7 +5757,7 @@ a:focus {
 --------------------------------------------------------------*/
 
 .service-one {
-	padding-top: 170px;
+	padding-top: 40px;
 	padding-bottom: 120px;
 }
 
@@ -6459,6 +6469,7 @@ a:focus {
 .about-three {
 	position: relative;
 	padding-bottom: 170px;
+	padding-top: 50px;
 }
 
 [class*=about-three__bg-image-] {

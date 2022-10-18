@@ -17,49 +17,58 @@
                         <div class="card-body">
                             <form action="/prosesfasilitas" method="POST" enctype="multipart/form-data">
                                 @csrf
+                                {{--  <form action="{{ route('prosesfasilitas') }}" method="post" enctype="multipart/form-data">  --}}
                                 <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Foto :</label>
-                                    <input type="file" name="foto" class="form-control" id="exampleInputEmail1"
+                                    <label for="exampleInputEmail1" class="form-label">Foto Sampul :</label>
+                                    <input type="file" name="foto_sampul" class="form-control" id="exampleInputEmail1"
                                         aria-describedby="emailHelp">
-                                    @error('foto')
+                                    @error('foto_sampul')
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Judul Fasilitas :</label>
-                                    <input type="text" name="judul_fasilitas" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp">
+                                    <input type="text" name="judul_fasilitas" class="form-control"
+                                        id="exampleInputEmail1" aria-describedby="emailHelp">
                                     @error('judul_fasiitas')
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
-                                <section style="padding-top:60px;">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="card">
-                                                    <div class="card-header">
-                                                        Deskripsi
-                                                    </div>
-                                                    <div class="card-body">
-                                                        {{--  <form method="POST" enctype="multipart/form-data">  --}}
-                                                        <textarea name="deskripsi" id="mytextarea"></textarea>
-                                                    </div>
-                                                </div>
+                                <label for="exampleInputEmail1" class="form-label">Foto :</label>
+                                <input type="file" name="foto[]" class="my frm form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" multiple>
+                               
+                                @error('foto')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror
+
+                        <section style="padding-top:60px;">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                Deskripsi
+                                            </div>
+                                            <div class="card-body">
+                                                {{--  <form method="POST" enctype="multipart/form-data">  --}}
+                                                <textarea name="deskripsi" id="mytextarea"></textarea>
                                             </div>
                                         </div>
                                     </div>
-                                </section>
+                                </div>
+                            </div>
+                        </section>
 
 
 
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                                <a href="/data-album" class="btn btn-danger">Kembali</a>
-                            </form>
-                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <a href="/data-album" class="btn btn-danger">Kembali</a>
+                        </form>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
@@ -90,13 +99,21 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
             integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
         </script>
+
         <script>
-            const selection = document.getElementById('matkul')
-            selection.onchange = function(e) {
-                const dosen = e.target.options[e.target.selectedIndex].dataset.dosen
-                document.getElementById('dosen').value = dosen;
-            }
+            //uploadimage
+            $(document).ready(function() {
+                $('.btn-success').click(function() {
+                    var htmlData = $('.clone').html();
+                    $('.increment').after(htmlData);
+                });
+                //removeimage
+                $('body').on('click', 'btn-danger', function() {
+                    $(this).parents('.xpress').remove();
+                });
+            })
         </script>
+
         @include('layout.script')
     </body>
 @endsection

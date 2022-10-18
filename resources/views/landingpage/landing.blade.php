@@ -541,13 +541,10 @@
                     </div><!-- /.block-title text-center -->
                     <ul class="portfolio-filter list-unstyled post-filter ">
                         <li data-filter=".filter-item" class="active"><span>All</span></li>
-                        <li data-filter=".strategy"><span>Strategy</span></li>
-                        <li data-filter=".optimization"><span>Optimization</span></li>
-                        <li data-filter=".advertising"><span>Advertising</span></li>
-                        <li data-filter=".social"><span>Social</span></li>
+                       
                     </ul><!-- /.portfolio-filter list-unstyled -->
-                    @foreach ($data as $row )
                     <div class="row masonary-layout filter-layout">
+                        @foreach ($data as $row )
                         <div class="col-lg-3 col-md-6 col-sm-12 filter-item masonary-item  strategy">
                             <div class="portfolio-two__single">
                                 <div class="portfolio-two__image">
@@ -558,8 +555,8 @@
                                 </div><!-- /.portfolio-two__content -->
                             </div><!-- /.portfolio-two__single -->
                         </div><!-- /.col-lg-4 col-md-6 col-sm-12 -->
+                        @endforeach 
                     </div><!-- /.row -->
-                    @endforeach
                     <div class="text-center">
                         <a href="#" class="thm-btn portfolio-column__more-btn"><span>Load More</span></a>
                         <!-- /.thm-btn portfolio-grid__more-btn -->

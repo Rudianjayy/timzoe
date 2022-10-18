@@ -26,7 +26,7 @@
                         <div class="card-body">
 
                             <div>
-                                <a href="/tambahfasilitas" class="btn btn-primary mt-5"
+                                <a href="/tambahjudul" class="btn btn-primary mt-5"
                                     id="kt_account_profile_details_submit">Tambah
                                     +</a>
                             </div>
@@ -36,10 +36,8 @@
                                 <thead>
                                     <tr>
                                         <th scope="col">#</th>
-                                        <th scope="col">Foto Sampul</th>
                                         <th scope="col">Judul Fasilitas</th>
-                                        <th scope="col">Deskripsi</th>
-                                        <th scope="col">Aksi</th>
+                                        <th scope="col">Aksi </th>
                                     </tr>
                                 </thead>
 
@@ -51,13 +49,7 @@
                                     @foreach ($data as $y)
                                         <tr>
                                             <th>{{ $no++ }}</th>
-                                            <td>
-                                                <img src="{{ asset('fotomahasiswa/' . $y->foto_sampul) }}" alt=""
-                                                    style="width: 50px;">
-                                            </td>
-                                            <td>{{  $y->judulfasilitas ? $y->judulfasilitas->judulfasilitas : 'Data tidak ada'}}</td>
-                                            <td>{!! $y->deskripsi !!}</td>
-
+                                            <td>{{ $y->judulfasilitas }}</td>
                                             {{-- <td>{{ $y->created_at->format('D M Y') }}</td> --}}
                                             <td>
                                                 <a href="/editfasilitas/{{ $y->id }}"

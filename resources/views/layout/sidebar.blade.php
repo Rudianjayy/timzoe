@@ -21,6 +21,20 @@
 <li class="menu-title">Menu</li>
         @endif
         @if (auth()->user()->role=="admin")
+        <li>
+            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                <i class="ti-package"></i>
+                <span>Tentang Kami</span>
+            </a>
+            <ul class="sub-menu" aria-expanded="false">
+                <li><a href="/profilsekolahadmin">Profil Sekolah</a></li>
+                <li><a href="/visimisiadmin">Visi & Misi</a></li>
+                <li><a href="/identitas_admin">Identitas Sekolah</a></li>
+                <li><a href="/fasilitasadmin">Fasilitas Sekolah </a></li>
+                <li><a href="/judulfasilitas">Judul Fasilitas</a></li>
+                <li><a href="/fotofasilitas">Foto Fasilitas</a></li>
+            </ul>
+        </li>
 
         <li>
             <a href="#" class="has-arrow waves-effect">
@@ -37,6 +51,18 @@
         </li>
 
         @endif
+        <li>
+            <a href="#" class="has-arrow waves-effect">
+                <i class="ti-package"></i>
+                <span>Kesiswaan</span>
+            </a>
+            <ul class="sub-menu" aria-expanded="false">
+                <li><a href="/ekstrakulikuleradmin">Ekstra Kurikuler</a></li>
+                <li><a href="/osisadmin">IPM/OSIS</a></li>
+                <li><a href="/alumniadmin">Alumni</a></li>
+            </ul>
+        </li>
+
         @if (auth()->user()->role=="admin")
         <li>
             <a href="javascript: void(0);" class="has-arrow waves-effect">
@@ -50,17 +76,6 @@
         </li>
 
 
-        <li>
-            <a href="#" class="has-arrow waves-effect">
-                <i class="ti-package"></i>
-                <span>Kesiswaan</span>
-            </a>
-            <ul class="sub-menu" aria-expanded="false">
-                <li><a href="/ekstrakulikuleradmin">Ekstra Kurikuler</a></li>
-                <li><a href="/osisadmin">IPM/OSIS</a></li>
-                <li><a href="/alumniadmin">Alumni</a></li>
-            </ul>
-        </li>
 
         <li>
             <a href="/muhinewsadmin" class="waves-effect">
@@ -75,7 +90,6 @@
                 <span>UPJ</span>
             </a>
             <ul class="sub-menu" aria-expanded="false">
-                <li><a href="javascript: void(0);">UPJ</a></li>
                 <li><a href="/adminbsi">BSI</a></li>
                 <li><a href="/adminmuhiprint">Muhi Printing</a></li>
                 <li><a href="/adminpegadaian">Pegadaian</a></li>
@@ -83,19 +97,20 @@
                 <li><a href="/adminedotel">Edotel</a></li>
             </ul>
         </li>
-
+        <li class="menu-title">UPJ TEKAJE</li>
         <li>
             <a href="javascript: void(0);" class="has-arrow waves-effect">
-                <i class="ti-package"></i>
-                <span>Tentang Kami</span>
+                <i class="mdi mdi-account-details-outline"></i> <span class="badge rounded-pill bg-primary float-end"></span>
+                <span>UPJ TEKAJE</span>
             </a>
             <ul class="sub-menu" aria-expanded="false">
-                <li><a href="/profilsekolahadmin">Profil Sekolah</a></li>
-                <li><a href="/visimisiadmin">Visi & Misi</a></li>
-                <li><a href="/identitas_admin">Identitas Sekolah</a></li>
-                <li><a href="/fasilitasadmin">Fasilitas Sekolah </a></li>
+                <li><a href="/adminupj">UPJ TEKAJE</a></li>
+                <li><a href="/adminupj2">Foto & Jasa UPJ</a></li>
             </ul>
         </li>
+
+
+
 
         <li class="menu-title">Manajemen Beranda</li>
 

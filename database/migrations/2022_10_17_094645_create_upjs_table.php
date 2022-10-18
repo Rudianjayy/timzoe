@@ -13,12 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('fasilitassekolahs', function (Blueprint $table) {
+        Schema::create('upjs', function (Blueprint $table) {
             $table->id();
-            $table->string('foto_sampul');
-            $table->string('foto');
-            $table->string('fasilitas_id');
-            $table->string('deskripsi');
+            $table->text('judul1');
+            $table->text('judul2');
+            $table->text('judul3');
+            $table->string('foto_upj');
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fasilitassekolahs');
+        Schema::dropIfExists('upjs');
     }
 };

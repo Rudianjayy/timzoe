@@ -7,7 +7,7 @@
     </head>
 
     <body>
-        <h1 class="text-center mb-4">Tambah Fasilitas Sekolah</h1>
+        <h1 class="text-center mb-4">Tambah Judul Fasilitas</h1>
 
         <div class="container" mb-5>
 
@@ -15,58 +15,24 @@
                 <div class="col-8">
                     <div class="card">
                         <div class="card-body">
-                            <form action="/prosesfasilitas" method="POST" enctype="multipart/form-data">
+                            <form action="/prosesjudul" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 {{--  <form action="{{ route('prosesfasilitas') }}" method="post" enctype="multipart/form-data">  --}}
                                 <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Foto Sampul :</label>
-                                    <input type="file" name="foto_sampul" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp">
-                                    @error('foto_sampul')
+                                    <label for="exampleInputEmail1" class="form-label">Judul Fasilitas :</label>
+                                    <input type="text" name="judulfasilitas" class="form-control"
+                                        id="exampleInputEmail1" aria-describedby="emailHelp">
+                                    @error('judulfasiitas')
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
-                                <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Judul Fasilitas :</label>
-                                    <select name="fasilitas_id" class="form-control" id="fasilitas_id">
-                                        <option value=""></option>
-                                        @foreach ($judul as $j)
-                                            <option value="{{ $j->id }}">{{ $j->judulfasilitas }}</option>
-                                        @endforeach
-                                    </select>
-                                    <div class="text-danger">
-                                        @error('fasilitas_id')
-                                            {{ $message }}
-                                        @enderror
-                                    </div>
-                                </div>
-                                <section style="padding-top:60px;">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="card">
-                                                    <div class="card-header">
-                                                        Deskripsi
-                                                    </div>
-                                                    <div class="card-body">
-                                                        {{--  <form method="POST" enctype="multipart/form-data">  --}}
-                                                        <textarea name="deskripsi" id="mytextarea"></textarea>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
-
-
-
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                                <a href="/data-album" class="btn btn-danger">Kembali</a>
-                            </form>
-                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <a href="/data-album" class="btn btn-danger">Kembali</a>
+                        </form>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

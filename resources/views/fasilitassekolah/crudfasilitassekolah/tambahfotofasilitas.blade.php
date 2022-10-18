@@ -15,51 +15,17 @@
                 <div class="col-8">
                     <div class="card">
                         <div class="card-body">
-                            <form action="/prosesfasilitas" method="POST" enctype="multipart/form-data">
+                            <form action="/prosesfoto" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 {{--  <form action="{{ route('prosesfasilitas') }}" method="post" enctype="multipart/form-data">  --}}
-                                <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Foto Sampul :</label>
-                                    <input type="file" name="foto_sampul" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp">
-                                    @error('foto_sampul')
-                                        <div class="alert alert-danger">{{ $message }}</div>
-                                    @enderror
-                                </div>
-                                <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Judul Fasilitas :</label>
-                                    <select name="fasilitas_id" class="form-control" id="fasilitas_id">
-                                        <option value=""></option>
-                                        @foreach ($judul as $j)
-                                            <option value="{{ $j->id }}">{{ $j->judulfasilitas }}</option>
-                                        @endforeach
-                                    </select>
-                                    <div class="text-danger">
-                                        @error('fasilitas_id')
-                                            {{ $message }}
-                                        @enderror
-                                    </div>
-                                </div>
-                                <section style="padding-top:60px;">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="card">
-                                                    <div class="card-header">
-                                                        Deskripsi
-                                                    </div>
-                                                    <div class="card-body">
-                                                        {{--  <form method="POST" enctype="multipart/form-data">  --}}
-                                                        <textarea name="deskripsi" id="mytextarea"></textarea>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
+                                <label for="exampleInputEmail1" class="form-label">Foto :</label>
+                                <input type="file" name="foto" class="my frm form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
 
-
-
+                                @error('foto')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror
+                                <br>
                                 <button type="submit" class="btn btn-primary">Submit</button>
                                 <a href="/data-album" class="btn btn-danger">Kembali</a>
                             </form>

@@ -239,7 +239,7 @@ textarea {
 
 img {
     height: auto;
-    max-width: 100%;
+    max-width: 110%;
     vertical-align: middle;
     -ms-interpolation-mode: bicubic
 }
@@ -2940,7 +2940,7 @@ a:focus {
 
 #scroll-top:before {
     z-index: -1;
-    background-color: var(--primary-color3);
+    background-color: rgb(30, 122, 235);
 }
 
 .is_dark #scroll-top:before {
@@ -2952,7 +2952,7 @@ a:focus {
     content: "\f077";
     font-family: "Font Awesome 5 Pro";
     font-size: 18px;
-    color: #5142FC;
+    color: white;
     font-weight: 600;
 }
 

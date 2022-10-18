@@ -60,15 +60,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="particles-snow" id="header-snow"></div><!-- /#header-snow.particles-snow -->
-
-                            <img src="{{ asset('landingppdb/ppdb/sassets/images/shapes/page-header-shatyle/pe-1-1.png') }}"
-                                class="page-header__bg-shape-1" alt="">
-                            <img src="" class="page-header__bg-shape-2" alt="">
-                            <img src="{{ asset('landingppdb/ppdb/sassets/images/shapes/footer-shape-1-tyle/1.png') }}"
-                                class="page-header__bg-shape-3" alt="">
-                            <img src="{{ asset('landingppdb/ppdb/sassets/images/shapes/footer-shape-1-tyle/3.png') }}"
-                                class="page-header__bg-shape-4" alt="">
+                            
                             <div class="breadcrumbs">
                                 <ul>
                                     <li><a href="/">Beranda</a></li>

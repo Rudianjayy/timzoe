@@ -10,4 +10,8 @@ class Detailekstrakulikuler extends Model
     use HasFactory;
 
     protected $guarded = [];
+
+    public function ekstrakulikuler(){
+        return $this->belongsTo(ekstrakulikuler::class, 'ekstrakulikulers_id', 'id');
+    }
 }

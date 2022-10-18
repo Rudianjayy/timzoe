@@ -47,6 +47,9 @@
                                         class="menu-item menu-item-has-children {{ Route::is('kompetensi') ? 'current-item' : '' }}">
                                         <a href="/kompetensi"> Kompetensi Keahlian</a>
                                         <ul class="sub-menu">
+                                            @php
+                                                $personal = \App\Models\Personaljurusan::all();
+                                            @endphp
                                             @foreach ($personal as $p)
                                                 <li class="menu-item "><a
                                                         href="/indexjurusan/{{ $p->id }}">{{ $p->nama_jurusan }}</a>
@@ -72,6 +75,7 @@
                                         <a href="/indexakademi"> Akademi</a>
                                         @php
                                             $akademi = \App\Models\Akademi::all();
+                                            $ekstra= \App\Models\ekstrakulikuler::all();
                                         @endphp
                                         <ul class="sub-menu">
                                             @foreach ($akademi as $ami)
@@ -82,10 +86,18 @@
                                         </ul>
                                     </li>
 
-                                    
+
 
                                     <li class="menu-item {{ Route::is('ekstra') ? 'current-item' : '' }}"><a
-                                            href="/ekstra">Ekstra Kulikuler</a></li>
+                                            href="/ekstra">Ekstra Kulikuler</a>
+                                            <ul class="sub-menu">
+                                                @foreach ($ekstra as $ab)
+                                                    <li class="menu-item "><a
+                                                            href="/detailekstrakulikuler/{{ $ab->id }}">{{ $ab->judul_ekstra }}</a>
+                                                    </li>
+                                                @endforeach
+                                            </ul>
+                                        </li>
                                     <li class="menu-item {{ Route::is('osis') ? 'current-item' : '' }}"><a
                                             href="/osis">IPM/OSIS</a></li>
                                     <li class="menu-item {{ Route::is('alumni') ? 'current-item' : '' }}"><a
@@ -104,11 +116,11 @@
                                 <ul class="sub-menu">
                                     <li class="menu-item {{ Route::is(' indexupj') ? 'current-item' : '' }}"><a
                                             href="/indexupj">UPJ TKJ</a></li>
-                                    <li class="menu-item"><a href="/indexBsi">Bank Mini Sekolah(BSI)</a></li>
-                                    <li class="menu-item"><a href="/indexMuhiPrinting">Muhi Printing</a></li>
-                                    <li class="menu-item"><a href="/indexPegadaian">Pegadaian</a></li>
-                                    <li class="menu-item"><a href="/indexSuryamart">Surya Mart</a></li>
-                                    <li class="menu-item"><a href="/indexEdotel">EDOTEL</a></li>
+                                    <li class="menu-item"><a href="/indexbsi">Bank Mini Sekolah(BSI)</a></li>
+                                    <li class="menu-item"><a href="/indexmuhiprint">Muhi Printing</a></li>
+                                    <li class="menu-item"><a href="/indexpegadaian">Pegadaian</a></li>
+                                    <li class="menu-item"><a href="/indexsuryamart">Surya Mart</a></li>
+                                    <li class="menu-item"><a href="/indexedotel">Edotel</a></li>
                             </li>
                             </ul>
                             </li>

@@ -3,13 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\Akademi;
+use App\Models\footeer;
 use App\Models\Jurusan;
 use App\Models\Muhinews;
 use App\Models\Kompetensi;
 use Illuminate\Http\Request;
 use App\Models\Fotokompetensi;
 use App\Models\Personaljurusan;
-use App\Models\Footeer;
 
 class AkademiController extends Controller
 {
@@ -19,12 +19,13 @@ class AkademiController extends Controller
         $f = Muhinews::paginate(4 );
         $kh = Jurusan::all();
         $pj = Personaljurusan::all();
-        $personal = personaljurusan::all();
-        $ft = Footeer::all();
+        $personal = Personaljurusan::all();
         $kp = Kompetensi::all();
         $akdm = Akademi::all();
         $akademi = Akademi::all();
-        $logo = footeer::all();
+        $ft= footeer::all();
+        $logo= footeer::all();
+
         return view('akademi.akademi', compact('kompetensi','foto','f','kh','pj','kp','akdm','akademi','personal','ft','logo'));
     }
 

@@ -3,45 +3,52 @@
 namespace App\Http\Controllers;
 
 use App\Models\ekstrakulikuler;
-use App\Models\Personaljurusan;
 use Illuminate\Http\Request;
-use App\Models\Detailekstrakulikuler;
+use App\Models\DetailEkstrakulikuler;
 use App\Models\footeer;
+use App\Models\Personaljurusan;
+
 
 class DetailEkstrakulikulerController extends Controller
 {
-    public function detailekstrakulikuler($id){
+    public function detailekstrakulikuler($id) {
         $data= Detailekstrakulikuler::where('ekstrakulikulers_id',$id)->firstOrFail();
-        $foto= Detailekstrakulikuler::where('ekstrakulikulers_id',$id)->paginate(2);
+        $foto= Detailekstrakulikuler::where('ekstrakulikulers_id',$id)->get();
         $personal = Personaljurusan::all();
-        $ekstrakulikuler = ekstrakulikuler::all();
+        // $akademi = akademi::all();
         $ft = footeer::all();
         $logo = footeer::all();
-        return view('ekstrakulikuler.detail.detailekstrakulikuler', compact('data','ekstrakulikuler','foto','personal','ft','logo'));
+        // $data = ekstrakulikuler::all();
+        // $ft = footeer::all();
+        // $logo = footeer::all();
+        // $personal = Personaljurusan::all();
+        return view('kesiswaan.ekstrakulikuler.detail.detailekstrakulikuler',compact('data','foto','personal','ft','logo'));
+
     }
-    public function loby1(){
-        $data = Detailekstrakulikuler::with('ekstrakulikuler')->get();
-        return view('ekstrakulikuler.detail.admindetailekstrakulikuler', compact('data'));
+    public function admindetailekstrakulikuler(){
+        $data = detailekstrakulikuler::all();
+        return view('kesiswaan.ekstrakulikuler.detail.admindetailekstrakulikuler', compact('data'));
     }
 
     public function tambahdetailekstrakulikuler(){
         $ekstrakulikuler = ekstrakulikuler::all();
-        return view('ekstrakulikuler.detail.tambah-admin-detailekstrakulikuler', compact('ekstrakulikuler'));
+        return view('kesiswaan.ekstrakulikuler.detail.tambahdetailekstrakulikuler', compact('ekstrakulikuler'));
     }
 
     public function tambahdetail1(Request $request){
         $this->validate($request,[
-            'ekstrakulikulers_id' =>'required',
-            'deskripsi_detail' =>'required',
+            'judul_ekstra' =>'required',
+            'deskripsi_ekstrakulikuler' =>'required',
         ],[
-            'ekstrakulikulers_id.required' =>'Harus diisi',
-            'deskripsi_detail.required' =>'Harus diisi',
+            'judul_ekstra.required' =>'Harus diisi',
+            'deskripsi_ekstrakulikuler.required' =>'Harus diisi',
 
         ]);
-        $data = Detailekstrakulikuler::create([
+        $data = DetailEkstrakulikuler::create([
             'foto' =>$request->foto,
-            'ekstrakulikulers_id' =>$request->ekstrakulikulers_id,
-            'deskripsi_detail' =>$request->deskripsi_detail,
+            'ekstrakulikulers_id' => $request->judul_ekstra,
+            'nama_ekstrakulikuler' => '',
+            'deskripsi_ekstrakulikuler' =>$request->deskripsi_ekstrakulikuler,
         ]);
         if($request->hasFile('foto')){
             $request->file('foto')->move('fotomahasiswa/', $request->file('foto')->getClientOriginalName());
@@ -53,23 +60,23 @@ class DetailEkstrakulikulerController extends Controller
     }
     public function editdetailekstrakulikuler($id){
 
-        $data = Detailekstrakulikuler::findOrFail($id);
-        return view('ekstrakulikuler.edit-admin-detailekstrakulikuler', compact('data'));
+        $data = DetailEkstrakulikuler::findOrFail($id);
+        return view('kesiswaan.ekstrakulikuler.detail.editdetailekstrakulikuler', compact('data'));
     }
 
     public function editdetail1(Request $request, $id){
         $this->validate($request,[
-            'ekstrakulikulers_id' =>'required',
-            'deskripsi_detail' =>'required',
+            'nama_ekstrakulikuler' =>'required',
+            'deskripsi_ekstrakulikuler' =>'required',
         ],[
-            'ekstrakulikulers_id' =>'harus diisi',
-            'deskripsi_detail' =>'harus diisi',
+            'nama_ekstrakulikuler' =>'harus diisi',
+            'deskripsi_ekstrakulikuler' =>'harus diisi',
 
         ]);
-        $data = Detailekstrakulikuler::find($id);
+        $data = DetailEkstrakulikuler::find($id);
         $data->update([
-            'ekstrakulikulers_id' =>$request->ekstrakulikulers_id,
-            'deskripsi_detail' =>$request->deskripsi_detail,
+            'nama_ekstrakulikuler' =>$request->nama_ekstrakulikuler,
+            'deskripsi_ekstrakulikuler' =>$request->deskripsi_ekstrakulikuler,
         ]);
         // if($request->hasFile('foto')){
         //     $request->file('foto')->move('fotomahasiswa/',$request->file('foto')->getClientOriginalName());
@@ -81,7 +88,7 @@ class DetailEkstrakulikulerController extends Controller
 
     }
 
-    public function delete($id){
+    public function deletedetail($id){
         $data = Detailekstrakulikuler::find($id);
         $data->delete();
         return redirect('admindetailekstrakulikuler')->with('toast_error',' Data Berhasil di Hapus!');

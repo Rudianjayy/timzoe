@@ -11,6 +11,8 @@ use App\Models\footeer;
 use App\Models\Personaljurusan;
 class KompetensiController extends Controller
 {
+
+    
     public function kompetensi() {
         $kompetensi = Kompetensi::all();
         $foto = Fotokompetensi::all();

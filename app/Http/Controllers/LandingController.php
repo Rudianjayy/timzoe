@@ -24,6 +24,7 @@ class LandingController extends Controller
         $ss = Slider::all();
         $fs = Fotoslider::all();
         $ft = footeer::all();
+        $logo = footeer::all();
         $sa = Sambutan::all();
         $js = Jurusan::all();
         $personal = Personaljurusan::all();
@@ -32,5 +33,7 @@ class LandingController extends Controller
         $akademi = Akademi::all();
         $logo = footeer::all();
         return view('landingpage.landing', compact('data','d','f','ss','fs','ft','sa','js','personal','kh','ps','akademi','logo'));
+
+
     }
 }

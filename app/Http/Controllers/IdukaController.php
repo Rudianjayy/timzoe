@@ -3,12 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\Iduka;
+use App\Models\footeer;
 use App\Models\Jurusan;
 use App\Models\Muhinews;
 use App\Models\Fotoiduka;
 use Illuminate\Http\Request;
-use App\Models\PersonalJurusan;
-use App\Models\footeer;
+use App\Models\Personaljurusan;
 
 class IdukaController extends Controller
 {

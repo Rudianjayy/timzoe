@@ -2,6 +2,9 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-md-6 col-12">
+                @php
+                    $logo = \App\Models\footeer::all();
+                @endphp
                 @foreach ( $logo as $lg )
                 <div class="widget widget-logo">
                     <div class="logo-footer" id="logo-footer">
@@ -10,11 +13,7 @@
                                 alt="nft-gaming" width="120" height="100">
                         </a>
                     </div>
-                    <p class="sub-widget-logo">Dari SMK Muhammadiyah 1 Genteng <br>
-                        "SMKS Muhammadiyah 1 Genteng di dirikan pada tahun 02 Januari 1968. SMK yang terdiri dari
-                        beberapa jurusan antara lain : 1. Teknik Komputer Jaringan dan Telekomunikasi 2. Desain
-                        Komunikasi Visual 3. Manajemen Perkantoran dan Layanan Bisnis 4. Akuntansi dan Keuangan Lembaga
-                        5. Pemasaran 6. Perhotelan"</p>
+                    <p class="sub-widget-logo">{!! $lg->deskripsi_footeer!!}</p>
                     <div class="widget-social">
                         <ul>
                             <li><a href="https://www.facebook.com/smkmuhigenteng"><i
@@ -41,7 +40,7 @@
                     <h5 class="title-widget">Lainnya</h5>
                     <ul>
                         <li><a href="/login">Login Admin </a></li>
-                        <li><a href="https://sekolah.data.kemdikbud.go.id/index.php/chome/profil/39108646-470a-4aac-bee3-bc8ea91b8973">DAPODIK</a></li>
+                        <li><a href="https://sekolah.data.kemdikbud.go.id/index.php/chome/profil/39108646-470a-4aac-bee3-bc8ea91b8973">Dapodik</a></li>
                         <li><a href="https://sekolah.data.kemdikbud.go.id/index.php/chome/profil/39108646-470a-4aac-bee3-bc8ea91b8973">UPJ TKJ</a></li>
                     </ul>
                 </div>

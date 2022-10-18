@@ -16,13 +16,7 @@
             <div class="card-body">
               <form action="/osisproses3" method="POST" enctype="multipart/form-data">
                 @csrf
-                <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">Foto :</label>
-                  <input type="file" name="foto" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
-                  @error('foto')
-                    <div class="alert alert-danger">{{ $message }}</div>
-                  @enderror
-                </div>
+               
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Judul IPM/OSIS :</label>
                     <input type="text" name="judul_osis" class="form-control" id="exampleInputEmail1"
@@ -31,6 +25,14 @@
                         <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
                 </div>
+
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Foto :</label>
+                    <input type="file" name="foto" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
+                    @error('foto')
+                      <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
+                  </div>
 
                 <section style="padding-top:60px;">
                     <div class="container">
@@ -49,13 +51,7 @@
                         </div>
                     </div>
                 </section>
-                <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">Deskripsi :</label>
-                  <textarea class="form-control form-control-solid" name="deskripsi_osis"></textarea>
-                  @error('deskripsi_osis')
-                    <div class="alert alert-danger">{{ $message }}</div>
-                  @enderror
-                </div>
+
 
                 <button type="submit" class="btn btn-primary">Submit</button>
                 <a href="/osisadmin" class="btn btn-danger">Kembali</a>

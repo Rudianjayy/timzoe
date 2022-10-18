@@ -109,7 +109,7 @@ class KesiswaanController extends Controller
         $f = Muhinews::paginate(4);
         // $kh= jurusan::all();
         $ft = Footeer::all();
-        $personal = personaljurusan::all();
+        $personal =Personaljurusan::all();
         $logo = footeer::all();
         return view('kesiswaan.osis.osis',compact('b','f','ft','personal','logo'));
     }
@@ -225,7 +225,7 @@ class KesiswaanController extends Controller
 
     public function alumniproses6(Request $request){
         // dd($request->all());
- 
+
         $this->validate($request,[
             'foto' =>'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
             'judul_alumni' =>'required',

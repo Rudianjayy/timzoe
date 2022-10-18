@@ -100,15 +100,6 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="particles-snow" id="header-snow"></div><!-- /#header-snow.particles-snow -->
-
-                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/page-header-shape-1-1.png') }}"
-                        class="page-header__bg-shape-1" alt="">
-                    <img src="" class="page-header__bg-shape-2" alt="">
-                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-1.png') }}"
-                        class="page-header__bg-shape-3" alt="">
-                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-3.png') }}"
-                        class="page-header__bg-shape-4" alt="">
                         <div class="breadcrumbs">
                             <ul>
                                 <li><a href="/">Beranda</a></li>
@@ -166,10 +157,10 @@
     </section>
     <section class="cta-one cta-one__about-one"
         style="background-image: url{{ asset('landingppdb/ppdb/style/assets/images/shapes/cta-bg-2-1.png') }};">
-        <div class="particles-snow" id="cta-one-snow"></div><!-- /#cta-one-snow.particles-snow -->
+        {{-- <div class="particles-snow" id="cta-one-snow"></div><!-- /#cta-one-snow.particles-snow -->
 
-        {{-- <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-1.png') }}"
-            class="cta-one__bg-shape-1" alt=""> --}}
+        <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-1.png') }}"
+            class="cta-one__bg-shape-1" alt="">
         <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-2.png') }}"
             class="cta-one__bg-shape-2" alt="">
         <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-3.png') }}"
@@ -184,7 +175,7 @@
         <div class="error-404__bubble-5"></div><!-- /.error-404__bubble-5 -->
         <div class="error-404__bubble-6"></div><!-- /.error-404__bubble-6 -->
         <div class="error-404__bubble-7"></div><!-- /.error-404__bubble-7 -->
-        <div class="error-404__bubble-8"></div><!-- /.error-404__bubble-8 -->
+        <div class="error-404__bubble-8"></div><!-- /.error-404__bubble-8 --> --}}
 
         <!-- /.container -->
     </section>

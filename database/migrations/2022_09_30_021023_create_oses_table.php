@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('oses', function (Blueprint $table) {
             $table->id();
             $table->string('judul_osis');
+            $table->text('deskripsi_osis');
             $table->string('foto');
-            $table->string('deskripsi_osis');
             $table->timestamps();
         });
     }

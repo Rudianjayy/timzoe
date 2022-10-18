@@ -49,12 +49,7 @@
                 <div class="row">
                     <div class="col-md-12">
 
-                        <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/page-header-shape-1-1.png') }}" class="page-header__bg-shape-1" alt="">
-                        <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-2-circle-1-1.png') }}" class="page-header__bg-shape-2" alt="">
-                        <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-1.png') }}" class="page-header__bg-shape-3" alt="">
-                        <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-3.png') }}" class="page-header__bg-shape-4" alt="">
-                        <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-2-circle-1-2.png') }}" class="page-header__bg-shape-2" alt="">
-
+                        
                         <div class="breadcrumbs">
                             <ul>
                                 <li><a href="index.html">Beranda</a></li>
@@ -173,26 +168,7 @@
                 </div><!-- /.row -->
             </div><!-- /.container -->
         </section><!-- /.blog-standard -->
-        <section class="mailchimp-one">
-            <div class="container">
-                <div class="inner-container">
-                    <img src="assets/images/mocups/subscribe-moc-1-1.png" class="mailchimp-one__moc-1" alt="">
-                    <img src="assets/images/mocups/subscribe-moc-1-2.png" class="mailchimp-one__moc-2" alt="">
-
-                    <img src="assets/images/shapes/subscribe-dot-1-1.png" class="mailchimp-one__bg-shape-1" alt="">
-                    <img src="assets/images/shapes/subscribe-shape-1-1.png" class="mailchimp-one__bg-shape-2" alt="">
-                    <div class="block-title text-center">
-                        <p><span>Newsletter</span></p>
-                        <h3>Signup for Our Latest <br> <span>Update</span></h3>
-                    </div><!-- /.block-title text-center -->
-                    <form action="#" class="mailchimp-one__form">
-                        <input type="text" name="email" placeholder="Enter your email">
-                        <button type="submit" class="thm-btn mailchimp-one__btn">Subscribe Now</button>
-                        <!-- /.thm-btn mailchimp-one__btn -->
-                    </form><!-- /.mailchimp-one__form -->
-                </div><!-- /.inner-container -->
-            </div><!-- /.container -->
-        </section><!-- /.mailchimp-one -->
+        
 
         @include('koneksi.footer')
 

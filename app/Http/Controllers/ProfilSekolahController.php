@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\footeer;
 use App\Models\Jurusan;
 use App\Models\Muhinews;
 use App\Models\visimisi;
 use Illuminate\Http\Request;
 use App\Models\profilsekolah;
-use App\Models\personaljurusan;
-use App\Models\Footeer;
+use App\Models\Personaljurusan;
 
 class ProfilSekolahController extends Controller
 {
@@ -17,9 +17,8 @@ class ProfilSekolahController extends Controller
         $f = Muhinews::all();
         $kh = Jurusan::all();
         $personal = Personaljurusan::all();
-        $ft = Footeer::all();
         $logo = footeer::all();
-        return view('profilsekolah.profilsekolah',compact('q','f','kh','personal','ft','logo'));
+        return view('profilsekolah.profilsekolah',compact('q','f','kh','personal','logo'));
     }
     public function profilsekolahadmin(){
         $data = profilsekolah::all();

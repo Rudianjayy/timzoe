@@ -18,14 +18,14 @@
         {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> --}}
 
         {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" /> --}}
-    
+
         <div class="row">
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
 
                         <div>
-                            <a href="/tambahekstrakulikuler" class="btn btn-primary mt-5"
+                            <a href="/tambahdetailekstrakulikuler" class="btn btn-primary mt-5"
                                 id="kt_account_profile_details_submit">Tambah
                                 +</a>
                         </div>
@@ -36,7 +36,7 @@
                                 <tr>
                                     <th scope="col">#</th>
                                     <th scope="col">Foto</th>
-                                    <th scope="col">Nama ekstrakulikuler</th>
+                                    <th scope="col">Nama Ekstrakulikuler</th>
                                     <th scope="col">Deskripsi</th>
                                     <th scope="col">Aksi</th>
                                 </tr>
@@ -48,21 +48,25 @@
                                     $no = 1;
                                 @endphp
                                 @foreach ($data as $row)
+
                                     <tr>
                                         <th>{{ $no++ }}</th>
                                         <td>
                                             <img src="{{ asset('fotomahasiswa/' . $row->foto) }}" alt=""
                                                 style="width: 50px;">
-                                        </td>   
-                                        <td>{{ $row->judul_ekstrakulikuler }}</td>
+                                        </td>
+                                        <td>{{ $row->ekstrakulikuler->judul_ekstra }}</td>
                                         <td>{!! $row->deskripsi_ekstrakulikuler !!}</td>
 
                                         {{-- <td>{{ $row->created_at->format('D M Y') }}</td> --}}
                                         <td>
-                                            {{-- <a href="/editalbum/{{ $row->id }}" class="btn btn-warning fas fa-pen-alt">Edit</a> --}}
-                                            <a href="/deleteekstrakulikuler/{{ $row->id }}" class="btn btn-danger fas fa-trash-alt" onclick="return confirm('apakah anda yakin ?')">Delete</a>
+                                            <a href="/editdetailekstrakulikuler/{{ $row->id }}" class="btn btn-warning">Edit</a>
+
+                                            <a href="/deletedetail/{{ $row->id }}" class="btn btn-danger" onclick="return confirm('apakah anda yakin?')">Delete</a>
+
                                         </td>
                                     </tr>
+
                                 @endforeach
                             </tbody>
                         </table>

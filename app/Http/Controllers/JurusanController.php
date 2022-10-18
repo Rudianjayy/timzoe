@@ -18,7 +18,7 @@ class JurusanController extends Controller
     }
     public function indexjurusan($id){
         $data= Jurusan::where('personaljurusans_id',$id)->firstOrFail();
-        $foto= Jurusan::where('personaljurusans_id',$id)->paginate(2);
+        $foto= Jurusan::where('personaljurusans_id',$id)->paginate(4);
         $f = Muhinews::all();
         // $gambar = DB::table('s's)->where('nama_jurusan',);
         $personal = Personaljurusan::all();
@@ -27,7 +27,7 @@ class JurusanController extends Controller
         $ft = footeer::all();
         $logo = footeer::all();
 
-        return view ('kurikulum.kompetensi.jurusan',compact('data','f','personal','kh','foto','pj','ft','logo'));
+        return view ('kurikulum.kompetensi.jurusan',compact('data','ft','personal','kh','foto','pj','f','logo'));
     }
 
     public function tambahjurusan()

@@ -4639,9 +4639,6 @@ a:focus {
 ## Portfolio Details
 --------------------------------------------------------------*/
 
-.portfolio-details {
-	padding-top: 170px;
-}
 
 .portfolio-details__image img {
 	border-radius: 10px;
@@ -5238,7 +5235,7 @@ a:focus {
         }
         .namasekolah{
             position: absolute;
-            color: ;
+            /* color: ; */
             top: 1%;
             left: 5%;
             font-size: 30px;

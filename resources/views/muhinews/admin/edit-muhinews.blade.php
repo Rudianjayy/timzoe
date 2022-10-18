@@ -1,9 +1,10 @@
 @extends('layout.main')
 
 @section('content')
-<head>
-    @include('layout.css')
-</head>
+
+    <head>
+        @include('layout.css')
+    </head>
 
     <body>
         <h1 class="text-center mb-4">Edit Data Identitas</h1>
@@ -20,9 +21,9 @@
                                     <label for="exampleInputEmail1" class="form-label">Judul :</label>
                                     <input type="text" name="judul" class="form-control" value="{{ $data->judul }}">
                                     @error('judul')
-                                      <div class="alert alert-danger">{{ $message }}</div>
+                                        <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
-                                  </div>
+                                </div>
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Ubah Foto :</label>
                                     <img class="img mb-3" src="{{ asset('fotomahasiswa/' . $data->foto) }}" alt=""
@@ -42,7 +43,31 @@
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
-
+                                <section style="padding-top:60px;">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        Deskripsi Detail
+                                                    </div>
+                                                    <div class="card-body">
+                                                        {{--  <form method="POST" enctype="multipart/form-data">  --}}
+                                                        <textarea name="deskripsi_detail" id="mytextarea">{{ $data->deskripsi_detail }}</textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Kategori :</label>
+                                    <input type="text" name="kategori" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" value="{{ $data->kategori }}">
+                                    @error('kategori')
+                                        <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </form>
                         </div>

@@ -78,13 +78,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8">
-
                         <div class="blog-details__main">
                             <div class="blog-two__meta">
                                 <a href="blog-details.html">{{$blog->created_at}}</a>
                             </div><!-- /.blog-two__meta -->
                             <h3>{{$blog->judul}}</h3>
-                            <img src="{{ asset('fotomahasiswa/' . $blog->foto) }}" class="img-fluid" alt="">
+                            <img src="{{ asset('fotomahasiswa/' . $blog->foto) }}" class="img-fluid" alt="" style="width: 700px; height:360px;">
                             <p>{!!$blog->deskripsi_detail!!}</p>
                         </div><!-- /.comment-one -->
                         <div class="contact-two__form-wrap">
@@ -126,11 +125,13 @@
                             </div><!-- /.sidebar__single -->
                             <div class="sidebar__single sidebar__category">
                                 <h3 class="sidebar__title">Kategori</h3>
-                                <ul class="list-unstyled sidebar__category-list">
+                                @foreach ($kategori as $kategori)
+                                <ul class="list-unstyle d sidebar__category-list">
                                     <li>
-
+                                        <a href="#">{{$kategori->Kategori}}</a>
                                     </li>
                                 </ul><!-- /.list-unstyled sidebar__category-list -->
+                                @endforeach
                             </div><!-- /.sidebar__single -->
 
 
@@ -140,10 +141,10 @@
                                     @foreach ($d as $d )
                                     <div class="sidebar__post-single">
                                         <div class="sidebar__post-image">
-                                            <img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt="">
+                                            <img class="zoom" src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt="">
                                         </div><!-- /.sidebar__post-image -->
                                         <div class="sidebar__post-content">
-                                            <h3><a href="#">{{$d->judul}}</a></h3>
+                                            <h3><a href="/muhiblog/{{ $d->id }}">{{$d->judul}}</a></h3>
                                             <span>{{$d->created_at}}</span>
                                         </div><!-- /.sidebar__post-content -->
                                     </div><!-- /.sidebar__post-single -->
@@ -227,7 +228,12 @@
     <script src="{{ asset('landing/html/bidzend/assets/js/count-down.js') }}"></script>
     <script src="{{ asset('landing/html/bidzend/assets/js/shortcodes.js') }}"></script>
     <script src="{{ asset('landing/html/bidzend/assets/js/main.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
+    <script>
+        mediumZoom('.zoom', {
 
+        })
+    </script>
 
 
 </body>

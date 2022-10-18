@@ -84,7 +84,11 @@
                                 <div class="blog-one__content">
                                     <div class="blog-one__meta">
                                         <h4>{{$d->judul}}</h4>
+<<<<<<< HEAD
                                     </div><!-- /.blog-one__meta --> 
+=======
+                                    </div><!-- /.blog-one__meta -->
+>>>>>>> bfc57480654c6d2d0b97234b27b6a5f2a35e9f51
                                     <p>{{$d->created_at}}</p>
                                     <p><a href="#">{{$d->deskripsi_muhinews}}</a></p>
                                     <a href="/muhiblog/{{ $d->id }}" class="thm-btn blog-one__btn"><span>Baca selengkapnya</span></a>

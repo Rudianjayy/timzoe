@@ -71,13 +71,10 @@
             </ul>
         </li>
         <li>
-            <a href="/muhinewsadmin" class="has-arrow waves-effect">
+            <a href="/muhinewsadmin" class="waves-effect">
                 <i class="mdi mdi-account-details-outline"></i> <span class="badge rounded-pill bg-primary float-end"></span>
                 <span>Muhinews</span>
             </a>
-            <ul class="sub-menu" aria-expanded="false">
-                <li><a href="/muhiblogadmin">Muhinews Detail</a></li>
-            </ul>
         </li>
 
         <li>

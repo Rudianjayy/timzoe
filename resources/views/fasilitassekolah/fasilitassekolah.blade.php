@@ -17,33 +17,34 @@
 
     <link rel="stylesheet" type="text/css" href="{{ asset('landing/html/bidzend/assets/css/style.css') }}">
 
-<link rel="stylesheet" type="text/css" href="{{ asset('landing/html/bidzend/assets/css/responsive.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('landing/html/bidzend/assets/css/responsive.css') }}">
 
-<link rel="shortcut icon" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
-<link rel="apple-touch-icon-precomposed" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
+    <link rel="shortcut icon" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
+    <link rel="apple-touch-icon-precomposed" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&amp;display=swap">
-<link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/animate.css') }}">
-<link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap.min.css') }}">
-<link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap-datepicker.min.css') }}">
-<link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap-select.min.css') }}">
-<link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/fontawesome-all.min.css') }}">
-<link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/hover-min.css') }}">
-<link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/swiper.min.css') }}">
-<link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/jquery.mCustomScrollbar.min.css') }}">
-<link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/magnific-popup.css') }}">
-<link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/owl.carousel.min.css') }}">
-<link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/owl.theme.default.min.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&amp;display=swap">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/animate.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap-datepicker.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap-select.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/fontawesome-all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/hover-min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/swiper.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/jquery.mCustomScrollbar.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/owl.theme.default.min.css') }}">
 
-<!-- Template Styles -->
-<link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/style.css') }}">
-<link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/responsive.css') }}">
+    <!-- Template Styles -->
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/responsive.css') }}">
+
 </head>
 
 <body class="body header-fixed ">
     <div class="preload preload-container">
         {{-- <div class="preload-logo"></div>  --}}
-        <div class="preload-logo"><img src="{{ asset('landing/html/bidzend/assets/images/logo/muhi.jpg') }}" alt="Image" style="width:570 !important;"></div>
+        <div class="preload-logo"><img src="{{ asset('landing/html/bidzend/assets/images/logo/0.png') }}" alt="Image" style="width:570 !important;"></div>
     </div>
 
     <div id="wrapper">
@@ -56,8 +57,6 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-
-                          
                             <div class="breadcrumbs">
                                 <ul>
                                     <li><a href="index.html">Beranda</a></li>
@@ -68,39 +67,37 @@
                     </div>
                 </div>
             </section>
-            <div class="tf-section sc-card-blog">
+            <section class="service-one">
                 <div class="container">
-                    <div class="row">
-                        @foreach ($q as $p )
-                        <div class="col-lg-4 col-md-6">
-                            <article class="sc-card-article">
-                                <div class="card-media">
-                                    <img src="{{ asset('fotomahasiswa/' . $p->foto) }}" alt="" style="width: 366px; height:183px;">
-                                </div>
-                                <div class="content">
-                                    <div class="meta-info">
-                                        <div class="item author">
-                                            <b><strong>{{$p->judul_fasilitas}}</strong></b>
-                                        </div>
-                                        <div class="item date">{{$p->created_at}}</div>
-                                    </div>
-                                    <div class="text-article">
-                                        <h3>{!!$p->deskripsi!!}</h5>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
+                    <div class="block-title text-center">
+                        <h3>Fasilitas Sekolah<br> <span>SMK Muhammadiyah 1 Genteng</span></h3>
+                    </div><!-- /.block-title text-center -->
+                    <div class="row high-gutters">
+                        @foreach ($q as $y )
+                        <div class="col-lg-6 col-md-12 wow fadeInLeft" data-wow-duration="1500ms">
+                            <div class="service-one__single">
+                                <div class="service-one__icon">
+                                    <div class="service-one__icon-inner">
+                                        <img class="zoom" src="{{ asset('fotomahasiswa/' . $y->foto_sampul) }}" alt="" style="width: 250px; height:130px;">
+                                    </div><!-- /.service-one__icon-inner -->
+                                </div><!-- /.service-one__icon -->
+                                <div class="service-one__content">
+                                    <a href="/detailfoto/{{ $y->id }}">
+                                        <h3>{{$y->judul_fasilitas}}</h3>
+                                    </a>
+                                    <p>{!!$y->deskripsi!!}</p>
+                                </div><!-- /.service-one__content -->
+                            </div><!-- /.service-one__single -->
+                        </div><!-- /.col-lg-6 col-md-12 -->
                         @endforeach
-
                         <div class="col-md-12">
-                           {!! $q->links() !!}
+                            {!! $q->links() !!}
                         </div>
-                    </div>
-                </div>
-            </div>
+                    </div><!-- /.row -->
+                </div><!-- /.container -->
+            </section><!-- /.service-one -->
         </div>
     </div>
-
     @include('koneksi.footer')
 
 
@@ -116,7 +113,12 @@
     <script src="{{ asset('landing/html/bidzend/assets/js/count-down.js') }}"></script>
     <script src="{{ asset('landing/html/bidzend/assets/js/shortcodes.js') }}"></script>
     <script src="{{ asset('landing/html/bidzend/assets/js/main.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
+    <script>
+        mediumZoom('.zoom', {
 
+        })
+    </script>
 
 
 </body>

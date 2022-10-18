@@ -39,7 +39,7 @@
 
     <div class="preload preload-container">
         {{-- <div class="preload-logo"></div>  --}}
-        <div class="preload-logo"><img src="{{ asset('landing/html/bidzend/assets/images/logo/muhi.jpg') }}" alt="Image" style="width:570 !important;"></div>
+        <div class="preload-logo"><img src="{{ asset('landing/html/bidzend/assets/images/logo/0.png') }}" alt="Image" style="width:570 !important;"></div>
     </div>
 
 
@@ -50,7 +50,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-{{-- 
+{{--
             <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/page-header-shape-1-1.png') }}" class="page-header__bg-shape-1" alt="">
             <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-2-circle-1-1.png') }}" class="page-header__bg-shape-2" alt="">
             <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-1.png') }}" class="page-header__bg-shape-3" alt="">
@@ -69,10 +69,10 @@
     </section>
         <section class="faq-one">
         <div class="content-center">
-            <div class="container">
+        <div class="container-riski">
                 <div class="block-title text-center">
-                    <h3>Identitas Sekolah</h3>
-                    <center><img src="{{ asset('landing/html/bidzend/assets/images/logo/muhi.jpg') }}" alt="" style="width: 200px; height:200px; margin-bottom:20px; "></center>
+                    <h3 style="margin-right: 300px;">Identitas Sekolah</h3>
+                    <center><img src="{{ asset('landing/html/bidzend/assets/images/logo/muhi.jpg') }}" alt="" style="width: 200px; height:200px; margin-bottom:20px; margin-right:300px; "></center>
 
                 </div><!-- /.block-title text-center -->
 
@@ -295,9 +295,6 @@
 <!-- Mirrored from themesflat.com/html/bidzend/item-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Sep 2022 01:13:11 GMT -->
 
 </html>
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> 8f0894d7d4d4ac9bcf4dc6f17e995012c01662a9

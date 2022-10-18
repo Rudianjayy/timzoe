@@ -29,12 +29,11 @@ class DatabaseSeeder extends Seeder
                 'name' => 'Admin Sekolah',
                 'email' => 'admin@gmail.com',
                 'password' => Hash::make ('adminsekolah'),
-                'status' => '1',
-                'token' => '1000',
-                'foto' => 'default.png',
+                'role' => 'admin',
                 'remember_token' => Str::random (60),
             ],
         ];
         User::insert($adminzoe);
+        
     }
 }

@@ -41,11 +41,11 @@ class FotoidukaController extends Controller
             'foto_iduka' =>$request->foto_iduka,
             'jurusan_mou' =>$request->jurusan_mou,
         ]);
-        if($request->hasFile('foto_iduka')){
-            $request->file('foto_iduka')->move('fotomahasiswa/', $request->file('foto_iduka')->getClientOriginalName());
-            $data->foto_iduka = $request->file('foto_iduka')->getClientOriginalName();
-            $data->save();
-        }
+            if($request->hasFile('foto_iduka')){
+                $request->file('foto_iduka')->move('fotomahasiswa/', $request->file('foto_iduka')->getClientOriginalName());
+                $data->foto_iduka = $request->file('foto_iduka')->getClientOriginalName();
+                $data->save();
+            }
 
 
 

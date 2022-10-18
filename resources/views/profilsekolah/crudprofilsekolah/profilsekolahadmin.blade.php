@@ -49,8 +49,6 @@
                                     <th scope="col">Aksi</th>
                                 </tr>
                             </thead>
-
-
                             <tbody>
                                 @php
                                     $no = 1;

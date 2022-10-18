@@ -10,7 +10,7 @@ use App\Models\Muhinews;
 use App\Models\Prestasi;
 use App\Models\Sambutan;
 use App\Models\Fotoslider;
-use App\Models\Footeer;
+use App\Models\footeer;
 use Illuminate\Http\Request;
 use App\Models\Personaljurusan;
 
@@ -30,6 +30,7 @@ class LandingController extends Controller
         $personal = Personaljurusan::all();
         $kh = Jurusan::all();
         $ps = Prestasi::all();
+        $ft = footeer::all();
         $akademi = Akademi::all();
         $logo = footeer::all();
         return view('landingpage.landing', compact('data','d','f','ss','fs','ft','sa','js','personal','kh','ps','akademi','logo'));

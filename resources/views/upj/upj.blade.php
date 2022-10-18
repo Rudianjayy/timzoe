@@ -3,25 +3,22 @@
 
 
 <!-- Mirrored from ashik.templatepath.net/inovex-html-files/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Sep 2022 03:30:09 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home One || Inovex || Marketing Agency HTML5 Template</title>
+    <title>UPJ TEKAJE - SMK Muhammadiyah 1 Genteng</title>
     <!-- favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png">
-    <link rel="manifest" href="assets/images/favicons/site.webmanifest">
-    <!-- cssbidzend -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('landing/html/bidzend/assets/css/style.css') }}">
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="{{ asset('landingppdb/ppdb/style/assets/images/favicons/apple-touch-icon.png') }}">
+    <link rel="shortcut icon" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
+    <link rel="apple-touch-icon-precomposed" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
+    <link rel="manifest" href="{{ asset('landingppdb/ppdb/style/') }}assets/images/favicons/site.webmanifest">
 
-<link rel="stylesheet" type="text/css" href="{{ asset('landing/html/bidzend/assets/css/responsive.css') }}">
-
-<link rel="shortcut icon" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
-<link rel="apple-touch-icon-precomposed" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
-
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&amp;display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&amp;display=swap">
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/animate.css') }}">
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap-datepicker.min.css') }}">
@@ -51,656 +48,559 @@
 
     <div class="page-wrapper">
 
-        @include('koneksi.navbar')
+        <nav class="main-nav-one main-nav-one__home-three stricky">
+            <div class="container-fluid">
+                <div class="inner-container">
+                    <div class="logo-box">
+                        <a href="index.html">
+                            <img src="{{ asset('landing/html/bidzend/assets/images/background/UPJ.png') }}" alt=""
+                                style="width: 80px;">
+                        </a>
+                        <a href="#" class="side-menu__toggler"><i class="fa fa-bars"></i></a>
+                    </div><!-- /.logo-box -->
+                    <div class="logo-box">
+                        <a href="index.html">
+                            <img src="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}" alt=""
+                                style="width: 80px;">
+                        </a>
+                        <a href="#" class="side-menu__toggler"><i class="fa fa-bars"></i></a>
+                    </div><!-- /.logo-box -->
+                    <div class="main-nav__main-navigation">
+                        <ul class="main-nav__navigation-box">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#tentang">Tentang Kami</a></li>
+                            <li><a href="#keunggulan">Keunggulan</a></li>
+                            <li><a href="#jasa">Jasa</a></li>
+                            <li><a href="#galery">Galery</a></li>
+                            <li><a href="#team">Team</a></li>
+                            <li><a href="#mitra">Mitra Kami</a></li>
+                            <li><a href="#map">Map</a></li>
+                        </ul><!-- /.main-nav__navigation-box -->
+                    </div><!-- /.main-nav__main-navigation -->
 
-        <section class="banner-one">
-            <div class="particles-snow" id="banner-one-snow"></div><!-- /#cta-one-snow.particles-snow -->
+                </div><!-- /.inner-container -->
+            </div><!-- /.container-fluid -->
+        </nav><!-- /.main-nav-one -->
 
-            <img src="assets/images/shapes/footer-shape-1-1.png" class="banner-one__bg-shape-1" alt="">
-            <img src="assets/images/shapes/footer-shape-1-2.png" class="banner-one__bg-shape-2" alt="">
-            <img src="assets/images/shapes/footer-shape-1-3.png" class="banner-one__bg-shape-3" alt="">
-            <img src="assets/images/shapes/footer-shape-1-4.png" class="banner-one__bg-shape-4" alt="">
-            <img src="assets/images/shapes/footer-shape-1-2.png" class="banner-one__bg-shape-5" alt="">
+        <section class="banner-one" id='home'>
+            {{-- <div class="particles-snow" id="banner-one-snow"></div><!-- /#cta-one-snow.particles-snow -->
+
+            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-1.png') }}" class="banner-one__bg-shape-1" alt="">
+            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-2.png') }}" class="banner-one__bg-shape-2" alt="">
+            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-3.png') }}" class="banner-one__bg-shape-3" alt="">
+            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-4.png') }}" class="banner-one__bg-shape-4" alt="">
+            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-2.png') }}" class="banner-one__bg-shape-5" alt=""> --}}
             <div class="container">
                 <div class="banner-one__image wow slideInUp" data-wow-duration="1500ms">
-                    <img src="assets/images/mocups/banner-moc-1-1.png" class="banner-one__image-1 " alt="">
-                    <img src="assets/images/mocups/banner-moc-1-2.png" class="banner-one__image-2 float-bob-y" alt="">
-                    <img src="assets/images/mocups/banner-moc-1-3.png" class="banner-one__image-3 float-bob-x" alt="">
-                    <img src="assets/images/mocups/banner-moc-1-4.png" class="banner-one__image-4" alt="">
-                    <img src="assets/images/mocups/banner-moc-1-5.png" class="banner-one__image-5" alt="">
+                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/mocups/banner-moc-1-1.png') }}" class="banner-one__image-1 " alt="">
+                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/mocups/banner-moc-1-2.png') }}" class="banner-one__image-2 float-bob-y"
+                        alt="">
+                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/mocups/banner-moc-1-3.png') }}" class="banner-one__image-3 float-bob-x"
+                        alt="">
+                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/mocups/banner-moc-1-4.png') }}" class="banner-one__image-4" alt="">
+                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/mocups/banner-moc-1-5.png') }}" class="banner-one__image-5" alt="">
                 </div><!-- /.banner-one__image -->
                 <div class="row">
                     <div class="col-xl-7">
                         <div class="banner-one__content">
-                            <h3>Boost Your Ranking <br> with SEO Service.</h3>
-                            <p>We offer flexible and comprehensive online marketing plans <br> and strategies so you can
-                                take advantageour.</p>
-                            <form action="#" class="banner-one__form">
-                                <div class="banner-one__form-box">
-                                    <input type="text" placeholder="Your Website URL">
-                                    <input type="text" placeholder="Email">
-                                </div><!-- /.banner-one__form-box -->
-                                <button type="submit" class="thm-btn banner-one__btn"><span>Start Now</span></button>
-                                <!-- /.thm-btn banner-one__btn -->
-                            </form><!-- /.banner-one__form -->
+                            <h3>UPJ TEKAJE <br> SMK Muhammadiyah 1 Genteng</h3>
+                            <p>Unit produksi dan jasa <br> Teknik Komputer dan Jaringan..</p>
+
                         </div><!-- /.banner-one__content -->
                     </div><!-- /.col-lg-7 -->
                 </div><!-- /.row -->
             </div><!-- /.container -->
         </section><!-- /.banner-one -->
 
-        <section class="service-three">
-
-            <div class="section__bubble-1"></div><!-- /.section__bubble-1 -->
-            <div class="section__bubble-2"></div><!-- /.section__bubble-2 -->
-            <div class="section__bubble-3"></div><!-- /.section__bubble-3 -->
-            <div class="section__bubble-4"></div><!-- /.section__bubble-4 -->
-            <div class="section__bubble-5"></div><!-- /.section__bubble-5 -->
-            <div class="section__bubble-6"></div><!-- /.section__bubble-6 -->
-            <div class="section__bubble-7"></div><!-- /.section__bubble-7 -->
-            <div class="section__bubble-8"></div><!-- /.section__bubble-8 -->
-
+        <section class="about-three about-three__home-two" id='tentang'>
+            {{-- <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/about-3-bg-2-1.png') }} "
+                class="about-three-home-two__bg-image-1" alt=""> --}}
 
             <div class="container">
-                <div class="block-title text-center">
-                    <p><span>Our Services</span></p>
-                    <h3>Boost Your Ranking with <br> <span>SEO Service.</span></h3>
-                </div><!-- /.block-title text-center -->
-                <div class="row high-gutters">
-                    <div class="col-lg-4">
-                        <div class="service-three__single wow flipInY" data-wow-delay="0ms" data-wow-duration="1500ms">
-                            <div class="service-three__icon">
-                                <div class="service-three__single-circle"></div><!-- /.service-three__single-circle -->
-                                <img src="{{ asset('landingppdb/ppdb/style/') }}assets/images/shapes/service-3-i-1.png" alt="">
-                            </div><!-- /.service-three__icon -->
-                            <h3><a href="service-d-seo.html">SEO Optimization</a></h3>
-                            <p>Lorem ipsum dolor amet consectetur adipisicing sed do eiusmod tempor.</p>
-                            <a href="service-d-seo.html" class="thm-btn">Learn More</a><!-- /.thm-btn -->
-                        </div><!-- /.service-three__single -->
-                    </div><!-- /.col-lg-4 -->
-                    <div class="col-lg-4">
-                        <div class="service-three__single wow flipInY" data-wow-delay="300ms"
-                            data-wow-duration="1500ms">
-                            <div class="service-three__icon">
-                                <div class="service-three__single-circle"></div><!-- /.service-three__single-circle -->
-                                <img src="{{ asset('landingppdb/ppdb/style/') }}assets/images/shapes/service-3-i-2.png" alt="">
-                            </div><!-- /.service-three__icon -->
-                            <h3><a href="service-d-social.html">Social Media Marketing</a></h3>
-                            <p>Lorem ipsum dolor amet consectetur adipisicing sed do eiusmod tempor.</p>
-                            <a href="service-d-social.html" class="thm-btn">Learn More</a><!-- /.thm-btn -->
-                        </div><!-- /.service-three__single -->
-                    </div><!-- /.col-lg-4 -->
-                    <div class="col-lg-4">
-                        <div class="service-three__single wow flipInY" data-wow-delay="600ms"
-                            data-wow-duration="1500ms">
-                            <div class="service-three__icon">
-                                <div class="service-three__single-circle"></div><!-- /.service-three__single-circle -->
-                                <img src="{{ asset('landingppdb/ppdb/style/') }}assets/images/shapes/service-3-i-3.png" alt="">
-                            </div><!-- /.service-three__icon -->
-                            <h3><a href="service-d-ppc.html">Business Intelligence</a></h3>
-                            <p>Lorem ipsum dolor amet consectetur adipisicing sed do eiusmod tempor.</p>
-                            <a href="service-d-ppc.html" class="thm-btn">Learn More</a><!-- /.thm-btn -->
-
-                        </div><!-- /.service-three__single -->
-                    </div><!-- /.col-lg-4 -->
-                </div><!-- /.row high-gutters -->
-            </div><!-- /.container -->
-        </section><!-- /.service-three -->
-
-        <section class="about-two">
-            <img src="{{ asset('landingppdb/ppdb/style/') }}assets/images/shapes/about-2-bg-1-1.png" class="about-two__bg-shape-1" alt="">
-            <div class="container">
-                <img src="{{ asset('landingppdb/ppdb/style/') }}assets/images/shapes/about-2-bg-1-2.png" class="about-two__bg-shape-2" alt="">
                 <div class="row">
                     <div class="col-lg-6">
-                        <div class="about-two__images wow fadeInLeft" data-wow-duration="1500ms">
-                            <img src="{{ asset('landingppdb/ppdb/style/') }}assets/images/mocups/about-2-moc-1.png" class="about-two__image-1 float-bob-y" alt="">
-                            <img src="{{ asset('landingppdb/ppdb/style/') }}assets/images/mocups/about-2-moc-2.png" class="about-two__image-2" alt="">
-                            <img src="{{ asset('landingppdb/ppdb/style/') }}assets/images/mocups/about-2-moc-3.png" class="about-two__image-3 float-bob-y" alt="">
-                        </div><!-- /.about-two__images -->
+                        <div class="about-three__home-two__images">
+                            <img src="{{ asset('landing/html/bidzend/assets/images/background/UPJ.png') }} "
+                                class="float-bob-y" alt="" style="width: 400px; margin-left: 40%;">
+                        </div><!-- /.about-three__home-two__images -->
                     </div><!-- /.col-lg-6 -->
-                    <div class="col-lg-6">
-                        <div class="about-two__content">
-                            <div class="block-title text-left">
-                                <p class="color-2"><span>About Company</span></p>
-                                <h3>Acquire New Customers <br> <span>More Efficiently</span></h3>
-                            </div><!-- /.block-title text-left -->
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod tempor incididunt ut
-                                labore et dolore magna aliqua.enim ad minim veniam quis nostrud.</p>
-
-                            <div class="about-two__counter-wrap">
-                                <div class="about-two__counter">
-                                    <div class="about-two__count"><span class="counter">200</span><!-- /.counter --> <b>+</b></div><!-- /.about-two__count -->
-                                    <h3>Projects</h3>
-                                </div><!-- /.about-two__counter -->
-                                <div class="about-two__counter">
-                                    <div class="about-two__count"><span class="counter">3</span><!-- /.counter -->k <b>+</b></div><!-- /.about-two__count -->
-                                    <h3>Clients</h3>
-                                </div><!-- /.about-two__counter -->
-                                <div class="about-two__counter">
-                                    <div class="about-two__count"><span class="counter">40</span><!-- /.counter --> <b>+</b></div><!-- /.about-two__count -->
-                                    <h3>Advisors</h3>
-                                </div><!-- /.about-two__counter -->
-                            </div><!-- /.about-two__counter-wrap -->
-                        </div><!-- /.about-two__content -->
-                    </div><!-- /.col-lg-6 -->
-                </div><!-- /.row -->
-            </div><!-- /.container -->
-        </section><!-- /.about-two -->
-
-        <section class="cta-one cta-one__home-one">
-            <div class="particles-snow" id="cta-one-snow"></div><!-- /#cta-one-snow.particles-snow -->
-
-            <img src="{{ asset('landingppdb/ppdb/style/') }}assets/images/shapes/footer-shape-1-1.png" class="cta-one__bg-shape-1" alt="">
-            <img src="{{ asset('landingppdb/ppdb/style/') }}assets/images/shapes/footer-shape-1-2.png" class="cta-one__bg-shape-2" alt="">
-            <img src="{{ asset('landingppdb/ppdb/style/') }}assets/images/shapes/footer-shape-1-3.png" class="cta-one__bg-shape-3" alt="">
-            <img src="{{ asset('landingppdb/ppdb/style/') }}assets/images/shapes/footer-shape-1-4.png" class="cta-one__bg-shape-4" alt="">
-
-            <div class="container">
-                <h3>You Want to Showcase Your Website in <br> <span>Top Join With Us</span></h3>
-                <a href="#" class="thm-btn cta-one__btn"><span>Join Us Now</span></a><!-- /.thm-btn cta-one__btn -->
-            </div><!-- /.container -->
-        </section><!-- /.cta-one -->
-
-        <section class="service-one">
-            <div class="container">
-                <div class="block-title text-center">
-                    <p><span>Our Services</span></p>
-                    <h3>We Provided Best Digital <br> <span>Services</span></h3>
-                </div><!-- /.block-title text-center -->
-                <div class="row high-gutters">
-                    <div class="col-lg-6 col-md-12 wow fadeInLeft" data-wow-duration="1500ms">
-                        <div class="service-one__single">
-                            <div class="service-one__icon">
-                                <div class="service-one__icon-inner">
-                                    <img src="{{ asset('landingppdb/ppdb/style/') }}assets/images/shapes/service-i-1.png" alt="">
-                                </div><!-- /.service-one__icon-inner -->
-                            </div><!-- /.service-one__icon -->
-                            <div class="service-one__content">
-                                <h3><a href="service-details.html">Content Marketing</a></h3>
-                                <p>Lorem ipsum dolor amet consectetur adipisicing sed do eiusmod tempor. incididunt
-                                    labore.</p>
-                            </div><!-- /.service-one__content -->
-                        </div><!-- /.service-one__single -->
-                    </div><!-- /.col-lg-6 col-md-12 -->
-                    <div class="col-lg-6 col-md-12 wow fadeInRight" data-wow-duration="1500ms">
-                        <div class="service-one__single">
-                            <div class="service-one__icon">
-                                <div class="service-one__icon-inner">
-                                    <img src="{{ asset('landingppdb/ppdb/style/') }}assets/images/shapes/service-i-2.png" alt="">
-                                </div><!-- /.service-one__icon-inner -->
-                            </div><!-- /.service-one__icon -->
-                            <div class="service-one__content">
-                                <h3><a href="service-details.html">Social Marketing</a></h3>
-                                <p>Lorem ipsum dolor amet consectetur adipisicing sed do eiusmod tempor. incididunt
-                                    labore.</p>
-                            </div><!-- /.service-one__content -->
-                        </div><!-- /.service-one__single -->
-                    </div><!-- /.col-lg-6 col-md-12 -->
-                    <div class="col-lg-6 col-md-12 wow fadeInLeft" data-wow-duration="1500ms">
-                        <div class="service-one__single">
-                            <div class="service-one__icon">
-                                <div class="service-one__icon-inner">
-                                    <img src="{{ asset('landingppdb/ppdb/style/') }}assets/images/shapes/service-i-3.png" alt="">
-                                </div><!-- /.service-one__icon-inner -->
-                            </div><!-- /.service-one__icon -->
-                            <div class="service-one__content">
-                                <h3><a href="service-details.html">SEO Optimization</a></h3>
-                                <p>Lorem ipsum dolor amet consectetur adipisicing sed do eiusmod tempor. incididunt
-                                    labore.</p>
-                            </div><!-- /.service-one__content -->
-                        </div><!-- /.service-one__single -->
-                    </div><!-- /.col-lg-6 col-md-12 -->
-                    <div class="col-lg-6 col-md-12 wow fadeInRight" data-wow-duration="1500ms">
-                        <div class="service-one__single">
-                            <div class="service-one__icon">
-                                <div class="service-one__icon-inner">
-                                    <img src="{{ asset('landingppdb/ppdb/style/') }}assets/images/shapes/service-i-4.png" alt="">
-                                </div><!-- /.service-one__icon-inner -->
-                            </div><!-- /.service-one__icon -->
-                            <div class="service-one__content">
-                                <h3><a href="service-details.html">PPC Advertising</a></h3>
-                                <p>Lorem ipsum dolor amet consectetur adipisicing sed do eiusmod tempor. incididunt
-                                    labore.</p>
-                            </div><!-- /.service-one__content -->
-                        </div><!-- /.service-one__single -->
-                    </div><!-- /.col-lg-6 col-md-12 -->
-                </div><!-- /.row -->
-            </div><!-- /.container -->
-        </section><!-- /.service-one -->
-
-        <section class="about-three">
-            <img src="{{ asset('landingppdb/ppdb/style/') }}assets/images/shapes/about-3-bg-1-1.png" class="about-three__bg-image-1" alt="">
-
-            <div class="section__bubble-1"></div><!-- /.section__bubble-1 -->
-            <div class="section__bubble-2"></div><!-- /.section__bubble-2 -->
-            <div class="section__bubble-3"></div><!-- /.section__bubble-3 -->
-            <div class="section__bubble-4"></div><!-- /.section__bubble-4 -->
-            <div class="section__bubble-5"></div><!-- /.section__bubble-5 -->
-            <div class="section__bubble-6"></div><!-- /.section__bubble-6 -->
-            <div class="section__bubble-7"></div><!-- /.section__bubble-7 -->
-            <div class="section__bubble-8"></div><!-- /.section__bubble-8 -->
-
-            <div class="container">
-                <img src="{{ asset('landingppdb/ppdb/style/') }}assets/images/shapes/about-3-bg-1-2.png" class="about-three__bg-image-2" alt="">
-                <div class="row">
                     <div class="col-lg-6">
                         <div class="about-three__content">
                             <div class="block-title text-left">
-                                <p class="color-2"><span>Our Experience</span></p>
-                                <h3>Pay for Qualified Traffic <br> <span>& Great Success.</span></h3>
+                                <h3>Tentang Kami</h3><span>Selamat datang di website resmi UPJ TEKAJE</span>
+
                             </div><!-- /.block-title text-center -->
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod tempor incididunt ut
-                                labore et dolore magna aliqua.enim ad minim veniam quis nostrud.</p>
-                            <div class="about-three__progress-wrap">
-                                <div class="about-three__progress">
-                                    <div class="about-three__progress-top">
-                                        <h3>Analysis</h3>
-                                        <p><span class="counter">60</span><!-- /.counter -->%</p>
-                                    </div><!-- /.about-three__progress-top -->
-                                    <div class="about-three__progress-bar">
-                                        <span style="width: 60%" class="wow slideInLeft"
-                                            data-wow-duration="1500ms"></span>
-                                    </div><!-- /.about-three__progress-bar -->
-                                </div><!-- /.about-three__progress -->
-                                <div class="about-three__progress">
-                                    <div class="about-three__progress-top">
-                                        <h3>Optimization</h3>
-                                        <p><span class="counter">80</span><!-- /.counter -->%</p>
-                                    </div><!-- /.about-three__progress-top -->
-                                    <div class="about-three__progress-bar">
-                                        <span style="width: 80%" class="wow slideInLeft"
-                                            data-wow-duration="1500ms"></span>
-                                    </div><!-- /.about-three__progress-bar -->
-                                </div><!-- /.about-three__progress -->
-                                <div class="about-three__progress">
-                                    <div class="about-three__progress-top">
-                                        <h3>SEO Audit</h3>
-                                        <p><span class="counter">90</span><!-- /.counter -->%</p>
-                                    </div><!-- /.about-three__progress-top -->
-                                    <div class="about-three__progress-bar">
-                                        <span style="width: 90%" class="wow slideInLeft"
-                                            data-wow-duration="1500ms"></span>
-                                    </div><!-- /.about-three__progress-bar -->
-                                </div><!-- /.about-three__progress -->
-                            </div><!-- /.about-three__progress-wrap -->
+                            <p>UPJ TEKAJE (Unit Produksi dan Jasa Teknik Komputer dan Jaringan) adalah Unit produksi
+                                milik SMK Muhammadiyah 1 Genteng yang merupakan salah satu Produk unggulan dibidang
+                                Teknologi yang dapat bersaing dengan usaha sejenis dikelasnya. Unit produksi juga
+                                merupakan salah satu sumber atau sarana belajar yang tepat bagi siswa terutama pada
+                                aspek keterampilan untuk menghasilkan produk maupun jasa. Unit Produksi dan Jasa Teknik
+                                Komputer dan Jaringan disiapkan oleh guru dan dikelola bersama siswa untuk mengembangkan
+                                semua unsur yang relevan, sehingga orang luas tertarik untuk menjalin kerjasama.</p>
+
                         </div><!-- /.about-three__content -->
-                    </div><!-- /.col-lg-6 -->
-                    <div class="col-lg-6">
-                        <div class="about-three__images wow fadeInRight" data-wow-duration="1500ms">
-                            <img src="{{ asset('landingppdb/ppdb/style/') }}assets/images/mocups/about-3-moc-1-1.png" class="about-three__image-1 float-bob-y" alt="">
-                            <img src="{{ asset('landingppdb/ppdb/style/') }}assets/images/mocups/about-3-moc-1-2.png" class="about-three__image-2 float-bob-y" alt="">
-                            <img src="{{ asset('landingppdb/ppdb/style/') }}assets/images/mocups/about-3-moc-1-3.png" class="float-bob-x about-three__image-3" alt="">
-                        </div><!-- /.about-three__images -->
                     </div><!-- /.col-lg-6 -->
                 </div><!-- /.row -->
             </div><!-- /.container -->
         </section><!-- /.about-three -->
 
-        <section class="step-one">
-            <img src="{{ asset('landingppdb/ppdb/style/') }}assets/images/shapes/steps-bg-1-1.png" class="step-one__bg-image-1" alt="">
+        <section class="about-one" id='keunggulan'>
+            {{-- <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/bg-shape-1-1.png') }}"
+                class="error-404__bg-shape-1" alt="">
+            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/bg-shape-1-2.png') }}"
+                class="error-404__bg-shape-2" alt="">
+            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/bg-shape-1-3.png') }}"
+                class="error-404__bg-shape-3" alt="">
+
+            <div class="error-404__bubble-1"></div><!-- /.error-404__bubble-1 -->
+            <div class="error-404__bubble-2"></div><!-- /.error-404__bubble-2 -->
+            <div class="error-404__bubble-3"></div><!-- /.error-404__bubble-3 -->
+            <div class="error-404__bubble-4"></div><!-- /.error-404__bubble-4 -->
+            <div class="error-404__bubble-5"></div><!-- /.error-404__bubble-5 -->
+            <div class="error-404__bubble-6"></div><!-- /.error-404__bubble-6 -->
+            <div class="error-404__bubble-7"></div><!-- /.error-404__bubble-7 -->
+            <div class="error-404__bubble-8"></div><!-- /.error-404__bubble-8 --> --}}
             <div class="container">
-                <div class="block-title text-center">
-                    <p><span>Work Process</span></p>
-                    <h3>Steps to Build a Successful <br> <span>Digital Product</span></h3>
-                </div><!-- /.block-title text-center -->
                 <div class="row">
-                    <img src="{{ asset('landingppdb/ppdb/style/') }}assets/images/shapes/steps-line-1-1.png" class="step-one__line" alt="">
-                    <div class="step-one__single">
-                        <div class="step-one__arrow far fa-angle-right"></div><!-- /.step-one__arrow -->
-                        <div class="step-one__count wow fadeInUp" data-wow-duration="1500ms">
-                            <span>01</span>
-                        </div><!-- /.step-one__count -->
-                        <h3><a href="#">Advertising & <br> Marketing</a></h3>
-                    </div><!-- /.step-one__single -->
-                    <div class="step-one__single">
-                        <div class="step-one__arrow far fa-angle-right"></div><!-- /.step-one__arrow -->
-                        <div class="step-one__count wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="100ms">
-                            <span>02</span>
-                        </div><!-- /.step-one__count -->
-                        <h3><a href="#">Web <br> Development</a></h3>
-                    </div><!-- /.step-one__single -->
-                    <div class="step-one__single">
-                        <div class="step-one__arrow far fa-angle-right"></div><!-- /.step-one__arrow -->
-                        <div class="step-one__count wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="200ms">
-                            <span>03</span>
-                        </div><!-- /.step-one__count -->
-                        <h3><a href="#">Mobile App <br> Development</a></h3>
-                    </div><!-- /.step-one__single -->
-                    <div class="step-one__single">
-                        <div class="step-one__arrow far fa-angle-right"></div><!-- /.step-one__arrow -->
-                        <div class="step-one__count wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
-                            <span>04</span>
-                        </div><!-- /.step-one__count -->
-                        <h3><a href="#">Search Engine <br>
-                                Optimization</a></h3>
-                    </div><!-- /.step-one__single -->
+                    <div class="col-lg-6">
+                        <div class="about-one__content">
+                            <div class="block-title text-left">
+                                {{-- <p class="color-2"><span>Why Choose Us?</span></p> --}}
+                                <h3>Kenapa harus milih UPJ?</span></h3>
+                            </div><!-- /.block-title text-center -->
+                            <p>Memang banyak unit produksi jasa di genteng ini <span>Tapi kenapa harus memilih
+                                    UPJ?</span> itu karena..</p>
+                            <div class="about-one__box-wrapper">
+                                <div class="about-one__box">
+                                    <div class="about-one__box-icon">
+                                        <i class="fa fa-check"></i>
+                                    </div><!-- /.about-one__box-icon -->
+                                    <div class="about-one__box-content">
+                                        <h3>Pelayanan Cepat</h3>
+                                        <p>Tidak seperti yang lain yang butuh waktu beberapa hari hingga beberapa minggu
+                                            <br> disini anda dapat menunggunya jika terlalu rumit maka pengerjaanya
+                                            maksimal akan memakan waktu 3 hari.
+                                        </p>
+                                    </div><!-- /.about-one__box-content -->
+                                </div><!-- /.about-one__box -->
+                                <div class="about-one__box">
+                                    <div class="about-one__box-icon">
+                                        <i class="fa fa-check"></i>
+                                    </div><!-- /.about-one__box-icon -->
+                                    <div class="about-one__box-content">
+                                        <h3>Bergaransi</h3>
+                                        <p>Jika barang yang anda terima kembali lebih buruk daripada sebelumnya <br>
+                                            atau barang memiliki kerusakan sebelum masa garansi, maka akan diganti 100%.
+                                        </p>
+                                    </div><!-- /.about-one__box-content -->
+                                </div><!-- /.about-one__box -->
+                                <div class="about-one__box">
+                                    <div class="about-one__box-icon">
+                                        <i class="fa fa-check"></i>
+                                    </div><!-- /.about-one__box-icon -->
+                                    <div class="about-one__box-content">
+                                        <h3>Kualitas Terjamin</h3>
+                                        <p>Kualitas tidak diragukan lagi, kita pasti akan memberikan yang terbaik.</p>
+                                    </div><!-- /.about-one__box-content -->
+                                </div><!-- /.about-one__box -->
+                            </div><!-- /.about-one__box-wrapper -->
+                        </div><!-- /.about-one__content -->
+                    </div><!-- /.col-lg-6 -->
+                    <div class="col-lg-6 d-flex">
+                        <div class="my-auto">
+                            <div class="about-one__image wow slideInDown" data-wow-duration="1500ms">
+                                <img src="{{ asset('landingppdb/ppdb/style/assets/images/mocups/about-1-moc-1.png') }}"
+                                    alt="">
+                            </div><!-- /.about-one__image -->
+                        </div><!-- /.my-auto -->
+                    </div><!-- /.col-lg-6 -->
                 </div><!-- /.row -->
             </div><!-- /.container -->
-        </section><!-- /.step-one -->
+        </section><!-- /.about-one -->
 
-        <section class="pricing-one">
+        <section class="service-one" id='jasa'>
             <div class="container">
                 <div class="block-title text-center">
-                    <p class="color-2"><span>Pricing Plan</span></p>
-                    <h3>No Any Hidden Charge Select <br> <span>Your Pricing Plan</span></h3>
+                    {{-- <p><span>Our Services</span></p> --}}
+                    <h3>Jasa yang kami tawarkan</h3>
                 </div><!-- /.block-title text-center -->
-
                 <div class="row high-gutters">
-                    <div class="col-lg-4 wow fadeInLeft" data-wow-duration="1500ms">
-                        <div class="pricing-one__single">
-                            <div class="pricing-one__icon">
-                                <img src="{{ asset('landingppdb/ppdb/style/') }}assets/images/shapes/pricing-icon-1-1.png" alt="">
-                            </div><!-- /.pricing-one__icon -->
-                            <h3>Basic Pack</h3>
-                            <ul class="pricing-one__list list-unstyled">
-                                <li>2gb Hosting</li>
-                                <li>10 Custom Domain</li>
-                                <li>SSD Hosting</li>
-                                <li class="disabled">50 gb Bandwith</li>
-                                <li class="disabled">Free Support</li>
-                            </ul><!-- /.pricing-one__list list-unstyled -->
-                            <p>$19.00</p>
-                            <a href="#" class="thm-btn pricing-one__btn">Try Now</a><!-- /.thm-btn pricing-one__btn -->
-                        </div><!-- /.pricing-one__single -->
-                    </div><!-- /.col-lg-4 -->
-                    <div class="col-lg-4 wow fadeInUp" data-wow-duration="1500ms">
-                        <div class="pricing-one__single">
-                            <div class="pricing-one__icon">
-                                <img src="{{ asset('landingppdb/ppdb/style/') }}assets/images/shapes/pricing-icon-1-2.png" alt="">
-                            </div><!-- /.pricing-one__icon -->
-                            <h3>Standard Pack</h3>
-                            <ul class="pricing-one__list list-unstyled">
-                                <li>2gb Hosting</li>
-                                <li>10 Custom Domain</li>
-                                <li>SSD Hosting</li>
-                                <li>50 gb Bandwith</li>
-                                <li class="disabled">Free Support</li>
-                            </ul><!-- /.pricing-one__list list-unstyled -->
-                            <p>$29.00</p>
-                            <a href="#" class="thm-btn pricing-one__btn">Try Now</a><!-- /.thm-btn pricing-one__btn -->
-                        </div><!-- /.pricing-one__single -->
-                    </div><!-- /.col-lg-4 -->
-                    <div class="col-lg-4 wow fadeInRight" data-wow-duration="1500ms">
-                        <div class="pricing-one__single">
-                            <div class="pricing-one__icon">
-                                <img src="{{ asset('landingppdb/ppdb/style/') }}assets/images/shapes/pricing-icon-1-3.png" alt="">
-                            </div><!-- /.pricing-one__icon -->
-                            <h3>Premium Pack</h3>
-                            <ul class="pricing-one__list list-unstyled">
-                                <li>2gb Hosting</li>
-                                <li>10 Custom Domain</li>
-                                <li>SSD Hosting</li>
-                                <li>50 gb Bandwith</li>
-                                <li>Free Support</li>
-                            </ul><!-- /.pricing-one__list list-unstyled -->
-                            <p>$39.00</p>
-                            <a href="#" class="thm-btn pricing-one__btn">Try Now</a><!-- /.thm-btn pricing-one__btn -->
-                        </div><!-- /.pricing-one__single -->
-                    </div><!-- /.col-lg-4 -->
+                    <div class="col-lg-6 col-md-12 wow fadeInLeft" data-wow-duration="1500ms">
+                        <div class="service-one__single">
+                            <div class="service-one__icon">
+                                <div class="service-one__icon-inner">
+                                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-i-1.png') }}"
+                                        alt="">
+                                </div><!-- /.service-one__icon-inner -->
+                            </div><!-- /.service-one__icon -->
+                            <div class="service-one__content">
+                                <h3><a href="service-details.html">Service PC/Laptop, Printer & Instalasi</a></h3>
+                                <p>Lorem ipsum dolor amet consectetur adipisicing sed do eiusmod tempor. incididunt
+                                    labore.</p>
+                            </div><!-- /.service-one__content -->
+                        </div><!-- /.service-one__single -->
+                    </div><!-- /.col-lg-6 col-md-12 -->
+                    <div class="col-lg-6 col-md-12 wow fadeInRight" data-wow-duration="1500ms">
+                        <div class="service-one__single">
+                            <div class="service-one__icon">
+                                <div class="service-one__icon-inner">
+                                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-i-2.png') }}"
+                                        alt="">
+                                </div><!-- /.service-one__icon-inner -->
+                            </div><!-- /.service-one__icon -->
+                            <div class="service-one__content">
+                                <h3><a href="service-details.html">Pemasangan WIFI</a></h3>
+                                <p>Lorem ipsum dolor amet consectetur adipisicing sed do eiusmod tempor. incididunt
+                                    labore.</p>
+                            </div><!-- /.service-one__content -->
+                        </div><!-- /.service-one__single -->
+                    </div><!-- /.col-lg-6 col-md-12 -->
+                    <div class="col-lg-6 col-md-12 wow fadeInLeft" data-wow-duration="1500ms">
+                        <div class="service-one__single">
+                            <div class="service-one__icon">
+                                <div class="service-one__icon-inner">
+                                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-i-3.png') }}"
+                                        alt="">
+                                </div><!-- /.service-one__icon-inner -->
+                            </div><!-- /.service-one__icon -->
+                            <div class="service-one__content">
+                                <h3><a href="service-details.html">Paket pemasangan & perawatan lab.komputer</a></h3>
+                                <p>Lorem ipsum dolor amet consectetur adipisicing sed do eiusmod tempor. incididunt
+                                    labore.</p>
+                            </div><!-- /.service-one__content -->
+                        </div><!-- /.service-one__single -->
+                    </div><!-- /.col-lg-6 col-md-12 -->
+                    <div class="col-lg-6 col-md-12 wow fadeInRight" data-wow-duration="1500ms">
+                        <div class="service-one__single">
+                            <div class="service-one__icon">
+                                <div class="service-one__icon-inner">
+                                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-i-4.png') }}"
+                                        alt="">
+                                </div><!-- /.service-one__icon-inner -->
+                            </div><!-- /.service-one__icon -->
+                            <div class="service-one__content">
+                                <h3><a href="service-details.html">Software Development</a></h3>
+                                <p>Lorem ipsum dolor amet consectetur adipisicing sed do eiusmod tempor. incididunt
+                                    labore.</p>
+                            </div><!-- /.service-one__content -->
+                        </div><!-- /.service-one__single -->
+                    </div><!-- /.col-lg-6 col-md-12 -->
+                    <div class="col-lg-6 col-md-12 wow fadeInRight" data-wow-duration="1500ms">
+                        <div class="service-one__single">
+                            <div class="service-one__icon">
+                                <div class="service-one__icon-inner">
+                                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-i-4.png') }}"
+                                        alt="">
+                                </div><!-- /.service-one__icon-inner -->
+                            </div><!-- /.service-one__icon -->
+                            <div class="service-one__content">
+                                <h3><a href="service-details.html">Service Handphone</a></h3>
+                                <p>Lorem ipsum dolor amet consectetur adipisicing sed do eiusmod tempor. incididunt
+                                    labore.</p>
+                            </div><!-- /.service-one__content -->
+                        </div><!-- /.service-one__single -->
+                    </div><!-- /.col-lg-6 col-md-12 -->
+                </div><!-- /.row -->
+                <div class="text-center">
+                    <a href="#" class="thm-btn portfolio-column__more-btn"><span>Hubungi Admin</span></a>
+                    <!-- /.thm-btn portfolio-grid__more-btn -->
+                </div><!-- /.text-center -->
+            </div><!-- /.container -->
+        </section><!-- /.service-one -->
+
+        <section class="portfolio-grid" id='galery'>
+            <div class="container">
+                <div class="block-title text-center">
+                    <p class="color-2"><span>Galery</span></p>
+                    {{-- <h3>View Some of Our Latest Works <br> <span>& Case Studies for Clients</span></h3> --}}
+                </div><!-- /.block-title text-center -->
+                {{-- <ul class="portfolio-filter list-unstyled post-filter ">
+                    <li data-filter=".filter-item" class="active"><span>All</span></li>
+                    <li data-filter=".strategy"><span>Strategy</span></li>
+                    <li data-filter=".optimization"><span>Optimization</span></li>
+                    <li data-filter=".advertising"><span>Advertising</span></li>
+                    <li data-filter=".social"><span>Social</span></li>
+                </ul><!-- /.portfolio-filter list-unstyled --> --}}
+                <div class="row high-gutters masonary-layout filter-layout">
+                    <div class="col-lg-4 col-md-6 col-sm-12 filter-item masonary-item  strategy">
+                        <div class="portfolio-one__single">
+                            <div class="portfolio-one__image">
+                                <img src="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-1.jpg') }}"
+                                    alt="">
+                                <a class="img-popup"
+                                    href="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-1.jpg') }}"><i
+                                        class="fal fa-plus"></i></a>
+                            </div><!-- /.portfolio-one__image -->
+
+                        </div><!-- /.portfolio-one__single -->
+                    </div><!-- /.col-lg-4 col-md-6 col-sm-12 -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 filter-item masonary-item optimization ">
+                        <div class="portfolio-one__single">
+                            <div class="portfolio-one__image">
+                                <img src="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-2.jpg') }}"
+                                    alt="">
+                                <a class="img-popup"
+                                    href="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-2.jpg') }}"><i
+                                        class="fal fa-plus"></i></a>
+                            </div><!-- /.portfolio-one__image -->
+
+                        </div><!-- /.portfolio-one__single -->
+                    </div><!-- /.col-lg-4 col-md-6 col-sm-12 -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 filter-item masonary-item advertising">
+                        <div class="portfolio-one__single">
+                            <div class="portfolio-one__image">
+                                <img src="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-3.jpg') }}"
+                                    alt="">
+                                <a class="img-popup"
+                                    href="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-3.jpg') }}"><i
+                                        class="fal fa-plus"></i></a>
+                            </div><!-- /.portfolio-one__image -->
+
+                        </div><!-- /.portfolio-one__single -->
+                    </div><!-- /.col-lg-4 col-md-6 col-sm-12 -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 filter-item masonary-item social">
+                        <div class="portfolio-one__single">
+                            <div class="portfolio-one__image">
+                                <img src="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-4.jpg') }}"
+                                    alt="">
+                                <a class="img-popup"
+                                    href="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-4.jpg') }}"><i
+                                        class="fal fa-plus"></i></a>
+                            </div><!-- /.portfolio-one__image -->
+
+                        </div><!-- /.portfolio-one__single -->
+                    </div><!-- /.col-lg-4 col-md-6 col-sm-12 -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 filter-item masonary-item social">
+                        <div class="portfolio-one__single">
+                            <div class="portfolio-one__image">
+                                <img src="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-5.jpg') }}"
+                                    alt="">
+                                <a class="img-popup"
+                                    href="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-5.jpg') }}"><i
+                                        class="fal fa-plus"></i></a>
+                            </div><!-- /.portfolio-one__image -->
+
+                        </div><!-- /.portfolio-one__single -->
+                    </div><!-- /.col-lg-4 col-md-6 col-sm-12 -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 filter-item masonary-item advertising">
+                        <div class="portfolio-one__single">
+                            <div class="portfolio-one__image">
+                                <img src="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-6.jpg') }}"
+                                    alt="">
+                                <a class="img-popup"
+                                    href="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-6.jpg') }}"><i
+                                        class="fal fa-plus"></i></a>
+                            </div><!-- /.portfolio-one__image -->
+
+                        </div><!-- /.portfolio-one__single -->
+                    </div><!-- /.col-lg-4 col-md-6 col-sm-12 -->
+                </div><!-- /.row -->
+
+            </div><!-- /.container -->
+        </section><!-- /.portfolio-grid -->
+
+
+        <section class="cta-one cta-one__about-one"
+            style="background-image: url({{ asset('landingppdb/ppdb/style/assets/images/shapes/cta-bg-2-1.png') }});">
+            {{-- <div class="particles-snow" id="cta-one-snow"></div><!-- /#cta-one-snow.particles-snow --> --}}
+
+            {{-- <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-1.png') }}" class="cta-one__bg-shape-1" alt="">
+            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-2.png') }}" class="cta-one__bg-shape-2" alt="">
+            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-3.png') }}" class="cta-one__bg-shape-3" alt="">
+            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-4.png') }}" class="cta-one__bg-shape-4" alt=""> --}}
+
+            {{-- <div class="error-404__bubble-1"></div><!-- /.error-404__bubble-1 -->
+            <div class="error-404__bubble-2"></div><!-- /.error-404__bubble-2 -->
+            <div class="error-404__bubble-3"></div><!-- /.error-404__bubble-3 -->
+            <div class="error-404__bubble-4"></div><!-- /.error-404__bubble-4 -->
+            <div class="error-404__bubble-5"></div><!-- /.error-404__bubble-5 -->
+            <div class="error-404__bubble-6"></div><!-- /.error-404__bubble-6 -->
+            <div class="error-404__bubble-7"></div><!-- /.error-404__bubble-7 -->
+            <div class="error-404__bubble-8"></div><!-- /.error-404__bubble-8 --> --}}
+
+            <div class="container">
+                <h3>Visi <br></h3>
+                <p style="color: black;">Menghasilkan tenaga kerja yang beriman, bertaqwa, berahklaq mulia serta profesional untuk industri IT
+                    berskala global.</p>
+                <h3>Misi <br></h3>
+                <p style="color: black;">Mengembangkan sikap dan keterampilan peserta didik dalam bidang keahlian Teknik Komputer Jaringan.
+                    Menguasai keterampilan dalam pengoperasian bidang Teknik Komputer Jaringan.
+                    Menguasai keterampilan dalam penggunaan perangkat lunak Teknik Komputer Jaringan.
+                    Mampu mengembangkan bidang Teknik Komputer Jaringan yang relevan dengan tuntutan kebutuhan
+                    masyarakat.</p>
+                {{-- <a href="#" class="thm-btn cta-one__btn"><span>Join Us Now</span></a><!-- /.thm-btn cta-one__btn --> --}}
+            </div><!-- /.container -->
+        </section><!-- /.cta-one -->
+
+        <section class="video-one">
+            <div class="container">
+                <div class="video-one__box text-center wow fadeInUp" data-wow-duration="1500ms"
+                    style="background-image: url({{ asset('landingppdb/ppdb/style/assets/images/resources/video-1-1.jpg') }});">
+                    <a href="#" class="video-popup"><i class="fal fa-play-circle"></i></a>
+                </div><!-- /.video-one__box -->
+            </div><!-- /.container -->
+        </section><!-- /.video-one -->
+
+        
+
+        <section class="team-one team-one__about-1 team-one__home-two" id='team'>
+            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/team-bg-shape-1-1.png') }}"
+                alt="" class="team-one__bg-shape-1">
+            <div class="container">
+                <div class="block-title text-center">
+                    <p class="color-2"><span>Structure Management</span></p>
+                    {{-- <h3>Work with The Awesome Team <br> <span>of Our Company</span></h3> --}}
+                </div><!-- /.block-title text-center -->
+                <div class="row high-gutters">
+                    <div class="col-lg-4 col-md-12 wow fadeInUp" data-wow-duration="1500ms">
+                        <div class="team-one__single">
+                            <div class="team-one__image">
+                                <img src="{{ asset('landingppdb/ppdb/style/assets/images/team/team-1-1.jpg') }}"
+                                    alt="">
+                                <div class="team-one__social">
+                                    <div class="team-one__social-normal">
+                                        <a href="#"><i class="fa fa-share-alt"></i></a>
+                                    </div><!-- /.team-one__social-normal -->
+                                    <div class="team-one__social-hover">
+                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    </div><!-- /.team-one__social-hover -->
+                                </div><!-- /.team-one__social -->
+                            </div><!-- /.team-one__image -->
+                            <div class="team-one__content">
+                                <h3>Cate Blanchet</h3>
+                                <p>Web Developer</p>
+                            </div><!-- /.team-one__content -->
+                        </div><!-- /.team-one__single -->
+                    </div><!-- /.col-lg-4 col-md-6 -->
+                    <div class="col-lg-4 col-md-12 wow fadeInUp" data-wow-duration="1500ms">
+                        <div class="team-one__single">
+                            <div class="team-one__image">
+                                <img src="{{ asset('landingppdb/ppdb/style/assets/images/team/team-1-2.jpg') }}"
+                                    alt="">
+                                <div class="team-one__social">
+                                    <div class="team-one__social-normal">
+                                        <a href="#"><i class="fa fa-share-alt"></i></a>
+                                    </div><!-- /.team-one__social-normal -->
+                                    <div class="team-one__social-hover">
+                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    </div><!-- /.team-one__social-hover -->
+                                </div><!-- /.team-one__social -->
+
+                            </div><!-- /.team-one__image -->
+                            <div class="team-one__content">
+                                <h3>Cate Blanchet</h3>
+                                <p>Web Developer</p>
+                            </div><!-- /.team-one__content -->
+                        </div><!-- /.team-one__single -->
+                    </div><!-- /.col-lg-4 col-md-6 -->
+                    <div class="col-lg-4 col-md-12 wow fadeInUp" data-wow-duration="1500ms">
+                        <div class="team-one__single">
+                            <div class="team-one__image">
+                                <img src="{{ asset('landingppdb/ppdb/style/assets/images/team/team-1-3.jpg') }}"
+                                    alt="">
+                                <div class="team-one__social">
+                                    <div class="team-one__social-normal">
+                                        <a href="#"><i class="fa fa-share-alt"></i></a>
+                                    </div><!-- /.team-one__social-normal -->
+                                    <div class="team-one__social-hover">
+                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    </div><!-- /.team-one__social-hover -->
+                                </div><!-- /.team-one__social -->
+                            </div><!-- /.team-one__image -->
+                            <div class="team-one__content">
+                                <h3>Cate Blanchet</h3>
+                                <p>Web Developer</p>
+                            </div><!-- /.team-one__content -->
+                        </div><!-- /.team-one__single -->
+                    </div><!-- /.col-lg-4 col-md-6 -->
                 </div><!-- /.row -->
             </div><!-- /.container -->
-        </section><!-- /.pricing-one -->
+        </section><!-- /.team-one -->
 
-        <section class="blog-one blog-one__home-one">
+        @include('koneksi.mitra')
+
+
+        <section class="testimonials-one testimonials-one__about-one">
             <div class="container">
-                <div class="blog-one__top">
-                    <div class="block-title text-left">
-                        <p><span>Latest News</span></p>
-                        <h3>Learn Some New info from <br> <span>Our Latest News.</span></h3>
-                    </div><!-- /.block-title text-center -->
-
-                    <div class="blog-one__carousel-btn">
-                        <a href="#" class="blog-one__carousel-btn-left"><i class="far fa-angle-left"></i></a>
-                        <a href="#" class="blog-one__carousel-btn-right"><i class="far fa-angle-right"></i></a>
-                    </div><!-- /.blog-one__carousel-btn -->
-                </div><!-- /.blog-one__top -->
-
-
-                <div class="thm__owl-carousel blog-one__carousel owl-carousel owl-theme"
-                    data-carousel-prev-btn=".blog-one__carousel-btn-left"
-                    data-carousel-next-btn=".blog-one__carousel-btn-right" data-options='{
+                <div class="block-title text-left">
+                    <p class="color-2"><span>Testimoni</span></p>
+                    {{-- <h3>We Care Client’s Issues <br> <span>So We are Popular.</span></h3> --}}
+                </div><!-- /.block-title text-center -->
+                <div class="testimonials-one__carousel thm__owl-carousel owl-carousel owl-theme" data-options='{
                     "items": 3, "margin": 40, "smartSpeed": 700, "autoplay": true, "autoplayTimeout": 5000,
                     "autoplayHoverPause": true, "nav": false, "dots": false, "loop": true, "responsive": {
                         "0": { "items": 1, "margin": 0},
-                        "575": { "items": 1, "margin": 0},
                         "767": { "items": 1, "margin": 0},
                         "991": { "items": 2, "margin": 40},
-                        "1199": { "items": 3, "margin": 40}
+                        "1199": { "items": 2, "margin": 40},
+                        "1200": { "items": 3, "margin": 40}
                     }
                 }'>
                     <div class="item">
-                        <div class="blog-one__single">
-                            <div class="blog-one__image">
-                                <img src="assets/images/blog/blog-1-1.jpg" alt="">
-                                <a href="blog-details.html"><i class="fal fa-plus"></i></a>
-                            </div><!-- /.blog-one__image -->
-                            <div class="blog-one__content">
-                                <div class="blog-one__meta">
-                                    <a href="blog-details.html">Sara dodly</a>
-                                    <span>-</span>
-                                    <a href="blog-details.html">Mar 15, 2020</a>
-                                </div><!-- /.blog-one__meta -->
-                                <h3><a href="blog-details.html">Additional Services that will Grow Your...</a></h3>
-                                <a href="blog-details.html" class="thm-btn blog-one__btn"><span>Read More</span></a>
-                                <!-- /.thm-btn blog-one__btn -->
-                            </div><!-- /.blog-one__content -->
-                        </div><!-- /.blog-one__single -->
+                        <div class="testimonials-one__single">
+                            <div class="testimonials-one__icon">
+                                <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/testi-qoute-1-1.png') }}" alt="">
+                            </div><!-- /.testimonials-one__icon -->
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua.Lorem ipsum magna aliqua.</p>
+                            <h3>Derek Baldwin</h3>
+                        </div><!-- /.testimonials-one__single -->
                     </div><!-- /.item -->
                     <div class="item">
-                        <div class="blog-one__single">
-                            <div class="blog-one__image">
-                                <img src="assets/images/blog/blog-1-2.jpg" alt="">
-                                <a href="blog-details.html"><i class="fal fa-plus"></i></a>
-                            </div><!-- /.blog-one__image -->
-                            <div class="blog-one__content">
-                                <div class="blog-one__meta">
-                                    <a href="blog-details.html">Sara dodly</a>
-                                    <span>-</span>
-                                    <a href="blog-details.html">Mar 15, 2020</a>
-                                </div><!-- /.blog-one__meta -->
-                                <h3><a href="blog-details.html">Additional Services that will Grow Your...</a></h3>
-                                <a href="blog-details.html" class="thm-btn blog-one__btn"><span>Read More</span></a>
-                                <!-- /.thm-btn blog-one__btn -->
-                            </div><!-- /.blog-one__content -->
-                        </div><!-- /.blog-one__single -->
+                        <div class="testimonials-one__single">
+                            <div class="testimonials-one__icon">
+                                <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/testi-qoute-1-1.png') }}" alt="">
+                            </div><!-- /.testimonials-one__icon -->
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua.Lorem ipsum magna aliqua.</p>
+                            <h3>Charles Morris</h3>
+                        </div><!-- /.testimonials-one__single -->
                     </div><!-- /.item -->
                     <div class="item">
-                        <div class="blog-one__single">
-                            <div class="blog-one__image">
-                                <img src="{{ asset('landingppdb/ppdb/style/') }}assets/images/blog/blog-1-3.jpg" alt="">
-                                <a href="blog-details.html"><i class="fal fa-plus"></i></a>
-                            </div><!-- /.blog-one__image -->
-                            <div class="blog-one__content">
-                                <div class="blog-one__meta">
-                                    <a href="blog-details.html">Sara dodly</a>
-                                    <span>-</span>
-                                    <a href="blog-details.html">Mar 15, 2020</a>
-                                </div><!-- /.blog-one__meta -->
-                                <h3><a href="blog-details.html">Additional Services that will Grow Your...</a></h3>
-                                <a href="blog-details.html" class="thm-btn blog-one__btn"><span>Read More</span></a>
-                                <!-- /.thm-btn blog-one__btn -->
-                            </div><!-- /.blog-one__content -->
-                        </div><!-- /.blog-one__single -->
+                        <div class="testimonials-one__single">
+                            <div class="testimonials-one__icon">
+                                <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/testi-qoute-1-1.png') }}" alt="">
+                            </div><!-- /.testimonials-one__icon -->
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua.Lorem ipsum magna aliqua.</p>
+                            <h3>Eula Rowe</h3>
+                        </div><!-- /.testimonials-one__single -->
                     </div><!-- /.item -->
                     <div class="item">
-                        <div class="blog-one__single">
-                            <div class="blog-one__image">
-                                <img src="{{ asset('landingppdb/ppdb/style/') }}assets/images/blog/blog-1-4.jpg" alt="">
-                                <a href="blog-details.html"><i class="fal fa-plus"></i></a>
-                            </div><!-- /.blog-one__image -->
-                            <div class="blog-one__content">
-                                <div class="blog-one__meta">
-                                    <a href="blog-details.html">Sara dodly</a>
-                                    <span>-</span>
-                                    <a href="blog-details.html">Mar 15, 2020</a>
-                                </div><!-- /.blog-one__meta -->
-                                <h3><a href="blog-details.html">Additional Services that will Grow Your...</a></h3>
-                                <a href="blog-details.html" class="thm-btn blog-one__btn"><span>Read More</span></a>
-                                <!-- /.thm-btn blog-one__btn -->
-                            </div><!-- /.blog-one__content -->
-                        </div><!-- /.blog-one__single -->
+                        <div class="testimonials-one__single">
+                            <div class="testimonials-one__icon">
+                                <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/testi-qoute-1-1.png') }}" alt="">
+                            </div><!-- /.testimonials-one__icon -->
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua.Lorem ipsum magna aliqua.</p>
+                            <h3>Jose Flores</h3>
+                        </div><!-- /.testimonials-one__single -->
                     </div><!-- /.item -->
-                    <div class="item">
-                        <div class="blog-one__single">
-                            <div class="blog-one__image">
-                                <img src="{{ asset('landingppdb/ppdb/style/') }}assets/images/blog/blog-1-5.jpg" alt="">
-                                <a href="blog-details.html"><i class="fal fa-plus"></i></a>
-                            </div><!-- /.blog-one__image -->
-                            <div class="blog-one__content">
-                                <div class="blog-one__meta">
-                                    <a href="blog-details.html">Sara dodly</a>
-                                    <span>-</span>
-                                    <a href="blog-details.html">Mar 15, 2020</a>
-                                </div><!-- /.blog-one__meta -->
-                                <h3><a href="blog-details.html">Additional Services that will Grow Your...</a></h3>
-                                <a href="blog-details.html" class="thm-btn blog-one__btn"><span>Read More</span></a>
-                                <!-- /.thm-btn blog-one__btn -->
-                            </div><!-- /.blog-one__content -->
-                        </div><!-- /.blog-one__single -->
-                    </div><!-- /.item -->
-                    <div class="item">
-                        <div class="blog-one__single">
-                            <div class="blog-one__image">
-                                <img src="{{ asset('landingppdb/ppdb/style/') }}assets/images/blog/blog-1-6.jpg" alt="">
-                                <a href="blog-details.html"><i class="fal fa-plus"></i></a>
-                            </div><!-- /.blog-one__image -->
-                            <div class="blog-one__content">
-                                <div class="blog-one__meta">
-                                    <a href="blog-details.html">Sara dodly</a>
-                                    <span>-</span>
-                                    <a href="blog-details.html">Mar 15, 2020</a>
-                                </div><!-- /.blog-one__meta -->
-                                <h3><a href="blog-details.html">Additional Services that will Grow Your...</a></h3>
-                                <a href="blog-details.html" class="thm-btn blog-one__btn"><span>Read More</span></a>
-                                <!-- /.thm-btn blog-one__btn -->
-                            </div><!-- /.blog-one__content -->
-                        </div><!-- /.blog-one__single -->
-                    </div><!-- /.item -->
-                    <div class="item">
-                        <div class="blog-one__single">
-                            <div class="blog-one__image">
-                                <img src="{{ asset('landingppdb/ppdb/style/') }}assets/images/blog/blog-1-7.jpg" alt="">
-                                <a href="blog-details.html"><i class="fal fa-plus"></i></a>
-                            </div><!-- /.blog-one__image -->
-                            <div class="blog-one__content">
-                                <div class="blog-one__meta">
-                                    <a href="blog-details.html">Sara dodly</a>
-                                    <span>-</span>
-                                    <a href="blog-details.html">Mar 15, 2020</a>
-                                </div><!-- /.blog-one__meta -->
-                                <h3><a href="blog-details.html">Additional Services that will Grow Your...</a></h3>
-                                <a href="blog-details.html" class="thm-btn blog-one__btn"><span>Read More</span></a>
-                                <!-- /.thm-btn blog-one__btn -->
-                            </div><!-- /.blog-one__content -->
-                        </div><!-- /.blog-one__single -->
-                    </div><!-- /.item -->
-                    <div class="item">
-                        <div class="blog-one__single">
-                            <div class="blog-one__image">
-                                <img src="{{ asset('landingppdb/ppdb/style/') }}assets/images/blog/blog-1-8.jpg" alt="">
-                                <a href="blog-details.html"><i class="fal fa-plus"></i></a>
-                            </div><!-- /.blog-one__image -->
-                            <div class="blog-one__content">
-                                <div class="blog-one__meta">
-                                    <a href="blog-details.html">Sara dodly</a>
-                                    <span>-</span>
-                                    <a href="blog-details.html">Mar 15, 2020</a>
-                                </div><!-- /.blog-one__meta -->
-                                <h3><a href="blog-details.html">Additional Services that will Grow Your...</a></h3>
-                                <a href="blog-details.html" class="thm-btn blog-one__btn"><span>Read More</span></a>
-                                <!-- /.thm-btn blog-one__btn -->
-                            </div><!-- /.blog-one__content -->
-                        </div><!-- /.blog-one__single -->
-                    </div><!-- /.item -->
-                    <div class="item">
-                        <div class="blog-one__single">
-                            <div class="blog-one__image">
-                                <img src="{{ asset('landingppdb/ppdb/style/') }}assets/images/blog/blog-1-9.jpg" alt="">
-                                <a href="blog-details.html"><i class="fal fa-plus"></i></a>
-                            </div><!-- /.blog-one__image -->
-                            <div class="blog-one__content">
-                                <div class="blog-one__meta">
-                                    <a href="blog-details.html">Sara dodly</a>
-                                    <span>-</span>
-                                    <a href="blog-details.html">Mar 15, 2020</a>
-                                </div><!-- /.blog-one__meta -->
-                                <h3><a href="blog-details.html">Additional Services that will Grow Your...</a></h3>
-                                <a href="blog-details.html" class="thm-btn blog-one__btn"><span>Read More</span></a>
-                                <!-- /.thm-btn blog-one__btn -->
-                            </div><!-- /.blog-one__content -->
-                        </div><!-- /.blog-one__single -->
-                    </div><!-- /.item -->
-                    <div class="item">
-                        <div class="blog-one__single">
-                            <div class="blog-one__image">
-                                <img src="{{ asset('landingppdb/ppdb/style/') }}assets/images/blog/blog-1-10.jpg" alt="">
-                                <a href="blog-details.html"><i class="fal fa-plus"></i></a>
-                            </div><!-- /.blog-one__image -->
-                            <div class="blog-one__content">
-                                <div class="blog-one__meta">
-                                    <a href="blog-details.html">Sara dodly</a>
-                                    <span>-</span>
-                                    <a href="blog-details.html">Mar 15, 2020</a>
-                                </div><!-- /.blog-one__meta -->
-                                <h3><a href="blog-details.html">Additional Services that will Grow Your...</a></h3>
-                                <a href="blog-details.html" class="thm-btn blog-one__btn"><span>Read More</span></a>
-                                <!-- /.thm-btn blog-one__btn -->
-                            </div><!-- /.blog-one__content -->
-                        </div><!-- /.blog-one__single -->
-                    </div><!-- /.item -->
-                    <div class="item">
-                        <div class="blog-one__single">
-                            <div class="blog-one__image">
-                                <img src="{{ asset('landingppdb/ppdb/style/') }}assets/images/blog/blog-1-11.jpg" alt="">
-                                <a href="blog-details.html"><i class="fal fa-plus"></i></a>
-                            </div><!-- /.blog-one__image -->
-                            <div class="blog-one__content">
-                                <div class="blog-one__meta">
-                                    <a href="blog-details.html">Sara dodly</a>
-                                    <span>-</span>
-                                    <a href="blog-details.html">Mar 15, 2020</a>
-                                </div><!-- /.blog-one__meta -->
-                                <h3><a href="blog-details.html">Additional Services that will Grow Your...</a></h3>
-                                <a href="blog-details.html" class="thm-btn blog-one__btn"><span>Read More</span></a>
-                                <!-- /.thm-btn blog-one__btn -->
-                            </div><!-- /.blog-one__content -->
-                        </div><!-- /.blog-one__single -->
-                    </div><!-- /.item -->
-                    <div class="item">
-                        <div class="blog-one__single">
-                            <div class="blog-one__image">
-                                <img src="{{ asset('landingppdb/ppdb/style/') }}assets/images/blog/blog-1-12.jpg" alt="">
-                                <a href="blog-details.html"><i class="fal fa-plus"></i></a>
-                            </div><!-- /.blog-one__image -->
-                            <div class="blog-one__content">
-                                <div class="blog-one__meta">
-                                    <a href="blog-details.html">Sara dodly</a>
-                                    <span>-</span>
-                                    <a href="blog-details.html">Mar 15, 2020</a>
-                                </div><!-- /.blog-one__meta -->
-                                <h3><a href="blog-details.html">Additional Services that will Grow Your...</a></h3>
-                                <a href="blog-details.html" class="thm-btn blog-one__btn"><span>Read More</span></a>
-                                <!-- /.thm-btn blog-one__btn -->
-                            </div><!-- /.blog-one__content -->
-                        </div><!-- /.blog-one__single -->
-                    </div><!-- /.item -->
-                </div><!-- /.row -->
-
+                </div><!-- /.testimonials-one__carousel -->
             </div><!-- /.container -->
-        </section><!-- /.blog-grid -->
+        </section><!-- /.testimonials-one -->
+
+
 
         <section class="contact-one">
             <div class="container wow fadeInUp" data-wow-duration="1500ms">
                 <div class="inner-container">
-                    <img src="{{ asset('landingppdb/ppdb/style/') }}assets/images/shapes/contact-form-shape-1-1.png" class="contact-one__shape-1" alt="">
-                    <img src="{{ asset('landingppdb/ppdb/style/') }}assets/images/mocups/contact-1-moc-1.png" class="contact-one__shape-2" alt="">
-                    <img src="{{ asset('landingppdb/ppdb/style/') }}assets/images/mocups/contact-1-moc-2.png" class="contact-one__shape-3" alt="">
+                    <img src="assets/images/shapes/contact-form-shape-1-1.png" class="contact-one__shape-1"
+                        alt="">
+                    <img src="assets/images/mocups/contact-1-moc-1.png" class="contact-one__shape-2" alt="">
+                    <img src="assets/images/mocups/contact-1-moc-2.png" class="contact-one__shape-3" alt="">
                     <div class="block-title text-center">
                         <p><span>Analysis</span></p>
                         <h3>Get Free SEO Analysis?</h3>
                     </div><!-- /.block-title text-center -->
-                    <form action="http://ashik.templatepath.net/inovex-html-files/assets/inc/sendemail.php" class="contact-one__form">
+                    <form action="http://ashik.templatepath.net/inovex-html-files/assets/inc/sendemail.php"
+                        class="contact-one__form">
                         <div class="row">
                             <div class="col-md-6">
                                 <input type="text" placeholder="Your Name*">
@@ -727,10 +627,10 @@
         <footer class="site-footer">
             <div class="particles-snow" id="footer-snow"></div><!-- /#footer-snow.particles-snow -->
 
-            <img src="{{ asset('landingppdb/ppdb/style/') }}assets/images/shapes/footer-shape-1-1.png" class="site-footer__bg-shape-1" alt="">
-            <img src="{{ asset('landingppdb/ppdb/style/') }}assets/images/shapes/footer-shape-1-2.png" class="site-footer__bg-shape-2" alt="">
-            <img src="{{ asset('landingppdb/ppdb/style/') }}assets/images/shapes/footer-shape-1-3.png" class="site-footer__bg-shape-3" alt="">
-            <img src="{{ asset('landingppdb/ppdb/style/') }}assets/images/shapes/footer-shape-1-4.png" class="site-footer__bg-shape-4" alt="">
+            <img src="assets/images/shapes/footer-shape-1-1.png" class="site-footer__bg-shape-1" alt="">
+            <img src="assets/images/shapes/footer-shape-1-2.png" class="site-footer__bg-shape-2" alt="">
+            <img src="assets/images/shapes/footer-shape-1-3.png" class="site-footer__bg-shape-3" alt="">
+            <img src="assets/images/shapes/footer-shape-1-4.png" class="site-footer__bg-shape-4" alt="">
             <div class="site-footer__upper">
                 <div class="container">
                     <div class="row">
@@ -786,7 +686,7 @@
             <div class="site-footer__bottom">
                 <div class="container">
                     <p>© 2020 copyright all right reserved</p>
-                    <a href="index.html"><img src="{{ asset('landingppdb/ppdb/style/') }}assets/images/logo-1-1.png" alt=""></a>
+                    <a href="index.html"><img src="assets/images/logo-1-1.png" alt=""></a>
                     <ul class="list-unstyled site-footer__bottom-menu">
                         <li><a href="#">Privace & Policy.</a></li>
                         <li><a href="#">Faq.</a></li>
@@ -812,7 +712,7 @@
         </div><!-- /.side-menu__block-overlay -->
         <div class="side-menu__block-inner ">
 
-            <a href="index.html" class="side-menu__logo"><img src="{{ asset('landingppdb/ppdb/style/') }}       assets/images/logo-1-1.png" alt=""></a>
+            <a href="index.html" class="side-menu__logo"><img src="assets/images/logo-1-1.png" alt=""></a>
             <nav class="mobile-nav__container">
                 <!-- content is loading via js -->
             </nav>
@@ -840,6 +740,7 @@
         </div><!-- /.search-popup__inner -->
     </div><!-- /.search-popup -->
 
+    <!-- template scripts -->
     <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.min.js') }}"></script>
     <script src="{{ asset('landingppdb/ppdb/style/assets/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('landingppdb/ppdb/style/assets/js/bootstrap-datepicker.min.js') }}"></script>
@@ -860,11 +761,9 @@
     <script src="{{ asset('landingppdb/ppdb/style/assets/js/particles.min.js') }}"></script>
     <script src="{{ asset('landingppdb/ppdb/style/assets/js/particel-config.js') }}"></script>
     <script src="{{ asset('landingppdb/ppdb/style/assets/js/theme.js') }}"></script>
-
-
-
 </body>
 
 
 <!-- Mirrored from ashik.templatepath.net/inovex-html-files/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 Sep 2022 03:30:31 GMT -->
+
 </html>

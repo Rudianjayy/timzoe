@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('judul');
             $table->string('deskripsi_muhinews');
             $table->text('deskripsi_detail');
+            $table->string('kategori');
             $table->timestamps();
         });
     }

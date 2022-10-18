@@ -35,20 +35,18 @@
                 <div class="card">
                     <div class="card-body">
 
-                            {{--  <div>
-                                <a href="/tambahfotoslider" class="btn btn-primary mt-5"
+                            <div>
+                                <a href="/tambahslider" class="btn btn-primary mt-5"
                                     id="kt_account_profile_details_submit">Tambah
                                     +</a>
-                            </div>  --}}
+                            </div>
                         <table id="" class="table table-bordered dt-responsive nowrap"
                             style="border-collapse: collapse; border-spacing: 0; width: 100%;">
 
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">Deskripsi pertama</th>
-                                    <th scope="col">Deskripsi kedua</th>
-                                    <th scope="col">Deskripsi ketiga</th>
+                                    <th scope="col">Deskripsi</th>
                                     <th scope="col">Foto</th>
                                     <th scope="col">Aksi</th>
                                 </tr>
@@ -63,9 +61,7 @@
                                     <tr>
                                         <th>{{ $no++ }}</th>
 
-                                        <td>{{ $d->deskripsi1_slider }}</td>
-                                        <td>{{ $d->deskripsi2_slider }}</td>
-                                        <td>{{ $d->deskripsi3_slider }}</td>
+                                        <td>{!! $d->deskripsi1_slider !!}</td>
 
                                         <td>
                                             <img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt=""

@@ -16,8 +16,6 @@ return new class extends Migration
         Schema::create('sliders', function (Blueprint $table) {
             $table->id();
             $table->text('deskripsi1_slider');
-            $table->text('deskripsi2_slider');
-            $table->text('deskripsi3_slider');
             $table->string('foto');
             $table->timestamps();
         });

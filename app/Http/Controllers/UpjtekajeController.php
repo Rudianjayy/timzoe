@@ -8,6 +8,10 @@ use App\Models\Upjtentangkami;
 class UpjtekajeController extends Controller
 {
 
+    public function upj() {
+        $tentang = Upjtentangkami::all();
+        return view('upj.upj', compact('tentang'));
+    }
 
 
 
@@ -28,7 +32,7 @@ class UpjtekajeController extends Controller
             'deskripsi_tentangkami.required' =>'Harus diisi',
 
         ]);
-        $data = tentangkami::create([
+        $data = Upjtentangkami::create([
             'deskripsi_tentangkami' =>$request->deskripsi_tentangkami,
             'foto_tentangkami' =>$request->foto_tentangkami,
 
@@ -55,7 +59,7 @@ class UpjtekajeController extends Controller
             'deskripsi_tentangkami' =>'harus diisi',
 
         ]);
-        $data = tentangkami::find($id);
+        $data = Upjtentangkami::find($id);
         $data->update([
             'deskripsi_tentangkami' =>$request->deskripsi_tentangkami,
         ]);

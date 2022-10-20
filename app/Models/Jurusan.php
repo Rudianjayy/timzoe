@@ -22,8 +22,8 @@ class Jurusan extends Model
     }
 
     
-    public function personal()
-    {
-        return $this->belongsTo(Personaljurusan::class, 'personaljurusans_id','id');
-    }
+    // public function personal()
+    // {
+    //     return $this->belongsTo(Personaljurusan::class, 'personaljurusans_id','id');
+    // }
 }

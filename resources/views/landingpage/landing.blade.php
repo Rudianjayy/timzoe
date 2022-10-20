@@ -200,19 +200,19 @@
                     </div>
                 </div>
                 @php
-                $personal = \App\Models\Personaljurusan::all();
+                $jurusan = \App\Models\Jurusan::all();
                 @endphp
-                @foreach ($personal as $p)
+                @foreach ($jurusan as $js)
                     <div class="col-lg-4 col-md-6 col-12">
                         <div class="sc-category wow fadeInUp pl-19" data-wow-delay="400ms"
                             data-wow-duration="1000ms">
                             <div class="card-media">
-                                <img src="{{ asset('fotojurusan/' . $p->foto) }}" alt="">
+                                <img src="{{ asset('fotojurusan/' . $js->foto) }}" alt="">
                             </div>
                             <div class="card-content">
-                                <h5><a href="/indexjurusan/{{ $p->id }}"> {{ $p->nama_jurusan }}</a>
+                                <h5><a href="/indexjurusan/{{ $js->id }}"> {{ $js->nama_kompetensi2 }}</a>
                                 </h5>
-                                <p>{!! $p->deskripsi !!}</p>
+                                <p>{!! $js->deskripsi_kompetensi2 !!}</p>
                             </div>
                         </div>
                     </div>

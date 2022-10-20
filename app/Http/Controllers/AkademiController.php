@@ -29,6 +29,21 @@ class AkademiController extends Controller
         return view('akademi.akademi', compact('kompetensi','foto','f','kh','pj','kp','akdm','akademi','personal','ft','logo'));
     }
 
+    public function detailakademi($id){
+        $dekad= Akademi::findOrFail($id);
+        // $foto= Akademi::where('akademis_id',$id)->paginate(2);
+        $personal= Personaljurusan::all();
+        $akademi = Akademi::all();
+        $ft = footeer::all();
+        return view('akademi.detail-akademi', compact('dekad','akademi','personal','ft'));
+    }
+
+
+
+
+
+
+
     public function loby6(){
         $data = Akademi::all();
         return view('akademi.admin-akademi', compact('data'));
@@ -42,15 +57,27 @@ class AkademiController extends Controller
         $this->validate($request,[
             'judul_akademi' =>'required',
             'deskripsi_akademi' =>'required',
+            'deskripsi_detail' =>'required',
+            'alamat' =>'required',
+            'email' =>'required',
+            'notelpon' =>'required',
         ],[
             'judul_akademi.required' =>'Harus diisi',
             'deskripsi_akademi.required' =>'Harus diisi',
+            'deskripsi_detail.required' =>'Harus diisi',
+            'alamat.required' =>'Harus diisi',
+            'email.required' =>'Harus diisi',
+            'notelpon.required' =>'Harus diisi',
 
         ]);
         $data = Akademi::create([
             'foto' =>$request->foto,
             'judul_akademi' =>$request->judul_akademi,
             'deskripsi_akademi' =>$request->deskripsi_akademi,
+            'deskripsi_detail' =>$request->deskripsi_detail,
+            'alamat' =>$request->alamat,
+            'email' =>$request->email,
+            'notelpon' =>$request->notelpon,
         ]);
         if($request->hasFile('foto')){
             $request->file('foto')->move('fotomahasiswa/', $request->file('foto')->getClientOriginalName());
@@ -70,15 +97,27 @@ class AkademiController extends Controller
         $this->validate($request,[
             'judul_akademi' =>'required',
             'deskripsi_akademi' =>'required',
+            'deskripsi_detail' =>'required',
+            'alamat' =>'required',
+            'email' =>'required',
+            'notelpon' =>'required',
         ],[
             'judul_akademi' =>'harus diisi',
             'deskripsi_akademi' =>'harus diisi',
+            'deskripsi_detail' =>'harus diisi',
+            'alamat' =>'harus diisi',
+            'email' =>'harus diisi',
+            'notelpon' =>'harus diisi',
 
         ]);
         $data = Akademi::find($id);
         $data->update([
             'judul_akademi' =>$request->judul_akademi,
             'deskripsi_akademi' =>$request->deskripsi_akademi,
+            'deskripsi_detail' =>$request->deskripsi_detail,
+            'alamat' =>$request->alamat,
+            'email' =>$request->email,
+            'notelpon' =>$request->notelpon,
         ]);
         // if($request->hasFile('foto')){
         //     $request->file('foto')->move('fotomahasiswa/',$request->file('foto')->getClientOriginalName());

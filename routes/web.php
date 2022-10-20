@@ -6,6 +6,7 @@ use App\Http\Controllers\PpdbController;
 use App\Http\Controllers\AlbumController;
 use App\Http\Controllers\IdukaController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\MitraController;
 use App\Http\Controllers\DetailController;
 use App\Http\Controllers\KepsekController;
 use App\Http\Controllers\SliderController;
@@ -89,11 +90,11 @@ Route::get('/deletejurusan/{id}',[JurusanController::class, 'delete'])->name('de
 
 
 
-Route::get('/adminfotojurusan',[PersonaljurusanController::class, 'loby4'])->name('adminfotojurusan');
-Route::get('/indexfotojurusan/{id}',[PersonaljurusanController::class, 'indexfotojurusan'])->name('indexfotojurusan');
-Route::get('/tambahfotojurusan',[PersonaljurusanController::class, 'tambahfotojurusan'])->name('tambahfotojurusan');
-Route::post('/submitdata4',[PersonaljurusanController::class, 'submitdata4'])->name('submitdata4');
-Route::get('/deletefotojurusan/{id}',[PersonaljurusanController::class, 'delete'])->name('delete');
+// Route::get('/adminfotojurusan',[PersonaljurusanController::class, 'loby4'])->name('adminfotojurusan');
+// Route::get('/indexfotojurusan/{id}',[PersonaljurusanController::class, 'indexfotojurusan'])->name('indexfotojurusan');
+// Route::get('/tambahfotojurusan',[PersonaljurusanController::class, 'tambahfotojurusan'])->name('tambahfotojurusan');
+// Route::post('/submitdata4',[PersonaljurusanController::class, 'submitdata4'])->name('submitdata4');
+// Route::get('/deletefotojurusan/{id}',[PersonaljurusanController::class, 'delete'])->name('delete');
 
 
 Route::get('/indexprestasi',[PrestasiController::class, 'indexprestasi'])->name('indexprestasi');
@@ -291,6 +292,8 @@ Route::get('/deletefooteer/{id}',[FooteerController::class,'deletefooteer'])->na
 
 Route::get('/indexakademi',[AkademiController::class,'indexakademi'])->name('indexakademi');
 
+Route::get('/detailakademi/{id}',[AkademiController::class,'detailakademi'])->name('detailakademi');
+
 Route::get('/dataakademi',[AkademiController::class, 'loby6'])->name('dataakademi');
 Route::get('/tambahakademi',[AkademiController::class, 'tambahakademi'])->name('tambahakademi');
 Route::post('/submitdata6',[AkademiController::class, 'submitdata6'])->name('submitdata6');
@@ -301,20 +304,18 @@ Route::get('/deleteakademi/{id}',[AkademiController::class, 'delete'])->name('de
 
 
 
-Route::get('/detailakademi/{id}',[DetailakademiController::class,'detailakademi'])->name('detailakademi');
+Route::get('adminmitra',[MitraController::class, 'adminmitra'])->name('adminmitra');
 
-Route::get('/admindetailakademi',[DetailakademiController::class, 'loby7'])->name('admindetailakademi');
-Route::get('/tambahdetailakademi',[DetailakademiController::class, 'tambahdetailakademi'])->name('tambahdetailakademi');
-Route::post('/submitdata7',[DetailakademiController::class, 'submitdata7'])->name('submitdata7');
-Route::get('/editdetailakademi/{id}',[DetailakademiController::class, 'editdetailakademi'])->name('editdetailakademi');
-Route::post('/submitedit7/{id}',[DetailakademiController::class, 'submitedit7'])->name('submitedit7');
-Route::get('/deletedetailakademi/{id}',[DetailakademiController::class, 'delete'])->name('delete');
-
+Route::get('/tambahmitra',[MitraController::class, 'tambahmitra'])->name('tambahmitra');
+Route::post('/submitdata14',[MitraController::class, 'submitdata14'])->name('submitdata14');
+Route::get('/editmitra/{id}',[MitraController::class, 'editmitra'])->name('editmitra');
+Route::post('/submitedit14/{id}',[MitraController::class, 'submitedit14'])->name('submitedit14');
+Route::get('/deletemitra/{id}',[MitraController::class, 'deletemitra'])->name('deletemitra');
 
 
 //upj
 Route::get('/indexupj',[UpjController::class,'indexupj'])->name('indexupj');
-Route::get('/upj',[UpjController::class,'upj'])->name('upj');
+Route::get('/upj',[UpjtekajeController::class,'upj'])->name('upj');
 
 
 

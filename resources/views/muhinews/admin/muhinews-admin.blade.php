@@ -68,7 +68,7 @@
                                         <td>{{ $d->judul }}</td>
                                         <td>{{ $d->deskripsi_muhinews }}</td>
                                         <td>{!! $d->deskripsi_detail !!}</td>
-                                        <td>{{ $d->Kategori }}
+                                        <td>{{ $d->kategori }}
                                                {{--  @php
                                                 dd($d->kategori);
                                                @endphp  --}}

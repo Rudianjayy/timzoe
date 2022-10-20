@@ -18,9 +18,7 @@ class UpjController extends Controller
         $kh = Jurusan::all();
         return view('upj.indexupj', compact('f','kh'));
     }
-    public function upj() {
-        return view('upj.upj');
-    }
+    
 
 
 

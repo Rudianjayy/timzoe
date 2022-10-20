@@ -28,8 +28,9 @@
                 <span>Kurikulum</span>
             </a>
             <ul class="sub-menu" aria-expanded="false">
-                <li><a href="/kompetensiadmin">Kompetensi Keahlian</a></li>
-                <li><a href="/fotokompetensiadmin">Foto Kompetensi</a></li>
+                <li><a href="/datajurusan">Kompetensi Keahlian</a></li>
+                {{-- <li><a href="/kompetensiadmin">Kompetensi Keahlian</a></li>
+                <li><a href="/fotokompetensiadmin">Foto Kompetensi</a></li> --}}
                 <li><a href="/jadwaladmin">Jadwal Kegiatan</a></li>
                 <li><a href="/kalenderakademikadmin">Kalender Akademik</a></li>
                 <li><a href="/kelulusanadmin">Kelulusan</a></li>
@@ -97,6 +98,26 @@
             </ul>
         </li>
 
+        <li>
+            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                <i class="ti-package"></i>
+                <span>UPJ Tekaje</span>
+            </a>
+            <ul class="sub-menu" aria-expanded="false">
+                <li><a href="#">Home</a></li>
+                <li><a href="/tentangkami">Tentang Kami</a></li>
+                <li><a href="#">-</a></li>
+                <li><a href="#">- </a></li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="/adminmitra" class="waves-effect">
+                <i class="mdi mdi-account-details-outline"></i> <span class="badge rounded-pill bg-primary float-end"></span>
+                <span>Mitra</span>
+            </a>
+        </li>
+
         <li class="menu-title">Manajemen Beranda</li>
 
         <li>
@@ -133,26 +154,26 @@
 
 
 
-        <li>
-            <a href="javascript: void(0);" class="has-arrow waves-effect">
-                <i class="ti-package"></i>
-                <span>Jurusan</span>
+        {{-- <li>
+            <a href="/datajurusan" class="waves-effect">
+                <i class="mdi mdi-account-details-outline"></i> <span class="badge rounded-pill bg-primary float-end"></span>
+                <span>Kompetensi Keahlian</span>
             </a>
             <ul class="sub-menu" aria-expanded="false">
-                <li><a href="/datajurusan">Data Jurusan</a></li>
+                <li><a href="/datajurusan">Kompetensi Keahlian</a></li>
                 <li><a href="/adminfotojurusan">Masing jurusan</a></li>
             </ul>
-        </li>
+        </li> --}}
 
         <li>
-            <a href="javascript: void(0);" class="has-arrow waves-effect">
-                <i class="ti-package"></i>
+            <a href="/dataakademi" class="waves-effect">
+                <i class="mdi mdi-account-details-outline"></i> <span class="badge rounded-pill bg-primary float-end"></span>
                 <span>Akademi</span>
             </a>
-            <ul class="sub-menu" aria-expanded="false">
+            {{-- <ul class="sub-menu" aria-expanded="false">
                 <li><a href="/dataakademi">Akademi</a></li>
                 <li><a href="/admindetailakademi">Detail Akademi</a></li>
-            </ul>
+            </ul> --}}
         </li>
 
 

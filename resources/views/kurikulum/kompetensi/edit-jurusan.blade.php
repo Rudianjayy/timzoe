@@ -17,8 +17,6 @@
                             <form action="/submitedit3/{{ $data->id }}" method="POST" enctype="multipart/form-data">
                                 @csrf
 
-
-
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Ubah Foto :</label>
                                     <img class="img mb-3" src="{{ asset('fotojurusan/' . $data->foto) }}" alt=""
@@ -31,22 +29,12 @@
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Jurusan :</label>
-                                    <select name="personaljurusans_id" class="form-control" id="matkul">
-                                        <option value="" <?php if ($data->personaljurusans_id == '') {
-                                            echo 'selected';
-                                        } ?>></option>
-                                        @foreach ($personal as $p)
-                                            <option value="{{ $p->id }}"
-                                                <?php if ($data->personaljurusans_id == $p->id) {
-                                                    echo 'selected';
-                                                } ?>>{{ $p->nama_jurusan }}</option>
-                                        @endforeach
-                                        @error('personaljurusans_id')
-                                            <div class="alert alert-danger">{{ $message }}</div>
-                                        @enderror
-                                    </select>
-                                </div>
+                                    <label for="exampleInputEmail1" class="form-label">Nama Jurusan :</label>
+                                    <input type="text" name="nama_kompetensi2" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $data->nama_kompetensi2 }}">
+                                    @error('nama_kompetensi2')
+                                      <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
+                                  </div>
 
                                 <section style="padding-top:60px;">
                                     <div class="container">
@@ -58,7 +46,24 @@
                                                     </div>
                                                     <div class="card-body">
                                                         {{--  <form method="POST" enctype="multipart/form-data">  --}}
-                                                            <textarea name="deskripsi" id="mytextarea">{{ $data->deskripsi }}</textarea>
+                                                            <textarea name="deskripsi_kompetensi2" id="mytextarea">{{ $data->deskripsi_kompetensi2 }}</textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section style="padding-top:60px;">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        Deskripsi
+                                                    </div>
+                                                    <div class="card-body">
+                                                        {{--  <form method="POST" enctype="multipart/form-data">  --}}
+                                                            <textarea name="deskripsi_detail2" id="mytextarea">{{ $data->deskripsi_detail2 }}</textarea>
                                                     </div>
                                                 </div>
                                             </div>

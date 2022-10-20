@@ -29,18 +29,12 @@
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Nama jurusan :</label>
-                                    <select name="personaljurusans_id" class="form-control" id="jurusan">
-                                        <option value=""></option>
-                                        @foreach ($personal as $pe)
-                                            <option value="{{ $pe->id }}" data-="">{{ $pe->nama_jurusan }}
-                                            </option>
-                                        @endforeach
-                                    </select>
-                                    @error('personaljurusans_id')
-                                        <div class="alert alert-danger">{{ $message }}</div>
+                                    <label for="exampleInputEmail1" class="form-label">Nama Jurusan :</label>
+                                    <input type="text" name="nama_kompetensi2" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
+                                    @error('nama_kompetensi2')
+                                      <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
-                                </div>
+                                  </div>
 
                                 {{--  <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label">Deskripsi :</label>
@@ -59,7 +53,24 @@
                                                     </div>
                                                     <div class="card-body">
                                                         {{--  <form method="POST" enctype="multipart/form-data">  --}}
-                                                        <textarea name="deskripsi" id="mytextarea"></textarea>
+                                                        <textarea name="deskripsi_kompetensi2" id="mytextarea"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section style="padding-top:60px;">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        Deskripsi Detail
+                                                    </div>
+                                                    <div class="card-body">
+                                                        {{--  <form method="POST" enctype="multipart/form-data">  --}}
+                                                        <textarea name="deskripsi_detail2" id="mytextarea"></textarea>
                                                     </div>
                                                 </div>
                                             </div>

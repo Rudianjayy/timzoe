@@ -38,6 +38,7 @@
                                     <th scope="col">Foto</th>
                                     <th scope="col">Nama</th>
                                     <th scope="col">Deskripsi</th>
+                                    <th scope="col">Deskripsi detail</th>
                                     <th scope="col">Aksi</th>
                                 </tr>
                             </thead>
@@ -54,8 +55,9 @@
                                             <img src="{{ asset('fotojurusan/' . $row->foto) }}" alt=""
                                                 style="width: 50px;">
                                         </td>   
-                                        <td>{{ $row->personal ? $row->personal->nama_jurusan : 'Data tidak ada' }}</td>
-                                        <td>{!! $row->deskripsi !!}</td>
+                                        <td>{{ $row->nama_kompetensi2 }}</td>
+                                        <td>{!! $row->deskripsi_kompetensi2 !!}</td>
+                                        <td>{!! $row->deskripsi_detail2 !!}</td>
 
                                         {{-- <td>{{ $row->created_at->format('D M Y') }}</td> --}}
                                         <td>

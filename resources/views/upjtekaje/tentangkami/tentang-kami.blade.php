@@ -25,7 +25,7 @@
                     <div class="card-body">
 
                         <div>
-                            <a href="/tambahtentangkamiF" class="btn btn-primary mt-5"
+                            <a href="/tambahtentangkami" class="btn btn-primary mt-5"
                                 id="kt_account_profile_details_submit">Tambah
                                 +</a>
                         </div>

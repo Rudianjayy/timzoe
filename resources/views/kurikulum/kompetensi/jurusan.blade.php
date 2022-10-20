@@ -88,7 +88,7 @@
                             <p>{!! $data->deskripsi_kompetensi2!!} </p>
 
                             <p>{!! $data->deskripsi_detail2 !!}</p>
-                            <div class="row">
+                            {{-- <div class="row">
                                 <div class="col-sm-4">
                                     <img src="{{ asset('landingppdb/ppdb/style/assets/images/blog/blog-d-1-1.jpg') }}" alt="" class="img-fluid2">
                                 </div><!-- /.col-md-4 -->
@@ -98,7 +98,7 @@
                                 <div class="col-sm-4">
                                     <img src="{{ asset('landingppdb/ppdb/style/assets/images/blog/blog-d-1-3.jpg') }}" alt="" class="img-fluid2">
                                 </div><!-- /.col-md-4 -->
-                            </div><!-- /.row -->
+                            </div><!-- /.row --> --}}
                             {{-- <h4>SEO is a Cost-Effective Advertising Strategy</h4>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                                 ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
@@ -116,11 +116,16 @@
                         
                         
 
-
+                        <div class="blog-details__social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                        </div><!-- /.blog-details__social -->
                        
                        
 
                     </div><!-- /.col-lg-8 -->
+                    
                     <div class="col-lg-4">
                         <div class="sidebar sidebar__right">
                             
@@ -173,7 +178,7 @@
                                     </li>
                                 </ul><!-- /.list-unstyled sidebar__archive-list -->
                             </div><!-- /.sidebar__single -->
-                            <div class="sidebar__single sidebar__tags">
+                            {{-- <div class="sidebar__single sidebar__tags">
                                 <h3 class="sidebar__title">Tags</h3>
                                 <div class="sidebar__tags-wrapper">
                                     <a href="#">Marketing</a>
@@ -185,7 +190,7 @@
                                     <a href="#">Social</a>
                                     <a href="#">SMM</a>
                                 </div><!-- /.sidebar__tags-wrapper -->
-                            </div><!-- /.sidebar__single -->
+                            </div><!-- /.sidebar__single --> --}}
                             <div class="blog-details__meta">
                                 {{-- <div class="blog-details__tags">
                                     <span>Tags</span>
@@ -193,11 +198,7 @@
                                     <a href="#">Business</a>
                                     <a href="#">App Design</a>
                                 </div><!-- /.blog-details__tags --> --}}
-                                <div class="blog-details__social">
-                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
-                                    <a href="#"><i class="fab fa-google-plus-g"></i></a>
-                                </div><!-- /.blog-details__social -->
+                                
                             </div><!-- /.blog-details__meta -->
                         </div><!-- /.sidebar -->
                     </div><!-- /.col-lg-4 -->

@@ -75,6 +75,7 @@
                                         <a href="/indexakademi"> Akademi</a>
                                         @php
                                             $akademi = \App\Models\Akademi::all();
+                                            $ekstra= \App\Models\ekstrakulikuler::all();
                                         @endphp
                                         <ul class="sub-menu">
                                             @foreach ($akademi as $ami)
@@ -84,8 +85,19 @@
                                             @endforeach
                                         </ul>
                                     </li>
+
+
+
                                     <li class="menu-item {{ Route::is('ekstra') ? 'current-item' : '' }}"><a
-                                            href="/ekstra">Ekstra Kulikuler</a></li>
+                                            href="/ekstra">Ekstra Kulikuler</a>
+                                            <ul class="sub-menu">
+                                                @foreach ($ekstra as $ab)
+                                                    <li class="menu-item "><a
+                                                            href="/detailekstrakulikuler/{{ $ab->id }}">{{ $ab->judul_ekstra }}</a>
+                                                    </li>
+                                                @endforeach
+                                            </ul>
+                                        </li>
                                     <li class="menu-item {{ Route::is('osis') ? 'current-item' : '' }}"><a
                                             href="/osis">IPM/OSIS</a></li>
                                     <li class="menu-item {{ Route::is('alumni') ? 'current-item' : '' }}"><a

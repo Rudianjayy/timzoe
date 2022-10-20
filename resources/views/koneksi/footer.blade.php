@@ -9,8 +9,8 @@
                 <div class="widget widget-logo">
                     <div class="logo-footer" id="logo-footer">
                         <a href="#">
-                            <img id="logo_footer" src="{{ asset('fotomahasiswa/' .$lg->foto) }}"
-                                alt="nft-gaming" width="120" height="100">
+                            <img  id="logo_footer" src="{{ asset('fotomahasiswa/' .$lg->foto) }}"
+                                alt="nft-gaming" width="120" height="100" style="margin-left:50px;">
                         </a>
                     </div>
                     <p class="sub-widget-logo">{!! $lg->deskripsi_footeer!!}</p>
@@ -30,20 +30,6 @@
                 </div>
 
                 @endforeach
-            </div>
-            <div class="col-lg-2 col-md-6 col-sm-6 col-6">
-                <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-                <div class="elfsight-app-7e06bf3a-c3dd-4ad3-a974-4f6c4b30ba1e"></div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-6">
-                <div class="widget widget-menu menu-supports">
-                    <h5 class="title-widget">Lainnya</h5>
-                    <ul>
-                        <li><a href="/login">Login Admin </a></li>
-                        <li><a href="https://sekolah.data.kemdikbud.go.id/index.php/chome/profil/39108646-470a-4aac-bee3-bc8ea91b8973">Dapodik</a></li>
-                        <li><a href="https://sekolah.data.kemdikbud.go.id/index.php/chome/profil/39108646-470a-4aac-bee3-bc8ea91b8973">UPJ TKJ</a></li>
-                    </ul>
-                </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                 <div class="widget widget-post">
@@ -66,6 +52,21 @@
                         @endforeach
                     </ul>
                 </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-6 col-6">
+                <div class="widget widget-menu menu-supports">
+                    <h5 class="title-widget">Lainnya</h5>
+                    <ul>
+                        <li><a href="/login">Login Admin </a></li>
+                        <li><a href="https://sekolah.data.kemdikbud.go.id/index.php/chome/profil/39108646-470a-4aac-bee3-bc8ea91b8973">Dapodik</a></li>
+                        <li><a href="https://sekolah.data.kemdikbud.go.id/index.php/chome/profil/39108646-470a-4aac-bee3-bc8ea91b8973">UPJ TKJ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-sm-6 col-6">
+                <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+                <div class="elfsight-app-7e06bf3a-c3dd-4ad3-a974-4f6c4b30ba1e"></div>
             </div>
 
         </div>

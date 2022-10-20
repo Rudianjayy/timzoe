@@ -20,6 +20,7 @@ use App\Http\Controllers\SambutanController;
 use App\Http\Controllers\FasilitasController;
 use App\Http\Controllers\FotoidukaController;
 use App\Http\Controllers\KesiswaanController;
+use App\Http\Controllers\DetailEkstrakulikulerController;
 use App\Http\Controllers\KurikulumController;
 use App\Http\Controllers\UpjtekajeController;
 use App\Http\Controllers\KompetensiController;
@@ -79,6 +80,7 @@ Route::get('/deletesambutan/{id}',[SambutanController::class, 'delete'])->name('
 
 
 
+
 Route::get('/datajurusan',[JurusanController::class, 'loby3'])->name('datajurusan');
 Route::get('/indexjurusan/{id}',[JurusanController::class, 'indexjurusan'])->name('indexjurusan');
 Route::get('/tambahjurusan',[JurusanController::class, 'tambahjurusan'])->name('tambahjurusan');
@@ -118,7 +120,7 @@ Route::get('/deleteprestasi/{id}',[PrestasiController::class, 'delete'])->name('
 
 
 
-//muinews
+//muhinews
 Route::get('/muhinews',[MuhinewsController::class, 'index'])->name('muhinews');
 Route::get('/muhinewsadmin',[MuhinewsController::class, 'indexadmin'])->name('muhinewsadmin');
 Route::get('/tambahmuhinews',[MuhinewsController::class, 'tambahmuhinews'])->name('tambahmuhinews');
@@ -135,6 +137,16 @@ Route::post('/muhiblogproses',[MuhiblogController::class, 'muhiblogproses'])->na
 Route::get('/editmuhiblog/{id}',[MuhiblogController::class, 'editmuhiblog'])->name('editmuhiblog');
 Route::post('/editmuhiblogproses/{id}',[MuhiblogController::class, 'editmuhiblogproses'])->name('editmuhiblogproses');
 Route::get('/deletemuhiblog/{id}',[MuhiblogController::class, 'delete'])->name('delete');
+
+//kategoriberita
+
+Route::get('/kategoriberita',[MuhiblogController::class, 'kategoriberita'])->name('kategoriberita');
+Route::get('/tambahkategori',[MuhiblogController::class, 'tambahkategori'])->name('tambahkategori');
+Route::post('/kategoriproses',[MuhiblogController::class, 'kategoriproses'])->name('kategoriproses');
+Route::get('/editkategori/{id}',[MuhiblogController::class, 'editkategori'])->name('editkategori');
+Route::post('/editproseskategori/{id}',[MuhiblogController::class, 'editproseskategori'])->name('editproseskategori');
+Route::get('/deletekategori/{id}',[MuhiblogController::class, 'deletekategori'])->name('delete');
+
 
 
 
@@ -236,10 +248,6 @@ Route::get('/deletefotokompetensi/{id}',[FotokompetensiController::class, 'delet
 
 
 
-
-
-
-
 //kurikulum
 Route::get('/kurikulum',[KurikulumController::class,'kurikulum'])->name('kurikulum');
 
@@ -272,6 +280,23 @@ Route::post('/ekstrakulikulerproses1',[KesiswaanController::class, 'ekstrakuliku
 Route::get('/editekstrakulikuler/{id}',[KesiswaanController::class, 'editekstrakulikuler'])->name('editekstrakulikuler');
 Route::post('/editproses3/{id}',[KesiswaanController::class,'editproses3'])->name('editproses3');
 Route::get('/delete/{id}',[KesiswaanController::class,'delete'])->name('delete');
+
+
+
+
+Route::get('/detailekstrakulikuler/{id}',[DetailEkstrakulikulerController::class,'detailekstrakulikuler'])->name('detailekstrakulikuler');
+
+Route::get('/admindetailekstrakulikuler',[DetailEkstrakulikulerController::class, 'admindetailekstrakulikuler'])->name('admindetailekstrakulikuler');
+Route::get('/tambahdetailekstrakulikuler',[DetailEkstrakulikulerController::class, 'tambahdetailekstrakulikuler'])->name('tambahdetailekstrakulikuler');
+Route::post('/tambahdetail1',[DetailEkstrakulikulerController::class, 'tambahdetail1'])->name('tambahdetail1');
+Route::get('/editdetailekstrakulikuler/{id}',[DetailEkstrakulikulerController::class, 'editdetailekstrakulikuler'])->name('editdetailekstrakulikuler');
+Route::post('/editdetail1/{id}',[DetailEkstrakulikulerController::class, 'editdetail1'])->name('editdetail1');
+Route::get('/deletedetail/{id}',[DetailEkstrakulikulerController::class, 'deletedetail'])->name('deletedetail');
+
+
+
+
+
 
 
 Route::get('/osis',[KesiswaanController::class,'osis'])->name('osis');

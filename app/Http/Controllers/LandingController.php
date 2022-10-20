@@ -30,8 +30,12 @@ class LandingController extends Controller
         $personal = Personaljurusan::all();
         $kh = Jurusan::all();
         $ps = Prestasi::all();
+        $paginate = Prestasi::paginate(3);
         $ft = footeer::all();
         $akademi = Akademi::all();
-        return view('landingpage.landing', compact('data','d','f','ss','fs','ft','logo','sa','js','personal','kh','ps','akademi'));
+        $logo = footeer::all();
+        return view('landingpage.landing', compact('data','d','f','ss','fs','ft','sa','js','personal','kh','ps','akademi','logo','paginate'));
+
+
     }
 }

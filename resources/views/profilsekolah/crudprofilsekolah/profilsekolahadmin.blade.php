@@ -16,7 +16,6 @@
     <div class="breadcrumbs">
 
         {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> --}}
-
         {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" /> --}}
         {{--  <div class="col-md-8">
             <h6 class="page-title">Data tables</h6>
@@ -44,7 +43,6 @@
                                     <th scope="col">judul</th>
                                     <th scope="col">Deskripsi</th>
                                     <th scope="col">foto</th>
-                                    <th scope="col">deskripsi_lanjutan</th>
                                     <th scope="col">foto_simuhi</th>
                                     <th scope="col">deskripsi_simuhi</th>
                                     <th scope="col">Aksi</th>
@@ -58,17 +56,16 @@
                                     <tr>
                                         <th>{{ $no++ }}</th>
                                         <td>{{ $q->judul }}</td>
-                                        <td>{{ $q->deskripsi }}</td>
+                                        <td>{!! $q->deskripsi !!}</td>
                                         <td>
                                             <img src="{{ asset('fotomahasiswa/' . $q->foto) }}" alt=""
                                                 style="width: 50px;">
                                         </td>
-                                        <td>{{ $q->deskripsi_lanjutan }}</td>
                                         <td>
                                             <img src="{{ asset('fotomahasiswa/' . $q->foto_simuhi) }}" alt=""
                                                 style="width: 50px;">
                                         </td>
-                                        <td>{{ $q->deskripsi_simuhi }}</td>
+                                        <td>{!! $q->deskripsi_simuhi !!}</td>
                                         {{-- <td>{{ $q->created_at->format('D M Y') }}</td> --}}
                                         <td>
                                             <a href="/editprofilsekolah/{{ $q->id }}" class="btn btn-warning fas fa-pen-alt">Edit</a>

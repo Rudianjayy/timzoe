@@ -16,4 +16,10 @@ class ekstrakulikuler extends Model
         return Carbon::parse($this->attributes['created_at'])
             ->translatedFormat(' d F Y');
     }
+    public function detailekstrakulikuler(){
+        return $this->hasMany(Detailekstrakulikuler::class);
+    }
 }
+
+
+

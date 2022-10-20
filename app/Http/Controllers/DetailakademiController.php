@@ -13,10 +13,11 @@ class DetailakademiController extends Controller
     public function detailakademi($id){
         $data= Detailakademi::where('akademis_id',$id)->firstOrFail();
         $foto= Detailakademi::where('akademis_id',$id)->paginate(2);
-        $personal= Personaljurusan::all();
-        $akademi = Akademi::all();
+        $personal = Personaljurusan::all();
+        $akademi = akademi::all();
         $ft = footeer::all();
-        return view('akademi.detail.detail-akademi', compact('data','akademi','foto','personal','ft'));
+        $logo = footeer::all();
+        return view('akademi.detail.detail-akademi', compact('data','akademi','foto','personal','ft','logo'));
     }
     public function loby7(){
         $data = Detailakademi::with('akademi')->get();
@@ -24,7 +25,7 @@ class DetailakademiController extends Controller
     }
 
     public function tambahdetailakademi(){
-        $akademi = Akademi::all();
+        $akademi = akademi::all();
         return view('akademi.detail.tambah-detail-akademi', compact('akademi'));
     }
 

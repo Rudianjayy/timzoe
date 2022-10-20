@@ -9,6 +9,7 @@ use App\Models\Muhinews;
 use Illuminate\Http\Request;
 use App\Models\fasilitassekolah;
 use App\Models\fotofasilitas;
+use App\Models\personaljurusan;
 
 class FasilitasController extends Controller
 {
@@ -18,7 +19,9 @@ class FasilitasController extends Controller
         $q = fasilitassekolah::paginate(4);
         $f = Muhinews::paginate(3);
         $kh = Jurusan::all();
-        $logo= footeer::all();
+        $personal = personaljurusan::all();
+        $ft = Footeer::all();
+        $logo = footeer::all();
 
         return view('fasilitassekolah.fasilitassekolah', compact('q','f','kh','logo','jud'));
 

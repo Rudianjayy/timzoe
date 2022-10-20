@@ -67,14 +67,7 @@
             <img src="assets/images/shapes/bg-shape-1-3.png" class="section__bg-shape-3" alt="">
 
 
-            <div class="section__bubble-1"></div><!-- /.section__bubble-1 -->
-            <div class="section__bubble-2"></div><!-- /.section__bubble-2 -->
-            <div class="section__bubble-3"></div><!-- /.section__bubble-3 -->
-            <div class="section__bubble-4"></div><!-- /.section__bubble-4 -->
-            <div class="section__bubble-5"></div><!-- /.section__bubble-5 -->
-            <div class="section__bubble-6"></div><!-- /.section__bubble-6 -->
-            <div class="section__bubble-7"></div><!-- /.section__bubble-7 -->
-            <div class="section__bubble-8"></div><!-- /.section__bubble-8 -->
+          
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8">
@@ -169,26 +162,7 @@
                 </div><!-- /.row -->
             </div><!-- /.container -->
         </section><!-- /.blog-standard -->
-        <section class="mailchimp-one">
-            <div class="container">
-                <div class="inner-container">
-                    <img src="assets/images/mocups/subscribe-moc-1-1.png" class="mailchimp-one__moc-1" alt="">
-                    <img src="assets/images/mocups/subscribe-moc-1-2.png" class="mailchimp-one__moc-2" alt="">
 
-                    <img src="assets/images/shapes/subscribe-dot-1-1.png" class="mailchimp-one__bg-shape-1" alt="">
-                    <img src="assets/images/shapes/subscribe-shape-1-1.png" class="mailchimp-one__bg-shape-2" alt="">
-                    <div class="block-title text-center">
-                        <p><span>Newsletter</span></p>
-                        <h3>Signup for Our Latest <br> <span>Update</span></h3>
-                    </div><!-- /.block-title text-center -->
-                    <form action="#" class="mailchimp-one__form">
-                        <input type="text" name="email" placeholder="Enter your email">
-                        <button type="submit" class="thm-btn mailchimp-one__btn">Subscribe Now</button>
-                        <!-- /.thm-btn mailchimp-one__btn -->
-                    </form><!-- /.mailchimp-one__form -->
-                </div><!-- /.inner-container -->
-            </div><!-- /.container -->
-        </section><!-- /.mailchimp-one -->
 
         @include('koneksi.footer')
 

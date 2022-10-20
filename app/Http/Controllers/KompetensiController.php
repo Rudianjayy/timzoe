@@ -7,8 +7,8 @@ use App\Models\Muhinews;
 use App\Models\Kompetensi;
 use Illuminate\Http\Request;
 use App\Models\Fotokompetensi;
-use App\Models\Personaljurusan;
 use App\Models\footeer;
+use App\Models\Personaljurusan;
 class KompetensiController extends Controller
 {
 
@@ -18,12 +18,16 @@ class KompetensiController extends Controller
         $foto = Fotokompetensi::all();
         $f = Muhinews::paginate(4 );
         $kh = Jurusan::all();
-        $pj = Personaljurusan::all();
+        $personal = Personaljurusan::all();
         $kp = Kompetensi::all();
         $ft = footeer::all();
-        $personal = Personaljurusan::all();
-        $logo = footeer::all();
-        return view('kurikulum.kompetensi', compact('kompetensi','foto','f','kh','pj','kp','ft','personal','logo'));
+        $pj = personaljurusan::all();
+        $logo =  footeer::all();
+        return view('kurikulum.kompetensi', compact('kompetensi','foto','f','kh','personal','kp','ft','pj','logo'));
+    }
+    public function tkj(){
+        $f = Muhinews::all();
+        return view('kurikulum.kompetensi.tkj', compact('f'));
     }
 
 

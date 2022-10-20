@@ -15,141 +15,126 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-        <link rel="stylesheet" type="text/css" href="{{ asset('landing/html/bidzend/assets/css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('landing/html/bidzend/assets/css/style.css') }}">
 
-        <link rel="stylesheet" type="text/css" href="{{ asset('landing/html/bidzend/assets/css/responsive.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('landing/html/bidzend/assets/css/responsive.css') }}">
 
-        <link rel="shortcut icon" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
-        <link rel="apple-touch-icon-precomposed" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
-        <link rel="apple-touch-icon" sizes="180x180"
-            href="{{ asset('landingppdb/ppdb/style/assets/images/favicons/apple-touch-icon.png') }}">
-        <link rel="icon" type="image/png" sizes="32x32"
-            href="{{ asset('landingppdb/ppdb/style/assets/images/favicons/favicon-32x32.png') }}">
-        <link rel="icon" type="image/png" sizes="16x16"
-            href="{{ asset('landingppdb/ppdb/style/assets/images/favicons/favicon-16x16.png') }}">
-        <link rel="manifest" href="{{ asset('landingppdb/ppdb/style/assets/images/favicons/site.webmanifest') }}">
+    <link rel="shortcut icon" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
+    <link rel="apple-touch-icon-precomposed" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
 
-        <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/animate.css') }}">
-        <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap-datepicker.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap-select.min.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&amp;display=swap">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/animate.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap-datepicker.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap-select.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/fontawesome-all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/hover-min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/swiper.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/jquery.mCustomScrollbar.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/owl.theme.default.min.css') }}">
 
-        <!-- Template Styles -->
-        <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/style.css') }}">
+    <!-- Template Styles -->
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/responsive.css') }}">
 </head>
 
 <body class="body header-fixed">
 
     <div class="preload preload-container">
         {{-- <div class="preload-logo"></div>  --}}
-        <div class="preload-logo"><img src="{{ asset('landing/html/bidzend/assets/images/logo/muhi.jpg') }}"
-                alt="Image" style="width:570 !important;"></div>
+        <div class="preload-logo"><img src="{{ asset('landing/html/bidzend/assets/images/logo/muhi.jpg') }}" alt="Image" style="width:570 !important;"></div>
     </div>
 
 
     @include('koneksi.navbar')
-
     <section class="fl-page-title">
         <div class="overlay"></div>
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
 
-                    
 
                     <div class="breadcrumbs">
                         <ul>
                             <li><a href="index.html">Beranda</a></li>
-                            <li>Profil Sekolah</li>
+                            <li>Profil Sekolah </li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="tf-section item-details-page">
-        <div class="author-item">
-            <div class="avatar">
-                <img src="assets/images/avatar/avt-4.jpg" alt="">
-            </div>
-            <div class="infor">
-                <h6><a href="author.html">Bagikan</a> </h6>
-                <div class="widget-social">
-                    <ul>
-                        <li><a href="#" class="active"><i class="fab fa-facebook-f"></i></a>
-                        </li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        @foreach ($q as $q)
-            <div class="container">
-                <div class="row">
-                    <div class="content-item">
 
+    <section class="blog-standard blog-details">
+        <img src="assets/images/shapes/bg-shape-1-1.png" class="section__bg-shape-1" alt="">
+        <img src="assets/images/shapes/bg-shape-1-2.png" class="section__bg-shape-2" alt="">
+        <img src="assets/images/shapes/bg-shape-1-3.png" class="section__bg-shape-3" alt="">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    @foreach ($q as $q )
+                    <div class="blog-details__main">
                         <center>
-                            <h3> {{ $q->judul }}</h3>
+                            <h3>{{$q->judul}}</h3>
                         </center>
-                        {{-- <center><img src="{{ asset('landing/html/bidzend/assets/images/logo/muhi.jpg') }}" alt="" style="width: 200px; height:200px; margin-bottom:20px; "></center> --}}
-                        <p class="desc mb-4">{{ $q->deskripsi }}</p>
-                        <center> <img class="zoom" src="{{ asset('fotomahasiswa/' . $q->foto) }}" alt=""
-                                style="width: 150px; height:140px; margin-bottom:20px; "></center>
-
-
-                        <br>
-                        <p class="desc">{{ $q->deskripsi_lanjutan }}</p>
-                        <br>
-                        <br>
-                        <center> <img class="zoom" src="{{ asset('fotomahasiswa/' . $q->foto_simuhi) }}"
-                                alt="" style="width: 150px; height:130px; margin-bottom:20px; "></center>
-                        <p class="desc">{{ $q->deskripsi_simuhi }}</p>
-
-
-
-                    </div>
-                </div>
-            </div>
-        @endforeach
-        </div>
-        </div>
-        </div>
-
-    </section>
-
+                        <center> <img src="{{ asset('fotomahasiswa/' . $q->foto) }}" class="img-fluid" alt="" style="width: 200px; height:200px;"></center>
+                        <p>{!! $q->deskripsi !!}</p>
+                        <center> <img src="{{ asset('fotomahasiswa/' . $q->foto_simuhi) }}" alt="" class="img-fluid" style="width: 250px; height:200px;"></center>
+                        <p>{!!$q->deskripsi_simuhi!!}</p>
+                    </div><!-- /.blog-details__main -->
+                    @endforeach
+                </div><!-- /.col-lg-8 -->
+                <div class="col-lg-4">
+                    <div class="sidebar sidebar__right">
+                        <div class="sidebar__single sidebar__category">
+                            <ul class="list-unstyled sidebar__category-list">
+                                <li>
+                                    <a href="viisimisi">Visi & Misi</a>
+                                </li>
+                                <li>
+                                    <a href="identitas_sekolah">Identitas Sekolah</a>
+                                </li>
+                                <li>
+                                    <a href="fasilitassekolah">Fasilitas Sekolah</a>
+                                </li>
+                            </ul><!-- /.list-unstyled sidebar__category-list -->
+                        </div><!-- /.sidebar__single -->
+                        <div class="sidebar__single sidebar__post">
+                            <h3 class="sidebar__title">Muhi News</h3>
+                            @foreach ($d as $d )
+                            <div class="sidebar__post-wrap">
+                                <div class="sidebar__post-single">
+                                    <div class="sidebar__post-image">
+                                        <img class="zoom" src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt="">
+                                    </div><!-- /.sidebar__post-image -->
+                                    <div class="sidebar__post-content">
+                                        <h3><a href="/muhiblog/{{ $d->id }}">{{$d->judul}}</a></h3>
+                                        <span>{{$d->created_at}}</span>
+                                    </div><!-- /.sidebar__post-content -->
+                                </div><!-- /.sidebar__post-single -->
+                            </div><!-- /.sidebar__post-wrap -->
+                            @endforeach
+                            <div class="blog-details__meta" style="margin-right: 200px;">
+                                <h4>Bagikan</h4>
+                                <div class="blog-details__social">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                                </div><!-- /.blog-details__social -->
+                            </div><!-- /.blog-details__meta -->
+                        </div><!-- /.sidebar__single -->
+                    </div><!-- /.sidebar -->
+                </div><!-- /.col-lg-4 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section><!-- /.blog-standard -->
     @include('koneksi.footer')
 
 
     <a id="scroll-top"></a>
 
-    <div class="modal fade popup" id="popup_bid_success" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <div class="modal-body space-y-20 pd-40">
-                    <h3 class="text-center">Your Bidding
-                        Successfuly Added</h3>
-                    <p class="text-center">your bid <span class="price color-popup">(4ETH) </span> has been listing to
-                        our database</p>
-                    <a href="#" class="btn btn-primary"> Watch the listings</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade popup" id="popup_bid" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-
-            </div>
-        </div>
-    </div>
 
     <script src="{{ asset('landing/html/bidzend/assets/js/jquery.min.js') }}"></script>
     <script src="{{ asset('landing/html/bidzend/assets/js/jquery.easing.js') }}"></script>

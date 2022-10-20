@@ -76,13 +76,37 @@
         </li>
 
 
-
         <li>
-            <a href="/muhinewsadmin" class="waves-effect">
-                <i class="mdi mdi-account-details-outline"></i> <span class="badge rounded-pill bg-primary float-end"></span>
+            <a href="#" class="has-arrow waves-effect">
+                <i class="ti-package"></i>
+                <span>Kesiswaan</span>
+            </a>
+            <ul class="sub-menu" aria-expanded="false">
+                <li><a href="/osisadmin">IPM/OSIS</a></li>
+                <li><a href="/alumniadmin">Alumni</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                <i class="ti-package"></i>
+                <span>Ekstrakulikuler</span>
+            </a>
+            <ul class="sub-menu" aria-expanded="false">
+                <li><a href="/ekstrakulikuleradmin">Ekstrakulikuler</a></li>
+                <li><a href="/admindetailekstrakulikuler">Detail Ekstrakulikuler</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                <i class="ti-package"></i>
                 <span>Muhinews</span>
             </a>
+            <ul class="sub-menu" aria-expanded="false">
+                <li><a href="/muhinewsadmin">Muhinews</a></li>
+                <li><a href="/kategoriberita">Kategori Muhinews</a></li>
+            </ul>
         </li>
+
 
         <li>
             <a href="javascript: void(0);" class="has-arrow waves-effect">
@@ -136,14 +160,10 @@
         </li>
 
         <li>
-            <a href="javascript: void(0);" class="has-arrow waves-effect">
-                <i class="ti-package"></i>
+            <a href="/fotoslideradmin" class="waves-effect">
+                <i class="mdi mdi-account-details-outline"></i> <span class="badge rounded-pill bg-primary float-end"></span>
                 <span>Slider</span>
             </a>
-            <ul class="sub-menu" aria-expanded="false">
-                <li><a href="/slideradmin">Deskripsi Slider</a></li>
-                <li><a href="/fotoslideradmin">Foto Slider</a></li>
-            </ul>
         </li>
 
 

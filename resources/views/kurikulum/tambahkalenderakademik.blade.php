@@ -7,7 +7,7 @@
     </head>
 
     <body>
-        <h1 class="text-center mb-4">Tambah BSI</h1>
+        <h1 class="text-center mb-4">Tambah Kalender Akademik</h1>
 
         <div class="container" mb-5>
 

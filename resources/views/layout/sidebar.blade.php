@@ -57,12 +57,20 @@
                 <span>Kesiswaan</span>
             </a>
             <ul class="sub-menu" aria-expanded="false">
-                <li><a href="/ekstrakulikuleradmin">Ekstra Kurikuler</a></li>
                 <li><a href="/osisadmin">IPM/OSIS</a></li>
                 <li><a href="/alumniadmin">Alumni</a></li>
             </ul>
         </li>
-
+        <li>
+            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                <i class="ti-package"></i>
+                <span>Ekstrakulikuler</span>
+            </a>
+            <ul class="sub-menu" aria-expanded="false">
+                <li><a href="/ekstrakulikuleradmin">Ekstrakulikuler</a></li>
+                <li><a href="/admindetailekstrakulikuler">Detail Ekstrakulikuler</a></li>
+            </ul>
+        </li>
         <li>
             <a href="/muhinewsadmin" class="waves-effect">
                 <i class="mdi mdi-account-details-outline"></i> <span class="badge rounded-pill bg-primary float-end"></span>

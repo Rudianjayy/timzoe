@@ -32,6 +32,9 @@ class LandingController extends Controller
         $ps = Prestasi::all();
         $ft = footeer::all();
         $akademi = Akademi::all();
-        return view('landingpage.landing', compact('data','d','f','ss','fs','ft','logo','sa','js','personal','kh','ps','akademi'));
+        $logo = footeer::all();
+        return view('landingpage.landing', compact('data','d','f','ss','fs','ft','sa','js','personal','kh','ps','akademi','logo'));
+
+
     }
 }

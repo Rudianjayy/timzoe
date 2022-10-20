@@ -75,6 +75,11 @@
             <section class="portfolio-details">
                 <div class="portfolio-details__image">
                     <div class="container">
+                        <div class="blog-two__meta">
+                            {{-- <a href="blog-details.html">Sara dodly</a>
+                            <span>-</span> --}}
+                            <a href="blog-details.html"><h4> Diterbitkan : {{ $b->created_at }} </h4></a>
+                        </div><!-- /.blog-two__meta -->
                         <div class="row">
                                 
                             <div class="col-lg-9">

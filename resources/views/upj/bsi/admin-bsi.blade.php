@@ -37,6 +37,7 @@
                                     <th scope="col">#</th>
                                     <th scope="col">Deskripsi</th>
                                     <th scope="col">Foto BSI</th>
+                                    <th scope="col">Dibuat</th>
                                     <th scope="col">Aksi</th>
                                 </tr>
                             </thead>
@@ -55,7 +56,7 @@
                                         </td>
 
                                         <td>{!! $d->deskripsi_bsi !!}</td>
-
+                                        <td>{{ $d->created_at }}</td>
 
                                         <td>
                                             <a href="/editbsi/{{ $d->id }}" class="btn btn-warning">Edit</a>

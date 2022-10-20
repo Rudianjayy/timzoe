@@ -595,6 +595,11 @@
         })
     </script>
 
+<<<<<<< HEAD
+
+
+    
+=======
     <!-- {{-- js nya ppdb kuambil truh sini --}}
     <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.counterup.min.js') }}"></script>
     <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.lettering.min.js') }}"></script>
@@ -606,6 +611,7 @@
 
 
 
+>>>>>>> bfc57480654c6d2d0b97234b27b6a5f2a35e9f51
 
 
 </body>

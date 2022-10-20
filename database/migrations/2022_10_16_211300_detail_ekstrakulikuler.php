@@ -13,15 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('akademis', function (Blueprint $table) {
+        Schema::create('detailekstrakulikulers', function (Blueprint $table) {
             $table->id();
             $table->string('foto');
-            $table->string('judul_akademi');
-            $table->text('deskripsi_akademi');
-            $table->text('deskripsi_detail');
-            $table->text('alamat');
-            $table->string('email');
-            $table->bigInteger('notelpon');
+            $table->string('nama_ekstrakulikuler');
+            $table->text('deskripsi_ekstrakulikuler');
             $table->timestamps();
         });
     }
@@ -33,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('akademis');
+        //
     }
 };

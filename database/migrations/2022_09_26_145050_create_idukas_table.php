@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('idukas', function (Blueprint $table) {
             $table->id();
             $table->string('judul_iduka');
-            $table->string('deskripsi_iduka');
+            $table->text('deskripsi_iduka');
             $table->timestamps();
         });
     }

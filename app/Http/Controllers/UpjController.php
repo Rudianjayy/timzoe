@@ -1,14 +1,16 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Muhinews;
+use App\Models\Jurusan;
+use App\Models\Personaljurusan;
+use App\Models\footeer;
 use App\Models\Bsi;
 use App\Models\Edotel;
-
-use App\Models\Jurusan;
-use App\Models\Muhinews;
-use App\Models\Printing;
 use App\Models\Pegadaian;
 use App\Models\Suryamart;
+use App\Models\Printing;
+
 use Illuminate\Http\Request;
 
 class UpjController extends Controller
@@ -16,20 +18,20 @@ class UpjController extends Controller
     public function indexupj() {
         $f = Muhinews::paginate(3);
         $kh = Jurusan::all();
-        return view('upj.indexupj', compact('f','kh'));
+        $personal = Personaljurusan::all();
+        $logo = footeer::all();
+        return view('upj.indexupj', compact('f','kh','personal','logo'));
     }
     
 
-
-
-
-
-
-
-
-
-
-
+    
+    
+    
+    
+    
+    
+    
+    
     public function indexbsi(){
         $bsi = Bsi::all();
         $data = Bsi::all();
@@ -417,9 +419,5 @@ class UpjController extends Controller
         $data5->delete();
         return redirect('adminedotel')->with('toast_error',' Data Berhasil di Hapus!');
     }
-
-
-
-
 
 }

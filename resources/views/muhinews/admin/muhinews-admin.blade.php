@@ -69,11 +69,7 @@
                                         <td>{{ $d->deskripsi_muhinews }}</td>
                                         <td>{!! $d->deskripsi_detail !!}</td>
                                         <td>{{ $d->kategori }}
-                                               {{--  @php
-                                                dd($d->kategori);
-                                               @endphp  --}}
-                                        </td>
-                                        <td>{{ $d->created_at }}</td>
+
 
                                         {{-- <td>{{ $d->created_at->format('D M Y') }}</td> --}}
                                         <td>

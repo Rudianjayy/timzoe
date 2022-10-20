@@ -17,8 +17,9 @@ class IdukaController extends Controller
         $fotoiduka = Fotoiduka::all();
         $kh = Jurusan::all();
         $personal = Personaljurusan::all();
+        $ft = footeer::all();
         $logo = footeer::all();
-        return view('iduka.iduka', compact('i','fotoiduka','kh','personal','logo'));
+        return view('iduka.iduka', compact('i','fotoiduka','kh','personal','ft','logo'));
     }
     public function indexadmin() {
         $data = Iduka::all();

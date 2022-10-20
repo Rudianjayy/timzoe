@@ -37,7 +37,7 @@
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6 col-6">
                 <div class="widget widget-menu menu-supports">
-                    <h5 class="title-widget">Admin</h5>
+                    <h5 class="title-widget">Lainnya</h5>
                     <ul>
                         <li><a href="/login">Login Admin </a></li>
                         <li><a href="https://sekolah.data.kemdikbud.go.id/index.php/chome/profil/39108646-470a-4aac-bee3-bc8ea91b8973">Dapodik</a></li>

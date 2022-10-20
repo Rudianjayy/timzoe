@@ -25,6 +25,15 @@
                     <div class="card">
                         <div class="card-body">
 
+<<<<<<< HEAD
+                        {{--  <div>
+                            <a href="/tambahfasilitas" class="btn btn-primary mt-5"
+                                id="kt_account_profile_details_submit">Tambah
+                                +</a>
+                        </div>  --}}
+                        <table id="datatable" class="table table-bordered dt-responsive nowrap"
+                            style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+=======
                             <div>
                                 <a href="/tambahfasilitas" class="btn btn-primary mt-5"
                                     id="kt_account_profile_details_submit">Tambah
@@ -32,6 +41,7 @@
                             </div>
                             <table id="datatable" class="table table-bordered dt-responsive nowrap"
                                 style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+>>>>>>> bfc57480654c6d2d0b97234b27b6a5f2a35e9f51
 
                                 <thead>
                                     <tr>

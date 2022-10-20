@@ -14,36 +14,37 @@
     <meta name="author" content="themesflat.com">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
     <link rel="stylesheet" type="text/css" href="{{ asset('landing/html/bidzend/assets/css/style.css') }}">
 
-    <link rel="stylesheet" type="text/css" href="{{ asset('landing/html/bidzend/assets/css/responsive.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('landing/html/bidzend/assets/css/responsive.css') }}">
 
-    <link rel="shortcut icon" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
-    <link rel="apple-touch-icon-precomposed" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
-    <link rel="apple-touch-icon" sizes="180x180"
-        href="{{ asset('landingppdb/ppdb/style/assets/images/favicons/apple-touch-icon.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32"
-        href="{{ asset('landingppdb/ppdb/style/assets/images/favicons/favicon-32x32.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16"
-        href="{{ asset('landingppdb/ppdb/style/assets/images/favicons/favicon-16x16.png') }}">
-    <link rel="manifest" href="{{ asset('landingppdb/ppdb/style/assets/images/favicons/site.webmanifest') }}">
 
+    <link rel="shortcut icon" href="{{ asset('landing/html/bidzend/assets/icon/muhilog.png') }}">
+    <link rel="apple-touch-icon-precomposed" href="{{ asset('landing/html/bidzend/assets/icon/muhilog.png') }}">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&amp;display=swap">
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/animate.css') }}">
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap-datepicker.min.css') }}">
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap-select.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/fontawesome-all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/hover-min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/swiper.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/jquery.mCustomScrollbar.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/owl.theme.default.min.css') }}">
 
     <!-- Template Styles -->
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/responsive.css') }}">
 </head>
 
 <body class="body header-fixed">
 
     <div class="preload preload-container">
         {{-- <div class="preload-logo"></div>  --}}
-        <div class="preload-logo"><img src="{{ asset('landing/html/bidzend/assets/images/logo/muhi.jpg') }}"
-                alt="Image" style="width:570 !important;"></div>
+        <div class="preload-logo"><img src="{{ asset('landing/html/bidzend/assets/images/logo/muhi.jpg') }}" alt="Image" style="width:570 !important;"></div>
     </div>
 
 
@@ -55,7 +56,7 @@
             <div class="row">
                 <div class="col-md-12">
 
-                   
+
                     <div class="breadcrumbs">
                         <ul>
                             <li><a href="index.html">Kesiswaan</a></li>
@@ -85,32 +86,42 @@
             </div>
         </div>
     </section> -->
-    <div class="tf-section sc-card-blog">
-        <div class="container">
-            <div class="row">
-                @foreach ($b as $b )
-                <div class="col-lg-4 col-md-6">
-                    <article class="sc-card-article">
-                        <div class="card-media">
-                            <img src="{{ asset('fotomahasiswa/' . $b->foto) }}" alt="" style="width: 366px; height:183px;">
-                        </div>
-                        <div class="content">
-                            <div class="meta-info">
-                                <div class="item author">
-                                    <b><strong>{{$b->judul_osis}}</strong></b>
-                                </div>
-                                <div class="item date">{{$b->created_at}}</div>
-                            </div>
-                            <div class="text-article">
-                                <h3>{!!$b ->deskripsi_osis!!}</h5>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                @endforeach
-            </div>
-        </div>
-    </div>
+    <section class="portfolio-details">
+
+        <div class="portfolio-details__image">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9">
+                        <img src="fotomahasiswa/' . $d->foto" alt="">
+                    </div><!-- /.col-lg-9 -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </div><!-- /.portfolio-details__image -->
+        <div class="portfolio-details__main">
+            <div class="container">
+                @foreach ($b as $b)
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="portfolio-details__content">
+                            <h3>{{$b->judul_osis}}</h3>
+
+                            <p>{!!$b->deskripsi_osis!!}</p>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img src="{{ asset('fotomahasiswa/' . $b->foto) }}" alt="">
+                                </div><!-- /.col-md-6 -->
+                            </div><!-- /.row -->
+                            @endforeach
+
+                        </div><!-- /.portfolio-details__content -->
+
+                    </div><!-- /.col-lg-8 -->
+
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </div><!-- /.portfolio-details__main -->
+    </section><!-- /.portfolio-details -->
     </div>
 
     @include('koneksi.footer')

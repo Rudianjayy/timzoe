@@ -21,6 +21,7 @@ use App\Http\Controllers\SambutanController;
 use App\Http\Controllers\FasilitasController;
 use App\Http\Controllers\FotoidukaController;
 use App\Http\Controllers\KesiswaanController;
+use App\Http\Controllers\DetailEkstrakulikulerController;
 use App\Http\Controllers\KurikulumController;
 use App\Http\Controllers\UpjtekajeController;
 use App\Http\Controllers\KompetensiController;
@@ -76,6 +77,7 @@ Route::post('/submitdata2',[SambutanController::class, 'submitdata2'])->name('su
 Route::get('/editsambutan/{id}',[SambutanController::class, 'editsambutan'])->name('editsambutan');
 Route::post('/submitedit2/{id}',[SambutanController::class, 'submitedit2'])->name('submitedit2');
 Route::get('/deletesambutan/{id}',[SambutanController::class, 'delete'])->name('delete');
+
 
 
 
@@ -222,10 +224,6 @@ Route::get('/deletefotokompetensi/{id}',[FotokompetensiController::class, 'delet
 
 
 
-
-
-
-
 //kurikulum
 Route::get('/kurikulum',[KurikulumController::class,'kurikulum'])->name('kurikulum');
 
@@ -258,6 +256,23 @@ Route::post('/ekstrakulikulerproses1',[KesiswaanController::class, 'ekstrakuliku
 Route::get('/editekstrakulikuler/{id}',[KesiswaanController::class, 'editekstrakulikuler'])->name('editekstrakulikuler');
 Route::post('/editproses3/{id}',[KesiswaanController::class,'editproses3'])->name('editproses3');
 Route::get('/delete/{id}',[KesiswaanController::class,'delete'])->name('delete');
+
+
+
+
+Route::get('/detailekstrakulikuler/{id}',[DetailEkstrakulikulerController::class,'detailekstrakulikuler'])->name('detailekstrakulikuler');
+
+Route::get('/admindetailekstrakulikuler',[DetailEkstrakulikulerController::class, 'admindetailekstrakulikuler'])->name('admindetailekstrakulikuler');
+Route::get('/tambahdetailekstrakulikuler',[DetailEkstrakulikulerController::class, 'tambahdetailekstrakulikuler'])->name('tambahdetailekstrakulikuler');
+Route::post('/tambahdetail1',[DetailEkstrakulikulerController::class, 'tambahdetail1'])->name('tambahdetail1');
+Route::get('/editdetailekstrakulikuler/{id}',[DetailEkstrakulikulerController::class, 'editdetailekstrakulikuler'])->name('editdetailekstrakulikuler');
+Route::post('/editdetail1/{id}',[DetailEkstrakulikulerController::class, 'editdetail1'])->name('editdetail1');
+Route::get('/deletedetail/{id}',[DetailEkstrakulikulerController::class, 'deletedetail'])->name('deletedetail');
+
+
+
+
+
 
 
 Route::get('/osis',[KesiswaanController::class,'osis'])->name('osis');

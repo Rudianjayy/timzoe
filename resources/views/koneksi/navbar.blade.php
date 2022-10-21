@@ -48,11 +48,11 @@
                                         <a href="/kompetensi"> Kompetensi Keahlian</a>
                                         <ul class="sub-menu">
                                             @php
-                                                $personal = \App\Models\Personaljurusan::all();
+                                                $jurusan = \App\Models\Jurusan::all();
                                             @endphp
-                                            @foreach ($personal as $p)
+                                            @foreach ($jurusan as $js)
                                                 <li class="menu-item "><a
-                                                        href="/indexjurusan/{{ $p->id }}">{{ $p->nama_jurusan }}</a>
+                                                        href="/indexjurusan/{{ $js->id }}">{{ $js->nama_kompetensi2 }}</a>
                                                 </li>
                                             @endforeach
                                         </ul>

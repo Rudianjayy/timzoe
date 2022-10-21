@@ -11,14 +11,14 @@ use App\Models\Personaljurusan;
 class JurusanController extends Controller
 {
     public function loby3(){
-        $data = Jurusan::with('personal')->get();
+        $data = Jurusan::all();
         $f = Muhinews::all();
         $kh = Jurusan::all();
         return view ('kurikulum.kompetensi.admin-jurusan',compact('data','f','kh'));
     }
     public function indexjurusan($id){
-        $data= Jurusan::where('personaljurusans_id',$id)->firstOrFail();
-        $foto= Jurusan::where('personaljurusans_id',$id)->paginate(4);
+        $data = Jurusan::findOrFail($id);
+        $jurusan = Jurusan::all();
         $f = Muhinews::all();
         // $gambar = DB::table('s's)->where('nama_jurusan',);
         $personal = Personaljurusan::all();
@@ -27,7 +27,7 @@ class JurusanController extends Controller
         $ft = footeer::all();
         $logo = footeer::all();
 
-        return view ('kurikulum.kompetensi.jurusan',compact('data','ft','personal','kh','foto','pj','f','logo'));
+        return view ('kurikulum.kompetensi.jurusan',compact('data','ft','personal','kh','pj','f','logo'));
     }
 
     public function tambahjurusan()
@@ -41,19 +41,22 @@ class JurusanController extends Controller
         // dd($request->all());
         $this->validate($request,[
             'foto' =>'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
-            'personaljurusans_id' =>'required',
-            'deskripsi' =>'required',
+            'nama_kompetensi2' =>'required',
+            'deskripsi_kompetensi2' =>'required',
+            'deskripsi_detail2' =>'required',
         ],[
             'foto.required' =>'Harus diisi',
             'foto.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
-            'personaljurusans_id.required' =>'Harus diisi',
-            'deskripsi.required' =>'Harus diisi',
+            'nama_kompetensi2.required' =>'Harus diisi',
+            'deskripsi_kompetensi2.required' =>'Harus diisi',
+            'deskripsi_detail2.required' =>'Harus diisi',
 
         ]);
         $data = Jurusan::create([
             'foto' =>$request->foto,
-            'personaljurusans_id' =>$request->personaljurusans_id,
-            'deskripsi' =>$request->deskripsi,
+            'nama_kompetensi2' =>$request->nama_kompetensi2,
+            'deskripsi_kompetensi2' =>$request->deskripsi_kompetensi2,
+            'deskripsi_detail2' =>$request->deskripsi_detail2,
         ]);
         if($request->hasFile('foto')){
             $request->file('foto')->move('fotojurusan/', $request->file('foto')->getClientOriginalName());
@@ -74,17 +77,20 @@ class JurusanController extends Controller
     public function submitedit3(Request $request, $id){
         // dd('aaa');
         $this->validate($request,[
-            'personaljurusans_id' =>'required',
-            'deskripsi' =>'required',
+            'nama_kompetensi2' =>'required',
+            'deskripsi_kompetensi2' =>'required',
+            'deskripsi_detail2' =>'required',
         ],[
-            'personaljurusans_id.required' =>'Harus diisi',
-            'deskripsi.required' =>'Harus diisi',
+            'nama_kompetensi2.required' =>'Harus diisi',
+            'deskripsi_kompetensi2.required' =>'Harus diisi',
+            'deskripsi_ddetail2.required' =>'Harus diisi',
 
         ]);
         $data = Jurusan::find($id);
         $data->update([
-            'personaljurusans_id' =>$request->personaljurusans_id,
-            'deskripsi' =>$request->deskripsi,
+            'nama_kompetensi2' =>$request->nama_kompetensi2,
+            'deskripsi_kompetensi2' =>$request->deskripsi_kompetensi2,
+            'deskripsi_detail2' =>$request->deskripsi_detail2,
         ]);
         if($request->hasFile('foto')){
             $request->file('foto')->move('fotomahasiswa/',$request->file('foto')->getClientOriginalName());

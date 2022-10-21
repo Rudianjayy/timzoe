@@ -25,7 +25,7 @@
                     <div class="card-body">
 
                         <div>
-                            <a href="/tambahedotel" class="btn btn-primary mt-5"
+                            <a href="/tambahtentangkami" class="btn btn-primary mt-5"
                                 id="kt_account_profile_details_submit">Tambah
                                 +</a>
                         </div>
@@ -35,9 +35,8 @@
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
+                                    <th scope="col">Foto Tentang Kami</th>
                                     <th scope="col">Deskripsi</th>
-                                    <th scope="col">Foto Edotel</th>
-                                    <th scope="col">Dibuat</th>
                                     <th scope="col">Aksi</th>
                                 </tr>
                             </thead>
@@ -47,23 +46,21 @@
                                 @php
                                     $no = 1;
                                 @endphp
-                                @foreach ($data5 as $d5)
+                                @foreach ($data as $d)
                                     <tr>
                                         <th>{{ $no++ }}</th>
                                         <td>
-                                            <img src="{{ asset('fotomahasiswa/' . $d5->foto_edotel) }}" alt=""
+                                            <img src="{{ asset('fotomahasiswa/' . $d->foto_tentangkami) }}" alt=""
                                                 style="width: 50px;">
                                         </td>
 
-                                        <td>{!! $d5->deskripsi_edotel !!}</td>
-
-                                        <td>{{ $d5->created_at }}</td>
+                                        <td>{!! $d->deskripsi_tentangkami !!}</td>
 
 
                                         <td>
-                                            <a href="/editedotel/{{ $d5->id }}" class="btn btn-warning">Edit</a>
+                                            <a href="/edittentangkami/{{ $d->id }}" class="btn btn-warning">Edit</a>
 
-                                            <a href="/deleteedotel/{{ $d5->id }}" class="btn btn-danger" onclick="return confirm('yakin gen?')">Delete</a>
+                                            <a href="/deletetentangkami/{{ $d->id }}" class="btn btn-danger" onclick="return confirm('yakin gen?')">Delete</a>
 
 
 

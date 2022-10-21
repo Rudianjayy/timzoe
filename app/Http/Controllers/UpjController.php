@@ -22,9 +22,7 @@ class UpjController extends Controller
         $logo = footeer::all();
         return view('upj.indexupj', compact('f','kh','personal','logo'));
     }
-    public function upj() {
-        return view('upj.upj');
-    }
+    
 
     
     

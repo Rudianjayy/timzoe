@@ -128,7 +128,7 @@
                                 @foreach ($kategori as $kategori)
                                 <ul class="list-unstyle d sidebar__category-list">
                                     <li>
-                                        <a href="#">{{$kategori->Kategori}}</a>
+                                        <a href="#">{{$kategori->kategori}}</a>
                                     </li>
                                 </ul><!-- /.list-unstyled sidebar__category-list -->
                                 @endforeach

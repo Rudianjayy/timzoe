@@ -355,7 +355,7 @@ Route::get('/deletemitra/{id}',[MitraController::class, 'deletemitra'])->name('d
 
 //upj
 Route::get('/indexupj',[UpjController::class,'indexupj'])->name('indexupj');
-Route::get('/upj',[UpjController::class,'upj'])->name('upj');
+Route::get('/upj',[UpjtekajeController::class,'upj'])->name('upj');
 Route::get('/adminupj',[UpjController::class,'adminupj'])->name('adminupj');
 Route::get('/tambahupj',[UpjController::class,'tambahupj'])->name('tambahupj');
 Route::post('/upjproses',[UpjController::class,'upjproses'])->name('upjproses');
@@ -440,6 +440,14 @@ Route::post('/submitdata13',[UpjtekajeController::class, 'submitdata13'])->name(
 Route::get('/edittentangkami/{id}',[UpjtekajeController::class, 'edittentangkami'])->name('edittentangkami');
 Route::post('/submitedit13/{id}',[UpjtekajeController::class, 'submitedit13'])->name('submitedit13');
 Route::get('/deletetentangkami/{id}',[UpjtekajeController::class, 'deletetentangkami'])->name('deletetentangkami');
+
+
+Route::get('/adminteam',[UpjtekajeController::class, 'loby15'])->name('adminteam');
+Route::get('/tambahteam',[UpjtekajeController::class, 'tambahteam'])->name('tambahteam');
+Route::post('/submitdata15',[UpjtekajeController::class, 'submitdata15'])->name('submitdata15');
+Route::get('/editteam/{id}',[UpjtekajeController::class, 'editteam'])->name('editteam');
+Route::post('/submitedit15/{id}',[UpjtekajeController::class, 'submitedit15'])->name('submitedit15');
+Route::get('/deleteteam/{id}',[UpjtekajeController::class, 'deleteteam'])->name('deleteteam');
 
 
 

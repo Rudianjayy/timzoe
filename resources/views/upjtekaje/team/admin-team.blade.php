@@ -18,25 +18,28 @@
         {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> --}}
 
         {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" /> --}}
-       
+
         <div class="row">
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
 
                         <div>
-                            <a href="/tambahtentangkami" class="btn btn-primary mt-5"
+                            <a href="/tambahteam" class="btn btn-primary mt-5"
                                 id="kt_account_profile_details_submit">Tambah
                                 +</a>
                         </div>
-                        <table id="datatable" class="table table-bordered dt-responsive nowrap"
-                            style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                        <table id="example" class="table table-bordered dt-responsive nowrap">
 
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">Foto Tentang Kami</th>
-                                    <th scope="col">Deskripsi</th>
+                                    <th scope="col">Foto Team</th>
+                                    <th scope="col">Nama Anggota team</th>
+                                    <th scope="col">Jabatan</th>
+                                    <th scope="col">Link Facebook</th>
+                                    <th scope="col">Link WhatsApp</th>
+                                    <th scope="col">Link Instagram</th>
                                     <th scope="col">Aksi</th>
                                 </tr>
                             </thead>
@@ -46,21 +49,25 @@
                                 @php
                                     $no = 1;
                                 @endphp
-                                @foreach ($data as $d)
+                                @foreach ($data2 as $d2)
                                     <tr>
                                         <th>{{ $no++ }}</th>
                                         <td>
-                                            <img src="{{ asset('fotomahasiswa/' . $d->foto_tentangkami) }}" alt=""
+                                            <img src="{{ asset('fotomahasiswa/' . $d2->foto_team) }}" alt=""
                                                 style="width: 50px;">
                                         </td>
 
-                                        <td>{!! $d->deskripsi_tentangkami !!}</td>
+                                        <td>{{  $d2->nama_team  }}</td>
+                                        <td>{{  $d2->jabatan_team  }}</td>
+                                        <td>{{  $d2->fb  }}</td>
+                                        <td>{{  $d2->wa  }}</td>
+                                        <td>{{  $d2->ig  }}</td>
 
 
                                         <td>
-                                            <a href="/edittentangkami/{{ $d->id }}" class="btn btn-warning">Edit</a>
+                                            <a href="/editteam/{{ $d2->id }}" class="btn btn-warning">Edit</a>
 
-                                            <a href="/deletetentangkami/{{ $d->id }}" class="btn btn-danger" onclick="return confirm('yakin gen?')">Delete</a>
+                                            <a href="/deleteteam/{{ $d2->id }}" class="btn btn-danger" onclick="return confirm('yakin gen?')">Delete</a>
 
 
 
@@ -118,8 +125,10 @@
 
 
         <script>
-            $(document).ready(function() {
-                $('#example').DataTable();
+            $(document).ready(function () {
+                $('#example').DataTable({
+                    scrollX: true,
+                });
             });
         </script>
 

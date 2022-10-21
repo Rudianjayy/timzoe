@@ -129,7 +129,14 @@
             <ul class="sub-menu" aria-expanded="false">
                 <li><a href="/adminupj">UPJ TEKAJE</a></li>
                 <li><a href="/adminupj2">Foto & Jasa UPJ</a></li>
+                <li><a href="/adminteam">Structure Team</a></li>
             </ul>
+        </li>
+        <li>
+            <a href="/adminmitra" class="waves-effect">
+                <i class="mdi mdi-account-details-outline"></i> <span class="badge rounded-pill bg-primary float-end"></span>
+                <span>Mitra</span>
+            </a>
         </li>
 
 

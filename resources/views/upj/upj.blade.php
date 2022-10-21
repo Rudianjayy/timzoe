@@ -118,7 +118,7 @@
 
             <div class="container">
 
-                @foreach ($tentangg as $t )
+                @foreach ($tentang as $t )
 
                 <div class="row">
                     <div class="col-lg-6">
@@ -454,73 +454,30 @@
                     {{-- <h3>Work with The Awesome Team <br> <span>of Our Company</span></h3> --}}
                 </div><!-- /.block-title text-center -->
                 <div class="row high-gutters">
+                    @foreach ( $team as $tm )
                     <div class="col-lg-4 col-md-12 wow fadeInUp" data-wow-duration="1500ms">
                         <div class="team-one__single">
                             <div class="team-one__image">
-                                <img src="{{ asset('landingppdb/ppdb/style/assets/images/team/team-1-1.jpg') }}"
+                                <img src="{{ asset('fotomahasiswa/' . $tm->foto_team) }}"
                                     alt="">
                                 <div class="team-one__social">
                                     <div class="team-one__social-normal">
                                         <a href="#"><i class="fa fa-share-alt"></i></a>
                                     </div><!-- /.team-one__social-normal -->
                                     <div class="team-one__social-hover">
-                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                        <a href="#"><i class="fab fa-twitter"></i></a>
-                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                        <a href="{{ $tm->fb }}"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="{{ $tm->wa }}"><i class="fab fa-whatsapp"></i></a>
+                                        <a href="{{ $tm->ig }}"><i class="fab fa-instagram"></i></a>
                                     </div><!-- /.team-one__social-hover -->
                                 </div><!-- /.team-one__social -->
                             </div><!-- /.team-one__image -->
                             <div class="team-one__content">
-                                <h3>Cate Blanchet</h3>
-                                <p>Web Developer</p>
+                                <h3>{{ $tm->nama_team }}</h3>
+                                <p>{{ $tm->jabatan_team }}</p>
                             </div><!-- /.team-one__content -->
                         </div><!-- /.team-one__single -->
                     </div><!-- /.col-lg-4 col-md-6 -->
-                    <div class="col-lg-4 col-md-12 wow fadeInUp" data-wow-duration="1500ms">
-                        <div class="team-one__single">
-                            <div class="team-one__image">
-                                <img src="{{ asset('landingppdb/ppdb/style/assets/images/team/team-1-2.jpg') }}"
-                                    alt="">
-                                <div class="team-one__social">
-                                    <div class="team-one__social-normal">
-                                        <a href="#"><i class="fa fa-share-alt"></i></a>
-                                    </div><!-- /.team-one__social-normal -->
-                                    <div class="team-one__social-hover">
-                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                        <a href="#"><i class="fab fa-twitter"></i></a>
-                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                    </div><!-- /.team-one__social-hover -->
-                                </div><!-- /.team-one__social -->
-
-                            </div><!-- /.team-one__image -->
-                            <div class="team-one__content">
-                                <h3>Cate Blanchet</h3>
-                                <p>Web Developer</p>
-                            </div><!-- /.team-one__content -->
-                        </div><!-- /.team-one__single -->
-                    </div><!-- /.col-lg-4 col-md-6 -->
-                    <div class="col-lg-4 col-md-12 wow fadeInUp" data-wow-duration="1500ms">
-                        <div class="team-one__single">
-                            <div class="team-one__image">
-                                <img src="{{ asset('landingppdb/ppdb/style/assets/images/team/team-1-3.jpg') }}"
-                                    alt="">
-                                <div class="team-one__social">
-                                    <div class="team-one__social-normal">
-                                        <a href="#"><i class="fa fa-share-alt"></i></a>
-                                    </div><!-- /.team-one__social-normal -->
-                                    <div class="team-one__social-hover">
-                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                        <a href="#"><i class="fab fa-twitter"></i></a>
-                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                    </div><!-- /.team-one__social-hover -->
-                                </div><!-- /.team-one__social -->
-                            </div><!-- /.team-one__image -->
-                            <div class="team-one__content">
-                                <h3>Cate Blanchet</h3>
-                                <p>Web Developer</p>
-                            </div><!-- /.team-one__content -->
-                        </div><!-- /.team-one__single -->
-                    </div><!-- /.col-lg-4 col-md-6 -->
+                    @endforeach
                 </div><!-- /.row -->
             </div><!-- /.container -->
         </section><!-- /.team-one -->

@@ -37,7 +37,7 @@
                                             <a href="/identitas_sekolah">Identitas Sekolah</a></li>
                                         <li class="menu-item {{ Route::is('fasilitassekolah') ? 'current-item' : '' }}">
                                             <a href="/fasilitassekolah">Fasilitas</a></li>
-                                </li>  
+                                </li>
                             </ul>
 
                             <li class="menu-item menu-item-has-children">
@@ -98,6 +98,8 @@
                                                 @endforeach
                                             </ul>
                                         </li>
+                                        {{--  <li class="menu-item {{ Route::is('osis') ? 'current-item' : '' }}"><a
+                                            href="/ekstra">Ekstrakulikuler</a></li>  --}}
                                     <li class="menu-item {{ Route::is('osis') ? 'current-item' : '' }}"><a
                                             href="/osis">IPM/OSIS</a></li>
                                     <li class="menu-item {{ Route::is('alumni') ? 'current-item' : '' }}"><a

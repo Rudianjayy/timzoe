@@ -11,8 +11,10 @@ use App\Models\Prestasi;
 use App\Models\Sambutan;
 use App\Models\Fotoslider;
 use App\Models\footeer;
+use App\Models\footeerdua;
 use Illuminate\Http\Request;
 use App\Models\Personaljurusan;
+
 
 class LandingController extends Controller
 {
@@ -33,7 +35,8 @@ class LandingController extends Controller
         $ft = footeer::all();
         $akademi = Akademi::all();
         $logo = footeer::all();
-        return view('landingpage.landing', compact('data','d','f','ss','fs','ft','sa','js','personal','kh','ps','akademi','logo'));
+        $link = footeerdua::all();
+        return view('landingpage.landing', compact('data','d','f','ss','fs','ft','sa','js','personal','kh','ps','akademi','logo','link'));
 
 
     }

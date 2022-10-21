@@ -9,7 +9,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhinews Detail</title>
+    <title>Ekstrakulikuler Detail</title>
     <!-- favicons -->
     <link rel="stylesheet" type="text/css" href="{{ asset('landing/html/bidzend/assets/css/style.css') }}">
 
@@ -53,7 +53,7 @@
                         <div class="breadcrumbs">
                             <ul>
                                 <li><a href="index.html">Beranda</a></li>
-                                <li>Blog Detail </li>
+                                <li>EKstrakulikuler Detail </li>
                             </ul>
                         </div>
                     </div>

@@ -42,7 +42,6 @@
         <div class="preload-logo"><img src="{{ asset('landing/html/bidzend/assets/images/logo/muhi.jpg') }}" alt="Image" style="width:570 !important;"></div>
     </div>
 
-
     @include('koneksi.navbar')
 
     <section class="fl-page-title">
@@ -50,7 +49,6 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-
 
                     <div class="breadcrumbs">
                         <ul>
@@ -110,9 +108,7 @@
     </div>
 
 
-
     @include('koneksi.footer')
-
 
     <a id="scroll-top"></a>
 
@@ -163,3 +159,5 @@
 <!-- Mirrored from themesflat.com/html/bidzend/item-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Sep 2022 01:13:11 GMT -->
 
 </html>
+
+

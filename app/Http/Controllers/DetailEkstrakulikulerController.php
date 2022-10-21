@@ -12,8 +12,10 @@ use App\Models\Personaljurusan;
 class DetailEkstrakulikulerController extends Controller
 {
     public function detailekstrakulikuler($id) {
-        $data= Detailekstrakulikuler::where('ekstrakulikulers_id',$id)->firstOrFail();
-        $foto= Detailekstrakulikuler::where('ekstrakulikulers_id',$id)->get();
+        // $data= Detailekstrakulikuler::where('ekstrakulikulers_id',$id)->firstOrFail();
+        // $foto= Detailekstrakulikuler::where('ekstrakulikulers_id',$id)->get();
+        $data= Detailekstrakulikuler::all();
+        $foto= Detailekstrakulikuler::all();
         $personal = Personaljurusan::all();
         // $akademi = akademi::all();
         $ft = footeer::all();
@@ -93,4 +95,22 @@ class DetailEkstrakulikulerController extends Controller
         $data->delete();
         return redirect('admindetailekstrakulikuler')->with('toast_error',' Data Berhasil di Hapus!');
     }
+
+
+
+
+
+
+
+
+
+
+//Ekstrablog//
+
+
+
+
+
+
+
 }

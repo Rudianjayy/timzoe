@@ -6,7 +6,7 @@ use App\Models\Jurusan;
 use App\Models\Mikrotik;
 use App\Models\Muhinews;
 use App\Models\footeer;
-
+use App\Models\footeerdua;
 use Illuminate\Http\Request;
 use App\Models\ekstrakulikuler;
 use App\Models\alumni;
@@ -15,8 +15,8 @@ use App\Models\Personaljurusan;
 class KesiswaanController extends Controller
 {
     public function ekstra(){
-        $f = Muhinews::all();
-        $d = Muhinews::paginate(6);
+        $f =ekstrakulikuler::all();
+        $d =ekstrakulikuler::paginate(6);
         $ft = Footeer::all();
         $data = ekstrakulikuler::all();
         $personal = personaljurusan::all();
@@ -101,6 +101,9 @@ class KesiswaanController extends Controller
 
 
 
+    //ekstrakulikulerblog 
+
+
 
 
 
@@ -111,7 +114,8 @@ class KesiswaanController extends Controller
         $ft = Footeer::all();
         $personal =Personaljurusan::all();
         $logo = footeer::all();
-        return view('kesiswaan.osis.osis',compact('b','f','ft','personal','logo'));
+        $link = footeerdua::all();
+        return view('kesiswaan.osis.osis',compact('b','f','ft','personal','logo','link'));
     }
     public function osisadmin() {
         $data = osis::all();

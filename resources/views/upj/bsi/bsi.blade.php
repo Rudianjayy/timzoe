@@ -9,7 +9,7 @@
 <head>
 
     <meta charset="utf-8">
-    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+    <!--[if IE]><meta http-equiv='X-UA-Compatiblpe' content='IE=edge,chrome=1'><![endif]-->
     <title>SMK Muhammadiyah 1 Genteng</title>
     <meta name="author" content="themesflat.com">
 
@@ -81,7 +81,7 @@
                             <a href="blog-details.html"><h4> Diterbitkan : {{ $b->created_at }} </h4></a>
                         </div><!-- /.blog-two__meta -->
                         <div class="row">
-                                
+
                             <div class="col-lg-9">
                                 <img src="{{ asset('fotomahasiswa/' . $b->foto) }}" alt=""  >
                             </div><!-- /.col-lg-9 -->
@@ -93,26 +93,26 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-8">
-                                    
+
                                 <div class="portfolio-details__content">
                                     <p>{!! $b->deskripsi_bsi !!}</p>
-                                    
+
                                 </div><!-- /.portfolio-details__content -->
-                               
+
                             </div><!-- /.col-lg-8 -->
-                            
+
                         </div><!-- /.row -->
                     </div><!-- /.container -->
                 </div><!-- /.portfolio-details__main -->
             </section><!-- /.portfolio-details -->
-    
+
             @endforeach
            <br><br><br>
 
-           
+
 
            @include('koneksi.mitra')
-           
+
 
             @include('koneksi.footer')
         </div>

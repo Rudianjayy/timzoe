@@ -409,9 +409,7 @@
                             @foreach ($ps as $ps)
                             <div class="swiper-slide wow fadeInUp wow fadeInUp">
                                 <div class="slider-item">
-
-
-                                    <div class="sc-product-item" style="">
+                                    <div class="sc-prostaduct-item">
                                         <div class="product-img active">
                                             <img src="{{ asset('fotomahasiswa/' . $ps->foto) }}" alt="Image" style="width: 300px; height:220px;">
                                         </div>
@@ -595,23 +593,9 @@
         })
     </script>
 
-<<<<<<< HEAD
-
-
-    
-=======
-    <!-- {{-- js nya ppdb kuambil truh sini --}}
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.counterup.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.lettering.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.magnific-popup.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.mCustomScrollbar.concat.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/owl.carousel.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/TweenMax.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/theme.js') }}"></script> -->
 
 
 
->>>>>>> bfc57480654c6d2d0b97234b27b6a5f2a35e9f51
 
 
 </body>

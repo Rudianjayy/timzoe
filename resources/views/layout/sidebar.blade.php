@@ -67,7 +67,7 @@
             </a>
             <ul class="sub-menu" aria-expanded="false">
                 <li><a href="/ekstrakulikuleradmin">Ekstrakulikuler</a></li>
-                <li><a href="/admindetailekstrakulikuler">Detail Ekstrakulikuler</a></li>
+                {{--  <li><a href="/admindetailekstrakulikuler">Detail Ekstrakulikuler</a></li>  --}}
             </ul>
         </li>
         <li>
@@ -168,11 +168,16 @@
         @endif
 
         <li>
-            <a href="/footeeradmin" class="waves-effect">
-                <i class="mdi mdi-account-details-outline"></i> <span class="badge rounded-pill bg-primary float-end"></span>
+            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                <i class="ti-package"></i>
                 <span>Footer</span>
             </a>
+            <ul class="sub-menu" aria-expanded="false">
+                <li><a href="/footeeradmin">Footer</a></li>
+                <li><a href="/adminfooteerdua">Footerdua</a></li>
+            </ul>
         </li>
+        <li>
         <li>
             <a href="/logout" class="waves-effect">
                 <i class="mdi mdi-chevron-left"></i> <span class="badge rounded-pill bg-primary float-end"></span>

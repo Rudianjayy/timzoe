@@ -45,9 +45,36 @@
                                     <label for="exampleInputEmail1" class="form-label">Nama Akademi :</label>
                                     <textarea class="form-control form-control-solid" name="judul_akademi"></textarea>
                                     @error('judul_akademi')
-                                      <div class="alert alert-danger">{{ $message }}</div>
+                                        <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
-                                  </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Alamat :</label>
+                                    <input type="text" name="alamat" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp">
+                                    @error('alamat')
+                                        <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Email :</label>
+                                    <input type="email" name="email" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp">
+                                    @error('email')
+                                        <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">No Telpon :</label>
+                                    <input type="number" name="notelpon" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp">
+                                    @error('notelpon')
+                                        <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
 
                                 {{--  <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label">Deskripsi :</label>
@@ -67,6 +94,23 @@
                                                     <div class="card-body">
                                                         {{--  <form method="POST" enctype="multipart/form-data">  --}}
                                                         <textarea name="deskripsi_akademi" id="mytextarea"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section style="padding-top:60px;">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        Deskripsi Detail
+                                                    </div>
+                                                    <div class="card-body">
+                                                        {{--  <form method="POST" enctype="multipart/form-data">  --}}
+                                                        <textarea name="deskripsi_detail" id="mytextarea"></textarea>
                                                     </div>
                                                 </div>
                                             </div>

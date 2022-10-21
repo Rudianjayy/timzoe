@@ -117,31 +117,33 @@
                 class="about-three-home-two__bg-image-1" alt=""> --}}
 
             <div class="container">
+
+                @foreach ($tentangg as $t )
+
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="about-three__home-two__images">
-                            <img src="{{ asset('landing/html/bidzend/assets/images/background/UPJ.png') }} "
+                            <img src="{{ asset('fotomahasiswa/' . $t->foto_tentangkami) }} "
                                 class="float-bob-y" alt="" style="width: 400px; margin-left: 40%;">
                         </div><!-- /.about-three__home-two__images -->
                     </div><!-- /.col-lg-6 -->
                     <div class="col-lg-6">
-                        <div class="about-three__content">
-                            <div class="block-title text-left">
-                                <h3>Tentang Kami</h3><span>Selamat datang di website resmi UPJ TEKAJE</span>
 
-                            </div><!-- /.block-title text-center -->
-                            <p>UPJ TEKAJE (Unit Produksi dan Jasa Teknik Komputer dan Jaringan) adalah Unit produksi
-                                milik SMK Muhammadiyah 1 Genteng yang merupakan salah satu Produk unggulan dibidang
-                                Teknologi yang dapat bersaing dengan usaha sejenis dikelasnya. Unit produksi juga
-                                merupakan salah satu sumber atau sarana belajar yang tepat bagi siswa terutama pada
-                                aspek keterampilan untuk menghasilkan produk maupun jasa. Unit Produksi dan Jasa Teknik
-                                Komputer dan Jaringan disiapkan oleh guru dan dikelola bersama siswa untuk mengembangkan
-                                semua unsur yang relevan, sehingga orang luas tertarik untuk menjalin kerjasama.</p>
+                        <div class="about-three__content" style="color: black;">
+                            {{-- <div class="block-title text-left">
+                                <h3></h3>
+                                <span>Selamat datang di website resmi UPJ TEKAJE</span>
+
+                            </div><!-- /.block-title text-center --> --}}
+                            <p>{!! $t->deskripsi_tentangkami !!}</p>
 
                         </div><!-- /.about-three__content -->
+
                     </div><!-- /.col-lg-6 -->
                 </div><!-- /.row -->
-            </div><!-- /.container -->
+                @endforeach
+
+            </div>
         </section><!-- /.about-three -->
 
         <section class="about-one" id='keunggulan'>
@@ -441,7 +443,7 @@
             </div><!-- /.container -->
         </section><!-- /.video-one -->
 
-        
+
 
         <section class="team-one team-one__about-1 team-one__home-two" id='team'>
             <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/team-bg-shape-1-1.png') }}"

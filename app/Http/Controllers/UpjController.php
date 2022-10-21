@@ -95,6 +95,11 @@ class UpjController extends Controller
             'judul2' => $request->judul2,
             'judul3' => $request->judul3,
         ]);
+        if ($request->hasFile('foto_upj')) {
+            $request->file('foto_upj')->move('fotomahasiswa/', $request->file('foto_upj')->getClientOriginalName());
+            $data->foto_upj = $request->file('foto_upj')->getClientOriginalName();
+            $data->save();
+        }
 
         return redirect('adminupj')->with('toast_success', ' Data Berhasil di Ubah!');
     }

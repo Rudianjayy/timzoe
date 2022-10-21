@@ -65,7 +65,7 @@
                                 <ul>
                                     <li><a href="/">Beranda</a></li>
                                     <li><a href="/indexakademi">Akademi</a></li>
-                                    <li>Detail Akademi</li>
+                                    <li>{{ $dekad->judul_akademi}}</li>
                                 </ul>
                             </div>
                         </div>
@@ -80,65 +80,80 @@
                         <div class="col-lg-4">
                             <div class="sidebar sidebar__left">
 
-                                {{-- <div class="sidebar__single sidebar__category">
+                                <div class="sidebar__single sidebar__category">
                                     <ul class="list-unstyled sidebar__category-list">
+                                        @php
+                                            $akademi = \App\Models\Akademi::all();
+                                        @endphp
+                                        @foreach ($akademi as $ami )    
                                         <li>
-                                            <a href="service-d-social.html">Social Marketing</a>
+                                            <a href="/detailakademi/{{ $ami->id }}">{{ $ami->judul_akademi }}</a>
                                         </li>
-                                        <li>
-                                            <a href="service-d-content.html">Content Marketing</a>
-                                        </li>
-                                        <li>
-                                            <a href="service-d-seo.html">SEO Optimization</a>
-                                        </li>
-                                        <li class="active">
-                                            <a href="service-d-ppc.html">PPC Advertising</a>
-                                        </li>
-                                        <li>
-                                            <a href="service-d-smm.html">SMM Marketing</a>
-                                        </li>
+                                        @endforeach
                                     </ul><!-- /.list-unstyled sidebar__category-list -->
-                                </div><!-- /.sidebar__single --> --}}
+                                </div><!-- /.sidebar__single -->
                                 <div class="sidebar__single sidebar__contact">
-                                    <h3 class="sidebar__title">Contact</h3>
+                                    <h3 class="sidebar__title">Kontak</h3>
                                     <ul class="list-unstyled sidebar__contact-list">
                                         <li>
                                             <i class="fa fa-map-marker-alt"></i>
-                                            Royal Orville Road Apt. 728 <br> California, USA
+                                            <span>{{$dekad->alamat}}</span>
                                         </li>
                                         <li>
                                             <i class="fa fa-envelope"></i>
-                                            <a href="mailto:Inovexcompany@gmail.com">Inovexcompany@gmail.com</a>
+                                            <a >{{ $dekad->email }}</a>
                                         </li>
                                         <li>
                                             <i class="fa fa-phone"></i>
-                                            <a href="tel:+88-0-1764867977">+88 (0)1764867977</a>
+                                            <a >0{{ $dekad->notelpon }}</a>
                                         </li>
                                     </ul><!-- /.list-unstyled sidebar__category-list -->
                                 </div><!-- /.sidebar__single -->
-                                {{-- <div class="sidebar__single sidebar__brouchers">
-                                    <h3 class="sidebar__title">Foto</h3>
+                                <div class="sidebar__single sidebar__brouchers">
+                                    <h3 class="sidebar__title">Lainnya</h3>
                                     <ul class="list-unstyled sidebar__category-list">
                                         <li>
-                                            <a href="#">Download Now <i class="far fa-download"></i></a>
+                                            <a href="/ekstra">Ekstra Kurikuler</a>
                                         </li>
                                         <li>
-                                            <a href="#">Characteristics <i class="far fa-file-pdf"></i></a>
+                                            <a href="/osis">IPM/OSIS</a>
+                                        </li>
+                                        <li>
+                                            <a href="/alumni">Alumni</a>
                                         </li>
                                     </ul><!-- /.list-unstyled sidebar__category-list -->
-                                </div><!-- /.sidebar__single --> --}}
+                                </div><!-- /.sidebar__single -->
+                                <div class="sidebar__single sidebar__brouchers">
+                                    <h3 class="sidebar__title">Berita</h3>
+                                    @php
+                                    $muhiberita = \App\Models\Muhinews::paginate(3);
+                                    @endphp
+                                    <ul class="list-unstyled sidebar__category-list">
+                                        @foreach ($muhiberita as $mb )
+                                        <div class="sidebar__post-single">
+                                            <div class="sidebar__post-image">
+                                                <img src="{{ asset('fotomahasiswa/' . $mb->foto) }}" alt="">
+                                            </div><!-- /.sidebar__post-image -->
+                                            <div class="sidebar__post-content">
+                                                <h3><a href="/muhiblog/{{ $mb->id }}">{{ $mb->deskripsi_muhinews }}</a></h3>
+                                                <span>{{ $mb->created_at }}</span>
+                                            </div><!-- /.sidebar__post-content -->
+                                        </div><!-- /.sidebar__post-single -->
+                                        @endforeach
+                                    </ul><!-- /.list-unstyled sidebar__category-list -->
+                                </div><!-- /.sidebar__single -->
 
                             </div><!-- /.sidebar -->
                         </div><!-- /.col-lg-4 -->
                         <div class="col-lg-8">
                             <div class="service-details__main">
                                 <div class="service-details__image">
-                                    <img src="{{ asset('fotomahasiswa/'.$data->foto) }}" alt="" style="width: 500px">
+                                    <img src="{{ asset('fotomahasiswa/'.$dekad->foto) }}" alt="" style="width: 500px">
                                 </div><!-- /.service-details__image -->
                                 <div class="service-details__content">
-                                    <h3>{{ $data->akademi->judul_akademi}}</h3>
+                                    <h3>{{ $dekad->judul_akademi}}</h3>
                                     <p>
-                                        {!! $data->deskripsi_detail!!}
+                                        {!! $dekad->deskripsi_akademi!!}
                                     </p>
 
                                     {{-- <ul class="service-details__list list-unstyled">
@@ -167,6 +182,7 @@
                 </div><!-- /.container -->
             </section><!-- /.blog-standard -->
 
+            @include('koneksi.mitra')
 
             @include('koneksi.footer')
         </div>

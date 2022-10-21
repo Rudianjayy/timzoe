@@ -37,7 +37,11 @@
                                     <th scope="col">#</th>
                                     <th scope="col">Foto</th>
                                     <th scope="col">Nama Akademi</th>
+                                    <th scope="col">Alamat</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">No Telpon</th>
                                     <th scope="col">Deskripsi</th>
+                                    <th scope="col">Deskripsi Detail</th>
                                     <th scope="col">Aksi</th>
                                 </tr>
                             </thead>
@@ -55,7 +59,11 @@
                                                 style="width: 50px;">
                                         </td>   
                                         <td>{{ $row->judul_akademi }}</td>
+                                        <td>{{ $row->alamat }}</td>
+                                        <td>{{ $row->email }}</td>
+                                        <td>0{{ $row->notelpon }}</td>
                                         <td>{!! $row->deskripsi_akademi !!}</td>
+                                        <td>{!! $row->deskripsi_detail !!}</td>
 
                                         {{-- <td>{{ $row->created_at->format('D M Y') }}</td> --}}
                                         <td>

@@ -36,18 +36,11 @@
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Judul Fasilitas :</label>
-                                    <select name="fasilitas_id" class="form-control" id="fasilitas_id">
-                                        <option value=""></option>
-                                        @foreach ($judul as $j)
-                                            <option value="{{ $j->id }}">{{ $j->judulfasilitas }}</option>
-                                        @endforeach
-                                    </select>
-                                    <div class="text-danger">
-                                        @error('fasilitas_id')
-                                            {{ $message }}
-                                        @enderror
-                                    </div>
-                                </div>
+                                    <input type="text" name="judul_fasilitas" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                    @error('judul_fasilitas')
+                                      <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
+                                  </div>
                                 <section style="padding-top:60px;">
                                     <div class="container">
                                         <div class="row">

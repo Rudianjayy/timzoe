@@ -12,7 +12,7 @@ class fasilitassekolah extends Model
     use HasFactory;
 
     protected $guarded = [];
-    protected $fillable = ['foto_sampul','foto', 'fasilitas_id', 'deskripsi'];
+    protected $fillable = ['foto_sampul','foto', 'judul_fasilitas', 'deskripsi'];
 
 
     public function getCreatedAtAttribute()
@@ -21,13 +21,4 @@ class fasilitassekolah extends Model
             ->translatedFormat(' d F Y');
     }
 
-    public function judulfasilitas()
-    {
-        return $this->belongsTo(fasilitas::class, 'fasilitas_id','id');
-    }
-
-
-    public function foto(){
-        return $this->hasMany(fasilitassekolah::class);
-    }
 }

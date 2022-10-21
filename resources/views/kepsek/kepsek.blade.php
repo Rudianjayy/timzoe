@@ -72,7 +72,7 @@
                                         <td>
                                             <a href="/editsambutan/{{ $d->id }}" class="btn btn-warning">Edit</a>
 
-                                            <a href="/deletesambutan/{{ $d->id }}" class="btn btn-danger" onclick="return confirm('yakin mau hapus?')">Delete</a>
+                                            {{--  <a href="/deletesambutan/{{ $d->id }}" class="btn btn-danger" onclick="return confirm('yakin mau hapus?')">Delete</a>  --}}
 
 
 

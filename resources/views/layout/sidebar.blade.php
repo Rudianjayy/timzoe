@@ -31,8 +31,6 @@
                 <li><a href="/visimisiadmin">Visi & Misi</a></li>
                 <li><a href="/identitas_admin">Identitas Sekolah</a></li>
                 <li><a href="/fasilitasadmin">Fasilitas Sekolah </a></li>
-                <li><a href="/judulfasilitas">Judul Fasilitas</a></li>
-                {{--  <li><a href="/fotofasilitas">Foto Fasilitas</a></li>  --}}
             </ul>
         </li>
 
@@ -42,8 +40,9 @@
                 <span>Kurikulum</span>
             </a>
             <ul class="sub-menu" aria-expanded="false">
-                <li><a href="/kompetensiadmin">Kompetensi Keahlian</a></li>
-                <li><a href="/fotokompetensiadmin">Foto Kompetensi</a></li>
+                <li><a href="/datajurusan">Kompetensi Keahlian</a></li>
+                {{-- <li><a href="/kompetensiadmin">Kompetensi Keahlian</a></li>
+                <li><a href="/fotokompetensiadmin">Foto Kompetensi</a></li> --}}
                 <li><a href="/jadwaladmin">Jadwal Kegiatan</a></li>
                 <li><a href="/kalenderakademikadmin">Kalender Akademik</a></li>
                 <li><a href="/kelulusanadmin">Kelulusan</a></li>
@@ -168,26 +167,26 @@
 
 
 
-        <li>
-            <a href="javascript: void(0);" class="has-arrow waves-effect">
-                <i class="ti-package"></i>
-                <span>Jurusan</span>
+        {{-- <li>
+            <a href="/datajurusan" class="waves-effect">
+                <i class="mdi mdi-account-details-outline"></i> <span class="badge rounded-pill bg-primary float-end"></span>
+                <span>Kompetensi Keahlian</span>
             </a>
             <ul class="sub-menu" aria-expanded="false">
-                <li><a href="/datajurusan">Data Jurusan</a></li>
+                <li><a href="/datajurusan">Kompetensi Keahlian</a></li>
                 <li><a href="/adminfotojurusan">Masing jurusan</a></li>
             </ul>
-        </li>
+        </li> --}}
 
         <li>
-            <a href="javascript: void(0);" class="has-arrow waves-effect">
-                <i class="ti-package"></i>
+            <a href="/dataakademi" class="waves-effect">
+                <i class="mdi mdi-account-details-outline"></i> <span class="badge rounded-pill bg-primary float-end"></span>
                 <span>Akademi</span>
             </a>
-            <ul class="sub-menu" aria-expanded="false">
+            {{-- <ul class="sub-menu" aria-expanded="false">
                 <li><a href="/dataakademi">Akademi</a></li>
                 <li><a href="/admindetailakademi">Detail Akademi</a></li>
-            </ul>
+            </ul> --}}
         </li>
 
 

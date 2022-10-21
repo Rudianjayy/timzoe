@@ -17,7 +17,11 @@ return new class extends Migration
             $table->id();
             $table->string('foto');
             $table->string('judul_akademi');
-            $table->string('deskripsi_akademi');
+            $table->text('deskripsi_akademi');
+            $table->text('deskripsi_detail');
+            $table->text('alamat');
+            $table->string('email');
+            $table->bigInteger('notelpon');
             $table->timestamps();
         });
     }

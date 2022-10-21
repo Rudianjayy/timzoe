@@ -3408,6 +3408,7 @@ a:focus {
 	color: var(--thm-black);
 	font-weight: 600;
 	margin-bottom: 25px;
+	
 }
 
 .blog-details__main p {
@@ -3420,7 +3421,7 @@ a:focus {
 
 .blog-details__main img {
 	border-radius: 10px;
-	margin-top: 50px;
+	/* margin-top: 50px; */
 	margin-bottom: 50px;
 }
 
@@ -3544,6 +3545,8 @@ a:focus {
 .blog-details__social a i {
 	position: relative;
 }
+
+
 
 .blog-details__meta {
 	margin-bottom: 50px;
@@ -3909,8 +3912,8 @@ a:focus {
 	border: 1px solid #e5e5e5;
 	line-height: 60px;
 	border-radius: 30px;
-	padding-left: 30px;
-	font-size: 18px;
+	padding-left: 10px;
+	font-size: 16px;
 	font-weight: 600;
 	color: var(--thm-black);
 	font-family: var(--heading-font);

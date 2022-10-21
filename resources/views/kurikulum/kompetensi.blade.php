@@ -129,22 +129,20 @@
                         <div class="col-md-12">
 
                             <div class="sc-heading">
-                                <h1>Kompetensi</h1>
+                                <h1>Kompetensi Keahlian</h1>
                                 {{-- <p class="desc">{!! $kp->deskripsi_kompetensi !!} </p> --}}
                             </div>
 
                         </div>
                         <br><br><br>
-                        @foreach ($pj as $khj)
+                        @foreach ($kh as $khj)
                             <div class="col-lg-4 col-md-4">
                                 <div class="sc-wallet">
                                     <div class="icon">
-                                        @php
-                                            $foto = App\Models\Jurusan::where('personaljurusans_id', $khj->id)->first();
-                                        @endphp
+                                        
                                         <a href="/indexjurusan/{{ $khj->id }}">
                                             @if ($foto != null)
-                                                <img src="{{ asset('fotojurusan/' . $foto->foto) }}" class="img-fluid"
+                                                <img src="{{ asset('fotojurusan/' . $khj->foto) }}" class="img-fluid"
                                                     alt="" style="border-radius: 50%">
                                             @else
                                                 <img src="{{ asset('fotomahasiswa/ppkosong.webp') }}" class="img-fluid"
@@ -153,10 +151,10 @@
                                         </a>
                                     </div>
                                     <div class="content">
-                                        <h4><a href="/indexjurusan/{{ $khj->id }}"> {{ $khj->nama_jurusan }}</a>
+                                        <h4><a href="/indexjurusan/{{ $khj->id }}"> {{ $khj->nama_kompetensi2 }}</a>
                                         </h4>
 
-                                        <p>{!! $khj->deskripseh !!}</p>
+                                        <p>{!! $khj->deskripsi_kompetensi2 !!}</p>
 
                                     </div>
                                 </div>

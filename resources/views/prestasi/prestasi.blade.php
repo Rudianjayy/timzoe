@@ -53,7 +53,7 @@
                                             <img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt=""
                                                 style="width: 50px;">
                                         </td>
-                                        <td>{{ $d->judul_prestasi }}</td>
+                                        <td>{!! $d->judul_prestasi !!}</td>
                                         <td>{!! $d->deskripsi_prestasi !!}</td>
 
                                         <td>

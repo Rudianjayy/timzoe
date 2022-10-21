@@ -76,41 +76,28 @@
         <img src="assets/images/shapes/bg-shape-1-1.png" class="error-404__bg-shape-1" alt="">
         <img src="assets/images/shapes/bg-shape-1-2.png" class="error-404__bg-shape-2" alt="">
         <img src="assets/images/shapes/bg-shape-1-3.png" class="error-404__bg-shape-3" alt="">
-
+        @foreach ($sa as $sa )
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="about-one__content">
-                        <div class="block-title text-left">
+                        <!-- <div class="block-title text-left">
                             <h3>Sambutan Kepala Sekolah</h3>
-                        </div><!-- /.block-title text-center -->
-                        <p>“Prakata KEPALA SMK MUHAMMADIYAH 1 GENTENG”
-
-                            ASSALAMUALAIKUM WARAHMATULLAHI WABARAKATUH
-
-
-
-                            Puji syukur kita panjatkan kepada Allah Subhanahu Wa Ta’ala yang telah memberikan Rahmat dan Anugrah-Nya sehingga website SMK Muhammadiyah 1 Genteng ini dapat terbit. Salah satu tujuan dari website ini adalah untuk menjawab akan setiap kebutuhan informasi dengan memanfaatkan sarana teknologi informasi yang ada. Kami sadar sepenuhnya dalam rangka memajukan pendidikan di era berkembangnya teknologi informasi yang begitu pesat sangat diperlukan berbagai sarana prasarana yang kondusif kebutuhan berbagai informasi siswa, orang tua, maupun masyarakat sehingga kami berusaha mewujudkan hal tersebut semaksimal mungkin. Semoga dengan adanya website ini dapat membantu dan bermanfaat terutama informasi yang berhubungan dengan pendidikan, ilmu pengetahuan dan informasi seputar SMK Muhammadiyah 1 Genteng besar harapan kami sarana ini dapat memberi manfaat bagi semua pihak yang ada di lingkup pendidikan dan pemerhati pendidikan secara khusus bagi SMK Muhammadiyah 1 Genteng. Akhirnya kami mengharapkan masukan dari berbagai pihak untuk sendiri agar kami terus belajar dan update sehingga tampilan isi dan mutu website akan terus berkembang dan lebih baik terima kasih atas kerjasamanya maju terus untuk SMK Muhammadiyah 1 Genteng yang lebih baik lagi.
-
-                            WASSALAMUALAIKUM WARAHMATULLAHI WABARAKTU
-
-                            Hormat kami,
-
-                            Kepala SMK Muhammadiyah 1 Genteng
-
-                            Taslim, S.Ag, M.Pd</p>
+                        </div> -->
+                        <p>{!! $sa->deskripsi !!}</p>
 
                     </div><!-- /.about-one__content -->
                 </div><!-- /.col-lg-6 -->
                 <div class="col-lg-6">
                     <div class="my-auto">
                         <div class="about-one__image wow slideInDown" data-wow-duration="1500ms">
-                            <img src="{{asset('landing/html/bidzend/assets/images/avatar/kepsekremove.png')}}" alt="" style="width: 500px; height:700px;">
+                            <img src="{{ asset('fotomahasiswa/' . $sa->foto) }}" alt="" style="width: 500px; height:700px;">
                         </div><!-- /.about-one__image -->
                     </div><!-- /.my-auto -->
                 </div><!-- /.col-lg-6 -->
             </div><!-- /.row -->
         </div><!-- /.container -->
+        @endforeach
     </section><!-- /.about-one -->
     <section class="tf-category tf-section">
         <div class="category-inner">
@@ -129,24 +116,25 @@
                     </div>
                 </div>
                 @php
-                $personal = \App\Models\Personaljurusan::all();
+                $jurusan = \App\Models\Jurusan::all();
                 @endphp
-                @foreach ($personal as $p)
+                @foreach ($jurusan as $js)
                 <div class="col-lg-4 col-md-6 col-12">
                     <div class="sc-category wow fadeInUp pl-19" data-wow-delay="400ms" data-wow-duration="1000ms">
                         <div class="card-media">
-                            <img src="{{ asset('fotojurusan/' . $p->foto) }}" alt="">
+                            <img src="{{ asset('fotojurusan/' . $js->foto) }}" alt="">
                         </div>
                         <div class="card-content">
-                            <h5><a href="/indexjurusan/{{ $p->id }}" style="font-size: 18px; color:black;"> {{ $p->nama_jurusan }}</a>
+                            <h5><a href="/indexjurusan/{{ $js->id }}" style="font-size: 18px; color:black;"> {{ $js->nama_kompetensi2 }}</a>
                             </h5>
-                            <p>{!! $p->deskripseh !!}</p>
+                            <p>{!! $js->deskripsi_kompetensi2 !!}</p>
                         </div>
                     </div>
                 </div>
                 @endforeach
-
             </div>
+
+        </div>
         </div>
     </section>
 
@@ -177,7 +165,7 @@
                                     <div class="card-media">
 
                                         <a href="/muhiblog/{{ $d->id }}" style="font-size: 18px; color:black;">
-                                            <img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt="" style="width: 344px; height:183px;">
+                                            <center> <img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt="" style="width: 344px; height:183px;"></center>
                                         </a>
                                     </div>
                                     <div class="blog-one__content">
@@ -210,7 +198,7 @@
                         <div class="service-three__icon">
                             <img src="{{ asset('fotomahasiswa/' . $ps->foto) }}" alt="">
                         </div><!-- /.service-three__icon -->
-                        <h3><a href="service-d-seo.html">{{$ps->judul_prestasi}}</a></h3>
+                        <h3><a href="service-d-seo.html">{!!$ps->judul_prestasi!!}</a></h3>
                         <p>{!! $ps->deskripsi_prestasi !!}</p>
                     </div><!-- /.service-three__single -->
                 </div><!-- /.col-lg-4 -->

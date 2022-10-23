@@ -14,13 +14,25 @@
 
 
     <div class="breadcrumbs">
+
+        {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> --}}
+
+        {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" /> --}}
+        <div class="col-md-8">
+            <h6 class="page-title">Data tables</h6>
+            <ol class="breadcrumb m-0">
+                <li class="breadcrumb-item"><a href="#">Veltrix</a></li>
+                <li class="breadcrumb-item"><a href="#">Tables</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Data tables</li>
+            </ol>
+        </div>
         <div class="row">
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
 
                         <div>
-                            <a href="/tambahmuhinews" class="btn btn-primary mt-5"
+                            <a href="/tambahfooteerdua" class="btn btn-primary mt-5"
                                 id="kt_account_profile_details_submit">Tambah
                                 +</a>
                         </div>
@@ -30,11 +42,8 @@
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">Foto</th>
-                                    <th scope="col">judul</th>
-                                    <th scope="col">Deskripsi</th>
-                                    <th scope="col">Deskripsi Detail</th>
-                                    {{--  <th scope="col">Dibuat</th>  --}}
+                                    <th scope="col">Judul</th>
+                                    <th scope="col">link</th>
                                     <th scope="col">Aksi</th>
                                 </tr>
                             </thead>
@@ -47,37 +56,16 @@
                                 @foreach ($data as $d)
                                     <tr>
                                         <th>{{ $no++ }}</th>
-                                        <td>
-                                            <img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt=""
-                                                style="width: 50px;">
-                                        </td>
 
-                                        <td>{{ $d->judul }}</td>
-                                        <td>{{ $d->deskripsi_muhinews }}</td>
-                                        <td>{!! $d->deskripsi_detail !!}</td>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                                        <td>{{ $d->Kategori }}
-                                               {{--  @php
-                                                dd($d->kategori);
-                                               @endphp  --}}
-                                        </td>
-                                        <td>{{ $d->created_at }}</td>
-=======
-                                        <td>{{ $d->kategori }}
+                                            <td>{!! $d->judul !!}</td>
 
->>>>>>> 4d6c595584a3374467fc2c2c438a01ceb412aec7
+                                        <td>{!! $d->link !!}</td>
 
                                         {{-- <td>{{ $d->created_at->format('D M Y') }}</td> --}}
->>>>>>> 670a97242da062ac8040965fb58783da25780d37
                                         <td>
-                                            <a href="/editmuhinews/{{ $d->id }}" class="btn btn-warning">Edit</a>
+                                            <a href="/editfooteerdua/{{ $d->id }}" class="btn btn-warning">Edit</a>
 
-                                            <a href="/deletemuhinews/{{ $d->id }}" class="btn btn-danger" onclick="return confirm('yakin gen?')">Delete</a>
-
-
-
+                                            <a href="/delete/{{ $d->id }}" class="btn btn-danger" onclick="return confirm('apakah anda yakin?')">Delete</a>
 
                                         </td>
                                     </tr>

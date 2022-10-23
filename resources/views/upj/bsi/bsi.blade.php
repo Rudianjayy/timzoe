@@ -9,7 +9,7 @@
 <head>
 
     <meta charset="utf-8">
-    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+    <!--[if IE]><meta http-equiv='X-UA-Compatiblpe' content='IE=edge,chrome=1'><![endif]-->
     <title>SMK Muhammadiyah 1 Genteng</title>
     <meta name="author" content="themesflat.com">
 
@@ -71,6 +71,45 @@
                 </div>
             </section>
 
+<<<<<<< HEAD
+            @foreach ($bsi as $b )
+            <section class="portfolio-details">
+                <div class="portfolio-details__image">
+                    <div class="container">
+                        <div class="blog-two__meta">
+                            {{-- <a href="blog-details.html">Sara dodly</a>
+                            <span>-</span> --}}
+                            <a href="blog-details.html"><h4> Diterbitkan : {{ $b->created_at }} </h4></a>
+                        </div><!-- /.blog-two__meta -->
+                        <div class="row">
+
+                            <div class="col-lg-9">
+                                <img src="{{ asset('fotomahasiswa/' . $b->foto) }}" alt=""  >
+                            </div><!-- /.col-lg-9 -->
+                        </div><!-- /.row -->
+                    </div><!-- /.container -->
+                </div><!-- /.portfolio-details__image -->
+                <br><br>
+                <div class="portfolio-details__main">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8">
+
+                                <div class="portfolio-details__content">
+                                    <p>{!! $b->deskripsi_bsi !!}</p>
+
+                                </div><!-- /.portfolio-details__content -->
+
+                            </div><!-- /.col-lg-8 -->
+
+                        </div><!-- /.row -->
+                    </div><!-- /.container -->
+                </div><!-- /.portfolio-details__main -->
+            </section><!-- /.portfolio-details -->
+
+            @endforeach
+           <br><br><br>
+=======
             <section class="blog-standard blog-details">
                 <div class="container">
                     <div class="row">
@@ -301,11 +340,12 @@
                     </div><!-- /.row -->
                 </div><!-- /.container -->
             </section><!-- /.blog-standard -->
+>>>>>>> 4d6c595584a3374467fc2c2c438a01ceb412aec7
 
-           
+
 
            @include('koneksi.mitra')
-           
+
 
             @include('koneksi.footer')
         </div>

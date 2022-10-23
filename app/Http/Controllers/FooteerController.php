@@ -4,15 +4,16 @@ namespace App\Http\Controllers;
 use App\Models\footeer;
 
 use Illuminate\Http\Request;
-
+use App\Models\Footeerdua;
 
 class FooteerController extends Controller
 {
 
 
     public function footeeradmin(){
+        $link = footeerdua::all();
         $data = footeer::all();
-        return view('footeer.footeer-admin', compact('data'));
+        return view('footeer.footeer-admin', compact('data','link'));
     }
     public function tambahfooteer()
     {

@@ -46,7 +46,7 @@
                             <tbody>
                                 @php
                                     $no = 1;
-                                @endphp
+                                @endphp/.
                                 @foreach ($data as $row)
 
                                     <tr>

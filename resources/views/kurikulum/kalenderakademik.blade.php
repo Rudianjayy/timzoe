@@ -59,7 +59,7 @@
                     <div class="row">
                         <div class="col-md-12">
 
-                            
+
                             <div class="breadcrumbs">
                                 <ul>
                                     <li><a href="index.html">Beranda</a></li>
@@ -70,13 +70,13 @@
                     </div>
                 </div>
             </section>
-            <section class="hot-collections-page tf-section">
+            <section class="hot-collections-page tf-section-nopan">
                 <div class="container">
                     <div class="row">
                     <div class="col-md-12">
                     @foreach ($d as $d)
                      <section>
-                <img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt="">
+               <center><img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt=""></center> 
                 </div>
                     </div>
                 </section>
@@ -84,7 +84,7 @@
                     </div>
                 </div>
             </section>
-               
+
 
 
 

@@ -65,8 +65,7 @@
 
                                             <a href="/delete/{{ $d->id }}" class="btn btn-danger" onclick="return confirm('apakah anda yakin?')">Delete</a>
 
-
-
+=
 
                                         </td>
                                     </tr>

@@ -6,6 +6,7 @@ use App\Models\kurikulum;
 use App\Models\Muhinews;
 use App\Models\kalenderakademik;
 use App\Models\footeer;
+use App\Models\Footeerdua;
 use App\Models\Jurusan;
 use App\Models\Personaljurusan;
 
@@ -20,9 +21,10 @@ class KurikulumController extends Controller
         $ft = footeer::all();
         $personal = Personaljurusan::all();
         $logo = footeer::all();
-        return view('kurikulum.kalenderakademik', compact('d','f','ft','personal','logo'));
+        $link = Footeerdua::all();
+        return view('kurikulum.kalenderakademik', compact('d','f','ft','personal','logo','link'));
     }
-   
+
     public function kalenderakademikadmin() {
         $data = kalenderakademik::all();
         return view('kurikulum.kalenderakademik-admin', compact('data'));
@@ -66,7 +68,7 @@ class KurikulumController extends Controller
         ]);
         $data = kalenderakademik::find($id);
         $data->update([
-          
+
         ]);
         if($request->hasFile('foto')){
             $request->file('foto')->move('fotomahasiswa/',$request->file('foto')->getClientOriginalName());

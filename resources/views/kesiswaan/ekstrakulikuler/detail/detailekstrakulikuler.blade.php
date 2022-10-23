@@ -99,23 +99,7 @@
                                         </li>
                                     </ul><!-- /.list-unstyled sidebar__category-list -->
                                 </div><!-- /.sidebar__single --> --}}
-                                <div class="sidebar__single sidebar__contact">
-                                    <h3 class="sidebar__title">Contact</h3>
-                                    <ul class="list-unstyled sidebar__contact-list">
-                                        <li>
-                                            <i class="fa fa-map-marker-alt"></i>
-                                            Royal Orville Road Apt. 728 <br> California, USA
-                                        </li>
-                                        <li>
-                                            <i class="fa fa-envelope"></i>
-                                            <a href="mailto:Inovexcompany@gmail.com">Inovexcompany@gmail.com</a>
-                                        </li>
-                                        <li>
-                                            <i class="fa fa-phone"></i>
-                                            <a href="tel:+88-0-1764867977">+88 (0)1764867977</a>
-                                        </li>
-                                    </ul><!-- /.list-unstyled sidebar__category-list -->
-                                </div><!-- /.sidebar__single -->
+
                                 {{-- <div class="sidebar__single sidebar__brouchers">
                                     <h3 class="sidebar__title">Foto</h3>
                                     <ul class="list-unstyled sidebar__category-list">

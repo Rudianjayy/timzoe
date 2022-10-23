@@ -86,7 +86,7 @@
             </div>
         </div>
     </section> -->
-    <section class="portfolio-details">
+    <section class="blog-standard blog-details">
 
         <div class="portfolio-details__image">
             <div class="container">

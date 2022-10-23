@@ -815,6 +815,10 @@ h6 a {
 .tf-section {
     padding: 80px 0;
 }
+.tf-section-nopan {
+    padding: 80px 0;
+    margin-right: 130px;
+}
 .tf-section-riski {
     padding: 80px 0;
     margin-right: 70px;

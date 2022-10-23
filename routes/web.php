@@ -12,6 +12,7 @@ use App\Http\Controllers\KepsekController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\AkademiController;
 use App\Http\Controllers\FooteerController;
+use App\Http\Controllers\FooteerduaController;
 use App\Http\Controllers\JurusanController;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\MuhiblogController;
@@ -30,6 +31,7 @@ use App\Http\Controllers\DetailakademiController;
 use App\Http\Controllers\ProfilSekolahController;
 use App\Http\Controllers\FotokompetensiController;
 use App\Http\Controllers\PersonaljurusanController;
+use App\Http\Controllers\EkstrakulikulerBlogController;
 use App\Http\Controllers\IdentitasSekolahController;
 
 /*
@@ -285,6 +287,18 @@ Route::get('/delete/{id}',[KesiswaanController::class,'delete'])->name('delete')
 
 
 
+
+
+//ekstrakulikulerblog
+Route::get('/ekstrakulikulerblog/{id}',[EkstrakulikulerBlogController::class, 'ekstrakulikulerblog'])->name('ekstrakulikulerblog');
+Route::get('/ekstrakulikulerblogadmin',[EkstrakulikulerBlogController::class, 'ekstrakulikulerblogadmin'])->name('ekstrakulikulerblogadmin');
+Route::get('/tambahekstrakulikulerblog',[EkstrakulikulerBlogController::class, 'tambahekstrakulikulerblog'])->name('tambahekstrakulikulerblog');
+Route::post('/ekstrakulikulerblogproses',[EkstrakulikulerBlogController::class, 'ekstrakulikulerblogproses'])->name('ekstrakulikulerblogproses');
+Route::get('/editekstrakulikulerblog/{id}',[EkstrakulikulerBlogController::class, 'editekstrakulikulerblog'])->name('editekstrakulikulerblog');
+Route::post('/editekstrakulikulerblogproses/{id}',[EkstrakulikulerBlogController::class, 'editekstrakulikulerblogproses'])->name('editekstrakulikulerblogproses');
+Route::get('/delete/{id}',[EkstrakulikulerBlogController::class, 'delete'])->name('delete');
+
+
 Route::get('/detailekstrakulikuler/{id}',[DetailEkstrakulikulerController::class,'detailekstrakulikuler'])->name('detailekstrakulikuler');
 
 Route::get('/admindetailekstrakulikuler',[DetailEkstrakulikulerController::class, 'admindetailekstrakulikuler'])->name('admindetailekstrakulikuler');
@@ -325,6 +339,22 @@ Route::post('/footeerproses7',[FooteerController::class, 'footeerproses7'])->nam
 Route::get('/editfooteer/{id}',[FooteerController::class, 'editfooteer'])->name('editfooteer');
 Route::post('/editproses7/{id}',[FooteerController::class,'editproses7'])->name('editproses7');
 Route::get('/deletefooteer/{id}',[FooteerController::class,'deletefooteer'])->name('deletefooteer');
+
+
+
+
+
+//footeerduaaaa//
+
+Route::get('/adminfooteerdua',[FooteerduaController::class,'adminfooteerdua'])->name('adminfooteerdua');
+Route::get('/tambahfooteerdua',[FooteerduaController::class, 'tambahfooteerdua'])->name('tambahfooteerdua');
+Route::post('/footeerprosesdua',[FooteerduaController::class, 'footeerprosesdua'])->name('footeerprosesdua');
+Route::get('/editfooteerdua/{id}',[FooteerduaController::class, 'editfooteerdua'])->name('editfooteerdua');
+Route::post('/editprosesdua/{id}',[FooteerduaController::class,'editprosesdua'])->name('editprosesdua');
+Route::get('/delete/{id}',[FooteerduaController::class,'delete'])->name('delete');
+
+
+
 
 
 

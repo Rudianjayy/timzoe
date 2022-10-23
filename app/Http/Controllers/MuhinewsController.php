@@ -13,10 +13,9 @@ class MuhinewsController extends Controller
     public function index() {
         $k = Muhinews::paginate(6);
         $f = Muhinews::paginate(3);
-        $kh = Jurusan::all();
         $personal = Personaljurusan::all();
         $logo = footeer::all();
-        return view('muhinews.muhinews',compact('k','f','kh','personal','logo'));
+        return view('muhinews.muhinews',compact('k','f','personal','logo'));
 
     }
     public function indexadmin() {

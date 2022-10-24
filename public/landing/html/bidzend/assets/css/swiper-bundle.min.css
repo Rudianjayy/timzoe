@@ -65,10 +65,12 @@
 }
 
 .swiper-container-pointer-events {
+    margin-left: 70px;
     touch-action: pan-y
 }
 
 .swiper-container-pointer-events.swiper-container-vertical {
+    margin-left: 70px;
     touch-action: pan-x
 }
 

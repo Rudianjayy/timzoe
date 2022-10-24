@@ -4,13 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Models\Kepsek;
 use App\Models\Jurusan;
+use App\Models\Sambutan;
 use Illuminate\Http\Request;
 use App\Models\Sambutankepsek;
 
 class KepsekController extends Controller
 {
     public function sambutanadmin(){
-        $data = Sambutankepsek::all();
+        $data = Sambutan::all();
         $kh = Jurusan::all();
         return view('kepsek.kepsek', compact('data','kh'));
     }
@@ -30,7 +31,7 @@ class KepsekController extends Controller
             'sambutan.required' =>'Harus diisi',
 
         ]);
-        $data = Sambutankepsek::create([
+        $data = Sambutan::create([
             'foto' =>$request->foto,
             'sambutan' =>$request->sambutan,
         ]);
@@ -45,7 +46,7 @@ class KepsekController extends Controller
 
     public function editsambutan($id){
 
-        $data = Sambutankepsek::findOrFail($id);
+        $data = Sambutan::findOrFail($id);
         return view('kepsek.edit-Kepsek', compact('data'));
     }
 
@@ -56,7 +57,7 @@ class KepsekController extends Controller
         ],[
             'sambutan.required' => 'harus diisi',
         ]);
-        $data = Sambutankepsek::find($id);
+        $data = Sambutan::find($id);
         $data->update([
             'sambutan' =>$request->sambutan,
 
@@ -72,7 +73,7 @@ class KepsekController extends Controller
     }
 
     public function delete($id){
-        $data = Sambutankepsek::find($id);
+        $data = Sambutan::find($id);
         $data->delete();
         return redirect('sambutanadmin')->with('toast_error',' Data Berhasil di Hapus!');
     }

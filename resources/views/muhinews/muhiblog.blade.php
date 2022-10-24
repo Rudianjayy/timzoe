@@ -67,14 +67,7 @@
             <img src="assets/images/shapes/bg-shape-1-3.png" class="section__bg-shape-3" alt="">
 
 
-            <div class="section__bubble-1"></div><!-- /.section__bubble-1 -->
-            <div class="section__bubble-2"></div><!-- /.section__bubble-2 -->
-            <div class="section__bubble-3"></div><!-- /.section__bubble-3 -->
-            <div class="section__bubble-4"></div><!-- /.section__bubble-4 -->
-            <div class="section__bubble-5"></div><!-- /.section__bubble-5 -->
-            <div class="section__bubble-6"></div><!-- /.section__bubble-6 -->
-            <div class="section__bubble-7"></div><!-- /.section__bubble-7 -->
-            <div class="section__bubble-8"></div><!-- /.section__bubble-8 -->
+          
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8">

@@ -13,58 +13,66 @@ use App\Models\Personaljurusan;
 
 class ProfilSekolahController extends Controller
 {
-    public function profilsekolah(){
+    public function profilsekolah()
+    {
         $q = profilsekolah::all();
         $f = Muhinews::all();
         $kh = Jurusan::all();
         $personal = Personaljurusan::all();
         $logo = footeer::all();
+<<<<<<< HEAD
         $link = footeerdua::all();
         return view('profilsekolah.profilsekolah',compact('q','f','kh','personal','logo','link'));
     } 
     public function profilsekolahadmin(){
+=======
+        $kategori = Muhinews::all();
+        $d = Muhinews::paginate(3);
+        return view('profilsekolah.profilsekolah', compact('q', 'f', 'kh', 'personal', 'logo', 'kategori', 'd'));
+    }
+    public function profilsekolahadmin()
+    {
+>>>>>>> b29191c437e857c1bd2bfbca1f693b789857ebf2
         $data = profilsekolah::all();
-        return view('profilsekolah.crudprofilsekolah.profilsekolahadmin',compact('data'));
+        return view('profilsekolah.crudprofilsekolah.profilsekolahadmin', compact('data'));
     }
     public function tambahprofilsekolah()
     {
         return view('profilsekolah.crudprofilsekolah.tambahprofilsekolah');
     }
 
-    public function prosesprofilsekolah(Request $request){
+    public function prosesprofilsekolah(Request $request)
+    {
         // dd($request->all());
-        $this->validate($request,[
+        $this->validate($request, [
             'judul' => 'required',
             'deskripsi' => 'required',
-            'foto' =>'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
-            'deskripsi_lanjutan' =>'required',
-            'foto_simuhi' =>'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
-            'deskripsi_simuhi' =>'required',
-        ],[
-            'judul.required' =>'Harus diisi',
-            'deskripsi.required' =>'Harus diisi',
-            'foto.required' =>'Harus diisi',
-            'foto.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
-            'deskripsi_lanjutan.required' =>'Harus diisi',
-            'foto_simuhi.required' =>'Harus diisi',
-            'foto_simuhi.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
-            'deskripsi_simuhi' =>'Harus diisi',
+            'foto' => 'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
+            'foto_simuhi' => 'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
+            'deskripsi_simuhi' => 'required',
+        ], [
+            'judul.required' => 'Harus diisi',
+            'deskripsi.required' => 'Harus diisi',
+            'foto.required' => 'Harus diisi',
+            'foto.mimes' => 'Harus jpg,jpeg,bmp,gif,png,webp',
+            'foto_simuhi.required' => 'Harus diisi',
+            'foto_simuhi.mimes' => 'Harus jpg,jpeg,bmp,gif,png,webp',
+            'deskripsi_simuhi' => 'Harus diisi',
 
         ]);
         $data = profilsekolah::create([
-            'judul' =>$request->judul,
-            'deskripsi' =>$request->deskripsi,
-            'foto' =>$request->foto,
-            'deskripsi_lanjutan' =>$request->deskripsi_lanjutan,
-            'foto_simuhi' =>$request->foto_simuhi,
-            'deskripsi_simuhi' =>$request->deskripsi_simuhi,
+            'judul' => $request->judul,
+            'deskripsi' => $request->deskripsi,
+            'foto' => $request->foto,
+            'foto_simuhi' => $request->foto_simuhi,
+            'deskripsi_simuhi' => $request->deskripsi_simuhi,
         ]);
-        if($request->hasFile('foto')){
+        if ($request->hasFile('foto')) {
             $request->file('foto')->move('fotomahasiswa/', $request->file('foto')->getClientOriginalName());
             $data->foto = $request->file('foto')->getClientOriginalName();
             $data->save();
         }
-        if($request->hasFile('foto_simuhi')){
+        if ($request->hasFile('foto_simuhi')) {
             $request->file('foto_simuhi')->move('fotomahasiswa/', $request->file('foto_simuhi')->getClientOriginalName());
             $data->foto_simuhi = $request->file('foto_simuhi')->getClientOriginalName();
             $data->save();
@@ -73,49 +81,57 @@ class ProfilSekolahController extends Controller
         return redirect()->route('profilsekolahadmin')->with('toast_success', 'Data Berhasil Di Tambahkan!');
     }
 
-    public function editprofilsekolah($id){
+    public function editprofilsekolah($id)
+    {
 
         $data = profilsekolah::findOrFail($id);
         return view('profilsekolah.crudprofilsekolah.editprofilsekolah', compact('data'));
     }
 
-    public function editprosessekolah(Request $request, $id){
-        $this->validate($request,[
+    public function editprosessekolah(Request $request, $id)
+    {
+        $this->validate($request, [
             'judul' => 'required',
             'deskripsi' => 'required',
             // 'foto' =>'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
-            'deskripsi_lanjutan' =>'required',
             // 'foto_simuhi' =>'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
-            'deskripsi_simuhi' =>'required',
-        ],[
-            'judul.required' =>'Harus diisi',
-            'deskripsi.required' =>'Harus diisi',
+            'deskripsi_simuhi' => 'required',
+        ], [
+            'judul.required' => 'Harus diisi',
+            'deskripsi.required' => 'Harus diisi',
             // 'foto.required' =>'Harus diisi',
             // 'foto.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
-            'deskripsi_lanjutan.required' =>'Harus diisi',
             // 'foto_simuhi.required' =>'Harus diisi',
             // 'foto_simuhi.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
-            'deskripsi_simuhi' =>'Harus diisi',
+            'deskripsi_simuhi' => 'Harus diisi',
 
         ]);
         $data = profilsekolah::find($id);
         $data->update([
-            'deskripsi' =>$request->deskripsi,
+            'judul' => $request->judul,
+            'deskripsi' => $request->deskripsi,
+            'deskripsi_simuhi' => $request->deskripsi_simuhi,
         ]);
-        if($request->hasFile('foto')){
-            $request->file('foto')->move('fotomahasiswa/',$request->file('foto')->getClientOriginalName());
+        if ($request->hasFile('foto')) {
+            $request->file('foto')->move('fotomahasiswa/', $request->file('foto')->getClientOriginalName());
             $data->foto = $request->file('foto')->getClientOriginalName();
             $data->save();
         }
+        if ($request->hasFile('foto_simuhi')) {
+            $request->file('foto_simuhi')->move('fotomahasiswa/', $request->file('foto_simuhi')->getClientOriginalName());
+            $data->foto_simuhi = $request->file('foto_simuhi')->getClientOriginalName();
+            $data->save();
+        }
 
-        return redirect('profilsekolahadmin')->with('toast_success',' Data Berhasil di Ubah!');
 
+        return redirect('profilsekolahadmin')->with('toast_success', ' Data Berhasil di Ubah!');
     }
 
-    public function delete($id){
+    public function delete($id)
+    {
         $data = profilsekolah::find($id);
         $data->delete();
-        return redirect('profilsekolahadmin')->with('toast_error',' Data Berhasil di Hapus!');
+        return redirect('profilsekolahadmin')->with('toast_error', ' Data Berhasil di Hapus!');
     }
 
 
@@ -142,23 +158,28 @@ class ProfilSekolahController extends Controller
 
 
 
-    public function visimisi(){
+    public function visimisi()
+    {
         $v = visimisi::all();
         $f = Muhinews::all();
         $kh = Jurusan::all();
         $personal = Personaljurusan::all();
         $ft = Footeer::all();
         $logo = footeer::all();
-        return view('visimisi.visimisi',compact('v','f','kh','personal','ft','logo'));
+        $d = Muhinews::paginate(3);
+        return view('visimisi.visimisi', compact('v', 'f', 'kh', 'personal', 'ft', 'logo','d'));
     }
-    public function visimisiadmin(){
+    public function visimisiadmin()
+    {
         $data = visimisi::all();
-        return view('visimisi.admin.visimisiadmin',compact('data'));;
+        return view('visimisi.admin.visimisiadmin', compact('data'));;
     }
-    public function tambahvisimisi(){
+    public function tambahvisimisi()
+    {
         return view('visimisi.admin.tambahvisimisi');;
     }
-    public function prosesvisimisi(Request $request){
+    public function prosesvisimisi(Request $request)
+    {
         // dd($request->all());
         // $this->validate($request,[
         //     'judulvisi' =>'required',
@@ -173,20 +194,22 @@ class ProfilSekolahController extends Controller
 
         // ]);
         $data = visimisi::create([
-            'judulvisi' =>$request->judulvisi,
-            'deskripsivisi' =>$request->deskripsivisi,
-            'judulmisi' =>$request->judulmisi,
-            'deskripsimisi' =>$request->deskripsimisi,
+            'judulvisi' => $request->judulvisi,
+            'deskripsivisi' => $request->deskripsivisi,
+            'judulmisi' => $request->judulmisi,
+            'deskripsimisi' => $request->deskripsimisi,
         ]);
 
         return redirect()->route('visimisiadmin')->with('toast_success', 'Data Berhasil Di Tambahkan!');
     }
-    public function editvisimisi($id){
+    public function editvisimisi($id)
+    {
 
         $data = visimisi::findOrFail($id);
         return view('visimisi.admin.editvisimisi', compact('data'));
     }
-    public function editprosesvisimisi(Request $request, $id){
+    public function editprosesvisimisi(Request $request, $id)
+    {
         // $this->validate($request,[
         //     'foto' =>'mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
         //     'deskripsi' =>'required',
@@ -197,18 +220,17 @@ class ProfilSekolahController extends Controller
         // ]);
         $data = visimisi::find($id);
         $data->update([
-            'judulvisi' =>$request->judulvisi,
-            'deskripsivisi' =>$request->deskripsivisi,
-            'judulmisi' =>$request->judulmisi,
-            'deskripsimisi' =>$request->deskripsimisi,
+            'judulvisi' => $request->judulvisi,
+            'deskripsivisi' => $request->deskripsivisi,
+            'judulmisi' => $request->judulmisi,
+            'deskripsimisi' => $request->deskripsimisi,
         ]);
-        return redirect('visimisiadmin')->with('toast_success',' Data Berhasil di Ubah!');
-
+        return redirect('visimisiadmin')->with('toast_success', ' Data Berhasil di Ubah!');
     }
-    public function deletevisimisi($id){
+    public function deletevisimisi($id)
+    {
         $data = visimisi::find($id);
         $data->delete();
-        return redirect('visimisiadmin')->with('toast_error',' Data Berhasil di Hapus!');
+        return redirect('visimisiadmin')->with('toast_error', ' Data Berhasil di Hapus!');
     }
-
 }

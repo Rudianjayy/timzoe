@@ -6,6 +6,7 @@ use App\Models\kurikulum;
 use App\Models\Muhinews;
 use App\Models\kalenderakademik;
 use App\Models\footeer;
+use App\Models\Footeerdua;
 use App\Models\Jurusan;
 use App\Models\Personaljurusan;
 use App\Models\footeerdua;

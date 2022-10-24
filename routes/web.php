@@ -123,7 +123,7 @@ Route::get('/deleteprestasi/{id}',[PrestasiController::class, 'delete'])->name('
 
 
 
-//muinews
+//muhinews
 Route::get('/muhinews',[MuhinewsController::class, 'index'])->name('muhinews');
 Route::get('/muhinewsadmin',[MuhinewsController::class, 'indexadmin'])->name('muhinewsadmin');
 Route::get('/tambahmuhinews',[MuhinewsController::class, 'tambahmuhinews'])->name('tambahmuhinews');
@@ -140,6 +140,16 @@ Route::post('/muhiblogproses',[MuhiblogController::class, 'muhiblogproses'])->na
 Route::get('/editmuhiblog/{id}',[MuhiblogController::class, 'editmuhiblog'])->name('editmuhiblog');
 Route::post('/editmuhiblogproses/{id}',[MuhiblogController::class, 'editmuhiblogproses'])->name('editmuhiblogproses');
 Route::get('/deletemuhiblog/{id}',[MuhiblogController::class, 'delete'])->name('delete');
+
+//kategoriberita
+
+Route::get('/kategoriberita',[MuhiblogController::class, 'kategoriberita'])->name('kategoriberita');
+Route::get('/tambahkategori',[MuhiblogController::class, 'tambahkategori'])->name('tambahkategori');
+Route::post('/kategoriproses',[MuhiblogController::class, 'kategoriproses'])->name('kategoriproses');
+Route::get('/editkategori/{id}',[MuhiblogController::class, 'editkategori'])->name('editkategori');
+Route::post('/editproseskategori/{id}',[MuhiblogController::class, 'editproseskategori'])->name('editproseskategori');
+Route::get('/deletekategori/{id}',[MuhiblogController::class, 'deletekategori'])->name('delete');
+
 
 
 
@@ -192,6 +202,21 @@ Route::get('/editfasilitas/{id}',[FasilitasController::class,'editfasilitas'])->
 Route::post('/editprosesfasilitas/{id}',[FasilitasController::class,'editprosesfasilitas'])->name('editprosesfasilitas');
 Route::get('/deletefasilitas/{id}',[FasilitasController::class, 'deletefasilitas'])->name('delete');
 
+//relasi judul fasilitas
+Route::get('/judulfasilitas',[FasilitasController::class,'judulfasilitas'])->name('judulfasilitas');
+Route::get('/tambahjudul',[FasilitasController::class,'tambahjudul'])->name('tambahjudul');
+Route::post('/prosesjudul',[FasilitasController::class,'prosesjudul'])->name('prosesjudul');
+Route::get('/editjudul/{id}',[FasilitasController::class,'editjudul'])->name('editjudul');
+Route::post('/editprosesjudul/{id}',[FasilitasController::class,'editprosesjudul'])->name('editprosesjudul');
+Route::get('/deletejudul/{id}',[FasilitasController::class, 'deletejudul'])->name('delete');
+
+//fotofasilitas
+Route::get('/fotofasilitas',[FasilitasController::class,'fotofasilitas'])->name('fotofasilitas');
+Route::get('/tambahfotofasilitas',[FasilitasController::class,'tambahfotofasilitas'])->name('tambahfotofasilitas');
+Route::post('/prosesfoto',[FasilitasController::class,'prosesfoto'])->name('prosesfoto');
+Route::get('/editfotofasilitas/{id}',[FasilitasController::class,'editfotofasilitas'])->name('editfotofasilitas');
+Route::post('/editprosesfoto/{id}',[FasilitasController::class,'editprosesfoto'])->name('editprosesfoto');
+Route::get('/deletefotofasilitas/{id}',[FasilitasController::class, 'deletefotofasilitas'])->name('delete');
 
 
 
@@ -361,6 +386,19 @@ Route::get('/deletemitra/{id}',[MitraController::class, 'deletemitra'])->name('d
 //upj
 Route::get('/indexupj',[UpjController::class,'indexupj'])->name('indexupj');
 Route::get('/upj',[UpjtekajeController::class,'upj'])->name('upj');
+Route::get('/adminupj',[UpjController::class,'adminupj'])->name('adminupj');
+Route::get('/tambahupj',[UpjController::class,'tambahupj'])->name('tambahupj');
+Route::post('/upjproses',[UpjController::class,'upjproses'])->name('upjproses');
+Route::get('/editupj/{id}',[UpjController::class,'editupj'])->name('editupj');
+Route::post('/editupjproses/{id}',[UpjController::class,'editupjproses'])->name('editupjproses');
+Route::get('/deleteupj/{id}',[UpjController::class, 'deleteupj'])->name('delete');
+
+Route::get('/adminupj2',[UpjController::class,'adminupj2'])->name('adminupj2');
+Route::get('/tambahupj2',[UpjController::class,'tambahupj2'])->name('tambahupj2');
+Route::post('/upjproses2',[UpjController::class,'upjproses2'])->name('upjproses2');
+Route::get('/editupj2/{id}',[UpjController::class,'editupj2'])->name('editupj2');
+Route::post('/editupjproses2/{id}',[UpjController::class,'editupjproses2'])->name('editupjproses2');
+Route::get('/deleteupj2/{id}',[UpjController::class, 'deleteupj2'])->name('delete');
 
 
 
@@ -432,6 +470,14 @@ Route::post('/submitdata13',[UpjtekajeController::class, 'submitdata13'])->name(
 Route::get('/edittentangkami/{id}',[UpjtekajeController::class, 'edittentangkami'])->name('edittentangkami');
 Route::post('/submitedit13/{id}',[UpjtekajeController::class, 'submitedit13'])->name('submitedit13');
 Route::get('/deletetentangkami/{id}',[UpjtekajeController::class, 'deletetentangkami'])->name('deletetentangkami');
+
+
+Route::get('/adminteam',[UpjtekajeController::class, 'loby15'])->name('adminteam');
+Route::get('/tambahteam',[UpjtekajeController::class, 'tambahteam'])->name('tambahteam');
+Route::post('/submitdata15',[UpjtekajeController::class, 'submitdata15'])->name('submitdata15');
+Route::get('/editteam/{id}',[UpjtekajeController::class, 'editteam'])->name('editteam');
+Route::post('/submitedit15/{id}',[UpjtekajeController::class, 'submitedit15'])->name('submitedit15');
+Route::get('/deleteteam/{id}',[UpjtekajeController::class, 'deleteteam'])->name('deleteteam');
 
 
 

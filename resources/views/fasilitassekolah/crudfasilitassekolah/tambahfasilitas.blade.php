@@ -27,48 +27,47 @@
                                     @enderror
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Judul Fasilitas :</label>
-                                    <input type="text" name="judul_fasilitas" class="form-control"
-                                        id="exampleInputEmail1" aria-describedby="emailHelp">
-                                    @error('judul_fasiitas')
+                                    <label for="exampleInputEmail1" class="form-label">Foto:</label>
+                                    <input type="file" name="foto" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp">
+                                    @error('foto')
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
-                                <label for="exampleInputEmail1" class="form-label">Foto :</label>
-                                <input type="file" name="foto[]" class="my frm form-control" id="exampleInputEmail1"
-                                    aria-describedby="emailHelp" multiple>
-                               
-                                @error('foto')
-                                    <div class="alert alert-danger">{{ $message }}</div>
-                                @enderror
-
-                        <section style="padding-top:60px;">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                Deskripsi
-                                            </div>
-                                            <div class="card-body">
-                                                {{--  <form method="POST" enctype="multipart/form-data">  --}}
-                                                <textarea name="deskripsi" id="mytextarea"></textarea>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Judul Fasilitas :</label>
+                                    <input type="text" name="judul_fasilitas" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                    @error('judul_fasilitas')
+                                      <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
+                                  </div>
+                                <section style="padding-top:60px;">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        Deskripsi
+                                                    </div>
+                                                    <div class="card-body">
+                                                        {{--  <form method="POST" enctype="multipart/form-data">  --}}
+                                                        <textarea name="deskripsi" id="mytextarea"></textarea>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </section>
+                                </section>
 
 
 
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                        <a href="/data-album" class="btn btn-danger">Kembali</a>
-                        </form>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <a href="/data-album" class="btn btn-danger">Kembali</a>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

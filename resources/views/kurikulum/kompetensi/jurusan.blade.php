@@ -43,12 +43,10 @@
 
 <body>
 
-    <div class="preloader">
-        <div class="lds-ripple">
-            <div></div>
-            <div></div>
-        </div>
-    </div><!-- /.preloader -->
+    <div class="preload preload-container">
+        {{-- <div class="preload-logo"></div>  --}}
+        <div class="preload-logo"><img src="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}" alt="Image" style="width:570 !important;"></div>
+    </div>
 
     <div class="page-wrapper">
 
@@ -73,7 +71,7 @@
         </section>
 
         <section class="blog-standard blog-details">
-            
+
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8">
@@ -113,22 +111,20 @@
                                 velit esse cillum dolore eu fugiat nulla pariatur.</p> --}}
                         </div><!-- /.blog-details__main -->
 
-                        
-                        
 
                         <div class="blog-details__social">
                             <a href="#"><i class="fab fa-facebook-f"></i></a>
                             <a href="#"><i class="fab fa-twitter"></i></a>
                             <a href="#"><i class="fab fa-google-plus-g"></i></a>
                         </div><!-- /.blog-details__social -->
-                       
-                       
+
+
 
                     </div><!-- /.col-lg-8 -->
-                    
+
                     <div class="col-lg-4">
                         <div class="sidebar sidebar__right">
-                            
+
                             <div class="sidebar__single sidebar__category">
                                 <h3 class="sidebar__title">Kompetensi lainnya</h3>
                                 @php
@@ -136,7 +132,7 @@
                                 @endphp
                                 <ul class="list-unstyled sidebar__category-list" style="">
                                     @foreach ($jurusan as $js )
-                                        
+
                                     <li>
                                         <a href="/indexjurusan/{{ $js->id }}">{{ $js->nama_kompetensi2 }}</a>
                                     </li>
@@ -150,7 +146,7 @@
                                 @endphp
                                 <div class="sidebar__post-wrap">
                                     @foreach ($muhiberita as $mb )
-                                        
+
                                     <div class="sidebar__post-single">
                                         <div class="sidebar__post-image">
                                             <img src="{{ asset('fotomahasiswa/' . $mb->foto) }}" alt="">
@@ -161,7 +157,7 @@
                                         </div><!-- /.sidebar__post-content -->
                                     </div><!-- /.sidebar__post-single -->
                                     @endforeach
-                                    
+
                                 </div><!-- /.sidebar__post-wrap -->
                             </div><!-- /.sidebar__single -->
                             <div class="sidebar__single sidebar__archive">
@@ -198,14 +194,14 @@
                                     <a href="#">Business</a>
                                     <a href="#">App Design</a>
                                 </div><!-- /.blog-details__tags --> --}}
-                                
+
                             </div><!-- /.blog-details__meta -->
                         </div><!-- /.sidebar -->
                     </div><!-- /.col-lg-4 -->
                 </div><!-- /.row -->
             </div><!-- /.container -->
         </section><!-- /.blog-standard -->
-       
+
         @include('koneksi.mitra')
         @include('koneksi.footer')
 

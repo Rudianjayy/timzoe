@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('judul');
             $table->text('deskripsi');
             $table->string('foto');
-            $table->text('deskripsi_lanjutan');
             $table->string('foto_simuhi');
             $table->text('deskripsi_simuhi');
             $table->timestamps();

@@ -30,7 +30,7 @@
 
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Nama ekstrakulikuler :</label>
-                                    <select class="form-control" name="nama_ekstra" id="">
+                                    <select class="form-control" name="ekstrakulikulers_id" id="">
                                         <option value=""></option>
                                         @foreach($ekstrakulikuler as $ekstra)
                                             <option value="{{ $ekstra->id }}">{{ $ekstra->nama_ekstra }}</option>
@@ -38,7 +38,7 @@
                                     </select>
                                     {{--  <input type="text" name="nama_ekstrakulikuler" class="form-control" id="nama_ekstrakulikuler"
                                         aria-describedby="emailHelp">  --}}
-                                    @error('nama_ekstrakulikuler')
+                                    @error('ekstrakulikulers_id')
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                   </div>

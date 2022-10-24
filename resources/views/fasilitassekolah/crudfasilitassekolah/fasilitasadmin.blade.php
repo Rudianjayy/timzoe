@@ -25,6 +25,7 @@
                     <div class="card">
                         <div class="card-body">
 
+<<<<<<< HEAD
                             <div>
                                 <a href="/tambahfasilitas" class="btn btn-primary mt-5"
                                     id="kt_account_profile_details_submit">Tambah
@@ -32,6 +33,15 @@
                             </div>
                             <table id="datatable" class="table table-bordered dt-responsive nowrap"
                                 style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+=======
+                        <div>
+                            <a href="/tambahfasilitas" class="btn btn-primary mt-5"
+                                id="kt_account_profile_details_submit">Tambah
+                                +</a>
+                        </div>
+                        <table id="datatable" class="table table-bordered dt-responsive nowrap"
+                            style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+>>>>>>> b29191c437e857c1bd2bfbca1f693b789857ebf2
 
                                 <thead>
                                     <tr>
@@ -57,13 +67,10 @@
                                                     style="width: 50px;">
                                             </td>
                                             <td>
-                                                {{--  {{ dd(explode(',',$y->foto)); }}  --}}
-                                                @foreach (explode(',', $y->foto) as $ft)
-                                                    <img src="{{ asset('files/' . $ft) }}" alt=""
-                                                        style="width: 50px;">
-                                                @endforeach
+                                                <img src="{{ asset('fotomahasiswa/' . $y->foto) }}" alt=""
+                                                    style="width: 50px;">
                                             </td>
-                                            <td>{{ $y->judul_fasilitas }}</td>
+                                            <td>{{  $y->judul_fasilitas}}</td>
                                             <td>{!! $y->deskripsi !!}</td>
 
                                             {{-- <td>{{ $y->created_at->format('D M Y') }}</td> --}}

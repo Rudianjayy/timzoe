@@ -12,7 +12,7 @@ class fasilitassekolah extends Model
     use HasFactory;
 
     protected $guarded = [];
-    protected $fillable = ['foto', 'foto_sampul', 'judul_fasilitas', 'deskripsi'];
+    protected $fillable = ['foto_sampul','foto', 'judul_fasilitas', 'deskripsi'];
 
 
     public function getCreatedAtAttribute()
@@ -20,4 +20,5 @@ class fasilitassekolah extends Model
         return Carbon::parse($this->attributes['created_at'])
             ->translatedFormat(' d F Y');
     }
+
 }

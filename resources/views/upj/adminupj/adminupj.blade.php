@@ -7,17 +7,13 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 @endpush
 @section('content')
-
-    <head>
-        @include('layout.css')
-    </head>
-
-    <body>
+<head>
+    @include('layout.css')
+</head>
+<body>
 
 
-        <div class="breadcrumbs">
-            <br> <br>
-        </div>
+    <div class="breadcrumbs">
 
         {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> --}}
 
@@ -35,19 +31,22 @@
                 <div class="card">
                     <div class="card-body">
 
-                            <div>
-                                <a href="/tambahslider" class="btn btn-primary mt-5"
-                                    id="kt_account_profile_details_submit">Tambah
-                                    +</a>
-                            </div>
-                        <table id="" class="table table-bordered dt-responsive nowrap"
+                        {{--  <div>
+                            <a href="/tambahupj" class="btn btn-primary mt-5"
+                                id="kt_account_profile_details_submit">Tambah
+                                +</a>
+                        </div>  --}}
+                        <table id="datatable" class="table table-bordered dt-responsive nowrap"
                             style="border-collapse: collapse; border-spacing: 0; width: 100%;">
 
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">Deskripsi</th>
+                                    <th scope="col">Judul 1</th>
+                                    <th scope="col">Judul 2</th>
+                                    <th scope="col">Judul 3</th>
                                     <th scope="col">Foto</th>
+                                    <th scope="col">Dibuat</th>
                                     <th scope="col">Aksi</th>
                                 </tr>
                             </thead>
@@ -57,22 +56,28 @@
                                 @php
                                     $no = 1;
                                 @endphp
-                                @foreach ($data as $d)
+                                @foreach ($data as $upj)
                                     <tr>
                                         <th>{{ $no++ }}</th>
 
-                                        <td>{!! $d->deskripsi1_slider !!}</td>
-
+                                        <td>{!! $upj->judul1 !!}</td>
+                                        <td>{!! $upj->judul2 !!}</td>
+                                        <td>{!! $upj->judul3 !!}</td>
                                         <td>
-                                            <img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt=""
+                                            <img src="{{ asset('fotomahasiswa/' . $upj->foto_upj) }}" alt=""
                                                 style="width: 50px;">
                                         </td>
+                                               {{--  @php
+                                                dd($upj->kategori);
+                                               @endphp  --}}
+                                        </td>
+                                        <td>{{ $upj->created_at }}</td>
 
-                                        {{-- <td>{{ $d->created_at->format('D M Y') }}</td> --}}
+                                        {{-- <td>{{ $upj->created_at->format('D M Y') }}</td> --}}
                                         <td>
-                                            <a href="/editslider/{{ $d->id }}" class="btn btn-warning">Edit</a>
+                                            <a href="/editupj/{{ $upj->id }}" class="btn btn-warning">Edit</a>
 
-                                            {{-- <a href="/deletemuhinews/{{ $d->id }}" class="btn btn-danger" onclick="return confirm('apakah anda yakin?')">Delete</a> --}}
+                                            {{--  <a href="/deleteupj/{{ $upj->id }}" class="btn btn-danger" onclick="return confirm('yakin gen?')">Delete</a>  --}}
 
 
 
@@ -135,11 +140,11 @@
             });
         </script>
 
-    </body>
-    @include('sweetalert::alert')
+        </body>
+        @include('sweetalert::alert')
 
-    @include('layout.script')
+        @include('layout.script')
     </body>
 
-    {{-- @endpush --}}
-@endsection
+        {{-- @endpush --}}
+    @endsection

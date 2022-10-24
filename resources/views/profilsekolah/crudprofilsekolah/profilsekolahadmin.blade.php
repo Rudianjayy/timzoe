@@ -43,7 +43,6 @@
                                     <th scope="col">judul</th>
                                     <th scope="col">Deskripsi</th>
                                     <th scope="col">foto</th>
-                                    <th scope="col">deskripsi_lanjutan</th>
                                     <th scope="col">foto_simuhi</th>
                                     <th scope="col">deskripsi_simuhi</th>
                                     <th scope="col">Aksi</th>
@@ -57,21 +56,20 @@
                                     <tr>
                                         <th>{{ $no++ }}</th>
                                         <td>{{ $q->judul }}</td>
-                                        <td>{{ $q->deskripsi }}</td>
+                                        <td>{!! $q->deskripsi !!}</td>
                                         <td>
                                             <img src="{{ asset('fotomahasiswa/' . $q->foto) }}" alt=""
                                                 style="width: 50px;">
                                         </td>
-                                        <td>{{ $q->deskripsi_lanjutan }}</td>
                                         <td>
                                             <img src="{{ asset('fotomahasiswa/' . $q->foto_simuhi) }}" alt=""
                                                 style="width: 50px;">
                                         </td>
-                                        <td>{{ $q->deskripsi_simuhi }}</td>
+                                        <td>{!! $q->deskripsi_simuhi !!}</td>
                                         {{-- <td>{{ $q->created_at->format('D M Y') }}</td> --}}
                                         <td>
                                             <a href="/editprofilsekolah/{{ $q->id }}" class="btn btn-warning fas fa-pen-alt">Edit</a>
-                                            <a href="/deleteprofilsekolah/{{ $q->id }}" class="btn btn-danger fas fa-trash-alt" onclick="return confirm('yakin gen?')">Delete</a>
+                                            {{--  <a href="/deleteprofilsekolah/{{ $q->id }}" class="btn btn-danger fas fa-trash-alt" onclick="return confirm('yakin gen?')">Delete</a>  --}}
                                         </td>
                                     </tr>
                                 @endforeach

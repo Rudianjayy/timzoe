@@ -19,7 +19,7 @@ use App\Models\Personaljurusan;
 class LandingController extends Controller
 {
     public function index () {
-        $data = Album::paginate(2);
+        $data = Album::all();
         $k = Muhinews::paginate(6);
         $d = Muhinews::paginate(6);
         $f = Muhinews::paginate(3);
@@ -32,11 +32,12 @@ class LandingController extends Controller
         $personal = Personaljurusan::all();
         $kh = Jurusan::all();
         $ps = Prestasi::all();
+        $paginate = Prestasi::paginate(3);
         $ft = footeer::all();
         $akademi = Akademi::all();
         $logo = footeer::all();
         $link = footeerdua::all();
-        return view('landingpage.landing', compact('data','d','f','ss','fs','ft','sa','js','personal','kh','ps','akademi','logo','link'));
+        return view('landingpage.landing', compact('data','d','f','ss','fs','ft','sa','js','personal','kh','ps','akademi','logo','paginate','link'));
 
 
     }

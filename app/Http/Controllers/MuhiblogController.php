@@ -6,6 +6,7 @@ use App\Models\Muhiblog;
 use App\Models\Muhinews;
 use App\Models\Personaljurusan;
 use App\Models\footeer;
+use App\Models\Kategoriberita;
 use Illuminate\Http\Request;
 
 class MuhiblogController extends Controller
@@ -14,6 +15,61 @@ class MuhiblogController extends Controller
     {
         $blog =Muhinews::findOrFail($id);
         $d = Muhinews::paginate(3);
+<<<<<<< HEAD
+        $personal = Personaljurusan::all();
+        $logo = footeer::all();
+        $kategori = Kategoriberita::all();
+        return view('muhinews.muhiblog',compact('d','blog','personal','logo','kategori'));
+    }
+    public function kategoriberita() {
+        $data = Kategoriberita::all();
+        return view('muhinews.admin.kategori.kategoriberita', compact('data'));
+    }
+    public function tambahkategori()
+    {
+        return view('muhinews.admin.kategori.tambahkategori');
+    }
+
+    public function kategoriproses(Request $request){
+        // dd($request->all());
+        $this->validate($request,[
+            'kategori' =>'required',
+        ],[
+            'kategori.required' =>'Harus diisi',
+
+        ]);
+        $data = Kategoriberita::create([
+            'kategori' =>$request->kategori,
+        ]);
+        return redirect()->route('kategoriberita')->with('toast_success',' Data Berhasil di Tambahkan!');
+    }
+
+    public function editkategori($id){
+
+        $data = Kategoriberita::findOrFail($id);
+        return view('muhinews.admin.kategori.editkategori', compact('data'));
+    }
+
+    public function editproseskategori(Request $request, $id){
+        $this->validate($request,[
+            'kategori' =>'required',
+        ],[
+            'kategori.required' =>'Harus diisi',
+        ]);
+        $data = Kategoriberita::find($id);
+        $data->update([
+            'kategori' =>$request->kategori,
+        ]);
+
+        return redirect('kategoriberita')->with('toast_success',' Data Berhasil di Ubah!');
+
+    }
+
+    public function deletekategori($id){
+        $data = Kategoriberita::find($id);
+        $data->delete();
+        return redirect('kategoriberita')->with('toast_error',' Data Berhasil di Hapus!');
+=======
         $kategori = Muhinews::all();
         return view('muhinews.muhiblog',compact('d','blog','kategori'));
     }
@@ -103,7 +159,11 @@ class MuhiblogController extends Controller
         $data = Muhiblog::find($id);
         $data->delete();
         return redirect('muhiblogadmin')->with('toast_error', ' Data Berhasil di Hapus!');
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 4d6c595584a3374467fc2c2c438a01ceb412aec7
+>>>>>>> 670a97242da062ac8040965fb58783da25780d37
+>>>>>>> b29191c437e857c1bd2bfbca1f693b789857ebf2
     }
-    
-    
 }

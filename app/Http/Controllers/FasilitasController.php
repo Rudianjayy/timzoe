@@ -8,7 +8,7 @@ use App\Models\Muhinews;
 use Illuminate\Http\Request;
 use App\Models\fasilitassekolah;
 use App\Models\Personaljurusan;
-
+use App\Models\footeerdua;
 
 class FasilitasController extends Controller
 {
@@ -20,8 +20,8 @@ class FasilitasController extends Controller
         $personal = personaljurusan::all();
         $ft = Footeer::all();
         $logo = footeer::all();
-
-        return view('fasilitassekolah.fasilitassekolah', compact('q','f','kh','personal','ft','logo'));
+        $link = footeerdua::all();
+        return view('fasilitassekolah.fasilitassekolah', compact('q','f','kh','personal','ft','logo','link'));
 
     }
     public function detailfoto($id)

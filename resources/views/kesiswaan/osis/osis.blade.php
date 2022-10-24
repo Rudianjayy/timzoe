@@ -16,7 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" type="text/css" href="{{ asset('landing/html/bidzend/assets/css/style.css') }}">
 
-<link rel="stylesheet" type="text/css" href="{{ asset('landing/html/bidzend/assets/css/responsive.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('landing/html/bidzend/assets/css/responsive.css') }}">
 
 
     <link rel="shortcut icon" href="{{ asset('landing/html/bidzend/assets/icon/muhilog.png') }}">
@@ -87,41 +87,79 @@
         </div>
     </section> -->
     <section class="blog-standard blog-details">
+        <img src="assets/images/shapes/bg-shape-1-1.png" class="section__bg-shape-1" alt="">
+        <img src="assets/images/shapes/bg-shape-1-2.png" class="section__bg-shape-2" alt="">
+        <img src="assets/images/shapes/bg-shape-1-3.png" class="section__bg-shape-3" alt="">
 
-        <div class="portfolio-details__image">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-9">
-                        <img src="fotomahasiswa/' . $d->foto" alt="">
-                    </div><!-- /.col-lg-9 -->
-                </div><!-- /.row -->
-            </div><!-- /.container -->
-        </div><!-- /.portfolio-details__image -->
-        <div class="portfolio-details__main">
-            <div class="container">
-                @foreach ($b as $b)
-                <div class="row">
-                    <div class="col-lg-8">
-                        <div class="portfolio-details__content">
-                            <h3>{{$b->judul_osis}}</h3>
 
-                            <p>{!!$b->deskripsi_osis!!}</p>
 
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <img src="{{ asset('fotomahasiswa/' . $b->foto) }}" alt="">
-                                </div><!-- /.col-md-6 -->
-                            </div><!-- /.row -->
-                            @endforeach
+        <div class="container">
+            <div class="row">
+                @foreach ($osis as $osis )
+                <div class="col-lg-8">
+                    <div class="blog-details__main">
+                    <center><h3>{{$osis->judul_osis}}</h3></center>
+                        <center> <img src="{{ asset('fotomahasiswa/' . $osis->foto) }}" class="img-fluid" alt=""></center>
+                        <p>{!! $osis->deskripsi_osis !!}</p>
+                    </div><!-- /.blog-details__main -->
+                </div><!-- /.col-lg-8 -->
+                @endforeach
+                <div class="col-lg-4">
+                    <div class="sidebar sidebar__right">
 
-                        </div><!-- /.portfolio-details__content -->
+                        <div class="sidebar__single sidebar__category">
+                            <ul class="list-unstyled sidebar__category-list">
+                                <li>
+                                    <a href="/indexakademi">Akademi</a>
+                                </li>
+                                <li>
+                                    <a href="/ekstra">Ekstrakulikuler</a>
+                                </li>
+                                <li>
+                                    <a href="/osis">IPM</a>
+                                </li>
+                                <li>
+                                    <a href="/alumni">Alumni</a>
+                                </li>
+                            </ul><!-- /.list-unstyled sidebar__category-list -->
+                        </div><!-- /.sidebar__single -->
+                        <div class="sidebar__single sidebar__post">
+                            <h3 class="sidebar__title">Muhi News</h3>
+                            <div class="sidebar__post-wrap">
+                                @foreach ($d as $d )
+                                <div class="sidebar__post-single">
+                                    <div class="sidebar__post-image">
+                                        <img class="zoom" src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt="">
+                                    </div><!-- /.sidebar__post-image -->
+                                    <div class="sidebar__post-content">
+                                        <h3><a href="/muhiblog/{{ $d->id }}">{{$d->judul}}</a></h3>
+                                        <span>{{$d->created_at}}</span>
+                                    </div><!-- /.sidebar__post-content -->
+                                </div><!-- /.sidebar__post-single -->
+                                @endforeach
+                            </div><!-- /.sidebar__post-wrap -->
+                        </div><!-- /.sidebar__single -->
+                        <div class="sidebar__single sidebar__archive">
+                            <h3 class="sidebar__title">Lainnya</h3>
+                            <ul class="list-unstyled sidebar__archive-list">
+                                <li>
+                                    <a href="/iduka">Iduka<span></span></a>
+                                </li>
+                                <li>
+                                    <a href="/muhinews">Muhi News<span></span></a>
+                                </li>
+                                <li>
+                                    <a href="/upj">UPJ TEKAJE<span></span></a>
+                                </li>
+                            </ul><!-- /.list-unstyled sidebar__archive-list -->
+                        </div><!-- /.sidebar__single -->
 
-                    </div><!-- /.col-lg-8 -->
+                    </div><!-- /.sidebar -->
+                </div><!-- /.col-lg-4 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section><!-- /.blog-standard -->
 
-                </div><!-- /.row -->
-            </div><!-- /.container -->
-        </div><!-- /.portfolio-details__main -->
-    </section><!-- /.portfolio-details -->
     </div>
 
     @include('koneksi.footer')

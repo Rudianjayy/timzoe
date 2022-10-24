@@ -7,7 +7,7 @@ use App\Models\Muhinews;
 use Illuminate\Http\Request;
 use App\Models\Personaljurusan;
 use App\Models\footeer;
-
+use App\Models\footeerdua;
 class bsiController extends Controller
 {
     public function index() {
@@ -17,7 +17,8 @@ class bsiController extends Controller
         $personal = Personaljurusan::all();
         $ft = footeer::all();
         $logo = footeer::all();
-        return view('muhinews.muhinews',compact('k','f','kh','personal','ft','logo'));
+        $link = footeerdua::all();
+        return view('muhinews.muhinews',compact('k','f','kh','personal','ft','logo','link'));
 
     }
     public function indexadmin() {

@@ -32,7 +32,7 @@ class FooteerduaController extends Controller
             'judul' =>$request->judul,
             'link' =>$request->link,
         ]);
-       
+
         return redirect()->route('adminfooteerdua')->with('toast_success',' Data Berhasil di Tambahkan!');
     }
 

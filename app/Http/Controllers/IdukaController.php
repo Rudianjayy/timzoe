@@ -9,6 +9,7 @@ use App\Models\Muhinews;
 use App\Models\Fotoiduka;
 use Illuminate\Http\Request;
 use App\Models\Personaljurusan;
+use App\Models\footeerdua;
 
 class IdukaController extends Controller
 {
@@ -19,7 +20,8 @@ class IdukaController extends Controller
         $personal = Personaljurusan::all();
         $ft = footeer::all();
         $logo = footeer::all();
-        return view('iduka.iduka', compact('i','fotoiduka','kh','personal','ft','logo'));
+        $link = footeerdua::all();
+        return view('iduka.iduka', compact('i','fotoiduka','kh','personal','ft','logo','link'));
     }
     public function indexadmin() {
         $data = Iduka::all();

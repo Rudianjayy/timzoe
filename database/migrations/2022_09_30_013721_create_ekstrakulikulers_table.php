@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('foto');
             $table->string('judul_ekstra');
             $table->text('deskripsi_ekstrakulikuler');
+            $table->text('deskripsi_detail');
             $table->timestamps();
         });
     }

@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use App\Models\IdentitasSekolah;
 use App\Models\Personaljurusan;
 use App\Models\Footeer;
-
+use App\Models\footeerdua;
 
 
 class IdentitasSekolahController extends Controller
@@ -20,7 +20,8 @@ class IdentitasSekolahController extends Controller
         $personal = Personaljurusan::all();
         $ft = footeer::all();
         $logo = footeer::all();
-        return view('identitassekolah.identitas_sekolah',compact('i','f','kh','personal','ft','logo'));
+        $link = footeerdua::all();
+        return view('identitassekolah.identitas_sekolah',compact('i','f','kh','personal','ft','logo','link'));
     }
     public function identitassekolahadmin()
     {

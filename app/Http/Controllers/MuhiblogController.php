@@ -16,7 +16,6 @@ class MuhiblogController extends Controller
         $d = Muhinews::paginate(3);
         $kategori = Muhinews::all();
         return view('muhinews.muhiblog',compact('d','blog','kategori'));
-<<<<<<< HEAD
     }
     public function muhiblogadmin()
     {
@@ -104,8 +103,6 @@ class MuhiblogController extends Controller
         $data = Muhiblog::find($id);
         $data->delete();
         return redirect('muhiblogadmin')->with('toast_error', ' Data Berhasil di Hapus!');
-=======
->>>>>>> 4d6c595584a3374467fc2c2c438a01ceb412aec7
     }
     
     

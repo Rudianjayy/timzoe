@@ -37,6 +37,7 @@
                                     <th scope="col">Foto</th>
                                     <th scope="col">Judul Ekstra</th>
                                     <th scope="col">Deskripsi</th>
+                                    <th scope="col">Deskripsi Detail</th>
                                     <th scope="col">Aksi</th>
                                 </tr>
                             </thead>
@@ -56,12 +57,12 @@
                                         </td>
                                     <td>{{ $d->judul_ekstra }}</td>
                                     <td>{!! $d->deskripsi_ekstrakulikuler !!}</td>
-
+                                    <td>{!! $d->deskripsi_detail !!}</td>
                                         {{-- <td>{{ $d->created_at->format('D M Y') }}</td> --}}
                                         <td>
                                             <a href="/editekstrakulikuler/{{ $d->id }}" class="btn btn-warning">Edit</a>
 
-                                            <a href="/delete/{{ $d->id }}" class="btn btn-danger" onclick="return confirm('apakah anda yakin?')">Delete</a>
+                                            <a href="/deleteekstra/{{ $d->id }}" class="btn btn-danger" onclick="return confirm('apakah anda yakin?')">Delete</a>
 
                                         </td>
                                     </tr>

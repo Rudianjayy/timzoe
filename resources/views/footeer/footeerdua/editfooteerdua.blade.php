@@ -6,7 +6,7 @@
 </head>
 
     <body>
-        <h1 class="text-center mb-4">Edit Footeerdua</h1>
+        <h1 class="text-center mb-4">Edit Footeelink</h1>
 
         <div class="container">
 
@@ -18,12 +18,11 @@
                                 @csrf
 
                                 <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Ubah Foto :</label>
-                                    <img class="img mb-3" src="{{ asset('fotomahasiswa/' . $data->foto) }}" alt=""
-                                        style="width: 70px">
-                                    <input type="file" name="foto" class="form-control" id="foto"
-                                        aria-describedby="emailHelp" value="{{ $data->foto }}">
-                                    @error('foto')
+                                    <label for="exampleInputEmail1" class="form-label">Judul:</label>
+
+                                    <input type="text" name="judul" class="form-control" id="judul"
+                                        aria-describedby="emailHelp" value="{{ $data->judul }}">
+                                    @error('judul')
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
@@ -38,7 +37,7 @@
                                                     </div>
                                                     <div class="card-body">
                                                         {{--  <form method="POST" enctype="multipart/form-data">  --}}
-                                                        <textarea name="deskripsi_footeerdua" id="mytextarea">{{  $data->deskripsi_footeer }}</textarea>
+                                                        <textarea name="link" id="mytextarea">{{  $data->link }}</textarea>
                                                     </div>
                                                 </div>
                                             </div>

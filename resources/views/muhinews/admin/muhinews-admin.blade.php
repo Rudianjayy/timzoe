@@ -68,17 +68,12 @@
                                         <td>{{ $d->judul }}</td>
                                         <td>{{ $d->deskripsi_muhinews }}</td>
                                         <td>{!! $d->deskripsi_detail !!}</td>
-<<<<<<< HEAD
                                         <td>{{ $d->Kategori }}
                                                {{--  @php
                                                 dd($d->kategori);
                                                @endphp  --}}
                                         </td>
                                         <td>{{ $d->created_at }}</td>
-=======
-                                        <td>{{ $d->kategori }}
-
->>>>>>> 4d6c595584a3374467fc2c2c438a01ceb412aec7
 
                                         {{-- <td>{{ $d->created_at->format('D M Y') }}</td> --}}
                                         <td>

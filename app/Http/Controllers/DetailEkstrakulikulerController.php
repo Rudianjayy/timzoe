@@ -7,24 +7,28 @@ use Illuminate\Http\Request;
 use App\Models\DetailEkstrakulikuler;
 use App\Models\footeer;
 use App\Models\Personaljurusan;
-
+use App\Models\footeerdua;
+use App\Models\Muhinews;
 
 class DetailEkstrakulikulerController extends Controller
 {
     public function detailekstrakulikuler($id) {
         // $data= Detailekstrakulikuler::where('ekstrakulikulers_id',$id)->firstOrFail();
         // $foto= Detailekstrakulikuler::where('ekstrakulikulers_id',$id)->get();
+        $detail = ekstrakulikuler::findOrFail($id);
+        $d = Muhinews::paginate(3);
         $data= Detailekstrakulikuler::all();
         $foto= Detailekstrakulikuler::all();
         $personal = Personaljurusan::all();
         // $akademi = akademi::all();
         $ft = footeer::all();
         $logo = footeer::all();
+        $link = footeerdua::all();
         // $data = ekstrakulikuler::all();
         // $ft = footeer::all();
         // $logo = footeer::all();
         // $personal = Personaljurusan::all();
-        return view('kesiswaan.ekstrakulikuler.detail.detailekstrakulikuler',compact('data','foto','personal','ft','logo'));
+        return view('kesiswaan.ekstrakulikuler.detail.detailekstrakulikuler',compact('data','foto','personal','ft','logo','link','detail','d'));
 
     }
     public function admindetailekstrakulikuler(){

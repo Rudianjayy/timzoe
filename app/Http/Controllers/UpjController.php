@@ -10,7 +10,7 @@ use App\Models\Edotel;
 use App\Models\Pegadaian;
 use App\Models\Suryamart;
 use App\Models\Printing;
-
+use App\Models\footeerdua;
 use Illuminate\Http\Request;
 
 class UpjController extends Controller
@@ -20,22 +20,24 @@ class UpjController extends Controller
         $kh = Jurusan::all();
         $personal = Personaljurusan::all();
         $logo = footeer::all();
-        return view('upj.indexupj', compact('f','kh','personal','logo'));
+        $link = footeerdua::all();
+        return view('upj.indexupj', compact('f','kh','personal','logo','link'));
     }
-    
 
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
     public function indexbsi(){
         $bsi = Bsi::all();
         $data = Bsi::all();
-        return view('upj.bsi.bsi', compact('bsi','data'));
+        $link = footeerdua::all();
+        return view('upj.bsi.bsi', compact('bsi','data','link'));
     }
 
     public function loby8() {
@@ -117,7 +119,8 @@ class UpjController extends Controller
     public function indexmuhiprint(){
         $print = Printing::all();
         $data2 = Printing::all();
-        return view('upj.muhip.muhi-printing', compact('print','data2'));
+        $link = footeerdua::all();
+        return view('upj.muhip.muhi-printing', compact('print','data2','link'));
     }
 
     public function loby9() {
@@ -183,8 +186,8 @@ class UpjController extends Controller
         $data2->delete();
         return redirect('adminmuhiprint')->with('toast_error',' Data Berhasil di Hapus!');
     }
-    
-    
+
+
 
 
 
@@ -196,7 +199,8 @@ class UpjController extends Controller
     public function indexpegadaian(){
         $gadai = Pegadaian::all();
         $data3 = Pegadaian::all();
-        return view('upj.gadai.pegadaian', compact('gadai','data3'));
+        $link = footeerdua::all();
+        return view('upj.gadai.pegadaian', compact('gadai','data3','link'));
     }
 
     public function loby10() {
@@ -274,7 +278,8 @@ class UpjController extends Controller
     public function indexsuryamart(){
         $sm = Suryamart::all();
         $data4 = Suryamart::all();
-        return view('upj.surya.suryamart', compact('sm','data4'));
+        $link = footeerdua::all();
+        return view('upj.surya.suryamart', compact('sm','data4','link'));
     }
 
     public function loby11() {
@@ -353,7 +358,8 @@ class UpjController extends Controller
     public function indexedotel(){
         $ed = Edotel::all();
         $data5 = Edotel::all();
-        return view('upj.edotel.edotel', compact('ed','data5'));
+        $link = footeerdua::all();
+        return view('upj.edotel.edotel', compact('ed','data5','link'));
     }
 
     public function loby12() {

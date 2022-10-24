@@ -44,9 +44,8 @@
 
 <body class="body header-fixed ">
     <div class="preload preload-container">
-        {{--  <div class="preload-logo"></div>  --}}
-        <div class="preload-logo"><img src="{{ asset('landing/html/bidzend/assets/images/logo/muhi.jpg') }}"
-                alt="Image" style="width:570 !important;"></div>
+        {{-- <div class="preload-logo"></div>  --}}
+        <div class="preload-logo"><img src="{{ asset('landing/html/bidzend/assets/images/logo/muhi.jpg') }}" alt="Image" style="width:570 !important;"></div>
     </div>
 
     <div id="wrapper">
@@ -74,73 +73,80 @@
             </section>
 
 
-            <section class="service-details">
+            <section class="blog-standard blog-details">
+                <img src="assets/images/shapes/bg-shape-1-1.png" class="section__bg-shape-1" alt="">
+                <img src="assets/images/shapes/bg-shape-1-2.png" class="section__bg-shape-2" alt="">
+                <img src="assets/images/shapes/bg-shape-1-3.png" class="section__bg-shape-3" alt="">
+
+
+
                 <div class="container">
                     <div class="row">
+                        <div class="col-lg-8">
+                            <div class="blog-details__main">
+                                <div class="blog-two__meta">
+                                    <a href="blog-details.html">{{$detail->created_at}}</a>
+                                </div><!-- /.blog-two__meta -->
+                                <h3>{{$detail->judul_ekstra}}</h3>
+                                <center> <img src="{{ asset('fotomahasiswa/' . $detail->foto) }}" class="img-fluid" alt="" style="width: 480px; height:340px;"></center>
+                                <p>{!! $detail->deskripsi_detail !!}</p>
+                            </div><!-- /.blog-details__main -->
+
+
+
+                        </div><!-- /.col-lg-8 -->
                         <div class="col-lg-4">
-                            <div class="sidebar sidebar__left">
+                            <div class="sidebar sidebar__right">
 
-                                {{-- <div class="sidebar__single sidebar__category">
+                                <div class="sidebar__single sidebar__category">
                                     <ul class="list-unstyled sidebar__category-list">
                                         <li>
-                                            <a href="service-d-social.html">Social Marketing</a>
+                                            <a href="/indexakademi">Akademi</a>
                                         </li>
                                         <li>
-                                            <a href="service-d-content.html">Content Marketing</a>
+                                            <a href="/ekstra">Ekstrakulikuler</a>
                                         </li>
                                         <li>
-                                            <a href="service-d-seo.html">SEO Optimization</a>
-                                        </li>
-                                        <li class="active">
-                                            <a href="service-d-ppc.html">PPC Advertising</a>
+                                            <a href="/osis">IPM</a>
                                         </li>
                                         <li>
-                                            <a href="service-d-smm.html">SMM Marketing</a>
+                                            <a href="/alumni">Alumni</a>
                                         </li>
                                     </ul><!-- /.list-unstyled sidebar__category-list -->
-                                </div><!-- /.sidebar__single --> --}}
-
-                                {{-- <div class="sidebar__single sidebar__brouchers">
-                                    <h3 class="sidebar__title">Foto</h3>
-                                    <ul class="list-unstyled sidebar__category-list">
+                                </div><!-- /.sidebar__single -->
+                                <div class="sidebar__single sidebar__post">
+                                    <h3 class="sidebar__title">Muhi News</h3>
+                                    <div class="sidebar__post-wrap">
+                                        @foreach ($d as $d )
+                                        <div class="sidebar__post-single">
+                                            <div class="sidebar__post-image">
+                                                <img class="zoom" src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt="">
+                                            </div><!-- /.sidebar__post-image -->
+                                            <div class="sidebar__post-content">
+                                                <h3><a href="/muhiblog/{{ $d->id }}">{{$d->judul}}</a></h3>
+                                                <span>{{$d->created_at}}</span>
+                                            </div><!-- /.sidebar__post-content -->
+                                        </div><!-- /.sidebar__post-single -->
+                                        @endforeach
+                                    </div><!-- /.sidebar__post-wrap -->
+                                </div><!-- /.sidebar__single -->
+                                <div class="sidebar__single sidebar__archive">
+                                    <h3 class="sidebar__title">Lainnya</h3>
+                                    <ul class="list-unstyled sidebar__archive-list">
                                         <li>
-                                            <a href="#">Download Now <i class="far fa-download"></i></a>
+                                            <a href="/iduka">Iduka<span></span></a>
                                         </li>
                                         <li>
-                                            <a href="#">Characteristics <i class="far fa-file-pdf"></i></a>
+                                            <a href="/muhinews">Muhi News<span></span></a>
                                         </li>
-                                    </ul><!-- /.list-unstyled sidebar__category-list -->
-                                </div><!-- /.sidebar__single --> --}}
+                                        <li>
+                                            <a href="/upj">UPJ TEKAJE<span></span></a>
+                                        </li>
+                                    </ul><!-- /.list-unstyled sidebar__archive-list -->
+                                </div><!-- /.sidebar__single -->
 
                             </div><!-- /.sidebar -->
                         </div><!-- /.col-lg-4 -->
-                        <div class="col-lg-8">
-                        @foreach ($foto as $ft )
-                            <div class="service-details__main">
-                                <div class="service-details__image">
-                                    <img src="{{ asset('fotomahasiswa/'.$data->foto) }}" alt="" style="width: 500px">
-                                </div><!-- /.service-details__image -->
-                                <div class="service-details__content">
-                                    <h3>{{ $data->ekstrakulikuler->nama_ekstrakulikuler}}</h3>
-                                    <p>
-                                        {!! $data->deskripsi_detail!!}
-                                    </p>
-
-                                    {{-- <ul class="service-details__list list-unstyled">
-                                        <li><i class="fa fa-check-circle"></i>Labore et dolore magna aliqua</li>
-                                        <li><i class="fa fa-check-circle"></i>Best Solution of the Year</li>
-                                        <li><i class="fa fa-check-circle"></i>Labore et dolore magna aliqua</li>
-                                    </ul><!-- /.service-details__list list-unstyled --> --}}
-                                    {{-- <div class="row">
-
-                                        <div class="col-md-6">
-                                            <img src="{{ asset('fotomahasiswa/'.$ft->foto) }}" alt="">
-                                        </div><!-- /.col-lg-6 -->
-                                    </div><!-- /.row --> --}}
-                            </div><!-- /.service-details__main -->
-                            @endforeach
-                        </div><!-- /.col-lg-8 -->
-
                     </div><!-- /.row -->
                 </div><!-- /.container -->
             </section><!-- /.blog-standard -->

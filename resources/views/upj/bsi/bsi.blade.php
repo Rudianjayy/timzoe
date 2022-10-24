@@ -71,56 +71,17 @@
                 </div>
             </section>
 
-<<<<<<< HEAD
-            @foreach ($bsi as $b )
-            <section class="portfolio-details">
-                <div class="portfolio-details__image">
-                    <div class="container">
-                        <div class="blog-two__meta">
-                            {{-- <a href="blog-details.html">Sara dodly</a>
-                            <span>-</span> --}}
-                            <a href="blog-details.html"><h4> Diterbitkan : {{ $b->created_at }} </h4></a>
-                        </div><!-- /.blog-two__meta -->
-                        <div class="row">
-
-                            <div class="col-lg-9">
-                                <img src="{{ asset('fotomahasiswa/' . $b->foto) }}" alt=""  >
-                            </div><!-- /.col-lg-9 -->
-                        </div><!-- /.row -->
-                    </div><!-- /.container -->
-                </div><!-- /.portfolio-details__image -->
-                <br><br>
-                <div class="portfolio-details__main">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-8">
-
-                                <div class="portfolio-details__content">
-                                    <p>{!! $b->deskripsi_bsi !!}</p>
-
-                                </div><!-- /.portfolio-details__content -->
-
-                            </div><!-- /.col-lg-8 -->
-
-                        </div><!-- /.row -->
-                    </div><!-- /.container -->
-                </div><!-- /.portfolio-details__main -->
-            </section><!-- /.portfolio-details -->
-
-            @endforeach
-           <br><br><br>
-=======
             <section class="blog-standard blog-details">
                 <div class="container">
                     <div class="row">
                                 @php
-                                    
+
                                     $bsi = \App\Models\Bsi::all();
                                 @endphp
                         <div class="col-lg-8">
                             @foreach ($bsi as $bsi )
-                                
-                            
+
+
                             <div class="blog-details__main">
 
                                 <div class="blog-two__meta">
@@ -131,7 +92,7 @@
                                 <img src="{{ asset('fotomahasiswa/' . $bsi->foto) }}" class="img-fluid" alt="">
                                 {{-- <h3>Additional Services that will <br> Grow Business</h3> --}}
                                 <p>{!! $bsi->deskripsi_bsi !!} </p>
-    
+
                                 {{-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                                     ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                                     ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
@@ -167,16 +128,16 @@
                                     velit esse cillum dolore eu fugiat nulla pariatur.</p> --}}
                             </div><!-- /.blog-details__main -->
                             @endforeach
-    
-                           
+
+
                             {{-- <div class="blog-post__navigations">
                                 <a class="blog-post__navigations-left" href="#">Previous Post <i
                                         class="far fa-angle-left"></i></a>
                                 <a class="blog-post__navigations-right" href="#">Next Post <i
                                         class="far fa-angle-right"></i></a>
                             </div><!-- /.blog-post__navigations --> --}}
-    
-    
+
+
                             {{-- <div class="comment-one">
                                 <h3 class="comment-one__title">3 Comments</h3>
                                 <div class="comment-one__single">
@@ -221,7 +182,7 @@
                             </div><!-- /.comment-one -->
                             <div class="contact-two__form-wrap">
                                 <h3>Leave a Comment</h3>
-    
+
                                 <form action="http://ashik.templatepath.net/inovex-html-files/assets/inc/sendemail.php" class="contact-one__form">
                                     <div class="row">
                                         <div class="col-md-6">
@@ -244,9 +205,9 @@
                                         </div><!-- /.col-md-12 -->
                                     </div><!-- /.row -->
                                 </form><!-- /.contact-one__form -->
-    
+
                             </div><!-- /.contact-two__form-wrap --> --}}
-    
+
                         </div><!-- /.col-lg-8 -->
                         <div class="col-lg-4">
                             <div class="sidebar sidebar__right">
@@ -281,7 +242,7 @@
                                     @endphp
                                     <div class="sidebar__post-wrap">
                                         @foreach ($muhiberita as $mb )
-                                            
+
                                         <div class="sidebar__post-single">
                                             <div class="sidebar__post-image">
                                                 <img src="{{ asset('fotomahasiswa/' . $mb->foto) }}" alt="">
@@ -292,7 +253,7 @@
                                             </div><!-- /.sidebar__post-content -->
                                         </div><!-- /.sidebar__post-single -->
                                         @endforeach
-                                       
+
                                     </div><!-- /.sidebar__post-wrap -->
                                 </div><!-- /.sidebar__single -->
                                 <div >
@@ -340,7 +301,6 @@
                     </div><!-- /.row -->
                 </div><!-- /.container -->
             </section><!-- /.blog-standard -->
->>>>>>> 4d6c595584a3374467fc2c2c438a01ceb412aec7
 
 
 

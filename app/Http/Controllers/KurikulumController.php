@@ -9,6 +9,7 @@ use App\Models\footeer;
 use App\Models\Footeerdua;
 use App\Models\Jurusan;
 use App\Models\Personaljurusan;
+use App\Models\footeerdua;
 
 use Illuminate\Http\Request;
 
@@ -21,7 +22,7 @@ class KurikulumController extends Controller
         $ft = footeer::all();
         $personal = Personaljurusan::all();
         $logo = footeer::all();
-        $link = Footeerdua::all();
+        $link = footeerdua::all();
         return view('kurikulum.kalenderakademik', compact('d','f','ft','personal','logo','link'));
     }
 
@@ -104,7 +105,8 @@ class KurikulumController extends Controller
         $ft = Footeer::all();
         $personal = Personaljurusan::all();
         $logo = footeer::all();
-        return view('kurikulum.jadwalkegiatan', compact('f','kh','ft','personal','logo'));
+        $link = footeerdua::all();
+        return view('kurikulum.jadwalkegiatan', compact('f','kh','ft','personal','logo','link'));
     }
 
 

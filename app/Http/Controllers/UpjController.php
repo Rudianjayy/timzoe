@@ -534,7 +534,12 @@ class UpjController extends Controller
     {
         $ed = Edotel::all();
         $data5 = Edotel::all();
+<<<<<<< HEAD
+        $link = footeerdua::all();
+        return view('upj.edotel.edotel', compact('ed','data5','link'));
+=======
         return view('upj.edotel.edotel', compact('ed', 'data5'));
+>>>>>>> b29191c437e857c1bd2bfbca1f693b789857ebf2
     }
 
     public function loby12()

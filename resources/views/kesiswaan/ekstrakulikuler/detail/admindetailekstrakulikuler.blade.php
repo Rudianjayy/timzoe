@@ -55,7 +55,7 @@
                                             <img src="{{ asset('fotomahasiswa/' . $row->foto) }}" alt=""
                                                 style="width: 50px;">
                                         </td>
-                                        <td>{{ $row->ekstrakulikuler->judul_ekstra }}</td>
+                                        <td>{{ $row->ekstrakulikuler->nama_ekstrakulikuler }}</td>
                                         <td>{!! $row->deskripsi_ekstrakulikuler !!}</td>
 
                                         {{-- <td>{{ $row->created_at->format('D M Y') }}</td> --}}

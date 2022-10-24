@@ -10,6 +10,7 @@ use App\Models\Kompetensi;
 use Illuminate\Http\Request;
 use App\Models\Fotokompetensi;
 use App\Models\Personaljurusan;
+use App\Models\footeerdua;
 
 class AkademiController extends Controller
 {
@@ -25,8 +26,8 @@ class AkademiController extends Controller
         $akademi = Akademi::all();
         $ft= footeer::all();
         $logo= footeer::all();
-
-        return view('akademi.akademi', compact('kompetensi','foto','f','kh','pj','kp','akdm','akademi','personal','ft','logo'));
+        $link = footeerdua::all();
+        return view('akademi.akademi', compact('kompetensi','foto','f','kh','pj','kp','akdm','akademi','personal','ft','logo','link'));
     }
 
     public function detailakademi($id){

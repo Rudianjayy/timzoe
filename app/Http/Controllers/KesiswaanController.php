@@ -21,7 +21,8 @@ class KesiswaanController extends Controller
         $data = ekstrakulikuler::all();
         $personal = personaljurusan::all();
         $logo = footeer::all();
-        return view('kesiswaan.ekstrakulikuler.ekstra',compact('data','f','d','ft','personal','logo'));
+        $link = footeerdua::all();
+        return view('kesiswaan.ekstrakulikuler.ekstra',compact('data','f','d','ft','personal','logo','link'));
     }
     public function ekstrakulikuleradmin() {
         $data = ekstrakulikuler::all();
@@ -49,6 +50,7 @@ class KesiswaanController extends Controller
             'foto' =>$request->foto,
             'judul_ekstra' =>$request->judul_ekstra,
             'deskripsi_ekstrakulikuler' =>$request->deskripsi_ekstrakulikuler,
+            'deskripsi_detail' =>$request->deskripsi_detail,
         ]);
         if($request->hasFile('foto')){
             $request->file('foto')->move('fotomahasiswa/', $request->file('foto')->getClientOriginalName());
@@ -91,7 +93,7 @@ class KesiswaanController extends Controller
 
     }
 
-    public function delete($id){
+    public function deleteekstra($id){
         $data = ekstrakulikuler::find($id);
         $data->delete();
         return redirect('ekstrakulikuleradmin')->with('toast_error',' Data Berhasil di Hapus!');
@@ -101,21 +103,21 @@ class KesiswaanController extends Controller
 
 
 
-    //ekstrakulikulerblog 
-
+    //ekstrakulikulerblog
 
 
 
 
     public function osis() {
-        $b = osis::all();
+        $osis = osis::all();
+        $d = Muhinews::all();
         $f = Muhinews::paginate(4);
         // $kh= jurusan::all();
         $ft = Footeer::all();
         $personal =Personaljurusan::all();
         $logo = footeer::all();
         $link = footeerdua::all();
-        return view('kesiswaan.osis.osis',compact('b','f','ft','personal','logo','link'));
+        return view('kesiswaan.osis.osis',compact('osis','f','ft','personal','logo','link','d'));
     }
     public function osisadmin() {
         $data = osis::all();
@@ -216,7 +218,8 @@ class KesiswaanController extends Controller
         $f = Muhinews::paginate(4);
         $personal = Personaljurusan::all();
         $logo = footeer::all();
-        return view('kesiswaan.alumni.alumni',compact('l','f','ft','personal','logo'));
+        $link = footeerdua::all();
+        return view('kesiswaan.alumni.alumni',compact('l','f','ft','personal','logo','link'));
     }
         public function alumniadmin() {
         $data = alumni::all();

@@ -79,34 +79,35 @@
             </div>
         </div>
     </section> -->
-    <div class="tf-section sc-card-blog">
+    <section class="blog-grid">
         <div class="container">
-            <div class="row">
+            <div class="row high-gutters">
                 @foreach ($data as $data )
-                <div class="col-lg-4 col-md-6">
-                    <article class="sc-card-article">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="blog-one__single">
                         <div class="card-media">
-                            <img src="{{ asset('fotomahasiswa/' . $data->foto) }}" alt="" style="width: 366px; height:183px;">
-                        </div>
-                        <div class="content">
-                            <div class="meta-info">
-                                <div class="item author">
-                                    <b><strong>{{$data->judul_ekstra}}</strong></b>
-                                </div>
-                                <div class="item date">{{$data->created_at}}</div>
-                            </div>
-                            <div class="text-article">
-                                <h3>{!!$data ->deskripsi_ekstrakulikuler!!}</h5>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                @endforeach
-            </div>
-        </div>
-    </div>
-    </div>
 
+                            <a href="/detailekstrakulikuler/{{ $data->id }}">
+                                <img src="{{ asset('fotomahasiswa/' . $data->foto) }}" alt="" style="width: 366px; height:183px;">
+                            </a>
+                        </div>
+                        <div class="blog-one__content">
+                            <div class="blog-one__meta">
+                                <h4>{{$data->judul_ekstra}}</h4>
+                            </div><!-- /.blog-one__meta -->
+                            <p>{{$data->created_at}}</p>
+                            <p><a href="#">{{$data->deskripsi_ekstrakulikuler}}</a></p>
+                            <a href="/detailekstrakulikuler/{{ $data->id }}"
+                                class="thm-btn blog-one__btn"><span>Baca selengkapnya</span></a>
+                            <!-- /.thm-btn blog-one__btn -->
+                        </div><!-- /.blog-one__content -->
+                    </div><!-- /.blog-one__single -->
+                </div><!-- /.col-lg-4 col-md-6 col-sm-12 -->
+                @endforeach
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section><!-- /.blog-grid -->
+    </div>
 
     @include('koneksi.footer')
 
@@ -126,6 +127,7 @@
                     <a href="#" class="btn btn-primary"> Watch the listings</a>
                 </div>
             </div>
+
         </div>
     </div>
     <div class="modal fade popup" id="popup_bid" tabindex="-1" role="dialog" aria-hidden="true">
@@ -159,5 +161,3 @@
 <!-- Mirrored from themesflat.com/html/bidzend/item-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Sep 2022 01:13:11 GMT -->
 
 </html>
-
-

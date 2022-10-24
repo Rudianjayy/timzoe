@@ -209,7 +209,7 @@
             </a>
             <ul class="sub-menu" aria-expanded="false">
                 <li><a href="/footeeradmin">Footer</a></li>
-                <li><a href="/adminfooteerdua">Footerdua</a></li>
+                <li><a href="/adminfooteerdua">Footerlink</a></li>
             </ul>
         </li>
         <li>

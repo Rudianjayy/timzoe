@@ -7,6 +7,7 @@ use App\Models\Jurusan;
 use App\Models\Muhinews;
 use Illuminate\Http\Request;
 use App\Models\Personaljurusan;
+use App\Models\footeerdua;
 
 class MuhinewsController extends Controller
 {
@@ -15,7 +16,8 @@ class MuhinewsController extends Controller
         $f = Muhinews::paginate(3);
         $personal = Personaljurusan::all();
         $logo = footeer::all();
-        return view('muhinews.muhinews',compact('k','f','personal','logo'));
+        $link = footeerdua::all();
+        return view('muhinews.muhinews',compact('k','f','personal','logo','link'));
 
     }
     public function indexadmin() {

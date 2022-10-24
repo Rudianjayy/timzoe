@@ -33,7 +33,7 @@
                                     <select class="form-control" name="ekstrakulikulers_id" id="">
                                         <option value=""></option>
                                         @foreach($ekstrakulikuler as $ekstra)
-                                            <option value="{{ $ekstra->id }}">{{ $ekstra->judul_ekstra }}</option>
+                                            <option value="{{ $ekstra->id }}">{{ $ekstra->nama_ekstra }}</option>
                                         @endforeach
                                     </select>
                                     {{--  <input type="text" name="nama_ekstrakulikuler" class="form-control" id="nama_ekstrakulikuler"

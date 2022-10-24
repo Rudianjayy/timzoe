@@ -20,19 +20,10 @@ class ProfilSekolahController extends Controller
         $kh = Jurusan::all();
         $personal = Personaljurusan::all();
         $logo = footeer::all();
-<<<<<<< HEAD
         $link = footeerdua::all();
         return view('profilsekolah.profilsekolah',compact('q','f','kh','personal','logo','link'));
-    } 
-    public function profilsekolahadmin(){
-=======
-        $kategori = Muhinews::all();
-        $d = Muhinews::paginate(3);
-        return view('profilsekolah.profilsekolah', compact('q', 'f', 'kh', 'personal', 'logo', 'kategori', 'd'));
     }
-    public function profilsekolahadmin()
-    {
->>>>>>> b29191c437e857c1bd2bfbca1f693b789857ebf2
+    public function profilsekolahadmin(){
         $data = profilsekolah::all();
         return view('profilsekolah.crudprofilsekolah.profilsekolahadmin', compact('data'));
     }

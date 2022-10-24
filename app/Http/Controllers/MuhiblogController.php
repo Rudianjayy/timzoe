@@ -15,7 +15,6 @@ class MuhiblogController extends Controller
     {
         $blog =Muhinews::findOrFail($id);
         $d = Muhinews::paginate(3);
-<<<<<<< HEAD
         $personal = Personaljurusan::all();
         $logo = footeer::all();
         $kategori = Kategoriberita::all();
@@ -69,7 +68,6 @@ class MuhiblogController extends Controller
         $data = Kategoriberita::find($id);
         $data->delete();
         return redirect('kategoriberita')->with('toast_error',' Data Berhasil di Hapus!');
-=======
         $kategori = Muhinews::all();
         return view('muhinews.muhiblog',compact('d','blog','kategori'));
     }
@@ -159,11 +157,5 @@ class MuhiblogController extends Controller
         $data = Muhiblog::find($id);
         $data->delete();
         return redirect('muhiblogadmin')->with('toast_error', ' Data Berhasil di Hapus!');
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4d6c595584a3374467fc2c2c438a01ceb412aec7
->>>>>>> 670a97242da062ac8040965fb58783da25780d37
->>>>>>> b29191c437e857c1bd2bfbca1f693b789857ebf2
     }
 }

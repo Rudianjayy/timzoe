@@ -375,7 +375,6 @@ Route::get('/deleteakademi/{id}',[AkademiController::class, 'delete'])->name('de
 
 
 Route::get('adminmitra',[MitraController::class, 'adminmitra'])->name('adminmitra');
-
 Route::get('/tambahmitra',[MitraController::class, 'tambahmitra'])->name('tambahmitra');
 Route::post('/submitdata14',[MitraController::class, 'submitdata14'])->name('submitdata14');
 Route::get('/editmitra/{id}',[MitraController::class, 'editmitra'])->name('editmitra');
@@ -478,6 +477,14 @@ Route::post('/submitdata15',[UpjtekajeController::class, 'submitdata15'])->name(
 Route::get('/editteam/{id}',[UpjtekajeController::class, 'editteam'])->name('editteam');
 Route::post('/submitedit15/{id}',[UpjtekajeController::class, 'submitedit15'])->name('submitedit15');
 Route::get('/deleteteam/{id}',[UpjtekajeController::class, 'deleteteam'])->name('deleteteam');
+
+
+Route::get('/adminkeunggulan',[UpjtekajeController::class, 'loby16'])->name('adminkeunggulan');
+Route::get('/tambahkeunggulan',[UpjtekajeController::class, 'tambahkeunggulan'])->name('tambahkeunggulan');
+Route::post('/submitdata16',[UpjtekajeController::class, 'submitdata16'])->name('submitdata16');
+Route::get('/editkeunggulan/{id}',[UpjtekajeController::class, 'editkeunggulan'])->name('editkeunggulan');
+Route::post('/submitedit16/{id}',[UpjtekajeController::class, 'submitedit16'])->name('submitedit16');
+Route::get('/deletekeunggulan/{id}',[UpjtekajeController::class, 'deletekeunggulan'])->name('deletekeunggulan');
 
 
 

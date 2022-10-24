@@ -128,8 +128,10 @@
             </a>
             <ul class="sub-menu" aria-expanded="false">
                 <li><a href="/adminupj">UPJ TEKAJE</a></li>
+                <li><a href="/tentangkami">Tentang Kami</a></li>
                 <li><a href="/adminupj2">Foto & Jasa UPJ</a></li>
                 <li><a href="/adminteam">Structure Team</a></li>
+                <li><a href="/adminkeunggulan">Keunggulan</a></li>
             </ul>
         </li>
         <li>

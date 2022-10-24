@@ -11,14 +11,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UPJ TEKAJE - SMK Muhammadiyah 1 Genteng</title>
     <!-- favicons -->
-    <link rel="apple-touch-icon" sizes="180x180"
-        href="{{ asset('landingppdb/ppdb/style/assets/images/favicons/apple-touch-icon.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('landingppdb/ppdb/style/assets/images/favicons/apple-touch-icon.png') }}">
     <link rel="shortcut icon" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
     <link rel="apple-touch-icon-precomposed" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
     <link rel="manifest" href="{{ asset('landingppdb/ppdb/style/') }}assets/images/favicons/site.webmanifest">
 
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&amp;display=swap">
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/animate.css') }}">
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap-datepicker.min.css') }}">
@@ -53,15 +51,13 @@
                 <div class="inner-container">
                     <div class="logo-box">
                         <a href="index.html">
-                            <img src="{{ asset('landing/html/bidzend/assets/images/background/UPJ.png') }}" alt=""
-                                style="width: 80px;">
+                            <img src="{{ asset('landing/html/bidzend/assets/images/background/UPJ.png') }}" alt="" style="width: 80px;">
                         </a>
                         <a href="#" class="side-menu__toggler"><i class="fa fa-bars"></i></a>
                     </div><!-- /.logo-box -->
                     <div class="logo-box">
                         <a href="index.html">
-                            <img src="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}" alt=""
-                                style="width: 80px;">
+                            <img src="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}" alt="" style="width: 80px;">
                         </a>
                         <a href="#" class="side-menu__toggler"><i class="fa fa-bars"></i></a>
                     </div><!-- /.logo-box -->
@@ -93,10 +89,8 @@
             <div class="container">
                 <div class="banner-one__image wow slideInUp" data-wow-duration="1500ms">
                     <img src="{{ asset('landingppdb/ppdb/style/assets/images/mocups/banner-moc-1-1.png') }}" class="banner-one__image-1 " alt="">
-                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/mocups/banner-moc-1-2.png') }}" class="banner-one__image-2 float-bob-y"
-                        alt="">
-                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/mocups/banner-moc-1-3.png') }}" class="banner-one__image-3 float-bob-x"
-                        alt="">
+                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/mocups/banner-moc-1-2.png') }}" class="banner-one__image-2 float-bob-y" alt="">
+                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/mocups/banner-moc-1-3.png') }}" class="banner-one__image-3 float-bob-x" alt="">
                     <img src="{{ asset('landingppdb/ppdb/style/assets/images/mocups/banner-moc-1-4.png') }}" class="banner-one__image-4" alt="">
                     <img src="{{ asset('landingppdb/ppdb/style/assets/images/mocups/banner-moc-1-5.png') }}" class="banner-one__image-5" alt="">
                 </div><!-- /.banner-one__image -->
@@ -114,7 +108,7 @@
 
         <section class="about-three about-three__home-two" id='tentang'>
             {{-- <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/about-3-bg-2-1.png') }} "
-                class="about-three-home-two__bg-image-1" alt=""> --}}
+            class="about-three-home-two__bg-image-1" alt=""> --}}
 
             <div class="container">
 
@@ -123,8 +117,7 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="about-three__home-two__images">
-                            <img src="{{ asset('fotomahasiswa/' . $t->foto_tentangkami) }} "
-                                class="float-bob-y" alt="" style="width: 400px; margin-left: 40%;">
+                            <img src="{{ asset('fotomahasiswa/' . $t->foto_tentangkami) }} " class="float-bob-y" alt="" style="width: 400px; margin-left: 40%;">
                         </div><!-- /.about-three__home-two__images -->
                     </div><!-- /.col-lg-6 -->
                     <div class="col-lg-6">
@@ -146,80 +139,78 @@
             </div>
         </section><!-- /.about-three -->
 
-        <section class="about-one" id='keunggulan'>
-            {{-- <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/bg-shape-1-1.png') }}"
-                class="error-404__bg-shape-1" alt="">
-            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/bg-shape-1-2.png') }}"
-                class="error-404__bg-shape-2" alt="">
-            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/bg-shape-1-3.png') }}"
-                class="error-404__bg-shape-3" alt="">
 
-            <div class="error-404__bubble-1"></div><!-- /.error-404__bubble-1 -->
-            <div class="error-404__bubble-2"></div><!-- /.error-404__bubble-2 -->
-            <div class="error-404__bubble-3"></div><!-- /.error-404__bubble-3 -->
-            <div class="error-404__bubble-4"></div><!-- /.error-404__bubble-4 -->
-            <div class="error-404__bubble-5"></div><!-- /.error-404__bubble-5 -->
-            <div class="error-404__bubble-6"></div><!-- /.error-404__bubble-6 -->
-            <div class="error-404__bubble-7"></div><!-- /.error-404__bubble-7 -->
-            <div class="error-404__bubble-8"></div><!-- /.error-404__bubble-8 --> --}}
+        <section class="service-three">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="about-one__content">
-                            <div class="block-title text-left">
-                                {{-- <p class="color-2"><span>Why Choose Us?</span></p> --}}
-                                <h3>Kenapa harus milih UPJ?</span></h3>
-                            </div><!-- /.block-title text-center -->
-                            <p>Memang banyak unit produksi jasa di genteng ini <span>Tapi kenapa harus memilih
-                                    UPJ?</span> itu karena..</p>
-                            <div class="about-one__box-wrapper">
-                                <div class="about-one__box">
-                                    <div class="about-one__box-icon">
-                                        <i class="fa fa-check"></i>
-                                    </div><!-- /.about-one__box-icon -->
-                                    <div class="about-one__box-content">
-                                        <h3>Pelayanan Cepat</h3>
-                                        <p>Tidak seperti yang lain yang butuh waktu beberapa hari hingga beberapa minggu
-                                            <br> disini anda dapat menunggunya jika terlalu rumit maka pengerjaanya
-                                            maksimal akan memakan waktu 3 hari.
-                                        </p>
-                                    </div><!-- /.about-one__box-content -->
-                                </div><!-- /.about-one__box -->
-                                <div class="about-one__box">
-                                    <div class="about-one__box-icon">
-                                        <i class="fa fa-check"></i>
-                                    </div><!-- /.about-one__box-icon -->
-                                    <div class="about-one__box-content">
-                                        <h3>Bergaransi</h3>
-                                        <p>Jika barang yang anda terima kembali lebih buruk daripada sebelumnya <br>
-                                            atau barang memiliki kerusakan sebelum masa garansi, maka akan diganti 100%.
-                                        </p>
-                                    </div><!-- /.about-one__box-content -->
-                                </div><!-- /.about-one__box -->
-                                <div class="about-one__box">
-                                    <div class="about-one__box-icon">
-                                        <i class="fa fa-check"></i>
-                                    </div><!-- /.about-one__box-icon -->
-                                    <div class="about-one__box-content">
-                                        <h3>Kualitas Terjamin</h3>
-                                        <p>Kualitas tidak diragukan lagi, kita pasti akan memberikan yang terbaik.</p>
-                                    </div><!-- /.about-one__box-content -->
-                                </div><!-- /.about-one__box -->
-                            </div><!-- /.about-one__box-wrapper -->
-                        </div><!-- /.about-one__content -->
-                    </div><!-- /.col-lg-6 -->
-                    <div class="col-lg-6 d-flex">
-                        <div class="my-auto">
-                            <div class="about-one__image wow slideInDown" data-wow-duration="1500ms">
-                                <img src="{{ asset('landingppdb/ppdb/style/assets/images/mocups/about-1-moc-1.png') }}"
-                                    alt="">
-                            </div><!-- /.about-one__image -->
-                        </div><!-- /.my-auto -->
-                    </div><!-- /.col-lg-6 -->
-                </div><!-- /.row -->
-            </div><!-- /.container -->
-        </section><!-- /.about-one -->
+                <div class="block-title text-center">
+                    <p><span>Keunggulan</span></p>
+                </div><!-- /.block-title text-center -->
+                <div class="row high-gutters">
+                    @foreach ($keunggulan as $ke )
+                    <div class="col-lg-4">
+                        <div class="service-three__single wow flipInY" data-wow-delay="0ms" data-wow-duration="1500ms">
 
+                            <div class="service-three__icon">
+                                <div class="service-three__single-circle"></div><!-- /.service-three__single-circle -->
+                                <img src="{{asset('fotomahasiswa/' . $ke->foto_keunggulan)}}" alt="" style="border-radius: 50%;">
+                            </div><!-- /.service-three__icon -->
+                            <h3><a href="service-d-seo.html">{{ $ke->keterangan }}</a></h3>
+
+                        </div><!-- /.service-three__single -->
+                    </div><!-- /.col-lg-4 -->
+                    @endforeach
+
+                    <div class="col-lg-4">
+                        <div class="service-three__single wow flipInY" data-wow-delay="300ms" data-wow-duration="1500ms">
+                            <div class="service-three__icon">
+                                <div class="service-three__single-circle"></div><!-- /.service-three__single-circle -->
+                                <img src="{{asset('landingppdb/ppdb/style/assets/images/shapes/service-3-i-2.png')}}" alt="">
+                            </div><!-- /.service-three__icon -->
+                            <h3><a href="service-d-social.html">Social Media Marketing</a></h3>
+
+                        </div><!-- /.service-three__single -->
+                    </div><!-- /.col-lg-4 -->
+                    <div class="col-lg-4">
+                        <div class="service-three__single wow flipInY" data-wow-delay="600ms" data-wow-duration="1500ms">
+                            <div class="service-three__icon">
+                                <div class="service-three__single-circle"></div><!-- /.service-three__single-circle -->
+                                <img src="{{asset('landingppdb/ppdb/style/assets/images/shapes/service-3-i-3.png')}}" alt="">
+                            </div><!-- /.service-three__icon -->
+                            <h3><a href="service-d-ppc.html">Business Intelligence</a></h3>
+                        </div><!-- /.service-three__single -->
+                    </div><!-- /.col-lg-4 -->
+                    <div class="col-lg-4">
+                        <div class="service-three__single wow flipInY" data-wow-delay="600ms" data-wow-duration="1500ms">
+                            <div class="service-three__icon">
+                                <div class="service-three__single-circle"></div><!-- /.service-three__single-circle -->
+                                <img src="{{asset('landingppdb/ppdb/style/assets/images/shapes/service-3-i-3.png')}}" alt="">
+                            </div><!-- /.service-three__icon -->
+                            <h3><a href="service-d-ppc.html">Business Intelligence</a></h3>
+                        </div><!-- /.service-three__single -->
+                    </div><!-- /.col-lg-4 -->
+                    <div class="col-lg-4">
+                        <div class="service-three__single wow flipInY" data-wow-delay="600ms" data-wow-duration="1500ms">
+                            <div class="service-three__icon">
+                                <div class="service-three__single-circle"></div><!-- /.service-three__single-circle -->
+                                <img src="{{asset('landingppdb/ppdb/style/assets/images/shapes/service-3-i-3.png')}}" alt="">
+                            </div><!-- /.service-three__icon -->
+                            <h3><a href="service-d-ppc.html">Business Intelligence</a></h3>
+                        </div><!-- /.service-three__single -->
+                    </div><!-- /.col-lg-4 -->
+                    <div class="col-lg-4">
+                        <div class="service-three__single wow flipInY" data-wow-delay="600ms" data-wow-duration="1500ms">
+                            <div class="service-three__icon">
+                                <div class="service-three__single-circle"></div><!-- /.service-three__single-circle -->
+                                <img src="{{asset('landingppdb/ppdb/style/assets/images/shapes/service-3-i-3.png')}}" alt="">
+                            </div><!-- /.service-three__icon -->
+                            <h3><a href="service-d-ppc.html">Business Intelligence</a></h3>
+                        </div><!-- /.service-three__single -->
+                    </div><!-- /.col-lg-4 -->
+                </div><!-- /.row high-gutters -->
+                <center> <a href="https://wa.wizard.id/" class="thm-btn">Hubungi Admin</a></center>y<!-- /.thm-btn -->
+
+            </div><!-- /.container -->
+        </section><!-- /.service-three -->
         <section class="service-one" id='jasa'>
             <div class="container">
                 <div class="block-title text-center">
@@ -231,8 +222,7 @@
                         <div class="service-one__single">
                             <div class="service-one__icon">
                                 <div class="service-one__icon-inner">
-                                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-i-1.png') }}"
-                                        alt="">
+                                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-i-1.png') }}" alt="">
                                 </div><!-- /.service-one__icon-inner -->
                             </div><!-- /.service-one__icon -->
                             <div class="service-one__content">
@@ -246,8 +236,7 @@
                         <div class="service-one__single">
                             <div class="service-one__icon">
                                 <div class="service-one__icon-inner">
-                                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-i-2.png') }}"
-                                        alt="">
+                                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-i-2.png') }}" alt="">
                                 </div><!-- /.service-one__icon-inner -->
                             </div><!-- /.service-one__icon -->
                             <div class="service-one__content">
@@ -261,8 +250,7 @@
                         <div class="service-one__single">
                             <div class="service-one__icon">
                                 <div class="service-one__icon-inner">
-                                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-i-3.png') }}"
-                                        alt="">
+                                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-i-3.png') }}" alt="">
                                 </div><!-- /.service-one__icon-inner -->
                             </div><!-- /.service-one__icon -->
                             <div class="service-one__content">
@@ -276,8 +264,7 @@
                         <div class="service-one__single">
                             <div class="service-one__icon">
                                 <div class="service-one__icon-inner">
-                                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-i-4.png') }}"
-                                        alt="">
+                                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-i-4.png') }}" alt="">
                                 </div><!-- /.service-one__icon-inner -->
                             </div><!-- /.service-one__icon -->
                             <div class="service-one__content">
@@ -291,8 +278,7 @@
                         <div class="service-one__single">
                             <div class="service-one__icon">
                                 <div class="service-one__icon-inner">
-                                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-i-4.png') }}"
-                                        alt="">
+                                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-i-4.png') }}" alt="">
                                 </div><!-- /.service-one__icon-inner -->
                             </div><!-- /.service-one__icon -->
                             <div class="service-one__content">
@@ -304,7 +290,7 @@
                     </div><!-- /.col-lg-6 col-md-12 -->
                 </div><!-- /.row -->
                 <div class="text-center">
-                    <a href="#" class="thm-btn portfolio-column__more-btn"><span>Hubungi Admin</span></a>
+                    <a href="https://wa.wizard.id/" class="thm-btn portfolio-column__more-btn"><span>Hubungi Admin</span></a>
                     <!-- /.thm-btn portfolio-grid__more-btn -->
                 </div><!-- /.text-center -->
             </div><!-- /.container -->
@@ -327,11 +313,8 @@
                     <div class="col-lg-4 col-md-6 col-sm-12 filter-item masonary-item  strategy">
                         <div class="portfolio-one__single">
                             <div class="portfolio-one__image">
-                                <img src="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-1.jpg') }}"
-                                    alt="">
-                                <a class="img-popup"
-                                    href="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-1.jpg') }}"><i
-                                        class="fal fa-plus"></i></a>
+                                <img src="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-1.jpg') }}" alt="">
+                                <a class="img-popup" href="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-1.jpg') }}"><i class="fal fa-plus"></i></a>
                             </div><!-- /.portfolio-one__image -->
 
                         </div><!-- /.portfolio-one__single -->
@@ -339,11 +322,8 @@
                     <div class="col-lg-4 col-md-6 col-sm-12 filter-item masonary-item optimization ">
                         <div class="portfolio-one__single">
                             <div class="portfolio-one__image">
-                                <img src="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-2.jpg') }}"
-                                    alt="">
-                                <a class="img-popup"
-                                    href="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-2.jpg') }}"><i
-                                        class="fal fa-plus"></i></a>
+                                <img src="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-2.jpg') }}" alt="">
+                                <a class="img-popup" href="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-2.jpg') }}"><i class="fal fa-plus"></i></a>
                             </div><!-- /.portfolio-one__image -->
 
                         </div><!-- /.portfolio-one__single -->
@@ -351,11 +331,8 @@
                     <div class="col-lg-4 col-md-6 col-sm-12 filter-item masonary-item advertising">
                         <div class="portfolio-one__single">
                             <div class="portfolio-one__image">
-                                <img src="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-3.jpg') }}"
-                                    alt="">
-                                <a class="img-popup"
-                                    href="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-3.jpg') }}"><i
-                                        class="fal fa-plus"></i></a>
+                                <img src="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-3.jpg') }}" alt="">
+                                <a class="img-popup" href="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-3.jpg') }}"><i class="fal fa-plus"></i></a>
                             </div><!-- /.portfolio-one__image -->
 
                         </div><!-- /.portfolio-one__single -->
@@ -363,11 +340,8 @@
                     <div class="col-lg-4 col-md-6 col-sm-12 filter-item masonary-item social">
                         <div class="portfolio-one__single">
                             <div class="portfolio-one__image">
-                                <img src="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-4.jpg') }}"
-                                    alt="">
-                                <a class="img-popup"
-                                    href="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-4.jpg') }}"><i
-                                        class="fal fa-plus"></i></a>
+                                <img src="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-4.jpg') }}" alt="">
+                                <a class="img-popup" href="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-4.jpg') }}"><i class="fal fa-plus"></i></a>
                             </div><!-- /.portfolio-one__image -->
 
                         </div><!-- /.portfolio-one__single -->
@@ -375,11 +349,8 @@
                     <div class="col-lg-4 col-md-6 col-sm-12 filter-item masonary-item social">
                         <div class="portfolio-one__single">
                             <div class="portfolio-one__image">
-                                <img src="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-5.jpg') }}"
-                                    alt="">
-                                <a class="img-popup"
-                                    href="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-5.jpg') }}"><i
-                                        class="fal fa-plus"></i></a>
+                                <img src="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-5.jpg') }}" alt="">
+                                <a class="img-popup" href="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-5.jpg') }}"><i class="fal fa-plus"></i></a>
                             </div><!-- /.portfolio-one__image -->
 
                         </div><!-- /.portfolio-one__single -->
@@ -387,11 +358,8 @@
                     <div class="col-lg-4 col-md-6 col-sm-12 filter-item masonary-item advertising">
                         <div class="portfolio-one__single">
                             <div class="portfolio-one__image">
-                                <img src="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-6.jpg') }}"
-                                    alt="">
-                                <a class="img-popup"
-                                    href="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-6.jpg') }}"><i
-                                        class="fal fa-plus"></i></a>
+                                <img src="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-6.jpg') }}" alt="">
+                                <a class="img-popup" href="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-6.jpg') }}"><i class="fal fa-plus"></i></a>
                             </div><!-- /.portfolio-one__image -->
 
                         </div><!-- /.portfolio-one__single -->
@@ -402,8 +370,7 @@
         </section><!-- /.portfolio-grid -->
 
 
-        <section class="cta-one cta-one__about-one"
-            style="background-image: url({{ asset('landingppdb/ppdb/style/assets/images/shapes/cta-bg-2-1.png') }});">
+        <section class="cta-one cta-one__about-one" style="background-image: url({{ asset('landingppdb/ppdb/style/assets/images/shapes/cta-bg-2-1.png') }});">
             {{-- <div class="particles-snow" id="cta-one-snow"></div><!-- /#cta-one-snow.particles-snow --> --}}
 
             {{-- <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-1.png') }}" class="cta-one__bg-shape-1" alt="">
@@ -436,8 +403,7 @@
 
         <section class="video-one">
             <div class="container">
-                <div class="video-one__box text-center wow fadeInUp" data-wow-duration="1500ms"
-                    style="background-image: url({{ asset('landingppdb/ppdb/style/assets/images/resources/video-1-1.jpg') }});">
+                <div class="video-one__box text-center wow fadeInUp" data-wow-duration="1500ms" style="background-image: url({{ asset('landingppdb/ppdb/style/assets/images/resources/video-1-1.jpg') }});">
                     <a href="#" class="video-popup"><i class="fal fa-play-circle"></i></a>
                 </div><!-- /.video-one__box -->
             </div><!-- /.container -->
@@ -446,8 +412,7 @@
 
 
         <section class="team-one team-one__about-1 team-one__home-two" id='team'>
-            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/team-bg-shape-1-1.png') }}"
-                alt="" class="team-one__bg-shape-1">
+            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/team-bg-shape-1-1.png') }}" alt="" class="team-one__bg-shape-1">
             <div class="container">
                 <div class="block-title text-center">
                     <p class="color-2"><span>Structure Management</span></p>
@@ -458,8 +423,7 @@
                     <div class="col-lg-4 col-md-12 wow fadeInUp" data-wow-duration="1500ms">
                         <div class="team-one__single">
                             <div class="team-one__image">
-                                <img src="{{ asset('fotomahasiswa/' . $tm->foto_team) }}"
-                                    alt="">
+                                <img src="{{ asset('fotomahasiswa/' . $tm->foto_team) }}" alt="">
                                 <div class="team-one__social">
                                     <div class="team-one__social-normal">
                                         <a href="#"><i class="fa fa-share-alt"></i></a>
@@ -550,16 +514,14 @@
         <section class="contact-one">
             <div class="container wow fadeInUp" data-wow-duration="1500ms">
                 <div class="inner-container">
-                    <img src="assets/images/shapes/contact-form-shape-1-1.png" class="contact-one__shape-1"
-                        alt="">
+                    <img src="assets/images/shapes/contact-form-shape-1-1.png" class="contact-one__shape-1" alt="">
                     <img src="assets/images/mocups/contact-1-moc-1.png" class="contact-one__shape-2" alt="">
                     <img src="assets/images/mocups/contact-1-moc-2.png" class="contact-one__shape-3" alt="">
                     <div class="block-title text-center">
                         <p><span>Analysis</span></p>
                         <h3>Get Free SEO Analysis?</h3>
                     </div><!-- /.block-title text-center -->
-                    <form action="http://ashik.templatepath.net/inovex-html-files/assets/inc/sendemail.php"
-                        class="contact-one__form">
+                    <form action="http://ashik.templatepath.net/inovex-html-files/assets/inc/sendemail.php" class="contact-one__form">
                         <div class="row">
                             <div class="col-md-6">
                                 <input type="text" placeholder="Your Name*">

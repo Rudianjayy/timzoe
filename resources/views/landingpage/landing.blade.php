@@ -29,6 +29,7 @@
 
 
 
+
     <!-- Template Styles -->
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/responsive.css') }}">
@@ -39,43 +40,40 @@
 <body class="body header-fixed">
 
     <div class="preload preload-container">
-        {{-- <div class="preload-logo"></div>  --}}
         <div class="preload-logo"><img src="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}" alt="Image" style="width:570 !important;"></div>
     </div>
 
 
     @include('koneksi.navbar')
 
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <?php $i = 0; ?>
+            @foreach($fs as $f)
+            <li data-target="#carouselExampleIndicators" data-slide-to="{{ $i++ }}" class="active"></li>
+            @endforeach
+        </ol>
         <div class="carousel-inner">
-            @foreach ($fs as $fs )
-            <div class="carousel-item active">
+            @foreach($fs as $key => $fs)
+            <div class="carousel-item {{$key == 0 ? 'active' : '' }}">
                 <img src="{{ asset('fotomahasiswa/' . $fs->foto_slider) }}" class="d-block w-100" alt="...">
             </div>
             @endforeach
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"> </span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
     <br>
     <br>
-    <br>
+
 
     <section class="about-one">
-        <img src="assets/images/shapes/bg-shape-1-1.png" class="error-404__bg-shape-1" alt="">
-        <img src="assets/images/shapes/bg-shape-1-2.png" class="error-404__bg-shape-2" alt="">
-        <img src="assets/images/shapes/bg-shape-1-3.png" class="error-404__bg-shape-3" alt="">
         @foreach ($sa as $sa )
         <div class="container">
             <div class="row">
@@ -133,10 +131,9 @@
                 </div>
                 @endforeach
             </div>
-
-        </div>
         </div>
     </section>
+
 
     <section class="tf-latest-collections tf-section bg-color-2">
         <div class="container">
@@ -146,7 +143,6 @@
                         <div class="content-left">
                             <div class="inner">
                                 <h3>Muhi News</h3>
-                                <p class="desc">Klik button disamping jika ingin melihat lebih banyak</p>
                             </div>
                         </div>
                         <div class="content-right">
@@ -194,7 +190,7 @@
             <div class="row high-gutters">
                 @foreach ($paginate as $ps )
                 <div class="col-lg-4">
-                    <div class="service-three__single wow flipInY" data-wow-delay="0ms" data-wow-duration="1500ms" style="background-color: #007eff14;">
+                    <div class="service-three__single wow flipInY" data-wow-delay="0ms" data-wow-duration="1500ms" style="background-color: rgb(0 126 255 / 0%);">
                         <div class="service-three__icon">
                             <img src="{{ asset('fotomahasiswa/' . $ps->foto) }}" alt="">
                         </div><!-- /.service-three__icon -->

@@ -60,11 +60,11 @@ class UpjController extends Controller
             'judul1' => $request->judul1,
             'judul2' => $request->judul2,
             'judul3' => $request->judul3,
-            'foto_upj' => $request->foto_upj,
+            'foto_upjj' => $request->foto_upjj,
         ]);
-        if ($request->hasFile('foto_upj')) {
-            $request->file('foto_upj')->move('fotomahasiswa/', $request->file('foto_upj')->getClientOriginalName());
-            $data->foto_upj = $request->file('foto_upj')->getClientOriginalName();
+        if ($request->hasFile('foto_upjj')) {
+            $request->file('foto_upjj')->move('fotomahasiswa/', $request->file('foto_upjj')->getClientOriginalName());
+            $data->foto_upjj = $request->file('foto_upj')->getClientOriginalName();
             $data->save();
         }
 
@@ -96,9 +96,9 @@ class UpjController extends Controller
             'judul2' => $request->judul2,
             'judul3' => $request->judul3,
         ]);
-        if ($request->hasFile('foto_upj')) {
-            $request->file('foto_upj')->move('fotomahasiswa/', $request->file('foto_upj')->getClientOriginalName());
-            $data->foto_upj = $request->file('foto_upj')->getClientOriginalName();
+        if ($request->hasFile('foto_upjj')) {
+            $request->file('foto_upjj')->move('fotomahasiswa/', $request->file('foto_upjj')->getClientOriginalName());
+            $data->foto_upjj = $request->file('foto_upjj')->getClientOriginalName();
             $data->save();
         }
 
@@ -135,15 +135,17 @@ class UpjController extends Controller
         $this->validate($request, [
             'foto_upj' => 'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
             'jasa_upj' => 'required',
+            'icon_upj' => 'required',
         ], [
             'foto_upj.required' => 'Harus diisi',
             'foto_upj.mimes' => 'Harus jpg,jpeg,bmp,gif,png,webp',
             'jasa_upj.required' => 'Harus diisi',
-
+            'icon_upj.required' => 'Harus diisi',
         ]);
         $data = upj1::create([
             'foto_upj' => $request->foto_upj,
             'jasa_upj' => $request->jasa_upj,
+            'icon_upj' => $request->icon_upj,
 
         ]);
         if ($request->hasFile('foto_upj')) {
@@ -164,13 +166,16 @@ class UpjController extends Controller
     {
         $this->validate($request, [
             'jasa_upj' => 'required',
+            'icon_upj' => 'required',
         ], [
             'jasa_upj.required' => 'Harus diisi',
+            'icon_upj.required' => 'Harus diisi',
 
         ]);
         $data = upj1::find($id);
         $data->update([
             'jasa_upj' => $request->jasa_upj,
+            'icon_upj' => $request->icon_upj,
         ]);
         if ($request->hasFile('foto_upj')) {
             $request->file('foto_upj')->move('fotomahasiswa/', $request->file('foto_upj')->getClientOriginalName());
@@ -536,7 +541,7 @@ class UpjController extends Controller
         $ed = Edotel::all();
         $data5 = Edotel::all();
         $link = footeerdua::all();
-        return view('upj.edotel.edotel', compact('ed','data5','link'));
+        return view('upj.edotel.edotel', compact('ed', 'data5', 'link'));
     }
 
     public function loby12()

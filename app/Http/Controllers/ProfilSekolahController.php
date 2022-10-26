@@ -21,7 +21,8 @@ class ProfilSekolahController extends Controller
         $personal = Personaljurusan::all();
         $logo = footeer::all();
         $link = footeerdua::all();
-        return view('profilsekolah.profilsekolah',compact('q','f','kh','personal','logo','link'));
+        $d = Muhinews::paginate(3);
+        return view('profilsekolah.profilsekolah',compact('q','f','kh','personal','logo','link','d'));
     }
     public function profilsekolahadmin(){
         $data = profilsekolah::all();

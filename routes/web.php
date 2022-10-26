@@ -325,9 +325,9 @@ Route::get('/deleteosis/{id}',[KesiswaanController::class,'deleteosis'])->name('
 Route::get('/alumni',[KesiswaanController::class,'alumni'])->name('alumni');
 Route::get('/alumniadmin',[KesiswaanController::class,'alumniadmin'])->name('alumniadmin');
 Route::get('/tambahalumni',[KesiswaanController::class, 'tambahalumni'])->name('tambahalumni');
-Route::post('/alumniproses6',[KesiswaanController::class, 'alumniproses6'])->name('alumniproses6');
+Route::post('/tambahalumniproses',[KesiswaanController::class, 'tambahalumniproses'])->name('tambahalumniproses');
 Route::get('/editalumni/{id}',[KesiswaanController::class, 'editalumni'])->name('editalumni');
-Route::post('/editproses6/{id}',[KesiswaanController::class,'editproses6'])->name('editproses6');
+Route::post('/editprosesalumni/{id}',[KesiswaanController::class,'editprosesalumni'])->name('editprosesalumni');
 Route::get('/deletealumni/{id}',[KesiswaanController::class,'deletealumni'])->name('deletealumni');
 
 

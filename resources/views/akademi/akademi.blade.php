@@ -60,7 +60,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            
+
                             <div class="breadcrumbs">
                                 <ul>
                                     <li><a href="/">Beranda</a></li>
@@ -76,7 +76,7 @@
                 <div class="container">
                     <div class="block-title text-center">
                         {{-- <p><span>Our Services</span></p> --}}
-                        <h3>We Provided Best Digital <br> <span>Services</span></h3>
+                        <h3>Akademi</h3>
                     </div><!-- /.block-title text-center -->
 
 
@@ -105,68 +105,7 @@
                 </div><!-- /.container -->
             </section><!-- /.service-one -->
 
-            <section class="pricing-one">
-                <div class="container">
-                    <div class="block-title text-center">
-                        <p class="color-2"><span>Pricing Plan</span></p>
-                        <h3>No Any Hidden Charge Select <br> <span>Your Pricing Plan</span></h3>
-                    </div><!-- /.block-title text-center -->
 
-                    <div class="row high-gutters">
-                        <div class="col-lg-4 wow fadeInLeft" data-wow-duration="1500ms">
-                            <div class="pricing-one__single">
-                                <div class="pricing-one__icon">
-                                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/pricing-icon-1-1.png') }}" alt="">
-                                </div><!-- /.pricing-one__icon -->
-                                <h3>Basic Pack</h3>
-                                <ul class="pricing-one__list list-unstyled">
-                                    <li>2gb Hosting</li>
-                                    <li>10 Custom Domain</li>
-                                    <li>SSD Hosting</li>
-                                    <li class="disabled">50 gb Bandwith</li>
-                                    <li class="disabled">Free Support</li>
-                                </ul><!-- /.pricing-one__list list-unstyled -->
-                                <p>$19.00</p>
-                                <a href="#" class="thm-btn pricing-one__btn">Try Now</a><!-- /.thm-btn pricing-one__btn -->
-                            </div><!-- /.pricing-one__single -->
-                        </div><!-- /.col-lg-4 -->
-                        <div class="col-lg-4 wow fadeInUp" data-wow-duration="1500ms">
-                            <div class="pricing-one__single">
-                                <div class="pricing-one__icon">
-                                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/pricing-icon-1-2.png') }}" alt="">
-                                </div><!-- /.pricing-one__icon -->
-                                <h3>Standard Pack</h3>
-                                <ul class="pricing-one__list list-unstyled">
-                                    <li>2gb Hosting</li>
-                                    <li>10 Custom Domain</li>
-                                    <li>SSD Hosting</li>
-                                    <li>50 gb Bandwith</li>
-                                    <li class="disabled">Free Support</li>
-                                </ul><!-- /.pricing-one__list list-unstyled -->
-                                <p>$29.00</p>
-                                <a href="#" class="thm-btn pricing-one__btn">Try Now</a><!-- /.thm-btn pricing-one__btn -->
-                            </div><!-- /.pricing-one__single -->
-                        </div><!-- /.col-lg-4 -->
-                        <div class="col-lg-4 wow fadeInRight" data-wow-duration="1500ms">
-                            <div class="pricing-one__single">
-                                <div class="pricing-one__icon">
-                                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/pricing-icon-1-3.png') }}" alt="">
-                                </div><!-- /.pricing-one__icon -->
-                                <h3>Premium Pack</h3>
-                                <ul class="pricing-one__list list-unstyled">
-                                    <li>2gb Hosting</li>
-                                    <li>10 Custom Domain</li>
-                                    <li>SSD Hosting</li>
-                                    <li>50 gb Bandwith</li>
-                                    <li>Free Support</li>
-                                </ul><!-- /.pricing-one__list list-unstyled -->
-                                <p>$39.00</p>
-                                <a href="#" class="thm-btn pricing-one__btn">Try Now</a><!-- /.thm-btn pricing-one__btn -->
-                            </div><!-- /.pricing-one__single -->
-                        </div><!-- /.col-lg-4 -->
-                    </div><!-- /.row -->
-                </div><!-- /.container -->
-            </section><!-- /.pricing-one -->
 
 
             <section class="brand-one brand-one__service-page">
@@ -196,6 +135,8 @@
                     </div><!-- /.brand-one__carousel owl-carousel thm__owl-carousel owl-theme -->
                 </div><!-- /.container -->
             </section><!-- /.brand-one -->
+          
+
 
 
             @include('koneksi.footer')

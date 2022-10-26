@@ -56,6 +56,7 @@
                 <span>Kesiswaan</span>
             </a>
             <ul class="sub-menu" aria-expanded="false">
+                <li><a href="/dataakademi">Akademi</a></li>
                 <li><a href="/ekstrakulikuleradmin">Ekstra Kurikuler</a></li>
                 <li><a href="/osisadmin">IPM/OSIS</a></li>
                 <li><a href="/alumniadmin">Alumni</a></li>
@@ -75,26 +76,7 @@
         </li>
 
 
-        <li>
-            <a href="#" class="has-arrow waves-effect">
-                <i class="ti-package"></i>
-                <span>Kesiswaan</span>
-            </a>
-            <ul class="sub-menu" aria-expanded="false">
-                <li><a href="/osisadmin">IPM/OSIS</a></li>
-                <li><a href="/alumniadmin">Alumni</a></li>
-            </ul>
-        </li>
-        <li>
-            <a href="javascript: void(0);" class="has-arrow waves-effect">
-                <i class="ti-package"></i>
-                <span>Ekstrakulikuler</span>
-            </a>
-            <ul class="sub-menu" aria-expanded="false">
-                <li><a href="/ekstrakulikuleradmin">Ekstrakulikuler</a></li>
-                {{--  <li><a href="/admindetailekstrakulikuler">Detail Ekstrakulikuler</a></li>  --}}
-            </ul>
-        </li>
+
         <li>
             <a href="javascript: void(0);" class="has-arrow waves-effect">
                 <i class="ti-package"></i>
@@ -113,6 +95,8 @@
                 <span>UPJ</span>
             </a>
             <ul class="sub-menu" aria-expanded="false">
+                <li><a href="/adminupj">UPJ TEKAJE</a></li>
+                <li><a href="/adminupj2">Foto & Jasa UPJ</a></li>
                 <li><a href="/adminbsi">BSI</a></li>
                 <li><a href="/adminmuhiprint">Muhi Printing</a></li>
                 <li><a href="/adminpegadaian">Pegadaian</a></li>
@@ -127,9 +111,7 @@
                 <span>UPJ TEKAJE</span>
             </a>
             <ul class="sub-menu" aria-expanded="false">
-                <li><a href="/adminupj">UPJ TEKAJE</a></li>
                 <li><a href="/tentangkami">Tentang Kami</a></li>
-                <li><a href="/adminupj2">Foto & Jasa UPJ</a></li>
                 <li><a href="/adminteam">Structure Team</a></li>
                 <li><a href="/adminkeunggulan">Keunggulan</a></li>
             </ul>
@@ -187,16 +169,6 @@
             </ul>
         </li> --}}
 
-        <li>
-            <a href="/dataakademi" class="waves-effect">
-                <i class="mdi mdi-account-details-outline"></i> <span class="badge rounded-pill bg-primary float-end"></span>
-                <span>Akademi</span>
-            </a>
-            {{-- <ul class="sub-menu" aria-expanded="false">
-                <li><a href="/dataakademi">Akademi</a></li>
-                <li><a href="/admindetailakademi">Detail Akademi</a></li>
-            </ul> --}}
-        </li>
 
 
 

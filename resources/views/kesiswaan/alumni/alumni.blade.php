@@ -19,31 +19,32 @@
 
     <link rel="stylesheet" type="text/css" href="{{ asset('landing/html/bidzend/assets/css/responsive.css') }}">
 
-    <link rel="shortcut icon" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
-    <link rel="apple-touch-icon-precomposed" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
-    <link rel="apple-touch-icon" sizes="180x180"
-        href="{{ asset('landingppdb/ppdb/style/assets/images/favicons/apple-touch-icon.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32"
-        href="{{ asset('landingppdb/ppdb/style/assets/images/favicons/favicon-32x32.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16"
-        href="{{ asset('landingppdb/ppdb/style/assets/images/favicons/favicon-16x16.png') }}">
-    <link rel="manifest" href="{{ asset('landingppdb/ppdb/style/assets/images/favicons/site.webmanifest') }}">
+    <link rel="shortcut icon" href="{{ asset('landing/html/bidzend/assets/icon/muhilog.png') }}">
+    <link rel="apple-touch-icon-precomposed" href="{{ asset('landing/html/bidzend/assets/icon/muhilog.png') }}">
 
+    {{-- css juga kuambil dri ppdb landing --}}
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/animate.css') }}">
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap-datepicker.min.css') }}">
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap-select.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/fontawesome-all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/hover-min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/swiper.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/jquery.mCustomScrollbar.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/owl.theme.default.min.css') }}">
 
     <!-- Template Styles -->
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/responsive.css') }}">
 </head>
 
 <body class="body header-fixed">
 
     <div class="preload preload-container">
         {{-- <div class="preload-logo"></div>  --}}
-        <div class="preload-logo"><img src="{{ asset('landing/html/bidzend/assets/images/logo/muhi.jpg') }}"
-                alt="Image" style="width:570 !important;"></div>
+        <div class="preload-logo"><img src="{{ asset('landing/html/bidzend/assets/images/logo/muhi.jpg') }}" alt="Image" style="width:570 !important;"></div>
     </div>
 
 
@@ -66,84 +67,28 @@
             </div>
         </div>
     </section>
-    <!-- <section class="tf-section item-details-page">
-        <div class="author-item">
-            <div class="avatar">
-                <img src="assets/images/avatar/avt-4.jpg" alt="">
-            </div>
-            <div class="infor">
-                <h6><a href="author.html">Bagikan</a> </h6>
-                <div class="widget-social">
-                    <ul>
-                        <li><a href="#" class="active"><i class="fab fa-facebook-f"></i></a>
-                        </li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section> -->
-    <div class="tf-section sc-card-blog">
+    <section class="testimonials-one">
         <div class="container">
+            <div class="block-title text-center">
+                <h3>Alumni SMK Muhammadiyah 1 Genteng</h3>
+            </div><!-- /.block-title text-center -->
             <div class="row">
-                @foreach ($l as $l )
-                <div class="col-lg-4 col-md-6">
-                    <article class="sc-card-article">
-                        <div class="card-media">
-                            <img src="{{ asset('fotomahasiswa/' . $l->foto) }}" alt="" style="width: 366px; height:183px;">
-                        </div>
-                        <div class="content">
-                            <div class="meta-info">
-                                <div class="item author">
-                                    <b><strong>{{$l->judul_alumni}}</strong></b>
-                                </div>
-                                <div class="item date">{{$l->created_at}}</div>
-                            </div>
-                            <div class="text-article">
-                                <h3>{!!$l ->deskripsi_alumni!!}</h5>
-                            </div>
-                        </div>
-                    </article>
-                </div>
+                @foreach ($alumni as $a )
+                <div class="col-lg-6">
+                    <div class="testimonials-one__single">
+                        <center> <img class="zoom" src="{{ asset('fotomahasiswa/' . $a->foto_alumni) }}" alt="" style="width: 220px; height:220px;"></center>
+                        <p>{{$a->deskripsi_alumni}}</p>
+                        <h3>{{$a->nama_alumni}}</h3>
+                    </div><!-- /.testimonials-one__single -->
+                </div><!-- /.col-lg-6 -->
                 @endforeach
-            </div>
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+        <div class="col-md-12">
+            {!! $alumni->links() !!}
         </div>
-    </div>
-    </div>
-
+    </section><!-- /.testimonials-one -->
     @include('koneksi.footer')
-
-
-    <a id="scroll-top"></a>
-
-    <div class="modal fade popup" id="popup_bid_success" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <div class="modal-body space-y-20 pd-40">
-                    <h3 class="text-center">Your Bidding
-                        Successfuly Added</h3>
-                    <p class="text-center">your bid <span class="price color-popup">(4ETH) </span> has been listing to
-                        our database</p>
-                    <a href="#" class="btn btn-primary"> Watch the listings</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade popup" id="popup_bid" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-
-            </div>
-        </div>
-    </div>
 
     <script src="{{ asset('landing/html/bidzend/assets/js/jquery.min.js') }}"></script>
     <script src="{{ asset('landing/html/bidzend/assets/js/jquery.easing.js') }}"></script>

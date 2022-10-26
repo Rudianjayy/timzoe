@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('alumnis', function (Blueprint $table) {
             $table->id();
-            $table->string('judul_alumni');
-            $table->string('foto');
+            $table->string('foto_alumni');
             $table->string('deskripsi_alumni');
+            $table->string('nama_alumni');
             $table->timestamps();
         });
     }

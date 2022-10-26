@@ -14,31 +14,30 @@
                 <div class="col-8">
                     <div class="card">
                         <div class="card-body">
-                            <form action="/editproses6/{{ $data->id }}" method="POST" enctype="multipart/form-data">
+                            <form action="/editprosesalumni/{{ $data->id }}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Judul Alumni:</label>
-                                    <textarea class="form-control form-control-solid" rows="6x" name="judul_alumni">{{ $data->judul_alumni }}</textarea>
-
-                                    @error('judul_alumni')
-                                        <div class="alert alert-danger">{{ $message }}</div>
-                                    @enderror
-                                </div>
-                                <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Ubah Foto :</label>
-                                    <img class="img mb-3" src="{{ asset('fotomahasiswa/' . $data->foto) }}" alt=""
+                                    <label for="exampleInputEmail1" class="form-label">Ubah Foto Alumni :</label>
+                                    <img class="img mb-3" src="{{ asset('fotomahasiswa/' . $data->foto_alumni) }}" alt=""
                                         style="width: 70px">
-                                    <input type="file" name="foto" class="form-control" id="foto"
-                                        aria-describedby="emailHelp" value="{{ $data->foto }}">
-                                    @error('foto')
+                                    <input type="file" name="foto_alumni" class="form-control" id="foto_alumni"
+                                        aria-describedby="emailHelp" value="{{ $data->foto_alumni }}">
+                                    @error('foto_alumni')
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Deskripsi :</label>
-                                    <textarea class="form-control form-control-solid" rows="6x" name="deskripsi_alumni">{{ $data->deskripsi_alumni }}</textarea>
-
+                                    <label for="exampleInputEmail1" class="form-label">Nama Alumni :</label>
+                                    <input type="text" name="nama_alumni" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" value="{{ $data->nama_alumni }}">
+                                    @error('nama_alumni')
+                                        <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Deskripsi Alumni :</label>
+                                    <textarea class="form-control form-control-solid" name="deskripsi_alumni">{{ $data->deskripsi_alumni }}</textarea>
                                     @error('deskripsi_alumni')
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror

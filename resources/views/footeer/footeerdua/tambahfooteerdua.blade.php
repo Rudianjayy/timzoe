@@ -28,23 +28,13 @@
                                     @enderror
                                 </div>
 
-                                <section style="padding-top:60px;">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="card">
-                                                    <div class="card-header">
-                                                        Deskripsi
-                                                    </div>
-                                                    <div class="card-body">
-                                                        {{--  <form method="POST" enctype="multipart/form-data">  --}}
-                                                        <textarea name="link" id=""></textarea>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Link :</label>
+                                    <textarea class="form-control form-control-solid" name="link"></textarea>
+                                    @error('link')
+                                        <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
 
 
 

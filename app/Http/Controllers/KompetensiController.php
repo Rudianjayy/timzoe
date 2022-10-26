@@ -17,7 +17,7 @@ class KompetensiController extends Controller
     public function kompetensi() {
         $kompetensi = Kompetensi::all();
         $foto = Fotokompetensi::all();
-        $f = Muhinews::paginate(4 );
+        $f = Muhinews::paginate(4);
         $kh = Jurusan::all();
         $personal = Personaljurusan::all();
         $kp = Kompetensi::all();

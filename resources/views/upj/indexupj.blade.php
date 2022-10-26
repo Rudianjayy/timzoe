@@ -90,9 +90,8 @@
                             <div class="col-md-5">
                                 <div class="service-two__box  wow flipInY" data-wow-delay="0ms" data-wow-duration="1500ms">
                                     <div class="service-two__box-icon">
-                                        <div class="service-two__box-circle"></div>
                                         <!-- /.service-two__box-circle -->
-                                        <img src="{{ asset('fotomahasiswa/' . $upj2->foto_upj) }}" alt="">
+                                        <img src="{{ asset('fotomahasiswa/' . $upj2->foto_upj) }}" alt="" style="border-radius: 50%;">
                                     </div><!-- /.service-two__box-icon -->
                                     <!-- <h3><a href="service-d-seo.html">SEO Optimization</a></h3>
                                     <p>Lorem ipsum dolor amet consectetur adipisicing eiusmod tempor.</p> -->
@@ -127,7 +126,7 @@
                             @foreach ($upj1 as $upj1 )
                             <div class="about-one__box">
                                 <div class="about-one__box-icon">
-                                    <i class="fad fa-arrow-circle-right"></i>
+                                    <i class="{{$upj1->icon_upj}}"></i>
                                 </div><!-- /.about-one__box-icon -->
                                 <div class="about-one__box-content">
                                     <h3>{{$upj1->jasa_upj}}</h3>
@@ -146,7 +145,7 @@
                             <div class="elementor-element elementor-element-b838dac elementor-widget elementor-widget-image" data-id="b838dac" data-element_type="widget" data-widget_type="image.default">
                                 <div class="elementor-widget-container" style="margin-left: 100px;">
                                     <figure class="wp-caption">
-                                        <img width="400" height="330" src="{{ asset('fotomahasiswa/' . $upj->foto_upj) }}" class="attachment-medium size-medium" alt="" loading="lazy" />
+                                        <img width="400" height="330" src="{{ asset('fotomahasiswa/' . $upj->foto_upjj) }}" class="attachment-medium size-medium" alt="" loading="lazy" />
                                     </figure>
                                 </div>
                             </div><!-- /.my-auto -->

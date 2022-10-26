@@ -101,7 +101,7 @@
                                                         $foto = App\Models\Jurusan::where('personaljurusans_id',$khj->id)->first();
                                                     @endphp
                                                     <a href="/indexjurusan/{{ $khj->id }}">
-                                                     @if ($foto != null)   
+                                                     @if ($foto != null)
                                                         <img src="{{ asset('fotojurusan/'. $foto->foto) }}"
                                                             class="img-fluid" alt="">
                                                     @else
@@ -139,7 +139,7 @@
                             <div class="col-lg-4 col-md-4">
                                 <div class="sc-wallet">
                                     <div class="icon">
-                                        
+
                                         <a href="/indexjurusan/{{ $khj->id }}">
                                             @if ($foto != null)
                                                 <img src="{{ asset('fotojurusan/' . $khj->foto) }}" class="img-fluid"
@@ -165,76 +165,7 @@
             </section>
 
            @include('koneksi.mitra')
-            {{-- <section class="blog-standard blog-details">
-                <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/bg-shape-1-1.png') }}" class="section__bg-shape-1" alt="">
-                <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/bg-shape-1-2.png') }}" class="section__bg-shape-2" alt="">
-                <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/bg-shape-1-3.png') }}" class="section__bg-shape-3" alt="">
-    
-    
-                <div class="section__bubble-1"></div><!-- /.section__bubble-1 -->
-                <div class="section__bubble-2"></div><!-- /.section__bubble-2 -->
-                <div class="section__bubble-3"></div><!-- /.section__bubble-3 -->
-                <div class="section__bubble-4"></div><!-- /.section__bubble-4 -->
-                <div class="section__bubble-5"></div><!-- /.section__bubble-5 -->
-                <div class="section__bubble-6"></div><!-- /.section__bubble-6 -->
-                <div class="section__bubble-7"></div><!-- /.section__bubble-7 -->
-                <div class="section__bubble-8"></div><!-- /.section__bubble-8 -->
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8">
-                            <div class="blog-details__main">
-                                <div class="blog-two__meta">
-                                    <a href="blog-details.html">Sara dodly</a>
-                                    <span>-</span>
-                                    <a href="blog-details.html">Mar 15, 2020</a>
-                                </div><!-- /.blog-two__meta -->
-                                <h3>Additional Services that will <br> Grow Business</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                    ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-    
-                                <img src="{{ asset('landingppdb/ppdb/style/assets/images/blog/blog-2-1.jpg') }}" class="img-fluid" alt="">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                    reprehenderit in voluptate velit esse cillum deserunt mollit anim id est laborum."Lorem
-                                    ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                                    labore et dolore magna aliqua. Ut enim ad minim veniam, sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua. </p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, <br> sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. </p>
-                                <div class="row">
-                                    <div class="col-sm-4">
-                                        <img src="{{ asset('landingppdb/ppdb/style/assets/images/blog/blog-d-1-1.jpg') }}" alt="" class="img-fluid">
-                                    </div><!-- /.col-md-4 -->
-                                    <div class="col-sm-4">
-                                        <img src="{{ asset('landingppdb/ppdb/style/assets/images/blog/blog-d-1-2.jpg') }}" alt="" class="img-fluid">
-                                    </div><!-- /.col-md-4 -->
-                                    <div class="col-sm-4">
-                                        <img src="{{ asset('landingppdb/ppdb/style/assets/images/blog/blog-d-1-3.jpg') }}" alt="" class="img-fluid">
-                                    </div><!-- /.col-md-4 -->
-                                </div><!-- /.row -->
-                                <h4>SEO is a Cost-Effective Advertising Strategy</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                                <blockquote>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do tempor
-                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
-                                </blockquote>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                    ut labore et commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                                    velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                            </div><!-- /.blog-details__main -->
-    
-                            
-                        </div><!-- /.col-lg-8 -->
-                        
-                    </div><!-- /.row -->
-                </div><!-- /.container -->
-            </section> --}}
+         
             @include('koneksi.footer')
         </div>
 
@@ -254,13 +185,6 @@
 
 
     {{-- js nya ppdb kuambil truh sini --}}
-    {{-- <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.min.js') }}"></script> --}}
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/bootstrap.bundle.min.js') }}"></script>
-    {{-- <script src="{{ asset('landingppdb/ppdb/style/assets/js/bootstrap-datepicker.min.js') }}"></script> --}}
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/bootstrap-select.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/isotope.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.ajaxchimp.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.circleType.js') }}"></script>
     <script src="{{ asset('landingppdb/ppdb/style/assets/js/waypoints.min.js') }}"></script>
     <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.counterup.min.js') }}"></script>
     <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.lettering.min.js') }}"></script>

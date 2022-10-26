@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('footeerduas', function (Blueprint $table) {
             $table->id();
-            $table->string('foto');
-            $table->text('deskripsi_footeerdua');
+            $table->string('judul');
+            $table->text('link');
             $table->timestamps();
         });
     }
@@ -26,13 +26,4 @@ return new class extends Migration
      *
      * @return void
      */
-    public function down()
-    {
-        Schema::create('footeerduas', function (Blueprint $table) {
-            $table->id();
-            $table->string('judul');
-            $table->text('link');
-            $table->timestamps();
-        });
-     }
 };

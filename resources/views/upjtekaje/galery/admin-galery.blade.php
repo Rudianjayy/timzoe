@@ -1,7 +1,7 @@
 @extends('layout.main')
 @push('css')
     {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> --}}
-    <title>Muhinews - Laravel</title>
+    <title>BSI - Admin</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css"
         integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -18,35 +18,23 @@
         {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> --}}
 
         {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" /> --}}
-        {{--  <div class="col-md-8">
-            <h6 class="page-title">Data tables</h6>
-            <ol class="breadcrumb m-0">
-                <li class="breadcrumb-item"><a href="#">Veltrix</a></li>
-                <li class="breadcrumb-item"><a href="#">Tables</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Data tables</li>
-            </ol>
-        </div>  --}}
+
         <div class="row">
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
 
-                         <div>
-                            <a href="/tambahupj" class="btn btn-primary mt-5"
+                        <div>
+                            <a href="/tambahgalery" class="btn btn-primary mt-5"
                                 id="kt_account_profile_details_submit">Tambah
                                 +</a>
-                        </div> 
-                        <table id="datatable" class="table table-bordered dt-responsive nowrap"
-                            style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                        </div>
+                        <table id="example" class="table table-bordered dt-responsive nowrap">
 
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">Judul 1</th>
-                                    <th scope="col">Judul 2</th>
-                                    <th scope="col">Judul 3</th>
                                     <th scope="col">Foto</th>
-                                    <th scope="col">Dibuat</th>
                                     <th scope="col">Aksi</th>
                                 </tr>
                             </thead>
@@ -56,28 +44,19 @@
                                 @php
                                     $no = 1;
                                 @endphp
-                                @foreach ($data as $upj)
+                                @foreach ($data5 as $d5)
                                     <tr>
                                         <th>{{ $no++ }}</th>
-
-                                        <td>{!! $upj->judul1 !!}</td>
-                                        <td>{!! $upj->judul2 !!}</td>
-                                        <td>{!! $upj->judul3 !!}</td>
                                         <td>
-                                            <img src="{{ asset('fotomahasiswa/' . $upj->foto_upj) }}" alt=""
+                                            <img src="{{ asset('fotomahasiswa/' . $d5->foto_galery) }}" alt=""
                                                 style="width: 50px;">
                                         </td>
-                                               {{--  @php
-                                                dd($upj->kategori);
-                                               @endphp  --}}
-                                        </td>
-                                        <td>{{ $upj->created_at }}</td>
 
-                                        {{-- <td>{{ $upj->created_at->format('D M Y') }}</td> --}}
+
                                         <td>
-                                            <a href="/editupj/{{ $upj->id }}" class="btn btn-warning">Edit</a>
+                                            <a href="/editgalery/{{ $d5->id }}" class="btn btn-warning">Edit</a>
 
-                                            {{--  <a href="/deleteupj/{{ $upj->id }}" class="btn btn-danger" onclick="return confirm('yakin gen?')">Delete</a>  --}}
+                                            <a href="/deletegalery/{{ $d5->id }}" class="btn btn-danger" onclick="return confirm('yakin gen?')">Delete</a>
 
 
 
@@ -135,8 +114,10 @@
 
 
         <script>
-            $(document).ready(function() {
-                $('#example').DataTable();
+            $(document).ready(function () {
+                $('#example').DataTable({
+                    scrollX: true,
+                });
             });
         </script>
 

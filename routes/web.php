@@ -488,6 +488,42 @@ Route::get('/deletekeunggulan/{id}',[UpjtekajeController::class, 'deletekeunggul
 
 
 
+Route::get('/adminjasa',[UpjtekajeController::class, 'loby17'])->name('adminjasa');
+Route::get('/tambahjasa',[UpjtekajeController::class, 'tambahjasa'])->name('tambahjasa');
+Route::post('/submitdata17',[UpjtekajeController::class, 'submitdata17'])->name('submitdata17');
+Route::get('/editjasa/{id}',[UpjtekajeController::class, 'editjasa'])->name('editjasa');
+Route::post('/submitedit17/{id}',[UpjtekajeController::class, 'submitedit17'])->name('submitedit17');
+Route::get('/deletejasa/{id}',[UpjtekajeController::class, 'deletejasa'])->name('deletejasa');
+
+
+
+Route::get('/admingalery',[UpjtekajeController::class, 'loby18'])->name('admingalery');
+Route::get('/tambahgalery',[UpjtekajeController::class, 'tambahgalery'])->name('tambahgalery');
+Route::post('/submitdata18',[UpjtekajeController::class, 'submitdata18'])->name('submitdata18');
+Route::get('/editgalery/{id}',[UpjtekajeController::class, 'editgalery'])->name('editgalery');
+Route::post('/submitedit18/{id}',[UpjtekajeController::class, 'submitedit18'])->name('submitedit18');
+Route::get('/deletegalery/{id}',[UpjtekajeController::class, 'deletegalery'])->name('deletegalery');
+
+
+
+Route::get('/adminvisimisi',[UpjtekajeController::class, 'loby19'])->name('adminvisimisi');
+Route::get('/tambahvisimisi',[UpjtekajeController::class, 'tambahvisimisi'])->name('tambahvisimisi');
+Route::post('/submitdata19',[UpjtekajeController::class, 'submitdata19'])->name('submitdata19');
+Route::get('/editvisimisi/{id}',[UpjtekajeController::class, 'editvisimisi'])->name('editvisimisi');
+Route::post('/submitedit19/{id}',[UpjtekajeController::class, 'submitedit19'])->name('submitedit19');
+Route::get('/deletevisimisi/{id}',[UpjtekajeController::class, 'deletevisimisi'])->name('deletevisimisi');
+
+
+
+Route::get('/admintestimoni',[UpjtekajeController::class, 'loby20'])->name('admintestimoni');
+Route::get('/tambahtestimoni',[UpjtekajeController::class, 'tambahtestimoni'])->name('tambahtestimoni');
+Route::post('/submitdata20',[UpjtekajeController::class, 'submitdata20'])->name('submitdata20');
+Route::get('/edittestimoni/{id}',[UpjtekajeController::class, 'edittestimoni'])->name('edittestimoni');
+Route::post('/submitedit20/{id}',[UpjtekajeController::class, 'submitedit20'])->name('submitedit20');
+Route::get('/deletetestimoni/{id}',[UpjtekajeController::class, 'deletetestimoni'])->name('deletetestimoni');
+
+
+
 
 
 

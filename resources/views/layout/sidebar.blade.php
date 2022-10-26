@@ -132,6 +132,10 @@
                 <li><a href="/adminupj2">Foto & Jasa UPJ</a></li>
                 <li><a href="/adminteam">Structure Team</a></li>
                 <li><a href="/adminkeunggulan">Keunggulan</a></li>
+                <li><a href="/adminjasa">Jasa</a></li>
+                <li><a href="/admingalery">Galery</a></li>
+                <li><a href="/adminvisimisi">Visi Misi</a></li>
+                <li><a href="/admintestimoni">Testimoni</a></li>
             </ul>
         </li>
         <li>

@@ -6132,10 +6132,18 @@ a:focus {
 ## Service Three
 --------------------------------------------------------------*/
 
+.service-three-bg {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	position: relative;
+	background-color: darkgrey;
+
+}
 .service-three {
 	padding-top: 170px;
 	padding-bottom: 130px;
 	position: relative;
+	
 }
 
 .service-three [class*=section__bubble-] {

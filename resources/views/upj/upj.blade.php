@@ -11,12 +11,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UPJ TEKAJE - SMK Muhammadiyah 1 Genteng</title>
     <!-- favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('landingppdb/ppdb/style/assets/images/favicons/apple-touch-icon.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="{{ asset('landingppdb/ppdb/style/assets/images/favicons/apple-touch-icon.png') }}">
     <link rel="shortcut icon" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
     <link rel="apple-touch-icon-precomposed" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
     <link rel="manifest" href="{{ asset('landingppdb/ppdb/style/') }}assets/images/favicons/site.webmanifest">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&amp;display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&amp;display=swap">
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/animate.css') }}">
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap-datepicker.min.css') }}">
@@ -51,13 +53,15 @@
                 <div class="inner-container">
                     <div class="logo-box">
                         <a href="index.html">
-                            <img src="{{ asset('landing/html/bidzend/assets/images/background/UPJ.png') }}" alt="" style="width: 80px;">
+                            <img src="{{ asset('landing/html/bidzend/assets/images/background/UPJ.png') }}"
+                                alt="" style="width: 80px;">
                         </a>
                         <a href="#" class="side-menu__toggler"><i class="fa fa-bars"></i></a>
                     </div><!-- /.logo-box -->
                     <div class="logo-box">
-                        <a href="index.html">
-                            <img src="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}" alt="" style="width: 80px;">
+                        <a href="/">
+                            <img src="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}" alt=""
+                                style="width: 80px;">
                         </a>
                         <a href="#" class="side-menu__toggler"><i class="fa fa-bars"></i></a>
                     </div><!-- /.logo-box -->
@@ -88,11 +92,16 @@
             <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-2.png') }}" class="banner-one__bg-shape-5" alt=""> --}}
             <div class="container">
                 <div class="banner-one__image wow slideInUp" data-wow-duration="1500ms">
-                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/mocups/banner-moc-1-1.png') }}" class="banner-one__image-1 " alt="">
-                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/mocups/banner-moc-1-2.png') }}" class="banner-one__image-2 float-bob-y" alt="">
-                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/mocups/banner-moc-1-3.png') }}" class="banner-one__image-3 float-bob-x" alt="">
-                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/mocups/banner-moc-1-4.png') }}" class="banner-one__image-4" alt="">
-                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/mocups/banner-moc-1-5.png') }}" class="banner-one__image-5" alt="">
+                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/mocups/banner-moc-1-1.png') }}"
+                        class="banner-one__image-1 " alt="">
+                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/mocups/banner-moc-1-2.png') }}"
+                        class="banner-one__image-2 float-bob-y" alt="">
+                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/mocups/banner-moc-1-3.png') }}"
+                        class="banner-one__image-3 float-bob-x" alt="">
+                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/mocups/banner-moc-1-4.png') }}"
+                        class="banner-one__image-4" alt="">
+                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/mocups/banner-moc-1-5.png') }}"
+                        class="banner-one__image-5" alt="">
                 </div><!-- /.banner-one__image -->
                 <div class="row">
                     <div class="col-xl-7">
@@ -112,102 +121,115 @@
 
             <div class="container">
 
-                @foreach ($tentang as $t )
+                @foreach ($tentang as $t)
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="about-three__home-two__images">
+                                <img src="{{ asset('fotomahasiswa/' . $t->foto_tentangkami) }} " class="float-bob-y"
+                                    alt="" style="width: 400px; margin-left: 40%;">
+                            </div><!-- /.about-three__home-two__images -->
+                        </div><!-- /.col-lg-6 -->
+                        <div class="col-lg-6">
 
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="about-three__home-two__images">
-                            <img src="{{ asset('fotomahasiswa/' . $t->foto_tentangkami) }} " class="float-bob-y" alt="" style="width: 400px; margin-left: 40%;">
-                        </div><!-- /.about-three__home-two__images -->
-                    </div><!-- /.col-lg-6 -->
-                    <div class="col-lg-6">
-
-                        <div class="about-three__content" style="color: black;">
-                            {{-- <div class="block-title text-left">
+                            <div class="about-three__content" style="color: black;">
+                                {{-- <div class="block-title text-left">
                                 <h3></h3>
                                 <span>Selamat datang di website resmi UPJ TEKAJE</span>
 
                             </div><!-- /.block-title text-center --> --}}
-                            <p>{!! $t->deskripsi_tentangkami !!}</p>
+                                <p>{!! $t->deskripsi_tentangkami !!}</p>
 
-                        </div><!-- /.about-three__content -->
+                            </div><!-- /.about-three__content -->
 
-                    </div><!-- /.col-lg-6 -->
-                </div><!-- /.row -->
+                        </div><!-- /.col-lg-6 -->
+                    </div><!-- /.row -->
                 @endforeach
 
             </div>
         </section><!-- /.about-three -->
 
 
-        <section class="service-three">
+        <section class="service-three-bg">
             <div class="container">
                 <div class="block-title text-center">
                     <p><span>Keunggulan</span></p>
                 </div><!-- /.block-title text-center -->
                 <div class="row high-gutters">
-                    @foreach ($keunggulan as $ke )
-                    <div class="col-lg-4">
-                        <div class="service-three__single wow flipInY" data-wow-delay="0ms" data-wow-duration="1500ms">
+                    @foreach ($keunggulan as $ke)
+                        <div class="col-lg-4">
+                            <div class="service-three__single-bg wow flipInY" data-wow-delay="0ms"
+                                data-wow-duration="1500ms">
 
-                            <div class="service-three__icon">
-                                <div class="service-three__single-circle"></div><!-- /.service-three__single-circle -->
-                                <img src="{{asset('fotomahasiswa/' . $ke->foto_keunggulan)}}" alt="" style="border-radius: 50%;">
-                            </div><!-- /.service-three__icon -->
-                            <h3><a href="service-d-seo.html">{{ $ke->keterangan }}</a></h3>
+                                <div class="service-three__icon">
+                                    <div class="service-three__single-circle"></div>
+                                    <!-- /.service-three__single-circle -->
+                                    <img src="{{ asset('fotomahasiswa/' . $ke->foto_keunggulan) }}" alt=""
+                                        style="border-radius: 50%;">
+                                </div><!-- /.service-three__icon -->
+                                <h3><a href="service-d-seo.html">{{ $ke->keterangan }}</a></h3>
 
-                        </div><!-- /.service-three__single -->
-                    </div><!-- /.col-lg-4 -->
+                            </div><!-- /.service-three__single -->
+                        </div><!-- /.col-lg-4 -->
                     @endforeach
 
                     <div class="col-lg-4">
-                        <div class="service-three__single wow flipInY" data-wow-delay="300ms" data-wow-duration="1500ms">
+                        <div class="service-three__single wow flipInY" data-wow-delay="300ms"
+                            data-wow-duration="1500ms">
                             <div class="service-three__icon">
                                 <div class="service-three__single-circle"></div><!-- /.service-three__single-circle -->
-                                <img src="{{asset('landingppdb/ppdb/style/assets/images/shapes/service-3-i-2.png')}}" alt="">
+                                <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-3-i-2.png') }}"
+                                    alt="">
                             </div><!-- /.service-three__icon -->
                             <h3><a href="service-d-social.html">Social Media Marketing</a></h3>
 
                         </div><!-- /.service-three__single -->
                     </div><!-- /.col-lg-4 -->
                     <div class="col-lg-4">
-                        <div class="service-three__single wow flipInY" data-wow-delay="600ms" data-wow-duration="1500ms">
+                        <div class="service-three__single wow flipInY" data-wow-delay="600ms"
+                            data-wow-duration="1500ms">
                             <div class="service-three__icon">
                                 <div class="service-three__single-circle"></div><!-- /.service-three__single-circle -->
-                                <img src="{{asset('landingppdb/ppdb/style/assets/images/shapes/service-3-i-3.png')}}" alt="">
+                                <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-3-i-3.png') }}"
+                                    alt="">
                             </div><!-- /.service-three__icon -->
                             <h3><a href="service-d-ppc.html">Business Intelligence</a></h3>
                         </div><!-- /.service-three__single -->
                     </div><!-- /.col-lg-4 -->
                     <div class="col-lg-4">
-                        <div class="service-three__single wow flipInY" data-wow-delay="600ms" data-wow-duration="1500ms">
+                        <div class="service-three__single wow flipInY" data-wow-delay="600ms"
+                            data-wow-duration="1500ms">
                             <div class="service-three__icon">
                                 <div class="service-three__single-circle"></div><!-- /.service-three__single-circle -->
-                                <img src="{{asset('landingppdb/ppdb/style/assets/images/shapes/service-3-i-3.png')}}" alt="">
+                                <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-3-i-3.png') }}"
+                                    alt="">
                             </div><!-- /.service-three__icon -->
                             <h3><a href="service-d-ppc.html">Business Intelligence</a></h3>
                         </div><!-- /.service-three__single -->
                     </div><!-- /.col-lg-4 -->
                     <div class="col-lg-4">
-                        <div class="service-three__single wow flipInY" data-wow-delay="600ms" data-wow-duration="1500ms">
+                        <div class="service-three__single wow flipInY" data-wow-delay="600ms"
+                            data-wow-duration="1500ms">
                             <div class="service-three__icon">
                                 <div class="service-three__single-circle"></div><!-- /.service-three__single-circle -->
-                                <img src="{{asset('landingppdb/ppdb/style/assets/images/shapes/service-3-i-3.png')}}" alt="">
+                                <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-3-i-3.png') }}"
+                                    alt="">
                             </div><!-- /.service-three__icon -->
                             <h3><a href="service-d-ppc.html">Business Intelligence</a></h3>
                         </div><!-- /.service-three__single -->
                     </div><!-- /.col-lg-4 -->
                     <div class="col-lg-4">
-                        <div class="service-three__single wow flipInY" data-wow-delay="600ms" data-wow-duration="1500ms">
+                        <div class="service-three__single wow flipInY" data-wow-delay="600ms"
+                            data-wow-duration="1500ms">
                             <div class="service-three__icon">
                                 <div class="service-three__single-circle"></div><!-- /.service-three__single-circle -->
-                                <img src="{{asset('landingppdb/ppdb/style/assets/images/shapes/service-3-i-3.png')}}" alt="">
+                                <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-3-i-3.png') }}"
+                                    alt="">
                             </div><!-- /.service-three__icon -->
                             <h3><a href="service-d-ppc.html">Business Intelligence</a></h3>
                         </div><!-- /.service-three__single -->
                     </div><!-- /.col-lg-4 -->
                 </div><!-- /.row high-gutters -->
-                <center> <a href="https://wa.wizard.id/" class="thm-btn">Hubungi Admin</a></center>y<!-- /.thm-btn -->
+                <center> <a href="https://wa.wizard.id/" class="thm-btn">Hubungi Admin</a></center><!-- /.thm-btn -->
 
             </div><!-- /.container -->
         </section><!-- /.service-three -->
@@ -218,25 +240,29 @@
                     <h3>Jasa yang kami tawarkan</h3>
                 </div><!-- /.block-title text-center -->
                 <div class="row high-gutters">
-                    <div class="col-lg-6 col-md-12 wow fadeInLeft" data-wow-duration="1500ms">
-                        <div class="service-one__single">
-                            <div class="service-one__icon">
-                                <div class="service-one__icon-inner">
-                                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-i-1.png') }}" alt="">
-                                </div><!-- /.service-one__icon-inner -->
-                            </div><!-- /.service-one__icon -->
-                            <div class="service-one__content">
-                                <h3><a href="service-details.html">Service PC/Laptop, Printer & Instalasi</a></h3>
-                                <p>Lorem ipsum dolor amet consectetur adipisicing sed do eiusmod tempor. incididunt
-                                    labore.</p>
-                            </div><!-- /.service-one__content -->
-                        </div><!-- /.service-one__single -->
-                    </div><!-- /.col-lg-6 col-md-12 -->
+                    @foreach ($upjas as $ups)
+                        <div class="col-lg-6 col-md-12 wow fadeInLeft" data-wow-duration="1500ms">
+                            <div class="service-one__single">
+                                <div class="service-one__icon">
+                                    <div class="service-one__icon-inner">
+                                        <img src="{{ asset('fotomahasiswa/' . $ups->foto_jasa) }}" alt=""
+                                            style="border-radius: 50%;">
+                                    </div><!-- /.service-one__icon-inner -->
+                                </div><!-- /.service-one__icon -->
+                                <div class="service-one__content">
+                                    <h3><a href="service-details.html">{{ $ups->jasa }}</a></h3>
+                                    <p>{{ $ups->penjelasan }}</p>
+                                </div><!-- /.service-one__content -->
+                            </div><!-- /.service-one__single -->
+                        </div><!-- /.col-lg-6 php col-md-12 -->
+                    @endforeach
+
                     <div class="col-lg-6 col-md-12 wow fadeInRight" data-wow-duration="1500ms">
                         <div class="service-one__single">
                             <div class="service-one__icon">
                                 <div class="service-one__icon-inner">
-                                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-i-2.png') }}" alt="">
+                                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-i-2.png') }}"
+                                        alt="">
                                 </div><!-- /.service-one__icon-inner -->
                             </div><!-- /.service-one__icon -->
                             <div class="service-one__content">
@@ -250,7 +276,8 @@
                         <div class="service-one__single">
                             <div class="service-one__icon">
                                 <div class="service-one__icon-inner">
-                                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-i-3.png') }}" alt="">
+                                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-i-3.png') }}"
+                                        alt="">
                                 </div><!-- /.service-one__icon-inner -->
                             </div><!-- /.service-one__icon -->
                             <div class="service-one__content">
@@ -264,7 +291,8 @@
                         <div class="service-one__single">
                             <div class="service-one__icon">
                                 <div class="service-one__icon-inner">
-                                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-i-4.png') }}" alt="">
+                                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-i-4.png') }}"
+                                        alt="">
                                 </div><!-- /.service-one__icon-inner -->
                             </div><!-- /.service-one__icon -->
                             <div class="service-one__content">
@@ -278,7 +306,8 @@
                         <div class="service-one__single">
                             <div class="service-one__icon">
                                 <div class="service-one__icon-inner">
-                                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-i-4.png') }}" alt="">
+                                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-i-4.png') }}"
+                                        alt="">
                                 </div><!-- /.service-one__icon-inner -->
                             </div><!-- /.service-one__icon -->
                             <div class="service-one__content">
@@ -290,7 +319,8 @@
                     </div><!-- /.col-lg-6 col-md-12 -->
                 </div><!-- /.row -->
                 <div class="text-center">
-                    <a href="https://wa.wizard.id/" class="thm-btn portfolio-column__more-btn"><span>Hubungi Admin</span></a>
+                    <a href="https://wa.wizard.id/" class="thm-btn portfolio-column__more-btn"><span>Hubungi
+                            Admin</span></a>
                     <!-- /.thm-btn portfolio-grid__more-btn -->
                 </div><!-- /.text-center -->
             </div><!-- /.container -->
@@ -310,75 +340,36 @@
                     <li data-filter=".social"><span>Social</span></li>
                 </ul><!-- /.portfolio-filter list-unstyled --> --}}
                 <div class="row high-gutters masonary-layout filter-layout">
-                    <div class="col-lg-4 col-md-6 col-sm-12 filter-item masonary-item  strategy">
-                        <div class="portfolio-one__single">
-                            <div class="portfolio-one__image">
-                                <img src="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-1.jpg') }}" alt="">
-                                <a class="img-popup" href="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-1.jpg') }}"><i class="fal fa-plus"></i></a>
-                            </div><!-- /.portfolio-one__image -->
+                    @foreach ($upgal as $gatal)
+                        <div class="col-lg-4 col-md-6 col-sm-12 filter-item masonary-item  strategy">
+                            <div class="portfolio-one__single">
+                                <div class="portfolio-one__image">
+                                    <img src="{{ asset('fotomahasiswa/' . $gatal->foto_galery) }}" alt="">
+                                    <a class="img-popup"
+                                        href="{{ asset('fotomahasiswa/' . $gatal->foto_galery) }}"><i
+                                            class="fal fa-plus"></i></a>
+                                </div><!-- /.portfolio-one__image -->
 
-                        </div><!-- /.portfolio-one__single -->
-                    </div><!-- /.col-lg-4 col-md-6 col-sm-12 -->
-                    <div class="col-lg-4 col-md-6 col-sm-12 filter-item masonary-item optimization ">
-                        <div class="portfolio-one__single">
-                            <div class="portfolio-one__image">
-                                <img src="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-2.jpg') }}" alt="">
-                                <a class="img-popup" href="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-2.jpg') }}"><i class="fal fa-plus"></i></a>
-                            </div><!-- /.portfolio-one__image -->
+                            </div><!-- /.portfolio-one__single -->
+                        </div><!-- /.col-lg-4 col-md-6 col-sm-12 -->
+                    @endforeach
 
-                        </div><!-- /.portfolio-one__single -->
-                    </div><!-- /.col-lg-4 col-md-6 col-sm-12 -->
-                    <div class="col-lg-4 col-md-6 col-sm-12 filter-item masonary-item advertising">
-                        <div class="portfolio-one__single">
-                            <div class="portfolio-one__image">
-                                <img src="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-3.jpg') }}" alt="">
-                                <a class="img-popup" href="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-3.jpg') }}"><i class="fal fa-plus"></i></a>
-                            </div><!-- /.portfolio-one__image -->
-
-                        </div><!-- /.portfolio-one__single -->
-                    </div><!-- /.col-lg-4 col-md-6 col-sm-12 -->
-                    <div class="col-lg-4 col-md-6 col-sm-12 filter-item masonary-item social">
-                        <div class="portfolio-one__single">
-                            <div class="portfolio-one__image">
-                                <img src="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-4.jpg') }}" alt="">
-                                <a class="img-popup" href="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-4.jpg') }}"><i class="fal fa-plus"></i></a>
-                            </div><!-- /.portfolio-one__image -->
-
-                        </div><!-- /.portfolio-one__single -->
-                    </div><!-- /.col-lg-4 col-md-6 col-sm-12 -->
-                    <div class="col-lg-4 col-md-6 col-sm-12 filter-item masonary-item social">
-                        <div class="portfolio-one__single">
-                            <div class="portfolio-one__image">
-                                <img src="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-5.jpg') }}" alt="">
-                                <a class="img-popup" href="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-5.jpg') }}"><i class="fal fa-plus"></i></a>
-                            </div><!-- /.portfolio-one__image -->
-
-                        </div><!-- /.portfolio-one__single -->
-                    </div><!-- /.col-lg-4 col-md-6 col-sm-12 -->
-                    <div class="col-lg-4 col-md-6 col-sm-12 filter-item masonary-item advertising">
-                        <div class="portfolio-one__single">
-                            <div class="portfolio-one__image">
-                                <img src="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-6.jpg') }}" alt="">
-                                <a class="img-popup" href="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-6.jpg') }}"><i class="fal fa-plus"></i></a>
-                            </div><!-- /.portfolio-one__image -->
-
-                        </div><!-- /.portfolio-one__single -->
-                    </div><!-- /.col-lg-4 col-md-6 col-sm-12 -->
                 </div><!-- /.row -->
 
             </div><!-- /.container -->
         </section><!-- /.portfolio-grid -->
 
+        @foreach ($upjvis as $upss)
+            <section class="cta-one cta-one__about-one"
+                style="background-image: url({{ asset('landingppdb/ppdb/style/assets/images/shapes/cta-bg-2-1.png') }});">
+                {{-- <div class="particles-snow" id="cta-one-snow"></div><!-- /#cta-one-snow.particles-snow --> --}}
 
-        <section class="cta-one cta-one__about-one" style="background-image: url({{ asset('landingppdb/ppdb/style/assets/images/shapes/cta-bg-2-1.png') }});">
-            {{-- <div class="particles-snow" id="cta-one-snow"></div><!-- /#cta-one-snow.particles-snow --> --}}
-
-            {{-- <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-1.png') }}" class="cta-one__bg-shape-1" alt="">
+                {{-- <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-1.png') }}" class="cta-one__bg-shape-1" alt="">
             <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-2.png') }}" class="cta-one__bg-shape-2" alt="">
             <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-3.png') }}" class="cta-one__bg-shape-3" alt="">
             <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-4.png') }}" class="cta-one__bg-shape-4" alt=""> --}}
 
-            {{-- <div class="error-404__bubble-1"></div><!-- /.error-404__bubble-1 -->
+                {{-- <div class="error-404__bubble-1"></div><!-- /.error-404__bubble-1 -->
             <div class="error-404__bubble-2"></div><!-- /.error-404__bubble-2 -->
             <div class="error-404__bubble-3"></div><!-- /.error-404__bubble-3 -->
             <div class="error-404__bubble-4"></div><!-- /.error-404__bubble-4 -->
@@ -387,60 +378,58 @@
             <div class="error-404__bubble-7"></div><!-- /.error-404__bubble-7 -->
             <div class="error-404__bubble-8"></div><!-- /.error-404__bubble-8 --> --}}
 
-            <div class="container">
-                <h3>Visi <br></h3>
-                <p style="color: black;">Menghasilkan tenaga kerja yang beriman, bertaqwa, berahklaq mulia serta profesional untuk industri IT
-                    berskala global.</p>
-                <h3>Misi <br></h3>
-                <p style="color: black;">Mengembangkan sikap dan keterampilan peserta didik dalam bidang keahlian Teknik Komputer Jaringan.
-                    Menguasai keterampilan dalam pengoperasian bidang Teknik Komputer Jaringan.
-                    Menguasai keterampilan dalam penggunaan perangkat lunak Teknik Komputer Jaringan.
-                    Mampu mengembangkan bidang Teknik Komputer Jaringan yang relevan dengan tuntutan kebutuhan
-                    masyarakat.</p>
-                {{-- <a href="#" class="thm-btn cta-one__btn"><span>Join Us Now</span></a><!-- /.thm-btn cta-one__btn --> --}}
-            </div><!-- /.container -->
-        </section><!-- /.cta-one -->
+                <div class="container">
+                    <h3>Visi <br></h3>
+                    <p style="color: black;">{!! $upss->upj_visi !!}</p>
+                    <h3>Misi <br></h3>
+                    <p style="color: black;">{!! $upss->upj_misi !!}</p>
+                    {{-- <a href="#" class="thm-btn cta-one__btn"><span>Join Us Now</span></a><!-- /.thm-btn cta-one__btn --> --}}
+                </div><!-- /.container -->
+            </section><!-- /.cta-one -->
 
-        <section class="video-one">
-            <div class="container">
-                <div class="video-one__box text-center wow fadeInUp" data-wow-duration="1500ms" style="background-image: url({{ asset('landingppdb/ppdb/style/assets/images/resources/video-1-1.jpg') }});">
-                    <a href="#" class="video-popup"><i class="fal fa-play-circle"></i></a>
-                </div><!-- /.video-one__box -->
-            </div><!-- /.container -->
-        </section><!-- /.video-one -->
+            <section class="video-one">
+                <div class="container">
+                    <div class="video-one__box text-center wow fadeInUp" data-wow-duration="1500ms"
+                        style="background-image: url({{ asset('fotomahasiswa/' . $upss->foto_bg) }});">
+                        <a href="{{ $upss->link_yt }}" class="video-popup"><i class="fal fa-play-circle"></i></a>
+                    </div><!-- /.video-one__box -->
+                </div><!-- /.container -->
+            </section><!-- /.video-one -->
+        @endforeach
 
 
 
         <section class="team-one team-one__about-1 team-one__home-two" id='team'>
-            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/team-bg-shape-1-1.png') }}" alt="" class="team-one__bg-shape-1">
+            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/team-bg-shape-1-1.png') }}"
+                alt="" class="team-one__bg-shape-1">
             <div class="container">
                 <div class="block-title text-center">
                     <p class="color-2"><span>Structure Management</span></p>
                     {{-- <h3>Work with The Awesome Team <br> <span>of Our Company</span></h3> --}}
                 </div><!-- /.block-title text-center -->
                 <div class="row high-gutters">
-                    @foreach ( $team as $tm )
-                    <div class="col-lg-4 col-md-12 wow fadeInUp" data-wow-duration="1500ms">
-                        <div class="team-one__single">
-                            <div class="team-one__image">
-                                <img src="{{ asset('fotomahasiswa/' . $tm->foto_team) }}" alt="">
-                                <div class="team-one__social">
-                                    <div class="team-one__social-normal">
-                                        <a href="#"><i class="fa fa-share-alt"></i></a>
-                                    </div><!-- /.team-one__social-normal -->
-                                    <div class="team-one__social-hover">
-                                        <a href="{{ $tm->fb }}"><i class="fab fa-facebook-f"></i></a>
-                                        <a href="{{ $tm->wa }}"><i class="fab fa-whatsapp"></i></a>
-                                        <a href="{{ $tm->ig }}"><i class="fab fa-instagram"></i></a>
-                                    </div><!-- /.team-one__social-hover -->
-                                </div><!-- /.team-one__social -->
-                            </div><!-- /.team-one__image -->
-                            <div class="team-one__content">
-                                <h3>{{ $tm->nama_team }}</h3>
-                                <p>{{ $tm->jabatan_team }}</p>
-                            </div><!-- /.team-one__content -->
-                        </div><!-- /.team-one__single -->
-                    </div><!-- /.col-lg-4 col-md-6 -->
+                    @foreach ($team as $tm)
+                        <div class="col-lg-4 col-md-12 wow fadeInUp" data-wow-duration="1500ms">
+                            <div class="team-one__single">
+                                <div class="team-one__image">
+                                    <img src="{{ asset('fotomahasiswa/' . $tm->foto_team) }}" alt="">
+                                    <div class="team-one__social">
+                                        <div class="team-one__social-normal">
+                                            <a href="#"><i class="fa fa-share-alt"></i></a>
+                                        </div><!-- /.team-one__social-normal -->
+                                        <div class="team-one__social-hover">
+                                            <a href="{{ $tm->fb }}"><i class="fab fa-facebook-f"></i></a>
+                                            <a href="{{ $tm->wa }}"><i class="fab fa-whatsapp"></i></a>
+                                            <a href="{{ $tm->ig }}"><i class="fab fa-instagram"></i></a>
+                                        </div><!-- /.team-one__social-hover -->
+                                    </div><!-- /.team-one__social -->
+                                </div><!-- /.team-one__image -->
+                                <div class="team-one__content">
+                                    <h3>{{ $tm->nama_team }}</h3>
+                                    <p>{{ $tm->jabatan_team }}</p>
+                                </div><!-- /.team-one__content -->
+                            </div><!-- /.team-one__single -->
+                        </div><!-- /.col-lg-4 col-md-6 -->
                     @endforeach
                 </div><!-- /.row -->
             </div><!-- /.container -->
@@ -455,7 +444,8 @@
                     <p class="color-2"><span>Testimoni</span></p>
                     {{-- <h3>We Care Client’s Issues <br> <span>So We are Popular.</span></h3> --}}
                 </div><!-- /.block-title text-center -->
-                <div class="testimonials-one__carousel thm__owl-carousel owl-carousel owl-theme" data-options='{
+                <div class="testimonials-one__carousel thm__owl-carousel owl-carousel owl-theme"
+                    data-options='{
                     "items": 3, "margin": 40, "smartSpeed": 700, "autoplay": true, "autoplayTimeout": 5000,
                     "autoplayHoverPause": true, "nav": false, "dots": false, "loop": true, "responsive": {
                         "0": { "items": 1, "margin": 0},
@@ -465,46 +455,21 @@
                         "1200": { "items": 3, "margin": 40}
                     }
                 }'>
-                    <div class="item">
-                        <div class="testimonials-one__single">
-                            <div class="testimonials-one__icon">
-                                <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/testi-qoute-1-1.png') }}" alt="">
-                            </div><!-- /.testimonials-one__icon -->
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua.Lorem ipsum magna aliqua.</p>
-                            <h3>Derek Baldwin</h3>
-                        </div><!-- /.testimonials-one__single -->
-                    </div><!-- /.item -->
-                    <div class="item">
-                        <div class="testimonials-one__single">
-                            <div class="testimonials-one__icon">
-                                <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/testi-qoute-1-1.png') }}" alt="">
-                            </div><!-- /.testimonials-one__icon -->
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua.Lorem ipsum magna aliqua.</p>
-                            <h3>Charles Morris</h3>
-                        </div><!-- /.testimonials-one__single -->
-                    </div><!-- /.item -->
-                    <div class="item">
-                        <div class="testimonials-one__single">
-                            <div class="testimonials-one__icon">
-                                <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/testi-qoute-1-1.png') }}" alt="">
-                            </div><!-- /.testimonials-one__icon -->
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua.Lorem ipsum magna aliqua.</p>
-                            <h3>Eula Rowe</h3>
-                        </div><!-- /.testimonials-one__single -->
-                    </div><!-- /.item -->
-                    <div class="item">
-                        <div class="testimonials-one__single">
-                            <div class="testimonials-one__icon">
-                                <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/testi-qoute-1-1.png') }}" alt="">
-                            </div><!-- /.testimonials-one__icon -->
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua.Lorem ipsum magna aliqua.</p>
-                            <h3>Jose Flores</h3>
-                        </div><!-- /.testimonials-one__single -->
-                    </div><!-- /.item -->
+
+                   
+                    @foreach ($tes as $tes)
+                        <div class="item">
+                            <div class="testimonials-one__single">
+                                <div class="testimonials-one__icon">
+                                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/testi-qoute-1-1.png') }}"
+                                        alt="">
+                                </div><!-- /.testimonials-one__icon -->
+                                <p>{{ $tes->komen }}</p>
+                                <h3>{{ $tes->tester }}</h3>
+                            </div><!-- /.testimonials-one__single -->
+                        </div><!-- /.item -->
+                    @endforeach
+                    
                 </div><!-- /.testimonials-one__carousel -->
             </div><!-- /.container -->
         </section><!-- /.testimonials-one -->
@@ -514,14 +479,16 @@
         <section class="contact-one">
             <div class="container wow fadeInUp" data-wow-duration="1500ms">
                 <div class="inner-container">
-                    <img src="assets/images/shapes/contact-form-shape-1-1.png" class="contact-one__shape-1" alt="">
+                    <img src="assets/images/shapes/contact-form-shape-1-1.png" class="contact-one__shape-1"
+                        alt="">
                     <img src="assets/images/mocups/contact-1-moc-1.png" class="contact-one__shape-2" alt="">
                     <img src="assets/images/mocups/contact-1-moc-2.png" class="contact-one__shape-3" alt="">
                     <div class="block-title text-center">
                         <p><span>Analysis</span></p>
                         <h3>Get Free SEO Analysis?</h3>
                     </div><!-- /.block-title text-center -->
-                    <form action="http://ashik.templatepath.net/inovex-html-files/assets/inc/sendemail.php" class="contact-one__form">
+                    <form action="http://ashik.templatepath.net/inovex-html-files/assets/inc/sendemail.php"
+                        class="contact-one__form">
                         <div class="row">
                             <div class="col-md-6">
                                 <input type="text" placeholder="Your Name*">

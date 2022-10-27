@@ -18,12 +18,12 @@ class UpjtekajeController extends Controller
         $tentang = Upjtentangkami::all();
         $upjt = Upjtentangkami::all();
         $team = Teamupjtekaje::all();
-        $keunggulan = Upjkeunggulan::all();
+        $keunguan = Upjkeunggulan::all();
         $upjas = Upjjasa::all();
         $upgal = Upjgalery::all();
         $upjvis = Upjvisimisi::all();
         $tes = Testimoni::all();
-        return view('upj.upj', compact('tentang','upjt','team','keunggulan','upjas','upgal','upjvis','tes'));
+        return view('upj.upj', compact('tentang','upjt','team','keunguan','upjas','upgal','upjvis','tes'));
     }
 
 
@@ -32,32 +32,32 @@ class UpjtekajeController extends Controller
         $data = Upjtentangkami::all();
         return view('upjtekaje.tentangkami.tentang-kami', compact('data'));
     }
-    public function tambahtentangkami()
-    {
-        return view('upjtekaje.tentangkami.tambah-tentang-kami');
-    }
+    // public function tambahtentangkami()
+    // {
+    //     return view('upjtekaje.tentangkami.tambah-tentang-kami');
+    // }
 
-    public function submitdata13(Request $request){
-        // dd($request->all());
-        $this->validate($request,[
-            'deskripsi_tentangkami' =>'required',
-        ],[
-            'deskripsi_tentangkami.required' =>'Harus diisi',
+    // public function submitdata13(Request $request){
+    //     // dd($request->all());
+    //     $this->validate($request,[
+    //         'deskripsi_tentangkami' =>'required',
+    //     ],[
+    //         'deskripsi_tentangkami.required' =>'Harus diisi',
 
-        ]);
-        $data = Upjtentangkami::create([
-            'deskripsi_tentangkami' =>$request->deskripsi_tentangkami,
-            'foto_tentangkami' =>$request->foto_tentangkami,
+    //     ]);
+    //     $data = Upjtentangkami::create([
+    //         'deskripsi_tentangkami' =>$request->deskripsi_tentangkami,
+    //         'foto_tentangkami' =>$request->foto_tentangkami,
 
-        ]);
-        if($request->hasFile('foto_tentangkami')){
-            $request->file('foto_tentangkami')->move('fotomahasiswa/', $request->file('foto_tentangkami')->getClientOriginalName());
-            $data->foto_tentangkami = $request->file('foto_tentangkami')->getClientOriginalName();
-            $data->save();
-        }
+    //     ]);
+    //     if($request->hasFile('foto_tentangkami')){
+    //         $request->file('foto_tentangkami')->move('fotomahasiswa/', $request->file('foto_tentangkami')->getClientOriginalName());
+    //         $data->foto_tentangkami = $request->file('foto_tentangkami')->getClientOriginalName();
+    //         $data->save();
+    //     }
 
-        return redirect()->route('tentangkami')->with('toast_success',' Data Berhasil di Tambahkan!');
-    }
+    //     return redirect()->route('tentangkami')->with('toast_success',' Data Berhasil di Tambahkan!');
+    // }
 
     public function edittentangkami($id){
 

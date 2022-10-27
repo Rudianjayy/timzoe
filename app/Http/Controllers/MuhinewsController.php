@@ -13,7 +13,7 @@ class MuhinewsController extends Controller
 {
     public function index() {
         $k = Muhinews::paginate(6);
-        $f = Muhinews::paginate(3);
+        $f = Muhinews::orderBy('created_at','desc')->paginate(3);
         $personal = Personaljurusan::all();
         $logo = footeer::all();
         $link = footeerdua::all();

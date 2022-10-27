@@ -47,7 +47,9 @@
     </div><!-- /.preloader -->
 
     <div class="page-wrapper">
-
+        {{-- <div id="SLIDE_BG">
+            
+        </div> --}}
         <nav class="main-nav-one main-nav-one__home-three stricky">
             <div class="container-fluid">
                 <div class="inner-container">
@@ -82,7 +84,7 @@
             </div><!-- /.container-fluid -->
         </nav><!-- /.main-nav-one -->
 
-        <section class="banner-one" id='home'>
+        <section class="SLIDE_BG" id='home'>
             {{-- <div class="particles-snow" id="banner-one-snow"></div><!-- /#cta-one-snow.particles-snow -->
 
             <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-1.png') }}" class="banner-one__bg-shape-1" alt="">
@@ -92,7 +94,7 @@
             <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-2.png') }}" class="banner-one__bg-shape-5" alt=""> --}}
             <div class="container">
                 <div class="banner-one__image wow slideInUp" data-wow-duration="1500ms">
-                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/mocups/banner-moc-1-1.png') }}"
+                    {{-- <img src="{{ asset('landingppdb/ppdb/style/assets/images/mocups/banner-moc-1-1.png') }}"
                         class="banner-one__image-1 " alt="">
                     <img src="{{ asset('landingppdb/ppdb/style/assets/images/mocups/banner-moc-1-2.png') }}"
                         class="banner-one__image-2 float-bob-y" alt="">
@@ -101,10 +103,10 @@
                     <img src="{{ asset('landingppdb/ppdb/style/assets/images/mocups/banner-moc-1-4.png') }}"
                         class="banner-one__image-4" alt="">
                     <img src="{{ asset('landingppdb/ppdb/style/assets/images/mocups/banner-moc-1-5.png') }}"
-                        class="banner-one__image-5" alt="">
+                        class="banner-one__image-5" alt=""> --}}
                 </div><!-- /.banner-one__image -->
                 <div class="row">
-                    <div class="col-xl-7">
+                    <div class="col-xl-7" style="margin-top: 30vh;" >
                         <div class="banner-one__content">
                             <h3>UPJ TEKAJE <br> SMK Muhammadiyah 1 Genteng</h3>
                             <p>Unit produksi dan jasa <br> Teknik Komputer dan Jaringan..</p>
@@ -155,9 +157,9 @@
                     <p><span>Keunggulan</span></p>
                 </div><!-- /.block-title text-center -->
                 <div class="row high-gutters">
-                    @foreach ($keunggulan as $ke)
+                    @foreach ($keunguan as $ke)
                         <div class="col-lg-4">
-                            <div class="service-three__single-bg wow flipInY" data-wow-delay="0ms"
+                            <div class="service-three__single wow flipInY" data-wow-delay="0ms"
                                 data-wow-duration="1500ms">
 
                                 <div class="service-three__icon">

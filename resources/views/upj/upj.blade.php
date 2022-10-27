@@ -157,7 +157,7 @@
                 <div class="row high-gutters">
                     @foreach ($keunggulan as $ke)
                         <div class="col-lg-4">
-                            <div class="service-three__single-bg wow flipInY" data-wow-delay="0ms"
+                            <div class="service-three__single wow flipInY" data-wow-delay="0ms"
                                 data-wow-duration="1500ms">
 
                                 <div class="service-three__icon">
@@ -456,7 +456,7 @@
                     }
                 }'>
 
-                   
+
                     @foreach ($tes as $tes)
                         <div class="item">
                             <div class="testimonials-one__single">
@@ -469,7 +469,7 @@
                             </div><!-- /.testimonials-one__single -->
                         </div><!-- /.item -->
                     @endforeach
-                    
+
                 </div><!-- /.testimonials-one__carousel -->
             </div><!-- /.container -->
         </section><!-- /.testimonials-one -->

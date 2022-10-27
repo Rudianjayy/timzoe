@@ -21,7 +21,7 @@ class ProfilSekolahController extends Controller
         $personal = Personaljurusan::all();
         $logo = footeer::all();
         $link = footeerdua::all();
-        $d = Muhinews::paginate(3);
+        $d = Muhinews::orderBy('created_at','desc')->paginate(3);
         return view('profilsekolah.profilsekolah',compact('q','f','kh','personal','logo','link','d'));
     }
     public function profilsekolahadmin(){
@@ -158,7 +158,7 @@ class ProfilSekolahController extends Controller
         $personal = Personaljurusan::all();
         $ft = Footeer::all();
         $logo = footeer::all();
-        $d = Muhinews::paginate(3);
+        $d = Muhinews::orderBy('created_at','desc')->paginate(3);
         return view('visimisi.visimisi', compact('v', 'f', 'kh', 'personal', 'ft', 'logo','d'));
     }
     public function visimisiadmin()

@@ -99,13 +99,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
             integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
         </script>
-        <script>
-            const selection = document.getElementById('matkul')
-            selection.onchange = function(e) {
-                const dosen = e.target.options[e.target.selectedIndex].dataset.dosen
-                document.getElementById('dosen').value = dosen;
-            }
-        </script>
+
         @include('layout.script')
     </body>
 @endsection

@@ -72,18 +72,18 @@
             </section>
 
 
-            
+
             <section class="blog-standard blog-details">
                 <div class="container">
                     <div class="row">
                                 @php
-                                    
+
                                     $gadai = \App\Models\Pegadaian::all();
                                 @endphp
                         <div class="col-lg-8">
                             @foreach ($gadai as $gd )
-                                
-                            
+
+
                             <div class="blog-details__main">
 
                                 <div class="blog-two__meta">
@@ -94,7 +94,7 @@
                                 <img src="{{ asset('fotomahasiswa/' . $gd->foto_gadai) }}" class="img-fluid" alt="">
                                 {{-- <h3>Additional Services that will <br> Grow Business</h3> --}}
                                 <p>{!! $gd->deskripsi_gadai !!} </p>
-    
+
                                 {{-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                                     ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                                     ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
@@ -130,16 +130,16 @@
                                     velit esse cillum dolore eu fugiat nulla pariatur.</p> --}}
                             </div><!-- /.blog-details__main -->
                             @endforeach
-    
-                           
+
+
                             {{-- <div class="blog-post__navigations">
                                 <a class="blog-post__navigations-left" href="#">Previous Post <i
                                         class="far fa-angle-left"></i></a>
                                 <a class="blog-post__navigations-right" href="#">Next Post <i
                                         class="far fa-angle-right"></i></a>
                             </div><!-- /.blog-post__navigations --> --}}
-    
-    
+
+
                             {{-- <div class="comment-one">
                                 <h3 class="comment-one__title">3 Comments</h3>
                                 <div class="comment-one__single">
@@ -184,7 +184,7 @@
                             </div><!-- /.comment-one -->
                             <div class="contact-two__form-wrap">
                                 <h3>Leave a Comment</h3>
-    
+
                                 <form action="http://ashik.templatepath.net/inovex-html-files/assets/inc/sendemail.php" class="contact-one__form">
                                     <div class="row">
                                         <div class="col-md-6">
@@ -207,9 +207,9 @@
                                         </div><!-- /.col-md-12 -->
                                     </div><!-- /.row -->
                                 </form><!-- /.contact-one__form -->
-    
+
                             </div><!-- /.contact-two__form-wrap --> --}}
-    
+
                         </div><!-- /.col-lg-8 -->
                         <div class="col-lg-4">
                             <div class="sidebar sidebar__right">
@@ -240,11 +240,11 @@
                                 <div class="sidebar__single sidebar__post">
                                     <h3 class="sidebar__title">Berita Terbaru</h3>
                                     @php
-                                        $muhiberita = \App\Models\Muhinews::paginate(3);
+                                        $muhiberita = \App\Models\Muhinews::orderBy('created_at','desc')->paginate(3);
                                     @endphp
                                     <div class="sidebar__post-wrap">
                                         @foreach ($muhiberita as $mb )
-                                            
+
                                         <div class="sidebar__post-single">
                                             <div class="sidebar__post-image">
                                                 <img src="{{ asset('fotomahasiswa/' . $mb->foto) }}" alt="">
@@ -255,7 +255,7 @@
                                             </div><!-- /.sidebar__post-content -->
                                         </div><!-- /.sidebar__post-single -->
                                         @endforeach
-                                       
+
                                     </div><!-- /.sidebar__post-wrap -->
                                 </div><!-- /.sidebar__single -->
                                 <div >
@@ -305,10 +305,10 @@
             </section><!-- /.blog-standard -->
            <br><br><br>
 
-           
+
 
            @include('koneksi.mitra')
-           
+
 
             @include('koneksi.footer')
         </div>
@@ -328,27 +328,7 @@
     <script src="{{ asset('landing/html/bidzend/assets/js/main.js') }}"></script>
 
 
-    {{-- js nya ppdb kuambil truh sini --}}
-    {{-- <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.min.js') }}"></script> --}}
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/bootstrap.bundle.min.js') }}"></script>
-    {{-- <script src="{{ asset('landingppdb/ppdb/style/assets/js/bootstrap-datepicker.min.js') }}"></script> --}}
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/bootstrap-select.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/isotope.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.ajaxchimp.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.circleType.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/waypoints.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.counterup.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.lettering.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.magnific-popup.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.mCustomScrollbar.concat.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.validate.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/owl.carousel.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/TweenMax.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/wow.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/swiper.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/particles.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/particel-config.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/theme.js') }}"></script>
+
 
 </body>
 

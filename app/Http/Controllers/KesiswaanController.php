@@ -110,7 +110,7 @@ class KesiswaanController extends Controller
 
     public function osis() {
         $osis = osis::all();
-        $d = Muhinews::paginate(3);
+        $d = Muhinews::orderBy('created_at','desc')->paginate(3);
         $f = Muhinews::paginate(4);
         // $kh= jurusan::all();
         $ft = Footeer::all();

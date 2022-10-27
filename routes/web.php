@@ -126,6 +126,7 @@ Route::get('/deleteprestasi/{id}',[PrestasiController::class, 'delete'])->name('
 //muhinews
 Route::get('/muhinews',[MuhinewsController::class, 'index'])->name('muhinews');
 Route::get('/muhinewsadmin',[MuhinewsController::class, 'indexadmin'])->name('muhinewsadmin');
+Route::get('/detailmuhinews/{id}',[MuhinewsController::class, 'detailmuhinews'])->name('detailmuhinews');
 Route::get('/tambahmuhinews',[MuhinewsController::class, 'tambahmuhinews'])->name('tambahmuhinews');
 Route::post('/muhinewsproses',[MuhinewsController::class, 'muhinewsproses'])->name('muhinewsproses');
 Route::get('/editmuhinews/{id}',[MuhinewsController::class, 'editmuhinews'])->name('editmuhinews');

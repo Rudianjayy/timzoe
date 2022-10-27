@@ -3229,11 +3229,20 @@ a:focus {
 .blog-grid .high-gutters {
 	margin-left: -20px;
 	margin-right: -20px;
+
 }
 
 .blog-grid .high-gutters>[class*=col-] {
 	padding-left: 20px;
 	padding-right: 20px;
+    color: #125f04;
+    text-decoration: none;
+    font-size: 0.85em;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .blog-grid .blog-one__single {
@@ -3398,7 +3407,7 @@ a:focus {
 
 
 /*--------------------------------------------------------------
-## Blog Details
+## Blog Detail
 --------------------------------------------------------------*/
 
 .blog-details__main h3 {
@@ -3408,16 +3417,14 @@ a:focus {
 	color: var(--thm-black);
 	font-weight: 600;
 	margin-bottom: 25px;
-	
+
 }
 
 .blog-details__main p {
 	margin: 0;
 }
 
-.blog-details__main p+p {
-	margin-top: 35px;
-}
+
 
 .blog-details__main img {
 	border-radius: 10px;
@@ -5227,7 +5234,6 @@ a:focus {
             position: absolute;
             top: 92%;
             left: 5%;
-            color: red;
             font-size: 30px;
             /* transform: rotate(0deg) translateY(-50%); */
             /* transform-origin: top; */
@@ -5236,7 +5242,6 @@ a:focus {
             position: absolute;
             top: 77%;
             left: 5%;
-            color: blue;
             font-size: 30px;
             /* transform: rotate(0deg) translateY(-50%); */
             /* transform-origin: top; */
@@ -6143,7 +6148,7 @@ a:focus {
 	padding-top: 170px;
 	padding-bottom: 130px;
 	position: relative;
-	
+
 }
 
 .service-three [class*=section__bubble-] {
@@ -6159,11 +6164,22 @@ a:focus {
 .service-three .row.high-gutters {
 	margin-left: -20px;
 	margin-right: -20px;
+    color: #125f04;
+    text-decoration: none;
+    font-size: 0.85em;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .service-three .row.high-gutters [class*=col-] {
 	padding-left: 20px;
 	padding-right: 20px;
+
+
+
 }
 
 .service-three__single {

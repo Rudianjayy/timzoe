@@ -190,7 +190,7 @@
             <div class="row high-gutters">
                 @foreach ($paginate as $ps )
                 <div class="col-lg-4">
-                    <div class="service-three__single wow flipInY" data-wow-delay="0ms" data-wow-duration="1500ms" style="background-color: rgb(0 126 255 / 0%);">
+                    <div class="service-three__single wow flipInY" data-wow-delay="0ms" data-wow-duration="1500ms" style="background-color: #0000ff12;">
                         <div class="service-three__icon">
                             <img src="{{ asset('fotomahasiswa/' . $ps->foto) }}" alt="">
                         </div><!-- /.service-three__icon -->

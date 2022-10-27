@@ -126,6 +126,7 @@ Route::get('/deleteprestasi/{id}',[PrestasiController::class, 'delete'])->name('
 //muhinews
 Route::get('/muhinews',[MuhinewsController::class, 'index'])->name('muhinews');
 Route::get('/muhinewsadmin',[MuhinewsController::class, 'indexadmin'])->name('muhinewsadmin');
+Route::get('/detailmuhinews/{id}',[MuhinewsController::class, 'detailmuhinews'])->name('detailmuhinews');
 Route::get('/tambahmuhinews',[MuhinewsController::class, 'tambahmuhinews'])->name('tambahmuhinews');
 Route::post('/muhinewsproses',[MuhinewsController::class, 'muhinewsproses'])->name('muhinewsproses');
 Route::get('/editmuhinews/{id}',[MuhinewsController::class, 'editmuhinews'])->name('editmuhinews');
@@ -325,9 +326,9 @@ Route::get('/deleteosis/{id}',[KesiswaanController::class,'deleteosis'])->name('
 Route::get('/alumni',[KesiswaanController::class,'alumni'])->name('alumni');
 Route::get('/alumniadmin',[KesiswaanController::class,'alumniadmin'])->name('alumniadmin');
 Route::get('/tambahalumni',[KesiswaanController::class, 'tambahalumni'])->name('tambahalumni');
-Route::post('/alumniproses6',[KesiswaanController::class, 'alumniproses6'])->name('alumniproses6');
+Route::post('/tambahalumniproses',[KesiswaanController::class, 'tambahalumniproses'])->name('tambahalumniproses');
 Route::get('/editalumni/{id}',[KesiswaanController::class, 'editalumni'])->name('editalumni');
-Route::post('/editproses6/{id}',[KesiswaanController::class,'editproses6'])->name('editproses6');
+Route::post('/editprosesalumni/{id}',[KesiswaanController::class,'editprosesalumni'])->name('editprosesalumni');
 Route::get('/deletealumni/{id}',[KesiswaanController::class,'deletealumni'])->name('deletealumni');
 
 

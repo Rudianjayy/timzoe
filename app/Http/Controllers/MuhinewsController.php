@@ -24,6 +24,10 @@ class MuhinewsController extends Controller
         $data = Muhinews::all();
         return view('muhinews.admin.muhinews-admin', compact('data'));
     }
+    public function detailmuhinews($id){
+        $data = Muhinews::findOrFail($id);
+        return view('muhinews.admin.detailmuhinews',compact('data'));
+    }
     public function tambahmuhinews()
     {
         return view('muhinews.admin.tambah-muhinews');

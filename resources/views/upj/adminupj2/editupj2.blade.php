@@ -32,6 +32,13 @@
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">IconUPJ :</label>
+                                    <input type="text" name="icon_upj" class="form-control" value="{{ $data->icon_upj }}">
+                                    @error('icon_upj')
+                                        <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
                                 <button type="submit" class="btn btn-primary">Submit</button>
                                 <a href="/muhinewsadmin" class="btn btn-danger">Kembali</a>
                             </form>

@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('foto_upj');
             $table->string('jasa_upj');
+            $table->string('icon_upj');
             $table->timestamps();
         });
     }

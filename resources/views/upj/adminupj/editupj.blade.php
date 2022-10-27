@@ -18,10 +18,10 @@
                 @csrf
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Foto Upj :</label>
-                    <img src="{{ asset('fotomahasiswa/' . $data->foto_upj) }}" alt="" style="width: 70px">
-                    <input type="file" name="foto_upj" class="form-control" id="exampleInputEmail1"
+                    <img src="{{ asset('fotomahasiswa/' . $data->foto_upjj) }}" alt="" style="width: 70px">
+                    <input type="file" name="foto_upjj" class="form-control" id="exampleInputEmail1"
                         aria-describedby="emailHelp">
-                    @error('foto_upj')
+                    @error('foto_upjj')
                         <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
                 </div>

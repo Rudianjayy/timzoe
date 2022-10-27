@@ -31,6 +31,16 @@
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Icon UPJ :</label>
+                                    <input type="text" name="icon_upj" class="form-control" >
+                                    <div class="text-danger">
+                                        Cari Icon Di FontAwesome
+                                    </div>
+                                    @error('icon_upj')
+                                        <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
                                 <button type="submit" class="btn btn-primary">Submit</button>
                                 <a href="/muhinewsadmin" class="btn btn-danger">Kembali</a>
                             </form>

@@ -16,18 +16,6 @@
 
 
         <div class="breadcrumbs">
-
-            {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> --}}
-
-            {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" /> --}}
-            {{--  <div class="col-md-8">
-            <h6 class="page-title">Data tables</h6>
-            <ol class="breadcrumb m-0">
-                <li class="breadcrumb-item"><a href="#">Veltrix</a></li>
-                <li class="breadcrumb-item"><a href="#">Tables</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Data tables</li>
-            </ol>
-        </div>  --}}
             <div class="row">
                 <div class="col-12">
                     <div class="card">
@@ -46,6 +34,7 @@
                                         <th scope="col">#</th>
                                         <th scope="col">Foto</th>
                                         <th scope="col">Jasa Upj</th>
+                                        <th scope="col">Icon Upj</th>
                                         <th scope="col">Dibuat</th>
                                         <th scope="col">Aksi</th>
                                     </tr>
@@ -62,6 +51,7 @@
                                                     style="width: 50px;">
                                             </td>
                                             <td>{{ $up->jasa_upj }}</td>
+                                            <td>{{ $up->icon_upj }}</td>
 
                                             <td>{{ $up->created_at }}</td>
                                             <td>

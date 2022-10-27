@@ -6,13 +6,10 @@
                 <div id="site-header-inner" class="flex">
                     <div id="site-logo" class="clearfix">
                         <div id="site-logo-inner">
-                            <a href="/" rel="home" class="main-logo">
-                                <img id="logo_header"
-                                    src="{{ asset('landing/html/bidzend/assets/images/logo/muhi2.png') }}"
-                                    alt="" width="300" height="300">
-                                {{-- data-retina="{{ asset('landing/html/bidzend/assets/images/logo/muhi2.png') }}"
-                                    data-width="200" data-height="200"> --}}
-                            </a>
+                            <img id="logo_header" src="{{ asset('landing/html/bidzend/assets/images/logo/muhi2.png') }}"
+                                alt="" width="300" height="300"
+                                data-retina="{{ asset('landing/html/bidzend/assets/images/logo/muhi2.png') }}"
+                                data-width="200" data-height="200">
                         </div>
                     </div>
                     {{-- <form class="form-search">
@@ -34,9 +31,11 @@
                                         <li class="menu-item {{ Route::is('visimisi') ? 'current-item' : '' }}"><a
                                                 href="/visimisi">Visi & Misi</a></li>
                                         <li class="menu-item {{ Route::is('identitassekolah') ? 'current-item' : '' }}">
-                                            <a href="/identitas_sekolah">Identitas Sekolah</a></li>
+                                            <a href="/identitas_sekolah">Identitas Sekolah</a>
+                                        </li>
                                         <li class="menu-item {{ Route::is('fasilitassekolah') ? 'current-item' : '' }}">
-                                            <a href="/fasilitassekolah">Fasilitas</a></li>
+                                            <a href="/fasilitassekolah">Fasilitas</a>
+                                        </li>
                                 </li>
                             </ul>
 
@@ -75,7 +74,7 @@
                                         <a href="/indexakademi"> Akademi</a>
                                         @php
                                             $akademi = \App\Models\Akademi::all();
-                                            $ekstra= \App\Models\ekstrakulikuler::all();
+                                            $ekstra = \App\Models\ekstrakulikuler::all();
                                         @endphp
                                         <ul class="sub-menu">
                                             @foreach ($akademi as $ami)
@@ -90,15 +89,15 @@
 
                                     <li class="menu-item {{ Route::is('ekstra') ? 'current-item' : '' }}"><a
                                             href="/ekstra">Ekstra Kulikuler</a>
-                                            <ul class="sub-menu">
-                                                @foreach ($ekstra as $ab)
-                                                    <li class="menu-item "><a
-                                                            href="/detailekstrakulikuler/{{ $ab->id }}">{{ $ab->judul_ekstra }}</a>
-                                                    </li>
-                                                @endforeach
-                                            </ul>
-                                        </li>
-                                        {{--  <li class="menu-item {{ Route::is('osis') ? 'current-item' : '' }}"><a
+                                        <ul class="sub-menu">
+                                            @foreach ($ekstra as $ab)
+                                                <li class="menu-item "><a
+                                                        href="/detailekstrakulikuler/{{ $ab->id }}">{{ $ab->judul_ekstra }}</a>
+                                                </li>
+                                            @endforeach
+                                        </ul>
+                                    </li>
+                                    {{--  <li class="menu-item {{ Route::is('osis') ? 'current-item' : '' }}"><a
                                             href="/ekstra">Ekstrakulikuler</a></li>  --}}
                                     <li class="menu-item {{ Route::is('osis') ? 'current-item' : '' }}"><a
                                             href="/osis">IPM/OSIS</a></li>

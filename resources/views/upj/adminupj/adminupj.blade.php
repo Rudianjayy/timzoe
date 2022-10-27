@@ -64,7 +64,7 @@
                                         <td>{!! $upj->judul2 !!}</td>
                                         <td>{!! $upj->judul3 !!}</td>
                                         <td>
-                                            <img src="{{ asset('fotomahasiswa/' . $upj->foto_upj) }}" alt=""
+                                            <img src="{{ asset('fotomahasiswa/' . $upj->foto_upjj) }}" alt=""
                                                 style="width: 50px;">
                                         </td>
                                                {{--  @php

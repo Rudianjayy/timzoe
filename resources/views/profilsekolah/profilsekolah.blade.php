@@ -91,7 +91,7 @@
                         <div class="sidebar__single sidebar__category">
                             <ul class="list-unstyled sidebar__category-list">
                                 <li>
-                                    <a href="viisimisi">Visi & Misi</a>
+                                    <a href="visimisi">Visi & Misi</a>
                                 </li>
                                 <li>
                                     <a href="identitas_sekolah">Identitas Sekolah</a>

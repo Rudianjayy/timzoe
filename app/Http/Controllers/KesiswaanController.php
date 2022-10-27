@@ -110,7 +110,7 @@ class KesiswaanController extends Controller
 
     public function osis() {
         $osis = osis::all();
-        $d = Muhinews::all();
+        $d = Muhinews::orderBy('created_at','desc')->paginate(3);
         $f = Muhinews::paginate(4);
         // $kh= jurusan::all();
         $ft = Footeer::all();
@@ -212,14 +212,12 @@ class KesiswaanController extends Controller
 
 
 
-    public function alumni(Request $request) {
-        $l = alumni::all();
-        $ft = Footeer::all();
-        $f = Muhinews::paginate(4);
+    public function alumni() {
         $personal = Personaljurusan::all();
+        $alumni = alumni::paginate(4);
         $logo = footeer::all();
         $link = footeerdua::all();
-        return view('kesiswaan.alumni.alumni',compact('l','f','ft','personal','logo','link'));
+        return view('kesiswaan.alumni.alumni',compact('personal','logo','link','alumni'));
     }
         public function alumniadmin() {
         $data = alumni::all();
@@ -230,28 +228,28 @@ class KesiswaanController extends Controller
         return view('kesiswaan.alumni.tambahalumni');
     }
 
-    public function alumniproses6(Request $request){
+    public function tambahalumniproses(Request $request){
         // dd($request->all());
 
         $this->validate($request,[
-            'foto' =>'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
-            'judul_alumni' =>'required',
+            'foto_alumni' =>'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
+            'nama_alumni' =>'required',
             'deskripsi_alumni' =>'required',
         ],[
-            'foto.required' =>'Harus diisi',
-            'foto.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
-            'judul_alumni.required' =>'Harus diisi',
+            'foto_alumni.required' =>'Harus diisi',
+            'foto_alumni.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
+            'nama_alumni.required' =>'Harus diisi',
             'deskripsi_alumni.required' =>'Harus diisi',
 
         ]);
         $data = alumni::create([
-            'foto' =>$request->foto,
-            'judul_alumni' =>$request->judul_alumni,
+            'foto_alumni' =>$request->foto_alumni,
+            'nama_alumni' =>$request->nama_alumni,
             'deskripsi_alumni' =>$request->deskripsi_alumni,
         ]);
-        if($request->hasFile('foto')){
-            $request->file('foto')->move('fotomahasiswa/', $request->file('foto')->getClientOriginalName());
-            $data->foto = $request->file('foto')->getClientOriginalName();
+        if($request->hasFile('foto_alumni')){
+            $request->file('foto_alumni')->move('fotomahasiswa/', $request->file('foto_alumni')->getClientOriginalName());
+            $data->foto_alumni = $request->file('foto_alumni')->getClientOriginalName();
             $data->save();
         }
 
@@ -264,30 +262,26 @@ class KesiswaanController extends Controller
         return view('kesiswaan.alumni.editalumni', compact('data'));
     }
 
-    public function editproses6(Request $request, $id){
+    public function editprosesalumni(Request $request, $id){
         $this->validate($request,[
-            'foto' =>'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
-            'judul_alumni' =>'required',
+            'nama_alumni' =>'required',
             'deskripsi_alumni' =>'required',
         ],[
-            'foto.required' =>'Harus diisi',
-            'foto.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
-            'judul_alumni.required' =>'Harus diisi',
+            'nama_alumni.required' =>'Harus diisi',
             'deskripsi_alumni.required' =>'Harus diisi',
 
 
         ]);
         $data = alumni::find($id);
         $data->update([
-            'judul_alumni' =>$request->judul_alumni,
+            'nama_alumni' =>$request->nama_alumni,
             'deskripsi_alumni' =>$request->deskripsi_alumni,
         ]);
-        if($request->hasFile('foto')){
-            $request->file('foto')->move('fotomahasiswa/',$request->file('foto')->getClientOriginalName());
-            $data->foto = $request->file('foto')->getClientOriginalName();
+        if($request->hasFile('foto_alumni')){
+            $request->file('foto_alumni')->move('fotomahasiswa/', $request->file('foto_alumni')->getClientOriginalName());
+            $data->foto_alumni = $request->file('foto_alumni')->getClientOriginalName();
             $data->save();
         }
-
         return redirect('alumniadmin')->with('toast_success',' Data Berhasil di Ubah!');
 
     }

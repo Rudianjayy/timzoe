@@ -19,7 +19,7 @@ class Jurusan extends Model
             ->translatedFormat(' d F Y');
     }
 
-    
+
     // public function personal()
     // {
     //     return $this->belongsTo(Personaljurusan::class, 'personaljurusans_id','id');

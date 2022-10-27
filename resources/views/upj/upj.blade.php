@@ -458,7 +458,7 @@
                     }
                 }'>
 
-                   
+
                     @foreach ($tes as $tes)
                         <div class="item">
                             <div class="testimonials-one__single">
@@ -471,7 +471,7 @@
                             </div><!-- /.testimonials-one__single -->
                         </div><!-- /.item -->
                     @endforeach
-                    
+
                 </div><!-- /.testimonials-one__carousel -->
             </div><!-- /.container -->
         </section><!-- /.testimonials-one -->

@@ -14,7 +14,7 @@ class MuhiblogController extends Controller
     public function muhiblog($id)
     {
         $blog =Muhinews::findOrFail($id);
-        $d = Muhinews::paginate(3);
+        $d = Muhinews::orderBy('created_at','desc')->paginate(3);
         $personal = Personaljurusan::all();
         $logo = footeer::all();
         $kategori = Kategoriberita::all();

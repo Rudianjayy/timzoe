@@ -96,7 +96,7 @@
                                 <h4>{{$data->judul_ekstra}}</h4>
                             </div><!-- /.blog-one__meta -->
                             <p>{{$data->created_at}}</p>
-                            <p><a href="#">{{$data->deskripsi_ekstrakulikuler}}</a></p>
+                            <p><a href="#">{!!$data->deskripsi_ekstrakulikuler!!}</a></p>
                             <a href="/detailekstrakulikuler/{{ $data->id }}"
                                 class="thm-btn blog-one__btn"><span>Baca selengkapnya</span></a>
                             <!-- /.thm-btn blog-one__btn -->

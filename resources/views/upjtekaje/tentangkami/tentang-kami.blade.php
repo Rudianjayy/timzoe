@@ -19,13 +19,13 @@
 
         {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" /> --}}
        
-        <div class="row">
+        <div class="row" style="margin-top: 30px;">
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
 
                         
-                        <table id="datatable" class="table table-bordered dt-responsive nowrap"
+                        <table  class="table table-bordered dt-responsive nowrap"
                             style="border-collapse: collapse; border-spacing: 0; width: 100%;">
 
                             <thead>

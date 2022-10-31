@@ -40,7 +40,10 @@ class AkademiController extends Controller
     }
 
 
-
+    public function detaildeskripsi($id){
+        $data = Akademi::findOrFail($id);
+        return view('akademi.detaildeskripsi',compact('data'));
+    }
 
 
 

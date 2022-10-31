@@ -57,8 +57,9 @@
                                         </td>   
                                         <td>{{ $row->nama_kompetensi2 }}</td>
                                         <td>{!! $row->deskripsi_kompetensi2 !!}</td>
-                                        <td>{!! $row->deskripsi_detail2 !!}</td>
-
+                                        <td>
+                                            <a href="/detailjurusan/{{ $row->id }}" class="btn btn-success">Detail</a>
+                                        </td>
                                         {{-- <td>{{ $row->created_at->format('D M Y') }}</td> --}}
                                         <td>
                                             <a href="/editjurusan/{{ $row->id }}" class="btn btn-warning fas fa-pen-alt">Edit</a>

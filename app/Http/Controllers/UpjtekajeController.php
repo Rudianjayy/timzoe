@@ -7,7 +7,10 @@ use App\Models\Upjgalery;
 use Illuminate\Http\Request;
 use App\Models\Teamupjtekaje;
 use App\Models\Testimoni;
+use App\Models\Upjfooter;
+use App\Models\Upjfooterlink;
 use App\Models\Upjkeunggulan;
+use App\Models\Upjtekajeslider;
 use App\Models\Upjtentangkami;
 use App\Models\Upjvisimisi;
 
@@ -23,7 +26,11 @@ class UpjtekajeController extends Controller
         $upgal = Upjgalery::all();
         $upjvis = Upjvisimisi::all();
         $tes = Testimoni::all();
-        return view('upj.upj', compact('tentang','upjt','team','keunguan','upjas','upgal','upjvis','tes'));
+        $uf = Upjfooter::all();
+        $fu = Upjfooter::all();
+        $uli = Upjfooterlink::all();
+        $us = Upjtekajeslider::all();
+        return view('upj.upj', compact('tentang','upjt','team','keunguan','upjas','upgal','upjvis','tes','uf','fu','uli','us'));
     }
 
 
@@ -490,7 +497,7 @@ class UpjtekajeController extends Controller
     public function editvisimisi($id){
 
         $data6 = Upjvisimisi::findOrFail($id);
-        return view('upjtekaje.team.edit-team', compact('data6'));
+        return view('upjtekaje.visimisi.edit-visimisi', compact('data6'));
     }
 
     public function submitedit19(Request $request, $id){
@@ -586,5 +593,214 @@ class UpjtekajeController extends Controller
         $data7 = Testimoni::find($id);
         $data7->delete();
         return redirect('admintestimoni')->with('toast_error',' Data Berhasil di Hapus!');
+    }
+    
+    
+    
+    
+    
+    
+    public function loby22() {
+        $data9 = Upjfooterlink::all();
+        $uli = Upjfooterlink::all();
+        return view('upjtekaje.upjfooterlink.admin-upjfooterlink', compact('data9','uli'));
+    }
+    public function tambahupjfooterlink()
+    {
+        return view('upjtekaje.upjfooterlink.tambah-upjfooterlink');
+    }
+
+    public function submitdata22(Request $request){
+        // dd($request->all());
+        $this->validate($request,[
+            'nama' =>'required',
+            'link' =>'required'
+        ],[
+            'nama.required' =>'Harus diisi',
+            'link.required' =>'Harus diisi',
+
+        ]);
+        $data9 = Upjfooterlink::create([
+            'nama' =>$request->nama,
+            'link' =>$request->link,
+
+        ]);
+        // if($request->hasFile('foto_bg')){
+        //     $request->file('foto_bg')->move('fotomahasiswa/', $request->file('foto_bg')->getClientOriginalName());
+        //     $data9->foto_bg = $request->file('foto_bg')->getClientOriginalName();
+        //     $data9->save();
+        // }
+
+        return redirect()->route('adminupjfooterlink')->with('toast_success',' Data Berhasil di Tambahkan!');
+    }
+
+    public function editupjfooterlink($id){
+
+        $data9 = Upjfooterlink::findOrFail($id);
+        return view('upjtekaje.upjfooterlink.edit-upjfooterlink', compact('data9'));
+    }
+
+    public function submitedit22(Request $request, $id){
+        $this->validate($request,[
+        ],[
+            
+        ]);
+        $data9 = Upjfooterlink::find($id);
+        $data9->update([
+            'nama' =>$request->nama,
+            'link' =>$request->link,
+        ]);
+        // if($request->hasFile('foto_upjfooterlink')){
+        //     $request->file('foto_upjfooterlink')->move('fotomahasiswa/',$request->file('foto_upjfooterlink')->getClientOriginalName());
+        //     $data9->foto_upjfooterlink = $request->file('foto_upjfooterlink')->getClientOriginalName();
+        //     $data9->save();
+        // }
+
+        return redirect('adminupjfooterlink')->with('toast_success',' Data Berhasil di Ubah!');
+
+    }
+
+    public function deleteupjfooterlink($id){
+        $data9 = Upjfooterlink::find($id);
+        $data9->delete();
+        return redirect('adminupjfooterlink')->with('toast_error',' Data Berhasil di Hapus!');
+    }
+    
+    
+    
+    
+
+
+    
+    public function loby21() {
+        $data8 = Upjfooter::all();
+        $uf = Upjfooter::all();
+        return view('upjtekaje.upjfooter.admin-upjfooter', compact('data8','uf'));
+    }
+    public function tambahupjfooter()
+    {
+        return view('upjtekaje.upjfooter.tambah-upjfooter');
+    }
+
+    public function submitdata21(Request $request){
+        // dd($request->all());
+        $this->validate($request,[
+            'komen' =>'required',
+            'tester' =>'required'
+        ],[
+            'komen.required' =>'Harus diisi',
+            'tester.required' =>'Harus diisi',
+
+        ]);
+        $data8 = upjfooter::create([
+            'komen' =>$request->komen,
+            'tester' =>$request->tester,
+
+        ]);
+        // if($request->hasFile('foto_bg')){
+        //     $request->file('foto_bg')->move('fotomahasiswa/', $request->file('foto_bg')->getClientOriginalName());
+        //     $data8->foto_bg = $request->file('foto_bg')->getClientOriginalName();
+        //     $data8->save();
+        // }
+
+        return redirect()->route('adminupjfooter')->with('toast_success',' Data Berhasil di Tambahkan!');
+    }
+
+    public function editupjfooter($id){
+
+        $data8 = Upjfooter::findOrFail($id);
+        return view('upjtekaje.upjfooter.edit-upjfooter', compact('data8'));
+    }
+
+    public function submitedit21(Request $request, $id){
+        $this->validate($request,[
+        ],[
+
+        ]);
+        $data8 = Upjfooter::find($id);
+        $data8->update([
+            'tentang_upj' =>$request->tentang_upj,
+            'yt' =>$request->yt,
+            'fb' =>$request->fb,
+            'ig' =>$request->ig,
+            'wa' =>$request->wa,
+            'alamat' =>$request->alamat,
+            'email' =>$request->email,
+        ]);
+        // if($request->hasFile('foto_upjfooter')){
+        //     $request->file('foto_upjfooter')->move('fotomahasiswa/',$request->file('foto_upjfooter')->getClientOriginalName());
+        //     $data8->foto_upjfooter = $request->file('foto_upjfooter')->getClientOriginalName();
+        //     $data8->save();
+        // }
+
+        return redirect('adminupjfooter')->with('toast_success',' Data Berhasil di Ubah!');
+
+    }
+
+    public function deleteupjfooter($id){
+        $data8 = Upjfooter::find($id);
+        $data8->delete();
+        return redirect('adminupjfooter')->with('toast_error',' Data Berhasil di Hapus!');
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    public function loby23() {
+        $data10 = Upjtekajeslider::all();
+        $us = Upjtekajeslider::all();
+        return view('upjtekaje.upjslider.admin-upjslider', compact('data10','us'));
+    }
+    
+    public function editupjslider($id){
+
+        $data10 = Upjtekajeslider::findOrFail($id);
+        return view('upjtekaje.upjslider.edit-upjslider', compact('data10'));
+    }
+
+    public function submitedit23(Request $request, $id){
+        $this->validate($request,[
+        ],[
+
+        ]);
+        $data10 = Upjtekajeslider::find($id);
+        $data10->update([
+            'judul_slider' =>$request->judul_slider,
+            'deskripsi_slider' =>$request->deskripsi_slider,
+        ]);
+        if($request->hasFile('foto_slider1')){
+            $request->file('foto_slider1')->move('fotomahasiswa/',$request->file('foto_slider1')->getClientOriginalName());
+            $data10->foto_slider1 = $request->file('foto_slider1')->getClientOriginalName();
+            $data10->save();
+        }
+        if($request->hasFile('foto_slider2')){
+            $request->file('foto_slider2')->move('fotomahasiswa/',$request->file('foto_slider2')->getClientOriginalName());
+            $data10->foto_slider2 = $request->file('foto_slider2')->getClientOriginalName();
+            $data10->save();
+        }
+        if($request->hasFile('foto_slider3')){
+            $request->file('foto_slider3')->move('fotomahasiswa/',$request->file('foto_slider3')->getClientOriginalName());
+            $data10->foto_slider3 = $request->file('foto_slider3')->getClientOriginalName();
+            $data10->save();
+        }
+        if($request->hasFile('foto_slider4')){
+            $request->file('foto_slider4')->move('fotomahasiswa/',$request->file('foto_slider4')->getClientOriginalName());
+            $data10->foto_slider4 = $request->file('foto_slider4')->getClientOriginalName();
+            $data10->save();
+        }
+
+        return redirect('adminupjslider')->with('toast_success',' Data Berhasil di Ubah!');
+
+    }
+
+    public function deleteupjslider($id){
+        $data10 = Upjtekajeslider::find($id);
+        $data10->delete();
+        return redirect('adminupjslider')->with('toast_error',' Data Berhasil di Hapus!');
     }
 }

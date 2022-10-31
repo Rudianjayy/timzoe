@@ -30,10 +30,12 @@
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">Visi</th>
-                                    <th scope="col">Misi</th>
-                                    <th scope="col">Foto Background</th>
-                                    <th scope="col">Link Youtube</th>
+                                    <th scope="col">Foto Slider1</th>
+                                    <th scope="col">Foto Slider2</th>
+                                    <th scope="col">Foto Slider3</th>
+                                    <th scope="col">Foto Slider4</th>
+                                    <th scope="col">Judul Slider</th>
+                                    <th scope="col">Deskripsi Slider</th>
                                     <th scope="col">Aksi</th>
                                 </tr>
                             </thead>
@@ -43,22 +45,33 @@
                                 @php
                                     $no = 1;
                                 @endphp
-                                @foreach ($data6 as $d6)
+                                @foreach ($data10 as $d10)
                                     <tr>
                                         <th>{{ $no++ }}</th>
-                                        <td>{!!  $d6->upj_visi  !!}</td>
-                                        <td>{!!  $d6->upj_misi  !!}</td>
                                         <td>
-                                            <img src="{{ asset('fotomahasiswa/' . $d6->foto_bg) }}" alt=""
+                                            <img src="{{ asset('fotomahasiswa/' . $d10->foto_slider1) }}" alt=""
                                                 style="width: 50px;">
                                         </td>
-                                        <td>{{  $d6->link_yt  }}</td>
+                                        <td>
+                                            <img src="{{ asset('fotomahasiswa/' . $d10->foto_slider2) }}" alt=""
+                                                style="width: 50px;">
+                                        </td>
+                                        <td>
+                                            <img src="{{ asset('fotomahasiswa/' . $d10->foto_slider3) }}" alt=""
+                                                style="width: 50px;">
+                                        </td>
+                                        <td>
+                                            <img src="{{ asset('fotomahasiswa/' . $d10->foto_slider4) }}" alt=""
+                                                style="width: 50px;">
+                                        </td>
+                                        <td>{{  $d10->judul_slider  }}</td>
+                                        <td>{{  $d10->deskripsi_slider  }}</td>
 
 
                                         <td>
-                                            <a href="/editvisimisi/{{ $d6->id }}" class="btn btn-warning">Edit</a>
+                                            <a href="/editupjslider/{{ $d10->id }}" class="btn btn-warning">Edit</a>
 
-                                            <a href="/deletevisimisi/{{ $d6->id }}" class="btn btn-danger" onclick="return confirm('yakin gen?')">Delete</a>
+                                            <a href="/deleteupjslider/{{ $d10->id }}" class="btn btn-danger" onclick="return confirm('yakin gen?')">Delete</a>
 
 
 

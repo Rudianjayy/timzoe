@@ -22,10 +22,7 @@ class WebSeeder extends Seeder
             'foto_simuhi' => 'simuhi.png',
             'deskripsi_simuhi' => 'deskripsi simuhi',
         ]);
-        DB::table('upjtentangkamis')->insert([
-            'foto_tentangkami' => 'UPJ.png',
-            'deskripsi_tentangkami' => 'TENTANG KAMI',
-        ]);
+        
         DB::table('visimisis')->insert([
             'judulvisi' => 'Visi',
             'deskripsivisi' => 'deskripsi visi',
@@ -47,6 +44,91 @@ class WebSeeder extends Seeder
             'facebook' => 'smkmuhigenteng',
             'instagram' => 'muhi.ig',
             'youtube' => 'MUHI.TV',
+        ]);
+        DB::table('upjfooters')->insert([
+            'tentang_upj' => 'SMK Muhammadiyah 1 Genteng',
+            'yt' => 'https://www.youtube.com/channel/UCpVsjRZNiWAtny5O77bnHGA',
+            'fb' => 'https://www.facebook.com/profile.php?id=100067357426555',
+            'ig' => 'https://www.instagram.com/upjtekaje/',
+            'wa' => 'https://wa.wizard.id/',
+            'alamat' => 'KH. AHMAD DAHLAN NO 10',
+            'email' => 'smkmuhi.genteng1968@gmail.com',
+        ]);
+        
+        DB::table('sambutans')->insert([
+            'foto' => '{{ asset(landing/html/bidzen/assets/images/avatar/kepsekremove.png) }}',
+            'deskripsi' => 'Sambutan Kepsek',
+        ]);
+        DB::table('footeers')->insert([
+            'foto' => '../assets/images/logo/0.png',
+            'deskripsi_footeer' => 'Deskripsi Footer',
+        ]);
+        DB::table('oses')->insert([
+            'foto' => '../assets/images/logo/ipm1.jpeg',
+            'judul_osis' => 'Judul',
+            'deskripsi_osis' => 'Deskripsi osis',
+        ]);
+        DB::table('bsis')->insert([
+            'foto' => '../assets/images/logo/bsi.png',
+            'deskripsi_bsi' => 'Deskripsi bsi',
+        ]);
+        DB::table('printings')->insert([
+            'foto_muhiprint' => '../assets/images/logo/mp3.jpeg',
+            'deskripsi_muhiprint' => 'Deskripsi Muhiprinting',
+        ]);
+        DB::table('pegadaians')->insert([
+            'foto_gadai' => '../assets/images/logo/pegadaian.png',
+            'deskripsi_gadai' => 'Deskripsi Pegadaian',
+        ]);
+        DB::table('suryamarts')->insert([
+            'foto_surya' => '../assets/images/post/sm3.jpeg',
+            'deskripsi_surya' => 'Deskripsi Surya Mart',
+        ]);
+        DB::table('edotels')->insert([
+            'foto_edotel' => '../assets/images/logo/ph3.jpeg',
+            'deskripsi_edotel' => 'Deskripsi Edotel',
+        ]);
+        DB::table('idukas')->insert([
+            'judul_iduka' => 'Judul',
+            'deskripsi_iduka' => 'Deskripsi',
+        ]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // upjtekaje
+
+        DB::table('upjtentangkamis')->insert([
+            'foto_tentangkami' => 'UPJ.png',
+            'deskripsi_tentangkami' => 'TENTANG KAMI',
+        ]);
+        DB::table('upjtekajesliders')->insert([
+            'foto_slider1' => 'album2.jpg',
+            'foto_slider2' => 'album12.jpg',
+            'foto_slider3' => 'service-d-1.jpg',
+            'foto_slider4' => 'service-d-3.jpg',
+            'judul_slider' => 'SMK Muhammadiyah 1 Genteng',
+            'deskripsi_slider' => 'Unit produksi dan jasa Teknik Komputer dan Jaringan',
+        ]);
+        DB::table('upjvisimisis')->insert([
+            'upj_visi' => 'Visi',
+            'upj_misi' => 'misi',
+            'foto_bg' => 'bg2.jpeg',
+            'link_yt' => 'https://www.youtube.com/watch?v=FTTBAw6R2EY',
         ]);
     }
 }

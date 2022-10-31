@@ -10,6 +10,13 @@ use App\Models\Personaljurusan;
 
 class JurusanController extends Controller
 {
+
+
+    public function detailjurusan($id){
+        $data = Jurusan::findOrFail($id);
+        return view('kurikulum.kompetensi.detailjurusan',compact('data'));
+    }
+
     public function loby3(){
         $data = Jurusan::all();
         $f = Muhinews::all();

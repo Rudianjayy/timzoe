@@ -733,6 +733,105 @@ a:focus {
 	top: 100%;
 	right: 20%;
 }
+
+.banner,.banner2,.banner3,.banner4 {
+	height: 100vh;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.img-slider1,.img-slider2,.img-slider3,.img-slider4 {
+	width: 100%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.banner {
+	animation: img-slider1 16s linear infinite 0s;
+}
+.banner2 {
+	animation: img-slider2 16s linear infinite 0s;
+}
+.banner3 {
+	animation: img-slider3 16s linear infinite 0s;
+}
+.banner4 {
+	animation: img-slider3 16s linear infinite 0s;
+}
+
+@keyframes img-slider1{
+	0%{
+		visibility: visible;
+	}	
+	25%{
+		visibility: hidden;
+	}	
+	50%{
+		visibility: hidden;
+	}	
+	75%{
+		visibility: hidden;
+	}	
+	100%{
+		visibility: visible;
+	}	
+}
+@keyframes img-slider2{
+	0%{
+		visibility: hidden;
+	}	
+	25%{
+		visibility: hidden;
+	}	
+	50%{
+		visibility: visible;
+	}	
+	75%{
+		visibility: hidden;
+	}	
+	100%{
+		visibility: hidden;
+	}	
+}
+@keyframes img-slider3{
+	0%{
+		visibility: hidden;
+	}	
+	25%{
+		visibility: hidden;
+	}	
+	50%{
+		visibility: hidden;
+	}	
+	75%{
+		visibility: visible;
+	}	
+	100%{
+		visibility: hidden;
+	}	
+}
+@keyframes img-slider4{
+	0%{
+		visibility: hidden;
+	}	
+	25%{
+		visibility: hidden;
+	}	
+	50%{
+		visibility: hidden;
+	}	
+	75%{
+		visibility: hidden;
+	}	
+	100%{
+		visibility: visible;
+	}	
+}
+
 .SLIDE_BG {
 	width: 100%;
 	height: 100vh;
@@ -2317,6 +2416,14 @@ a:focus {
 # Footer
 --------------------------------------------------------------*/
 
+.site-footer-upj {
+	padding-top: 50px;
+	background-image: url(../images/shapes/cta-bg-1-1.jpg);
+	background-position: bottom center;
+	position: relative;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
 .site-footer {
 	padding-top: 339px;
 	background-image: url(../images/shapes/footer-bg-1-1.png);
@@ -6555,7 +6662,7 @@ a:focus {
 .about-three {
 	position: relative;
 	padding-bottom: 170px;
-	padding-top: 50px;
+	padding-top: 200px;
 }
 
 [class*=about-three__bg-image-] {

@@ -15,63 +15,30 @@
                 <div class="col-8">
                     <div class="card">
                         <div class="card-body">
-                            <form action="/submitdata19" method="POST" enctype="multipart/form-data">
+                            <form action="/submitdata22" method="POST" enctype="multipart/form-data">
                                 @csrf
 
 
-                                <section style="padding-top:60px;">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="card">
-                                                    <div class="card-header">
-                                                        Visi
-                                                    </div>
-                                                    <div class="card-body">
-                                                        {{--  <form method="POST" enctype="multipart/form-data">  --}}
-                                                        <textarea name="upj_visi" id="mytextarea" ></textarea>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
-                                <section style="padding-top:60px;">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="card">
-                                                    <div class="card-header">
-                                                        Misi
-                                                    </div>
-                                                    <div class="card-body">
-                                                        {{--  <form method="POST" enctype="multipart/form-data">  --}}
-                                                        <textarea name="upj_misi" id="mytextarea" ></textarea>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
                                 <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Foto Background :</label>
-                                    <input type="file" name="foto_bg" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp">
-                                    @error('foto_bg')
+                                    <label for="exampleInputEmail1" class="form-label">Nama :</label>
+                                    <textarea class="form-control form-control-solid" name="nama"></textarea>
+                                    @error('nama')
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
+                                
                                 <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Link Youtube :</label>
-                                    <textarea class="form-control form-control-solid" name="link_yt"></textarea>
-                                    @error('link_yt')
+                                    <label for="exampleInputEmail1" class="form-label">Link :</label>
+                                    <input type="text" name="link" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp">
+                                    @error('link')
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
 
 
                                 <button type="submit" class="btn btn-primary">Submit</button>
-                                <a href="/adminvisimisi" class="btn btn-danger">Kembali</a>
+                                <a href="/admintestimoni" class="btn btn-danger">Kembali</a>
                             </form>
                         </div>
                     </div>

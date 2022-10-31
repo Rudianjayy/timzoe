@@ -19,21 +19,23 @@
 
         {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" /> --}}
 
-        <div class="row" style="margin-top: 30px;">
+        <div class="row">
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
 
-                        
-                        <table class="table table-bordered dt-responsive nowrap">
+                        <div>
+                            <a href="/tambahupjfooterlink" class="btn btn-primary mt-5"
+                                id="kt_account_profile_details_submit">Tambah
+                                +</a>
+                        </div>
+                        <table id="example" class="table table-bordered dt-responsive nowrap">
 
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">Visi</th>
-                                    <th scope="col">Misi</th>
-                                    <th scope="col">Foto Background</th>
-                                    <th scope="col">Link Youtube</th>
+                                    <th scope="col">Nama</th>
+                                    <th scope="col">Link</th>
                                     <th scope="col">Aksi</th>
                                 </tr>
                             </thead>
@@ -43,22 +45,19 @@
                                 @php
                                     $no = 1;
                                 @endphp
-                                @foreach ($data6 as $d6)
+                                @foreach ($data9 as $d9)
                                     <tr>
                                         <th>{{ $no++ }}</th>
-                                        <td>{!!  $d6->upj_visi  !!}</td>
-                                        <td>{!!  $d6->upj_misi  !!}</td>
-                                        <td>
-                                            <img src="{{ asset('fotomahasiswa/' . $d6->foto_bg) }}" alt=""
-                                                style="width: 50px;">
-                                        </td>
-                                        <td>{{  $d6->link_yt  }}</td>
+                                       
+
+                                        <td>{{  $d9->nama  }}</td>
+                                        <td>{{  $d9->link  }}</td>
 
 
                                         <td>
-                                            <a href="/editvisimisi/{{ $d6->id }}" class="btn btn-warning">Edit</a>
+                                            <a href="/editupjfooterlink/{{ $d9->id }}" class="btn btn-warning">Edit</a>
 
-                                            <a href="/deletevisimisi/{{ $d6->id }}" class="btn btn-danger" onclick="return confirm('yakin gen?')">Delete</a>
+                                            <a href="/deleteupjfooterlink/{{ $d9->id }}" class="btn btn-danger" onclick="return confirm('yakin gen?')">Delete</a>
 
 
 

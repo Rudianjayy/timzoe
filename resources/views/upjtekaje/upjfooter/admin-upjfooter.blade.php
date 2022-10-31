@@ -19,21 +19,28 @@
 
         {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" /> --}}
 
-        <div class="row" style="margin-top: 30px;">
+        <div class="row">
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
 
-                        
-                        <table class="table table-bordered dt-responsive nowrap">
+                        {{-- <div>
+                            <a href="/tambahteam" class="btn btn-primary mt-5"
+                                id="kt_account_profile_details_submit">Tambah
+                                +</a>
+                        </div> --}}
+                        <table id="example" class="table table-bordered dt-responsive nowrap">
 
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">Visi</th>
-                                    <th scope="col">Misi</th>
-                                    <th scope="col">Foto Background</th>
+                                    <th scope="col">Deskripsi Tentang Upj</th>
                                     <th scope="col">Link Youtube</th>
+                                    <th scope="col">Link Facebook</th>
+                                    <th scope="col">Link Instagram</th>
+                                    <th scope="col">Link WhatsApp</th>
+                                    <th scope="col">Alamat</th>
+                                    <th scope="col">Email</th>
                                     <th scope="col">Aksi</th>
                                 </tr>
                             </thead>
@@ -43,22 +50,24 @@
                                 @php
                                     $no = 1;
                                 @endphp
-                                @foreach ($data6 as $d6)
+                                @foreach ($data8 as $d8)
                                     <tr>
                                         <th>{{ $no++ }}</th>
-                                        <td>{!!  $d6->upj_visi  !!}</td>
-                                        <td>{!!  $d6->upj_misi  !!}</td>
-                                        <td>
-                                            <img src="{{ asset('fotomahasiswa/' . $d6->foto_bg) }}" alt=""
-                                                style="width: 50px;">
-                                        </td>
-                                        <td>{{  $d6->link_yt  }}</td>
+                                       
+
+                                        <td>{{  $d8->tentang_upj  }}</td>
+                                        <td>{{  $d8->yt  }}</td>
+                                        <td>{{  $d8->fb  }}</td>
+                                        <td>{{  $d8->ig  }}</td>
+                                        <td>{{  $d8->wa  }}</td>
+                                        <td>{{  $d8->alamat  }}</td>
+                                        <td>{{  $d8->email  }}</td>
 
 
                                         <td>
-                                            <a href="/editvisimisi/{{ $d6->id }}" class="btn btn-warning">Edit</a>
+                                            <a href="/editupjfooter/{{ $d8->id }}" class="btn btn-warning">Edit</a>
 
-                                            <a href="/deletevisimisi/{{ $d6->id }}" class="btn btn-danger" onclick="return confirm('yakin gen?')">Delete</a>
+                                            <a href="/deleteupjfooter/{{ $d8->id }}" class="btn btn-danger" onclick="return confirm('yakin gen?')">Delete</a>
 
 
 

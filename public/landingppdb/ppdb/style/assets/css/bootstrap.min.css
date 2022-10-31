@@ -94,8 +94,8 @@ h6 {
 
 p {
     margin-top: 0;
-    margin-bottom: 1rem
 }
+
 
 abbr[data-original-title],
 abbr[title] {
@@ -384,10 +384,10 @@ h4,
 h5,
 h6 {
     margin-bottom: 0.5rem;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.2
 }
-    
+
 .h1,
 h1 {
     font-size: 2.5rem
@@ -2926,6 +2926,13 @@ fieldset:disabled a.btn {
 .btn-danger {
     color: #fff;
     background-color: #dc3545;
+    border-color: #dc3545
+}
+.btn-danger-kelulusan {
+    color: #fff;
+    background-color: #dc3545;
+    font-size:20px;
+    margin-bottom: 20px;
     border-color: #dc3545
 }
 

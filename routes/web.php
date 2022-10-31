@@ -117,12 +117,6 @@ Route::get('/deleteprestasi/{id}',[PrestasiController::class, 'delete'])->name('
 
 
 
-
-
-
-
-
-
 //muhinews
 Route::get('/muhinews',[MuhinewsController::class, 'index'])->name('muhinews');
 Route::get('/muhinewsadmin',[MuhinewsController::class, 'indexadmin'])->name('muhinewsadmin');
@@ -265,6 +259,27 @@ Route::get('/delete/{id}',[KurikulumController::class,'delete'])->name('delete')
 
 
 Route::get('/jadwalkegiatan',[KurikulumController::class,'jadwalkegiatan'])->name('jadwalkegiatan');
+
+
+
+
+
+
+
+
+
+//kelulusan
+Route::get('/kelsan ',[KurikulumController::class,'kelsan'])->name('kelsan');
+Route::get('/adminkelulusan',[KurikulumController::class,'adminkelulusan'])->name('adminkelulusan');
+Route::get('/tambahkelulusan',[KurikulumController::class, 'tambahkelulusan'])->name('tambahkelulusan');
+Route::post('/tambahproseskelulusan',[KurikulumController::class, 'tambahproseskelulusan'])->name('tambahproseskelulusan');
+Route::get('/editkelulusan/{id}',[KurikulumController::class, 'editkelulusan'])->name('editkelulusan');
+Route::post('/editproseskelulusan/{id}',[KurikulumController::class,'editproseskelulusan'])->name('editproseskelulusan');
+Route::get('/deletekelulusan/{id}',[KurikulumController::class,'deletekelulusan'])->name('deletekelulusan');
+Route::get('/exportpdf',[KurikulumController::class,'exportpdf'])->name('exportpdf');
+Route::get('/exportexcel',[KurikulumController::class,'exportexcel'])->name('exportexcel');
+
+
 
 
 Route::get('/kurikulumadmin',[KurikulumController::class, 'kurikulumadmin'])->name('kurikulumadmin');

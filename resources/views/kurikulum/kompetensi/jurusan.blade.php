@@ -80,7 +80,7 @@
 
                                 <a href="javascript: void(0);">Diterbitkan :{{ $data->created_at }}</a>
                             </div><!-- /.blog-two__meta -->
-                          <center> <img src="{{ asset('fotojurusan/' . $data->foto) }}" class="img-fluid" alt="" ></center> 
+                          <center> <img src="{{ asset('fotojurusan/' . $data->foto) }}" class="img-fluid" alt="" ></center>
                             <h3>{{ $data->nama_kompetensi2 }}</h3>
                             <p>{!! $data->deskripsi_kompetensi2!!} </p>
 
@@ -141,7 +141,7 @@
                             <div class="sidebar__single sidebar__post">
                                 <h3 class="sidebar__title">Berita Terbaru</h3>
                                 @php
-                                    $muhiberita = \App\Models\Muhinews::paginate(3);
+                                    $muhiberita = \App\Models\Muhinews::orderBy('created_at','desc')->paginate(3);
                                 @endphp
                                 <div class="sidebar__post-wrap">
                                     @foreach ($muhiberita as $mb )

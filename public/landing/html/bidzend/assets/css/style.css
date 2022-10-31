@@ -1383,7 +1383,7 @@ a:focus {
 }
 
 #main-nav>ul>li.current-item>a {
-    color: #0b82aa;
+    color: var(--color-1);
 }
 
 #main-nav>ul>li>a {

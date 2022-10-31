@@ -8,24 +8,27 @@ use App\Models\kalenderakademik;
 use App\Models\footeer;
 use App\Models\Footeerdua;
 use App\Models\Jurusan;
+use App\Models\Kelulusan;
 use App\Models\Personaljurusan;
-
 use Illuminate\Http\Request;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class KurikulumController extends Controller
 {
 
-    public function kalenderakademik(){
+    public function kalenderakademik()
+    {
         $d = kalenderakademik::all();
         $f = Muhinews::all();
         $ft = footeer::all();
         $personal = Personaljurusan::all();
         $logo = footeer::all();
         $link = footeerdua::all();
-        return view('kurikulum.kalenderakademik', compact('d','f','ft','personal','logo','link'));
+        return view('kurikulum.kalenderakademik', compact('d', 'f', 'ft', 'personal', 'logo', 'link'));
     }
 
-    public function kalenderakademikadmin() {
+    public function kalenderakademikadmin()
+    {
         $data = kalenderakademik::all();
         return view('kurikulum.kalenderakademik-admin', compact('data'));
     }
@@ -34,56 +37,57 @@ class KurikulumController extends Controller
         return view('kurikulum.tambahkalenderakademik');
     }
 
-    public function kalenderakademikproses9(Request $request){
+    public function kalenderakademikproses9(Request $request)
+    {
         // dd($request->all());
-        $this->validate($request,[
-            'foto' =>'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
-        ],[
-            'foto.required' =>'Harus diisi',
-            'foto.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
+        $this->validate($request, [
+            'foto' => 'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
+        ], [
+            'foto.required' => 'Harus diisi',
+            'foto.mimes' => 'Harus jpg,jpeg,bmp,gif,png,webp',
         ]);
         $data = kalenderakademik::create([
-            'foto' =>$request->foto,
-            ]);
-        if($request->hasFile('foto')){
+            'foto' => $request->foto,
+        ]);
+        if ($request->hasFile('foto')) {
             $request->file('foto')->move('fotomahasiswa/', $request->file('foto')->getClientOriginalName());
             $data->foto = $request->file('foto')->getClientOriginalName();
             $data->save();
         }
 
-        return redirect()->route('kalenderakademikadmin')->with('toast_success',' Data Berhasil di Tambahkan!');
+        return redirect()->route('kalenderakademikadmin')->with('toast_success', ' Data Berhasil di Tambahkan!');
     }
 
-    public function editkalenderakademik($id){
+    public function editkalenderakademik($id)
+    {
 
         $data = kalenderakademik::findOrFail($id);
         return view('kurikulum..editkalenderakademik', compact('data'));
     }
 
-    public function editproses9(Request $request, $id){
-        $this->validate($request,[
-            'foto' =>'mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
-        ],[
-            'foto.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
+    public function editproses9(Request $request, $id)
+    {
+        $this->validate($request, [
+            'foto' => 'mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
+        ], [
+            'foto.mimes' => 'Harus jpg,jpeg,bmp,gif,png,webp',
         ]);
         $data = kalenderakademik::find($id);
-        $data->update([
-
-        ]);
-        if($request->hasFile('foto')){
-            $request->file('foto')->move('fotomahasiswa/',$request->file('foto')->getClientOriginalName());
+        $data->update([]);
+        if ($request->hasFile('foto')) {
+            $request->file('foto')->move('fotomahasiswa/', $request->file('foto')->getClientOriginalName());
             $data->foto = $request->file('foto')->getClientOriginalName();
             $data->save();
         }
 
-        return redirect('kalenderakademikadmin')->with('toast_success',' Data Berhasil di Ubah!');
-
+        return redirect('kalenderakademikadmin')->with('toast_success', ' Data Berhasil di Ubah!');
     }
 
-    public function delete($id){
+    public function delete($id)
+    {
         $data = kalenderakademik::find($id);
         $data->delete();
-        return redirect('kalenderakademikadmin')->with('toast_error',' Data Berhasil di Hapus!');
+        return redirect('kalenderakademikadmin')->with('toast_error', ' Data Berhasil di Hapus!');
     }
 
 
@@ -98,97 +102,101 @@ class KurikulumController extends Controller
 
 
 
-    public function jadwalkegiatan(){
+    public function jadwalkegiatan()
+    {
         $f = Muhinews::all();
         $kh = Jurusan::all();
         $ft = Footeer::all();
         $personal = Personaljurusan::all();
         $logo = footeer::all();
         $link = footeerdua::all();
-        return view('kurikulum.jadwalkegiatan', compact('f','kh','ft','personal','logo','link'));
+        return view('kurikulum.jadwalkegiatan', compact('f', 'kh', 'ft', 'personal', 'logo', 'link'));
     }
 
 
 
-    public function kurikulumadmin(){
+    public function kurikulumadmin()
+    {
         $data = Kurikulum::all();
         $kh = Jurusan::all();
         $personal = Personaljurusan::all();
-        return view('kurikulum.k.kurikulum-admin', compact('data','kh','personal'));
+        return view('kurikulum.k.kurikulum-admin', compact('data', 'kh', 'personal'));
     }
-    public function tambahkurikulum(){
+    public function tambahkurikulum()
+    {
         return view('kurikulum.k.tambah-kurikulum');
     }
-    public function kurikulumproses(Request $request){
+    public function kurikulumproses(Request $request)
+    {
         // dd($request->all());
-        $this->validate($request,[
-            'judul' =>'required',
-            'deskripsi_k' =>'required',
+        $this->validate($request, [
+            'judul' => 'required',
+            'deskripsi_k' => 'required',
 
-            'foto1' =>'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
-            'penjelasan1' =>'required',
+            'foto1' => 'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
+            'penjelasan1' => 'required',
 
-            'foto2' =>'required',
-            'penjelasan2' =>'required',
+            'foto2' => 'required',
+            'penjelasan2' => 'required',
 
-            'foto3' =>'required',
-            'penjelasan3' =>'required',
+            'foto3' => 'required',
+            'penjelasan3' => 'required',
 
-            'foto4' =>'required',
-            'penjelasan4' =>'required',
-        ],[
-            'judul.required' =>'Harus diisi',
-            'deskripsi_k.required' =>'Harus diisi',
+            'foto4' => 'required',
+            'penjelasan4' => 'required',
+        ], [
+            'judul.required' => 'Harus diisi',
+            'deskripsi_k.required' => 'Harus diisi',
 
-            'foto1.required' =>'Harus diisi',
-            'foto1.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
-            'penjelasan1.required' =>'required',
+            'foto1.required' => 'Harus diisi',
+            'foto1.mimes' => 'Harus jpg,jpeg,bmp,gif,png,webp',
+            'penjelasan1.required' => 'required',
 
-            'foto2.required' =>'Haruds diisi',
-            'penjelasan2.required' =>'Haruds diisi',
+            'foto2.required' => 'Haruds diisi',
+            'penjelasan2.required' => 'Haruds diisi',
 
-            'foto3.required' =>'Haruds diisi',
-            'penjelasan3.required' =>'Haruds diisi',
+            'foto3.required' => 'Haruds diisi',
+            'penjelasan3.required' => 'Haruds diisi',
 
-            'foto4.required' =>'Haruds diisi',
-            'penjelasan4.required' =>'Haruds diisi',
+            'foto4.required' => 'Haruds diisi',
+            'penjelasan4.required' => 'Haruds diisi',
 
         ]);
         $data = Kurikulum::create([
-            'judul' =>$request->judul,
-            'deskripsi_k' =>$request->deskripsi_k,
-            'foto1' =>$request->foto1,
-            'penjelasan1' =>$request->penjelasan1,
+            'judul' => $request->judul,
+            'deskripsi_k' => $request->deskripsi_k,
+            'foto1' => $request->foto1,
+            'penjelasan1' => $request->penjelasan1,
 
-            'foto2' =>$request->foto2,
-            'penjelasan2' =>$request->penjelasan2,
+            'foto2' => $request->foto2,
+            'penjelasan2' => $request->penjelasan2,
 
-            'foto3' =>$request->foto3,
-            'penjelasan3' =>$request->penjelasan3,
+            'foto3' => $request->foto3,
+            'penjelasan3' => $request->penjelasan3,
 
-            'foto4' =>$request->foto4,
-            'penjelasan4' =>$request->penjelasan4,
+            'foto4' => $request->foto4,
+            'penjelasan4' => $request->penjelasan4,
 
         ]);
-        if($request->hasFile('foto1')){
+        if ($request->hasFile('foto1')) {
             $request->file('foto1')->move('fotomahasiswa/', $request->file('foto1')->getClientOriginalName());
             $data->foto1 = $request->file('foto1')->getClientOriginalName();
             $data->save();
         }
 
-        if($request->hasFile('foto2')){
+        if ($request->hasFile('foto2')) {
             $request->file('foto2')->move('fotomahasiswa/', $request->file('foto2')->getClientOriginalName());
             $data->foto2 = $request->file('foto2')->getClientOriginalName();
             $data->save();
         }
 
-        if($request->hasFile('foto3')){
+        if ($request->hasFile('foto3')) {
             $request->file('foto3')->move('fotomahasiswa/', $request->file('foto3')->getClientOriginalName());
             $data->foto3 = $request->file('foto3')->getClientOriginalName();
             $data->save();
         }
 
-        if($request->hasFile('foto4')){
+        if ($request->hasFile('foto4')) {
             $request->file('foto4')->move('fotomahasiswa/', $request->file('foto4')->getClientOriginalName());
             $data->foto4 = $request->file('foto4')->getClientOriginalName();
             $data->save();
@@ -196,6 +204,94 @@ class KurikulumController extends Controller
 
 
 
-        return redirect()->route('kurikulumadmin')->with('toast_success',' Data Berhasil di Tambahkan!');
+        return redirect()->route('kurikulumadmin')->with('toast_success', ' Data Berhasil di Tambahkan!');
+    }
+
+
+
+
+    public function kelsan()
+    {
+        $data = Kelulusan::all();
+        return view('kurikulum.kelulusan.kelsan',compact('data'));
+    }
+    public function exportpdf()
+    {
+        $data = Kelulusan::all();
+        view()->share('data', $data);
+
+        $pdf = PDF::loadview('kurikulum.kelulusan.kelulusan-pdf');
+        return $pdf->download('suratkelulusan.pdf');
+    }
+
+    public function adminkelulusan()
+    {
+        $data = Kelulusan::all();
+        return view('kurikulum.kelulusan.adminkelulusan.adminkelulusan', compact('data'));
+    }
+    public function tambahkelulusan()
+    {
+        return view('kurikulum.kelulusan.adminkelulusan.tambahkelulusan');
+    }
+
+    public function tambahproseskelulusan(Request $request)
+    {
+        // dd($request->all());
+        $this->validate($request, [
+            'nama_siswa' => 'required',
+            'nisn' => 'required',
+            'jurusan' => 'required',
+            'hasil' => 'required',
+        ], [
+            'nama_siswa.required' => 'Harus diisi',
+            'nisn.required' => 'Harus diisi',
+            'jurusan.required' => 'Harus diisi',
+            'hasil.required' => 'Harus diisi',
+        ]);
+        $data = Kelulusan::create([
+            'nama_siswa' => $request->nama_siswa,
+            'nisn' => $request->nisn,
+            'jurusan' => $request->jurusan,
+            'hasil' => $request->hasil,
+        ]);
+
+        return redirect()->route('adminkelulusan')->with('toast_success', 'Data Berhasil Di Tambahkan!');
+    }
+
+    public function editkelulusan($id)
+    {
+
+        $data = Kelulusan::findOrFail($id);
+        return view('kurikulum.kelulusan.adminkelulusan.editkelulusan', compact('data'));
+    }
+
+    public function editproseskelulusan(Request $request, $id)
+    {
+        $this->validate($request, [
+            'nama_siswa' => 'required',
+            'nisn' => 'required',
+            'jurusan' => 'required',
+            'hasil' => 'required',
+        ], [
+            'nama_siswa.required' => 'Harus diisi',
+            'nisn.required' => 'Harus diisi',
+            'jurusan.required' => 'Harus diisi',
+            'hasil.required' => 'Harus diisi',
+        ]);
+        $data = Kelulusan::find($id);
+        $data->update([
+            'nama_siswa' => $request->nama_siswa,
+            'nisn' => $request->nisn,
+            'jurusan' => $request->jurusan,
+            'hasil' => $request->hasil,
+        ]);
+        return redirect('adminkelulusan')->with('toast_success', ' Data Berhasil di Ubah!');
+    }
+
+    public function deletekelulusan($id)
+    {
+        $data = Kelulusan::find($id);
+        $data->delete();
+        return redirect('adminkelulusan')->with('toast_error', ' Data Berhasil di Hapus!');
     }
 }

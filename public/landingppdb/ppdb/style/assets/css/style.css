@@ -3235,14 +3235,8 @@ a:focus {
 .blog-grid .high-gutters>[class*=col-] {
 	padding-left: 20px;
 	padding-right: 20px;
-    color: #125f04;
-    text-decoration: none;
-    font-size: 0.85em;
-    overflow: hidden;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
-    text-overflow: ellipsis;
-    overflow: hidden;
+
 }
 
 .blog-grid .blog-one__single {
@@ -6164,6 +6158,12 @@ a:focus {
 .service-three .row.high-gutters {
 	margin-left: -20px;
 	margin-right: -20px;
+
+}
+
+.service-three .row.high-gutters [class*=col-] {
+	padding-left: 20px;
+	padding-right: 20px;
     color: #125f04;
     text-decoration: none;
     font-size: 0.85em;
@@ -6172,11 +6172,6 @@ a:focus {
     -webkit-line-clamp: 2;
     text-overflow: ellipsis;
     overflow: hidden;
-}
-
-.service-three .row.high-gutters [class*=col-] {
-	padding-left: 20px;
-	padding-right: 20px;
 
 
 

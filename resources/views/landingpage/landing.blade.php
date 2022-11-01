@@ -24,7 +24,8 @@
     <link rel="apple-touch-icon-precomposed" href="{{ asset('landing/html/bidzend/assets/icon/muhilog.png') }}">
     <link rel="shortcut icon" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
     <link rel="apple-touch-icon-precomposed" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
 
 
@@ -40,7 +41,8 @@
 <body class="body header-fixed">
 
     <div class="preload preload-container">
-        <div class="preload-logo"><img src="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}" alt="Image" style="width:570 !important;"></div>
+        <div class="preload-logo"><img src="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}"
+                alt="Image" style="width:570 !important;"></div>
     </div>
 
 
@@ -49,15 +51,15 @@
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <?php $i = 0; ?>
-            @foreach($fs as $f)
-            <li data-target="#carouselExampleIndicators" data-slide-to="{{ $i++ }}" class="active"></li>
+            @foreach ($fs as $f)
+                <li data-target="#carouselExampleIndicators" data-slide-to="{{ $i++ }}" class="active"></li>
             @endforeach
         </ol>
         <div class="carousel-inner">
-            @foreach($fs as $key => $fs)
-            <div class="carousel-item {{$key == 0 ? 'active' : '' }}">
-                <img src="{{ asset('fotomahasiswa/' . $fs->foto_slider) }}" class="d-block w-100" alt="...">
-            </div>
+            @foreach ($fs as $key => $fs)
+                <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
+                    <img src="{{ asset('fotomahasiswa/' . $fs->foto_slider) }}" class="d-block w-100" alt="...">
+                </div>
             @endforeach
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -74,27 +76,28 @@
 
 
     <section class="about-one">
-        @foreach ($sa as $sa )
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="about-one__content">
-                        <!-- <div class="block-title text-left">
+        @foreach ($sa as $sa)
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="about-one__content">
+                            <!-- <div class="block-title text-left">
                             <h3>Sambutan Kepala Sekolah</h3>
                         </div> -->
-                        <p>{!! $sa->deskripsi !!}</p>
+                            <p>{!! $sa->deskripsi !!}</p>
 
-                    </div><!-- /.about-one__content -->
-                </div><!-- /.col-lg-6 -->
-                <div class="col-lg-6">
-                    <div class="my-auto">
-                        <div class="about-one__image wow slideInDown" data-wow-duration="1500ms">
-                            <img src="{{ asset('fotomahasiswa/' . $sa->foto) }}" alt="" style="width: 500px; height:700px;">
-                        </div><!-- /.about-one__image -->
-                    </div><!-- /.my-auto -->
-                </div><!-- /.col-lg-6 -->
-            </div><!-- /.row -->
-        </div><!-- /.container -->
+                        </div><!-- /.about-one__content -->
+                    </div><!-- /.col-lg-6 -->
+                    <div class="col-lg-6">
+                        <div class="my-auto">
+                            <div class="about-one__image wow slideInDown" data-wow-duration="1500ms">
+                                <img src="{{ asset('fotomahasiswa/' . $sa->foto) }}" alt=""
+                                    style="width: 500px; height:700px;">
+                            </div><!-- /.about-one__image -->
+                        </div><!-- /.my-auto -->
+                    </div><!-- /.col-lg-6 -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
         @endforeach
     </section><!-- /.about-one -->
     <section class="tf-category tf-section">
@@ -114,21 +117,22 @@
                     </div>
                 </div>
                 @php
-                $jurusan = \App\Models\Jurusan::all();
+                    $jurusan = \App\Models\Jurusan::all();
                 @endphp
                 @foreach ($jurusan as $js)
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="sc-category wow fadeInUp pl-19" data-wow-delay="400ms" data-wow-duration="1000ms">
-                        <div class="card-media">
-                            <img src="{{ asset('fotojurusan/' . $js->foto) }}" alt="">
-                        </div>
-                        <div class="card-content">
-                            <h5><a href="/indexjurusan/{{ $js->id }}" style="font-size: 18px; color:black;"> {{ $js->nama_kompetensi2 }}</a>
-                            </h5>
-                            <p>{!! $js->deskripsi_kompetensi2 !!}</p>
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="sc-category wow fadeInUp pl-19" data-wow-delay="400ms" data-wow-duration="1000ms">
+                            <div class="card-media">
+                                <img src="{{ asset('fotojurusan/' . $js->foto) }}" alt="">
+                            </div>
+                            <div class="card-content">
+                                <h5><a href="/indexjurusan/{{ $js->id }}" style="font-size: 18px; color:black;">
+                                        {{ $js->nama_kompetensi2 }}</a>
+                                </h5>
+                                <p>{!! $js->deskripsi_kompetensi2 !!}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
                 @endforeach
             </div>
         </div>
@@ -155,10 +159,10 @@
                 <section class="blog-grid">
                     <div class="container">
                         <div class="row high-gutters">
-                            @foreach ($d as $d )
-                            <div class="col-lg-4 col-md-6 col-sm-12">
-                                <div class="blog-one__single">
-                                    <div class="card-media">
+                            @foreach ($d as $d)
+                                <div class="col-lg-4 col-md-6 col-sm-12">
+                                    <div class="blog-one__single">
+                                        <div class="card-media">
 
                                         <a href="/muhiblog/{{ $d->id }}" style="font-size: 18px; color:black;">
                                             <center> <img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt="" style="width: 344px; height:183px;"></center>
@@ -188,16 +192,17 @@
                 <h3>Prestasi Siswa</h3>
             </div><!-- /.block-title text-center -->
             <div class="row high-gutters">
-                @foreach ($paginate as $ps )
-                <div class="col-lg-4">
-                    <div class="service-three__single wow flipInY" data-wow-delay="0ms" data-wow-duration="1500ms" style="background-color: #0000ff12;">
-                        <div class="service-three__icon">
-                            <img src="{{ asset('fotomahasiswa/' . $ps->foto) }}" alt="">
-                        </div><!-- /.service-three__icon -->
-                        <h3><a href="service-d-seo.html">{!!$ps->judul_prestasi!!}</a></h3>
-                        <p>{!! $ps->deskripsi_prestasi !!}</p>
-                    </div><!-- /.service-three__single -->
-                </div><!-- /.col-lg-4 -->
+                @foreach ($paginate as $ps)
+                    <div class="col-lg-4">
+                        <div class="service-three__single wow flipInY" data-wow-delay="0ms"
+                            data-wow-duration="1500ms" style="background-color: #0000ff12;">
+                            <div class="service-three__icon">
+                                <img src="{{ asset('fotomahasiswa/' . $ps->foto) }}" alt="">
+                            </div><!-- /.service-three__icon -->
+                            <h3><a href="service-d-seo.html">{!! $ps->judul_prestasi !!}</a></h3>
+                            <p>{!! $ps->deskripsi_prestasi !!}</p>
+                        </div><!-- /.service-three__single -->
+                    </div><!-- /.col-lg-4 -->
                 @endforeach
             </div><!-- /.row high-gutters -->
             <div class="col-md-12">
@@ -216,17 +221,18 @@
 
             </ul><!-- /.portfolio-filter list-unstyled -->
             <div class="row masonary-layout filter-layout">
-                @foreach ($data as $row )
-                <div class="col-lg-3 col-md-6 col-sm-12 filter-item masonary-item  strategy">
-                    <div class="portfolio-two__single">
-                        <div class="portfolio-two__image">
-                            <img class="zoom" src="{{ asset('fotomahasiswa/' . $row->foto) }}" alt="">
-                        </div><!-- /.portfolio-two__image -->
-                        <div class="portfolio-two__content">
-                            <p><a href="portfolio-details.html" style="font-size: 18px; color:black;">{{$row->judul_album}}</a></p>
-                        </div><!-- /.portfolio-two__content -->
-                    </div><!-- /.portfolio-two__single -->
-                </div><!-- /.col-lg-4 col-md-6 col-sm-12 -->
+                @foreach ($data as $row)
+                    <div class="col-lg-3 col-md-6 col-sm-12 filter-item masonary-item  strategy">
+                        <div class="portfolio-two__single">
+                            <div class="portfolio-two__image">
+                                <img class="zoom" src="{{ asset('fotomahasiswa/' . $row->foto) }}" alt="">
+                            </div><!-- /.portfolio-two__image -->
+                            <div class="portfolio-two__content">
+                                <p><a href="portfolio-details.html"
+                                        style="font-size: 18px; color:black;">{{ $row->judul_album }}</a></p>
+                            </div><!-- /.portfolio-two__content -->
+                        </div><!-- /.portfolio-two__single -->
+                    </div><!-- /.col-lg-4 col-md-6 col-sm-12 -->
                 @endforeach
             </div><!-- /.row -->
 
@@ -235,10 +241,11 @@
 
     <div class="container-fluid">
         <div class="row">
-            <iframe class="map-contact" src="https://maps.google.com/maps?q=smk%20muhammadiyah%201%20genteng&#038;t=m&#038;z=10&#038;output=embed&#038;iwloc=near" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe class="map-contact"
+                src="https://maps.google.com/maps?q=smk%20muhammadiyah%201%20genteng&#038;t=m&#038;z=10&#038;output=embed&#038;iwloc=near"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </div>
-    </section>
 
 
 
@@ -260,7 +267,9 @@
 
         })
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+    </script>
 
 
 

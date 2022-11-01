@@ -2,16 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\kurikulum;
-use App\Models\Muhinews;
-use App\Models\kalenderakademik;
 use App\Models\footeer;
-use App\Models\Footeerdua;
 use App\Models\Jurusan;
+use App\Models\Muhinews;
 use App\Models\Kelulusan;
-use App\Models\Personaljurusan;
+use App\Models\kurikulum;
+use App\Models\Footeerdua;
 use Illuminate\Http\Request;
+use PhpOffice\PhpWord\PhpWord;
+use App\Models\Personaljurusan;
 use Barryvdh\DomPDF\Facade\Pdf;
+use App\Exports\KelulusanExport;
+use App\Models\kalenderakademik;
+use Maatwebsite\Excel\Facades\Excel;
+use PhpOffice\PhpWord\Writer\Word2007;
 
 class KurikulumController extends Controller
 {
@@ -223,6 +227,46 @@ class KurikulumController extends Controller
         $pdf = PDF::loadview('kurikulum.kelulusan.kelulusan-pdf');
         return $pdf->download('suratkelulusan.pdf');
     }
+    public function exportexcel(){
+        return Excel::download(new KelulusanExport, 'kelulusan.xlsx');
+    }
+    public function exportword(){
+       $phpword = new PhpWord();
+       $phpword->addTitleStyle(1, ['size' => 16,'bold' => true],['alignment' => 'center']);
+       $section =  $phpword->addSection(['orientation' => 'landscape']);
+       $section->addTitle("Surat Kelulusan");
+       $section->addTextBreak();
+       $table=$section->addTable(['borderSize' => 3]);
+       $table->addRow();
+       $table->addCell(1000)->addText("No");
+       $table->addCell(11000)->addText("Nama Siswa");
+       $table->addCell(5000)->addText("Nisn");
+       $table->addCell(5000)->addText("Tanggal Lahir");
+       $table->addCell(11000)->addText("Jurusan");
+       $table->addCell(5000)->addText("Hasil");
+
+       $data = Kelulusan::all();
+       $no = 1;
+       foreach($data as $d){
+        // dd($d->jurusan);
+        $table->addRow();
+        $table->addCell()->addText($no);
+        $table->addCell()->addText($d->nama_siswa);
+        $table->addCell()->addText($d->nisn);
+        $table->addCell()->addText($d->tanggal_lahir);
+        $table->addCell()->addText($d->jurusan);
+        $table->addCell()->addText($d->hasil);
+        $no++;
+       }
+
+    //    $section->addText('awokwwkow');
+       $writer = new Word2007($phpword);
+       $filename = "SuratKelulusan.docx";
+       header("Content-Type : application/msword");
+       header("Content-Disposition : attachment; filename=" . $filename);
+       header("Cache-Control: max-age=0");
+       $writer->save("php://output");
+    }
 
     public function adminkelulusan()
     {
@@ -240,17 +284,20 @@ class KurikulumController extends Controller
         $this->validate($request, [
             'nama_siswa' => 'required',
             'nisn' => 'required',
+            'tanggal_lahir' => 'required',
             'jurusan' => 'required',
             'hasil' => 'required',
         ], [
             'nama_siswa.required' => 'Harus diisi',
             'nisn.required' => 'Harus diisi',
+            'tanggal_lahir.required' => 'Harus diisi',
             'jurusan.required' => 'Harus diisi',
             'hasil.required' => 'Harus diisi',
         ]);
         $data = Kelulusan::create([
             'nama_siswa' => $request->nama_siswa,
             'nisn' => $request->nisn,
+            'tanggal_lahir' => $request->tanggal_lahir,
             'jurusan' => $request->jurusan,
             'hasil' => $request->hasil,
         ]);
@@ -270,11 +317,13 @@ class KurikulumController extends Controller
         $this->validate($request, [
             'nama_siswa' => 'required',
             'nisn' => 'required',
+            'tanggal_lahir' => 'required',
             'jurusan' => 'required',
             'hasil' => 'required',
         ], [
             'nama_siswa.required' => 'Harus diisi',
             'nisn.required' => 'Harus diisi',
+            'tanggal_lahir.required' => 'Harus diisi',
             'jurusan.required' => 'Harus diisi',
             'hasil.required' => 'Harus diisi',
         ]);
@@ -282,6 +331,7 @@ class KurikulumController extends Controller
         $data->update([
             'nama_siswa' => $request->nama_siswa,
             'nisn' => $request->nisn,
+            'tanggal_lahir' => $request->tanggal_lahir,
             'jurusan' => $request->jurusan,
             'hasil' => $request->hasil,
         ]);

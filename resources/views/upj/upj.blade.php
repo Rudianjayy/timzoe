@@ -47,14 +47,16 @@
     </div><!-- /.preloader -->
 
     <div class="page-wrapper">
-
+        {{-- <div id="SLIDE_BG">
+            
+        </div> --}}
         <nav class="main-nav-one main-nav-one__home-three stricky">
             <div class="container-fluid">
                 <div class="inner-container">
                     <div class="logo-box">
                         <a href="index.html">
-                            <img src="{{ asset('landing/html/bidzend/assets/images/background/UPJ.png') }}"
-                                alt="" style="width: 80px;">
+                            <img src="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}" alt=""
+                                style="width: 80px;">
                         </a>
                         <a href="#" class="side-menu__toggler"><i class="fa fa-bars"></i></a>
                     </div><!-- /.logo-box -->
@@ -81,10 +83,22 @@
                 </div><!-- /.inner-container -->
             </div><!-- /.container-fluid -->
         </nav><!-- /.main-nav-one -->
-
-        <section class="banner-one" id='home'>
+        
+        <section  id='home'>
+            <div class="banner">
+                <img class="img-slider1" src="{{ asset('landingppdb/ppdb/style/assets/images/services/service-d-1.jpg') }}" >
+            </div>
+            <div class="banner2">
+                <img class="img-slider2" src="{{ asset('landingppdb/ppdb/style/assets/images/services/service-d-3.jpg') }}" >
+            </div>
+            <div class="banner3">
+                <img class="img-slider3" src="{{ asset('landingppdb/ppdb/style/assets/images/services/service-d-4.jpg') }}" >
+            </div>
+            <div class="banner4">
+                <img class="img-slider3" src="{{ asset('landingppdb/ppdb/style/assets/images/services/service-d-5.jpg') }}" >
+            </div>
             {{-- <div class="particles-snow" id="banner-one-snow"></div><!-- /#cta-one-snow.particles-snow -->
-
+            
             <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-1.png') }}" class="banner-one__bg-shape-1" alt="">
             <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-2.png') }}" class="banner-one__bg-shape-2" alt="">
             <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-3.png') }}" class="banner-one__bg-shape-3" alt="">
@@ -92,7 +106,7 @@
             <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-2.png') }}" class="banner-one__bg-shape-5" alt=""> --}}
             <div class="container">
                 <div class="banner-one__image wow slideInUp" data-wow-duration="1500ms">
-                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/mocups/banner-moc-1-1.png') }}"
+                    {{-- <img src="{{ asset('landingppdb/ppdb/style/assets/images/mocups/banner-moc-1-1.png') }}"
                         class="banner-one__image-1 " alt="">
                     <img src="{{ asset('landingppdb/ppdb/style/assets/images/mocups/banner-moc-1-2.png') }}"
                         class="banner-one__image-2 float-bob-y" alt="">
@@ -101,10 +115,10 @@
                     <img src="{{ asset('landingppdb/ppdb/style/assets/images/mocups/banner-moc-1-4.png') }}"
                         class="banner-one__image-4" alt="">
                     <img src="{{ asset('landingppdb/ppdb/style/assets/images/mocups/banner-moc-1-5.png') }}"
-                        class="banner-one__image-5" alt="">
+                        class="banner-one__image-5" alt=""> --}}
                 </div><!-- /.banner-one__image -->
                 <div class="row">
-                    <div class="col-xl-7">
+                    <div class="col-xl-7" style="margin-top: 30vh;">
                         <div class="banner-one__content">
                             <h3>UPJ TEKAJE <br> SMK Muhammadiyah 1 Genteng</h3>
                             <p>Unit produksi dan jasa <br> Teknik Komputer dan Jaringan..</p>
@@ -155,7 +169,7 @@
                     <p><span>Keunggulan</span></p>
                 </div><!-- /.block-title text-center -->
                 <div class="row high-gutters">
-                    @foreach ($keunggulan as $ke)
+                    @foreach ($keunguan as $ke)
                         <div class="col-lg-4">
                             <div class="service-three__single wow flipInY" data-wow-delay="0ms"
                                 data-wow-duration="1500ms">
@@ -172,62 +186,6 @@
                         </div><!-- /.col-lg-4 -->
                     @endforeach
 
-                    <div class="col-lg-4">
-                        <div class="service-three__single wow flipInY" data-wow-delay="300ms"
-                            data-wow-duration="1500ms">
-                            <div class="service-three__icon">
-                                <div class="service-three__single-circle"></div><!-- /.service-three__single-circle -->
-                                <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-3-i-2.png') }}"
-                                    alt="">
-                            </div><!-- /.service-three__icon -->
-                            <h3><a href="service-d-social.html">Social Media Marketing</a></h3>
-
-                        </div><!-- /.service-three__single -->
-                    </div><!-- /.col-lg-4 -->
-                    <div class="col-lg-4">
-                        <div class="service-three__single wow flipInY" data-wow-delay="600ms"
-                            data-wow-duration="1500ms">
-                            <div class="service-three__icon">
-                                <div class="service-three__single-circle"></div><!-- /.service-three__single-circle -->
-                                <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-3-i-3.png') }}"
-                                    alt="">
-                            </div><!-- /.service-three__icon -->
-                            <h3><a href="service-d-ppc.html">Business Intelligence</a></h3>
-                        </div><!-- /.service-three__single -->
-                    </div><!-- /.col-lg-4 -->
-                    <div class="col-lg-4">
-                        <div class="service-three__single wow flipInY" data-wow-delay="600ms"
-                            data-wow-duration="1500ms">
-                            <div class="service-three__icon">
-                                <div class="service-three__single-circle"></div><!-- /.service-three__single-circle -->
-                                <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-3-i-3.png') }}"
-                                    alt="">
-                            </div><!-- /.service-three__icon -->
-                            <h3><a href="service-d-ppc.html">Business Intelligence</a></h3>
-                        </div><!-- /.service-three__single -->
-                    </div><!-- /.col-lg-4 -->
-                    <div class="col-lg-4">
-                        <div class="service-three__single wow flipInY" data-wow-delay="600ms"
-                            data-wow-duration="1500ms">
-                            <div class="service-three__icon">
-                                <div class="service-three__single-circle"></div><!-- /.service-three__single-circle -->
-                                <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-3-i-3.png') }}"
-                                    alt="">
-                            </div><!-- /.service-three__icon -->
-                            <h3><a href="service-d-ppc.html">Business Intelligence</a></h3>
-                        </div><!-- /.service-three__single -->
-                    </div><!-- /.col-lg-4 -->
-                    <div class="col-lg-4">
-                        <div class="service-three__single wow flipInY" data-wow-delay="600ms"
-                            data-wow-duration="1500ms">
-                            <div class="service-three__icon">
-                                <div class="service-three__single-circle"></div><!-- /.service-three__single-circle -->
-                                <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-3-i-3.png') }}"
-                                    alt="">
-                            </div><!-- /.service-three__icon -->
-                            <h3><a href="service-d-ppc.html">Business Intelligence</a></h3>
-                        </div><!-- /.service-three__single -->
-                    </div><!-- /.col-lg-4 -->
                 </div><!-- /.row high-gutters -->
                 <center> <a href="https://wa.wizard.id/" class="thm-btn">Hubungi Admin</a></center><!-- /.thm-btn -->
 
@@ -257,66 +215,7 @@
                         </div><!-- /.col-lg-6 php col-md-12 -->
                     @endforeach
 
-                    <div class="col-lg-6 col-md-12 wow fadeInRight" data-wow-duration="1500ms">
-                        <div class="service-one__single">
-                            <div class="service-one__icon">
-                                <div class="service-one__icon-inner">
-                                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-i-2.png') }}"
-                                        alt="">
-                                </div><!-- /.service-one__icon-inner -->
-                            </div><!-- /.service-one__icon -->
-                            <div class="service-one__content">
-                                <h3><a href="service-details.html">Pemasangan WIFI</a></h3>
-                                <p>Lorem ipsum dolor amet consectetur adipisicing sed do eiusmod tempor. incididunt
-                                    labore.</p>
-                            </div><!-- /.service-one__content -->
-                        </div><!-- /.service-one__single -->
-                    </div><!-- /.col-lg-6 col-md-12 -->
-                    <div class="col-lg-6 col-md-12 wow fadeInLeft" data-wow-duration="1500ms">
-                        <div class="service-one__single">
-                            <div class="service-one__icon">
-                                <div class="service-one__icon-inner">
-                                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-i-3.png') }}"
-                                        alt="">
-                                </div><!-- /.service-one__icon-inner -->
-                            </div><!-- /.service-one__icon -->
-                            <div class="service-one__content">
-                                <h3><a href="service-details.html">Paket pemasangan & perawatan lab.komputer</a></h3>
-                                <p>Lorem ipsum dolor amet consectetur adipisicing sed do eiusmod tempor. incididunt
-                                    labore.</p>
-                            </div><!-- /.service-one__content -->
-                        </div><!-- /.service-one__single -->
-                    </div><!-- /.col-lg-6 col-md-12 -->
-                    <div class="col-lg-6 col-md-12 wow fadeInRight" data-wow-duration="1500ms">
-                        <div class="service-one__single">
-                            <div class="service-one__icon">
-                                <div class="service-one__icon-inner">
-                                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-i-4.png') }}"
-                                        alt="">
-                                </div><!-- /.service-one__icon-inner -->
-                            </div><!-- /.service-one__icon -->
-                            <div class="service-one__content">
-                                <h3><a href="service-details.html">Software Development</a></h3>
-                                <p>Lorem ipsum dolor amet consectetur adipisicing sed do eiusmod tempor. incididunt
-                                    labore.</p>
-                            </div><!-- /.service-one__content -->
-                        </div><!-- /.service-one__single -->
-                    </div><!-- /.col-lg-6 col-md-12 -->
-                    <div class="col-lg-6 col-md-12 wow fadeInRight" data-wow-duration="1500ms">
-                        <div class="service-one__single">
-                            <div class="service-one__icon">
-                                <div class="service-one__icon-inner">
-                                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/service-i-4.png') }}"
-                                        alt="">
-                                </div><!-- /.service-one__icon-inner -->
-                            </div><!-- /.service-one__icon -->
-                            <div class="service-one__content">
-                                <h3><a href="service-details.html">Service Handphone</a></h3>
-                                <p>Lorem ipsum dolor amet consectetur adipisicing sed do eiusmod tempor. incididunt
-                                    labore.</p>
-                            </div><!-- /.service-one__content -->
-                        </div><!-- /.service-one__single -->
-                    </div><!-- /.col-lg-6 col-md-12 -->
+                    
                 </div><!-- /.row -->
                 <div class="text-center">
                     <a href="https://wa.wizard.id/" class="thm-btn portfolio-column__more-btn"><span>Hubungi
@@ -474,112 +373,94 @@
             </div><!-- /.container -->
         </section><!-- /.testimonials-one -->
 
+        {{-- <div class="inner-container">
+            <div class="row">
+                <iframe class="map-contact" src="https://maps.google.com/maps?q=smk%20muhammadiyah%201%20genteng&#038;t=m&#038;z=10&#038;output=embed&#038;iwloc=near" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div> --}}
 
-
-        <section class="contact-one">
+        {{-- <section class="contact-one">
             <div class="container wow fadeInUp" data-wow-duration="1500ms">
                 <div class="inner-container">
-                    <img src="assets/images/shapes/contact-form-shape-1-1.png" class="contact-one__shape-1"
-                        alt="">
-                    <img src="assets/images/mocups/contact-1-moc-1.png" class="contact-one__shape-2" alt="">
-                    <img src="assets/images/mocups/contact-1-moc-2.png" class="contact-one__shape-3" alt="">
-                    <div class="block-title text-center">
-                        <p><span>Analysis</span></p>
-                        <h3>Get Free SEO Analysis?</h3>
-                    </div><!-- /.block-title text-center -->
-                    <form action="http://ashik.templatepath.net/inovex-html-files/assets/inc/sendemail.php"
-                        class="contact-one__form">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <input type="text" placeholder="Your Name*">
-                            </div><!-- /.col-md-6 -->
-                            <div class="col-md-6">
-                                <input type="text" placeholder="Email*">
-                            </div><!-- /.col-md-6 -->
-                            <div class="col-md-6">
-                                <input type="text" placeholder="Website*">
-                            </div><!-- /.col-md-6 -->
-                            <div class="col-md-6">
-                                <input type="text" placeholder="Subject">
-                            </div><!-- /.col-md-6 -->
-                            <div class="col-md-12 text-center">
-                                <button type="submit" class="thm-btn contact-one__btn">Send Now</button>
-                            </div><!-- /.col-md-12 -->
-                        </div><!-- /.row -->
-                    </form><!-- /.contact-one__form -->
+                    <div class="row">
+                        <iframe class="map-contact" src="https://maps.google.com/maps?q=smk%20muhammadiyah%201%20genteng&#038;t=m&#038;z=10&#038;output=embed&#038;iwloc=near" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
 
                 </div><!-- /.inner-container -->
             </div><!-- /.container -->
-        </section><!-- /.contact-one -->
+        </section><!-- /.contact-one --> --}}
 
-        <footer class="site-footer">
-            <div class="particles-snow" id="footer-snow"></div><!-- /#footer-snow.particles-snow -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <iframe class="map-contact"
+                        src="https://maps.google.com/maps?q=smk%20muhammadiyah%201%20genteng&#038;t=m&#038;z=10&#038;output=embed&#038;iwloc=near"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
 
-            <img src="assets/images/shapes/footer-shape-1-1.png" class="site-footer__bg-shape-1" alt="">
-            <img src="assets/images/shapes/footer-shape-1-2.png" class="site-footer__bg-shape-2" alt="">
-            <img src="assets/images/shapes/footer-shape-1-3.png" class="site-footer__bg-shape-3" alt="">
-            <img src="assets/images/shapes/footer-shape-1-4.png" class="site-footer__bg-shape-4" alt="">
+        <footer class="site-footer-upj">
+
             <div class="site-footer__upper">
                 <div class="container">
                     <div class="row">
+                        @foreach ($uf as $uf )
+                            
                         <div class="col-lg-3 col-md-6 col-sm-12">
                             <div class="footer-widget footer-widget__about">
-                                <h3 class="footer-widget__title">About</h3>
-                                <p>We focus on the needs of small to middle market businesses to improve and grow their
-                                    return.</p>
-                                <div class="footer-widget__social">
-                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
-                                    <a href="#"><i class="fab fa-google-plus-g"></i></a>
-                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                </div><!-- /.footer-widget__social -->
-                            </div><!-- /.footer-widget footer-widget__about -->
-                        </div><!-- /.col-lg-3 col-md-6 col-sm-12 -->
-                        <div class="col-lg-3 col-md-6 col-sm-12">
-                            <div class="footer-widget footer-widget__links__1">
-                                <h3 class="footer-widget__title">Services</h3>
-                                <ul class="list-unstyled footer-widget__links-list">
-                                    <li><a href="#">Web Design</a></li>
-                                    <li><a href="#">Development</a></li>
-                                    <li><a href="#">Wordpress</a></li>
-                                    <li><a href="#">Online Marketing</a></li>
-                                    <li><a href="#">Content</a></li>
-                                </ul><!-- /.list-unstyled footer-widget__links-list -->
-                            </div><!-- /.footer-widget -->
-                        </div><!-- /.col-lg-3 col-md-6 col-sm-12 -->
+                                <h3 class="footer-widget__title">Tentang UPJ</h3>
+                                <p>{{$uf->tentang_upj}}</p>
+                                    <div class="footer-widget__social">
+                                        <a href="{{ $uf->yt }}"><i class="fab fa-youtube"></i></a>
+                                        <a href="{{ $uf->fb }}"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="{{ $uf->ig }}"><i class="fab fa-instagram"></i></a>
+                                        <a href="{{ $uf->wa }}"><i class="fab fa-whatsapp"></i></a>
+                                    </div><!-- /.footer-widget__social -->
+                                </div><!-- /.footer-widget footer-widget__about -->
+                            </div><!-- /.col-lg-3 col-md-6 col-sm-12 -->
+                            @endforeach
+
+                            <div class="col-lg-2 col-md-6 col-sm-6 col-6">
+                                <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+                                <div class="elfsight-app-7e06bf3a-c3dd-4ad3-a974-4f6c4b30ba1e"></div>
+                            </div>
+
+                        @foreach ($uli as $uli )
+                            
                         <div class="col-lg-3 col-md-6 col-sm-12">
                             <div class="footer-widget footer-widget__links__2">
-                                <h3 class="footer-widget__title">Quick Links</h3>
+                                <h3 class="footer-widget__title">Link</h3>
                                 <ul class="list-unstyled footer-widget__links-list">
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="#">Work Portfolio</a></li>
-                                    <li><a href="#">Our Team</a></li>
-                                    <li><a href="#">Price Plan</a></li>
-                                    <li><a href="#">Latest News</a></li>
+                                    <li><a href="{{ $uli->link }}">{{ $uli->nama }}</a></li>
                                 </ul><!-- /.list-unstyled footer-widget__links-list -->
                             </div><!-- /.footer-widget -->
                         </div><!-- /.col-lg-3 col-md-6 col-sm-12 -->
+                        @endforeach
+                        @foreach ($fu as $fu )
+                            
                         <div class="col-lg-3 col-md-6 col-sm-12">
                             <div class="footer-widget footer-widget__contact">
-                                <h3 class="footer-widget__title">Contact</h3>
-                                <p>Royal Orville Road Apt. 728 <br> California, USA</p>
-                                <p><a href="mailto:inovex.inc@company.com">inovex.inc@company.com</a></p>
-                                <p><a href="tel:720.661.2231">720.661.2231</a></p>
-                            </div><!-- /.footer-widget -->
-                        </div><!-- /.col-lg-3 col-md-6 col-sm-12 -->
-                    </div><!-- /.row -->
-                </div><!-- /.container -->
+                                <h3 class="footer-widget__title">Kontak</h3>
+                                <p>{{$fu->alamat}}</p>
+                                    <p><a href="mailto:{{ $fu->email }}">{{ $fu->email }}</a></p>
+                                    {{-- <p><a href="tel:720.661.2231">720.661.2231</a></p> --}}
+                                </div><!-- /.footer-widget -->
+                            </div><!-- /.col-lg-3 col-md-6 col-sm-12 -->
+                        </div><!-- /.row -->
+                        @endforeach
+                    </div><!-- /.container -->
 
             </div><!-- /.site-footer__upper -->
             <div class="site-footer__bottom">
                 <div class="container">
                     <p>© 2020 copyright all right reserved</p>
                     <a href="index.html"><img src="assets/images/logo-1-1.png" alt=""></a>
-                    <ul class="list-unstyled site-footer__bottom-menu">
+                    {{-- <ul class="list-unstyled site-footer__bottom-menu">
                         <li><a href="#">Privace & Policy.</a></li>
                         <li><a href="#">Faq.</a></li>
                         <li><a href="#">Terms.</a></li>
-                    </ul><!-- /.list-unstyled site-footer__bottom-menu -->
+                    </ul><!-- /.list-unstyled site-footer__bottom-menu --> --}}
                 </div><!-- /.container -->
             </div><!-- /.site-footer__bottom -->
 

@@ -63,7 +63,9 @@
                                         <td>{{ $row->email }}</td>
                                         <td>0{{ $row->notelpon }}</td>
                                         <td>{!! $row->deskripsi_akademi !!}</td>
-                                        <td>{!! $row->deskripsi_detail !!}</td>
+                                        <td>
+                                            <a href="/detaildeskripsi/{{ $row->id }}" class="btn btn-success">Detail</a>
+                                        </td>
 
                                         {{-- <td>{{ $row->created_at->format('D M Y') }}</td> --}}
                                         <td>

@@ -26,8 +26,10 @@
                                     id="kt_account_profile_details_submit">Tambah
                                     +</a>
                                 <a href="/exportpdf" class="btn btn-danger"> Export PDF</a>
-                                <a href="/exportexcel" class="btn btn-success">Excel</a>
+                                <a href="/exportexcel" class="btn btn-success">Export Excel</a>
+                                <a href="/exportword" class="btn btn-primary">Export Word</a>
                             </div>
+
                             <table id="datatable" class="table table-bordered dt-responsive nowrap"
                                 style="border-collapse: collapse; border-spacing: 0; width: 100%;">
 
@@ -36,6 +38,7 @@
                                         <th scope="col">#</th>
                                         <th scope="col">Nama Siswa</th>
                                         <th scope="col">Nisn</th>
+                                        <th scope="col">Tanggal Lahir</th>
                                         <th scope="col">Jurusan</th>
                                         <th scope="col">Hasil</th>
                                         <th scope="col">Aksi</th>
@@ -53,6 +56,7 @@
                                             <th>{{ $no++ }}</th>
                                             <td>{{ $d->nama_siswa }}</td>
                                             <td>{{ $d->nisn }}</td>
+                                            <td>{{ $d->tanggal_lahir }}</td>
                                             <td>{{ $d->jurusan }}</td>
                                             <td>{{ $d->hasil }}</td>
                                             <td>

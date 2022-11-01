@@ -82,6 +82,7 @@ Route::get('/deletesambutan/{id}',[SambutanController::class, 'delete'])->name('
 
 
 
+Route::get('/detailjurusan/{id}',[JurusanController::class, 'detailjurusan'])->name('detailjurusan');
 
 
 Route::get('/datajurusan',[JurusanController::class, 'loby3'])->name('datajurusan');
@@ -278,6 +279,7 @@ Route::post('/editproseskelulusan/{id}',[KurikulumController::class,'editprosesk
 Route::get('/deletekelulusan/{id}',[KurikulumController::class,'deletekelulusan'])->name('deletekelulusan');
 Route::get('/exportpdf',[KurikulumController::class,'exportpdf'])->name('exportpdf');
 Route::get('/exportexcel',[KurikulumController::class,'exportexcel'])->name('exportexcel');
+Route::get('/exportword',[KurikulumController::class,'exportword'])->name('exportword');
 
 
 
@@ -374,6 +376,7 @@ Route::get('/delete/{id}',[FooteerduaController::class,'delete'])->name('delete'
 
 
 
+Route::get('/detaildeskripsi/{id}',[AkademiController::class, 'detaildeskripsi'])->name('detaildeskripsi');
 
 
 Route::get('/indexakademi',[AkademiController::class,'indexakademi'])->name('indexakademi');
@@ -537,6 +540,29 @@ Route::post('/submitdata20',[UpjtekajeController::class, 'submitdata20'])->name(
 Route::get('/edittestimoni/{id}',[UpjtekajeController::class, 'edittestimoni'])->name('edittestimoni');
 Route::post('/submitedit20/{id}',[UpjtekajeController::class, 'submitedit20'])->name('submitedit20');
 Route::get('/deletetestimoni/{id}',[UpjtekajeController::class, 'deletetestimoni'])->name('deletetestimoni');
+
+
+Route::get('/adminupjfooterlink',[UpjtekajeController::class, 'loby22'])->name('adminupjfooterlink');
+Route::get('/tambahupjfooterlink',[UpjtekajeController::class, 'tambahupjfooterlink'])->name('tambahupjfooterlink');
+Route::post('/submitdata22',[UpjtekajeController::class, 'submitdata22'])->name('submitdata22');
+Route::get('/editupjfooterlink/{id}',[UpjtekajeController::class, 'editupjfooterlink'])->name('editupjfooterlink');
+Route::post('/submitedit22/{id}',[UpjtekajeController::class, 'submitedit22'])->name('submitedit22');
+Route::get('/deleteupjfooterlink/{id}',[UpjtekajeController::class, 'deleteupjfooterlink'])->name('deleteupjfooterlink');
+
+
+
+Route::get('/adminupjfooter',[UpjtekajeController::class, 'loby21'])->name('adminupjfooter');
+Route::post('/submitdata21',[UpjtekajeController::class, 'submitdata21'])->name('submitdata21');
+Route::get('/editupjfooter/{id}',[UpjtekajeController::class, 'editupjfooter'])->name('editupjfooter');
+Route::post('/submitedit21/{id}',[UpjtekajeController::class, 'submitedit21'])->name('submitedit21');
+Route::get('/deleteupjfooter/{id}',[UpjtekajeController::class, 'deleteupjfooter'])->name('deleteupjfooter');
+
+
+
+Route::get('/adminupjslider',[UpjtekajeController::class, 'loby23'])->name('adminupjslider');
+Route::get('/editupjslider/{id}',[UpjtekajeController::class, 'editupjslider'])->name('editupjslider');
+Route::post('/submitedit23/{id}',[UpjtekajeController::class, 'submitedit23'])->name('submitedit23');
+Route::get('/deleteupjslider/{id}',[UpjtekajeController::class, 'deleteupjslider'])->name('deleteupjslider');
 
 
 

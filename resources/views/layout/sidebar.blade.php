@@ -119,6 +119,9 @@
                 <li><a href="/admingalery">Galery</a></li>
                 <li><a href="/adminvisimisi">Visi Misi</a></li>
                 <li><a href="/admintestimoni">Testimoni</a></li>
+                <li><a href="/adminupjfooter">UPJ Footer</a></li>
+                <li><a href="/adminupjfooterlink">UPJ Footer Link</a></li>
+                <li><a href="/adminupjslider">UPJ Slider</a></li>
             </ul>
         </li>
         <li>

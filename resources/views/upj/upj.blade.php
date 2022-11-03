@@ -260,19 +260,12 @@
                     <p class="color-2"><span>Galery</span></p>
                     {{-- <h3>View Some of Our Latest Works <br> <span>& Case Studies for Clients</span></h3> --}}
                 </div><!-- /.block-title text-center -->
-                {{-- <ul class="portfolio-filter list-unstyled post-filter ">
-                    <li data-filter=".filter-item" class="active"><span>All</span></li>
-                    <li data-filter=".strategy"><span>Strategy</span></li>
-                    <li data-filter=".optimization"><span>Optimization</span></li>
-                    <li data-filter=".advertising"><span>Advertising</span></li>
-                    <li data-filter=".social"><span>Social</span></li>
-                </ul><!-- /.portfolio-filter list-unstyled --> --}}
                 <div class="row high-gutters masonary-layout filter-layout">
                     @foreach ($upgal as $gatal)
                     <div class="col-lg-4 col-md-6 col-sm-12 filter-item masonary-item  strategy">
                         <div class="portfolio-one__single">
                             <div class="portfolio-one__image">
-                                <img src="{{ asset('fotomahasiswa/' . $gatal->foto_galery) }}" alt="">
+                                <img src="{{ asset('fotomahasiswa/' . $gatal->foto_galery) }}" alt="" style="height:250px;">
                                 <a class="img-popup" href="{{ asset('fotomahasiswa/' . $gatal->foto_galery) }}"><i class="fal fa-plus"></i></a>
                             </div><!-- /.portfolio-one__image -->
 

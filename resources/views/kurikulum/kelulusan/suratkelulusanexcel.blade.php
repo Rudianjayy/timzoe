@@ -4,7 +4,6 @@
             <th>Nama Siswa</th>
             <th>Nisn</th>
             <th>Tanggal Lahir</th>
-            <th>Jurusan</th>
             <th>Hasil</th>
         </tr>
     </thead>
@@ -14,7 +13,6 @@
                 <td>{{ $d->nama_siswa }}</td>
                 <td>{{ $d->nisn }}</td>
                 <td>{{ $d->tanggal_lahir }}</td>
-                <td>{{ $d->jurusan }}</td>
                 <td>{{ $d->hasil }}</td>
             </tr>
         @endforeach

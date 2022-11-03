@@ -7,17 +7,16 @@ use App\Models\Jurusan;
 use App\Models\Muhinews;
 use App\Models\kurikulum;
 use App\Models\Footeerdua;
-use App\Models\jadwalkegiatan;
 use Illuminate\Http\Request;
+use App\Models\jadwalkegiatan;
+use App\Models\Suratkelulusan;
 use PhpOffice\PhpWord\PhpWord;
 use App\Models\Personaljurusan;
-use Barryvdh\DomPDF\Facade\Pdf;
 use App\Exports\KelulusanExport;
 use App\Models\kalenderakademik;
-use App\Models\Suratkelulusan;
 use Maatwebsite\Excel\Facades\Excel;
 use PhpOffice\PhpWord\Writer\Word2007;
-
+use Barryvdh\DomPDF\Facade\Pdf;
 class KurikulumController extends Controller
 {
 

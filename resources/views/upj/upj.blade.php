@@ -36,35 +36,26 @@
 
     <link rel="stylesheet" href="{{asset('ppdb/landing/colugo/default/assets/css/style.css')}}">
 
-    <link rel="stylesheet" href="{{asset('ppdb/landing/colugo/default/assets/css/dark.css')}}">
-
-    <link rel="stylesheet" href="{{asset('ppdb/landing/colugo/default/assets/css/responsive.css')}}">
 
 </head>
 
 <body>
 
     <div class="preloader">
-    <div class="preload preload-container">
-        <div class="preload-logo"><img src="{{ asset('landing/html/bidzend/assets/images/upj/UPJ.png') }}" alt="Image" style="width:70px;"></div>
-    </div>
+        <div class="preload preload-container">
+            <div class="preload-logo"><img src="{{ asset('landing/html/bidzend/assets/images/upj/UPJ.png') }}" alt="Image" style="width:70px;"></div>
+        </div>
     </div><!-- /.preloader -->
 
     <div class="page-wrapper">
-        {{-- <div id="SLIDE_BG">
 
-        </div> --}}
         <nav class="main-nav-one main-nav-one__home-three stricky">
             <div class="container-fluid">
                 <div class="inner-container">
-                    <div class="logo-box">
-                        <a href="index.html">
-                            <img src="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}" alt="" style="width: 80px;">
-                        </a>
-                        <a href="/">
-                            <img src="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}" alt="" style="width: 80px;">
-                        </a>
-                        <a href="#" class="side-menu__toggler"><i class="fa fa-bars"></i></a>
+
+                    <div>
+                        <img src="{{ asset('landing/html/bidzend/assets/images/avatar/background/UPJ.png') }}" alt="" style="width: 70px;">
+                        <img src="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}" alt="" style="width: 80px;">
                     </div><!-- /.logo-box -->
 
                     <div class="main-nav__main-navigation">
@@ -83,6 +74,7 @@
                 </div><!-- /.inner-container -->
             </div><!-- /.container-fluid -->
         </nav><!-- /.main-nav-one -->
+
         <style>
             .SLIDE_BG {
                 width: 100%;
@@ -118,24 +110,13 @@
                     background-image: url('{{ asset('fotomahasiswa/' . $ul->foto_slider2) }}');
                 }
             }
+
             @endforeach
         </style>
 
-        @foreach ($us as $ul )
 
         <section class="SLIDE_BG" id='home'>
-            <!-- <div class="banner">
-                <img class="img-slider1" src="{{ asset('fotomahasiswa/' . $ul->foto_slider1) }}" >
-            </div>
-            <div class="banner2">
-                <img class="img-slider2" src="{{ asset('fotomahasiswa/' . $ul->foto_slider2) }}" >
-            </div>
-            <div class="banner3">
-                <img class="img-slider3" src="{{ asset('fotomahasiswa/' . $ul->foto_slider3) }}" >
-            </div>
-            <div class="banner4">
-                <img class="img-slider3" src="{{ asset('fotomahasiswa/' . $ul->foto_slider4) }}" >
-            </div> -->
+
             {{-- <div class="particles-snow" id="banner-one-snow"></div><!-- /#cta-one-snow.particles-snow -->
 
             <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-1.png') }}" class="banner-one__bg-shape-1" alt="">
@@ -163,37 +144,23 @@
                 </div><!-- /.row -->
             </div><!-- /.container -->
         </section><!-- /.banner-one -->
-        @endforeach
 
         <section class="about-three about-three__home-two" id='tentang'>
-            {{-- <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/about-3-bg-2-1.png') }} "
-            class="about-three-home-two__bg-image-1" alt=""> --}}
-
             <div class="container">
-
                 @foreach ($tentang as $t)
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="about-three__home-two__images">
-                            <img src="{{ asset('fotomahasiswa/' . $t->foto_tentangkami) }} " class="float-bob-y" alt="" style="width: 400px; margin-left: 40%;">
-                        </div><!-- /.about-three__home-two__images -->
+                            <img src="{{ asset('fotomahasiswa/' . $t->foto_tentangkami) }} " class="float-bob-y" alt="" style="width: 400px; margin-left: 35%;">
+                        </div>
                     </div><!-- /.col-lg-6 -->
                     <div class="col-lg-6">
-
-                        <div class="about-three__content" style="color: black;">
-                            {{-- <div class="block-title text-left">
-                                <h3></h3>
-                                <span>Selamat datang di website resmi UPJ TEKAJE</span>
-
-                            </div><!-- /.block-title text-center --> --}}
-                            <p>{!! $t->deskripsi_tentangkami !!}</p>
-
-                        </div><!-- /.about-three__content -->
-
+                        <div class="about-three__content">
+                            <p>{!!$t->deskripsi_tentangkami!!}</p>
+                        </div>
                     </div><!-- /.col-lg-6 -->
                 </div><!-- /.row -->
                 @endforeach
-
             </div>
         </section><!-- /.about-three -->
 
@@ -202,6 +169,7 @@
             <div class="container">
                 <div class="section-title">
                     <h2>Keunggulan</h2>
+                    <div class="bar"></div>
                 </div>
                 <div class="row">
                     @foreach ($keunguan as $keunguan )
@@ -226,8 +194,9 @@
 
         <section class="service-one" id='jasa'>
             <div class="container">
-                <div class="block-title text-center">
+                <div class="section-title">
                     <h3>Jasa yang kami tawarkan</h3>
+                    <div class="bar"></div>
                 </div><!-- /.block-title text-center -->
                 <div class="row high-gutters">
                     @foreach ($upjas as $ups)
@@ -280,28 +249,11 @@
 
         @foreach ($upjvis as $upss)
         <section class="cta-one cta-one__about-one" style="background-image: url({{ asset('landingppdb/ppdb/style/assets/images/shapes/cta-bg-2-1.png') }});">
-            {{-- <div class="particles-snow" id="cta-one-snow"></div><!-- /#cta-one-snow.particles-snow --> --}}
-
-            {{-- <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-1.png') }}" class="cta-one__bg-shape-1" alt="">
-            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-2.png') }}" class="cta-one__bg-shape-2" alt="">
-            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-3.png') }}" class="cta-one__bg-shape-3" alt="">
-            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-4.png') }}" class="cta-one__bg-shape-4" alt=""> --}}
-
-            {{-- <div class="error-404__bubble-1"></div><!-- /.error-404__bubble-1 -->
-            <div class="error-404__bubble-2"></div><!-- /.error-404__bubble-2 -->
-            <div class="error-404__bubble-3"></div><!-- /.error-404__bubble-3 -->
-            <div class="error-404__bubble-4"></div><!-- /.error-404__bubble-4 -->
-            <div class="error-404__bubble-5"></div><!-- /.error-404__bubble-5 -->
-            <div class="error-404__bubble-6"></div><!-- /.error-404__bubble-6 -->
-            <div class="error-404__bubble-7"></div><!-- /.error-404__bubble-7 -->
-            <div class="error-404__bubble-8"></div><!-- /.error-404__bubble-8 --> --}}
-
             <div class="container">
                 <h3>Visi <br></h3>
-                <p style="color: black;">{!! $upss->upj_visi !!}</p>
+                <p>{!! $upss->upj_visi !!}</p>
                 <h3>Misi <br></h3>
-                <p style="color: black;">{!! $upss->upj_misi !!}</p>
-                {{-- <a href="#" class="thm-btn cta-one__btn"><span>Join Us Now</span></a><!-- /.thm-btn cta-one__btn --> --}}
+                <p style="color:black !important;">{!! $upss->upj_misi !!}</p>
             </div><!-- /.container -->
         </section><!-- /.cta-one -->
 
@@ -321,7 +273,6 @@
             <div class="container">
                 <div class="block-title text-center">
                     <p class="color-2"><span>Structure Management</span></p>
-                    {{-- <h3>Work with The Awesome Team <br> <span>of Our Company</span></h3> --}}
                 </div><!-- /.block-title text-center -->
                 <div class="row high-gutters">
                     @foreach ($team as $tm)
@@ -405,13 +356,26 @@
             </div><!-- /.container -->
         </section><!-- /.contact-one --> --}}
 
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col">
-                    <iframe class="map-contact" src="https://maps.google.com/maps?q=smk%20muhammadiyah%201%20genteng&#038;t=m&#038;z=10&#038;output=embed&#038;iwloc=near" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <!-- contact -->
+        <section id="about" class="about-area pb-100">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Kunjungi Kami</h2>
+                    <div class="bar"></div>
+                    <p>Kunjungi Kami. Kami melayani Konsultasi dan Cek Gratis.</p>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-sm-6">
+                        <div class="row">
+                            <div class="col">
+                             <center>  <iframe class="map-contact" src="https://maps.google.com/maps?q=smk%20muhammadiyah%201%20genteng&#038;t=m&#038;z=10&#038;output=embed&#038;iwloc=near" width="1150" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></center>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
+
 
         <footer class="site-footer-upj">
 

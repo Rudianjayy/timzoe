@@ -11,14 +11,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UPJ TEKAJE - SMK Muhammadiyah 1 Genteng</title>
     <!-- favicons -->
-    <link rel="apple-touch-icon" sizes="180x180"
-        href="{{ asset('landingppdb/ppdb/style/assets/images/favicons/apple-touch-icon.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('landingppdb/ppdb/style/assets/images/favicons/apple-touch-icon.png') }}">
     <link rel="shortcut icon" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
     <link rel="apple-touch-icon-precomposed" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
     <link rel="manifest" href="{{ asset('landingppdb/ppdb/style/') }}assets/images/favicons/site.webmanifest">
 
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&amp;display=swap">
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/animate.css') }}">
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap-datepicker.min.css') }}">
@@ -32,41 +30,43 @@
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/owl.theme.default.min.css') }}">
 
     <!-- Template Styles -->
-    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/style.css') }} ">
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/responsive.css') }}">
+
+
+    <link rel="stylesheet" href="{{asset('ppdb/landing/colugo/default/assets/css/style.css')}}">
+
+    <link rel="stylesheet" href="{{asset('ppdb/landing/colugo/default/assets/css/dark.css')}}">
+
+    <link rel="stylesheet" href="{{asset('ppdb/landing/colugo/default/assets/css/responsive.css')}}">
 
 </head>
 
 <body>
 
     <div class="preloader">
-        <div class="lds-ripple">
-            <div></div>
-            <div></div>
-        </div>
+    <div class="preload preload-container">
+        <div class="preload-logo"><img src="{{ asset('landing/html/bidzend/assets/images/upj/UPJ.png') }}" alt="Image" style="width:70px;"></div>
+    </div>
     </div><!-- /.preloader -->
 
     <div class="page-wrapper">
         {{-- <div id="SLIDE_BG">
-            
+
         </div> --}}
         <nav class="main-nav-one main-nav-one__home-three stricky">
             <div class="container-fluid">
                 <div class="inner-container">
                     <div class="logo-box">
                         <a href="index.html">
-                            <img src="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}" alt=""
-                                style="width: 80px;">
+                            <img src="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}" alt="" style="width: 80px;">
                         </a>
-                        <a href="#" class="side-menu__toggler"><i class="fa fa-bars"></i></a>
-                    </div><!-- /.logo-box -->
-                    <div class="logo-box">
                         <a href="/">
-                            <img src="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}" alt=""
-                                style="width: 80px;">
+                            <img src="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}" alt="" style="width: 80px;">
                         </a>
                         <a href="#" class="side-menu__toggler"><i class="fa fa-bars"></i></a>
                     </div><!-- /.logo-box -->
+
                     <div class="main-nav__main-navigation">
                         <ul class="main-nav__navigation-box">
                             <li><a href="#home">Home</a></li>
@@ -83,22 +83,62 @@
                 </div><!-- /.inner-container -->
             </div><!-- /.container-fluid -->
         </nav><!-- /.main-nav-one -->
-        
-        <section  id='home'>
-            <div class="banner">
-                <img class="img-slider1" src="{{ asset('landingppdb/ppdb/style/assets/images/services/service-d-1.jpg') }}" >
+        <style>
+            .SLIDE_BG {
+                width: 100%;
+                height: 100vh;
+                background-position: center center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                backface-visibility: hidden;
+                animation: slideBg 16s linear infinite 0s;
+                animation-timing-function: ease-in-out;
+                background-image: url('../images/services/service-d-2-1.jpg');
+                position: relative;
+            }
+
+            @foreach ($us as $ul) @keyframes slideBg {
+                0% {
+                    background-image: url('{{ asset('fotomahasiswa/' . $ul->foto_slider1) }}');
+                }
+
+                25% {
+                    background-image: url('{{ asset('fotomahasiswa/' . $ul->foto_slider2) }}');
+                }
+
+                50% {
+                    background-image: url('{{ asset('fotomahasiswa/' . $ul->foto_slider3) }}');
+                }
+
+                75% {
+                    background-image: url('{{ asset('fotomahasiswa/' . $ul->foto_slider4) }}');
+                }
+
+                100% {
+                    background-image: url('{{ asset('fotomahasiswa/' . $ul->foto_slider2) }}');
+                }
+            }
+
+            @endforeach
+        </style>
+
+        @foreach ($us as $ul )
+
+        <section class="SLIDE_BG" id='home'>
+            <!-- <div class="banner">
+                <img class="img-slider1" src="{{ asset('fotomahasiswa/' . $ul->foto_slider1) }}" >
             </div>
             <div class="banner2">
-                <img class="img-slider2" src="{{ asset('landingppdb/ppdb/style/assets/images/services/service-d-3.jpg') }}" >
+                <img class="img-slider2" src="{{ asset('fotomahasiswa/' . $ul->foto_slider2) }}" >
             </div>
             <div class="banner3">
-                <img class="img-slider3" src="{{ asset('landingppdb/ppdb/style/assets/images/services/service-d-4.jpg') }}" >
+                <img class="img-slider3" src="{{ asset('fotomahasiswa/' . $ul->foto_slider3) }}" >
             </div>
             <div class="banner4">
-                <img class="img-slider3" src="{{ asset('landingppdb/ppdb/style/assets/images/services/service-d-5.jpg') }}" >
-            </div>
+                <img class="img-slider3" src="{{ asset('fotomahasiswa/' . $ul->foto_slider4) }}" >
+            </div> -->
             {{-- <div class="particles-snow" id="banner-one-snow"></div><!-- /#cta-one-snow.particles-snow -->
-            
+
             <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-1.png') }}" class="banner-one__bg-shape-1" alt="">
             <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-2.png') }}" class="banner-one__bg-shape-2" alt="">
             <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-3.png') }}" class="banner-one__bg-shape-3" alt="">
@@ -107,15 +147,11 @@
             <div class="container">
                 <div class="banner-one__image wow slideInUp" data-wow-duration="1500ms">
                     {{-- <img src="{{ asset('landingppdb/ppdb/style/assets/images/mocups/banner-moc-1-1.png') }}"
-                        class="banner-one__image-1 " alt="">
-                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/mocups/banner-moc-1-2.png') }}"
-                        class="banner-one__image-2 float-bob-y" alt="">
-                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/mocups/banner-moc-1-3.png') }}"
-                        class="banner-one__image-3 float-bob-x" alt="">
-                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/mocups/banner-moc-1-4.png') }}"
-                        class="banner-one__image-4" alt="">
-                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/mocups/banner-moc-1-5.png') }}"
-                        class="banner-one__image-5" alt=""> --}}
+                    class="banner-one__image-1 " alt="">
+                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/mocups/banner-moc-1-2.png') }}" class="banner-one__image-2 float-bob-y" alt="">
+                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/mocups/banner-moc-1-3.png') }}" class="banner-one__image-3 float-bob-x" alt="">
+                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/mocups/banner-moc-1-4.png') }}" class="banner-one__image-4" alt="">
+                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/mocups/banner-moc-1-5.png') }}" class="banner-one__image-5" alt=""> --}}
                 </div><!-- /.banner-one__image -->
                 <div class="row">
                     <div class="col-xl-7" style="margin-top: 30vh;">
@@ -128,6 +164,7 @@
                 </div><!-- /.row -->
             </div><!-- /.container -->
         </section><!-- /.banner-one -->
+        @endforeach
 
         <section class="about-three about-three__home-two" id='tentang'>
             {{-- <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/about-3-bg-2-1.png') }} "
@@ -136,86 +173,79 @@
             <div class="container">
 
                 @foreach ($tentang as $t)
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="about-three__home-two__images">
-                                <img src="{{ asset('fotomahasiswa/' . $t->foto_tentangkami) }} " class="float-bob-y"
-                                    alt="" style="width: 400px; margin-left: 40%;">
-                            </div><!-- /.about-three__home-two__images -->
-                        </div><!-- /.col-lg-6 -->
-                        <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="about-three__home-two__images">
+                            <img src="{{ asset('fotomahasiswa/' . $t->foto_tentangkami) }} " class="float-bob-y" alt="" style="width: 400px; margin-left: 40%;">
+                        </div><!-- /.about-three__home-two__images -->
+                    </div><!-- /.col-lg-6 -->
+                    <div class="col-lg-6">
 
-                            <div class="about-three__content" style="color: black;">
-                                {{-- <div class="block-title text-left">
+                        <div class="about-three__content" style="color: black;">
+                            {{-- <div class="block-title text-left">
                                 <h3></h3>
                                 <span>Selamat datang di website resmi UPJ TEKAJE</span>
 
                             </div><!-- /.block-title text-center --> --}}
-                                <p>{!! $t->deskripsi_tentangkami !!}</p>
+                            <p>{!! $t->deskripsi_tentangkami !!}</p>
 
-                            </div><!-- /.about-three__content -->
+                        </div><!-- /.about-three__content -->
 
-                        </div><!-- /.col-lg-6 -->
-                    </div><!-- /.row -->
+                    </div><!-- /.col-lg-6 -->
+                </div><!-- /.row -->
                 @endforeach
 
             </div>
         </section><!-- /.about-three -->
 
 
-        <section class="service-three-bg">
+        <section id="features" class="features-area pb-70">
             <div class="container">
-                <div class="block-title text-center">
-                    <p><span>Keunggulan</span></p>
-                </div><!-- /.block-title text-center -->
-                <div class="row high-gutters">
-                    @foreach ($keunguan as $ke)
-                        <div class="col-lg-4">
-                            <div class="service-three__single wow flipInY" data-wow-delay="0ms"
-                                data-wow-duration="1500ms">
-
-                                <div class="service-three__icon">
-                                    <div class="service-three__single-circle"></div>
-                                    <!-- /.service-three__single-circle -->
-                                    <img src="{{ asset('fotomahasiswa/' . $ke->foto_keunggulan) }}" alt=""
-                                        style="border-radius: 50%;">
-                                </div><!-- /.service-three__icon -->
-                                <h3><a href="service-d-seo.html">{{ $ke->keterangan }}</a></h3>
-
-                            </div><!-- /.service-three__single -->
-                        </div><!-- /.col-lg-4 -->
+                <div class="section-title">
+                    <h2>Keunggulan</h2>
+                </div>
+                <div class="row">
+                    @foreach ($keunguan as $keunguan )
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-features">
+                            <div class="icon">
+                                <i class="{{$keunguan->icon}}"></i>
+                            </div>
+                            <h3>{{$keunguan->keterangan}}</h3>
+                        </div>
+                    </div>
                     @endforeach
 
-                </div><!-- /.row high-gutters -->
-                <center> <a href="https://wa.wizard.id/" class="thm-btn">Hubungi Admin</a></center><!-- /.thm-btn -->
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="https://wa.wizard.id/" class="thm-btn portfolio-column__more-btn"><span>Hubungi
+                        Admin</span></a>
+                <!-- /.thm-btn portfolio-grid__more-btn -->
+            </div><!-- /.text-center -->
+        </section>
 
-            </div><!-- /.container -->
-        </section><!-- /.service-three -->
         <section class="service-one" id='jasa'>
             <div class="container">
                 <div class="block-title text-center">
-                    {{-- <p><span>Our Services</span></p> --}}
                     <h3>Jasa yang kami tawarkan</h3>
                 </div><!-- /.block-title text-center -->
                 <div class="row high-gutters">
                     @foreach ($upjas as $ups)
-                        <div class="col-lg-6 col-md-12 wow fadeInLeft" data-wow-duration="1500ms">
-                            <div class="service-one__single">
-                                <div class="service-one__icon">
-                                    <div class="service-one__icon-inner">
-                                        <img src="{{ asset('fotomahasiswa/' . $ups->foto_jasa) }}" alt=""
-                                            style="border-radius: 50%;">
-                                    </div><!-- /.service-one__icon-inner -->
-                                </div><!-- /.service-one__icon -->
-                                <div class="service-one__content">
-                                    <h3><a href="service-details.html">{{ $ups->jasa }}</a></h3>
-                                    <p>{{ $ups->penjelasan }}</p>
-                                </div><!-- /.service-one__content -->
-                            </div><!-- /.service-one__single -->
-                        </div><!-- /.col-lg-6 php col-md-12 -->
+                    <div class="col-lg-6 col-md-12 wow fadeInLeft" data-wow-duration="1500ms">
+                        <div class="service-one__single">
+                            <div class="service-one__icon">
+                                <img src="{{ asset('fotomahasiswa/' . $ups->foto_jasa) }}" alt="" style="border-radius: 50%; width: 400px; height:110px;">
+                            </div><!-- /.service-one__icon -->
+                            <div class="service-one__content">
+                                <h3><a href="service-details.html">{{ $ups->jasa }}</a></h3>
+                                <p>{{ $ups->penjelasan }}</p>
+                            </div><!-- /.service-one__content -->
+                        </div><!-- /.service-one__single -->
+                    </div><!-- /.col-lg-6 php col-md-12 -->
                     @endforeach
 
-                    
+
                 </div><!-- /.row -->
                 <div class="text-center">
                     <a href="https://wa.wizard.id/" class="thm-btn portfolio-column__more-btn"><span>Hubungi
@@ -240,17 +270,15 @@
                 </ul><!-- /.portfolio-filter list-unstyled --> --}}
                 <div class="row high-gutters masonary-layout filter-layout">
                     @foreach ($upgal as $gatal)
-                        <div class="col-lg-4 col-md-6 col-sm-12 filter-item masonary-item  strategy">
-                            <div class="portfolio-one__single">
-                                <div class="portfolio-one__image">
-                                    <img src="{{ asset('fotomahasiswa/' . $gatal->foto_galery) }}" alt="">
-                                    <a class="img-popup"
-                                        href="{{ asset('fotomahasiswa/' . $gatal->foto_galery) }}"><i
-                                            class="fal fa-plus"></i></a>
-                                </div><!-- /.portfolio-one__image -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 filter-item masonary-item  strategy">
+                        <div class="portfolio-one__single">
+                            <div class="portfolio-one__image">
+                                <img src="{{ asset('fotomahasiswa/' . $gatal->foto_galery) }}" alt="">
+                                <a class="img-popup" href="{{ asset('fotomahasiswa/' . $gatal->foto_galery) }}"><i class="fal fa-plus"></i></a>
+                            </div><!-- /.portfolio-one__image -->
 
-                            </div><!-- /.portfolio-one__single -->
-                        </div><!-- /.col-lg-4 col-md-6 col-sm-12 -->
+                        </div><!-- /.portfolio-one__single -->
+                    </div><!-- /.col-lg-4 col-md-6 col-sm-12 -->
                     @endforeach
 
                 </div><!-- /.row -->
@@ -259,16 +287,15 @@
         </section><!-- /.portfolio-grid -->
 
         @foreach ($upjvis as $upss)
-            <section class="cta-one cta-one__about-one"
-                style="background-image: url({{ asset('landingppdb/ppdb/style/assets/images/shapes/cta-bg-2-1.png') }});">
-                {{-- <div class="particles-snow" id="cta-one-snow"></div><!-- /#cta-one-snow.particles-snow --> --}}
+        <section class="cta-one cta-one__about-one" style="background-image: url({{ asset('landingppdb/ppdb/style/assets/images/shapes/cta-bg-2-1.png') }});">
+            {{-- <div class="particles-snow" id="cta-one-snow"></div><!-- /#cta-one-snow.particles-snow --> --}}
 
-                {{-- <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-1.png') }}" class="cta-one__bg-shape-1" alt="">
+            {{-- <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-1.png') }}" class="cta-one__bg-shape-1" alt="">
             <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-2.png') }}" class="cta-one__bg-shape-2" alt="">
             <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-3.png') }}" class="cta-one__bg-shape-3" alt="">
             <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-4.png') }}" class="cta-one__bg-shape-4" alt=""> --}}
 
-                {{-- <div class="error-404__bubble-1"></div><!-- /.error-404__bubble-1 -->
+            {{-- <div class="error-404__bubble-1"></div><!-- /.error-404__bubble-1 -->
             <div class="error-404__bubble-2"></div><!-- /.error-404__bubble-2 -->
             <div class="error-404__bubble-3"></div><!-- /.error-404__bubble-3 -->
             <div class="error-404__bubble-4"></div><!-- /.error-404__bubble-4 -->
@@ -277,30 +304,28 @@
             <div class="error-404__bubble-7"></div><!-- /.error-404__bubble-7 -->
             <div class="error-404__bubble-8"></div><!-- /.error-404__bubble-8 --> --}}
 
-                <div class="container">
-                    <h3>Visi <br></h3>
-                    <p style="color: black;">{!! $upss->upj_visi !!}</p>
-                    <h3>Misi <br></h3>
-                    <p style="color: black;">{!! $upss->upj_misi !!}</p>
-                    {{-- <a href="#" class="thm-btn cta-one__btn"><span>Join Us Now</span></a><!-- /.thm-btn cta-one__btn --> --}}
-                </div><!-- /.container -->
-            </section><!-- /.cta-one -->
+            <div class="container">
+                <h3>Visi <br></h3>
+                <p style="color: black;">{!! $upss->upj_visi !!}</p>
+                <h3>Misi <br></h3>
+                <p style="color: black;">{!! $upss->upj_misi !!}</p>
+                {{-- <a href="#" class="thm-btn cta-one__btn"><span>Join Us Now</span></a><!-- /.thm-btn cta-one__btn --> --}}
+            </div><!-- /.container -->
+        </section><!-- /.cta-one -->
 
-            <section class="video-one">
-                <div class="container">
-                    <div class="video-one__box text-center wow fadeInUp" data-wow-duration="1500ms"
-                        style="background-image: url({{ asset('fotomahasiswa/' . $upss->foto_bg) }});">
-                        <a href="{{ $upss->link_yt }}" class="video-popup"><i class="fal fa-play-circle"></i></a>
-                    </div><!-- /.video-one__box -->
-                </div><!-- /.container -->
-            </section><!-- /.video-one -->
+        <section class="video-one">
+            <div class="container">
+                <div class="video-one__box text-center wow fadeInUp" data-wow-duration="1500ms" style="background-image: url({{ asset('fotomahasiswa/' . $upss->foto_bg) }});">
+                    <a href="{{ $upss->link_yt }}" class="video-popup"><i class="fal fa-play-circle"></i></a>
+                </div><!-- /.video-one__box -->
+            </div><!-- /.container -->
+        </section><!-- /.video-one -->
         @endforeach
 
 
 
         <section class="team-one team-one__about-1 team-one__home-two" id='team'>
-            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/team-bg-shape-1-1.png') }}"
-                alt="" class="team-one__bg-shape-1">
+            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/team-bg-shape-1-1.png') }}" alt="" class="team-one__bg-shape-1">
             <div class="container">
                 <div class="block-title text-center">
                     <p class="color-2"><span>Structure Management</span></p>
@@ -308,27 +333,27 @@
                 </div><!-- /.block-title text-center -->
                 <div class="row high-gutters">
                     @foreach ($team as $tm)
-                        <div class="col-lg-4 col-md-12 wow fadeInUp" data-wow-duration="1500ms">
-                            <div class="team-one__single">
-                                <div class="team-one__image">
-                                    <img src="{{ asset('fotomahasiswa/' . $tm->foto_team) }}" alt="">
-                                    <div class="team-one__social">
-                                        <div class="team-one__social-normal">
-                                            <a href="#"><i class="fa fa-share-alt"></i></a>
-                                        </div><!-- /.team-one__social-normal -->
-                                        <div class="team-one__social-hover">
-                                            <a href="{{ $tm->fb }}"><i class="fab fa-facebook-f"></i></a>
-                                            <a href="{{ $tm->wa }}"><i class="fab fa-whatsapp"></i></a>
-                                            <a href="{{ $tm->ig }}"><i class="fab fa-instagram"></i></a>
-                                        </div><!-- /.team-one__social-hover -->
-                                    </div><!-- /.team-one__social -->
-                                </div><!-- /.team-one__image -->
-                                <div class="team-one__content">
-                                    <h3>{{ $tm->nama_team }}</h3>
-                                    <p>{{ $tm->jabatan_team }}</p>
-                                </div><!-- /.team-one__content -->
-                            </div><!-- /.team-one__single -->
-                        </div><!-- /.col-lg-4 col-md-6 -->
+                    <div class="col-lg-4 col-md-12 wow fadeInUp" data-wow-duration="1500ms">
+                        <div class="team-one__single">
+                            <div class="team-one__image">
+                                <img src="{{ asset('fotomahasiswa/' . $tm->foto_team) }}" alt="">
+                                <div class="team-one__social">
+                                    <div class="team-one__social-normal">
+                                        <a href="#"><i class="fa fa-share-alt"></i></a>
+                                    </div><!-- /.team-one__social-normal -->
+                                    <div class="team-one__social-hover">
+                                        <a href="{{ $tm->fb }}"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="{{ $tm->wa }}"><i class="fab fa-whatsapp"></i></a>
+                                        <a href="{{ $tm->ig }}"><i class="fab fa-instagram"></i></a>
+                                    </div><!-- /.team-one__social-hover -->
+                                </div><!-- /.team-one__social -->
+                            </div><!-- /.team-one__image -->
+                            <div class="team-one__content">
+                                <h3>{{ $tm->nama_team }}</h3>
+                                <p>{{ $tm->jabatan_team }}</p>
+                            </div><!-- /.team-one__content -->
+                        </div><!-- /.team-one__single -->
+                    </div><!-- /.col-lg-4 col-md-6 -->
                     @endforeach
                 </div><!-- /.row -->
             </div><!-- /.container -->
@@ -343,8 +368,7 @@
                     <p class="color-2"><span>Testimoni</span></p>
                     {{-- <h3>We Care Client’s Issues <br> <span>So We are Popular.</span></h3> --}}
                 </div><!-- /.block-title text-center -->
-                <div class="testimonials-one__carousel thm__owl-carousel owl-carousel owl-theme"
-                    data-options='{
+                <div class="testimonials-one__carousel thm__owl-carousel owl-carousel owl-theme" data-options='{
                     "items": 3, "margin": 40, "smartSpeed": 700, "autoplay": true, "autoplayTimeout": 5000,
                     "autoplayHoverPause": true, "nav": false, "dots": false, "loop": true, "responsive": {
                         "0": { "items": 1, "margin": 0},
@@ -357,16 +381,15 @@
 
 
                     @foreach ($tes as $tes)
-                        <div class="item">
-                            <div class="testimonials-one__single">
-                                <div class="testimonials-one__icon">
-                                    <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/testi-qoute-1-1.png') }}"
-                                        alt="">
-                                </div><!-- /.testimonials-one__icon -->
-                                <p>{{ $tes->komen }}</p>
-                                <h3>{{ $tes->tester }}</h3>
-                            </div><!-- /.testimonials-one__single -->
-                        </div><!-- /.item -->
+                    <div class="item">
+                        <div class="testimonials-one__single">
+                            <div class="testimonials-one__icon">
+                                <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/testi-qoute-1-1.png') }}" alt="">
+                            </div><!-- /.testimonials-one__icon -->
+                            <p>{{ $tes->komen }}</p>
+                            <h3>{{ $tes->tester }}</h3>
+                        </div><!-- /.testimonials-one__single -->
+                    </div><!-- /.item -->
                     @endforeach
 
                 </div><!-- /.testimonials-one__carousel -->
@@ -393,9 +416,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col">
-                    <iframe class="map-contact"
-                        src="https://maps.google.com/maps?q=smk%20muhammadiyah%201%20genteng&#038;t=m&#038;z=10&#038;output=embed&#038;iwloc=near"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe class="map-contact" src="https://maps.google.com/maps?q=smk%20muhammadiyah%201%20genteng&#038;t=m&#038;z=10&#038;output=embed&#038;iwloc=near" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
         </div>
@@ -406,28 +427,28 @@
                 <div class="container">
                     <div class="row">
                         @foreach ($uf as $uf )
-                            
+
                         <div class="col-lg-3 col-md-6 col-sm-12">
                             <div class="footer-widget footer-widget__about">
                                 <h3 class="footer-widget__title">Tentang UPJ</h3>
                                 <p>{{$uf->tentang_upj}}</p>
-                                    <div class="footer-widget__social">
-                                        <a href="{{ $uf->yt }}"><i class="fab fa-youtube"></i></a>
-                                        <a href="{{ $uf->fb }}"><i class="fab fa-facebook-f"></i></a>
-                                        <a href="{{ $uf->ig }}"><i class="fab fa-instagram"></i></a>
-                                        <a href="{{ $uf->wa }}"><i class="fab fa-whatsapp"></i></a>
-                                    </div><!-- /.footer-widget__social -->
-                                </div><!-- /.footer-widget footer-widget__about -->
-                            </div><!-- /.col-lg-3 col-md-6 col-sm-12 -->
-                            @endforeach
+                                <div class="footer-widget__social">
+                                    <a href="{{ $uf->yt }}"><i class="fab fa-youtube"></i></a>
+                                    <a href="{{ $uf->fb }}"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="{{ $uf->ig }}"><i class="fab fa-instagram"></i></a>
+                                    <a href="{{ $uf->wa }}"><i class="fab fa-whatsapp"></i></a>
+                                </div><!-- /.footer-widget__social -->
+                            </div><!-- /.footer-widget footer-widget__about -->
+                        </div><!-- /.col-lg-3 col-md-6 col-sm-12 -->
+                        @endforeach
 
-                            <div class="col-lg-2 col-md-6 col-sm-6 col-6">
-                                <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-                                <div class="elfsight-app-7e06bf3a-c3dd-4ad3-a974-4f6c4b30ba1e"></div>
-                            </div>
+                        <div class="col-lg-2 col-md-6 col-sm-6 col-6">
+                            <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+                            <div class="elfsight-app-7e06bf3a-c3dd-4ad3-a974-4f6c4b30ba1e"></div>
+                        </div>
 
                         @foreach ($uli as $uli )
-                            
+
                         <div class="col-lg-3 col-md-6 col-sm-12">
                             <div class="footer-widget footer-widget__links__2">
                                 <h3 class="footer-widget__title">Link</h3>
@@ -438,18 +459,18 @@
                         </div><!-- /.col-lg-3 col-md-6 col-sm-12 -->
                         @endforeach
                         @foreach ($fu as $fu )
-                            
+
                         <div class="col-lg-3 col-md-6 col-sm-12">
                             <div class="footer-widget footer-widget__contact">
                                 <h3 class="footer-widget__title">Kontak</h3>
                                 <p>{{$fu->alamat}}</p>
-                                    <p><a href="mailto:{{ $fu->email }}">{{ $fu->email }}</a></p>
-                                    {{-- <p><a href="tel:720.661.2231">720.661.2231</a></p> --}}
-                                </div><!-- /.footer-widget -->
-                            </div><!-- /.col-lg-3 col-md-6 col-sm-12 -->
-                        </div><!-- /.row -->
-                        @endforeach
-                    </div><!-- /.container -->
+                                <p><a href="mailto:{{ $fu->email }}">{{ $fu->email }}</a></p>
+                                {{-- <p><a href="tel:720.661.2231">720.661.2231</a></p> --}}
+                            </div><!-- /.footer-widget -->
+                        </div><!-- /.col-lg-3 col-md-6 col-sm-12 -->
+                    </div><!-- /.row -->
+                    @endforeach
+                </div><!-- /.container -->
 
             </div><!-- /.site-footer__upper -->
             <div class="site-footer__bottom">

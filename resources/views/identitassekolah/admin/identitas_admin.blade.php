@@ -77,9 +77,9 @@
                                             <td>
                                                 <a href="/editidentitas/{{ $i->id }}"
                                                     class="btn btn-warning fas fa-pen-alt">Edit</a>
-                                                <a href="/deleteidentitas/{{ $i->id }}"
+                                                {{--  <a href="/deleteidentitas/{{ $i->id }}"
                                                     class="btn btn-danger fas fa-trash-alt"
-                                                    onclick="return confirm('apakah anda yakin ?')">Delete</a>
+                                                    onclick="return confirm('apakah anda yakin ?')">Delete</a>  --}}
                                             </td>
                                         </tr>
                                     @endforeach

@@ -55,7 +55,7 @@
                                         <td>
                                             <a href="/editiduka/{{ $d->id }}" class="btn btn-warning">Edit</a>
 
-                                            {{-- <a href="/deleteiduka/{{ $d->id }}" class="btn btn-danger" onclick="return confirm('yakin gen?')">Delete</a> --}}
+                                            <a href="/deleteiduka/{{ $d->id }}" class="btn btn-danger" onclick="return confirm('yakin gen?')">Delete</a>
 
 
 

@@ -284,6 +284,7 @@ Route::get('/exportword',[KurikulumController::class,'exportword'])->name('expor
 
 
 
+
 Route::get('/kurikulumadmin',[KurikulumController::class, 'kurikulumadmin'])->name('kurikulumadmin');
 Route::get('/tambahkurikulum',[KurikulumController::class, 'tambahkurikulum'])->name('tambahkurikulum');
 Route::post('/kurikulumproses',[KurikulumController::class, 'kurikulumproses'])->name('kurikulumproses');
@@ -530,7 +531,7 @@ Route::get('/tambahvisimisi',[UpjtekajeController::class, 'tambahvisimisi'])->na
 Route::post('/submitdata19',[UpjtekajeController::class, 'submitdata19'])->name('submitdata19');
 Route::get('/editvisimisi/{id}',[UpjtekajeController::class, 'editvisimisi'])->name('editvisimisi');
 Route::post('/submitedit19/{id}',[UpjtekajeController::class, 'submitedit19'])->name('submitedit19');
-Route::get('/deletevisimisi/{id}',[UpjtekajeController::class, 'deletevisimisi'])->name('deletevisimisi');
+Route::get('/deleteupjvisimisi/{id}',[UpjtekajeController::class, 'deleteupjvisimisi'])->name('deleteupjvisimisi');
 
 
 

@@ -22,7 +22,7 @@ class WebSeeder extends Seeder
             'foto_simuhi' => 'simuhi.png',
             'deskripsi_simuhi' => 'deskripsi simuhi',
         ]);
-        
+
         DB::table('visimisis')->insert([
             'judulvisi' => 'Visi',
             'deskripsivisi' => 'deskripsi visi',
@@ -54,34 +54,34 @@ class WebSeeder extends Seeder
             'alamat' => 'KH. AHMAD DAHLAN NO 10',
             'email' => 'smkmuhi.genteng1968@gmail.com',
         ]);
-        
+
         DB::table('sambutans')->insert([
-            'foto' => '{{ asset(landing/html/bidzen/assets/images/avatar/kepsekremove.png) }}',
+            'foto' => '../images/avatar/kepsekremove.png',
             'deskripsi' => 'Sambutan Kepsek',
         ]);
         DB::table('footeers')->insert([
-            'foto' => '../assets/images/logo/0.png',
+            'foto' => '../images/logo/0.png',
             'deskripsi_footeer' => 'Deskripsi Footer',
         ]);
         DB::table('oses')->insert([
-            'foto' => '../assets/images/logo/ipm1.jpeg',
+            'foto' => '../images/logo/ipm1.jpeg',
             'judul_osis' => 'Judul',
             'deskripsi_osis' => 'Deskripsi osis',
         ]);
         DB::table('bsis')->insert([
-            'foto' => '../assets/images/logo/bsi.png',
+            'foto' => '../images/logo/bsi.png',
             'deskripsi_bsi' => 'Deskripsi bsi',
         ]);
         DB::table('printings')->insert([
-            'foto_muhiprint' => '../assets/images/logo/mp3.jpeg',
+            'foto_muhiprint' => '../images/logo/mp3.jpeg',
             'deskripsi_muhiprint' => 'Deskripsi Muhiprinting',
         ]);
         DB::table('pegadaians')->insert([
-            'foto_gadai' => '../assets/images/logo/pegadaian.png',
+            'foto_gadai' => '../images/logo/pegadaian.png',
             'deskripsi_gadai' => 'Deskripsi Pegadaian',
         ]);
         DB::table('suryamarts')->insert([
-            'foto_surya' => '../assets/images/post/sm3.jpeg',
+            'foto_surya' => '../images/post/sm3.jpeg',
             'deskripsi_surya' => 'Deskripsi Surya Mart',
         ]);
         DB::table('edotels')->insert([

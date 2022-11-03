@@ -69,7 +69,7 @@
                                         {{-- <td>{{ $q->created_at->format('D M Y') }}</td> --}}
                                         <td>
                                             <a href="/editprofilsekolah/{{ $q->id }}" class="btn btn-warning fas fa-pen-alt">Edit</a>
-                                            {{--  <a href="/deleteprofilsekolah/{{ $q->id }}" class="btn btn-danger fas fa-trash-alt" onclick="return confirm('yakin gen?')">Delete</a>  --}}
+                                           {{--  <a href="/deleteprofilsekolah/{{ $q->id }}" class="btn btn-danger fas fa-trash-alt" onclick="return confirm('yakin gen?')">Delete</a>  --}}
                                         </td>
                                     </tr>
                                 @endforeach

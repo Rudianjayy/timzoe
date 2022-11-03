@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('upjvisimisis', function (Blueprint $table) {
             $table->id();
-            $table->string('upj_visi');
-            $table->string('upj_misi');
+            $table->text('upj_visi');
+            $table->text('upj_misi');
             $table->string('foto_bg');
             $table->string('link_yt');
             $table->timestamps();

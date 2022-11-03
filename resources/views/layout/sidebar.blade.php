@@ -46,7 +46,6 @@
                 <li><a href="/jadwaladmin">Jadwal Kegiatan</a></li>
                 <li><a href="/kalenderakademikadmin">Kalender Akademik</a></li>
                 <li><a href="/adminkelulusan">Surat Kelulusan</a></li>
-                <li><a href="/jurusan">Jurusan</a></li>
             </ul>
         </li>
 

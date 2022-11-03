@@ -20,7 +20,6 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-body">
-
                             <div>
                                 <a href="/tambahkelulusan" class="btn btn-primary sm-3"
                                     id="kt_account_profile_details_submit">Tambah
@@ -39,7 +38,6 @@
                                         <th scope="col">Nama Siswa</th>
                                         <th scope="col">Nisn</th>
                                         <th scope="col">Tanggal Lahir</th>
-                                        <th scope="col">Jurusan</th>
                                         <th scope="col">Hasil</th>
                                         <th scope="col">Aksi</th>
                                     </tr>
@@ -57,7 +55,6 @@
                                             <td>{{ $d->nama_siswa }}</td>
                                             <td>{{ $d->nisn }}</td>
                                             <td>{{ $d->tanggal_lahir }}</td>
-                                            <td>{{ $d->jurusan }}</td>
                                             <td>{{ $d->hasil }}</td>
                                             <td>
                                                 <a href="/editkelulusan/{{ $d->id }}"

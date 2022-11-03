@@ -41,6 +41,7 @@
             <th scope="col">#</th>
             <th scope="col">Nama Siswa</th>
             <th scope="col">Nisn</th>
+            <th scope="col">Tanggal Lahir</th>
             <th scope="col">Jurusan</th>
             <th scope="col">Hasil</th>
         </tr>
@@ -52,7 +53,8 @@
                 <th>{{ $no++ }}</th>
                 <td>{{ $d->nama_siswa }}</td>
                 <td>{{ $d->nisn }}</td>
-                <td>{{ $d->jurusan }}</td>
+                <td>{{ $d->tanggal_lahir }}</td>
+                <td>{{ $d->jurusan}}</td>
                 <td>{{ $d->hasil }}</td>
             </tr>
             @endforeach

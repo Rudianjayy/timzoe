@@ -24,19 +24,11 @@
                 <div class="card">
                     <div class="card-body">
 
-<<<<<<< HEAD
                         {{--  <div>
                             <a href="/tambahosis" class="btn btn-primary mt-5"
                                 id="kt_account_profile_details_submit">Tambah
                                 +</a>
                         </div>  --}}
-=======
-                        {{-- <div>
-                            <a href="/tambahosis" class="btn btn-primary mt-5"
-                                id="kt_account_profile_details_submit">Tambah
-                                +</a>
-                        </div> --}}
->>>>>>> 295dc5457b0e7b1938eb78477c6bec782ce19814
                         <table id="datatable" class="table table-bordered dt-responsive nowrap"
                             style="border-collapse: collapse; border-spacing: 0; width: 100%;">
 

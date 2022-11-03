@@ -223,58 +223,43 @@ class UpjtekajeController extends Controller
     public function submitdata16(Request $request){
         // dd($request->all());
         $this->validate($request,[
-            'foto_keunggulan' =>'required',
+            'icon' =>'required',
             'keterangan' =>'required',
         ],[
-            'foto_keunggulan.required' =>'Harus diisi',
+            'icon.required' =>'Harus diisi',
             'keterangan.required' =>'Harus diisi',
 
         ]);
         $data3 = Upjkeunggulan::create([
-            'foto_keunggulan' =>$request->foto_keunggulan,
+            'icon' =>$request->icon,
             'keterangan' =>$request->keterangan,
 
         ]);
-        if($request->hasFile('foto_keunggulan')){
-            $request->file('foto_keunggulan')->move('fotomahasiswa/', $request->file('foto_keunggulan')->getClientOriginalName());
-            $data3->foto_keunggulan = $request->file('foto_keunggulan')->getClientOriginalName();
-            $data3->save();
-        }
+
 
         return redirect()->route('adminkeunggulan')->with('toast_success',' Data Berhasil di Tambahkan!');
     }
 
     public function editkeunggulan($id){
 
-        $data3 = Upjkeunggulan::findOrFail($id);
-        return view('upjtekaje.team.edit-team', compact('data3'));
+        $data = Upjkeunggulan::findOrFail($id);
+        return view('upjtekaje.keunggulan.edit-keunggulan', compact('data'));
     }
 
     public function submitedit16(Request $request, $id){
         $this->validate($request,[
-            'nama_team' =>'required',
-            'jabatan_team' =>'required',
-            'fb' =>'required',
-            'wa' =>'required',
-            'ig' =>'required',
+            'icon' =>'required',
+            'keterangan' =>'required',
         ],[
-            'nama_team' =>'harus diisi',
-            'jabatan_team' =>'harus diisi',
-            'fb_team' =>'harus diisi',
-            'wa_team' =>'harus diisi',
-            'ig_team' =>'harus diisi',
+            'icon.required' =>'Harus diisi',
+            'keterangan.required' =>'Harus diisi',
 
         ]);
         $data3 = Upjkeunggulan::find($id);
         $data3->update([
-            'nama_team' =>$request->nama_team,
+            'icon' =>$request->icon,
+            'keterangan' =>$request->keterangan,
         ]);
-        // if($request->hasFile('foto_keunggulan')){
-        //     $request->file('foto_keunggulan')->move('fotomahasiswa/',$request->file('foto_keunggulan')->getClientOriginalName());
-        //     $data3->foto_keunggulan = $request->file('foto_keunggulan')->getClientOriginalName();
-        //     $data3->save();
-        // }
-
         return redirect('adminkeunggulan')->with('toast_success',' Data Berhasil di Ubah!');
 
     }
@@ -501,12 +486,11 @@ class UpjtekajeController extends Controller
     }
 
     public function submitedit19(Request $request, $id){
-        $this->validate($request,[
-        ],[
-
-        ]);
         $data6 = Upjvisimisi::find($id);
         $data6->update([
+            'upj_visi' =>$request->upj_visi,
+            'upj_misi' =>$request->upj_misi,
+            'link_yt' =>$request->link_yt,
         ]);
         if($request->hasFile('foto_visimisi')){
             $request->file('foto_visimisi')->move('fotomahasiswa/',$request->file('foto_visimisi')->getClientOriginalName());

@@ -33,33 +33,20 @@
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
-                                <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Jurusan : </label>
-                                    <select name="jurusan" class="form-control" id="jurusan">
-                                        <option selected disabled value="">Pilih Jurusan</option>
-                                        <option value="Akuntansi">Akuntansi</option>
-                                        <option value="Teknik Jaringan Komputer & Telekomunikasi">Teknik Jaringan Komputer & Telekomunikasi </option>
-                                        <option value="Pengembangan Perangkat Lunak & GIM">Pengembangan Perangkat Lunak & GIM </option>
-                                    </select>
-                                    <div class="text-danger">
-                                        @error('jurusan')
-                                            {{ $message }}
-                                        @enderror
-                                    </div>
-                                </div>
+                               
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Tanggal Lahir :</label>
                                     <input type="date" name="tanggal_lahir" class="form-control" id="exampleInputEmail1"
-                                    aria-describedby="emailHelp">
+                                        aria-describedby="emailHelp">
                                     @error('tanggal_lahir')
-                                    <div class="alert alert-danger">{{ $message }}</div>
+                                        <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
 
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Hasil : </label>
                                     <select name="hasil" class="form-control" id="hasil">
-                                        <option value="">Pilih Hasil</option>
+                                        <option value=""></option>
                                         <option value="lulus">Lulus</option>
                                         <option value="tidaklulus">Tidak lulus</option>
                                     </select>

@@ -48,7 +48,7 @@
 
     <div class="page-wrapper">
         {{-- <div id="SLIDE_BG">
-            
+
         </div> --}}
         <nav class="main-nav-one main-nav-one__home-three stricky">
             <div class="container-fluid">
@@ -83,22 +83,59 @@
                 </div><!-- /.inner-container -->
             </div><!-- /.container-fluid -->
         </nav><!-- /.main-nav-one -->
-        
-        <section  id='home'>
-            <div class="banner">
-                <img class="img-slider1" src="{{ asset('landingppdb/ppdb/style/assets/images/services/service-d-1.jpg') }}" >
+        <style>
+
+            .SLIDE_BG {
+                width: 100%;
+                height: 100vh;
+                background-position: center center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                backface-visibility: hidden;
+                animation: slideBg 16s linear infinite 0s;
+                animation-timing-function: ease-in-out;
+                background-image: url('../images/services/service-d-2-1.jpg');
+                position: relative;
+            }
+
+            @foreach ($us as $ul )
+            @keyframes slideBg {
+                0% {
+                    background-image: url('{{ asset('fotomahasiswa/' . $ul->foto_slider1) }}');
+                }
+                25% {
+                    background-image: url('{{ asset('fotomahasiswa/' . $ul->foto_slider2) }}');
+                }
+                50% {
+                    background-image: url('{{ asset('fotomahasiswa/' . $ul->foto_slider3) }}');
+                }
+                75% {
+                    background-image: url('{{ asset('fotomahasiswa/' . $ul->foto_slider4) }}');
+                }
+                100% {
+                    background-image: url('{{ asset('fotomahasiswa/' . $ul->foto_slider2) }}');
+                }
+            }
+            @endforeach
+        </style>
+
+        @foreach ($us as $ul )
+
+        <section class="SLIDE_BG" id='home'>
+            <!-- <div class="banner">
+                <img class="img-slider1" src="{{ asset('fotomahasiswa/' . $ul->foto_slider1) }}" >
             </div>
             <div class="banner2">
-                <img class="img-slider2" src="{{ asset('landingppdb/ppdb/style/assets/images/services/service-d-3.jpg') }}" >
+                <img class="img-slider2" src="{{ asset('fotomahasiswa/' . $ul->foto_slider2) }}" >
             </div>
             <div class="banner3">
-                <img class="img-slider3" src="{{ asset('landingppdb/ppdb/style/assets/images/services/service-d-4.jpg') }}" >
+                <img class="img-slider3" src="{{ asset('fotomahasiswa/' . $ul->foto_slider3) }}" >
             </div>
             <div class="banner4">
-                <img class="img-slider3" src="{{ asset('landingppdb/ppdb/style/assets/images/services/service-d-5.jpg') }}" >
-            </div>
+                <img class="img-slider3" src="{{ asset('fotomahasiswa/' . $ul->foto_slider4) }}" >
+            </div> -->
             {{-- <div class="particles-snow" id="banner-one-snow"></div><!-- /#cta-one-snow.particles-snow -->
-            
+
             <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-1.png') }}" class="banner-one__bg-shape-1" alt="">
             <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-2.png') }}" class="banner-one__bg-shape-2" alt="">
             <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-3.png') }}" class="banner-one__bg-shape-3" alt="">
@@ -128,6 +165,7 @@
                 </div><!-- /.row -->
             </div><!-- /.container -->
         </section><!-- /.banner-one -->
+        @endforeach
 
         <section class="about-three about-three__home-two" id='tentang'>
             {{-- <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/about-3-bg-2-1.png') }} "
@@ -215,7 +253,7 @@
                         </div><!-- /.col-lg-6 php col-md-12 -->
                     @endforeach
 
-                    
+
                 </div><!-- /.row -->
                 <div class="text-center">
                     <a href="https://wa.wizard.id/" class="thm-btn portfolio-column__more-btn"><span>Hubungi
@@ -406,7 +444,7 @@
                 <div class="container">
                     <div class="row">
                         @foreach ($uf as $uf )
-                            
+
                         <div class="col-lg-3 col-md-6 col-sm-12">
                             <div class="footer-widget footer-widget__about">
                                 <h3 class="footer-widget__title">Tentang UPJ</h3>
@@ -427,7 +465,7 @@
                             </div>
 
                         @foreach ($uli as $uli )
-                            
+
                         <div class="col-lg-3 col-md-6 col-sm-12">
                             <div class="footer-widget footer-widget__links__2">
                                 <h3 class="footer-widget__title">Link</h3>
@@ -438,7 +476,7 @@
                         </div><!-- /.col-lg-3 col-md-6 col-sm-12 -->
                         @endforeach
                         @foreach ($fu as $fu )
-                            
+
                         <div class="col-lg-3 col-md-6 col-sm-12">
                             <div class="footer-widget footer-widget__contact">
                                 <h3 class="footer-widget__title">Kontak</h3>

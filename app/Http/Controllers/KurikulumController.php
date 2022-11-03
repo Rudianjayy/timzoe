@@ -8,12 +8,15 @@ use App\Models\Muhinews;
 use App\Models\Kelulusan;
 use App\Models\kurikulum;
 use App\Models\Footeerdua;
+use App\Models\jadwalkegiatan;
 use Illuminate\Http\Request;
 use PhpOffice\PhpWord\PhpWord;
 use App\Models\Personaljurusan;
 use Barryvdh\DomPDF\Facade\Pdf;
 use App\Exports\KelulusanExport;
+use App\Models\Jurusankelulusan;
 use App\Models\kalenderakademik;
+use App\Models\Suratkelulusan;
 use Maatwebsite\Excel\Facades\Excel;
 use PhpOffice\PhpWord\Writer\Word2007;
 
@@ -110,11 +113,80 @@ class KurikulumController extends Controller
     {
         $f = Muhinews::all();
         $kh = Jurusan::all();
+        $d = jadwalkegiatan::all();
         $ft = Footeer::all();
         $personal = Personaljurusan::all();
         $logo = footeer::all();
         $link = footeerdua::all();
-        return view('kurikulum.jadwalkegiatan', compact('f', 'kh', 'ft', 'personal', 'logo', 'link'));
+        return view('kurikulum.jadwalkegiatan.jadwalkegiatan', compact('f', 'kh', 'ft', 'personal', 'logo', 'link','d'));
+    }
+
+    public function jadwalkegiatanadmin()
+    {
+        $data = jadwalkegiatan::all();
+        return view('kurikulum.jadwalkegiatan.jadwalkegiatanadmin', compact('data'));
+    }
+    public function tambahjadwalkegiatan()
+    {
+        return view('kurikulum.jadwalkegiatan.tambahjadwalkegiatan');
+    }
+
+    public function jadwalkegiatanproses(Request $request)
+    {
+        // dd($request->all());
+        $this->validate($request, [
+
+        ], [
+            'namakegiatan.required' => 'Harus diisi',
+            'waktu.required' => 'Harus diisi',
+            'tempat.required' => 'Harus diisi'
+        ]);
+        $data = jadwalkegiatan::create([
+            'namakegiatan' => $request->namakegiatan,
+            'waktu' => $request->waktu,
+            'tempat' => $request->tempat,
+        ]);
+        if ($request->hasFile('foto')) {
+            $request->file('foto')->move('fotomahasiswa/', $request->file('foto')->getClientOriginalName());
+            $data->foto = $request->file('foto')->getClientOriginalName();
+            $data->save();
+        }
+
+        return redirect()->route('jadwalkegiatanadmin')->with('toast_success', ' Data Berhasil di Tambahkan!');
+    }
+
+    public function editjadwalkegiatan($id)
+    {
+
+        $data = jadwalkegiatan::findOrFail($id);
+        return view('kurikulum.jadwalkegiatan..editjadwalkegiatan', compact('data'));
+    }
+
+    public function editproses(Request $request, $id)
+    {
+        $this->validate($request, [
+
+        ], [
+            'namakegiatan.required' => 'Harus diisi',
+            'waktu.required' => 'Harus diisi',
+            'tempat.required' => 'Harus diisi',
+        ]);
+        $data = jadwalkegiatan::find($id);
+        $data->update([]);
+        if ($request->hasFile('foto')) {
+            $request->file('foto')->move('fotomahasiswa/', $request->file('foto')->getClientOriginalName());
+            $data->foto = $request->file('foto')->getClientOriginalName();
+            $data->save();
+        }
+
+        return redirect('jadwalkegiatanadmin')->with('toast_success', ' Data Berhasil di Ubah!');
+    }
+
+    public function deletejadwalkegiatan($id)
+    {
+        $data = kalenderakademik::find($id);
+        $data->delete();
+        return redirect('kalenderakademikadmin')->with('toast_error', ' Data Berhasil di Hapus!');
     }
 
 
@@ -216,19 +288,19 @@ class KurikulumController extends Controller
 
     public function kelsan()
     {
-        $data = Kelulusan::all();
+        $data = Suratkelulusan::all();
         return view('kurikulum.kelulusan.kelsan',compact('data'));
     }
     public function exportpdf()
     {
-        $data = Kelulusan::all();
+        $data = Suratkelulusan::all();
         view()->share('data', $data);
 
         $pdf = PDF::loadview('kurikulum.kelulusan.kelulusan-pdf');
         return $pdf->download('suratkelulusan.pdf');
     }
     public function exportexcel(){
-        return Excel::download(new KelulusanExport, 'kelulusan.xlsx');
+        return Excel::download(new KelulusanExport('SuratKelulusan'), 'kelulusan.xlsx');
     }
     public function exportword(){
        $phpword = new PhpWord();
@@ -242,10 +314,9 @@ class KurikulumController extends Controller
        $table->addCell(11000)->addText("Nama Siswa");
        $table->addCell(5000)->addText("Nisn");
        $table->addCell(5000)->addText("Tanggal Lahir");
-       $table->addCell(11000)->addText("Jurusan");
        $table->addCell(5000)->addText("Hasil");
 
-       $data = Kelulusan::all();
+       $data = Suratkelulusan::all();
        $no = 1;
        foreach($data as $d){
         // dd($d->jurusan);
@@ -254,10 +325,10 @@ class KurikulumController extends Controller
         $table->addCell()->addText($d->nama_siswa);
         $table->addCell()->addText($d->nisn);
         $table->addCell()->addText($d->tanggal_lahir);
-        $table->addCell()->addText($d->jurusan);
         $table->addCell()->addText($d->hasil);
         $no++;
        }
+
 
     //    $section->addText('awokwwkow');
        $writer = new Word2007($phpword);
@@ -270,7 +341,7 @@ class KurikulumController extends Controller
 
     public function adminkelulusan()
     {
-        $data = Kelulusan::all();
+        $data = Suratkelulusan::all();
         return view('kurikulum.kelulusan.adminkelulusan.adminkelulusan', compact('data'));
     }
     public function tambahkelulusan()
@@ -285,20 +356,17 @@ class KurikulumController extends Controller
             'nama_siswa' => 'required',
             'nisn' => 'required',
             'tanggal_lahir' => 'required',
-            'jurusan' => 'required',
             'hasil' => 'required',
         ], [
             'nama_siswa.required' => 'Harus diisi',
             'nisn.required' => 'Harus diisi',
             'tanggal_lahir.required' => 'Harus diisi',
-            'jurusan.required' => 'Harus diisi',
             'hasil.required' => 'Harus diisi',
         ]);
-        $data = Kelulusan::create([
+        $data = Suratkelulusan::create([
             'nama_siswa' => $request->nama_siswa,
             'nisn' => $request->nisn,
             'tanggal_lahir' => $request->tanggal_lahir,
-            'jurusan' => $request->jurusan,
             'hasil' => $request->hasil,
         ]);
 
@@ -308,7 +376,7 @@ class KurikulumController extends Controller
     public function editkelulusan($id)
     {
 
-        $data = Kelulusan::findOrFail($id);
+        $data = Suratkelulusan::findOrFail($id);
         return view('kurikulum.kelulusan.adminkelulusan.editkelulusan', compact('data'));
     }
 
@@ -318,21 +386,18 @@ class KurikulumController extends Controller
             'nama_siswa' => 'required',
             'nisn' => 'required',
             'tanggal_lahir' => 'required',
-            'jurusan' => 'required',
             'hasil' => 'required',
         ], [
             'nama_siswa.required' => 'Harus diisi',
             'nisn.required' => 'Harus diisi',
             'tanggal_lahir.required' => 'Harus diisi',
-            'jurusan.required' => 'Harus diisi',
             'hasil.required' => 'Harus diisi',
         ]);
-        $data = Kelulusan::find($id);
+        $data = Suratkelulusan::find($id);
         $data->update([
             'nama_siswa' => $request->nama_siswa,
             'nisn' => $request->nisn,
             'tanggal_lahir' => $request->tanggal_lahir,
-            'jurusan' => $request->jurusan,
             'hasil' => $request->hasil,
         ]);
         return redirect('adminkelulusan')->with('toast_success', ' Data Berhasil di Ubah!');
@@ -340,8 +405,20 @@ class KurikulumController extends Controller
 
     public function deletekelulusan($id)
     {
-        $data = Kelulusan::find($id);
+        $data = Suratkelulusan::find($id);
         $data->delete();
         return redirect('adminkelulusan')->with('toast_error', ' Data Berhasil di Hapus!');
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+

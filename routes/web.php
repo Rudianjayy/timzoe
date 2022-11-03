@@ -260,7 +260,12 @@ Route::get('/delete/{id}',[KurikulumController::class,'delete'])->name('delete')
 
 
 Route::get('/jadwalkegiatan',[KurikulumController::class,'jadwalkegiatan'])->name('jadwalkegiatan');
-
+Route::get('/jadwalkegiatanadmin',[KurikulumController::class,'jadwalkegiatanadmin'])->name('jadwalkegiatanadmin');
+Route::get('/tambahjadwalkegiatan',[KurikulumController::class, 'tambahjadwalkegiatan'])->name('tambahjadwalkegiatan');
+Route::post('/jadwalkegiatanproses',[KurikulumController::class, 'jadwalkegiatanproses'])->name('jadwalkegiatanproses');
+Route::get('/editjadwalkegiatan/{id}',[KurikulumController::class, 'editjadwalkegiatan'])->name('editjadwalkegiatan');
+Route::post('/editproses/{id}',[KurikulumController::class,'editproses'])->name('editproses');
+Route::get('/deletejadwalkegiatan/{id}',[KurikulumController::class,'deletejadwalkegiatan'])->name('deletejadwalkegiatan');
 
 
 
@@ -280,6 +285,7 @@ Route::get('/deletekelulusan/{id}',[KurikulumController::class,'deletekelulusan'
 Route::get('/exportpdf',[KurikulumController::class,'exportpdf'])->name('exportpdf');
 Route::get('/exportexcel',[KurikulumController::class,'exportexcel'])->name('exportexcel');
 Route::get('/exportword',[KurikulumController::class,'exportword'])->name('exportword');
+
 
 
 
@@ -530,7 +536,7 @@ Route::get('/tambahvisimisi',[UpjtekajeController::class, 'tambahvisimisi'])->na
 Route::post('/submitdata19',[UpjtekajeController::class, 'submitdata19'])->name('submitdata19');
 Route::get('/editvisimisi/{id}',[UpjtekajeController::class, 'editvisimisi'])->name('editvisimisi');
 Route::post('/submitedit19/{id}',[UpjtekajeController::class, 'submitedit19'])->name('submitedit19');
-Route::get('/deletevisimisi/{id}',[UpjtekajeController::class, 'deletevisimisi'])->name('deletevisimisi');
+Route::get('/deleteupjvisimisi/{id}',[UpjtekajeController::class, 'deleteupjvisimisi'])->name('deleteupjvisimisi');
 
 
 

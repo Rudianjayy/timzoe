@@ -1363,6 +1363,7 @@ a:focus {
 
 .main-nav-one .main-nav__main-navigation .main-nav__navigation-box {
 	display: flex;
+	margin-left: 180px;
 	align-items: center;
 }
 
@@ -1568,6 +1569,8 @@ a:focus {
 
 .stricked-menu.stricky-fixed {
 	opacity: 1;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	transform: translateY(0%);
 }
 
@@ -6367,7 +6370,7 @@ a:focus {
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
-	background-image: url(../images/shapes/service-3-bg-shape-1-1.png);
+	background-image: url(../images/shapes/bgcc2.png);
 	margin-left: auto;
 	margin-right: auto;
 	justify-content: center;

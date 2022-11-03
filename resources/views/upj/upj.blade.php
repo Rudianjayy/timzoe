@@ -53,19 +53,16 @@
         <nav class="main-nav-one main-nav-one__home-three stricky">
             <div class="container-fluid">
                 <div class="inner-container">
-                    <div class="logo-box">
+                   
+                    <div>
                         <a href="index.html">
-                            <img src="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}" alt=""
-                                style="width: 80px;">
+                            <img src="{{ asset('landing/html/bidzend/assets/images/avatar/background/UPJ.png') }}" alt=""
+                                style="width: 70px;">
                         </a>
-                        <a href="#" class="side-menu__toggler"><i class="fa fa-bars"></i></a>
-                    </div><!-- /.logo-box -->
-                    <div class="logo-box">
                         <a href="/">
                             <img src="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}" alt=""
                                 style="width: 80px;">
                         </a>
-                        <a href="#" class="side-menu__toggler"><i class="fa fa-bars"></i></a>
                     </div><!-- /.logo-box -->
                     <div class="main-nav__main-navigation">
                         <ul class="main-nav__navigation-box">
@@ -84,18 +81,20 @@
             </div><!-- /.container-fluid -->
         </nav><!-- /.main-nav-one -->
         
+        @foreach ($us as $ul )
+        
         <section  id='home'>
             <div class="banner">
-                <img class="img-slider1" src="{{ asset('landingppdb/ppdb/style/assets/images/services/service-d-1.jpg') }}" >
+                <img class="img-slider1" src="{{ asset('fotomahasiswa/' .$ul->foto_slider1) }}" >
             </div>
             <div class="banner2">
-                <img class="img-slider2" src="{{ asset('landingppdb/ppdb/style/assets/images/services/service-d-3.jpg') }}" >
+                <img class="img-slider2" src="{{ asset('fotomahasiswa/' .$ul->foto_slider2) }}" >
             </div>
             <div class="banner3">
-                <img class="img-slider3" src="{{ asset('landingppdb/ppdb/style/assets/images/services/service-d-4.jpg') }}" >
+                <img class="img-slider3" src="{{ asset('fotomahasiswa/' .$ul->foto_slider3) }}" >
             </div>
             <div class="banner4">
-                <img class="img-slider3" src="{{ asset('landingppdb/ppdb/style/assets/images/services/service-d-5.jpg') }}" >
+                <img class="img-slider3" src="{{ asset('fotomahasiswa/' .$ul->foto_slider4) }}" >
             </div>
             {{-- <div class="particles-snow" id="banner-one-snow"></div><!-- /#cta-one-snow.particles-snow -->
             
@@ -128,6 +127,7 @@
                 </div><!-- /.row -->
             </div><!-- /.container -->
         </section><!-- /.banner-one -->
+        @endforeach
 
         <section class="about-three about-three__home-two" id='tentang'>
             {{-- <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/about-3-bg-2-1.png') }} "
@@ -165,7 +165,7 @@
 
         <section class="service-three-bg">
             <div class="container">
-                <div class="block-title text-center">
+                <div class="block-title text-center" id="keunggulan"> 
                     <p><span>Keunggulan</span></p>
                 </div><!-- /.block-title text-center -->
                 <div class="row high-gutters">
@@ -175,12 +175,12 @@
                                 data-wow-duration="1500ms">
 
                                 <div class="service-three__icon">
-                                    <div class="service-three__single-circle"></div>
+                                    {{-- <div class="service-three__single-circle"></div> --}}
                                     <!-- /.service-three__single-circle -->
                                     <img src="{{ asset('fotomahasiswa/' . $ke->foto_keunggulan) }}" alt=""
                                         style="border-radius: 50%;">
                                 </div><!-- /.service-three__icon -->
-                                <h3><a href="service-d-seo.html">{{ $ke->keterangan }}</a></h3>
+                                <h3><a>{{ $ke->keterangan }}</a></h3>
 
                             </div><!-- /.service-three__single -->
                         </div><!-- /.col-lg-4 -->
@@ -390,15 +390,75 @@
             </div><!-- /.container -->
         </section><!-- /.contact-one --> --}}
 
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col">
-                    <iframe class="map-contact"
-                        src="https://maps.google.com/maps?q=smk%20muhammadiyah%201%20genteng&#038;t=m&#038;z=10&#038;output=embed&#038;iwloc=near"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <!-- contact -->
+<section id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="contact-form">
+                    <div class="area-heading text-left xs-text-center margin-50px-bottom">
+                        <div class="text-medium text-red margin-10px-bottom">Have A Question?!!</div>
+                        <h3 class="area-title text-capitalize alt-font text-blue margin-20px-bottom font-weight-300 sm-width-100 xs-width-100">
+                            Let's Get In Touch</h3>
+                        <div class="seperator margin-20px-bottom">
+                            <hr class="seperator-two">
+                            <hr class="seperator-one">
+                        </div>
+                    </div>
+                    <form class="margin-50px-bottom">
+                            <div class="col-xs-6 no-padding">
+                                <input type="text" class="form-control margin-30px-bottom" placeholder="Your Name">
+                            </div>
+                            <div class="col-xs-6 no-padding">
+                                <input type="email" class="form-control margin-30px-bottom" placeholder="Your Email">
+                            </div>
+
+                            <div class="col-xs-12 no-padding">
+                            <textarea class="form-control margin-50px-bottom"
+                                      placeholder="Your Message"></textarea>
+                            </div>
+                            <a href="#." class="btn btn-rounded btn-red btn-large width-100">Get Started Now</a>
+                    </form>
+                    <div class="address bg-light-gray padding-20px-all xs-margin-50px-bottom">
+                        <div class="address-item">
+                            <div class="row">
+                                <div class="col-xs-1 no-padding text-center margin-20px-bottom"><i
+                                        class="fa fa-map-marker" aria-hidden="true"></i></div>
+                                <div class="col-xs-11">
+                                    <div class="text-small text-blue margin-20px-bottom">Address:<span
+                                            class="text-dark-gray display-block">Come visit us: 123 New Street, Our City , Australia.</span>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1 no-padding text-center"><i class="fa fa-question-circle"
+                                                                                aria-hidden="true"></i></div>
+                                <div class="col-xs-5">
+                                    <div class="text-small text-blue">Email:<span class="text-dark-gray display-block">email@website.com</span>
+                                    </div>
+                                </div>
+                                <div class="col-xs-1 no-padding text-center"><i class="fa fa-phone"
+                                                                                aria-hidden="true"></i></div>
+                                <div class="col-xs-5">
+                                    <div class="text-small text-blue">Phone:<span class="text-dark-gray display-block">002 343474383</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="row">
+                    <div class="col">
+                        <iframe class="map-contact"
+                            src="https://maps.google.com/maps?q=smk%20muhammadiyah%201%20genteng&#038;t=m&#038;z=10&#038;output=embed&#038;iwloc=near"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
+</section>
+       
 
         <footer class="site-footer-upj">
 

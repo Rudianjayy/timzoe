@@ -29,7 +29,7 @@
                                 id="kt_account_profile_details_submit">Tambah
                                 +</a>
                         </div>
-                        <table id="example" class="table table-bordered dt-responsive nowrap">
+                        <table  class="table table-bordered dt-responsive nowrap">
 
                             <thead>
                                 <tr>

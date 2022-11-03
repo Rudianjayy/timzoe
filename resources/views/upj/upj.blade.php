@@ -34,7 +34,7 @@
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/responsive.css') }}">
 
 
-    <link rel="stylesheet" href="{{asset('ppdb/landing/colugo/default/assets/css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('ps/templates.hibootstrap.com/colugo/default/assets/css/style.css')}}">
 
 
 </head>

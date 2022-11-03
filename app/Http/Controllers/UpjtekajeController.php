@@ -19,6 +19,7 @@ class UpjtekajeController extends Controller
 
     public function upj() {
         $tentang = Upjtentangkami::all();
+        $tk = Upjtentangkami::all();
         $upjt = Upjtentangkami::all();
         $team = Teamupjtekaje::all();
         $keunguan = Upjkeunggulan::all();
@@ -30,7 +31,7 @@ class UpjtekajeController extends Controller
         $fu = Upjfooter::all();
         $uli = Upjfooterlink::all();
         $us = Upjtekajeslider::all();
-        return view('upj.upj', compact('tentang','upjt','team','keunguan','upjas','upgal','upjvis','tes','uf','fu','uli','us'));
+        return view('upj.upj', compact('tentang','tk','upjt','team','keunguan','upjas','upgal','upjvis','tes','uf','fu','uli','us'));
     }
 
 
@@ -502,7 +503,7 @@ class UpjtekajeController extends Controller
 
     }
 
-    public function deletevisimisi($id){
+    public function deleteupjvisimisi($id){
         $data6 = Upjvisimisi::find($id);
         $data6->delete();
         return redirect('adminvisimisi')->with('toast_error',' Data Berhasil di Hapus!');

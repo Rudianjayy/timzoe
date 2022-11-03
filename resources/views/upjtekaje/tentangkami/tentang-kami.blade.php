@@ -56,11 +56,7 @@
                                         <td>
                                             <a href="/edittentangkami/{{ $d->id }}" class="btn btn-warning">Edit</a>
 
-                                            {{--  <a href="/deletetentangkami/{{ $d->id }}" class="btn btn-danger" onclick="return confirm('yakin gen?')">Delete</a>  --}}
-
-
-
-
+                                             <a href="/deletetentangkami/{{ $d->id }}" class="btn btn-danger" onclick="return confirm('yakin gen?')">Delete</a> 
                                         </td>
                                     </tr>
                                 @endforeach

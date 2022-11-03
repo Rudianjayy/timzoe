@@ -57,10 +57,7 @@
                 </div>
             </section>
 
-            <div class="text-center">
-                <h4>Jadwal Kegiatan Kosong:V</h4>
-            </div>
-
+            
           @include('koneksi.footer')
         </div>
 

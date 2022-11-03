@@ -94,11 +94,9 @@
 
 
 
-
-
         <div class="row">
             <div class="col-12">
-                <div class="card">
+                <div class="">
                     <div class="card-body">
 
                         <table id="datatable" class="table table-bordered dt-responsive nowrap"
@@ -137,6 +135,7 @@
         </div>
 
     </div>
+    </section>
 
     @include('koneksi.footer')
 

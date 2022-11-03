@@ -122,9 +122,10 @@
             @endforeach
         </style>
 
+        @foreach ($us as $ul )
 
         <section class="SLIDE_BG" id='home'>
-             /* <div class="banner">
+            <!-- <div class="banner">
                 <img class="img-slider1" src="{{ asset('fotomahasiswa/' . $ul->foto_slider1) }}" >
             </div>
             <div class="banner2">
@@ -135,7 +136,7 @@
             </div>
             <div class="banner4">
                 <img class="img-slider3" src="{{ asset('fotomahasiswa/' . $ul->foto_slider4) }}" >
-            </div> */
+            </div> -->
             {{-- <div class="particles-snow" id="banner-one-snow"></div><!-- /#cta-one-snow.particles-snow -->
 
             <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-1.png') }}" class="banner-one__bg-shape-1" alt="">
@@ -163,6 +164,7 @@
                 </div><!-- /.row -->
             </div><!-- /.container -->
         </section><!-- /.banner-one -->
+        @endforeach
 
         <section class="about-three about-three__home-two" id='tentang'>
             {{-- <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/about-3-bg-2-1.png') }} "

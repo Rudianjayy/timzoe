@@ -30,11 +30,11 @@
                 <div class="card">
                     <div class="card-body">
 
-                        {{--  <div>
+                        <div>
                             <a href="/tambahprofilsekolah" class="btn btn-primary mt-5"
                                 id="kt_account_profile_details_submit">Tambah
                                 +</a>
-                        </div>  --}}
+                        </div>
                         <table id="example" class="table table-bordered dt-responsive nowrap">
 
                             <thead>
@@ -69,7 +69,7 @@
                                         {{-- <td>{{ $q->created_at->format('D M Y') }}</td> --}}
                                         <td>
                                             <a href="/editprofilsekolah/{{ $q->id }}" class="btn btn-warning fas fa-pen-alt">Edit</a>
-                                            {{--  <a href="/deleteprofilsekolah/{{ $q->id }}" class="btn btn-danger fas fa-trash-alt" onclick="return confirm('yakin gen?')">Delete</a>  --}}
+                                           {{--  <a href="/deleteprofilsekolah/{{ $q->id }}" class="btn btn-danger fas fa-trash-alt" onclick="return confirm('yakin gen?')">Delete</a>  --}}
                                         </td>
                                     </tr>
                                 @endforeach

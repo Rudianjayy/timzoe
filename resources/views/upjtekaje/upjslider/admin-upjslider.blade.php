@@ -24,8 +24,9 @@
                 <div class="card">
                     <div class="card-body">
 
-                        
-                        <table class="table table-bordered dt-responsive nowrap">
+
+                        <table id="datatable" class="table table-bordered dt-responsive nowrap"
+                        style="border-collapse: collapse; border-spacing: 0; width: 100%;">
 
                             <thead>
                                 <tr>
@@ -71,7 +72,7 @@
                                         <td>
                                             <a href="/editupjslider/{{ $d10->id }}" class="btn btn-warning">Edit</a>
 
-                                            <a href="/deleteupjslider/{{ $d10->id }}" class="btn btn-danger" onclick="return confirm('yakin gen?')">Delete</a>
+                                            {{--  <a href="/deleteupjslider/{{ $d10->id }}" class="btn btn-danger" onclick="return confirm('yakin gen?')">Delete</a>  --}}
 
 
 
@@ -128,11 +129,12 @@
 
 
 
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap4.min.js"></script>
         <script>
-            $(document).ready(function () {
-                $('#example').DataTable({
-                    scrollX: true,
-                });
+            $(document).ready(function() {
+                $('#example').DataTable();
             });
         </script>
 

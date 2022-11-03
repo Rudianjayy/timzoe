@@ -15,11 +15,11 @@
                 <div class="col-8">
                     <div class="card">
                         <div class="card-body">
-                            <form action="/submitedit15/{{ $data6->id }}" method="POST" enctype="multipart/form-data">
+                            <form action="/submitedit19/{{ $data6->id }}" method="POST" enctype="multipart/form-data">
                                 @csrf
 
 
-                                
+
                                 <section style="padding-top:60px;">
                                     <div class="container">
                                         <div class="row">
@@ -37,8 +37,8 @@
                                         </div>
                                     </div>
                                 </section>
-                                
-                                
+
+
                                 <section style="padding-top:60px;">
                                     <div class="container">
                                         <div class="row">

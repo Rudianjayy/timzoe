@@ -5,7 +5,7 @@
     @include('layout.css')
 </head>
 <body>
-
+    
 
     <div class="row">
         <div class="col-sm-12">

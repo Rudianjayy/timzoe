@@ -43,9 +43,9 @@
                 <li><a href="/datajurusan">Kompetensi Keahlian</a></li>
                 {{-- <li><a href="/kompetensiadmin">Kompetensi Keahlian</a></li>
                 <li><a href="/fotokompetensiadmin">Foto Kompetensi</a></li> --}}
-                <li><a href="/jadwaladmin">Jadwal Kegiatan</a></li>
+                <li><a href="/jadwalkegiatanadmin">Jadwal Kegiatan</a></li>
                 <li><a href="/kalenderakademikadmin">Kalender Akademik</a></li>
-                <li><a href="/kelulusanadmin">Kelulusan</a></li>
+                <li><a href="/adminkelulusan">Surat Kelulusan</a></li>
             </ul>
         </li>
 

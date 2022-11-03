@@ -29,7 +29,12 @@
                                 id="kt_account_profile_details_submit">Tambah
                                 +</a>
                         </div>
+<<<<<<< HEAD
                         <table  class="table table-bordered dt-responsive nowrap">
+=======
+                        <table id="datatable" class="table table-bordered dt-responsive nowrap"
+                        style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+>>>>>>> c66443fcf8b8ade234c160464e0875b20a5134ce
 
                             <thead>
                                 <tr>
@@ -50,7 +55,7 @@
                                         <th>{{ $no++ }}</th>
                                         <td>{!!  $d7->komen  !!}</td>
                                         <td>{!!  $d7->tester  !!}</td>
-                                        
+
 
 
                                         <td>
@@ -113,14 +118,17 @@
 
 
 
+
+
+
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap4.min.js"></script>
         <script>
-            $(document).ready(function () {
-                $('#example').DataTable({
-                    scrollX: true,
-                });
+            $(document).ready(function() {
+                $('#example').DataTable();
             });
         </script>
-
         </body>
         @include('sweetalert::alert')
 

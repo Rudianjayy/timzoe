@@ -7,7 +7,7 @@
     </head>
 
     <body>
-        <h1 class="text-center mb-4">Tambah </h1>
+        <h1 class="text-center mb-4">Edit Keunggulan</h1>
 
         <div class="container" mb-5>
 
@@ -20,10 +20,10 @@
 
 
                                 <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Foto :</label>
-                                    <input type="file" name="foto_keunggulan" class="form-control" id="exampleInputEmail1"
+                                    <label for="exampleInputEmail1" class="form-label">Icon :</label>
+                                    <input type="text" name="icon" class="form-control" id="exampleInputEmail1"
                                         aria-describedby="emailHelp">
-                                    @error('foto_keunggulan')
+                                    @error('icon')
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>

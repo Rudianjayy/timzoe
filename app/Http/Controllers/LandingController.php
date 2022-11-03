@@ -21,7 +21,7 @@ class LandingController extends Controller
     public function index () {
         $data = Album::all();
         $k = Muhinews::paginate(6);
-        $d = Muhinews::paginate(6);
+        $d = Muhinews::orderBy('created_at','desc')->paginate(6);
         $f = Muhinews::paginate(3);
         $ss = Slider::all();
         $fs = Fotoslider::all();

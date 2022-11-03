@@ -24,11 +24,11 @@
                 <div class="card">
                     <div class="card-body">
 
-                        {{--  <div>
+                        <div>
                             <a href="/tambahiduka" class="btn btn-primary mt-5"
                                 id="kt_account_profile_details_submit">Tambah
                                 +</a>
-                        </div>  --}}
+                        </div>
                         <table id="datatable" class="table table-bordered dt-responsive nowrap"
                             style="border-collapse: collapse; border-spacing: 0; width: 100%;">
 
@@ -55,7 +55,7 @@
                                         <td>
                                             <a href="/editiduka/{{ $d->id }}" class="btn btn-warning">Edit</a>
 
-                                            {{-- <a href="/deleteiduka/{{ $d->id }}" class="btn btn-danger" onclick="return confirm('yakin gen?')">Delete</a> --}}
+                                            <a href="/deleteiduka/{{ $d->id }}" class="btn btn-danger" onclick="return confirm('yakin gen?')">Delete</a>
 
 
 

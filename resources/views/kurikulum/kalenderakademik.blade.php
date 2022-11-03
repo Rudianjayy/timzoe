@@ -42,18 +42,16 @@
 
 <body class="body header-fixed ">
     <div class="preload preload-container">
-        {{--  <div class="preload-logo"></div>  --}}
-        <div class="preload-logo"><img
-            src="{{ asset('landing/html/bidzend/assets/images/logo/muhi.jpg') }}"
-            alt="Image" style="width:570 !important;"></div>
+        {{-- <div class="preload-logo"></div>  --}}
+        <div class="preload-logo"><img src="{{ asset('landing/html/bidzend/assets/images/logo/muhi.jpg') }}" alt="Image" style="width:570 !important;"></div>
     </div>
 
     <div id="wrapper">
         <div id="page" class="clearfix">
 
-           @include('koneksi.navbar')
+            @include('koneksi.navbar')
 
-           <section class="fl-page-title">
+            <section class="fl-page-title">
                 <div class="overlay"></div>
                 <div class="container">
                     <div class="row">
@@ -73,25 +71,25 @@
             <section class="hot-collections-page tf-section-nopan">
                 <div class="container">
                     <div class="row">
-                    <div class="col-md-12">
-                    @foreach ($d as $d)
-                     <section>
-               <center><img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt=""></center> 
-                </div>
-                    </div>
-                </section>
-                    @endforeach
+                        <div class="col-md-12">
+                            @foreach ($d as $d)
+                            <a href="{{ asset('fotomahasiswa/' . $d->foto) }}" download>
+                                <center><img src="{{ asset('fotomahasiswa/' . $d->foto) }}" style="width: 1300px;" alt=""></center>
+                                <br>
+                               <center> <button type="submit" class="btn btn-info" style="margin-left: 90px;">Download</button></center>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </section>
-
-
-
-
-          @include('koneksi.footer')
+            @endforeach
         </div>
-
     </div>
+
+
+
+
+    @include('koneksi.footer')
 
     <a id="scroll-top"></a>
 

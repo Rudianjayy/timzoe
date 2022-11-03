@@ -209,7 +209,7 @@ class UpjtekajeController extends Controller
 
 
 
-    
+
 
     public function loby16() {
         $data3 = Upjkeunggulan::all();
@@ -223,58 +223,43 @@ class UpjtekajeController extends Controller
     public function submitdata16(Request $request){
         // dd($request->all());
         $this->validate($request,[
-            'foto_keunggulan' =>'required',
+            'icon' =>'required',
             'keterangan' =>'required',
         ],[
-            'foto_keunggulan.required' =>'Harus diisi',
+            'icon.required' =>'Harus diisi',
             'keterangan.required' =>'Harus diisi',
 
         ]);
         $data3 = Upjkeunggulan::create([
-            'foto_keunggulan' =>$request->foto_keunggulan,
+            'icon' =>$request->icon,
             'keterangan' =>$request->keterangan,
 
         ]);
-        if($request->hasFile('foto_keunggulan')){
-            $request->file('foto_keunggulan')->move('fotomahasiswa/', $request->file('foto_keunggulan')->getClientOriginalName());
-            $data3->foto_keunggulan = $request->file('foto_keunggulan')->getClientOriginalName();
-            $data3->save();
-        }
+
 
         return redirect()->route('adminkeunggulan')->with('toast_success',' Data Berhasil di Tambahkan!');
     }
 
     public function editkeunggulan($id){
 
-        $data3 = Upjkeunggulan::findOrFail($id);
-        return view('upjtekaje.team.edit-team', compact('data3'));
+        $data = Upjkeunggulan::findOrFail($id);
+        return view('upjtekaje.keunggulan.edit-keunggulan', compact('data'));
     }
 
     public function submitedit16(Request $request, $id){
         $this->validate($request,[
-            'nama_team' =>'required',
-            'jabatan_team' =>'required',
-            'fb' =>'required',
-            'wa' =>'required',
-            'ig' =>'required',
+            'icon' =>'required',
+            'keterangan' =>'required',
         ],[
-            'nama_team' =>'harus diisi',
-            'jabatan_team' =>'harus diisi',
-            'fb_team' =>'harus diisi',
-            'wa_team' =>'harus diisi',
-            'ig_team' =>'harus diisi',
+            'icon.required' =>'Harus diisi',
+            'keterangan.required' =>'Harus diisi',
 
         ]);
         $data3 = Upjkeunggulan::find($id);
         $data3->update([
-            'nama_team' =>$request->nama_team,
+            'icon' =>$request->icon,
+            'keterangan' =>$request->keterangan,
         ]);
-        // if($request->hasFile('foto_keunggulan')){
-        //     $request->file('foto_keunggulan')->move('fotomahasiswa/',$request->file('foto_keunggulan')->getClientOriginalName());
-        //     $data3->foto_keunggulan = $request->file('foto_keunggulan')->getClientOriginalName();
-        //     $data3->save();
-        // }
-
         return redirect('adminkeunggulan')->with('toast_success',' Data Berhasil di Ubah!');
 
     }
@@ -284,19 +269,19 @@ class UpjtekajeController extends Controller
         $data3->delete();
         return redirect('adminkeunggulan')->with('toast_error',' Data Berhasil di Hapus!');
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
     public function loby17() {
         $data4 = Upjjasa::all();
         $upjas = Upjjasa::all();
@@ -374,18 +359,18 @@ class UpjtekajeController extends Controller
         $data4->delete();
         return redirect('adminjasa')->with('toast_error',' Data Berhasil di Hapus!');
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
     public function loby18() {
         $data5 = Upjgalery::all();
         $upgal = Upjgalery::all();
@@ -446,14 +431,14 @@ class UpjtekajeController extends Controller
         $data5->delete();
         return redirect('admingalery')->with('toast_error',' Data Berhasil di Hapus!');
     }
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
     public function loby19() {
         $data6 = Upjvisimisi::all();
         $vis = Upjvisimisi::all();
@@ -501,12 +486,11 @@ class UpjtekajeController extends Controller
     }
 
     public function submitedit19(Request $request, $id){
-        $this->validate($request,[
-        ],[
-
-        ]);
         $data6 = Upjvisimisi::find($id);
         $data6->update([
+            'upj_visi' =>$request->upj_visi,
+            'upj_misi' =>$request->upj_misi,
+            'link_yt' =>$request->link_yt,
         ]);
         if($request->hasFile('foto_visimisi')){
             $request->file('foto_visimisi')->move('fotomahasiswa/',$request->file('foto_visimisi')->getClientOriginalName());
@@ -523,14 +507,14 @@ class UpjtekajeController extends Controller
         $data6->delete();
         return redirect('adminvisimisi')->with('toast_error',' Data Berhasil di Hapus!');
     }
-    
-    
 
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
     public function loby20() {
         $data7 = Testimoni::all();
         $tes = Testimoni::all();
@@ -594,12 +578,12 @@ class UpjtekajeController extends Controller
         $data7->delete();
         return redirect('admintestimoni')->with('toast_error',' Data Berhasil di Hapus!');
     }
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
     public function loby22() {
         $data9 = Upjfooterlink::all();
         $uli = Upjfooterlink::all();
@@ -643,7 +627,7 @@ class UpjtekajeController extends Controller
     public function submitedit22(Request $request, $id){
         $this->validate($request,[
         ],[
-            
+
         ]);
         $data9 = Upjfooterlink::find($id);
         $data9->update([
@@ -665,13 +649,13 @@ class UpjtekajeController extends Controller
         $data9->delete();
         return redirect('adminupjfooterlink')->with('toast_error',' Data Berhasil di Hapus!');
     }
-    
-    
-    
-    
 
 
-    
+
+
+
+
+
     public function loby21() {
         $data8 = Upjfooter::all();
         $uf = Upjfooter::all();
@@ -742,21 +726,21 @@ class UpjtekajeController extends Controller
         $data8->delete();
         return redirect('adminupjfooter')->with('toast_error',' Data Berhasil di Hapus!');
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
     public function loby23() {
         $data10 = Upjtekajeslider::all();
         $us = Upjtekajeslider::all();
         return view('upjtekaje.upjslider.admin-upjslider', compact('data10','us'));
     }
-    
+
     public function editupjslider($id){
 
         $data10 = Upjtekajeslider::findOrFail($id);

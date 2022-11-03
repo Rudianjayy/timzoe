@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('upjkeunggulans', function (Blueprint $table) {
             $table->id();
-            $table->string('foto_keunggulan');
+            $table->string('icon');
             $table->string('keterangan');
             $table->timestamps();
         });

@@ -19,20 +19,27 @@
 
     <link rel="stylesheet" type="text/css" href="{{ asset('landing/html/bidzend/assets/css/responsive.css') }}">
 
+    <link rel="stylesheet" type="text/css" href="{{ asset('landing/html/bidzend/assets/css/responsive.css') }}">
+
     <link rel="shortcut icon" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
     <link rel="apple-touch-icon-precomposed" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('landingppdb/ppdb/style/assets/images/favicons/apple-touch-icon.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('landingppdb/ppdb/style/assets/images/favicons/favicon-32x32.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('landingppdb/ppdb/style/assets/images/favicons/favicon-16x16.png') }}">
-    <link rel="manifest" href="{{ asset('landingppdb/ppdb/style/assets/images/favicons/site.webmanifest') }}">
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&amp;display=swap">
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/animate.css') }}">
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap-datepicker.min.css') }}">
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap-select.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/fontawesome-all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/hover-min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/swiper.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/jquery.mCustomScrollbar.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/owl.theme.default.min.css') }}">
 
     <!-- Template Styles -->
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/responsive.css') }}">
 </head>
 
 <body class="body header-fixed">
@@ -60,25 +67,7 @@
             </div>
         </div>
     </section>
-    <!-- <section class="tf-section item-details-page">
-        <div class="author-item">
-            <div class="avatar">
-                <img src="assets/images/avatar/avt-4.jpg" alt="">
-            </div>
-            <div class="infor">
-                <h6><a href="author.html">Bagikan</a> </h6>
-                <div class="widget-social">
-                    <ul>
-                        <li><a href="#" class="active"><i class="fab fa-facebook-f"></i></a>
-                        </li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section> -->
+
     <section class="blog-grid">
         <div class="container">
             <div class="row high-gutters">
@@ -88,15 +77,15 @@
                         <div class="card-media">
 
                             <a href="/detailekstrakulikuler/{{ $data->id }}">
-                                <img src="{{ asset('fotomahasiswa/' . $data->foto) }}" alt="" style="width: 366px; height:183px;">
+                              <center>  <img src="{{ asset('fotomahasiswa/' . $data->foto) }}" alt="" style="width: 366px; height:183px;"></center>
                             </a>
                         </div>
                         <div class="blog-one__content">
                             <div class="blog-one__meta">
-                                <h4>{{$data->judul_ekstra}}</h4>
+                                <h4 style="font-size: 18px; font-weight:400;">{{$data->judul_ekstra}}</h4>
                             </div><!-- /.blog-one__meta -->
                             <p>{{$data->created_at}}</p>
-                            <p><a href="#">{!!$data->deskripsi_ekstrakulikuler!!}</a></p>
+                            <p class="desc" style="overflow: hidden; text-overflow:ellipsis; white-space:nowrap; height:20px; width:340px;">{!!$data->deskripsi_ekstrakulikuler!!}</p>
                             <a href="/detailekstrakulikuler/{{ $data->id }}"
                                 class="thm-btn blog-one__btn"><span>Baca selengkapnya</span></a>
                             <!-- /.thm-btn blog-one__btn -->

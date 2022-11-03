@@ -50,8 +50,8 @@
                                                 $jurusan = \App\Models\Jurusan::all();
                                             @endphp
                                             @foreach ($jurusan as $js)
-                                                <li class="menu-item "><a
-                                                        href="/indexjurusan/{{ $js->id }}">{{ $js->nama_kompetensi2 }}</a>
+                                                <li class="menu-item {{ Route::is('nama_kompetensi2') ? 'current-item' : ''}}   ">
+                                                    <a href="/indexjurusan/{{ $js->id }}">{{ $js->nama_kompetensi2 }}</a>
                                                 </li>
                                             @endforeach
                                         </ul>
@@ -60,8 +60,8 @@
                                             href="/kalenderakademik">Kalender Akademik</a></li>
                                     <li class="menu-item {{ Route::is('jadwalkegiatan') ? 'current-item' : '' }}"><a
                                             href="/jadwalkegiatan">Jadwal Kegiatan</a></li>
-
-                                    <li class="menu-item"><a href="creator.html">Kelulusan</a></li>
+                                    <li class="menu-item {{ Route::is('kelulusan') ? 'current-item' : '' }}"><a
+                                            href="/kelsan">Kelulusan</a></li>
                                 </ul>
                             </li>
 

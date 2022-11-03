@@ -118,12 +118,6 @@ Route::get('/deleteprestasi/{id}',[PrestasiController::class, 'delete'])->name('
 
 
 
-
-
-
-
-
-
 //muhinews
 Route::get('/muhinews',[MuhinewsController::class, 'index'])->name('muhinews');
 Route::get('/muhinewsadmin',[MuhinewsController::class, 'indexadmin'])->name('muhinewsadmin');
@@ -266,6 +260,34 @@ Route::get('/delete/{id}',[KurikulumController::class,'delete'])->name('delete')
 
 
 Route::get('/jadwalkegiatan',[KurikulumController::class,'jadwalkegiatan'])->name('jadwalkegiatan');
+Route::get('/jadwalkegiatanadmin',[KurikulumController::class,'jadwalkegiatanadmin'])->name('jadwalkegiatanadmin');
+Route::get('/tambahjadwalkegiatan',[KurikulumController::class, 'tambahjadwalkegiatan'])->name('tambahjadwalkegiatan');
+Route::post('/jadwalkegiatanproses',[KurikulumController::class, 'jadwalkegiatanproses'])->name('jadwalkegiatanproses');
+Route::get('/editjadwalkegiatan/{id}',[KurikulumController::class, 'editjadwalkegiatan'])->name('editjadwalkegiatan');
+Route::post('/editproses/{id}',[KurikulumController::class,'editproses'])->name('editproses');
+Route::get('/deletejadwalkegiatan/{id}',[KurikulumController::class,'deletejadwalkegiatan'])->name('deletejadwalkegiatan');
+
+
+
+
+
+
+
+
+//kelulusan
+Route::get('/kelsan ',[KurikulumController::class,'kelsan'])->name('kelsan');
+Route::get('/adminkelulusan',[KurikulumController::class,'adminkelulusan'])->name('adminkelulusan');
+Route::get('/tambahkelulusan',[KurikulumController::class, 'tambahkelulusan'])->name('tambahkelulusan');
+Route::post('/tambahproseskelulusan',[KurikulumController::class, 'tambahproseskelulusan'])->name('tambahproseskelulusan');
+Route::get('/editkelulusan/{id}',[KurikulumController::class, 'editkelulusan'])->name('editkelulusan');
+Route::post('/editproseskelulusan/{id}',[KurikulumController::class,'editproseskelulusan'])->name('editproseskelulusan');
+Route::get('/deletekelulusan/{id}',[KurikulumController::class,'deletekelulusan'])->name('deletekelulusan');
+Route::get('/exportpdf',[KurikulumController::class,'exportpdf'])->name('exportpdf');
+Route::get('/exportexcel',[KurikulumController::class,'exportexcel'])->name('exportexcel');
+Route::get('/exportword',[KurikulumController::class,'exportword'])->name('exportword');
+
+
+
 
 
 Route::get('/kurikulumadmin',[KurikulumController::class, 'kurikulumadmin'])->name('kurikulumadmin');
@@ -514,7 +536,7 @@ Route::get('/tambahvisimisi',[UpjtekajeController::class, 'tambahvisimisi'])->na
 Route::post('/submitdata19',[UpjtekajeController::class, 'submitdata19'])->name('submitdata19');
 Route::get('/editvisimisi/{id}',[UpjtekajeController::class, 'editvisimisi'])->name('editvisimisi');
 Route::post('/submitedit19/{id}',[UpjtekajeController::class, 'submitedit19'])->name('submitedit19');
-Route::get('/deletevisimisi/{id}',[UpjtekajeController::class, 'deletevisimisi'])->name('deletevisimisi');
+Route::get('/deleteupjvisimisi/{id}',[UpjtekajeController::class, 'deleteupjvisimisi'])->name('deleteupjvisimisi');
 
 
 

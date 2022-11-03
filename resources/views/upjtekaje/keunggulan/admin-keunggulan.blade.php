@@ -29,12 +29,13 @@
                                 id="kt_account_profile_details_submit">Tambah
                                 +</a>
                         </div>
-                        <table  class="table table-bordered dt-responsive nowrap">
+                        <table id="datatable" class="table table-bordered dt-responsive nowrap"
+                        style="border-collapse: collapse; border-spacing: 0; width: 100%;">
 
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">Foto</th>
+                                    <th scope="col">Icon</th>
                                     <th scope="col">Keunggulan</th>
                                     <th scope="col">Aksi</th>
                                 </tr>
@@ -48,10 +49,7 @@
                                 @foreach ($data3 as $d3)
                                     <tr>
                                         <th>{{ $no++ }}</th>
-                                        <td>
-                                            <img src="{{ asset('fotomahasiswa/' . $d3->foto_keunggulan) }}" alt=""
-                                                style="width: 50px;">
-                                        </td>
+                                        <td>{{  $d3->icon  }}</td>
                                         <td>{{  $d3->keterangan  }}</td>
 
 
@@ -115,13 +113,13 @@
 
 
 
-        <script>
-            $(document).ready(function () {
-                $('#example').DataTable({
-                    scrollX: true,
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+            <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+            <script>
+                $(document).ready(function() {
+                    $('#example').DataTable();
                 });
-            });
-        </script>
+            </script>
 
         </body>
         @include('sweetalert::alert')

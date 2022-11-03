@@ -173,7 +173,7 @@ a:focus {
 	font-weight: 500;
 	color: #fff;
 	background-size: 200% auto;
-	background-image: linear-gradient(90deg, #ffbc45 0%, #ff5959 51%, #ffbc45 100%);
+	background-image: linear-gradient(90deg, #2f5bea 0%, #2f5bea 51%, #ffbc45 100%);
 	transition: all 500ms ease;
 	box-shadow: 0px 30px 50px 0px rgba(25, 71, 174, 0.1);
 	border-radius: 27.5px;
@@ -766,102 +766,72 @@ a:focus {
 @keyframes img-slider1{
 	0%{
 		visibility: visible;
-	}	
+	}
 	25%{
 		visibility: hidden;
-	}	
+	}
 	50%{
 		visibility: hidden;
-	}	
+	}
 	75%{
 		visibility: hidden;
-	}	
+	}
 	100%{
 		visibility: visible;
-	}	
+	}
 }
 @keyframes img-slider2{
 	0%{
 		visibility: hidden;
-	}	
+	}
 	25%{
 		visibility: hidden;
-	}	
+	}
 	50%{
 		visibility: visible;
-	}	
+	}
 	75%{
 		visibility: hidden;
-	}	
+	}
 	100%{
 		visibility: hidden;
-	}	
+	}
 }
 @keyframes img-slider3{
 	0%{
 		visibility: hidden;
-	}	
+	}
 	25%{
 		visibility: hidden;
-	}	
+	}
 	50%{
 		visibility: hidden;
-	}	
+	}
 	75%{
 		visibility: visible;
-	}	
+	}
 	100%{
 		visibility: hidden;
-	}	
+	}
 }
 @keyframes img-slider4{
 	0%{
 		visibility: hidden;
-	}	
+	}
 	25%{
 		visibility: hidden;
-	}	
+	}
 	50%{
 		visibility: hidden;
-	}	
+	}
 	75%{
 		visibility: hidden;
-	}	
+	}
 	100%{
 		visibility: visible;
-	}	
+	}
 }
 
-.SLIDE_BG {
-	width: 100%;
-	height: 100vh;
-	background-position: center center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	backface-visibility: hidden;
-	animation: slideBg 16s linear infinite 0s;
-	animation-timing-function: ease-in-out;
-	background-image: url('../images/services/service-d-2-1.jpg');
-	position: relative;
-}
-
-@keyframes slideBg {
-	0% {
-		background-image: url('../images/services/service-d-1.jpg');
-	}
-	25% {
-		background-image: url('../images/services/service-d-2.jpg');
-	}
-	50% {
-		background-image: url('../images/services/service-d-3.jpg');
-	}
-	75% {
-		background-image: url('../images/services/service-d-4.jpg');
-	}
-	100% {
-		background-image: url('../images/services/service-d-5.jpg');
-	}
-}
 
 /* .rudi {
 	text-align: center;
@@ -870,7 +840,7 @@ a:focus {
 	font-size: 160px;
 	color: #fff;
 	font-weight: 600;
-	
+
 }
 .rudi a {
 	text-decoration: none;
@@ -3396,14 +3366,8 @@ a:focus {
 .blog-grid .high-gutters>[class*=col-] {
 	padding-left: 20px;
 	padding-right: 20px;
-    color: #125f04;
-    text-decoration: none;
-    font-size: 0.85em;
-    overflow: hidden;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
-    text-overflow: ellipsis;
-    overflow: hidden;
+
 }
 
 .blog-grid .blog-one__single {
@@ -6325,6 +6289,12 @@ a:focus {
 .service-three .row.high-gutters {
 	margin-left: -20px;
 	margin-right: -20px;
+
+}
+
+.service-three .row.high-gutters [class*=col-] {
+	padding-left: 20px;
+	padding-right: 20px;
     color: #125f04;
     text-decoration: none;
     font-size: 0.85em;
@@ -6333,11 +6303,6 @@ a:focus {
     -webkit-line-clamp: 2;
     text-overflow: ellipsis;
     overflow: hidden;
-}
-
-.service-three .row.high-gutters [class*=col-] {
-	padding-left: 20px;
-	padding-right: 20px;
 
 
 

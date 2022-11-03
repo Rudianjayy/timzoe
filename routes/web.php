@@ -260,7 +260,12 @@ Route::get('/delete/{id}',[KurikulumController::class,'delete'])->name('delete')
 
 
 Route::get('/jadwalkegiatan',[KurikulumController::class,'jadwalkegiatan'])->name('jadwalkegiatan');
-
+Route::get('/jadwalkegiatanadmin',[KurikulumController::class,'jadwalkegiatanadmin'])->name('jadwalkegiatanadmin');
+Route::get('/tambahjadwalkegiatan',[KurikulumController::class, 'tambahjadwalkegiatan'])->name('tambahjadwalkegiatan');
+Route::post('/jadwalkegiatanproses',[KurikulumController::class, 'jadwalkegiatanproses'])->name('jadwalkegiatanproses');
+Route::get('/editjadwalkegiatan/{id}',[KurikulumController::class, 'editjadwalkegiatan'])->name('editjadwalkegiatan');
+Route::post('/editproses/{id}',[KurikulumController::class,'editproses'])->name('editproses');
+Route::get('/deletejadwalkegiatan/{id}',[KurikulumController::class,'deletejadwalkegiatan'])->name('deletejadwalkegiatan');
 
 
 

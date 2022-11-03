@@ -118,7 +118,6 @@
                     background-image: url('{{ asset('fotomahasiswa/' . $ul->foto_slider2) }}');
                 }
             }
-
             @endforeach
         </style>
 

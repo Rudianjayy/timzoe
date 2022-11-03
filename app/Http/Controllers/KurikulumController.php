@@ -8,6 +8,7 @@ use App\Models\Muhinews;
 use App\Models\Kelulusan;
 use App\Models\kurikulum;
 use App\Models\Footeerdua;
+use App\Models\jadwalkegiatan;
 use Illuminate\Http\Request;
 use PhpOffice\PhpWord\PhpWord;
 use App\Models\Personaljurusan;
@@ -112,11 +113,80 @@ class KurikulumController extends Controller
     {
         $f = Muhinews::all();
         $kh = Jurusan::all();
+        $d = jadwalkegiatan::all();
         $ft = Footeer::all();
         $personal = Personaljurusan::all();
         $logo = footeer::all();
         $link = footeerdua::all();
-        return view('kurikulum.jadwalkegiatan', compact('f', 'kh', 'ft', 'personal', 'logo', 'link'));
+        return view('kurikulum.jadwalkegiatan.jadwalkegiatan', compact('f', 'kh', 'ft', 'personal', 'logo', 'link','d'));
+    }
+
+    public function jadwalkegiatanadmin()
+    {
+        $data = jadwalkegiatan::all();
+        return view('kurikulum.jadwalkegiatan.jadwalkegiatanadmin', compact('data'));
+    }
+    public function tambahjadwalkegiatan()
+    {
+        return view('kurikulum.jadwalkegiatan.tambahjadwalkegiatan');
+    }
+
+    public function jadwalkegiatanproses(Request $request)
+    {
+        // dd($request->all());
+        $this->validate($request, [
+
+        ], [
+            'namakegiatan.required' => 'Harus diisi',
+            'waktu.required' => 'Harus diisi',
+            'tempat.required' => 'Harus diisi'
+        ]);
+        $data = jadwalkegiatan::create([
+            'namakegiatan' => $request->namakegiatan,
+            'waktu' => $request->waktu,
+            'tempat' => $request->tempat,
+        ]);
+        if ($request->hasFile('foto')) {
+            $request->file('foto')->move('fotomahasiswa/', $request->file('foto')->getClientOriginalName());
+            $data->foto = $request->file('foto')->getClientOriginalName();
+            $data->save();
+        }
+
+        return redirect()->route('jadwalkegiatanadmin')->with('toast_success', ' Data Berhasil di Tambahkan!');
+    }
+
+    public function editjadwalkegiatan($id)
+    {
+
+        $data = jadwalkegiatan::findOrFail($id);
+        return view('kurikulum.jadwalkegiatan..editjadwalkegiatan', compact('data'));
+    }
+
+    public function editproses(Request $request, $id)
+    {
+        $this->validate($request, [
+
+        ], [
+            'namakegiatan.required' => 'Harus diisi',
+            'waktu.required' => 'Harus diisi',
+            'tempat.required' => 'Harus diisi',
+        ]);
+        $data = jadwalkegiatan::find($id);
+        $data->update([]);
+        if ($request->hasFile('foto')) {
+            $request->file('foto')->move('fotomahasiswa/', $request->file('foto')->getClientOriginalName());
+            $data->foto = $request->file('foto')->getClientOriginalName();
+            $data->save();
+        }
+
+        return redirect('jadwalkegiatanadmin')->with('toast_success', ' Data Berhasil di Ubah!');
+    }
+
+    public function deletejadwalkegiatan($id)
+    {
+        $data = kalenderakademik::find($id);
+        $data->delete();
+        return redirect('kalenderakademikadmin')->with('toast_error', ' Data Berhasil di Hapus!');
     }
 
 

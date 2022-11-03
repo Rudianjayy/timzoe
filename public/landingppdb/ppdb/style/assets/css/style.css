@@ -173,7 +173,7 @@ a:focus {
 	font-weight: 500;
 	color: #fff;
 	background-size: 200% auto;
-	background-image: linear-gradient(90deg, #ffbc45 0%, #ff5959 51%, #ffbc45 100%);
+	background-image: linear-gradient(90deg, #2f5bea 0%, #2f5bea 51%, #ffbc45 100%);
 	transition: all 500ms ease;
 	box-shadow: 0px 30px 50px 0px rgba(25, 71, 174, 0.1);
 	border-radius: 27.5px;
@@ -1333,6 +1333,7 @@ a:focus {
 
 .main-nav-one .main-nav__main-navigation .main-nav__navigation-box {
 	display: flex;
+	margin-left: 180px;
 	align-items: center;
 }
 
@@ -1538,6 +1539,8 @@ a:focus {
 
 .stricked-menu.stricky-fixed {
 	opacity: 1;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	transform: translateY(0%);
 }
 
@@ -6332,7 +6335,7 @@ a:focus {
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
-	background-image: url(../images/shapes/service-3-bg-shape-1-1.png);
+	background-image: url(../images/shapes/bgcc2.png);
 	margin-left: auto;
 	margin-right: auto;
 	justify-content: center;

@@ -18,15 +18,15 @@
         {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> --}}
 
         {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" /> --}}
-       
+
         <div class="row" style="margin-top: 30px;">
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
 
-                        
-                        <table  class="table table-bordered dt-responsive nowrap"
-                            style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+
+                        <table id="datatable" class="table table-bordered dt-responsive nowrap"
+                        style="border-collapse: collapse; border-spacing: 0; width: 100%;">
 
                             <thead>
                                 <tr>
@@ -56,7 +56,7 @@
                                         <td>
                                             <a href="/edittentangkami/{{ $d->id }}" class="btn btn-warning">Edit</a>
 
-                                            <a href="/deletetentangkami/{{ $d->id }}" class="btn btn-danger" onclick="return confirm('yakin gen?')">Delete</a>
+                                            {{--  <a href="/deletetentangkami/{{ $d->id }}" class="btn btn-danger" onclick="return confirm('yakin gen?')">Delete</a>  --}}
 
 
 
@@ -113,6 +113,9 @@
 
 
 
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap4.min.js"></script>
         <script>
             $(document).ready(function() {
                 $('#example').DataTable();

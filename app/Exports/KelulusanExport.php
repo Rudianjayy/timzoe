@@ -2,11 +2,8 @@
 
 namespace App\Exports;
 
-use App\Models\Jurusankelulusan;
-use App\Models\Kelulusan;
 use App\Models\Suratkelulusan;
 use Illuminate\Contracts\View\View;
-use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\FromView;
 
 class KelulusanExport implements FromView

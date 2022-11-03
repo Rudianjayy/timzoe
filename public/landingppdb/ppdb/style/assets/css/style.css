@@ -99,6 +99,7 @@ a:focus {
 	text-decoration: none;
 }
 
+
 .page-wrapper {
 	position: relative;
 	margin: 0 auto;
@@ -6630,7 +6631,7 @@ a:focus {
 .about-three {
 	position: relative;
 	padding-bottom: 170px;
-	padding-top: 200px;
+	padding-top: 100px;
 }
 
 [class*=about-three__bg-image-] {

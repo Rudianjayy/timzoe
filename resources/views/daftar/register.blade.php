@@ -103,101 +103,7 @@
                     </div>
                 </div>
             </div> --}}
-            {{-- <header id="header_main" class="header_1 js-header">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="mobile-button"><span></span></div>
-                            <div id="site-header-inner" class="flex">
-                                <div id="site-logo" class="clearfix">
-                                    <div id="site-logo-inner">
-                                        <a href="index.html" rel="home" class="main-logo">
-                                            <img id="logo_header"
-                                                src="{{ asset('nopan2/assets/images/logo/logo_dark.png') }}"
-                                                alt="nft-gaming" width="151" height="45"
-                                                data-retina="{{ asset('nopan2/assets/images/logo/logo_dark@2x.png') }}"
-                                                data-width="151" data-height="45">
-                                        </a>
-                                    </div>
-                                </div>
-                                <form class="form-search">
-                                    <input type="text" placeholder="Search here">
-                                    <button><i class="far fa-search"></i></button>
-                                </form>
-                                <div id="site-menu">
-                                    <nav id="main-nav" class="main-nav">
-                                        <ul id="menu-primary-menu" class="menu">
-                                            <li class="menu-item menu-item-has-children">
-                                                <a href="#">Home</a>
-                                                <ul class="sub-menu">
-                                                    <li class="menu-item"><a href="index.html">Home 1</a></li>
-                                                    <li class="menu-item"><a href="home2.html">Home 2</a></li>
-                                                    <li class="menu-item"><a href="home-animation.html">Home
-                                                            Animation</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="menu-item menu-item-has-children">
-                                                <a href="#">Explore</a>
-                                                <ul class="sub-menu">
-                                                    <li class="menu-item"><a href="explore-1.html">Explore 1</a></li>
-                                                    <li class="menu-item"><a href="explore-2.html">Explore 2</a></li>
-                                                    <li class="menu-item"><a href="creator.html">Creator</a></li>
-                                                    <li class="menu-item"><a href="item.html">Item </a></li>
-                                                    <li class="menu-item"><a href="item-details.html">Item Details</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="menu-item menu-item-has-children ">
-                                                <a href="#">Community</a>
-                                                <ul class="sub-menu">
-                                                    <li class="menu-item "><a href="blog.html">Blog</a></li>
-                                                    <li class="menu-item"><a href="blog-details.html">Blog Details</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="menu-item menu-item-has-children current-item">
-                                                <a href="#">Pages</a>
-                                                <ul class="sub-menu">
-                                                    <li class="menu-item"><a href="author.html">Authors</a></li>
-                                                    <li class="menu-item"><a href="connect-wallet.html">Wallet
-                                                            Connect</a></li>
-                                                    <li class="menu-item"><a href="create-item.html">Create Item</a>
-                                                    </li>
-                                                    <li class="menu-item "><a href="login.html">Login</a></li>
-                                                    <li class="menu-item current-item"><a
-                                                            href="register.html">Register</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="menu-item ">
-                                                <a href="contact.html">Contact</a>
-                                            </li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                                <div class="button-connect-wallet">
-                                    <a href="connect-wallet.html" class="sc-button wallet  style-2">
-                                        <img src="{{ asset('nopan2/assets/images/icon/connect-wallet.svg') }}"
-                                            alt="icon">
-                                        <span>Connect Wallet</span>
-                                    </a>
-                                </div>
-                                <div class="mode_switcher">
-                                    <h6><span>Dark Mode</span> <strong>Activate</strong></h6>
-                                    <a href="#" class="light d-flex align-items-center">
-                                        <img src="{{ asset('nopan2/assets/images/icon/sun.png') }}"
-                                            alt="">
-                                    </a>
-                                    <a href="#" class="dark d-flex align-items-center is_active">
-                                        <img id="moon_dark"
-                                            src="{{ asset('nopan2/assets/images/icon/moon.png') }}"
-                                            alt="">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </header> --}}
+
 
             <section class="fl-page-title">
                 <div class="overlay"></div>
@@ -231,15 +137,9 @@
                                         <div class="input-group" id="create-item-1">
                                             <input name="name" value="" type="text" placeholder="Nama "
                                                 required="">
-                                            {{-- <input name="name" value="" type="text"
-                                                placeholder="Nama Belakang" required=""> --}}
+                                          
                                         </div>
-                                        {{-- <div class="input-group" id="create-item-1">
-                                            <input name="phone" value="" type="text"
-                                                placeholder="Nomor Telepon" required="">
-                                            <input name="name" value="" type="text" placeholder="Username"
-                                                required="">
-                                        </div> --}}
+
                                         <div class="input-group" id="create-item-1">
                                             <input name="email" value="" type="email"
                                                 placeholder="Alamat Email" required="">
@@ -248,17 +148,7 @@
                                             <input name="password" value="" type="password"
                                                 placeholder="Masukkan Sandi" required="">
                                         </div>
-                                        {{-- <div class="input-group" id="create-item-1">
-                                            <input name="password" value="" type="password"
-                                                placeholder="Ulang Sandi" required="">
-                                        </div> --}}
-                                        {{-- <div class="input-group style-2 ">
-                                            <div class="btn-check">
-                                                <input type="radio" id="html" name="fav_language"
-                                                    class="mg-bt-0" value="HTML">
-                                                <label for="html">Remember Me</label>
-                                            </div>
-                                        </div> --}}
+
                                         <div class="input-group" id="create-item-1">
                                             <button name="submit" type="submit"
                                                 class="sc-button style letter style-2"><span>Daftar Sekarang</span>
@@ -290,120 +180,9 @@
                     </div>
                 </div>
             </section>
-            {{-- <section class="new-letter">
-                <div class="container">
-                    <div class="new-letter-inner flex">
-                        <div class="new-letter-content">
-                            <h3 class="heading">Newsletters</h3>
-                            <p class="sub-heading">Most popular gaming digital nft market place </p>
-                            <div class="form-subcribe">
-                                <form id="subscribe-form" action="#" method="GET" accept-charset="utf-8"
-                                    class="form-submit">
-                                    <input name="email" value="" class="email" type="email"
-                                        placeholder="Enter Email Address" required="">
-                                    <button name="submit" type="submit" id="submit"
-                                        class="sc-button style letter style-2"><span>Browse More</span> </button>
-                                </form>
-                            </div>
-                        </div>
-                        <div class="new-letter-img">
-                            <img src="{{ asset('nopan2/assets/images/background/img-newletter.png') }}"
-                                alt="Image">
-                        </div>
-                    </div>
-                </div>
-            </section> --}}
 
-            {{-- <footer id="footer" class="clearfix bg-style">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-6 col-12">
-                            <div class="widget widget-logo">
-                                <div class="logo-footer" id="logo-footer">
-                                    <a href="index.html">
-                                        <img id="logo_footer"
-                                            src="{{ asset('nopan2/assets/images/logo/logo_dark.png') }}"
-                                            alt="nft-gaming" width="151" height="45"
-                                            data-retina="{{ asset('nopan2/assets/images/logo/logo_dark@2x.png') }}"
-                                            data-width="151" data-height="45">
-                                    </a>
-                                </div>
-                                <p class="sub-widget-logo">Sed ut perspiciatis unde omnis iste natus error sit
-                                    voluptate
-                                    accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quaes</p>
-                                <div class="widget-social">
-                                    <ul>
-                                        <li><a href="#" class="active"><i class="fab fa-facebook-f"></i></a>
-                                        </li>
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-6 col-sm-6 col-6">
-                            <div class="widget widget-menu menu-marketplace">
-                                <h5 class="title-widget">Marketplace</h5>
-                                <ul>
-                                    <li><a href="item.html">Gaming </a></li>
-                                    <li><a href="item.html">Product </a></li>
-                                    <li><a href="item.html">All NFTs</a></li>
-                                    <li><a href="item.html">Social Network</a></li>
-                                    <li><a href="item.html">Domain Names</a></li>
-                                    <li><a href="item.html">Collectibles</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6 col-6">
-                            <div class="widget widget-menu menu-supports">
-                                <h5 class="title-widget">Supports</h5>
-                                <ul>
-                                    <li><a href="contact.html">Setting & Privacy </a></li>
-                                    <li><a href="contact.html">Help & Support </a></li>
-                                    <li><a href="item.html">Live Auctions</a></li>
-                                    <li><a href="item-details.html"> Item Details</a></li>
-                                    <li><a href="contact.html"> 24/7 Supports</a></li>
-                                    <li><a href="blog.html">Blog</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 col-12">
-                            <div class="widget widget-post">
-                                <h5 class="title-widget">News & Post</h5>
-                                <ul class="post-new">
-                                    <li>
-                                        <div class="post-img">
-                                            <img src="{{ asset('nopan2') }}assets/images/post/post-recent-new-4.jpg"
-                                                alt="Post New">
-                                        </div>
-                                        <div class="post-content">
-                                            <h6 class="title"><a href="blog-details.html">Roll Out New Features
-                                                    Without
-                                                    Hurting Loyal Users</a></h6>
-                                            <a href="blog-details.html" class="post-date"><i
-                                                    class="far fa-calendar-week"></i> 25 JAN 2022</a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="post-img">
-                                            <img src="{{ asset('nopan2') }}assets/images/post/post-recent-new-5.jpg"
-                                                alt="Post New">
-                                        </div>
-                                        <div class="post-content">
-                                            <h6 class="title"><a href="blog-details.html">An Overview The Most Comon
-                                                    UX
-                                                    Design Deliverables</a></h6>
-                                            <a href="blog-details.html" class="post-date"><i
-                                                    class="far fa-calendar-week"></i> 25 JAN 2022</a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </footer> --}}
+
+
 
             <div class="bottom">
                 <div class="container">

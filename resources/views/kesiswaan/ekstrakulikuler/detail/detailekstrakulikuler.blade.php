@@ -10,7 +10,7 @@
 
     <meta charset="utf-8">
     <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
-    <title>Kompetensi Keahlian</title>
+    <title>Detail Ekstrakurikuler</title>
     <meta name="author" content="themesflat.com">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -63,8 +63,8 @@
                             <div class="breadcrumbs">
                                 <ul>
                                     <li><a href="/">Kesiswaan</a></li>
-                                    <li><a href="/indexekstrakulikuler">Ekstrakulikuler</a></li>
-                                    <li>Detail Ekstrakulikuler</li>
+                                    <li><a href="/indexekstrakulikuler">Ekstrakurikuler</a></li>
+                                    <li>Detail Ekstrakurikuler</li>
                                 </ul>
                             </div>
                         </div>

@@ -90,7 +90,7 @@
                             <div class="col-md-5">
                                 <div class="service-two__box  wow flipInY" data-wow-delay="0ms" data-wow-duration="1500ms">
 
-                                        <img src="{{ asset('fotomahasiswa/' . $upj2->foto_upj) }}" alt="" style="border-radius: 50%; width:200px; height:150px;">
+                                        <img src="{{ asset('fotomahasiswa/' . $upj2->foto_upj) }}" alt="" style="border-radius: 50%; width:200px; height:155px;">
                                     <!-- <h3><a href="service-d-seo.html">SEO Optimization</a></h3>
                                     <p>Lorem ipsum dolor amet consectetur adipisicing eiusmod tempor.</p> -->
                                 </div><!-- /.service-two__box -->

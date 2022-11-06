@@ -534,7 +534,7 @@ Route::get('/deletegalery/{id}',[UpjtekajeController::class, 'deletegalery'])->n
 Route::get('/adminvisimisi',[UpjtekajeController::class, 'loby19'])->name('adminvisimisi');
 Route::get('/tambahvisimisi',[UpjtekajeController::class, 'tambahvisimisi'])->name('tambahvisimisi');
 Route::post('/submitdata19',[UpjtekajeController::class, 'submitdata19'])->name('submitdata19');
-Route::get('/editvisimisi/{id}',[UpjtekajeController::class, 'editvisimisi'])->name('editvisimisi');
+Route::get('/editupjvisimisi/{id}',[UpjtekajeController::class, 'editupjvisimisi'])->name('editupjvisimisi');
 Route::post('/submitedit19/{id}',[UpjtekajeController::class, 'submitedit19'])->name('submitedit19');
 Route::get('/deleteupjvisimisi/{id}',[UpjtekajeController::class, 'deleteupjvisimisi'])->name('deleteupjvisimisi');
 
@@ -576,7 +576,7 @@ Route::get('/deleteupjslider/{id}',[UpjtekajeController::class, 'deleteupjslider
 
 
 //ppdb
-Route::get('/ppdb', [PpdbController::class, 'ppdb'])->name('ppdb');
+Route::get('/pendaftaran', [PpdbController::class, 'pendaftaran'])->name('pendaftaran');
 
 
 

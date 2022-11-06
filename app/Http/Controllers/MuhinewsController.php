@@ -12,7 +12,7 @@ use App\Models\footeerdua;
 class MuhinewsController extends Controller
 {
     public function index() {
-        $k = Muhinews::paginate(6);
+        $k = Muhinews::paginate(9);
         $f = Muhinews::orderBy('created_at','desc')->paginate(3);
         $personal = Personaljurusan::all();
         $logo = footeer::all();

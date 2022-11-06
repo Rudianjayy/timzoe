@@ -12,8 +12,8 @@
     <title>UPJ TEKAJE - SMK Muhammadiyah 1 Genteng</title>
     <!-- favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('landingppdb/ppdb/style/assets/images/favicons/apple-touch-icon.png') }}">
-    <link rel="shortcut icon" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
-    <link rel="apple-touch-icon-precomposed" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
+    <link rel="shortcut icon" href="{{ asset('landing/html/bidzend/assets/images/upj/UPJ.png') }}">
+    <link rel="apple-touch-icon-precomposed" href="{{ asset('landing/html/bidzend/assets/images/upj/UPJ.png') }}">
     <link rel="manifest" href="{{ asset('landingppdb/ppdb/style/') }}assets/images/favicons/site.webmanifest">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&amp;display=swap">
@@ -34,38 +34,28 @@
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/responsive.css') }}">
 
 
-    <link rel="stylesheet" href="{{asset('ppdb/landing/colugo/default/assets/css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('ps/templates.hibootstrap.com/colugo/default/assets/css/style.css')}}">
 
-    <link rel="stylesheet" href="{{asset('ppdb/landing/colugo/default/assets/css/dark.css')}}">
-
-    <link rel="stylesheet" href="{{asset('ppdb/landing/colugo/default/assets/css/responsive.css')}}">
 
 </head>
 
 <body>
 
     <div class="preloader">
-    <div class="preload preload-container">
-        <div class="preload-logo"><img src="{{ asset('landing/html/bidzend/assets/images/upj/UPJ.png') }}" alt="Image" style="width:70px;"></div>
-    </div>
+        <div class="preload preload-container">
+            <div class="preload-logo"><img src="{{ asset('landing/html/bidzend/assets/images/upj/UPJ.png') }}" alt="Image" style="width:60px;"></div>
+        </div>
     </div><!-- /.preloader -->
 
     <div class="page-wrapper">
-        {{-- <div id="SLIDE_BG">
 
-        </div> --}}
         <nav class="main-nav-one main-nav-one__home-three stricky">
             <div class="container-fluid">
                 <div class="inner-container">
-                   
+
                     <div>
-                        <a href="index.html">
-                            <img src="{{ asset('landing/html/bidzend/assets/images/avatar/background/UPJ.png') }}" alt=""
-                                style="width: 70px;">
-                        </a>
-                        <a href="/">
-                            <img src="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}" alt="" style="width: 80px;">
-                        </a>
+                        <img src="{{ asset('landing/html/bidzend/assets/images/avatar/background/UPJ.png') }}" alt="" style="width: 70px;">
+                        <img src="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}" alt="" style="width: 80px;">
                     </div><!-- /.logo-box -->
 
                     <div class="main-nav__main-navigation">
@@ -84,6 +74,7 @@
                 </div><!-- /.inner-container -->
             </div><!-- /.container-fluid -->
         </nav><!-- /.main-nav-one -->
+
         <style>
             .SLIDE_BG {
                 width: 100%;
@@ -119,23 +110,13 @@
                     background-image: url('{{ asset('fotomahasiswa/' . $ul->foto_slider2) }}');
                 }
             }
+
             @endforeach
         </style>
 
 
         <section class="SLIDE_BG" id='home'>
-             /* <div class="banner">
-                <img class="img-slider1" src="{{ asset('fotomahasiswa/' . $ul->foto_slider1) }}" >
-            </div>
-            <div class="banner2">
-                <img class="img-slider2" src="{{ asset('fotomahasiswa/' . $ul->foto_slider2) }}" >
-            </div>
-            <div class="banner3">
-                <img class="img-slider3" src="{{ asset('fotomahasiswa/' . $ul->foto_slider3) }}" >
-            </div>
-            <div class="banner4">
-                <img class="img-slider3" src="{{ asset('fotomahasiswa/' . $ul->foto_slider4) }}" >
-            </div> */
+
             {{-- <div class="particles-snow" id="banner-one-snow"></div><!-- /#cta-one-snow.particles-snow -->
 
             <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-1.png') }}" class="banner-one__bg-shape-1" alt="">
@@ -165,42 +146,30 @@
         </section><!-- /.banner-one -->
 
         <section class="about-three about-three__home-two" id='tentang'>
-            {{-- <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/about-3-bg-2-1.png') }} "
-            class="about-three-home-two__bg-image-1" alt=""> --}}
-
             <div class="container">
-
                 @foreach ($tentang as $t)
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="about-three__home-two__images">
-                            <img src="{{ asset('fotomahasiswa/' . $t->foto_tentangkami) }} " class="float-bob-y" alt="" style="width: 400px; margin-left: 40%;">
-                        </div><!-- /.about-three__home-two__images -->
+                            <img src="{{ asset('fotomahasiswa/' . $t->foto_tentangkami) }} " class="float-bob-y" alt="" style="width: 400px; margin-left: 35%;">
+                        </div>
                     </div><!-- /.col-lg-6 -->
                     <div class="col-lg-6">
-
-                        <div class="about-three__content" style="color: black;">
-                            {{-- <div class="block-title text-left">
-                                <h3></h3>
-                                <span>Selamat datang di website resmi UPJ TEKAJE</span>
-
-                            </div><!-- /.block-title text-center --> --}}
-                            <p>{!! $t->deskripsi_tentangkami !!}</p>
-
-                        </div><!-- /.about-three__content -->
-
+                        <div class="about-three__content">
+                            <p>{!!$t->deskripsi_tentangkami!!}</p>
+                        </div>
                     </div><!-- /.col-lg-6 -->
                 </div><!-- /.row -->
                 @endforeach
-
             </div>
         </section><!-- /.about-three -->
 
 
         <section id="features" class="features-area pb-70">
             <div class="container">
-                <div class="section-title">
+                <div class="section-title" id="keunggulan">
                     <h2>Keunggulan</h2>
+                    <div class="bar"></div>
                 </div>
                 <div class="row">
                     @foreach ($keunguan as $keunguan )
@@ -217,7 +186,7 @@
                 </div>
             </div>
             <div class="text-center">
-                <a href="https://wa.wizard.id/" class="thm-btn portfolio-column__more-btn"><span>Hubungi
+                <a href="https://wa.me/6283163042713?= Isi Pesan" class="thm-btn portfolio-column__more-btn"><i class="fab fa-whatsapp"></i> <span>Hubungi
                         Admin</span></a>
                 <!-- /.thm-btn portfolio-grid__more-btn -->
             </div><!-- /.text-center -->
@@ -225,15 +194,16 @@
 
         <section class="service-one" id='jasa'>
             <div class="container">
-                <div class="block-title text-center">
+                <div class="section-title">
                     <h3>Jasa yang kami tawarkan</h3>
+                    <div class="bar"></div>
                 </div><!-- /.block-title text-center -->
                 <div class="row high-gutters">
                     @foreach ($upjas as $ups)
                     <div class="col-lg-6 col-md-12 wow fadeInLeft" data-wow-duration="1500ms">
                         <div class="service-one__single">
                             <div class="service-one__icon">
-                                <img src="{{ asset('fotomahasiswa/' . $ups->foto_jasa) }}" alt="" style="border-radius: 50%; width: 400px; height:110px;">
+                                <img src="{{ asset('fotomahasiswa/' . $ups->foto_jasa) }}" alt="" style="border-radius: 50%; width: 420px; height:120px;">
                             </div><!-- /.service-one__icon -->
                             <div class="service-one__content">
                                 <h3><a href="service-details.html">{{ $ups->jasa }}</a></h3>
@@ -246,7 +216,7 @@
 
                 </div><!-- /.row -->
                 <div class="text-center">
-                    <a href="https://wa.wizard.id/" class="thm-btn portfolio-column__more-btn"><span>Hubungi
+                    <a href="https://wa.wizard.id/" class="thm-btn portfolio-column__more-btn"><i class="fab fa-whatsapp"></i> <span>Hubungi
                             Admin</span></a>
                     <!-- /.thm-btn portfolio-grid__more-btn -->
                 </div><!-- /.text-center -->
@@ -259,19 +229,12 @@
                     <p class="color-2"><span>Galery</span></p>
                     {{-- <h3>View Some of Our Latest Works <br> <span>& Case Studies for Clients</span></h3> --}}
                 </div><!-- /.block-title text-center -->
-                {{-- <ul class="portfolio-filter list-unstyled post-filter ">
-                    <li data-filter=".filter-item" class="active"><span>All</span></li>
-                    <li data-filter=".strategy"><span>Strategy</span></li>
-                    <li data-filter=".optimization"><span>Optimization</span></li>
-                    <li data-filter=".advertising"><span>Advertising</span></li>
-                    <li data-filter=".social"><span>Social</span></li>
-                </ul><!-- /.portfolio-filter list-unstyled --> --}}
                 <div class="row high-gutters masonary-layout filter-layout">
                     @foreach ($upgal as $gatal)
                     <div class="col-lg-4 col-md-6 col-sm-12 filter-item masonary-item  strategy">
                         <div class="portfolio-one__single">
                             <div class="portfolio-one__image">
-                                <img src="{{ asset('fotomahasiswa/' . $gatal->foto_galery) }}" alt="">
+                                <img src="{{ asset('fotomahasiswa/' . $gatal->foto_galery) }}" alt="" style="height:250px;">
                                 <a class="img-popup" href="{{ asset('fotomahasiswa/' . $gatal->foto_galery) }}"><i class="fal fa-plus"></i></a>
                             </div><!-- /.portfolio-one__image -->
 
@@ -284,37 +247,20 @@
             </div><!-- /.container -->
         </section><!-- /.portfolio-grid -->
 
-        @foreach ($upjvis as $upss)
+        @foreach ($upjvisimisi as $upjvisimisi)
         <section class="cta-one cta-one__about-one" style="background-image: url({{ asset('landingppdb/ppdb/style/assets/images/shapes/cta-bg-2-1.png') }});">
-            {{-- <div class="particles-snow" id="cta-one-snow"></div><!-- /#cta-one-snow.particles-snow --> --}}
-
-            {{-- <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-1.png') }}" class="cta-one__bg-shape-1" alt="">
-            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-2.png') }}" class="cta-one__bg-shape-2" alt="">
-            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-3.png') }}" class="cta-one__bg-shape-3" alt="">
-            <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-4.png') }}" class="cta-one__bg-shape-4" alt=""> --}}
-
-            {{-- <div class="error-404__bubble-1"></div><!-- /.error-404__bubble-1 -->
-            <div class="error-404__bubble-2"></div><!-- /.error-404__bubble-2 -->
-            <div class="error-404__bubble-3"></div><!-- /.error-404__bubble-3 -->
-            <div class="error-404__bubble-4"></div><!-- /.error-404__bubble-4 -->
-            <div class="error-404__bubble-5"></div><!-- /.error-404__bubble-5 -->
-            <div class="error-404__bubble-6"></div><!-- /.error-404__bubble-6 -->
-            <div class="error-404__bubble-7"></div><!-- /.error-404__bubble-7 -->
-            <div class="error-404__bubble-8"></div><!-- /.error-404__bubble-8 --> --}}
-
             <div class="container">
                 <h3>Visi <br></h3>
-                <p style="color: black;">{!! $upss->upj_visi !!}</p>
+                <p>{!! $upjvisimisi->upj_visi !!}</p>
                 <h3>Misi <br></h3>
-                <p style="color: black;">{!! $upss->upj_misi !!}</p>
-                {{-- <a href="#" class="thm-btn cta-one__btn"><span>Join Us Now</span></a><!-- /.thm-btn cta-one__btn --> --}}
+                <p style="color:black !important;">{!! $upjvisimisi->upj_misi !!}</p>
             </div><!-- /.container -->
         </section><!-- /.cta-one -->
 
         <section class="video-one">
             <div class="container">
-                <div class="video-one__box text-center wow fadeInUp" data-wow-duration="1500ms" style="background-image: url({{ asset('fotomahasiswa/' . $upss->foto_bg) }});">
-                    <a href="{{ $upss->link_yt }}" class="video-popup"><i class="fal fa-play-circle"></i></a>
+                <div class="video-one__box text-center wow fadeInUp" data-wow-duration="1500ms" style="background-image: url({{ asset('fotomahasiswa/' . $upjvisimisi->foto_bg) }});">
+                    <a href="{{ $upjvisimisi->link_yt }}" class="video-popup"><i class="fal fa-play-circle"></i></a>
                 </div><!-- /.video-one__box -->
             </div><!-- /.container -->
         </section><!-- /.video-one -->
@@ -327,7 +273,6 @@
             <div class="container">
                 <div class="block-title text-center">
                     <p class="color-2"><span>Structure Management</span></p>
-                    {{-- <h3>Work with The Awesome Team <br> <span>of Our Company</span></h3> --}}
                 </div><!-- /.block-title text-center -->
                 <div class="row high-gutters">
                     @foreach ($team as $tm)
@@ -357,7 +302,6 @@
             </div><!-- /.container -->
         </section><!-- /.team-one -->
 
-        @include('koneksi.mitra')
 
 
         <section class="testimonials-one testimonials-one__about-one">
@@ -412,74 +356,27 @@
         </section><!-- /.contact-one --> --}}
 
         <!-- contact -->
-<section id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="contact-form">
-                    <div class="area-heading text-left xs-text-center margin-50px-bottom">
-                        <div class="text-medium text-red margin-10px-bottom">Have A Question?!!</div>
-                        <h3 class="area-title text-capitalize alt-font text-blue margin-20px-bottom font-weight-300 sm-width-100 xs-width-100">
-                            Let's Get In Touch</h3>
-                        <div class="seperator margin-20px-bottom">
-                            <hr class="seperator-two">
-                            <hr class="seperator-one">
+        <section id="about" class="about-area pb-100">
+            <div class="container">
+                <div class="section-title" id="map">
+                    <h2>Kunjungi Kami</h2>
+                    <div class="bar"></div>
+                    <p>Kunjungi Kami. Kami melayani Konsultasi dan Cek Gratis.</p>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-sm-6">
+                        <div class="row">
+                            <div class="col">
+                             <center>  <iframe class="map-contact" src="https://maps.google.com/maps?q=smk%20muhammadiyah%201%20genteng&#038;t=m&#038;z=10&#038;output=embed&#038;iwloc=near" width="1150" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></center>
+                            </div>
                         </div>
                     </div>
-                    <form class="margin-50px-bottom">
-                            <div class="col-xs-6 no-padding">
-                                <input type="text" class="form-control margin-30px-bottom" placeholder="Your Name">
-                            </div>
-                            <div class="col-xs-6 no-padding">
-                                <input type="email" class="form-control margin-30px-bottom" placeholder="Your Email">
-                            </div>
+                </div>
+            </div>
+        </section>
 
-                            <div class="col-xs-12 no-padding">
-                            <textarea class="form-control margin-50px-bottom"
-                                      placeholder="Your Message"></textarea>
-                            </div>
-                            <a href="#." class="btn btn-rounded btn-red btn-large width-100">Get Started Now</a>
-                    </form>
-                    <div class="address bg-light-gray padding-20px-all xs-margin-50px-bottom">
-                        <div class="address-item">
-                            <div class="row">
-                                <div class="col-xs-1 no-padding text-center margin-20px-bottom"><i
-                                        class="fa fa-map-marker" aria-hidden="true"></i></div>
-                                <div class="col-xs-11">
-                                    <div class="text-small text-blue margin-20px-bottom">Address:<span
-                                            class="text-dark-gray display-block">Come visit us: 123 New Street, Our City , Australia.</span>
-                                    </div>
-                                </div>
-                                <div class="col-xs-1 no-padding text-center"><i class="fa fa-question-circle"
-                                                                                aria-hidden="true"></i></div>
-                                <div class="col-xs-5">
-                                    <div class="text-small text-blue">Email:<span class="text-dark-gray display-block">email@website.com</span>
-                                    </div>
-                                </div>
-                                <div class="col-xs-1 no-padding text-center"><i class="fa fa-phone"
-                                                                                aria-hidden="true"></i></div>
-                                <div class="col-xs-5">
-                                    <div class="text-small text-blue">Phone:<span class="text-dark-gray display-block">002 343474383</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="row">
-                    <div class="col">
-                        <iframe class="map-contact"
-                            src="https://maps.google.com/maps?q=smk%20muhammadiyah%201%20genteng&#038;t=m&#038;z=10&#038;output=embed&#038;iwloc=near"
-                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-       
+        @include('koneksi.mitra')
+
 
         <footer class="site-footer-upj">
 

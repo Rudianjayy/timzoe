@@ -29,12 +29,7 @@
                                 id="kt_account_profile_details_submit">Tambah
                                 +</a>
                         </div>
-<<<<<<< HEAD
-                        <table  class="table table-bordered dt-responsive nowrap">
-=======
-                        <table id="datatable" class="table table-bordered dt-responsive nowrap"
-                        style="border-collapse: collapse; border-spacing: 0; width: 100%;">
->>>>>>> c66443fcf8b8ade234c160464e0875b20a5134ce
+                        <table class="table table-bordered dt-responsive nowrap">
 
                             <thead>
                                 <tr>

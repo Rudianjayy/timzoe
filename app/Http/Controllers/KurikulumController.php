@@ -5,8 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\footeer;
 use App\Models\Jurusan;
 use App\Models\Muhinews;
-use Barryvdh\DomPDF\PDF;
-use App\Models\Kelulusan;
 use App\Models\kurikulum;
 use App\Models\Footeerdua;
 use Illuminate\Http\Request;
@@ -15,11 +13,10 @@ use App\Models\Suratkelulusan;
 use PhpOffice\PhpWord\PhpWord;
 use App\Models\Personaljurusan;
 use App\Exports\KelulusanExport;
-use App\Models\Jurusankelulusan;
 use App\Models\kalenderakademik;
 use Maatwebsite\Excel\Facades\Excel;
 use PhpOffice\PhpWord\Writer\Word2007;
-
+use Barryvdh\DomPDF\Facade\Pdf;
 class KurikulumController extends Controller
 {
 

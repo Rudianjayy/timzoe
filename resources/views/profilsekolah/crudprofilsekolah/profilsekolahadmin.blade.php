@@ -30,11 +30,11 @@
                 <div class="card">
                     <div class="card-body">
 
-                        <div>
+                        {{--  <div>
                             <a href="/tambahprofilsekolah" class="btn btn-primary mt-5"
                                 id="kt_account_profile_details_submit">Tambah
                                 +</a>
-                        </div>
+                        </div>  --}}
                         <table id="example" class="table table-bordered dt-responsive nowrap">
 
                             <thead>

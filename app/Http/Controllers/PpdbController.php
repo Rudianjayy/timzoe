@@ -8,9 +8,9 @@ use Illuminate\Http\Request;
 
 class PpdbController extends Controller
 {
-    public function ppdb(){
+    public function pendaftaran(){
         $f = Muhinews::all();
         $kh = Jurusan::all();
-        return view('ppdb.ppdb', compact('f','kh'));
+        return view('ppdb.pendaftaran', compact('f','kh'));
     }
 }

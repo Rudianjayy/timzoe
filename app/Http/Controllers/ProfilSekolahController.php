@@ -22,7 +22,7 @@ class ProfilSekolahController extends Controller
         $logo = footeer::all();
         $link = footeerdua::all();
         $d = Muhinews::orderBy('created_at','desc')->paginate(3);
-        return view('profilsekolah.crudprofilsekolah.profilsekolah',compact('q','f','kh','personal','logo','link','d'));
+        return view('profilsekolah.profilsekolah',compact('q','f','kh','personal','logo','link','d'));
     }
     public function profilsekolahadmin(){
         $data = profilsekolah::all();

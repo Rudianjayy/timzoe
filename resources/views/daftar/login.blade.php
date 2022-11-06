@@ -70,7 +70,6 @@
                         <div class="col-md-12">
                             <div class="breadcrumbs">
                                 <ul>
-                                    <li><a href="index.html">PPDB</a></li>
                                     <li>Login</li>
                                 </ul>
                             </div>

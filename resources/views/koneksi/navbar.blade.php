@@ -142,7 +142,7 @@
                                 <a href="contact.html">Contact</a>
                             </li> --}}
                             <li class="menu-item ">
-                                <a href="/ppdb">PPDB</a>
+                                <a href="/pendaftaran">PPDB</a>
                             </li>
 
                             </ul>

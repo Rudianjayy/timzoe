@@ -70,6 +70,10 @@ font-family: 'Poppins', sans-serif; */
 	--thm-black: #162f62;
 	--thm-black-rgb: 22, 47, 98;
 }
+html {
+    scroll-behavior: smooth;
+  }
+
 
 html {
 	scroll-behavior: smooth;
@@ -3371,7 +3375,6 @@ a:focus {
 .blog-grid .high-gutters>[class*=col-] {
 	padding-left: 20px;
 	padding-right: 20px;
-    display: -webkit-box;
 
 }
 

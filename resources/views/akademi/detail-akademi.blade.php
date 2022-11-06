@@ -85,7 +85,7 @@
                                         @php
                                             $akademi = \App\Models\Akademi::all();
                                         @endphp
-                                        @foreach ($akademi as $ami )    
+                                        @foreach ($akademi as $ami )
                                         <li>
                                             <a href="/detailakademi/{{ $ami->id }}">{{ $ami->judul_akademi }}</a>
                                         </li>
@@ -200,6 +200,15 @@
     <script src="{{ asset('landing/html/bidzend/assets/js/count-down.js') }}"></script>
     <script src="{{ asset('landing/html/bidzend/assets/js/shortcodes.js') }}"></script>
     <script src="{{ asset('landing/html/bidzend/assets/js/main.js') }}"></script>
+
+    {{-- js nya ppdb kuambil truh sini --}}
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/TweenMax.min.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/wow.min.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/swiper.min.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/particles.min.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/particel-config.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/theme.js') }}"></script>
 
 
 

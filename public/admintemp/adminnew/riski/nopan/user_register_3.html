@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from designreset.com/preview-equation/default-light/user_register_3.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Oct 2022 08:38:48 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <title>Register-3 | Equation - Multipurpose Bootstrap Dashboard Template </title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico"/>
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="assets/css/loader.css" rel="stylesheet" type="text/css" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/plugins.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/users/register-3.css" rel="stylesheet" type="text/css" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+    
+</head>
+<body class="login">
+    <div id="eq-loader">
+      <div class="eq-loader-div">
+          <div class="eq-loading dual-loader mx-auto mb-5"></div>
+      </div>
+    </div>    <form class="form-login">
+        <div class="row">
+            <div class="col-md-12 text-center mb-4">
+                <img alt="logo" src="assets/img/logo-6.png" class="theme-logo">
+            </div>
+            <div class="col-md-12">
+                <label for="inputUsername" class="">USERNAME</label>
+                <input type="text" id="inputUsername" class="form-control mb-4" placeholder="Login" required >
+                <label for="inputEmail" class="">EMAIL</label>
+                <input type="email" id="inputEmail" class="form-control mb-4" placeholder="Login" required >
+                <label for="inputPassword" class="">PASSWORD</label>                    
+                <input type="password" id="inputPassword" class="form-control mb-4" placeholder="Password" required>
+                <label for="inputRepeatPassword" class="">REPEAT PASSWORD</label>                    
+                <input type="password" id="inputRepeatPassword" class="form-control mb-5" placeholder="Password" required>
+                <div class="terms-conditions-chkbox d-flex justify-content-center mb-4">
+                    <div class="custom-control custom-checkbox mr-3">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1" value="remember-me">
+                        <label class="custom-control-label" for="customCheck1"><span class="d-block mt-1">I agree to all <a href="#">Terms</a></span></label>
+                    </div>
+                </div>                    
+                <button type="submit" class="btn btn-gradient-dark btn-rounded btn-block">Register</button>
+                <div class="forgot-pass text-center mt-4">
+                    <a href="user_login_3.html">Back</a>
+                </div>
+            </div>
+        </div>
+    </form>
+    
+    <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
+    <script src="assets/js/libs/jquery-3.1.1.min.js"></script>
+    <script src="assets/js/loader.js"></script>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    
+    <!-- END GLOBAL MANDATORY SCRIPTS -->
+</body>
+
+<!-- Mirrored from designreset.com/preview-equation/default-light/user_register_3.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Oct 2022 08:38:48 GMT -->
+</html>

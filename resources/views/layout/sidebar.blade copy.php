@@ -76,48 +76,85 @@
         </li>
 
 
-        <ul class="list-unstyled menu-categories" id="accordionExample">
-            <li class="menu">
-                <a href="#dashboard" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
-                    <div class="">
-                        <i class="flaticon-computer-6 ml-3"></i>
-                        <span>Dashboard</span>
-                    </div>
-                </a>
-                <ul class="collapse submenu list-unstyled show" id="dashboard" data-parent="#accordionExample">
-                    <li class="active">
-                        <a href="/welcome"> <i class="flaticon-computer-4"></i> Dashboard </a>
-                    </li>
 
-                </ul>
-            </li>
-            <li class="menu">
-                <a href="#ecommerce" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                    <div class="">
-                        <i class="flaticon-cart-2"></i>
-                        <span>Tentang Kami</span>
-                    </div>
-                    <div>
-                        <i class="flaticon-right-arrow"></i>
-                    </div>
-                </a>
-                <ul class="collapse submenu list-unstyled" id="ecommerce" data-parent="#accordionExample">
-                    <li>
-                        <a href="/profilsekolahadmin"> Profil Sekolah</a>
-                    </li>
-                    <li>
-                        <a href="/visimisiadmin"> Visi & Misi </a>
-                    </li>
-                    <li>
-                        <a href="/identitas_admin"> Identitas Sekolah </a>
-                    </li>
-                    <li>
-                        <a href="/fasilitasadmin"> Fasilitas Sekolah </a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
+        <li>
+            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                <i class="ti-package"></i>
+                <span>Muhinews</span>
+            </a>
+            <ul class="sub-menu" aria-expanded="false">
+                <li><a href="/muhinewsadmin">Muhinews</a></li>
+                <li><a href="/kategoriberita">Kategori Muhinews</a></li>
+            </ul>
+        </li>
+
+
+        <li>
+            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                <i class="mdi mdi-account-details-outline"></i> <span class="badge rounded-pill bg-primary float-end"></span>
+                <span>UPJ</span>
+            </a>
+            <ul class="sub-menu" aria-expanded="false">
+                <li><a href="/adminupj">UPJ TEKAJE</a></li>
+                <li><a href="/adminupj2">Foto & Jasa UPJ</a></li>
+                <li><a href="/adminbsi">BSI</a></li>
+                <li><a href="/adminmuhiprint">Muhi Printing</a></li>
+                <li><a href="/adminpegadaian">Pegadaian</a></li>
+                <li><a href="/adminsuryamart">Suryamart</a></li>
+                <li><a href="/adminedotel">Edotel</a></li>
+            </ul>
+        </li>
+        <li class="menu-title">UPJ TEKAJE</li>
+        <li>
+            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                <i class="mdi mdi-account-details-outline"></i> <span class="badge rounded-pill bg-primary float-end"></span>
+                <span>UPJ TEKAJE</span>
+            </a>
+            <ul class="sub-menu" aria-expanded="false">
+                <li><a href="/tentangkami">Tentang Kami</a></li>
+                <li><a href="/adminteam">Structure Team</a></li>
+                <li><a href="/adminkeunggulan">Keunggulan</a></li>
+                <li><a href="/adminjasa">Jasa</a></li>
+                <li><a href="/admingalery">Galery</a></li>
+                <li><a href="/adminvisimisi">Visi Misi</a></li>
+                <li><a href="/admintestimoni">Testimoni</a></li>
+                <li><a href="/adminupjfooter">UPJ Footer</a></li>
+                <li><a href="/adminupjfooterlink">UPJ Footer Link</a></li>
+                <li><a href="/adminupjslider">UPJ Slider</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="/adminmitra" class="waves-effect">
+                <i class="mdi mdi-account-details-outline"></i> <span class="badge rounded-pill bg-primary float-end"></span>
+                <span>Mitra</span>
+            </a>
+        </li>
+
+
+
+
+        <li class="menu-title">Manajemen Beranda</li>
+
+        <li>
+            <a href="/data-album" class="waves-effect">
+                <i class="mdi mdi-account-details-outline"></i> <span class="badge rounded-pill bg-primary float-end"></span>
+                <span>Data Album</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="/indexprestasi" class="waves-effect">
+                <i class="mdi mdi-account-details-outline"></i> <span class="badge rounded-pill bg-primary float-end"></span>
+                <span>Prestasi</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="/sambutanadmin" class="waves-effect">
+                <i class="mdi mdi-account-details-outline"></i> <span class="badge rounded-pill bg-primary float-end"></span>
+                <span>Sambutan Kepsek</span>
+            </a>
+        </li>
 
         <li>
             <a href="/fotoslideradmin" class="waves-effect">
@@ -157,10 +194,9 @@
         <li>
         <li>
             <a href="/logout" class="waves-effect">
-                <i class="mdi mdi-chevron-left"></i> <span class="badge rounded-pill bg-primary float-end"></span>
-                <span>Keluar</span>
+                <i class="mdi mdi-chevron-left"></i> <span class="badge rounded-pill bg-primary float-end" ></span>
+                <span onclick="return confirm('Anda Yakin Ingin Keluar?')">Keluar</span>
             </a>
         </li>
     </ul>
 </div>
-

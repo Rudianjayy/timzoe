@@ -935,7 +935,6 @@
     </aside>
     <!--  END CONTROL SIDEBAR  -->
 
-    @include('layout.script')
 
 </body>
 

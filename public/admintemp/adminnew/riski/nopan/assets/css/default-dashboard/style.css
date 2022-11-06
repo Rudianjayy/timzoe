@@ -1,0 +1,1359 @@
+.table td {
+    padding: .75rem;
+    vertical-align: top;
+    border-top: none;
+}
+.table > thead:first-child > tr:first-child > th {
+    border-top: none;
+}
+
+.data-widgets {
+    height: 100%;
+}
+.data-widgets .widget .media .icon {
+    flex: 1;
+}
+.data-widgets .widget .media .icon i {
+    padding: 10px;
+    font-size: 28px;
+    border-radius: 50%;
+}
+
+.data-widgets .widget .media .media-body .widget-text {
+    font-size: 20px;
+    font-weight: 600;
+    color: #3f4257;
+    word-wrap: break-word;
+}
+
+.data-widgets .widget .media .media-body .widget-numeric-value {
+    font-size: 22px;
+    color: #3f4257;
+}
+.data-widgets .widget .widget-total-stats {
+    font-size: 16px;
+}
+.data-widgets .widget.t-sales-widget i {
+    background-color: #fbccdd;
+    color: #f8538d;
+}
+.data-widgets .widget.t-order-widget i {
+    background-color: #dccff7;
+    color: #805dca;
+}
+.data-widgets .widget.t-customer-widget i {
+    background-color: #b6fff1;
+    color: #1abc9c;
+}
+.data-widgets .widget.t-income-widget i {
+    background-color: #ffeccb;
+    color: #e9b02b;
+}
+
+
+/*Monthly Chart*/
+
+#chartdiv {
+    height: 339px;
+}
+.monthly-chart h3 {
+    color: #3b3f5c;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+}
+.monthly-chart .monthly-chart-tab.nav-pills .nav-link.active,
+.monthly-chart .monthly-chart-tab.nav-pills .show>.nav-link {
+    background-image: linear-gradient(to right, #25d5e4 0%, #6156ce 100%);
+}
+.monthly-chart .monthly-chart-tab.nav-pills .nav-link {
+    padding: 6px 19px;
+    font-size: 13px;
+    border-radius: 20px;
+}
+.ct-series-a .ct-bar {
+    stroke: #6156ce;
+    stroke-width: 6px;
+}
+.ct-series-b .ct-bar {
+    stroke: #25d5e4;
+    stroke-width: 4px;
+}
+.ct-series-a .ct-point {
+    stroke: #6156ce;
+}
+.ct-series-a .ct-line {
+    stroke: #6156ce;
+    stroke-width: 2px;
+}
+.ct-series-b .ct-point {
+    stroke: #25d5e4;
+    
+}
+.ct-series-b .ct-line {
+    stroke: #25d5e4;
+    stroke-width: 2px;
+}
+.ct-series-a .ct-area {
+    fill: #6156ce;
+}
+.ct-series-b .ct-area {
+    fill: #25d5e4;
+}
+.d-m-visitors {
+    background-color: #25d5e4;
+    height: 8px;
+    width: 8px;
+}
+.visitors {
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #515365;
+    font-size: 14px;
+    margin-left: 10px;
+}
+.d-m-page-view {
+    background-color: #6156ce;
+    height: 8px;
+    width: 8px;
+}
+.page-view {
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #515365;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+
+/*
+    Profit and Revenue
+*/
+
+.monthly-profit-chart .ct-series-a .ct-slice-donut {
+    stroke: #f8538d;
+    stroke-width: 47px !important;
+}
+.monthly-profit-chart .ct-series-b .ct-slice-donut {
+    stroke: #3862f5;
+    stroke-width: 32px !important;
+}
+.monthly-profit-chart .ct-label {
+    fill: #fff;
+}
+.ct-label{
+    color: #515365;
+}
+.sales, .revenue {
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #515365;
+    font-size: 14px;
+    padding-left: 15px;
+}
+.d-m-revenue {
+    background-color: #3232b7;
+    width: 8px;
+    height: 8px;
+}
+.d-m-profit {
+    background-color: #ee3d50;
+    width: 8px;
+    height: 8px;
+}
+
+/*  Task List   */
+
+.task-scroll {
+    height: 270px;
+}
+.task-container .task-list .task-header {
+    padding: 20px;
+    border-bottom: 1px solid #e9ecef;
+}
+.task-container .task-list .task-header h6 {
+    color: #3b3f5c;
+    font-size: 16px;
+    font-weight: 600;
+}
+.task-container .task-list .task-body table > tbody tr td {
+    padding: 26px 20px 0;
+}
+.task-container .task-list .task-body table > tbody td .task-item .task-title {
+    font-size: 17px;
+    font-weight: 600;
+    color: #1d1d1d;
+}
+.task-container .task-list .task-body table > tbody td .task-item ul li img {
+    width: 35px;
+    height: 35px;
+}
+.task-container .task-list .task-body table > tbody td .task-item ul li .txt-profile {
+    font-size: 18px;
+    display: inline-flex;
+    width: 36px;
+    height: 36px;
+    color: #fff;
+    border-radius: 50%;
+    background-color: #adb5bd;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+}
+.task-container .task-list .task-body table > tbody td .task-item ul li .txt-profile-success {
+    color: #1abc9c;
+    background-color: #b6fff1;
+}
+.task-container .task-list .task-body table > tbody td.action i {
+    font-size: 16px;
+    color: #888ea8;
+    margin-bottom: 14px;
+}
+.task-container .task-list .task-body table > tbody td.action .meta-info {
+    font-size: 14px;
+    color: #888ea8;
+}
+.task-container .task-list .task-body .action-button {
+    border-top: 1px solid #e9ecef;
+}
+.task-container .task-list .task-body .action-button button {
+    font-size: 15px;
+    font-weight: 600;
+    color: #805dca;
+}
+
+
+
+/*      card        */
+
+
+/*  CARD 1  */
+
+.card-1 {
+    max-width: 100%;
+    height: 458px;
+    background-image: linear-gradient(to top, #00bcd4 0%, #3f51b5 100%);
+    color: #fff;
+    padding: 30px 25px;
+}
+.card-1 button {
+    color: #fff !important;
+    border-width: 2px!important;
+}
+.card-1 button:hover, .card-1 button:focus {
+    color: #3b3f5c !important;
+}
+.card-1 .badge-collapsed-img {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    left: 0;
+}
+.card-1 .badge-collapsed-img img {
+    width: 42px;
+    height: 42px;
+}
+
+
+
+/*      Order Summary   */
+
+.order-summary .widget-content-area  {
+    height: 388px;
+}
+.order-summary .widget-header {
+    border-bottom: 1px solid #e9ecef
+}
+
+.order-summary .card-title {
+    font-size: 14px;
+    color: #6a6c86;
+}
+.order-summary .t-amount {
+    position: relative;
+    font-size: 36px;
+    color: #3b3f5c;
+    padding: 0 20px;
+}
+.order-summary .t-amount:before {
+    content: "$";
+    position: absolute;
+    left: 8px;
+    font-size: 16px;
+    bottom: 4px;
+}
+.order-summary .order-rate {
+    font-size: 14px;
+    color: #3b3f5c;
+}
+.order-summary .order-rate i {
+    color: #18d17f;
+}
+.order-summary .media i {
+    padding: 9px;
+    border-radius: 50%;
+    margin-right: 5px;
+    color: #fff;
+    font-size: 17px;
+}
+.order-summary .media.processed i {
+    background-color: #f8538d;
+}
+.order-summary .media.pending i {
+    background-color: #00d1c1;
+}
+.order-summary .media.delivered i {
+    background-color: #00b1f4;
+}
+.order-summary .media .media-body p {
+    color: #3b3f5c;
+    font-size: 15px;
+}
+.order-summary .progress {
+    margin-top: 8px;
+    border-radius: 20px;
+    height: 6px;
+}
+.order-summary .progress .progress-bar {
+    background-color: #6156ce;
+    border-radius: 20px;
+}
+
+
+
+/*  New Products    */
+
+.new-products .table > thead > tr > th {
+    color: #1d1d1d;
+    font-size: 15px;
+    padding: 10px 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-bottom: 0px solid #ddd;
+    vertical-align: middle;
+}
+.new-products .table > tbody > tr > td {
+    color: #3b3f5c;
+    vertical-align: middle;
+    font-size: 15px;
+    padding: 14px 8px;
+    border-bottom: 0.07rem solid #e9ecef;
+}
+.new-products .table > tbody > tr > td span.badge {
+    font-weight: 600;
+    padding: 5px 19px;
+}
+.new-products .table > tbody > tr > td span.badge.badge-success {
+    background-color: #b6fff1;
+    color: #1abc9c;
+    box-shadow: none;
+}
+.new-products .table > tbody > tr > td span.badge.badge-info {
+    background-color: #bae7ff;
+    color: #00b1f4;
+    box-shadow: none;
+}
+.new-products .table > tbody > tr > td span.badge.badge-secondary {
+    background-color: #dccff7;
+    color: #805dca;
+    box-shadow: none;
+}
+.new-products .table .new-control-indicator {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+.new-products .table .new-control.new-checkbox span.new-control-indicator:after {
+    margin-left: -3px;
+}
+.new-products .table > tbody > tr > td img {
+    border-radius: 50%;
+    width: 51px;
+    height: 49px;
+    border: 2px solid #5247bd;
+}
+.new-products .toolbar ul {
+}
+.new-products .toolbar ul li {
+    margin-right: 0;
+    cursor: pointer;
+}
+.new-products .toolbar ul li i {
+     font-size: 22px;
+}
+.new-products .toolbar ul li span {
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.toolbar {
+    position: relative;
+}
+.toolbar-toggle {
+    cursor: pointer;
+    font-size: 35px;
+    position: relative;
+    top: -11px;
+    color: #3232b7;
+}
+.toolbar:hover .toolbar-toggle {
+    color: #0081e6;
+}
+.toolbar:hover .toolbar-dropdown {
+    display: block;
+}
+.toolbar-dropdown {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: -12px;
+    margin-left: auto;
+    margin-right: auto;    
+    z-index: 10;
+    padding: 5px 5px;
+    border-radius: 6px;
+    background-color: #fff !important;
+    border: 1px solid #fff !important;
+    max-height: 400px;
+    height: auto;
+    max-width: 111px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    box-shadow: 0px 0px 15px 1px rgba(113, 106, 202, 0.2);
+    display: none;
+}
+.new-products .table > tbody > tr:last-child .toolbar-dropdown {
+    bottom: 40px;
+    margin-top: 0;;
+}
+.new-products .toolbar ul:hover span {
+    color: #0081e6;
+}
+.new-products .toolbar ul:hover i {
+    color: #0081e6;
+
+}
+.new-products .table > li > a i {
+    margin: 0;
+    font-size: 20px;
+    color: #888ea8;
+    display: block;
+}
+.new-products.table-responsive::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+.new-products.table-responsive::-webkit-scrollbar-button:start:decrement,
+.new-products.table-responsive::-webkit-scrollbar-button:end:increment {
+    height: 0px;
+    display: block;
+    background-color: #000;
+    width: 0;
+}
+.new-products.table-responsive::-moz-scrollbar-track-piece {
+    background-color: #fff;          /*Global Track Peice(the slider noob.)*/
+    -webkit-border-radius: 6px;
+}
+.new-products.table-responsive::-webkit-scrollbar-track-piece {
+    background-color: #fff;          /*Global Track Peice(the slider noob.)*/
+    -webkit-border-radius: 6px;
+}
+.new-products.table-responsive::-moz-scrollbar-thumb:vertical {
+    height: 50px;
+    background-color: #dedfdf;            /* Up/Down slider background*/
+    -webkit-border-radius: 6px;
+}    
+.new-products.table-responsive::-webkit-scrollbar-thumb:vertical {
+    height: 50px;
+    background-color: #dedfdf;            /* Up/Down slider background*/
+    -webkit-border-radius: 6px;
+}
+.new-products.table-responsive::-webkit-scrollbar-thumb:horizontal {
+    width: 50px;
+    background-color: #dedfdf;            /* Side/Side slider background*/
+    -webkit-border-radius: 3px;
+}
+
+/*  Tickets    */
+
+
+.ticket-scroll {
+    height: 331px;
+    padding-bottom: 20px;
+}
+.raised-tickets {
+    
+}
+.raised-tickets .table-header {
+    border-bottom: 1px solid #e9ecef;
+}
+.raised-tickets .table-header p {
+    padding: 26px 20px;
+    color: #3b3f5c;
+    font-size: 16px;
+    font-weight: 600;
+}
+.raised-tickets table thead tr {
+    border-bottom: 1px solid #e9ecef;
+}
+.raised-tickets table thead tr th {
+    
+}
+.raised-tickets table tbody td {
+    padding: 23px 19px;
+}
+.raised-tickets table tbody tr:not(:last-child) {
+    border-bottom: 1px solid #f1f3f1;
+}
+.raised-tickets table tbody td > .media img {
+    width: 56px;
+}
+.raised-tickets table tbody td > .media .media-body h6 {
+    font-weight: 600;
+    font-size: 17px;
+    color: #1d1d1d;
+    margin-bottom: 10px;
+}
+.raised-tickets table tbody td > .media .media-body p {
+    color: #888ea8;
+    font-size: 13px;
+}
+.raised-tickets table tbody td > .media .media-body p i {
+    font-size: 20px;
+    vertical-align: bottom;
+}
+.raised-tickets table tbody td.action i {
+    font-size: 28px;
+    color: #e9ecef;
+}
+.raised-tickets table tbody td.action i.t-inprogress {
+    color: #e9b02b;
+}
+.raised-tickets table tbody td.action i.t-solved {
+    color: #1abc9c;
+}
+.raised-tickets table tbody td.action i.t-not-solved {
+    color: #e7515a;
+}
+@media all and (-ms-high-contrast:none) {
+    .task-container.h-100 {
+        height: auto!important;
+    }
+    .raised-tickets table tbody td > .media .media-body {
+        flex: none; 
+    }
+}
+
+
+/*      Chat Messages       */
+
+
+/* Chat Header */
+
+.chat-messages .chat-container .chat-header {
+    padding: 20px 0px 20px 20px;
+    border-bottom: 1px solid #e9ecef;
+}
+.chat-messages .chat-container .chat-header .media i.icon {
+    font-size: 24px;
+    padding: 10px;
+    background-color: #3862f5;
+    border-radius: 50%;
+    color: #fff;
+}
+.chat-messages .chat-container .chat-header .media .custom-dropdown a.dropdown-toggle:hover {
+    background-color: transparent;
+}
+
+.chat-messages .chat-container .chat-header .media .media-body h6 {
+    font-size: 19px;
+    font-weight: 600;
+    color: #1d1d1d;
+}
+.chat-messages .chat-container .chat-header .media .media-body p {
+    color: #6a6c86;
+}
+.chat-messages .chat-container .chat-header .media i:not(.icon) {
+    font-size: 17px;
+    color: #888ea8;
+    cursor: pointer;
+}
+
+/* Chat Body */
+
+
+.chat-messages .chat-container .chat-body .message-scroll {
+    height: 290px;
+}
+
+
+.chat-messages .chat-container .chat-body .table > tbody > tr > td {
+    padding: 18px 19px 24px 19px;
+}
+.chat-messages .chat-container .chat-body .table > tbody > tr .media img {
+    width: 48px;
+}
+.chat-messages .chat-container .chat-body .table > tbody > tr .media .media-body h6 {
+    font-weight: 600;
+    font-size: 17px;
+    color: #1d1d1d;
+}
+.chat-messages .chat-container .chat-body .table > tbody > tr .media .media-body p.message {
+    color: #b7b7b7;
+    font-size: 15px;
+}
+.chat-messages .chat-container .chat-body .table > tbody > tr > td .meta-time {
+    color: #9a9a9a;
+    font-size: 13px;
+}
+.chat-messages .chat-container .chat-body .show-all-msg a {
+    color: #3862f5;
+    font-size: 19px;
+}
+
+
+/*  Calendar      */
+
+.pignose-calendar {
+    width: 100%;
+    max-width: 100%;
+    font-size: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: none;
+}
+
+.pignose-calendar .pignose-calendar-top {
+    padding: 3em 0;
+    position: relative;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.pignose-calendar .pignose-calendar-top .pignose-calendar-top-date {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 3em 0;
+    text-align: center;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.pignose-calendar .pignose-calendar-top .pignose-calendar-top-year,
+.pignose-calendar .pignose-calendar-top .pignose-calendar-top-month {
+    display: inline-block;
+    text-align: center;
+}
+.pignose-calendar .pignose-calendar-top .pignose-calendar-top-year {
+    color: #292977;
+    font-size: 22px;
+    font-weight: 600;
+}
+.pignose-calendar .pignose-calendar-top .pignose-calendar-top-month {
+    font-weight: 600;
+    color: #292977;
+    font-size: 22px;
+    border-bottom: solid 1px #fff;
+}
+.pignose-calendar .pignose-calendar-top .pignose-calendar-top-nav {
+    display: inline-block;
+    width: 2.3em;
+    height: 2.3em;
+    position: relative;
+    z-index: 5;
+    text-decoration: none;
+    border-radius: 50%;
+}
+.pignose-calendar .pignose-calendar-top .pignose-calendar-top-nav .pignose-calendar-top-value {
+    display: inline-block;
+    color: #777777;
+    font-size: 115%;
+    font-weight: 600;
+    vertical-align: middle;
+    margin-top: -10px;
+}
+.pignose-calendar .pignose-calendar-top .pignose-calendar-top-nav .pignose-calendar-top-icon {
+    font-size: 18px;
+    top: 4px;
+    position: relative;
+    color: #d3d3d3;
+    vertical-align: middle;
+}
+.pignose-calendar .pignose-calendar-top .pignose-calendar-top-nav.pignose-calendar-top-prev .pignose-calendar-top-icon {
+    left: 8px;
+}
+.pignose-calendar .pignose-calendar-top .pignose-calendar-top-nav.pignose-calendar-top-next .pignose-calendar-top-icon {
+    left: 10px;
+}
+
+.pignose-calendar .pignose-calendar-top .pignose-calendar-top-nav.pignose-calendar-top-prev {
+    float: left;
+    margin-left: 0.6em;
+}
+.pignose-calendar .pignose-calendar-top .pignose-calendar-top-nav.pignose-calendar-top-next {
+    float: right;
+    margin-right: 0.6em;
+}
+.pignose-calendar .pignose-calendar-top .pignose-calendar-top-nav.pignose-calendar-top-prev .pignose-calendar-top-value {
+    margin-left: .2em;
+}
+.pignose-calendar .pignose-calendar-top .pignose-calendar-top-nav.pignose-calendar-top-next .pignose-calendar-top-value {
+    margin-right: .2em;
+}
+.pignose-calendar .pignose-calendar-header {
+    overflow: hidden;
+    color: #1d1d1d;
+    background-color: transparent;
+    margin-top: 18px;
+    margin-bottom: 32px;
+    padding: 0 25px;
+    font-size: 18px;
+}
+.pignose-calendar .pignose-calendar-body {
+    height: 100%;
+    padding: 0 25px 10px;
+}
+.pignose-calendar-week.pignose-calendar-week-su {
+    color: #3862f5;
+}
+.pignose-calendar .pignose-calendar-header .pignose-calendar-week {
+    float: left;
+    width: 14.28%;
+    height: 2.5em;
+    text-align: center;
+    line-height: 2.5em;
+    font-size: 115%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.pignose-calendar .pignose-calendar-header .pignose-calendar-week.pignose-calendar-week-sun,
+.pignose-calendar .pignose-calendar-header .pignose-calendar-week.pignose-calendar-week-sat {
+    color: #1F3A93;
+}
+.pignose-calendar .pignose-calendar-header .pignose-calendar-week:last-child {
+    width: 14.32%;
+}
+.pignose-calendar .pignose-calendar-body .pignose-calendar-row {
+    overflow: hidden;
+}
+.pignose-calendar-unit {
+    float: left;
+    display: block;
+    height: 4.6em;
+    width: 14.28%;
+    text-align: center;
+    line-height: 2.8em;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.pignose-calendar-unit.pignose-calendar-unit-su a {
+    color: #acb0c3;
+}
+.pignose-calendar-unit .pignose-calendar-button-schedule-container {
+    line-height: .5em;
+}
+.pignose-calendar-unit .pignose-calendar-button-schedule-container .pignose-calendar-button-schedule-pin {
+    display: inline-block;
+    background-color: #777777;
+    width: .5em;
+    height: .5em;
+    border-radius: 50%;
+    margin-right: .2em;
+}
+.pignose-calendar-unit .pignose-calendar-button-schedule-container .pignose-calendar-button-schedule-pin:last-child {
+    margin-right: 0;
+}
+.pignose-calendar-unit a {
+    display: inline-block;
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 6px;
+    color: #3b3f5c;
+    font-size: 18px;
+    line-height: 2.5em;
+    margin-top: 8px;
+    text-align: center;
+    text-decoration: none;
+    -webkit-transition: background-color .3s ease, color .3s ease;
+    -moz-transition: background-color .3s ease, color .3s ease;
+    transition: background-color .3s ease, color .3s ease;
+}
+.pignose-calendar-unit.pignose-calendar-unit-disabled a {
+    opacity: .5;
+    background-color: #efefef;
+}
+.pignose-calendar-unit a:active {
+    background-color: #d8d8d8;
+}
+.pignose-calendar-unit.pignose-calendar-unit-range a {
+    background-color: #f1f1f1;
+    border-radius: 0;
+    width: 100%;
+}
+.pignose-calendar-unit.pignose-calendar-unit-range.pignose-calendar-unit-disabled a {
+    color: #b2b9bb;
+    background-color: #e1e1e1;
+}
+.pignose-calendar-unit.pignose-calendar-unit-range.pignose-calendar-unit-range-first a {
+    border-top-left-radius: 1.2em;
+    border-bottom-left-radius: 1.2em;
+}
+.pignose-calendar-unit.pignose-calendar-unit-range.pignose-calendar-unit-range-last a {
+    border-top-right-radius: 1.2em;
+    border-bottom-right-radius: 1.2em;
+}
+.pignose-calendar.pignose-calendar-default .pignose-calendar-body .pignose-calendar-row .pignose-calendar-unit.pignose-calendar-unit-toggle-active a {
+    color: #cccccc !important;
+}
+.pignose-calendar.pignose-calendar-reverse .pignose-calendar-body .pignose-calendar-row .pignose-calendar-unit.pignose-calendar-unit-toggle-inactive a {
+    color: #cccccc !important;
+}
+.pignose-calendar-unit.pignose-calendar-unit-active a {
+    color: #3b3f5c!important;
+    border-radius: 6px;
+    box-shadow: 0px 0px 25px 1px rgba(113, 106, 202, 0.2);
+    position: relative;
+}
+.pignose-calendar-unit.pignose-calendar-unit-active a:hover {
+    background-color: transparent;
+}
+.pignose-calendar-unit.pignose-calendar-unit-active a:before {
+    content: '';
+    position: absolute;
+    background-color: #805dca;
+    padding: 3px;
+    border-radius: 50%;
+    bottom: 4px;
+    left: 11px;
+}
+.pignose-calendar-unit.pignose-calendar-unit-active a:after {
+    content: '';
+    position: absolute;
+    background-color: #f8538d;
+    padding: 3px;
+    border-radius: 50%;
+    bottom: 4px;
+    right: 11px;
+}
+
+.pignose-calendar-unit.pignose-calendar-unit-sun a,
+.pignose-calendar-unit.pignose-calendar-unit-sat a {
+    color: gray;
+}
+.pignose-calendar-unit.pignose-calendar-unit-active.pignose-calendar-unit-sun a,
+.pignose-calendar-unit.pignose-calendar-unit-active.pignose-calendar-unit-sat a {
+    color: #ffffff;
+}
+.pignose-calendar-unit a:hover {
+    background-color: #ee3d50;
+    color: #fff;
+    font-weight: 600;
+}
+.pignose-calendar-unit:last-child {
+    width: 14.32%;
+}
+.pignose-calendar-wrapper {
+    display: none;
+    position: fixed;
+    width: 80%;
+    max-width: 360px;
+    top: 50%;
+    left: 50%;
+    border-radius: 2px;
+    z-index: 50001;
+    overflow: hidden;
+    -webkit-box-shadow: 0 4px 16px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0 4px 16px rgba(0, 0, 0, 1);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 1);
+    -webkit-transform: translate3d(0, 160px, 0);
+    -moz-transform: translate3d(0, 160px, 0);
+    transform: translate3d(0, 160px, 0);
+    opacity: 0;
+    -webkit-transition: opacity .3s ease, transform .5s ease-out, -webkit-transform .5s ease-out;
+    -moz-transition: opacity .3s ease, transform .5s ease-out, -webkit-transform .5s ease-out;
+    transition: opacity .3s ease, transform .5s ease-out, -webkit-transform .5s ease-out;
+}
+.pignose-calendar-wrapper .pignose-calendar {
+    max-width: auto;
+    width: 100%;
+    border: none;
+}
+.pignose-calendar-wrapper.pignose-calendar-wrapper-active {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.pignose-calendar-wrapper-overlay {
+    background-color: #000000;
+    opacity: 0;
+    -webkit-transition: opacity .3s ease;
+    -moz-transition: opacity .3s ease;
+    transition: opacity .3s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 50000;
+}
+.pignose-calendar-wrapper-overlay.pignose-calendar-wrapper-overlay-active {
+    opacity: .7;
+}
+.pignose-calendar-wrapper .pignose-calendar .pignose-calendar-button-group {
+    border-top: 1px solid #e2e2e2;
+    overflow: hidden;
+}
+.pignose-calendar-wrapper .pignose-calendar .pignose-calendar-button-group .pignose-calendar-button {
+    width: 50%;
+    display: block;
+    float: left;
+    height: 3.2em;
+    text-align: center;
+    line-height: 3.2em;
+    color: #333333;
+    font-weight: 600;
+    text-decoration: none;
+    -webkit-transition: background-color .3s ease;
+    -moz-transition: background-color .3s ease;
+    transition: background-color .3s ease;
+    box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.pignose-calendar-wrapper .pignose-calendar .pignose-calendar-button-group .pignose-calendar-button:hover {
+    background-color: #f1f1f1;
+}
+.pignose-calendar-wrapper .pignose-calendar .pignose-calendar-button-group .pignose-calendar-button-apply {
+    color: #ffffff;
+    background-color: #2fabb7;
+}
+.pignose-calendar-wrapper .pignose-calendar .pignose-calendar-button-group .pignose-calendar-button-apply:hover {
+    background-color: #31b2c9;
+}
+.monthly-day-wrap {
+        width: 427px;
+}
+.monthly-day-title-wrap {
+    display: table;
+    table-layout: fixed;
+    width: 422px;
+}
+
+
+
+/*  Map      */
+
+.widget.box .widget-content .top-searches { 
+    padding: 0px; 
+    height: 541px;
+    background-color: #fff;
+}
+.top-searches {
+    background-color: #fff;
+}
+.top-searches .map-title {
+    color: #3b3f5c;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 12px 18px;
+    text-transform: uppercase;
+}
+.jvectormap-zoomin, .jvectormap-zoomout {
+    background: #3862f5;
+}
+.top-searches .table {
+    margin-bottom: 0px;
+}
+.top-searches .table-highlight-head thead {
+    background-color: transparent;
+}
+.top-searches .table-highlight-head tbody {
+    background-color: transparent;
+}
+.top-searches .table > thead > tr > th {
+    position: relative;
+    color: #1d1d1d;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: initial;
+    border-bottom: 1px solid #f1f3f1;
+}
+.top-searches .table > thead > tr > th [class*="d-m-data-"] {
+    width: 6px;
+    height: 6px;
+}
+.top-searches .table > thead > tr > th .d-m-data-1 {
+    background-color: #38a9ff;
+}
+.top-searches .table > thead > tr > th .d-m-data-2 {
+    background-color: #816cfd;
+}
+.top-searches .table > thead > tr > th .d-m-data-3 {
+    background-color: #00d1c1;
+}
+.top-searches .table > thead > tr > th .d-m-data-4 {
+    background-color: #f8538d;
+}
+.top-searches .table > thead > tr > th .d-m-data-5 {
+    background-color: #ffb88e;
+}
+.top-searches .table > thead > tr > th .d-m-data-6 {
+    background-color: #d3d3d3;
+}
+
+.top-searches .table > tbody > tr > td {
+    font-size: 14px;
+    color: #3b3f5c;
+}
+.top-searches .mCS-light-thin.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.top-searches .mCS-dark-thin.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+    height: 4px;
+    margin: -15px auto;
+}
+.top-searches .mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_draggerRail {
+    width: 100%;
+    height: 2px;
+    margin: -14px 0;
+}
+.top-searches .mCS-dark-thin.mCSB_scrollTools .mCSB_draggerRail {
+    background-color: #fff;
+}
+
+
+/*  Latest Invoice      */
+
+.latest-invoice {
+    height: 100%;
+}
+.latest-invoice .widget-header {
+    border-bottom: 1px solid #e9ecef;
+}
+.latest-invoice table > thead > tr > th {
+    color: #1d1d1d;
+    font-size: 15px;
+    vertical-align: middle;
+}
+.latest-invoice table > tbody > tr > td {
+    color: #3b3f5c;
+    font-size: 15px;
+    vertical-align: middle;
+    padding: 12px 8px;
+}
+.latest-invoice table > tbody > tr > td i {
+    font-size: 22px;
+    color: #3b3f5c;
+    cursor: pointer;
+}
+.latest-invoice table > tbody > tr > td .badge {
+    padding: 7px 18px;
+}
+.latest-invoice .table-responsive::-moz-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+.latest-invoice .table-responsive::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+.latest-invoice .table-responsive::-moz-scrollbar-button:start:decrement,
+.latest-invoice .table-responsive::-moz-scrollbar-button:start:decrement {
+    height: 0px;
+    display: block;
+    background-color: #000;
+    width: 0;
+}
+.latest-invoice .table-responsive::-webkit-scrollbar-button:start:decrement,
+.latest-invoice .table-responsive::-webkit-scrollbar-button:end:increment {
+    height: 0px;
+    display: block;
+    background-color: #000;
+    width: 0;
+}
+.latest-invoice .table-responsive::-moz-scrollbar-track-piece {
+    background-color: #fff;          /*Global Track Peice(the slider noob.)*/
+    -webkit-border-radius: 6px;
+}
+.latest-invoice .table-responsive::-webkit-scrollbar-track-piece {
+    background-color: #fff;          /*Global Track Peice(the slider noob.)*/
+    -webkit-border-radius: 6px;
+}
+.latest-invoice .table-responsive::-moz-scrollbar-thumb:vertical {
+    height: 50px;
+    background-color: #dedfdf;            /* Up/Down slider background*/
+    -webkit-border-radius: 6px;
+}    
+.latest-invoice .table-responsive::-webkit-scrollbar-thumb:vertical {
+    height: 50px;
+    background-color: #dedfdf;            /* Up/Down slider background*/
+    -webkit-border-radius: 6px;
+}
+.latest-invoice .table-responsive::-moz-scrollbar-thumb:horizontal {
+    width: 50px;
+    background-color: #dedfdf;            /* Side/Side slider background*/
+    -webkit-border-radius: 3px;
+}
+.latest-invoice .table-responsive::-webkit-scrollbar-thumb:horizontal {
+    width: 50px;
+    background-color: #dedfdf;            /* Side/Side slider background*/
+    -webkit-border-radius: 3px;
+}
+
+
+/*  User card      */
+
+.card-widget-content {
+    background-color: transparent;
+    height: 100%;
+}
+#user-profile-card-1.card {
+    border: none;
+    padding: 40px 20px 40px 20px;
+    height: 100%;
+    border-radius: 0;
+}
+#user-profile-card-1 .card-body .usr-img-meta {
+    position: relative;
+    width: 128px;
+    height: 128px;
+}
+#user-profile-card-1 .card-body .usr-img-meta:before {
+    position: absolute;
+    content: "";
+    padding: 10px;
+    background-color: #00d1c1;
+    border-radius: 50%;
+    bottom: 104px;
+    right: 8px;
+    border: solid #fff;
+}
+#user-profile-card-1 .card-body .usr-img-meta img {
+    width: 100%;
+    height: 100%;
+    border: 4px solid #d3d3d3;
+}
+#user-profile-card-1 .card-body .usr-info-meta {
+    margin-top: 3rem;
+}
+#user-profile-card-1 .card-body .usr-info-meta .usr-name {
+    font-size: 25px;
+    color: #1d1d1d;
+}
+#user-profile-card-1 .card-body .usr-info-meta .usr-occupation {
+    color: #3b3f5c;
+    font-size: 15px;
+}
+#user-profile-card-1 .card-body .usr-info-meta button {
+    border: none;
+    font-size: 15px;
+    margin-top: 4rem;
+    padding: 10px 28px;
+    box-shadow: 2px 2px 13px 1px rgb(164, 139, 217);
+}
+
+
+
+/*  Page Views      */
+
+.page-views .nav-pills {
+    border-bottom: 1px solid #e9ecef;
+}
+.page-views .nav-pills .nav-link {
+    color: #888ea8;
+    font-size: 17px !important;
+}
+.page-views .nav-pills .nav-link.active,
+.page-views .nav-pills .show>.nav-link {
+    background-color: transparent;
+    color: #1d1d1d;
+}
+.page-views .tab-content {
+    padding: 17px;
+}
+.page-views .tab-content .tab-pane #daily,
+.page-views .tab-content .tab-pane #weekly,
+.page-views .tab-content .tab-pane #month {
+    margin: 35px auto 35px auto;
+    width: 110px;
+    height: 110px;
+    position: relative;
+}
+.page-views .tab-content .tab-pane .daily {
+    margin: 34px auto 34px auto;
+}
+.page-views .tab-content .tab-pane .daily .d-count {
+    font-size: 52px;
+    font-weight: normal;
+    color: #1d1d1d;
+}
+.page-views .tab-content .tab-pane .daily p {
+    text-transform: uppercase;
+    color: #888ea8;
+    font-size: 14px;
+}
+.page-views .tab-content .tab-pane .weekly {
+    margin: 34px auto 34px auto;
+}
+.page-views .tab-content .tab-pane .weekly .w-count {
+    font-size: 46px;
+    font-weight: 100;
+    color: #3b3f5c;
+}
+.page-views .tab-content .tab-pane .weekly p {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #888ea8
+}
+.page-views .tab-content .tab-pane .month {
+    margin: 34px auto 34px auto;
+}
+.page-views .tab-content .tab-pane .month .m-count {
+    font-size: 46px;
+    font-weight: 100;
+    color: #3b3f5c;
+}
+.page-views .tab-content .tab-pane .month p {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #888ea8
+}
+
+
+
+/*  Social Likes    */
+
+.social-likes {
+}
+.social-likes .card {
+    border: none;
+}
+.social-likes .card .icon {
+    padding: 30px 20px 5px 20px;
+}
+.social-likes .card .icon i {
+    font-size: 30px;
+    border-radius: 50%;
+    color: #fff;
+    padding: 14px;
+    letter-spacing: 0;
+}
+.social-likes .card.facebook .icon i {
+    background-image: linear-gradient(to right, #6424c9 0%, #5e8bf7 100%);
+}
+.social-likes .card.dribbble .icon i {
+    background-image: linear-gradient(120deg, #ee3d50 0%, #f8538d 100%);
+}
+.social-likes .card.twitter .icon i {
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+}
+.social-likes .card .card-content h5 {
+    color: #1d1d1d;
+    font-size: 25px;
+}
+.social-likes .card .card-content p {
+    color: #3b3f5c;
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+.social-likes .card .card-btn-section {
+    margin-top: 30px;
+}
+.social-likes .card .card-btn-section p {
+    padding: 18px;
+    margin: 0;
+    font-weight: 600;
+    cursor: pointer;
+}
+.social-likes .card.facebook .card-btn-section p {
+    color: #5247bd;
+    font-size: 15px;
+}
+.social-likes .card.dribbble .card-btn-section p {
+    color: #f8538d;
+    font-size: 15px;
+}
+.social-likes .card.twitter .card-btn-section p {
+    color: #00b1f4;
+    font-size: 15px;
+}
+.social-likes .card.facebook .card-btn-section p:hover {
+    background-image: linear-gradient(to right, #6424c9 0%, #5e8bf7 100%);
+    color: #fff;
+}
+.social-likes .card.dribbble .card-btn-section p:hover {
+    background-image: linear-gradient(120deg, #ee3d50 0%, #f8538d 100%);
+    color: #fff;
+}
+.social-likes .card.twitter .card-btn-section p:hover {
+    background-image: linear-gradient(to right, #3862f5 0%, #25d5e4 100%);
+    color: #fff;
+}
+
+
+/*      animation     */
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 20%, 0);
+    transform: translate3d(0, 20%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+@media (max-width: 575px) {
+    .order-summary .widget-content-area {
+        height: auto;
+    }
+    .pignose-calendar .pignose-calendar-header, .pignose-calendar .pignose-calendar-body {
+        padding: 0;
+    }
+    .latest-invoice table > tbody > tr > td {
+        padding: .75rem;
+    }
+    .toolbar-dropdown {
+        left: -50px;
+    }
+}

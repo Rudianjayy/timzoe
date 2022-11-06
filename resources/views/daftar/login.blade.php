@@ -59,137 +59,7 @@
 
     <div id="wrapper">
         <div id="page" class="clearfix">
-            {{-- <div class="topbar">
-                <div class="container">
-                    <div class="topbar-inner flex">
-                        <div class="menu-options flex">
-                            <div class="ethereum">
-                                <div id="ethereum" class="dropdown">
-                                    <a href="#" class="btn-selector nolink">Ethereum</a>
-                                    <ul>
-                                        <li><span>Ethereum</span></li>
-                                        <li><span>Bitski</span></li>
-                                        <li><span>Fortmatic</span></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="english">
-                                <div id="english" class="dropdown">
-                                    <a href="#" class="btn-selector nolink">English</a>
-                                    <ul>
-                                        <li><span>English</span></li>
-                                        <li><span>USA</span></li>
-                                        <li><span>France</span></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="topbar-right flex">
-                            <span>New Product Coming Soon</span>
-                            <div class="countdown">
-                                <span class="js-countdown" data-timer="516400" data-labels=" :  ,  : , : , "></span>
-                            </div>
-                            <ul class="socical-icon flex">
-                                <li><a href="#" class="active"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div> --}}
-            {{-- <header id="header_main" class="header_1 js-header">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="mobile-button"><span></span></div>
-                            <div id="site-header-inner" class="flex">
-                                <div id="site-logo" class="clearfix">
-                                    <div id="site-logo-inner">
-                                        <a href="index.html" rel="home" class="main-logo">
-                                            <img id="logo_header" src="{{ asset('template/nopan2/assets/images/logo/logo_dark.png') }}"
-                                                alt="nft-gaming" width="151" height="45"
-                                                data-retina="{{ asset('template/nopan2/assets/images/logo/logo_dark@2x.png') }}" data-width="151"
-                                                data-height="45">
-                                        </a>
-                                    </div>
-                                </div>
-                                <form class="form-search">
-                                    <input type="text" placeholder="Search here">
-                                    <button><i class="far fa-search"></i></button>
-                                </form>
-                                <div id="site-menu">
-                                    <nav id="main-nav" class="main-nav">
-                                        <ul id="menu-primary-menu" class="menu">
-                                            <li class="menu-item menu-item-has-children">
-                                                <a href="#">Home</a>
-                                                <ul class="sub-menu">
-                                                    <li class="menu-item"><a href="index.html">Home 1</a></li>
-                                                    <li class="menu-item"><a href="home2.html">Home 2</a></li>
-                                                    <li class="menu-item"><a href="home-animation.html">Home
-                                                            Animation</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="menu-item menu-item-has-children">
-                                                <a href="#">Explore</a>
-                                                <ul class="sub-menu">
-                                                    <li class="menu-item"><a href="explore-1.html">Explore 1</a></li>
-                                                    <li class="menu-item"><a href="explore-2.html">Explore 2</a></li>
-                                                    <li class="menu-item"><a href="creator.html">Creator</a></li>
-                                                    <li class="menu-item"><a href="item.html">Item </a></li>
-                                                    <li class="menu-item"><a href="item-details.html">Item Details</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="menu-item menu-item-has-children ">
-                                                <a href="#">Community</a>
-                                                <ul class="sub-menu">
-                                                    <li class="menu-item "><a href="blog.html">Blog</a></li>
-                                                    <li class="menu-item"><a href="blog-details.html">Blog Details</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="menu-item menu-item-has-children current-item">
-                                                <a href="#">Pages</a>
-                                                <ul class="sub-menu">
-                                                    <li class="menu-item"><a href="author.html">Authors</a></li>
-                                                    <li class="menu-item"><a href="connect-wallet.html">Wallet
-                                                            Connect</a></li>
-                                                    <li class="menu-item"><a href="create-item.html">Create Item</a>
-                                                    </li>
-                                                    <li class="menu-item current-item"><a href="login.html">Login</a>
-                                                    </li>
-                                                    <li class="menu-item"><a href="register.html">Register</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="menu-item ">
-                                                <a href="contact.html">Contact</a>
-                                            </li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                                <div class="button-connect-wallet">
-                                    <a href="connect-wallet.html" class="sc-button wallet  style-2">
-                                        <img src="{{ asset('template/nopan2/assets/images/icon/connect-wallet.svg') }}" alt="icon">
-                                        <span>Connect Wallet</span>
-                                    </a>
-                                </div>
-                                <div class="mode_switcher">
-                                    <h6><span>Dark Mode</span> <strong>Activate</strong></h6>
-                                    <a href="#" class="light d-flex align-items-center">
-                                        <img src="{{ asset('template/nopan2/assets/images/icon/sun.png') }}" alt="">
-                                    </a>
-                                    <a href="#" class="dark d-flex align-items-center is_active">
-                                        <img id="moon_dark" src="{{ asset('template/nopan2/assets/images/icon/moon.png') }}" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </header> --}}
+
 
             <section class="fl-page-title">
                 <div class="overlay"></div>
@@ -198,7 +68,6 @@
                         <div class="col-md-12">
                             <div class="breadcrumbs">
                                 <ul>
-                                    <li><a href="index.html">PPDB</a></li>
                                     <li>Login</li>
                                 </ul>
                             </div>

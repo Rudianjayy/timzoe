@@ -82,9 +82,9 @@
                                     </div><!-- /.service-one__icon-inner -->
                                 </div><!-- /.service-one__icon -->
                                 <div class="service-one__content">
-                                    <a href="/detailfoto/{{ $y->id }}">
+                                    <!-- <a href="/detailfoto/{{ $y->id }}"> -->
                                         <h3>{{$y->judul_fasilitas}}</h3>
-                                    </a>
+                                    <!-- </a> -->
                                     <p>{!!$y->deskripsi!!}</p>
                                 </div><!-- /.service-one__content -->
                             </div><!-- /.service-one__single -->

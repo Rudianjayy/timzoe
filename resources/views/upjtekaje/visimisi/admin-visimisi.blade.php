@@ -24,7 +24,7 @@
                 <div class="card">
                     <div class="card-body">
 
-                        
+
                         <table class="table table-bordered dt-responsive nowrap">
 
                             <thead>
@@ -56,7 +56,7 @@
 
 
                                         <td>
-                                            <a href="/editvisimisi/{{ $d6->id }}" class="btn btn-warning">Edit</a>
+                                            <a href="/editupjvisimisi/{{ $d6->id }}" class="btn btn-warning">Edit</a>
 
                                             <a href="/deletevisimisi/{{ $d6->id }}" class="btn btn-danger" onclick="return confirm('yakin gen?')">Delete</a>
 

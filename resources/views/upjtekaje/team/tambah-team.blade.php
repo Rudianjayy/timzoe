@@ -29,7 +29,7 @@
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Nama Anggota Team :</label>
                                     <input type="text" name="nama_team" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp">
+                                        aria-describedby="emailHelp" placeholder="contoh : Rizki">
                                     @error('nama_team')
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
@@ -37,28 +37,28 @@
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Jabatan Anggota Team :</label>
                                     <input type="text" name="jabatan_team" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp">
+                                        aria-describedby="emailHelp" placeholder="contoh : CEO">
                                     @error('jabatan_team')
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Link Facebook :</label>
-                                    <textarea class="form-control form-control-solid" name="fb"></textarea>
+                                    <textarea class="form-control form-control-solid" name="fb" placeholder="contoh : https://www.facebook.com/profile.php?id=100018447972261"></textarea>
                                     @error('fb')
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Link WhatsApp :</label>
-                                    <textarea class="form-control form-control-solid" name="wa"></textarea>
+                                    <textarea class="form-control form-control-solid" name="wa" placeholder="contoh : https://wa.me/62..?= Isi Pesan"></textarea>
                                     @error('wa')
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Link Instagram :</label>
-                                    <textarea class="form-control form-control-solid" name="ig"></textarea>
+                                    <textarea class="form-control form-control-solid" name="ig" placeholder="contoh : https://www.instagram.com/(nama)/"></textarea>
                                     @error('ig')
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror

@@ -25,12 +25,13 @@ class UpjtekajeController extends Controller
         $upjas = Upjjasa::all();
         $upgal = Upjgalery::all();
         $upjvis = Upjvisimisi::all();
+        $upjvisimisi = Upjvisimisi::all();
         $tes = Testimoni::all();
         $uf = Upjfooter::all();
         $fu = Upjfooter::all();
         $uli = Upjfooterlink::all();
         $us = Upjtekajeslider::all();
-        return view('upj.upj', compact('tentang','upjt','team','keunguan','upjas','upgal','upjvis','tes','uf','fu','uli','us'));
+        return view('upj.upj', compact('tentang','upjt','team','keunguan','upjas','upgal','upjvis','tes','uf','fu','uli','us','upjvisimisi'));
     }
 
 
@@ -124,16 +125,16 @@ class UpjtekajeController extends Controller
             'foto_team' =>'required',
             'nama_team' =>'required',
             'jabatan_team' =>'required',
-            'fb' =>'required',
-            'wa' =>'required',
-            'ig' =>'required',
+            // 'fb' =>'required',
+            // 'wa' =>'required',
+            // 'ig' =>'required',
         ],[
             'foto_team.required' =>'Harus diisi',
             'nama_team.required' =>'Harus diisi',
             'jabatan_team.required' =>'Harus diisi',
-            'fb.required' =>'Harus diisi',
-            'wa.required' =>'Harus diisi',
-            'ig.required' =>'Harus diisi',
+            // 'fb.required' =>'Harus diisi',
+            // 'wa.required' =>'Harus diisi',
+            // 'ig.required' =>'Harus diisi',
 
         ]);
         $data2 = Teamupjtekaje::create([
@@ -322,34 +323,22 @@ class UpjtekajeController extends Controller
     public function editjasa($id){
 
         $data4 = Upjjasa::findOrFail($id);
-        return view('upjtekaje.team.edit-team', compact('data4'));
+        return view('upjtekaje.jasa.edit-jasa', compact('data4'));
     }
 
     public function submitedit17(Request $request, $id){
-        $this->validate($request,[
-            'nama_team' =>'required',
-            'jabatan_team' =>'required',
-            'fb' =>'required',
-            'wa' =>'required',
-            'ig' =>'required',
-        ],[
-            'nama_team' =>'harus diisi',
-            'jabatan_team' =>'harus diisi',
-            'fb_team' =>'harus diisi',
-            'wa_team' =>'harus diisi',
-            'ig_team' =>'harus diisi',
 
-        ]);
         $data4 = Upjjasa::find($id);
         $data4->update([
-            'nama_team' =>$request->nama_team,
-        ]);
-        // if($request->hasFile('foto_jasa')){
-        //     $request->file('foto_jasa')->move('fotomahasiswa/',$request->file('foto_jasa')->getClientOriginalName());
-        //     $data4->foto_jasa = $request->file('foto_jasa')->getClientOriginalName();
-        //     $data4->save();
-        // }
+            'jasa' =>$request->jasa,
+            'penjelasan' =>$request->penjelasan,
 
+        ]);
+        if($request->hasFile('foto_jasa')){
+            $request->file('foto_jasa')->move('fotomahasiswa/', $request->file('foto_jasa')->getClientOriginalName());
+            $data4->foto_jasa = $request->file('foto_jasa')->getClientOriginalName();
+            $data4->save();
+        }
         return redirect('adminjasa')->with('toast_success',' Data Berhasil di Ubah!');
 
     }
@@ -479,7 +468,7 @@ class UpjtekajeController extends Controller
         return redirect()->route('adminvisimisi')->with('toast_success',' Data Berhasil di Tambahkan!');
     }
 
-    public function editvisimisi($id){
+    public function editupjvisimisi($id){
 
         $data6 = Upjvisimisi::findOrFail($id);
         return view('upjtekaje.visimisi.edit-visimisi', compact('data6'));
@@ -492,9 +481,9 @@ class UpjtekajeController extends Controller
             'upj_misi' =>$request->upj_misi,
             'link_yt' =>$request->link_yt,
         ]);
-        if($request->hasFile('foto_visimisi')){
-            $request->file('foto_visimisi')->move('fotomahasiswa/',$request->file('foto_visimisi')->getClientOriginalName());
-            $data6->foto_visimisi = $request->file('foto_visimisi')->getClientOriginalName();
+        if($request->hasFile('foto_bg')){
+            $request->file('foto_bg')->move('fotomahasiswa/',$request->file('foto_bg')->getClientOriginalName());
+            $data6->foto_bg = $request->file('foto_bg')->getClientOriginalName();
             $data6->save();
         }
 

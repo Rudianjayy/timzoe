@@ -18,9 +18,9 @@ return new class extends Migration
             $table->string('foto_team');
             $table->string('nama_team');
             $table->string('jabatan_team');
-            $table->string('fb');
-            $table->string('wa');
-            $table->string('ig');
+            $table->string('fb')->nullable();
+            $table->string('wa')->nullable();
+            $table->string('ig')->nullable();
             $table->timestamps();
         });
     }

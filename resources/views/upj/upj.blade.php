@@ -12,8 +12,8 @@
     <title>UPJ TEKAJE - SMK Muhammadiyah 1 Genteng</title>
     <!-- favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('landingppdb/ppdb/style/assets/images/favicons/apple-touch-icon.png') }}">
-    <link rel="shortcut icon" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
-    <link rel="apple-touch-icon-precomposed" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
+    <link rel="shortcut icon" href="{{ asset('landing/html/bidzend/assets/images/upj/UPJ.png') }}">
+    <link rel="apple-touch-icon-precomposed" href="{{ asset('landing/html/bidzend/assets/images/upj/UPJ.png') }}">
     <link rel="manifest" href="{{ asset('landingppdb/ppdb/style/') }}assets/images/favicons/site.webmanifest">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&amp;display=swap">
@@ -43,7 +43,7 @@
 
     <div class="preloader">
         <div class="preload preload-container">
-            <div class="preload-logo"><img src="{{ asset('landing/html/bidzend/assets/images/upj/UPJ.png') }}" alt="Image" style="width:70px;"></div>
+            <div class="preload-logo"><img src="{{ asset('landing/html/bidzend/assets/images/upj/UPJ.png') }}" alt="Image" style="width:60px;"></div>
         </div>
     </div><!-- /.preloader -->
 
@@ -167,7 +167,7 @@
 
         <section id="features" class="features-area pb-70">
             <div class="container">
-                <div class="section-title">
+                <div class="section-title" id="keunggulan">
                     <h2>Keunggulan</h2>
                     <div class="bar"></div>
                 </div>
@@ -186,7 +186,7 @@
                 </div>
             </div>
             <div class="text-center">
-                <a href="https://wa.wizard.id/" class="thm-btn portfolio-column__more-btn"><span>Hubungi
+                <a href="https://wa.me/6283163042713?= Isi Pesan" class="thm-btn portfolio-column__more-btn"><i class="fab fa-whatsapp"></i> <span>Hubungi
                         Admin</span></a>
                 <!-- /.thm-btn portfolio-grid__more-btn -->
             </div><!-- /.text-center -->
@@ -203,7 +203,7 @@
                     <div class="col-lg-6 col-md-12 wow fadeInLeft" data-wow-duration="1500ms">
                         <div class="service-one__single">
                             <div class="service-one__icon">
-                                <img src="{{ asset('fotomahasiswa/' . $ups->foto_jasa) }}" alt="" style="border-radius: 50%; width: 400px; height:110px;">
+                                <img src="{{ asset('fotomahasiswa/' . $ups->foto_jasa) }}" alt="" style="border-radius: 50%; width: 420px; height:120px;">
                             </div><!-- /.service-one__icon -->
                             <div class="service-one__content">
                                 <h3><a href="service-details.html">{{ $ups->jasa }}</a></h3>
@@ -216,7 +216,7 @@
 
                 </div><!-- /.row -->
                 <div class="text-center">
-                    <a href="https://wa.wizard.id/" class="thm-btn portfolio-column__more-btn"><span>Hubungi
+                    <a href="https://wa.wizard.id/" class="thm-btn portfolio-column__more-btn"><i class="fab fa-whatsapp"></i> <span>Hubungi
                             Admin</span></a>
                     <!-- /.thm-btn portfolio-grid__more-btn -->
                 </div><!-- /.text-center -->
@@ -247,20 +247,20 @@
             </div><!-- /.container -->
         </section><!-- /.portfolio-grid -->
 
-        @foreach ($upjvis as $upss)
+        @foreach ($upjvisimisi as $upjvisimisi)
         <section class="cta-one cta-one__about-one" style="background-image: url({{ asset('landingppdb/ppdb/style/assets/images/shapes/cta-bg-2-1.png') }});">
             <div class="container">
                 <h3>Visi <br></h3>
-                <p>{!! $upss->upj_visi !!}</p>
+                <p>{!! $upjvisimisi->upj_visi !!}</p>
                 <h3>Misi <br></h3>
-                <p style="color:black !important;">{!! $upss->upj_misi !!}</p>
+                <p style="color:black !important;">{!! $upjvisimisi->upj_misi !!}</p>
             </div><!-- /.container -->
         </section><!-- /.cta-one -->
 
         <section class="video-one">
             <div class="container">
-                <div class="video-one__box text-center wow fadeInUp" data-wow-duration="1500ms" style="background-image: url({{ asset('fotomahasiswa/' . $upss->foto_bg) }});">
-                    <a href="{{ $upss->link_yt }}" class="video-popup"><i class="fal fa-play-circle"></i></a>
+                <div class="video-one__box text-center wow fadeInUp" data-wow-duration="1500ms" style="background-image: url({{ asset('fotomahasiswa/' . $upjvisimisi->foto_bg) }});">
+                    <a href="{{ $upjvisimisi->link_yt }}" class="video-popup"><i class="fal fa-play-circle"></i></a>
                 </div><!-- /.video-one__box -->
             </div><!-- /.container -->
         </section><!-- /.video-one -->
@@ -302,7 +302,6 @@
             </div><!-- /.container -->
         </section><!-- /.team-one -->
 
-        @include('koneksi.mitra')
 
 
         <section class="testimonials-one testimonials-one__about-one">
@@ -359,7 +358,7 @@
         <!-- contact -->
         <section id="about" class="about-area pb-100">
             <div class="container">
-                <div class="section-title">
+                <div class="section-title" id="map">
                     <h2>Kunjungi Kami</h2>
                     <div class="bar"></div>
                     <p>Kunjungi Kami. Kami melayani Konsultasi dan Cek Gratis.</p>
@@ -375,6 +374,8 @@
                 </div>
             </div>
         </section>
+
+        @include('koneksi.mitra')
 
 
         <footer class="site-footer-upj">

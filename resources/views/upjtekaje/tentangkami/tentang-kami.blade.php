@@ -24,7 +24,7 @@
                 <div class="card">
                     <div class="card-body">
 
-
+                        
                         <table id="datatable" class="table table-bordered dt-responsive nowrap"
                         style="border-collapse: collapse; border-spacing: 0; width: 100%;">
 
@@ -36,7 +36,6 @@
                                     <th scope="col">Aksi</th>
                                 </tr>
                             </thead>
-
 
                             <tbody>
                                 @php

@@ -32,9 +32,7 @@ class LoginController extends Controller
         
     }
 
-    public function register(){
-        return view('daftar.register');
-    }
+ 
 
     public function registeruser(Request $request){
         $this->validate($request,[

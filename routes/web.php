@@ -33,7 +33,6 @@ use App\Http\Controllers\FotokompetensiController;
 use App\Http\Controllers\PersonaljurusanController;
 use App\Http\Controllers\EkstrakulikulerBlogController;
 use App\Http\Controllers\IdentitasSekolahController;
-use App\Http\Controllers\LandingppdbController;
 
 /*
 |--------------------------------------------------------------------------
@@ -577,6 +576,8 @@ Route::get('/deleteupjslider/{id}',[UpjtekajeController::class, 'deleteupjslider
 
 
 //ppdb
+Route::get('/ppdb', [PpdbController::class, 'ppdb'])->name('ppdb');
+
 
 
 

@@ -60,11 +60,11 @@
 
                     <div class="main-nav__main-navigation">
                         <ul class="main-nav__navigation-box">
-                            <li><a href="#home">Home</a></li>
+                            <li><a href="#home">Beranda</a></li>
                             <li><a href="#tentang">Tentang Kami</a></li>
                             <li><a href="#keunggulan">Keunggulan</a></li>
                             <li><a href="#jasa">Jasa</a></li>
-                            <li><a href="#galery">Galery</a></li>
+                            <li><a href="#galery">Galeri</a></li>
                             <li><a href="#team">Team</a></li>
                             <li><a href="#mitra">Mitra Kami</a></li>
                             <li><a href="#map">Map</a></li>
@@ -112,6 +112,7 @@
             }
 
             @endforeach
+            
         </style>
 
         @foreach ($us as $ul )
@@ -180,7 +181,7 @@
 
         <section id="features" class="features-area pb-70">
             <div class="container">
-                <div class="section-title">
+                <div class="section-title" id="keunggulan">
                     <h2>Keunggulan</h2>
                     <div class="bar"></div>
                 </div>
@@ -500,26 +501,26 @@
     </div><!-- /.search-popup -->
 
     <!-- template scripts -->
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/bootstrap-datepicker.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/bootstrap-select.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/isotope.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.ajaxchimp.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.circleType.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/waypoints.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.counterup.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.lettering.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.magnific-popup.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.mCustomScrollbar.concat.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.validate.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/owl.carousel.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/TweenMax.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/wow.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/swiper.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/particles.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/particel-config.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/theme.js') }}"></script>
+        <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.min.js') }}"></script>
+        <script src="{{ asset('landingppdb/ppdb/style/assets/js/bootstrap.bundle.min.js') }}"></script>
+        <script src="{{ asset('landingppdb/ppdb/style/assets/js/bootstrap-datepicker.min.js') }}"></script>
+        <script src="{{ asset('landingppdb/ppdb/style/assets/js/bootstrap-select.min.js') }}"></script>
+        <script src="{{ asset('landingppdb/ppdb/style/assets/js/isotope.js') }}"></script>
+        <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.ajaxchimp.min.js') }}"></script>
+        <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.circleType.js') }}"></script>
+        <script src="{{ asset('landingppdb/ppdb/style/assets/js/waypoints.min.js') }}"></script>
+        <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.counterup.min.js') }}"></script>
+        <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.lettering.min.js') }}"></script>
+        <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.magnific-popup.min.js') }}"></script>
+        <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.mCustomScrollbar.concat.min.js') }}"></script>
+        <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.validate.min.js') }}"></script>
+        <script src="{{ asset('landingppdb/ppdb/style/assets/js/owl.carousel.min.js') }}"></script>
+        <script src="{{ asset('landingppdb/ppdb/style/assets/js/TweenMax.min.js') }}"></script>
+        <script src="{{ asset('landingppdb/ppdb/style/assets/js/wow.min.js') }}"></script>
+        <script src="{{ asset('landingppdb/ppdb/style/assets/js/swiper.min.js') }}"></script>
+        <script src="{{ asset('landingppdb/ppdb/style/assets/js/particles.min.js') }}"></script>
+        <script src="{{ asset('landingppdb/ppdb/style/assets/js/particel-config.js') }}"></script>
+        <script src="{{ asset('landingppdb/ppdb/style/assets/js/theme.js') }}"></script>
 </body>
 
 

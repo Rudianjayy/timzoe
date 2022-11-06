@@ -194,8 +194,8 @@
         <li>
         <li>
             <a href="/logout" class="waves-effect">
-                <i class="mdi mdi-chevron-left"></i> <span class="badge rounded-pill bg-primary float-end"></span>
-                <span>Keluar</span>
+                <i class="mdi mdi-chevron-left"></i> <span class="badge rounded-pill bg-primary float-end" ></span>
+                <span onclick="return confirm('Anda Yakin Ingin Keluar?')">Keluar</span>
             </a>
         </li>
     </ul>

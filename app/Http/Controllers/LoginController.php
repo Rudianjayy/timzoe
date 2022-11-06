@@ -14,14 +14,22 @@ class LoginController extends Controller
     }
 
     public function loginproses(Request $request){
-
+        $this->validate($request,[
+            'email' =>'required|exists:users,email',
+            'password' =>'required',
+        ],[
+            'email.required' =>'Harus diisi',
+            'email.exists' =>'Email salah',
+            'password.required' =>'Harus diisi',
+        ]);
         if(Auth::attempt($request->only('email','password'))){
-            return redirect('/welcome');
+            return redirect('/welcome')->with('toast_success','Login Berhasil!');
         }else{
-            return redirect('login')->with('password','password salah');
+            return redirect()->back()->with('password','password salah');
         }
 
-       
+
+        
     }
 
     public function register(){
@@ -37,18 +45,20 @@ class LoginController extends Controller
             'name.required' =>' Harus diisi',
             'name.unique' =>' Nama sudah dipakai',
             'email.unique' =>'Email sudah dipakai',
-            'email.required' =>'Harus diisi',
+            'email.required' =>'Email harus diisi',
             // 'nidn.min' =>'min 4 karakter',
             // 'nidn.max' =>'max 7 karakter',
-            'password.required' =>'Harus diisi',
+            'password.required' =>'Sandi harus diisi',
         ]);
         User::create([
             'name' => $request->name ,
             'email' => $request->email,
             'password' => bcrypt($request->password),
+            'role' => $request->role,
             'remember_token' => Str::random(60),
+
         ]);
-        return redirect('/login');
+        return redirect('/login')->with('toast_success','Berhasil daftar!');
     }
 
     public function logout(){

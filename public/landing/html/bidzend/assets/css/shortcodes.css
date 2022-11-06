@@ -2203,13 +2203,13 @@ blockquote .author::before {
     width: 100%;
 }
 
-.login-page .sc-heading {
+/* .login-page .sc-heading {
     margin-bottom: 31px;
 }
 
 .login-page #create-item-1 input {
     margin-bottom: 20px;
-}
+} */
 
 .login-page #create-item-1 .btn-check {
     margin-top: -13px;

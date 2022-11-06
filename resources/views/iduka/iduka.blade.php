@@ -40,6 +40,26 @@
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/responsive.css') }}">
 
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&amp;display=swap">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/animate.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap-datepicker.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap-select.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/hover-min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/swiper.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/jquery.mCustomScrollbar.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/owl.theme.default.min.css') }}">
+
+    <!-- Template Styles -->
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/style.css') }} ">
+    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/responsive.css') }}">
+
+
+    <link rel="stylesheet" href="{{asset('ps/templates.hibootstrap.com/colugo/default/assets/css/style.css')}}">
+
+
 </head>
 
 <body class="body header-fixed">
@@ -152,6 +172,105 @@
         </div>
     </section>
 
+    {{-- <section class="portfolio-grid">
+        <div class="container">
+            <div class="block-title text-center">
+                <p class="color-2"><span>Portfolio</span></p>
+                <h3>View Some of Our Latest Works <br> <span>& Case Studies for Clients</span></h3>
+            </div><!-- /.block-title text-center -->
+            <ul class="portfolio-filter list-unstyled post-filter ">
+                <li data-filter=".filter-item" class="active"><span>All</span></li>
+                <li data-filter=".otkp"><span>otkp</span></li>
+                <li data-filter=".tkj"><span>tkj</span></li>
+                <li data-filter=".akl"><span>akl</span></li>
+                <li data-filter=".ph"><span>ph</span></li>
+            </ul><!-- /.portfolio-filter list-unstyled -->
+            <div class="row high-gutters masonary-layout filter-layout">
+                <div class="col-lg-4 col-md-6 col-sm-12 filter-item masonary-item  otkp">
+                    <div class="portfolio-one__single">
+                        <div class="portfolio-one__image">
+                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-1.jpg') }}" alt="">
+                            <a class="img-popup" href="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-1.jpg') }}"><i
+                                    class="fal fa-plus"></i></a>
+                        </div><!-- /.portfolio-one__image -->
+                        <div class="portfolio-one__content">
+                            <h3><a href="portfolio-details.html">Content otkp</a></h3>
+                            <p>Customized SEO services</p>
+                        </div><!-- /.portfolio-one__content -->
+                    </div><!-- /.portfolio-one__single -->
+                </div><!-- /.col-lg-4 col-md-6 col-sm-12 -->
+                <div class="col-lg-4 col-md-6 col-sm-12 filter-item masonary-item tkj ">
+                    <div class="portfolio-one__single">
+                        <div class="portfolio-one__image">
+                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-2.jpg') }}" alt="">
+                            <a class="img-popup" href="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-2.jpg') }}"><i
+                                    class="fal fa-plus"></i></a>
+                        </div><!-- /.portfolio-one__image -->
+                        <div class="portfolio-one__content">
+                            <h3><a href="portfolio-details.html">SEO tkj</a></h3>
+                            <p>Customized SEO services</p>
+                        </div><!-- /.portfolio-one__content -->
+                    </div><!-- /.portfolio-one__single -->
+                </div><!-- /.col-lg-4 col-md-6 col-sm-12 -->
+                <div class="col-lg-4 col-md-6 col-sm-12 filter-item masonary-item akl">
+                    <div class="portfolio-one__single">
+                        <div class="portfolio-one__image">
+                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-3.jpg') }}" alt="">
+                            <a class="img-popup" href="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-3.jpg') }}"><i
+                                    class="fal fa-plus"></i></a>
+                        </div><!-- /.portfolio-one__image -->
+                        <div class="portfolio-one__content">
+                            <h3><a href="portfolio-details.html">Content Marketing</a></h3>
+                            <p>Customized SEO services</p>
+                        </div><!-- /.portfolio-one__content -->
+                    </div><!-- /.portfolio-one__single -->
+                </div><!-- /.col-lg-4 col-md-6 col-sm-12 -->
+                <div class="col-lg-4 col-md-6 col-sm-12 filter-item masonary-item ph">
+                    <div class="portfolio-one__single">
+                        <div class="portfolio-one__image">
+                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-4.jpg') }}" alt="">
+                            <a class="img-popup" href="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-4.jpg') }}"><i
+                                    class="fal fa-plus"></i></a>
+                        </div><!-- /.portfolio-one__image -->
+                        <div class="portfolio-one__content">
+                            <h3><a href="portfolio-details.html">PPC Advertising</a></h3>
+                            <p>Customized SEO services</p>
+                        </div><!-- /.portfolio-one__content -->
+                    </div><!-- /.portfolio-one__single -->
+                </div><!-- /.col-lg-4 col-md-6 col-sm-12 -->
+                <div class="col-lg-4 col-md-6 col-sm-12 filter-item masonary-item social">
+                    <div class="portfolio-one__single">
+                        <div class="portfolio-one__image">
+                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-5.jpg') }}" alt="">
+                            <a class="img-popup" href="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-5.jpg') }}"><i
+                                    class="fal fa-plus"></i></a>
+                        </div><!-- /.portfolio-one__image -->
+                        <div class="portfolio-one__content">
+                            <h3><a href="portfolio-details.html">Social Marketing</a></h3>
+                            <p>Customized SEO services</p>
+                        </div><!-- /.portfolio-one__content -->
+                    </div><!-- /.portfolio-one__single -->
+                </div><!-- /.col-lg-4 col-md-6 col-sm-12 -->
+                <div class="col-lg-4 col-md-6 col-sm-12 filter-item masonary-item advertising">
+                    <div class="portfolio-one__single">
+                        <div class="portfolio-one__image">
+                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-6.jpg') }}" alt="">
+                            <a class="img-popup" href="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-6.jpg') }}"><i
+                                    class="fal fa-plus"></i></a>
+                        </div><!-- /.portfolio-one__image -->
+                        <div class="portfolio-one__content">
+                            <h3><a href="portfolio-details.html">SEM Strategy</a></h3>
+                            <p>Customized SEO services</p>
+                        </div><!-- /.portfolio-one__content -->
+                    </div><!-- /.portfolio-one__single -->
+                </div><!-- /.col-lg-4 col-md-6 col-sm-12 -->
+            </div><!-- /.row -->
+            <div class="text-center">
+                <a href="#" class="thm-btn portfolio-grid__more-btn"><span>Load More</span></a><!-- /.thm-btn portfolio-grid__more-btn -->
+            </div><!-- /.text-center -->
+        </div><!-- /.container -->
+    </section><!-- /.portfolio-grid --> --}}
+
     <a id="scroll-top"></a>
     @include('koneksi.footer')
 
@@ -170,7 +289,26 @@
         mediumZoom('.zoom', {
 
           })
-    </script>
+    </script>   
+     <script src="{{ asset('landingppdb/ppdb/style/assets/js/bootstrap.bundle.min.js') }}"></script>
+     <script src="{{ asset('landingppdb/ppdb/style/assets/js/bootstrap-datepicker.min.js') }}"></script>
+     <script src="{{ asset('landingppdb/ppdb/style/assets/js/bootstrap-select.min.js') }}"></script>
+     <script src="{{ asset('landingppdb/ppdb/style/assets/js/isotope.js') }}"></script>
+     <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.ajaxchimp.min.js') }}"></script>
+     <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.circleType.js') }}"></script>
+     <script src="{{ asset('landingppdb/ppdb/style/assets/js/waypoints.min.js') }}"></script>
+     <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.counterup.min.js') }}"></script>
+     <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.lettering.min.js') }}"></script>
+     <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.magnific-popup.min.js') }}"></script>
+     <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.mCustomScrollbar.concat.min.js') }}"></script>
+     <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.validate.min.js') }}"></script>
+     <script src="{{ asset('landingppdb/ppdb/style/assets/js/owl.carousel.min.js') }}"></script>
+     <script src="{{ asset('landingppdb/ppdb/style/assets/js/TweenMax.min.js') }}"></script>
+     <script src="{{ asset('landingppdb/ppdb/style/assets/js/wow.min.js') }}"></script>
+     <script src="{{ asset('landingppdb/ppdb/style/assets/js/swiper.min.js') }}"></script>
+     <script src="{{ asset('landingppdb/ppdb/style/assets/js/particles.min.js') }}"></script>
+     <script src="{{ asset('landingppdb/ppdb/style/assets/js/particel-config.js') }}"></script>
+     <script src="{{ asset('landingppdb/ppdb/style/assets/js/theme.js') }}"></script>
 </body>
 
 <!-- Mirrored from themesflat.com/html/bidzend/item-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Sep 2022 01:13:11 GMT -->

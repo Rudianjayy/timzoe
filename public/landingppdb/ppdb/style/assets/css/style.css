@@ -71,6 +71,10 @@ font-family: 'Poppins', sans-serif; */
 	--thm-black-rgb: 22, 47, 98;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	font-family: var(--thm-font);
 	font-size: 17px;

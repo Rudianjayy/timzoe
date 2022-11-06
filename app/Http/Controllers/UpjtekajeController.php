@@ -445,40 +445,6 @@ class UpjtekajeController extends Controller
         $vis = Upjvisimisi::all();
         return view('upjtekaje.visimisi.admin-visimisi', compact('data6','vis'));
     }
-    public function tambahvisimisi()
-    {
-        return view('upjtekaje.visimisi.tambah-visimisi');
-    }
-
-    public function submitdata19(Request $request){
-        // dd($request->all());
-        $this->validate($request,[
-            'upj_visi' =>'required',
-            'upj_misi' =>'required',
-            'foto_bg' =>'required',
-            'link_yt' =>'required',
-        ],[
-            'upj_misi.required' =>'Harus diisi',
-            'upj_misi.required' =>'Harus diisi',
-            'foto_bg.required' =>'Harus diisi',
-            'link_yt.required' =>'Harus diisi',
-
-        ]);
-        $data6 = Upjvisimisi::create([
-            'upj_visi' =>$request->upj_visi,
-            'upj_misi' =>$request->upj_misi,
-            'foto_bg' =>$request->foto_bg,
-            'link_yt' =>$request->link_yt,
-
-        ]);
-        if($request->hasFile('foto_bg')){
-            $request->file('foto_bg')->move('fotomahasiswa/', $request->file('foto_bg')->getClientOriginalName());
-            $data6->foto_bg = $request->file('foto_bg')->getClientOriginalName();
-            $data6->save();
-        }
-
-        return redirect()->route('adminvisimisi')->with('toast_success',' Data Berhasil di Tambahkan!');
-    }
 
     public function editvisimisi($id){
 
@@ -493,9 +459,9 @@ class UpjtekajeController extends Controller
             'upj_misi' =>$request->upj_misi,
             'link_yt' =>$request->link_yt,
         ]);
-        if($request->hasFile('foto_visimisi')){
-            $request->file('foto_visimisi')->move('fotomahasiswa/',$request->file('foto_visimisi')->getClientOriginalName());
-            $data6->foto_visimisi = $request->file('foto_visimisi')->getClientOriginalName();
+        if($request->hasFile('foto_bg')){
+            $request->file('foto_bg')->move('fotomahasiswa/',$request->file('foto_bg')->getClientOriginalName());
+            $data6->foto_bg = $request->file('foto_bg')->getClientOriginalName();
             $data6->save();
         }
 

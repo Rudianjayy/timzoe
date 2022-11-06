@@ -35,7 +35,7 @@
                                     <label for="exampleInputEmail1" class="form-label">Foto Slider2 :</label>
                                     <input type="file" name="foto_slider2" class="form-control"
                                         id="exampleInputEmail1" aria-describedby="emailHelp"
-                                        value="{{ $data10->foto_slider2 }}">
+                                         value="{{ $data10->foto_slider2 }}">
                                     <img src="{{ asset('fotomahasiswa/' . $data10->foto_slider2) }}" alt=""
                                         style="width: 70px">
 

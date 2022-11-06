@@ -21,10 +21,9 @@ class LoginController extends Controller
             return redirect('login')->with('password','password salah');
         }
 
-       
-    }
 
-    public function register(){
+    }
+public function register(){
         return view('daftar.register');
     }
 

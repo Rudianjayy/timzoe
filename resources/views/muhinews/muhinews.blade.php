@@ -78,15 +78,15 @@
                                 <div class="card-media">
 
                                     <a href="/muhiblog/{{ $d->id }}">
-                                     <center><img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt="" style="width: 366px; height:183px;"></center>   
+                                     <center><img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt="" style="width: 366px; height:183px;"></center>
                                     </a>
                                 </div>
                                 <div class="blog-one__content">
                                     <div class="blog-one__meta">
                                         <h4>{{$d->judul}}</h4>
                                     </div><!-- /.blog-one__meta -->
-                                    <p>{{$d->created_at}}</p>
-                                    <p style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap; height:20px; width:340px; margin-bottom:20px;">{{$d->deskripsi_muhinews}}</p>
+                                    <p style="color: blue;">{{$d->created_at}}</p>
+                                    <p style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; height:20px; width:340px; margin-bottom:20px;">{{$d->deskripsi_muhinews}}</p>
                                     <a href="/muhiblog/{{ $d->id }}" class="thm-btn blog-one__btn"><span>Baca selengkapnya</span></a>
                                     <!-- /.thm-btn blog-one__btn -->
                                 </div><!-- /.blog-one__content -->

@@ -1257,6 +1257,7 @@
         </div>
     </div>
 
+    @include('layout.script')
 </div>
     
 @endsection

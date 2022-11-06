@@ -16,6 +16,10 @@
     <link href="{{ asset('admintemp/adminnew/riski/nopan/plugins/maps/vector/jvector/jquery-jvectormap-2.0.3.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('admintemp/adminnew/riski/nopan/plugins/charts/chartist/chartist.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('admintemp/adminnew/riski/nopan/assets/css/default-dashboard/style.css') }}" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" type="text/css" href="{{ asset('admintemp/adminnew/riski/nopan/plugins/table/datatable/datatables.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('admintemp/adminnew/riski/nopan/plugins/table/datatable/custom_dt_scrollable.css') }}">
+
     <!-- END PAGE LEVEL PLUGINS/CUSTOM STYLES -->
 
 </head>

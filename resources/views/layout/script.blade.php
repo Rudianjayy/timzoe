@@ -24,5 +24,44 @@
     <script src="{{ asset('admintemp/adminnew/riski/nopan/') }}assets/js/default-dashboard/default-custom.js"></script>
     <script src="{{ asset('admintemp/adminnew/riski/nopan/') }}assets/js/support-chat.js"></script>
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
+    <script src="{{ asset('admintemp/adminnew/riski/nopan/plugins/table/datatable/datatables.js') }}"></script>
+    <script>
+        $(document).ready(function() {
+            $('#vertical-scroll').DataTable( {
+                "scrollY": "200px",
+                "scrollCollapse": true,
+                "paging": false,
+                "language": {
+                    "paginate": { "previous": "<i class='flaticon-arrow-left-1'></i>", "next": "<i class='flaticon-arrow-right'></i>" },
+                    "info": "Showing page _PAGE_ of _PAGES_"
+                }
+            });
+            $('#horizontal-scroll').DataTable( {
+                "scrollX": true,
+                "language": {
+                    "paginate": { "previous": "<i class='flaticon-arrow-left-1'></i>", "next": "<i class='flaticon-arrow-right'></i>" },
+                    "info": "Showing page _PAGE_ of _PAGES_"
+                }
+            });
+            $('#vertical-horizontal-scroll').DataTable( {
+                "scrollY": "460",
+                "scrollX": true,
+                "lengthMenu": [ 25, 50, 75, 100 ],
+                "language": {
+                    "paginate": { "previous": "<i class='flaticon-arrow-left-1'></i>", "next": "<i class='flaticon-arrow-right'></i>" },
+                    "info": "Showing page _PAGE_ of _PAGES_"
+                }
+            });
+        } );
+    </script>
+    <script>
+        $('#ecommerce-product-list').DataTable({
+            "lengthMenu": [ 5, 10, 20, 50, 100 ],
+            "language": { "paginate": { "previous": "<i class='flaticon-arrow-left-1'></i>", "next": "<i class='flaticon-arrow-right'></i>" },
+                "info": "Showing page _PAGE_ of _PAGES_"
+            },
+            drawCallback: function( settings ) { $('[data-toggle="tooltip"]').tooltip(); }
+        });
+    </script>
     
 </body>

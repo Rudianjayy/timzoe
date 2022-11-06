@@ -1,266 +1,254 @@
-<header class="header navbar fixed-top navbar-expand-sm">
-    <a href="javascript:void(0);" class="sidebarCollapse d-none d-lg-block" data-placement="bottom"><i class="flaticon-menu-line-2"></i></a>
-    <ul class="navbar-nav flex-row">
-        <li class="nav-item dropdown language-dropdown ml-1  ml-lg-0">
-            <a href="javascript:void(0);" class="nav-link dropdown-toggle" id="flagDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <img src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/ca.svg') }}" alt=""> <span class="d-lg-inline-block d-none"></span>
+<div class="navbar-header">
+    <div class="d-flex">
+        <!-- LOGO -->
+        <div class="navbar-brand-box">
+            <a href="index.html" class="logo logo-dark">
+                <span class="logo-sm">
+                    <img src="{{ asset('admin/zoee/layouts/assets/images/logo-sm.png') }}" alt="" height="22">
+                </span>
+                <span class="logo-lg">
+                    <img src="{{ asset('admin/zoee/layouts/assets/images/logo-dark.png') }}" alt="" height="17">
+                </span>
             </a>
-            <div class="dropdown-menu position-absolute" aria-labelledby="flagDropdown">
-                <a class="dropdown-item" href="javascript:void(0);"><img src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/de.svg') }}" class="flag-width" alt=""> &#xA0;German</a>
-                <a class="dropdown-item" href="javascript:void(0);"><img src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/jp.svg') }}" class="flag-width" alt=""> &#xA0;Japanese</a>
-                <a class="dropdown-item" href="javascript:void(0);"><img src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/fr.svg') }}" class="flag-width" alt=""> &#xA0;French</a>
-                <a class="dropdown-item" href="javascript:void(0);"><img src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/ru.svg') }}" class="flag-width" alt=""> &#xA0;Russian</a>
-                <a class="dropdown-item" href="javascript:void(0);"><img src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/ca.svg') }}" class="flag-width" alt=""> &#xA0;English</a>
+
+            <a href="index.html" class="logo logo-light">
+                <span class="logo-sm">
+                    <img src="{{ asset('admin/zoee/layouts/assets/images/logo-sm.png') }}" alt="" height="22">
+                </span>
+                <span class="logo-lg">
+                    <img src="{{ asset('landing/html/bidzend/assets/images/logo/muhi2.png') }}" alt="" height="30">
+                </span>
+            </a>
+        </div>
+
+        <button type="button" class="btn btn-sm px-3 font-size-24 header-item waves-effect" id="vertical-menu-btn">
+            <i class="mdi mdi-menu"></i>
+        </button>
+
+        <div class="d-none d-sm-block">
+            <div class="dropdown pt-3 d-inline-block">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Create <i class="mdi mdi-chevron-down"></i>
+                    </a>
+
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Separated link</a>
+                </div>
             </div>
-        </li>
-    </ul>
+        </div>
+    </div>
 
+    <div class="d-flex">
+          <!-- App Search-->
+          <form class="app-search d-none d-lg-block">
+            <div class="position-relative">
+                <input type="text" class="form-control" placeholder="Search...">
+                <span class="fa fa-search"></span>
+            </div>
+        </form>
 
-    <ul class="navbar-nav flex-row mr-lg-auto ml-lg-0  ml-auto">
-        <li class="nav-item dropdown message-dropdown ml-lg-4">
-            <a href="javascript:void(0);" class="nav-link dropdown-toggle" id="messageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="flaticon-mail-10"></span><span class="badge badge-primary">13</span>
-            </a>
-            <div class="dropdown-menu  position-absolute" aria-labelledby="messageDropdown">
-                <a class="dropdown-item title" href="javascript:void(0);">
-                    <i class="flaticon-chat-line mr-3"></i><span>You have 13 new messages</span>
-                </a>
-                <a class="dropdown-item" href="javascript:void(0);">
-                    <div class="media">
-                        <div class="usr-img online mr-3">
-                            <img class="usr-img rounded-circle" src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/profile-9.jpg') }}" alt="Generic placeholder image">
-                        </div>
-                        <div class="media-body">
-                            <div class="mt-0">
-                                <p class="text mb-0">Browse latest projects...</p>
-                            </div>
+        <div class="dropdown d-inline-block d-lg-none ms-2">
+            <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-search-dropdown"
+                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="mdi mdi-magnify"></i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
+                aria-labelledby="page-header-search-dropdown">
 
-                            <div class="d-flex justify-content-between">
-                                <p class="meta-user-name mb-0">Kara Young</p>
-                                <p class="meta-time mb-0  align-self-center">1 min ago</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="media">
-                        <div class="usr-img mr-3">
-                            <img class="usr-img rounded-circle" src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/profile-24.jpg') }}" alt="Generic placeholder image">
-                        </div>
-                        <div class="media-body">
-                            <div class="mt-0">
-                                <p class="text mb-0">Design, Development and...</p>
-                            </div>
-
-                            <div class="d-flex justify-content-between">
-                                <p class="meta-user-name mb-0">Amy Diaz</p>
-                                <p class="meta-time mb-0  align-self-center">5 mins ago</p>
+                <form class="p-3">
+                    <div class="form-group m-0">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search ..." aria-label="Recipient's username">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="submit"><i class="mdi mdi-magnify"></i></button>
                             </div>
                         </div>
                     </div>
+                </form>
+            </div>
+        </div>
 
-                    <div class="media">
-                        <div class="usr-img online mr-3">
-                            <img class="usr-img rounded-circle" src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/profile-3.jpg') }}" alt="Generic placeholder image">
-                        </div>
-                        <div class="media-body">
-                            <div class="mt-0">
-                                <p class="text mb-0">We can ensure...</p>
-                            </div>
+        <div class="dropdown d-none d-md-block ms-2">
+            <button type="button" class="btn header-item waves-effect"
+                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img class="me-2" src="{{ asset('admin/zoee/layouts/assets/images/flags/us_flag.jpg') }}" alt="Header Language" height="16"> English <span class="mdi mdi-chevron-down"></span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
 
-                            <div class="d-flex justify-content-between">
-                                <p class="meta-user-name mb-0">Shaun Park</p>
-                                <p class="meta-time mb-0  align-self-center">1 day ago</p>
-                            </div>
-                        </div>
-                    </div>
+                <!-- item-->
+                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                    <img src="{{ asset('admin/zoee/layouts/assets/images/flags/germany_flag.jpg') }}" alt="user-image" class="me-1" height="12"> <span class="align-middle"> German </span>
                 </a>
 
-                <a class="footer dropdown-item" href="javascript:void(0);">
-                    <div class="btn btn-info mb-3 mr-2 btn-rounded"><i class="flaticon-arrow-right mr-3"></i> View more</div>
+                <!-- item-->
+                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                    <img src="{{ asset('admin/zoee/layouts/assets/images/flags/italy_flag.jpg') }}" alt="user-image" class="me-1" height="12"> <span class="align-middle"> Italian </span>
+                </a>
+
+                <!-- item-->
+                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                    <img src="{{ asset('admin/zoee/layouts/assets/images/flags/french_flag.jpg') }}" alt="user-image" class="me-1" height="12"> <span class="align-middle"> French </span>
+                </a>
+
+                <!-- item-->
+                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                    <img src="{{ asset('admin/zoee/layouts/assets/images/flags/spain_flag.jpg') }}" alt="user-image" class="me-1" height="12"> <span class="align-middle"> Spanish </span>
+                </a>
+
+                 <!-- item-->
+                 <a href="javascript:void(0);" class="dropdown-item notify-item">
+                    <img src="{{ asset('admin/zoee/layouts/assets/images/flags/russia_flag.jpg') }}" alt="user-image" class="me-1" height="12"> <span class="align-middle"> Russian </span>
                 </a>
             </div>
-        </li>
+        </div>
 
-        <li class="nav-item dropdown notification-dropdown ml-3">
-            <a href="javascript:void(0);" class="nav-link dropdown-toggle" id="notificationDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="flaticon-bell-4"></span><span class="badge badge-success">15</span>
-            </a>
-            <div class="dropdown-menu position-absolute" aria-labelledby="notificationDropdown">
-                <a class="dropdown-item title" href="javascript:void(0);">
-                    <i class="flaticon-bell-13 mr-3"></i> <span>You have 15 new notifications</span>
-                </a>
+        <div class="dropdown d-none d-lg-inline-block">
+            <button type="button" class="btn header-item noti-icon waves-effect" data-bs-toggle="fullscreen">
+                <i class="mdi mdi-fullscreen"></i>
+            </button>
+        </div>
 
-                <a class="dropdown-item text-center  p-1" href="javascript:void(0);">
-
-                    <div class="notification-list ">
-
-                        <div class="notification-item position-relative  mb-3">
-                            <div class="c-dropdown text-right">
-                                <span id="c-dropdonbtn" class="c-dropbtn mr-2"><i class="flaticon-dots"></i></span>
-                                <div class="c-dropdown-content">
-                                    <div class="c-dropdown-item">View</div>
-                                    <div class="c-dropdown-item">Delete</div>
+        <div class="dropdown d-inline-block">
+            <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-notifications-dropdown"
+                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="mdi mdi-bell-outline"></i>
+                <span class="badge bg-danger rounded-pill">3</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0" aria-labelledby="page-header-notifications-dropdown">
+                <div class="p-3">
+                    <div class="row align-items-center">
+                        <div class="col">
+                            <h5 class="m-0 font-size-16"> Notifications (258) </h5>
+                        </div>
+                    </div>
+                </div>
+                <div data-simplebar style="max-height: 230px;">
+                    <a href="#" class="text-reset notification-item">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0 me-3">
+                                <div class="avatar-xs">
+                                    <span class="avatar-title bg-success rounded-circle font-size-16">
+                                        <i class="mdi mdi-cart-outline"></i>
+                                    </span>
                                 </div>
                             </div>
-
-                            <h6 class="mb-1">5 new members joined today</h6>
-                            <p><span class="meta-time">1 minute ago</span> . <span class="meta-member-notification">4 members</span></p>
-                            <ul class="list-inline badge-collapsed-img mt-3">
-                                <li class="list-inline-item chat-online-usr">
-                                    <img src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/profile-2.jpg') }}" alt="admin-profile" class="ml-0">
-                                </li>
-                                <li class="list-inline-item chat-online-usr">
-                                    <img src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/profile-3.jpg') }}" alt="admin-profile">
-                                </li>
-                                <li class="list-inline-item chat-online-usr">
-                                    <img src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/profile-4.jpg') }}" alt="admin-profile">
-                                </li>
-                                <li class="list-inline-item chat-online-usr">
-                                    <img src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/profile-5.jpg') }}" alt="admin-profile">
-                                </li>
-                            </ul>
-
-                        </div>
-
-                        <div class="notification-item position-relative  mb-3">
-
-                            <div class="c-dropdown text-right">
-                                <span id="c-dropdonbtn2" class="c-dropbtn mr-2"><i class="flaticon-dots"></i></span>
-                                <div class="c-dropdown-content">
-                                    <div class="c-dropdown-item">View</div>
-                                    <div class="c-dropdown-item">Delete</div>
+                            <div class="flex-grow-1">
+                                <h6 class="mb-1">Your order is placed</h6>
+                                <div class="font-size-12 text-muted">
+                                    <p class="mb-1">Dummy text of the printing and typesetting industry.</p>
                                 </div>
                             </div>
-
-                            <h6 class="mb-1">Very long description...</h6>
-                            <p><span class="meta-time">5 minutes ago</span> . <span class="meta-member-notification">5 members</span></p>
-                            <ul class="list-inline badge-collapsed-img mt-3">
-                                <li class="list-inline-item chat-online-usr">
-                                    <img alt="admin-profile" src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/profile-6.jpg') }}" class="ml-0">
-                                </li>
-                                <li class="list-inline-item chat-online-usr">
-                                    <img alt="admin-profile" src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/profile-7.jpg') }}">
-                                </li>
-                                <li class="list-inline-item chat-online-usr">
-                                    <img alt="admin-profile" src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/profile-8.jpg') }}">
-                                </li>
-                                <li class="list-inline-item chat-online-usr">
-                                    <img alt="admin-profile" src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/profile-10.jpg') }}">
-                                </li>
-                                <li class="list-inline-item chat-online-usr">
-                                    <img alt="admin-profile" src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/profile-1.jpg') }}">
-                                </li>
-                            </ul>
-
                         </div>
+                    </a>
 
-                        <div class="notification-item position-relative  mb-3">
-                            <div class="c-dropdown text-right">
-                                <span class="c-dropbtn mr-2"><i class="flaticon-dots"></i></span>
-                                <div class="c-dropdown-content">
-                                    <div class="c-dropdown-item">View</div>
-                                    <div class="c-dropdown-item">Delete</div>
+                    <a href="#" class="text-reset notification-item">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0 me-3">
+                                <div class="avatar-xs">
+                                    <span class="avatar-title bg-warning rounded-circle font-size-16">
+                                        <i class="mdi mdi-message-text-outline"></i>
+                                    </span>
                                 </div>
                             </div>
-
-                            <h6 class="mb-1">New item are in queue</h6>
-                            <p><span class="meta-time">25 minutes ago</span> . <span class="meta-member-notification">3 members</span></p>
-                            <ul class="list-inline badge-collapsed-img mt-3">
-                                <li class="list-inline-item chat-online-usr">
-                                    <img alt="admin-profile" src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/profile-11.jpg') }}" class="ml-0">
-                                </li>
-                                <li class="list-inline-item chat-online-usr">
-                                    <img alt="admin-profile" src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/profile-16.jpg') }}">
-                                </li>
-                                <li class="list-inline-item chat-online-usr">
-                                    <img alt="admin-profile" src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/profile-14.jpg') }}">
-                                </li>
-                            </ul>
+                            <div class="flex-grow-1">
+                                <h6 class="mb-1">New Message received</h6>
+                                <div class="font-size-12 text-muted">
+                                    <p class="mb-1">You have 87 unread messages</p>
+                                </div>
+                            </div>
                         </div>
+                    </a>
+
+                    <a href="#" class="text-reset notification-item">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0 me-3">
+                                <div class="avatar-xs">
+                                    <span class="avatar-title bg-info rounded-circle font-size-16">
+                                        <i class="mdi mdi-glass-cocktail"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h6 class="mb-1">Your item is shipped</h6>
+                                <div class="font-size-12 text-muted">
+                                    <p class="mb-1">It is a long established fact that a reader will</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="text-reset notification-item">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0 me-3">
+                                <div class="avatar-xs">
+                                    <span class="avatar-title bg-primary rounded-circle font-size-16">
+                                        <i class="mdi mdi-cart-outline"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h6 class="mb-1">Your order is placed</h6>
+                                <div class="font-size-12 text-muted">
+                                    <p class="mb-1">Dummy text of the printing and typesetting industry.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="text-reset notification-item">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0 me-3">
+                                <div class="avatar-xs">
+                                    <span class="avatar-title bg-danger rounded-circle font-size-16">
+                                        <i class="mdi mdi-message-text-outline"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h6 class="mb-1">New Message received</h6>
+                                <div class="font-size-12 text-muted">
+                                    <p class="mb-1">You have 87 unread messages</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="p-2 border-top">
+                    <div class="d-grid">
+                        <a class="btn btn-sm btn-link font-size-14 text-center" href="javascript:void(0)">
+                            View all
+                        </a>
                     </div>
-                </a>
-                <a class="footer dropdown-item text-center p-2">
-                    <span class="mr-1">View All</span>
-                    <div class="btn btn-gradient-warning rounded-circle"><i class="flaticon-arrow-right flaticon-circle-p"></i></div>
-                </a>
+                </div>
             </div>
-        </li>
-    </ul>
+        </div>
 
-
-    <ul class="navbar-nav flex-row ml-lg-auto">
-
-        <li class="nav-item  d-lg-block d-none">
-            <form class="form-inline" role="search">
-                <input type="text" class="form-control search-form-control" placeholder="Search...">
-            </form>
-        </li>
-
-        <li class="nav-item dropdown app-dropdown  ml-lg-4 mr-lg-2 order-lg-0 order-2">
-            <a href="javascript:void(0);" class="nav-link dropdown-toggle" id="appDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="flaticon-bulb"></span>
-            </a>
-            <div class="dropdown-menu  position-absolute" aria-labelledby="appDropdown">
-                <a class="dropdown-item" href="ecommerce_dashboard.html">
-                    <i class="flaticon-commerce"></i><span>eCommerce</span>
-                </a>
-                <a class="dropdown-item" href="form_bootstrap_basic.html">
-                    <i class="flaticon-edit-3"></i><span>Forms</span>
-                </a>
-                <a class="dropdown-item" href="table_basic.html">
-                    <i class="flaticon-table"></i><span>Tables</span>
-                </a>
-                <a class="dropdown-item" href="ui_buttons.html">
-                    <i class="flaticon-switch"></i><span>Buttons</span>
-                </a>
-                <a class="dropdown-item" href="ui_flaticon_icon.html">
-                    <i class="flaticon-edit"></i><span>Font Icons</span>
-                </a>
-                <a class="dropdown-item" href="modules_widgets.html">
-                    <i class="flaticon-computer-5"></i><span>Modules</span>
-                </a>
-                <a class="dropdown-item" href="map_google_basic.html">
-                    <i class="flaticon-location"></i><span>Maps</span>
-                </a>
-                <a class="dropdown-item" href="apps_drag_n_drop_calendar.html">
-                    <i class="flaticon-calendar-1"></i><span>Calendar</span>
-                </a>
-                <a class="dropdown-item" href="am_column_and_barchart.html">
-                    <i class="flaticon-chart-3"></i><span>Charts</span>
-                </a>
-            </div>
-        </li>
-
-
-        <li class="nav-item dropdown user-profile-dropdown ml-lg-0 mr-lg-2 ml-3 order-lg-0 order-1">
-            <a href="javascript:void(0);" class="nav-link dropdown-toggle user" id="userProfileDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="flaticon-user-12"></span>
-            </a>
-            <div class="dropdown-menu  position-absolute" aria-labelledby="userProfileDropdown">
-                <a class="dropdown-item" href="user_profile.html">
-                    <i class="mr-1 flaticon-user-6"></i> <span>My Profile</span>
-                </a>
-                <a class="dropdown-item" href="apps_scheduler.html">
-                    <i class="mr-1 flaticon-calendar-bold"></i> <span>My Schedule</span>
-                </a>
-                <a class="dropdown-item" href="apps_mailbox.html">
-                    <i class="mr-1 flaticon-email-fill-1"></i> <span>My Inbox</span>
-                </a>
-                <a class="dropdown-item" href="user_lockscreen_1.html">
-                    <i class="mr-1 flaticon-lock-2"></i> <span>Lock Screen</span>
-                </a>
+        <div class="dropdown d-inline-block">
+            <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
+                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img class="rounded-circle header-profile-user" src="{{ asset('admin/zoee/layouts/assets/images/users/user-4.jpg') }}"
+                    alt="Header Avatar">
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+                <!-- item-->
+                <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle font-size-17 align-middle me-1"></i> Profile</a>
+                <a class="dropdown-item" href="#"><i class="mdi mdi-wallet font-size-17 align-middle me-1"></i> My Wallet</a>
+                <a class="dropdown-item d-flex align-items-center" href="#"><i class="mdi mdi-cog font-size-17 align-middle me-1"></i> Settings<span class="badge bg-success ms-auto">11</span></a>
+                <a class="dropdown-item" href="#"><i class="mdi mdi-lock-open-outline font-size-17 align-middle me-1"></i> Lock screen</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="user_login_1.html">
-                    <i class="mr-1 flaticon-power-button"></i> <span>Log Out</span>
-                </a>
+                <a class="dropdown-item text-danger" href="#"><i class="bx bx-power-off font-size-17 align-middle me-1 text-danger"></i> Logout</a>
             </div>
-        </li>
+        </div>
 
-        <li class="nav-item dropdown cs-toggle order-lg-0 order-3">
-            <a href="#" class="nav-link toggle-control-sidebar suffle">
-                <span class="flaticon-menu-dot-fill d-lg-inline-block d-none"></span>
-                <span class="flaticon-dots d-lg-none"></span>
-            </a>
-        </li>
-    </ul>
-</header>
+        <div class="dropdown d-inline-block">
+            <button type="button" class="btn header-item noti-icon right-bar-toggle waves-effect">
+                <i class="mdi mdi-cog-outline"></i>
+            </button>
+        </div>
+
+    </div>
+</div>

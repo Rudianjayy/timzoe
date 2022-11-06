@@ -24,5 +24,5 @@
     <script src="{{ asset('admintemp/adminnew/riski/nopan/') }}assets/js/default-dashboard/default-custom.js"></script>
     <script src="{{ asset('admintemp/adminnew/riski/nopan/') }}assets/js/support-chat.js"></script>
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
-    
+
 </body>

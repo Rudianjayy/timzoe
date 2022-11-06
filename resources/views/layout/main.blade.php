@@ -936,7 +936,7 @@
     <!--  END CONTROL SIDEBAR  -->
 
     @include('layout.script')
-    
+
 </body>
 
 <!-- Mirrored from designreset.com/preview-equation/default-light/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Oct 2022 08:30:18 GMT -->

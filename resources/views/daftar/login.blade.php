@@ -3,7 +3,9 @@
 <!--[if (gte IE 9)|!(IE)]><!-->
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
 <!--<![endif]-->
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css"
+    integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 <!-- Mirrored from themesflat.com/html/bidzend/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Sep 2022 01:14:03 GMT -->
 
 <head>
@@ -29,7 +31,8 @@
     <link rel="shortcut icon" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
     <link rel="apple-touch-icon-precomposed" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&amp;display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&amp;display=swap">
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/animate.css') }}">
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap-datepicker.min.css') }}">
@@ -52,9 +55,8 @@
 
     <div class="preload preload-container">
         {{--  <div class="preload-logo"></div>  --}}
-        <div class="preload-logo"><img
-            src="{{ asset('landing/html/bidzend/assets/images/logo/muhi.jpg') }}"
-            alt="Image" style="width:570 !important;"></div>
+        <div class="preload-logo"><img src="{{ asset('landing/html/bidzend/assets/images/logo/muhi.jpg') }}"
+                alt="Image" style="width:570 !important;"></div>
     </div>
 
     <div id="wrapper">
@@ -87,18 +89,30 @@
                                             <h1>Login</h1>
                                             <!-- <p class="desc">Silahkan daftar dibawah ini jika belum punya akun!! </p> -->
                                             <div class="content-right">
-                                            <!-- <a href="/register" class="sc-button style letter style-2"><span>Daftar</span> </button></a> -->
-                                        </div>                                          </div>
+                                                <!-- <a href="/register" class="sc-button style letter style-2"><span>Daftar</span> </button></a> -->
+                                            </div>
+                                        </div>
                                         {{-- <form id="create-item-1" action="#" method="GET" accept-charset="utf-8"> --}}
                                         <div class="input-group" id="create-item-1">
                                             <input name="email" value="" type="text"
-                                                placeholder="Masukkan email" required="">
-                                            </div>
+                                                placeholder="Masukkan email">
+                                        </div>
+                                        @error('email')
+                                            <div class="alert alert-danger">{{ $message }}</div>
+                                        @enderror
 
-                                            <div class="input-group" id="create-item-1">
-                                            <input name="password" value="" type="password" placeholder="Masukkan password"
-                                                required="">
+                                        <div class="input-group" id="create-item-1">
+                                            <input name="password" value="" type="password"
+                                                placeholder="Masukkan password">
+                                        </div>
+                                        @error('email')
+                                            <div class="alert alert-danger">{{ $message }}</div>
+                                        @enderror
+                                        @if (Session::has('password'))
+                                            <div>
+                                                <div class="alert alert-danger">Sandi salah</div>
                                             </div>
+                                        @endif
 
                                         {{-- <div class="input-group style-2 ">
                                             <div class="btn-check">
@@ -108,17 +122,20 @@
                                             </div>
                                         </div> --}}
                                         <div class="input-group" id="create-item-1">
-                                        <button name="submit" type="submit"
-                                            class="sc-button style letter style-2"><span>Masuk</span> </button>
+                                            <button name="submit" type="submit"
+                                                class="sc-button style letter style-2"><span>Masuk</span> </button>
                                         </div>
                                         <br>
                                         <br>
                                         <div class="content-right">
-                                            <a href="/" class="sc-button style letter style-2"><span>Kembali</span> </button></a>
+                                            <a href="/"
+                                                class="sc-button style letter style-2"><span>Kembali</span>
+                                                </button></a>
                                         </div>
 
                                         {{-- </form> --}}
-                                        <center> Belum Punya Akun?<a href="/register" class="sc-button style letter style-2">Daftar</a></center>
+                                        <center> Belum Punya Akun?<a href="/register"
+                                                class="sc-button style letter style-2">Daftar</a></center>
 
                                         <div class="other-login">
                                             <div class="text">Atau</div>
@@ -128,7 +145,8 @@
                                                                 class="fab fa-facebook-f"></i></a>
                                                     </li>
                                                     <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                                    <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                                                    <li><a href="#"><i class="fab fa-google-plus-g"></i></a>
+                                                    </li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -270,14 +288,48 @@
     </div>
 
     <a id="scroll-top"></a>
+    <script>
+        $(document).ready(function() {
+            $('#example').DataTable();
+        });
+    </script>
 
-    <script src="{{ asset('nopan2/assets/js/jquery.min.js') }}"></script>
-    <script src="{{ asset('nopan2/assets/js/jquery.easing.js') }}"></script>
-    <script src="{{ asset('nopan2/assets/js/plugin.js') }}"></script>
-    <script src="{{ asset('nopan2/assets/js/jquery-validate.js') }}"></script>
-    <script src="{{ asset('nopan2/assets/js/count-down.js') }}"></script>
-    <script src="{{ asset('nopan2/assets/js/shortcodes.js') }}"></script>
-    <script src="{{ asset('nopan2/assets/js/main.js') }}"></script>
+</body>
+@include('sweetalert::alert')
+
+@include('layout.script')
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+</script>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"
+    integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+</script>
+
+<script src="{{ asset('nopan2/assets/js/jquery.min.js') }}"></script>
+<script src="{{ asset('nopan2/assets/js/jquery.easing.js') }}"></script>
+<script src="{{ asset('nopan2/assets/js/plugin.js') }}"></script>
+<script src="{{ asset('nopan2/assets/js/jquery-validate.js') }}"></script>
+<script src="{{ asset('nopan2/assets/js/count-down.js') }}"></script>
+<script src="{{ asset('nopan2/assets/js/shortcodes.js') }}"></script>
+<script src="{{ asset('nopan2/assets/js/main.js') }}"></script>
 </body>
 
 <!-- Mirrored from themesflat.com/html/bidzend/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Sep 2022 01:14:04 GMT -->

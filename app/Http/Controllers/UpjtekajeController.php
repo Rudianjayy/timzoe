@@ -19,6 +19,7 @@ class UpjtekajeController extends Controller
 
     public function upj() {
         $tentang = Upjtentangkami::all();
+        $tk = Upjtentangkami::all();
         $upjt = Upjtentangkami::all();
         $team = Teamupjtekaje::all();
         $keunguan = Upjkeunggulan::all();
@@ -31,7 +32,11 @@ class UpjtekajeController extends Controller
         $fu = Upjfooter::all();
         $uli = Upjfooterlink::all();
         $us = Upjtekajeslider::all();
+<<<<<<< HEAD
+        return view('upj.upj', compact('tentang','tk','upjt','team','keunguan','upjas','upgal','upjvis','tes','uf','fu','uli','us'));
+=======
         return view('upj.upj', compact('tentang','upjt','team','keunguan','upjas','upgal','upjvis','tes','uf','fu','uli','us','upjvisimisi'));
+>>>>>>> 4ff67921228b256a08f39b7964109bf1e36876c4
     }
 
 
@@ -433,40 +438,6 @@ class UpjtekajeController extends Controller
         $vis = Upjvisimisi::all();
         return view('upjtekaje.visimisi.admin-visimisi', compact('data6','vis'));
     }
-    public function tambahvisimisi()
-    {
-        return view('upjtekaje.visimisi.tambah-visimisi');
-    }
-
-    public function submitdata19(Request $request){
-        // dd($request->all());
-        $this->validate($request,[
-            'upj_visi' =>'required',
-            'upj_misi' =>'required',
-            'foto_bg' =>'required',
-            'link_yt' =>'required',
-        ],[
-            'upj_misi.required' =>'Harus diisi',
-            'upj_misi.required' =>'Harus diisi',
-            'foto_bg.required' =>'Harus diisi',
-            'link_yt.required' =>'Harus diisi',
-
-        ]);
-        $data6 = Upjvisimisi::create([
-            'upj_visi' =>$request->upj_visi,
-            'upj_misi' =>$request->upj_misi,
-            'foto_bg' =>$request->foto_bg,
-            'link_yt' =>$request->link_yt,
-
-        ]);
-        if($request->hasFile('foto_bg')){
-            $request->file('foto_bg')->move('fotomahasiswa/', $request->file('foto_bg')->getClientOriginalName());
-            $data6->foto_bg = $request->file('foto_bg')->getClientOriginalName();
-            $data6->save();
-        }
-
-        return redirect()->route('adminvisimisi')->with('toast_success',' Data Berhasil di Tambahkan!');
-    }
 
     public function editupjvisimisi($id){
 
@@ -491,7 +462,7 @@ class UpjtekajeController extends Controller
 
     }
 
-    public function deletevisimisi($id){
+    public function deleteupjvisimisi($id){
         $data6 = Upjvisimisi::find($id);
         $data6->delete();
         return redirect('adminvisimisi')->with('toast_error',' Data Berhasil di Hapus!');

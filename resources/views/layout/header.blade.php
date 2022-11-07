@@ -3,14 +3,14 @@
     <ul class="navbar-nav flex-row">
         <li class="nav-item dropdown language-dropdown ml-1  ml-lg-0">
             <a href="javascript:void(0);" class="nav-link dropdown-toggle" id="flagDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <img src="assets/img/ca.svg" alt=""> <span class="d-lg-inline-block d-none"></span>
+                <img src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/ca.svg') }}" alt=""> <span class="d-lg-inline-block d-none"></span>
             </a>
             <div class="dropdown-menu position-absolute" aria-labelledby="flagDropdown">
-                <a class="dropdown-item" href="javascript:void(0);"><img src="assets/img/de.svg" class="flag-width" alt=""> &#xA0;German</a>
-                <a class="dropdown-item" href="javascript:void(0);"><img src="assets/img/jp.svg" class="flag-width" alt=""> &#xA0;Japanese</a>
-                <a class="dropdown-item" href="javascript:void(0);"><img src="assets/img/fr.svg" class="flag-width" alt=""> &#xA0;French</a>
-                <a class="dropdown-item" href="javascript:void(0);"><img src="assets/img/ru.svg" class="flag-width" alt=""> &#xA0;Russian</a>
-                <a class="dropdown-item" href="javascript:void(0);"><img src="assets/img/ca.svg" class="flag-width" alt=""> &#xA0;English</a>
+                <a class="dropdown-item" href="javascript:void(0);"><img src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/de.svg') }}" class="flag-width" alt=""> &#xA0;German</a>
+                <a class="dropdown-item" href="javascript:void(0);"><img src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/jp.svg') }}" class="flag-width" alt=""> &#xA0;Japanese</a>
+                <a class="dropdown-item" href="javascript:void(0);"><img src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/fr.svg') }}" class="flag-width" alt=""> &#xA0;French</a>
+                <a class="dropdown-item" href="javascript:void(0);"><img src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/ru.svg') }}" class="flag-width" alt=""> &#xA0;Russian</a>
+                <a class="dropdown-item" href="javascript:void(0);"><img src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/ca.svg') }}" class="flag-width" alt=""> &#xA0;English</a>
             </div>
         </li>
     </ul>
@@ -28,7 +28,7 @@
                 <a class="dropdown-item" href="javascript:void(0);">
                     <div class="media">
                         <div class="usr-img online mr-3">
-                            <img class="usr-img rounded-circle" src="assets/img/profile-9.jpg" alt="Generic placeholder image">
+                            <img class="usr-img rounded-circle" src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/profile-9.jpg') }}" alt="Generic placeholder image">
                         </div>
                         <div class="media-body">
                             <div class="mt-0">
@@ -44,7 +44,7 @@
 
                     <div class="media">
                         <div class="usr-img mr-3">
-                            <img class="usr-img rounded-circle" src="assets/img/profile-24.jpg" alt="Generic placeholder image">
+                            <img class="usr-img rounded-circle" src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/profile-24.jpg') }}" alt="Generic placeholder image">
                         </div>
                         <div class="media-body">
                             <div class="mt-0">
@@ -60,7 +60,7 @@
 
                     <div class="media">
                         <div class="usr-img online mr-3">
-                            <img class="usr-img rounded-circle" src="assets/img/profile-3.jpg" alt="Generic placeholder image">
+                            <img class="usr-img rounded-circle" src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/profile-3.jpg') }}" alt="Generic placeholder image">
                         </div>
                         <div class="media-body">
                             <div class="mt-0">
@@ -107,16 +107,16 @@
                             <p><span class="meta-time">1 minute ago</span> . <span class="meta-member-notification">4 members</span></p>
                             <ul class="list-inline badge-collapsed-img mt-3">
                                 <li class="list-inline-item chat-online-usr">
-                                    <img src="assets/img/profile-2.jpg" alt="admin-profile" class="ml-0">
+                                    <img src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/profile-2.jpg') }}" alt="admin-profile" class="ml-0">
                                 </li>
                                 <li class="list-inline-item chat-online-usr">
-                                    <img src="assets/img/profile-3.jpg" alt="admin-profile">
+                                    <img src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/profile-3.jpg') }}" alt="admin-profile">
                                 </li>
                                 <li class="list-inline-item chat-online-usr">
-                                    <img src="assets/img/profile-4.jpg" alt="admin-profile">
+                                    <img src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/profile-4.jpg') }}" alt="admin-profile">
                                 </li>
                                 <li class="list-inline-item chat-online-usr">
-                                    <img src="assets/img/profile-5.jpg" alt="admin-profile">
+                                    <img src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/profile-5.jpg') }}" alt="admin-profile">
                                 </li>
                             </ul>
 
@@ -136,19 +136,19 @@
                             <p><span class="meta-time">5 minutes ago</span> . <span class="meta-member-notification">5 members</span></p>
                             <ul class="list-inline badge-collapsed-img mt-3">
                                 <li class="list-inline-item chat-online-usr">
-                                    <img alt="admin-profile" src="assets/img/profile-6.jpg" class="ml-0">
+                                    <img alt="admin-profile" src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/profile-6.jpg') }}" class="ml-0">
                                 </li>
                                 <li class="list-inline-item chat-online-usr">
-                                    <img alt="admin-profile" src="assets/img/profile-7.jpg">
+                                    <img alt="admin-profile" src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/profile-7.jpg') }}">
                                 </li>
                                 <li class="list-inline-item chat-online-usr">
-                                    <img alt="admin-profile" src="assets/img/profile-8.jpg">
+                                    <img alt="admin-profile" src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/profile-8.jpg') }}">
                                 </li>
                                 <li class="list-inline-item chat-online-usr">
-                                    <img alt="admin-profile" src="assets/img/profile-10.jpg">
+                                    <img alt="admin-profile" src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/profile-10.jpg') }}">
                                 </li>
                                 <li class="list-inline-item chat-online-usr">
-                                    <img alt="admin-profile" src="assets/img/profile-1.jpg">
+                                    <img alt="admin-profile" src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/profile-1.jpg') }}">
                                 </li>
                             </ul>
 
@@ -167,13 +167,13 @@
                             <p><span class="meta-time">25 minutes ago</span> . <span class="meta-member-notification">3 members</span></p>
                             <ul class="list-inline badge-collapsed-img mt-3">
                                 <li class="list-inline-item chat-online-usr">
-                                    <img alt="admin-profile" src="assets/img/profile-11.jpg" class="ml-0">
+                                    <img alt="admin-profile" src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/profile-11.jpg') }}" class="ml-0">
                                 </li>
                                 <li class="list-inline-item chat-online-usr">
-                                    <img alt="admin-profile" src="assets/img/profile-16.jpg">
+                                    <img alt="admin-profile" src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/profile-16.jpg') }}">
                                 </li>
                                 <li class="list-inline-item chat-online-usr">
-                                    <img alt="admin-profile" src="assets/img/profile-14.jpg">
+                                    <img alt="admin-profile" src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/profile-14.jpg') }}">
                                 </li>
                             </ul>
                         </div>

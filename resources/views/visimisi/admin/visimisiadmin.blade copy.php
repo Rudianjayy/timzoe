@@ -1,7 +1,7 @@
 @extends('layout.main')
 @push('css')
     {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> --}}
-    <title>BSI - Admin</title>
+    <title>Data Dosen - Laravel</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css"
         integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -19,43 +19,47 @@
 
         {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" /> --}}
 
-        <div class="row" style="margin-top: 30px;">
+        <div class="row">
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
 
-                        
+                    <div>
+                            <a href="/tambahvisimisi" class="btn btn-primary mt-5"
+                                id="kt_account_profile_details_submit">Tambah
+                                +</a>
+                        </div>
                         <table id="datatable" class="table table-bordered dt-responsive nowrap"
-                        style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                            style="border-collapse: collapse; border-spacing: 0; width: 100%;">
 
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">Foto Tentang Kami</th>
-                                    <th scope="col">Deskripsi</th>
+                                    <th scope="col">Judul Visi</th>
+                                    <th scope="col">Deskripsi Visi</th>
+                                    <th scope="col">Judul Misi</th>
+                                    <th scope="col">Deskripsi Misi</th>
                                     <th scope="col">Aksi</th>
                                 </tr>
                             </thead>
+
 
                             <tbody>
                                 @php
                                     $no = 1;
                                 @endphp
-                                @foreach ($data as $d)
+                                @foreach ($data as $v)
                                     <tr>
                                         <th>{{ $no++ }}</th>
+                                        <td>{{ $v->judulvisi }}</td>
+                                        <td>{!! $v->deskripsivisi !!}</td>
+                                        <td>{{ $v->judulmisi }}</td>
+                                        <td>{!! $v->deskripsimisi !!}</td>
+
+                                        {{-- <td>{{ $v->created_at->format('D M Y') }}</td> --}}
                                         <td>
-                                            <img src="{{ asset('fotomahasiswa/' . $d->foto_tentangkami) }}" alt=""
-                                                style="width: 50px;">
-                                        </td>
-
-                                        <td>{!! $d->deskripsi_tentangkami !!}</td>
-
-
-                                        <td>
-                                            <a href="/edittentangkami/{{ $d->id }}" class="btn btn-warning">Edit</a>
-
-                                             <a href="/deletetentangkami/{{ $d->id }}" class="btn btn-danger" onclick="return confirm('yakin gen?')">Delete</a> 
+                                            <a href="/editvisimisi/{{ $v->id }}" class="btn btn-warning fas fa-pen-alt">Edit</a>
+                                            {{--  <a href="/deletevisimisi/{{ $v->id }}" class="btn btn-danger fas fa-trash-alt" onclick="return confirm('yakin gen?')">Delete</a>  --}}
                                         </td>
                                     </tr>
                                 @endforeach
@@ -101,16 +105,15 @@
         <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap4.min.js"></script> --}}
 
         <!-- Required datatable js -->
+        <script src="{{ asset('admin/zoee/layouts/assets/libs/datatables.net/js/jquery.dataTables.min.js') }}"></script>
+        <script src="{{ asset('admin/zoee/layouts/assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
+        <script src="{{ asset('admin/zoee/layouts/assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js') }}">
+        </script>
 
+        <script src="{{ asset('admin/zoee/layouts/assets/js/pages/datatables.init.js') }}"></script>
 
+        <script src="{{ asset('admin/zoee/layouts/assets/js/app.js') }}"></script>
 
-
-
-
-
-        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-        <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
-        <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap4.min.js"></script>
         <script>
             $(document).ready(function() {
                 $('#example').DataTable();
@@ -118,8 +121,37 @@
         </script>
 
         </body>
-        @include('sweetalert::alert')
+        {{--  <script>
+            $('.delete').click(function() {
+                var zoe = $(this).attr('data-id');
+                var nama = $(this).attr('data-nama');
 
+
+                swal({
+                        title: "Apa kamu yakin ingin menghapus data ini?",
+                        text: "Kamu akan menghapus data matkul dengan nama matkul " + nama + "! ",
+                        icon: "warning",
+                        buttons: true,
+                        dangerMode: true,
+                    })
+                    .then((willDelete) => {
+                        if (willDelete) {
+                            window.location = "/deletealbum/" + zoe + ""
+                            swal("Data berhasil dihapus!", {
+                                icon: "success",
+                            });
+                        } else {
+                            swal("Data tidak jadi dihapus!");
+                        }
+                    });
+            });
+        </script>  --}}
+        @include('sweetalert::alert')
+        {{--  <script>
+            @if (Session::has('success'))
+                toastr.success("{{ Session::get('success') }}")
+            @endif
+        </script>  --}}
         @include('layout.script')
     </body>
 

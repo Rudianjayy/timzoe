@@ -36,7 +36,8 @@
     <link rel="shortcut icon" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
     <link rel="apple-touch-icon-precomposed" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&amp;display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&amp;display=swap">
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/animate.css') }}">
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap-datepicker.min.css') }}">
@@ -133,21 +134,55 @@
                                             <p class="desc">Klik masuk dibawah ini jika sudah punya akun!! </p>
                                             <a href="/login">Masuk</a>
                                         </div>
-                                        {{-- <form id="create-item-1" method="GET" accept-charset="utf-8"> --}}
+
                                         <div class="input-group" id="create-item-1">
+<<<<<<< HEAD
+                                            <input name="name" value="" type="text" placeholder="Nama">
+                                            {{-- <input name="name" value="" type="text"
+                                            placeholder="Nama Belakang" required=""> --}}
+                                        </div>
+                                        @error('name')
+                                            <div>
+                                                <div class="alert alert-danger">{{ $message }}</div>
+                                            </div>
+                                        @enderror
+                                        {{-- <div class="input-group" id="create-item-1">
+                                            <input name="phone" value="" type="text"
+                                                placeholder="Nomor Telepon" required="">
+                                            <input name="name" value="" type="text" placeholder="Username"
+                                                required="">
+                                        </div> --}}
+=======
                                             <input name="name" value="" type="text" placeholder="Nama "
                                                 required="">
                                           
                                         </div>
 
+>>>>>>> 4ff67921228b256a08f39b7964109bf1e36876c4
                                         <div class="input-group" id="create-item-1">
                                             <input name="email" value="" type="email"
-                                                placeholder="Alamat Email" required="">
+                                                placeholder="Masukkan Email">
                                         </div>
+                                        @error('email')
+                                            <div>
+                                                <div class="alert alert-danger">{{ $message }}</div>
+                                            </div>
+                                        @enderror
+
                                         <div class="input-group" id="create-item-1">
                                             <input name="password" value="" type="password"
-                                                placeholder="Masukkan Sandi" required="">
+                                                placeholder="Masukkan Sandi">
                                         </div>
+<<<<<<< HEAD
+                                        @error('password')
+                                            <div>
+                                                <div class="alert alert-danger">{{ $message }}</div>
+                                            </div>
+                                        @enderror
+
+                                        <input type="text" value="user" name="role" hidden>
+=======
+>>>>>>> 4ff67921228b256a08f39b7964109bf1e36876c4
 
                                         <div class="input-group" id="create-item-1">
                                             <button name="submit" type="submit"

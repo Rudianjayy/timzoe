@@ -72,7 +72,7 @@
                                         <td>
                                             <a href="/editupjslider/{{ $d10->id }}" class="btn btn-warning">Edit</a>
 
-                                            {{--  <a href="/deleteupjslider/{{ $d10->id }}" class="btn btn-danger" onclick="return confirm('yakin gen?')">Delete</a>  --}}
+                                             <a href="/deleteupjslider/{{ $d10->id }}" class="btn btn-danger" onclick="return confirm('yakin gen?')">Delete</a> 
 
 
 

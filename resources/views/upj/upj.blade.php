@@ -60,11 +60,11 @@
 
                     <div class="main-nav__main-navigation">
                         <ul class="main-nav__navigation-box">
-                            <li><a href="#home">Home</a></li>
+                            <li><a href="#home">Beranda</a></li>
                             <li><a href="#tentang">Tentang Kami</a></li>
                             <li><a href="#keunggulan">Keunggulan</a></li>
                             <li><a href="#jasa">Jasa</a></li>
-                            <li><a href="#galery">Galery</a></li>
+                            <li><a href="#galery">Galeri</a></li>
                             <li><a href="#team">Team</a></li>
                             <li><a href="#mitra">Mitra Kami</a></li>
                             <li><a href="#map">Map</a></li>
@@ -112,11 +112,24 @@
             }
 
             @endforeach
+            
         </style>
 
+        @foreach ($us as $ul )
 
         <section class="SLIDE_BG" id='home'>
-
+            <!-- <div class="banner">
+                <img class="img-slider1" src="{{ asset('fotomahasiswa/' . $ul->foto_slider1) }}" >
+            </div>
+            <div class="banner2">
+                <img class="img-slider2" src="{{ asset('fotomahasiswa/' . $ul->foto_slider2) }}" >
+            </div>
+            <div class="banner3">
+                <img class="img-slider3" src="{{ asset('fotomahasiswa/' . $ul->foto_slider3) }}" >
+            </div>
+            <div class="banner4">
+                <img class="img-slider3" src="{{ asset('fotomahasiswa/' . $ul->foto_slider4) }}" >
+            </div> -->
             {{-- <div class="particles-snow" id="banner-one-snow"></div><!-- /#cta-one-snow.particles-snow -->
 
             <img src="{{ asset('landingppdb/ppdb/style/assets/images/shapes/footer-shape-1-1.png') }}" class="banner-one__bg-shape-1" alt="">
@@ -144,6 +157,7 @@
                 </div><!-- /.row -->
             </div><!-- /.container -->
         </section><!-- /.banner-one -->
+        @endforeach
 
         <section class="about-three about-three__home-two" id='tentang'>
             <div class="container">
@@ -488,26 +502,26 @@
     </div><!-- /.search-popup -->
 
     <!-- template scripts -->
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/bootstrap-datepicker.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/bootstrap-select.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/isotope.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.ajaxchimp.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.circleType.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/waypoints.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.counterup.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.lettering.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.magnific-popup.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.mCustomScrollbar.concat.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.validate.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/owl.carousel.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/TweenMax.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/wow.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/swiper.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/particles.min.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/particel-config.js') }}"></script>
-    <script src="{{ asset('landingppdb/ppdb/style/assets/js/theme.js') }}"></script>
+        <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.min.js') }}"></script>
+        <script src="{{ asset('landingppdb/ppdb/style/assets/js/bootstrap.bundle.min.js') }}"></script>
+        <script src="{{ asset('landingppdb/ppdb/style/assets/js/bootstrap-datepicker.min.js') }}"></script>
+        <script src="{{ asset('landingppdb/ppdb/style/assets/js/bootstrap-select.min.js') }}"></script>
+        <script src="{{ asset('landingppdb/ppdb/style/assets/js/isotope.js') }}"></script>
+        <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.ajaxchimp.min.js') }}"></script>
+        <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.circleType.js') }}"></script>
+        <script src="{{ asset('landingppdb/ppdb/style/assets/js/waypoints.min.js') }}"></script>
+        <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.counterup.min.js') }}"></script>
+        <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.lettering.min.js') }}"></script>
+        <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.magnific-popup.min.js') }}"></script>
+        <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.mCustomScrollbar.concat.min.js') }}"></script>
+        <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.validate.min.js') }}"></script>
+        <script src="{{ asset('landingppdb/ppdb/style/assets/js/owl.carousel.min.js') }}"></script>
+        <script src="{{ asset('landingppdb/ppdb/style/assets/js/TweenMax.min.js') }}"></script>
+        <script src="{{ asset('landingppdb/ppdb/style/assets/js/wow.min.js') }}"></script>
+        <script src="{{ asset('landingppdb/ppdb/style/assets/js/swiper.min.js') }}"></script>
+        <script src="{{ asset('landingppdb/ppdb/style/assets/js/particles.min.js') }}"></script>
+        <script src="{{ asset('landingppdb/ppdb/style/assets/js/particel-config.js') }}"></script>
+        <script src="{{ asset('landingppdb/ppdb/style/assets/js/theme.js') }}"></script>
 </body>
 
 

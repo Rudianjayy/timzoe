@@ -58,7 +58,7 @@
                                         <td>
                                             <a href="/editupjvisimisi/{{ $d6->id }}" class="btn btn-warning">Edit</a>
 
-                                            <a href="/deletevisimisi/{{ $d6->id }}" class="btn btn-danger" onclick="return confirm('yakin gen?')">Delete</a>
+                                            <a href="/deleteupjvisimisi/{{ $d6->id }}" class="btn btn-danger" onclick="return confirm('yakin gen?')">Delete</a>
 
 
 

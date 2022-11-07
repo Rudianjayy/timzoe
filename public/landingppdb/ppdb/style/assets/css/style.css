@@ -75,6 +75,10 @@ html {
   }
 
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	font-family: var(--thm-font);
 	font-size: 17px;

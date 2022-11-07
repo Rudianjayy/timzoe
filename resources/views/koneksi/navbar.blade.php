@@ -125,6 +125,7 @@
                             </li>
                             </ul>
                             </li>
+                            
                             {{-- <li class="menu-item menu-item-has-children">
                                 <a href="#">Pages</a>
                                 <ul class="sub-menu">
@@ -141,12 +142,7 @@
                                 <a href="contact.html">Contact</a>
                             </li> --}}
                             <li class="menu-item ">
-<<<<<<< HEAD
-                                <a href="/ppdb">PPDB</a>
-
-=======
                                 <a href="/pendaftaran">PPDB</a>
->>>>>>> 4ff67921228b256a08f39b7964109bf1e36876c4
                             </li>
 
                             </ul>

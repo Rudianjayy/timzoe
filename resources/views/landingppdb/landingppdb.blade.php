@@ -8,31 +8,31 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('lpp/templates.hibootstrap.com/colugo/default/assets/css/bootstrap.min.css') }}">
 
-    <link rel="stylesheet" href="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/css/animate.min.css') }}">
-
-    <link rel="stylesheet"
-        href="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('lpp/templates.hibootstrap.com/colugo/default/assets/css/animate.min.css') }}">
 
     <link rel="stylesheet"
-        href="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/css/fontawesome.min.css') }}">
-
-    <link rel="stylesheet" href="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/css/odometer.css') }}">
+        href="{{ asset('lpp/templates.hibootstrap.com/colugo/default/assets/css/owl.carousel.min.css') }}">
 
     <link rel="stylesheet"
-        href="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/css/magnific-popup.min.css') }}">
+        href="{{ asset('lpp/templates.hibootstrap.com/colugo/default/assets/css/fontawesome.min.css') }}">
 
-    <link rel="stylesheet" href="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/css/slick.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('lpp/templates.hibootstrap.com/colugo/default/assets/css/odometer.css') }}">
 
-    <link rel="stylesheet" href="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/css/style.css') }}">
+    <link rel="stylesheet"
+        href="{{ asset('lpp/templates.hibootstrap.com/colugo/default/assets/css/magnific-popup.min.css') }}">
 
-    <link rel="stylesheet" href="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/css/dark.css') }}">
+    <link rel="stylesheet" href="{{ asset('lpp/templates.hibootstrap.com/colugo/default/assets/css/slick.min.css') }}">
 
-    <link rel="stylesheet" href="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/css/responsive.css') }}">
-    <title>PPDB - SMK Muhammadiyah 1 Genteng</title>
+    <link rel="stylesheet" href="{{ asset('lpp/templates.hibootstrap.com/colugo/default/assets/css/style.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('lpp/templates.hibootstrap.com/colugo/default/assets/css/dark.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('lpp/templates.hibootstrap.com/colugo/default/assets/css/responsive.css') }}">
+    <title>Colugo - App Landing Page HTML Template</title>
     <link rel="icon" type="image/png"
-        href="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/favicon.png') }}">
+        href="{{ asset('lpp/templates.hibootstrap.com/colugo/default/assets/img/favicon.png') }}">
 </head>
 
 <body data-bs-spy="scroll" data-bs-offset="120">
@@ -48,8 +48,8 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <div class="logo">
-                <a href="javascript:void(0)">
-                    <h3>PPDB Online</h3>
+                <a href="index.html">
+                    <h3>Colugo</h3>
                 </a>
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -70,8 +70,8 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#syarat" class="nav-link">
-                            Syarat Pendaftaran
+                        <a href="#features" class="nav-link">
+                            Features
                         </a>
                     </li>
                     <li class="nav-item">
@@ -80,21 +80,26 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#daftar" class="nav-link">
-                            Cara Pendaftaran
+                        <a href="#faq" class="nav-link">
+                            FAQ
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#kontak" class="nav-link">
-                            Kontak
+                        <a href="blog.html" class="nav-link">
+                            Blog
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">
+                            Contact
                         </a>
                     </li>
                 </ul>
                 <div class="others-option">
                     <div class="d-flex align-items-center">
                         <div class="option-item">
-                            <a href="/login" class="default-btn">
-                                Login
+                            <a href="#" class="default-btn">
+                                Try It Free
                                 <span></span>
                             </a>
                         </div>
@@ -112,11 +117,17 @@
                     <div class="row align-items-center">
                         <div class="col-lg-6">
                             <div class="banner-content">
-                                <h1>AYO DAFTAR SEKARANG!!</h1>
-                                <p>Mulai dari tanggal 10-22 Januari,
-                                    terdapat diskon 50%
-                                </p>
-                                
+                                <h1>Best Mobile App Template For Your Business</h1>
+                                <p>App ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.</p>
+                                <div class="banner-holder">
+                                    <a href="#">
+                                        <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/store/1.png') }}" alt="image">
+                                    </a>
+                                    <a href="#">
+                                        <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/store/2.png') }}" alt="image">
+                                    </a>
+                                </div>
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -255,10 +266,10 @@
     </section>
 
 
-    <section id="syarat" class="features-area pb-70">
+    <section id="features" class="features-area pb-70">
         <div class="container">
             <div class="section-title">
-                <h2>Syarat Pendaftaran</h2>
+                <h2>Awsome Features</h2>
                 <div class="bar"></div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidiunt labore et
                     dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
@@ -966,10 +977,10 @@
     </section>
 
 
-    <section id="daftar" class="faq-area ptb-100">
+    <section id="faq" class="faq-area ptb-100">
         <div class="container">
             <div class="section-title">
-                <h2>Cara Pendaftaran</h2>
+                <h2>Frequently Asked Questions</h2>
                 <div class="bar"></div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidiunt labore et
                     dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
@@ -1212,7 +1223,7 @@
     </section>
 
 
-    {{-- <section class="blog-area pt-100 pb-70">
+    <section class="blog-area pt-100 pb-70">
         <div class="container">
             <div class="section-title">
                 <h2>Latest Blog Post</h2>
@@ -1322,13 +1333,13 @@
                 </div>
             </div>
         </div>
-    </section> --}}
+    </section>
 
 
-    <section id="kontak" class="contact-area ptb-100">
+    <section id="contact" class="contact-area ptb-100">
         <div class="container">
             <div class="section-title">
-                <h2>Kontak Kami</h2>
+                <h2>Contact Us</h2>
                 <div class="bar"></div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidiunt labore et
                     dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
@@ -1621,35 +1632,35 @@
     </div>
 
 
-    <script data-cfasync="false" src="{{ asset('ps/templates.hibootstrap.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js') }}"></script>
-    <script src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/js/jquery.min.js') }}"></script>
+    <script data-cfasync="false" src="{{ asset('lpp/templates.hibootstrap.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js') }}"></script>
+    <script src="{{ asset('lpp/templates.hibootstrap.com/colugo/default/assets/js/jquery.min.js') }}"></script>
 
-    <script src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('lpp/templates.hibootstrap.com/colugo/default/assets/js/bootstrap.bundle.min.js') }}"></script>
 
-    <script src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('lpp/templates.hibootstrap.com/colugo/default/assets/js/owl.carousel.min.js') }}"></script>
 
-    <script src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/js/jquery.appear.js') }}"></script>
+    <script src="{{ asset('lpp/templates.hibootstrap.com/colugo/default/assets/js/jquery.appear.js') }}"></script>
 
-    <script src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/js/odometer.min.js') }}"></script>
+    <script src="{{ asset('lpp/templates.hibootstrap.com/colugo/default/assets/js/odometer.min.js') }}"></script>
 
-    <script src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/js/slick.min.js') }}"></script>
+    <script src="{{ asset('lpp/templates.hibootstrap.com/colugo/default/assets/js/slick.min.js') }}"></script>
 
-    <script src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/js/particles.min.js') }}"></script>
+    <script src="{{ asset('lpp/templates.hibootstrap.com/colugo/default/assets/js/particles.min.js') }}"></script>
 
-    <script src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/js/jquery.ripples-min.js') }}"></script>
+    <script src="{{ asset('lpp/templates.hibootstrap.com/colugo/default/assets/js/jquery.ripples-min.js') }}"></script>
 
-    <script src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/js/jquery.magnific-popup.min.js') }}">
+    <script src="{{ asset('lpp/templates.hibootstrap.com/colugo/default/assets/js/jquery.magnific-popup.min.js') }}">
     </script>
 
-    <script src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/js/wow.min.js') }}"></script>
+    <script src="{{ asset('lpp/templates.hibootstrap.com/colugo/default/assets/js/wow.min.js') }}"></script>
 
-    <script src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/js/jquery.ajaxchimp.min.js') }}"></script>
+    <script src="{{ asset('lpp/templates.hibootstrap.com/colugo/default/assets/js/jquery.ajaxchimp.min.js') }}"></script>
 
-    <script src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/js/form-validator.min.js') }}"></script>
+    <script src="{{ asset('lpp/templates.hibootstrap.com/colugo/default/assets/js/form-validator.min.js') }}"></script>
 
-    <script src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/js/contact-form-script.js') }}"></script>
+    <script src="{{ asset('lpp/templates.hibootstrap.com/colugo/default/assets/js/contact-form-script.js') }}"></script>
 
-    <script src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/js/main.js') }}"></script>
+    <script src="{{ asset('lpp/templates.hibootstrap.com/colugo/default/assets/js/main.js') }}"></script>
 </body>
 
 <!-- Mirrored from templates.hibootstrap.com/colugo/default/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 02 Nov 2022 08:01:52 GMT -->

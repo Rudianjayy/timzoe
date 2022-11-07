@@ -7,7 +7,7 @@
     </head>
 
     <body>
-        <h1 class="text-center mb-4">Edit Tentang Kami</h1>
+        <h1 style="color: black;" class="text-center mb-4">Edit Tentang Kami</h1>
 
         <div class="container">
 
@@ -50,7 +50,7 @@
                                 </section>
 
 
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" class="btn btn-primary mt-3">Submit</button>
                             </form>
                         </div>
                     </div>

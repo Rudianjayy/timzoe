@@ -6,7 +6,7 @@
 </head>
 
 <body>
-  <h1 class="text-center mb-4">Tambah ekstrakulikuler</h1>
+  <h1 style="color: black" class="text-center mb-4">Tambah ekstrakulikuler</h1>
 
   <div class="container" mb-5>
 
@@ -70,8 +70,8 @@
                 </section>
 
 
-                <button type="submit" class="btn btn-primary">Submit</button>
-                <a href="/ekstrakulikuleradmin" class="btn btn-danger">Kembali</a>
+                <button type="submit" class="btn btn-primary mt-3">Submit</button>
+                <a href="/ekstrakulikuleradmin" class="btn btn-danger mt-3">Kembali</a>
               </form>
             </div>
           </div>

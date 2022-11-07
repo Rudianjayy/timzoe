@@ -18,10 +18,10 @@
 
     {{-- <ul class="navbar-nav flex-row mr-lg-auto ml-lg-0  ml-auto">
         <li class="nav-item dropdown message-dropdown ml-lg-4">
-            <a href="javascript:void(0);" class="nav-link dropdown-toggle" id="messageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {{--  <a href="javascript:void(0);" class="nav-link dropdown-toggle" id="messageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="flaticon-mail-10"></span><span class="badge badge-primary">13</span>
-            </a>
-            <div class="dropdown-menu  position-absolute" aria-labelledby="messageDropdown">
+            </a>  --}}
+            {{--  <div class="dropdown-menu  position-absolute" aria-labelledby="messageDropdown">
                 <a class="dropdown-item title" href="javascript:void(0);">
                     <i class="flaticon-chat-line mr-3"></i><span>You have 13 new messages</span>
                 </a>
@@ -78,14 +78,14 @@
                 <a class="footer dropdown-item" href="javascript:void(0);">
                     <div class="btn btn-info mb-3 mr-2 btn-rounded"><i class="flaticon-arrow-right mr-3"></i> View more</div>
                 </a>
-            </div>
+            </div>  --}}
         </li>
 
         <li class="nav-item dropdown notification-dropdown ml-3">
-            <a href="javascript:void(0);" class="nav-link dropdown-toggle" id="notificationDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {{--  <a href="javascript:void(0);" class="nav-link dropdown-toggle" id="notificationDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="flaticon-bell-4"></span><span class="badge badge-success">15</span>
-            </a>
-            <div class="dropdown-menu position-absolute" aria-labelledby="notificationDropdown">
+            </a>  --}}
+            {{--  <div class="dropdown-menu position-absolute" aria-labelledby="notificationDropdown">
                 <a class="dropdown-item title" href="javascript:void(0);">
                     <i class="flaticon-bell-13 mr-3"></i> <span>You have 15 new notifications</span>
                 </a>
@@ -122,7 +122,7 @@
 
                         </div>
 
-                        <div class="notification-item position-relative  mb-3">
+                        <div class="notification-item position-relative  mb-3"> 
 
                             <div class="c-dropdown text-right">
                                 <span id="c-dropdonbtn2" class="c-dropbtn mr-2"><i class="flaticon-dots"></i></span>
@@ -183,18 +183,18 @@
                     <span class="mr-1">View All</span>
                     <div class="btn btn-gradient-warning rounded-circle"><i class="flaticon-arrow-right flaticon-circle-p"></i></div>
                 </a>
-            </div>
+            </div>  --}}
         </li>
     </ul> --}}
 
 
     <ul class="navbar-nav flex-row ml-lg-auto">
 
-        <li class="nav-item  d-lg-block d-none">
+        {{--  <li class="nav-item  d-lg-block d-none">
             <form class="form-inline" role="search">
                 <input type="text" class="form-control search-form-control" placeholder="Search...">
             </form>
-        </li>
+        </li>  --}}
 
         {{-- <li class="nav-item dropdown app-dropdown  ml-lg-4 mr-lg-2 order-lg-0 order-2">
             <a href="javascript:void(0);" class="nav-link dropdown-toggle" id="appDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

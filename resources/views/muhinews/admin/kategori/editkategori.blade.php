@@ -7,7 +7,7 @@
     </head>
 
     <body>
-        <h1 class="text-center mb-4">Edit Data Identitas</h1>
+        <h1 style="color: black" class="text-center mb-4">Edit Data Identitas</h1>
 
         <div class="container">
 

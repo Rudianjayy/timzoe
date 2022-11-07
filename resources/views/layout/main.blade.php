@@ -56,9 +56,9 @@
 
     <!--  BEGIN CHAT  -->
     <div id="chat">
-        <div id="chat-circle" class="btn btn-raised  d-lg-block d-none">
+        {{--  <div id="chat-circle" class="btn btn-raised  d-lg-block d-none">
             <i class="flaticon-comment"></i>
-        </div>
+        </div>  --}}
         <div class="chat-box">
             <div class="chat-box-header">
                 <div class="media">

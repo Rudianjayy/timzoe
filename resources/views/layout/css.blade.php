@@ -22,4 +22,13 @@
 
     <!-- END PAGE LEVEL PLUGINS/CUSTOM STYLES -->
 
+
+
+
+    <link href="{{ asset('admintemp/adminnew/riski/nopan/plugins/animate/animate.css') }}" rel="stylesheet" type="text/css" />
+    <script src="{{ asset('admintemp/adminnew/riski/nopan/plugins/sweetalerts/promise-polyfill.js') }}"></script>
+    <link href="{{ asset('admintemp/adminnew/riski/nopan/plugins/sweetalerts/sweetalert2.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('admintemp/adminnew/riski/nopan/plugins/sweetalerts/sweetalert.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('admintemp/adminnew/riski/nopan/assets/css/ui-kit/custom-sweetalert.css') }}" rel="stylesheet" type="text/css" />
+
 </head>

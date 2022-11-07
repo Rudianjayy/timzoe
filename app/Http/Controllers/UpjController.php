@@ -353,7 +353,7 @@ class UpjController extends Controller
         return redirect('adminmuhiprint')->with('toast_success', ' Data Berhasil di Ubah!');
     }
 
-    public function deletemuhiprinnt($id)
+    public function deletemuhiprint($id)
     {
         $data2 = Printing::find($id);
         $data2->delete();

@@ -580,10 +580,6 @@ header.navbar:not(.tabMobileView) .navbar-nav .nav-item form.form-inline:before 
     margin-bottom: 20px;
 }
 #sidebar ul.menu-categories li.menu:first-child > a {
-    background-color: #e6e6e6;
-    color: #4f5163;
-    border-radius: 30px;
-    margin-bottom: 30px;
 }
 #sidebar ul.menu-categories li.menu:first-child > .dropdown-toggle i {
     color: #4f5163;

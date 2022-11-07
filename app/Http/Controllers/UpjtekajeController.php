@@ -32,11 +32,7 @@ class UpjtekajeController extends Controller
         $fu = Upjfooter::all();
         $uli = Upjfooterlink::all();
         $us = Upjtekajeslider::all();
-<<<<<<< HEAD
-        return view('upj.upj', compact('tentang','tk','upjt','team','keunguan','upjas','upgal','upjvis','tes','uf','fu','uli','us'));
-=======
         return view('upj.upj', compact('tentang','upjt','team','keunguan','upjas','upgal','upjvis','tes','uf','fu','uli','us','upjvisimisi'));
->>>>>>> 4ff67921228b256a08f39b7964109bf1e36876c4
     }
 
 

@@ -7,9 +7,10 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 @endpush
 @section('content')
-<head>
-    @include('layout.css')
-</head>
+
+    <head>
+        @include('layout.css')
+    </head>
 
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
@@ -20,7 +21,7 @@
                     <div class="card">
                         {{-- <div class="row justify-content-center">
                     <div class="col-sm-9"> --}}
-                        <h1 class="text-center">{{ $data->judul }}</h1>
+                        <h3 style="color: black" class="text-center">{{ $data->judul }}</h3>
                         <div class="container">
                             <div class="mb-3">
                                 {!! $data->deskripsi_detail !!}
@@ -32,5 +33,6 @@
         </div>
     </div>
     </div>
+    @include('layout.script')
     </div>
 @endsection

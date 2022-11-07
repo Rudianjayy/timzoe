@@ -388,7 +388,6 @@ Route::get('/detaildeskripsi/{id}',[AkademiController::class, 'detaildeskripsi']
 Route::get('/indexakademi',[AkademiController::class,'indexakademi'])->name('indexakademi');
 
 Route::get('/detailakademi/{id}',[AkademiController::class,'detailakademi'])->name('detailakademi');
-
 Route::get('/dataakademi',[AkademiController::class, 'loby6'])->name('dataakademi');
 Route::get('/tambahakademi',[AkademiController::class, 'tambahakademi'])->name('tambahakademi');
 Route::post('/submitdata6',[AkademiController::class, 'submitdata6'])->name('submitdata6');

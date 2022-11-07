@@ -21,13 +21,13 @@
             <li class="menu">
                 <a href="#dashboard" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
                     <div class="">
-                        <i class="flaticon-computer-6 ml-3"></i>
+                        <i class="flaticon-home-fill"></i>
                         <span>Dashboard</span>
                     </div>
                 </a>
                 <ul class="collapse submenu list-unstyled show" id="dashboard" data-parent="#accordionExample">
                     <li class="active">
-                        <a href="/welcome"> <i class="flaticon-computer-4"></i> Dashboard </a>
+                        <a href="/welcome"> <i class="flaticon-home-fill"></i> Dashboard </a>
                     </li>
 
                 </ul>
@@ -36,7 +36,7 @@
             <li class="menu">
                 <a href="#tentangkami" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <div class="">
-                        <i class="flaticon-cart-2"></i>
+                        <i class="flaticon-menu-dot-fill"></i>
                         <span>Tentang Kami</span>
                     </div>
                     <div>
@@ -61,7 +61,7 @@
             <li class="menu">
                 <a href="#kurikulum" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <div class="">
-                        <i class="flaticon-cart-2"></i>
+                        <i class="flaticon-menu-dot-1"></i>
                         <span>Kurikulum</span>
                     </div>
                     <div>
@@ -122,11 +122,14 @@
                 <li>
                         <a href="/idukaadmin">Iduka</a>
             </li>
+            <li>
+                        <a href="/mouadmin">Foto</a>
+            </li>
             </ul>
             <li class="menu">
                 <a href="#muhinews" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <div class="">
-                        <i class="flaticon-cart-2"></i>
+                        <i class="flaticon-notes-3"></i>
                         <span>Muhinews</span>
                     </div>
                     <div>

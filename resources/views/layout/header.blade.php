@@ -122,7 +122,7 @@
 
                         </div>
 
-                        <div class="notification-item position-relative  mb-3">
+                        <div class="notification-item position-relative  mb-3"> 
 
                             <div class="c-dropdown text-right">
                                 <span id="c-dropdonbtn2" class="c-dropbtn mr-2"><i class="flaticon-dots"></i></span>

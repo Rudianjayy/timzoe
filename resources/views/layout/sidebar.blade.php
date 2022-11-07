@@ -27,7 +27,7 @@
                 </a>
                 <ul class="collapse submenu list-unstyled show" id="dashboard" data-parent="#accordionExample">
                     <li class="active">
-                        <a href="/welcome"> <i class="flaticon-computer-4"></i> Dashboard </a>
+                        <a href="/welcome"> <i class="flaticon-home-line"></i> Dashboard </a>
                     </li>
 
                 </ul>
@@ -36,7 +36,7 @@
             <li class="menu">
                 <a href="#tentangkami" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <div class="">
-                        <i class="flaticon-cart-2"></i>
+                        <i class="flaticon-menu-list"></i>
                         <span>Tentang Kami</span>
                     </div>
                     <div>
@@ -58,10 +58,11 @@
                     </li>
                 </ul>
             </li>
+            
             <li class="menu">
                 <a href="#kurikulum" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <div class="">
-                        <i class="flaticon-cart-2"></i>
+                        <i class="flaticon-chat-line-1"></i>
                         <span>Kurikulum</span>
                     </div>
                     <div>
@@ -86,7 +87,7 @@
             <li class="menu">
                 <a href="#kesiswaan" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <div class="">
-                        <i class="flaticon-cart-2"></i>
+                        <i class="flaticon-plus"></i>
                         <span>Kesiswaan</span>
                     </div>
                     <div>
@@ -111,7 +112,7 @@
             <li class="menu">
                 <a href="#iduka" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <div class="">
-                        <i class="flaticon-cart-2"></i>
+                        <i class="flaticon-menu-4"></i>
                         <span>Iduka</span>
                     </div>
                     <div>
@@ -136,7 +137,7 @@
             <li class="menu">
                 <a href="#muhinews" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <div class="">
-                        <i class="flaticon-cart-2"></i>
+                        <i class="flaticon-shuffle-4"></i>
                         <span>Muhinews</span>
                     </div>
                     <div>
@@ -161,7 +162,7 @@
             <li class="menu">
                 <a href="#upj" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <div class="">
-                        <i class="flaticon-cart-2"></i>
+                        <i class="flaticon-link-2"></i>
                         <span>UPJ</span>
                     </div>
                     <div>
@@ -187,7 +188,7 @@
             <li class="menu">
                 <a href="#upjtekaje" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <div class="">
-                        <i class="flaticon-cart-2"></i>
+                        <i class="flaticon-menu-line-3"></i>
                         <span>UPJ TEKAJE</span>
                     </div>
                     <div>

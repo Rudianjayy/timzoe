@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use GrahamCampbell\ResultType\Success;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
 
 class LoginController extends Controller
 {
@@ -32,22 +34,32 @@ class LoginController extends Controller
         
     }
 
- 
+    public function register(){
+        return view('daftar.register');
+    }
 
     public function registeruser(Request $request){
-        $this->validate($request,[
+
+        $rules = [
             'name' =>'required|unique:users,name',
             'email' =>'required|unique:users,email',
             'password' =>'required',
-        ],[
+        ];
+
+        $pesan = [
             'name.required' =>' Harus diisi',
             'name.unique' =>' Nama sudah dipakai',
             'email.unique' =>'Email sudah dipakai',
             'email.required' =>'Email harus diisi',
-            // 'nidn.min' =>'min 4 karakter',
-            // 'nidn.max' =>'max 7 karakter',
             'password.required' =>'Sandi harus diisi',
-        ]);
+        ];
+
+        $validasi = Validator::make($request->all(), $rules, $pesan);
+
+        if($validasi->fails()){
+            return response()->with(['success' => 0, 'pesan' => $validasi->errors()->first()], 422);
+        }
+
         User::create([
             'name' => $request->name ,
             'email' => $request->email,
@@ -56,7 +68,7 @@ class LoginController extends Controller
             'remember_token' => Str::random(60),
 
         ]);
-        return redirect('/login')->with('toast_success','Berhasil daftar!');
+        return redirect('/login')->with('btn btn-success success','Berhasil daftar!');
     }
 
     public function logout(){

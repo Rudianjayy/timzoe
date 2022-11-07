@@ -1,6 +1,6 @@
 <header class="header navbar fixed-top navbar-expand-sm">
     <a href="javascript:void(0);" class="sidebarCollapse d-none d-lg-block" data-placement="bottom"><i class="flaticon-menu-line-2"></i></a>
-    <ul class="navbar-nav flex-row">
+    {{-- <ul class="navbar-nav flex-row">
         <li class="nav-item dropdown language-dropdown ml-1  ml-lg-0">
             <a href="javascript:void(0);" class="nav-link dropdown-toggle" id="flagDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <img src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/ca.svg') }}" alt=""> <span class="d-lg-inline-block d-none"></span>
@@ -13,10 +13,10 @@
                 <a class="dropdown-item" href="javascript:void(0);"><img src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/ca.svg') }}" class="flag-width" alt=""> &#xA0;English</a>
             </div>
         </li>
-    </ul>
+    </ul> --}}
 
 
-    <ul class="navbar-nav flex-row mr-lg-auto ml-lg-0  ml-auto">
+    {{-- <ul class="navbar-nav flex-row mr-lg-auto ml-lg-0  ml-auto">
         <li class="nav-item dropdown message-dropdown ml-lg-4">
             <a href="javascript:void(0);" class="nav-link dropdown-toggle" id="messageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="flaticon-mail-10"></span><span class="badge badge-primary">13</span>
@@ -185,7 +185,7 @@
                 </a>
             </div>
         </li>
-    </ul>
+    </ul> --}}
 
 
     <ul class="navbar-nav flex-row ml-lg-auto">
@@ -196,7 +196,7 @@
             </form>
         </li>
 
-        <li class="nav-item dropdown app-dropdown  ml-lg-4 mr-lg-2 order-lg-0 order-2">
+        {{-- <li class="nav-item dropdown app-dropdown  ml-lg-4 mr-lg-2 order-lg-0 order-2">
             <a href="javascript:void(0);" class="nav-link dropdown-toggle" id="appDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="flaticon-bulb"></span>
             </a>
@@ -229,7 +229,7 @@
                     <i class="flaticon-chart-3"></i><span>Charts</span>
                 </a>
             </div>
-        </li>
+        </li> --}}
 
 
         <li class="nav-item dropdown user-profile-dropdown ml-lg-0 mr-lg-2 ml-3 order-lg-0 order-1">
@@ -250,8 +250,8 @@
                     <i class="mr-1 flaticon-lock-2"></i> <span>Lock Screen</span>
                 </a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="user_login_1.html">
-                    <i class="mr-1 flaticon-power-button"></i> <span>Log Out</span>
+                <a class="dropdown-item" href="/login">
+                    <i class="flaticon-logout"></i> <span>Log Out</span>
                 </a>
             </div>
         </li>

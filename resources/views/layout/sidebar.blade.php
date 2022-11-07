@@ -1,79 +1,20 @@
-<div id="sidebar-menu">
-    <!-- Left Menu Start -->
-    <ul class="metismenu list-unstyled" id="side-menu">
-        <li class="menu-title">Ppdb</li>
+<div class="sidebar-wrapper sidebar-theme">
 
-        <li >
-            <a href="/welcome" class="waves-effect">
-                <i class="ti-home"></i><span class="badge rounded-pill bg-primary float-end"></span>
-                <span>Dashboard</span>
-            </a>
-        </li>
+    <div id="dismiss" class="d-lg-none"><i class="flaticon-cancel-12"></i></div>
 
-        <li>
-            <a href="/data-identitas" class="waves-effect">
-                <i class="mdi mdi-book-edit-outline"></i><span class="badge rounded-pill bg-primary float-end"></span>
-                <span>Data Identitas</span>
-            </a>
-        </li>
-@if (auth()->user()->role=="admin")
+    <nav id="sidebar">
 
-<li class="menu-title">Menu</li>
-        @endif
-        @if (auth()->user()->role=="admin")
-        <li>
-            <a href="javascript: void(0);" class="has-arrow waves-effect">
-                <i class="ti-package"></i>
-                <span>Tentang Kami</span>
-            </a>
-            <ul class="sub-menu" aria-expanded="false">
-                <li><a href="/profilsekolahadmin">Profil Sekolah</a></li>
-                <li><a href="/visimisiadmin">Visi & Misi</a></li>
-                <li><a href="/identitas_admin">Identitas Sekolah</a></li>
-                <li><a href="/fasilitasadmin">Fasilitas Sekolah </a></li>
-            </ul>
-        </li>
-
-        <li>
-            <a href="#" class="has-arrow waves-effect">
-                <i class="ti-package"></i>
-                <span>Kurikulum</span>
-            </a>
-            <ul class="sub-menu" aria-expanded="false">
-                <li><a href="/datajurusan">Kompetensi Keahlian</a></li>
-                {{-- <li><a href="/kompetensiadmin">Kompetensi Keahlian</a></li>
-                <li><a href="/fotokompetensiadmin">Foto Kompetensi</a></li> --}}
-                <li><a href="/jadwalkegiatanadmin">Jadwal Kegiatan</a></li>
-                <li><a href="/kalenderakademikadmin">Kalender Akademik</a></li>
-                <li><a href="/adminkelulusan">Surat Kelulusan</a></li>
-            </ul>
-        </li>
-
-        @endif
-        <li>
-            <a href="#" class="has-arrow waves-effect">
-                <i class="ti-package"></i>
-                <span>Kesiswaan</span>
-            </a>
-            <ul class="sub-menu" aria-expanded="false">
-                <li><a href="/dataakademi">Akademi</a></li>
-                <li><a href="/ekstrakulikuleradmin">Ekstra Kurikuler</a></li>
-                <li><a href="/osisadmin">IPM/OSIS</a></li>
-                <li><a href="/alumniadmin">Alumni</a></li>
-            </ul>
-        </li>
-
-        @if (auth()->user()->role=="admin")
-        <li>
-            <a href="javascript: void(0);" class="has-arrow waves-effect">
-                <i class="ti-package"></i>
-                <span>Iduka</span>
-            </a>
-            <ul class="sub-menu" aria-expanded="false">
-                <li><a href="/idukaadmin">Iduka</a></li>
-                <li><a href="/mouadmin">Foto</a></li>
-            </ul>
-        </li>
+        <ul class="navbar-nav theme-brand flex-row  d-none d-lg-flex">
+            <li class="nav-item d-flex">
+                <a href="index.html" class="navbar-brand">
+                    <img src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/logo-3.png') }}" class="img-fluid" alt="logo">
+                </a>
+                <p class="border-underline"></p>
+            </li>
+            <li class="nav-item theme-text">
+                <a href="index.html" class="nav-link"> Equation </a>
+            </li>
+        </ul>
 
 
         <ul class="list-unstyled menu-categories" id="accordionExample">
@@ -91,8 +32,9 @@
 
                 </ul>
             </li>
+
             <li class="menu">
-                <a href="#ecommerce" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                <a href="#tentangkami" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <div class="">
                         <i class="flaticon-cart-2"></i>
                         <span>Tentang Kami</span>
@@ -101,7 +43,7 @@
                         <i class="flaticon-right-arrow"></i>
                     </div>
                 </a>
-                <ul class="collapse submenu list-unstyled" id="ecommerce" data-parent="#accordionExample">
+                <ul class="collapse submenu list-unstyled" id="tentangkami" data-parent="#accordionExample">
                     <li>
                         <a href="/profilsekolahadmin"> Profil Sekolah</a>
                     </li>
@@ -116,51 +58,159 @@
                     </li>
                 </ul>
             </li>
+            <li class="menu">
+                <a href="#kurikulum" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <div class="">
+                        <i class="flaticon-cart-2"></i>
+                        <span>Kurikulum</span>
+                    </div>
+                    <div>
+                        <i class="flaticon-right-arrow"></i>
+                    </div>
+                </a>
+                <ul class="collapse submenu list-unstyled" id="kurikulum" data-parent="#accordionExample">
+                    <li>
+                        <a href="/datajurusan">Kompetensi Keahlian</a>
+                    </li>
+                    <li>
+                        <a href="/jadwalkegiatanadmin">Jadwal Kegiatan </a>
+                    </li>
+                    <li>
+                        <a href="/kalenderakademikadmin">Kalender Akademik</a>
+                    </li>
+                    <li>
+                        <a href="/adminkelulusan"> Surat Kelulusan </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu">
+                <a href="#kesiswaan" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <div class="">
+                        <i class="flaticon-cart-2"></i>
+                        <span>Kesiswaan</span>
+                    </div>
+                    <div>
+                        <i class="flaticon-right-arrow"></i>
+                    </div>
+                </a>
+                <ul class="collapse submenu list-unstyled" id="kesiswaan" data-parent="#accordionExample">
+                    <li>
+                        <a href="/datajurusan">Kompetensi Keahlian</a>
+                    </li>
+                    <li>
+                        <a href="/jadwalkegiatanadmin">Jadwal Kegiatan </a>
+                    </li>
+                    <li>
+                        <a href="/kalenderakademikadmin">Kalender Akademik</a>
+                    </li>
+                    <li>
+                        <a href="/adminkelulusan"> Surat Kelulusan </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu">
+                <a href="#iduka" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <div class="">
+                        <i class="flaticon-cart-2"></i>
+                        <span>Iduka</span>
+                    </div>
+                    <div>
+                        <i class="flaticon-right-arrow"></i>
+                    </div>
+                </a>
+                <ul class="collapse submenu list-unstyled" id="iduka" data-parent="#accordionExample">
+                    <li>
+                        <a href="/datajurusan">Kompetensi Keahlian</a>
+                    </li>
+                    <li>
+                        <a href="/jadwalkegiatanadmin">Jadwal Kegiatan </a>
+                    </li>
+                    <li>
+                        <a href="/kalenderakademikadmin">Kalender Akademik</a>
+                    </li>
+                    <li>
+                        <a href="/adminkelulusan"> Surat Kelulusan </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu">
+                <a href="#muhinews" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <div class="">
+                        <i class="flaticon-cart-2"></i>
+                        <span>Muhinews</span>
+                    </div>
+                    <div>
+                        <i class="flaticon-right-arrow"></i>
+                    </div>
+                </a>
+                <ul class="collapse submenu list-unstyled" id="muhinews" data-parent="#accordionExample">
+                    <li>
+                        <a href="/datajurusan">Kompetensi Keahlian</a>
+                    </li>
+                    <li>
+                        <a href="/jadwalkegiatanadmin">Jadwal Kegiatan </a>
+                    </li>
+                    <li>
+                        <a href="/kalenderakademikadmin">Kalender Akademik</a>
+                    </li>
+                    <li>
+                        <a href="/adminkelulusan"> Surat Kelulusan </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu">
+                <a href="#upj" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <div class="">
+                        <i class="flaticon-cart-2"></i>
+                        <span>UPJ</span>
+                    </div>
+                    <div>
+                        <i class="flaticon-right-arrow"></i>
+                    </div>
+                </a>
+                <ul class="collapse submenu list-unstyled" id="upj" data-parent="#accordionExample">
+                    <li>
+                        <a href="/datajurusan">Kompetensi Keahlian</a>
+                    </li>
+                    <li>
+                        <a href="/jadwalkegiatanadmin">Jadwal Kegiatan </a>
+                    </li>
+                    <li>
+                        <a href="/kalenderakademikadmin">Kalender Akademik</a>
+                    </li>
+                    <li>
+                        <a href="/adminkelulusan"> Surat Kelulusan </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu-title">UPJ TEKAJE</li>
+            <li class="menu">
+                <a href="#upjtekaje" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <div class="">
+                        <i class="flaticon-cart-2"></i>
+                        <span>UPJ TEKAJE</span>
+                    </div>
+                    <div>
+                        <i class="flaticon-right-arrow"></i>
+                    </div>
+                </a>
+                <ul class="collapse submenu list-unstyled" id="upjtekaje" data-parent="#accordionExample">
+                    <li>
+                        <a href="/datajurusan">Kompetensi Keahlian</a>
+                    </li>
+                    <li>
+                        <a href="/jadwalkegiatanadmin">Jadwal Kegiatan </a>
+                    </li>
+                    <li>
+                        <a href="/kalenderakademikadmin">Kalender Akademik</a>
+                    </li>
+                    <li>
+                        <a href="/adminkelulusan"> Surat Kelulusan </a>
+                    </li>
+                </ul>
+            </li>
+
         </ul>
     </nav>
 
-        <li>
-            <a href="/fotoslideradmin" class="waves-effect">
-                <i class="mdi mdi-account-details-outline"></i> <span class="badge rounded-pill bg-primary float-end"></span>
-                <span>Slider</span>
-            </a>
-        </li>
-
-
-
-        {{-- <li>
-            <a href="/datajurusan" class="waves-effect">
-                <i class="mdi mdi-account-details-outline"></i> <span class="badge rounded-pill bg-primary float-end"></span>
-                <span>Kompetensi Keahlian</span>
-            </a>
-            <ul class="sub-menu" aria-expanded="false">
-                <li><a href="/datajurusan">Kompetensi Keahlian</a></li>
-                <li><a href="/adminfotojurusan">Masing jurusan</a></li>
-            </ul>
-        </li> --}}
-
-
-
-
-        @endif
-
-        <li>
-            <a href="javascript: void(0);" class="has-arrow waves-effect">
-                <i class="ti-package"></i>
-                <span>Footer</span>
-            </a>
-            <ul class="sub-menu" aria-expanded="false">
-                <li><a href="/footeeradmin">Footer</a></li>
-                <li><a href="/adminfooteerdua">Footerlink</a></li>
-            </ul>
-        </li>
-        <li>
-        <li>
-            <a href="/logout" class="waves-effect">
-                <i class="mdi mdi-chevron-left"></i> <span class="badge rounded-pill bg-primary float-end"></span>
-                <span>Keluar</span>
-            </a>
-        </li>
-    </ul>
 </div>
-

@@ -22,8 +22,8 @@
                     <div class="crumbs">
                         <ul id="breadcrumbs" class="breadcrumb">
                             <li><a href="index.html"><i class="flaticon-home-fill"></i></a></li>
-                            <li><a href="#">eCommerce</a></li>
-                            <li class="active"><a href="#">Products</a></li>
+                            <li><a href="#">Tentang Kami</a></li>
+                            <li class="active"><a href="#">Profil Sekolah</a></li>
                         </ul>
                     </div>
                 </div>
@@ -35,7 +35,7 @@
                         <div class="widget-header">
                             <div class="row">
                                 <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                    <h4>Product List </h4>
+                                    <h4>Profil Sekolah</h4>
                                 </div>
                             </div>
                         </div>

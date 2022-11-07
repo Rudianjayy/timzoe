@@ -7,7 +7,7 @@
     </head>
 
     <body>
-        <h1 class="text-center mb-4">Tambah </h1>
+        <h1 style="color: black;" class="text-center mb-4">Tambah </h1>
 
         <div class="container" mb-5>
 
@@ -26,7 +26,7 @@
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
-                                
+
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Nama yang komen :</label>
                                     <input type="text" name="tester" class="form-control" id="exampleInputEmail1"

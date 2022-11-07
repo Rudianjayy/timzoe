@@ -7,7 +7,8 @@
         <ul class="navbar-nav theme-brand flex-row  d-none d-lg-flex">
             <li class="nav-item d-flex">
                 <a href="index.html" class="navbar-brand">
-                    <img src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/logo-3.png') }}" class="img-fluid" alt="logo">
+                    <img src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/logo-3.png') }}" class="img-fluid"
+                        alt="logo">
                 </a>
                 <p class="border-underline"></p>
             </li>
@@ -36,7 +37,7 @@
             <li class="menu">
                 <a href="#tentangkami" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <div class="">
-                        <i class="flaticon-cart-2"></i>
+                        <i class="flaticon-3d-cube"></i>
                         <span>Tentang Kami</span>
                     </div>
                     <div>
@@ -61,7 +62,7 @@
             <li class="menu">
                 <a href="#kurikulum" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <div class="">
-                        <i class="flaticon-cart-2"></i>
+                        <i class="flaticon-elements"></i>
                         <span>Kurikulum</span>
                     </div>
                     <div>
@@ -86,7 +87,7 @@
             <li class="menu">
                 <a href="#kesiswaan" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <div class="">
-                        <i class="flaticon-cart-2"></i>
+                        <i class="flaticon-copy-line"></i>
                         <span>Kesiswaan</span>
                     </div>
                     <div>
@@ -111,7 +112,7 @@
             <li class="menu">
                 <a href="#iduka" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <div class="">
-                        <i class="flaticon-cart-2"></i>
+                        <i class="flaticon-layers"></i>
                         <span>Iduka</span>
                     </div>
                     <div>
@@ -136,7 +137,7 @@
             <li class="menu">
                 <a href="#muhinews" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <div class="">
-                        <i class="flaticon-cart-2"></i>
+                        <i class="flaticon-table"></i>
                         <span>Muhinews</span>
                     </div>
                     <div>
@@ -145,23 +146,17 @@
                 </a>
                 <ul class="collapse submenu list-unstyled" id="muhinews" data-parent="#accordionExample">
                     <li>
-                        <a href="/datajurusan">Kompetensi Keahlian</a>
+                        <a href="/muhinewsadmin">Muhinews</a>
                     </li>
                     <li>
-                        <a href="/jadwalkegiatanadmin">Jadwal Kegiatan </a>
-                    </li>
-                    <li>
-                        <a href="/kalenderakademikadmin">Kalender Akademik</a>
-                    </li>
-                    <li>
-                        <a href="/adminkelulusan"> Surat Kelulusan </a>
+                        <a href="/kategoriberita">Kategori Muhinews </a>
                     </li>
                 </ul>
             </li>
             <li class="menu">
                 <a href="#upj" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <div class="">
-                        <i class="flaticon-cart-2"></i>
+                        <i class="flaticon-computer-5"></i>
                         <span>UPJ</span>
                     </div>
                     <div>
@@ -170,16 +165,25 @@
                 </a>
                 <ul class="collapse submenu list-unstyled" id="upj" data-parent="#accordionExample">
                     <li>
-                        <a href="/datajurusan">Kompetensi Keahlian</a>
+                        <a href="/adminupj">UPJ TEKAJE</a>
                     </li>
                     <li>
-                        <a href="/jadwalkegiatanadmin">Jadwal Kegiatan </a>
+                        <a href="/adminupj2">Foto & Jasa UPJ </a>
                     </li>
                     <li>
-                        <a href="/kalenderakademikadmin">Kalender Akademik</a>
+                        <a href="/adminbsi">BSI</a>
                     </li>
                     <li>
-                        <a href="/adminkelulusan"> Surat Kelulusan </a>
+                        <a href="/adminmuhiprint">Muhi Printing</a>
+                    </li>
+                    <li>
+                        <a href="/adminpegadaian">Pegadaian</a>
+                    </li>
+                    <li>
+                        <a href="/adminsuryamart">Suryamart</a>
+                    </li>
+                    <li>
+                        <a href="/adminedotel">Edotel</a>
                     </li>
                 </ul>
             </li>
@@ -187,7 +191,7 @@
             <li class="menu">
                 <a href="#upjtekaje" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <div class="">
-                        <i class="flaticon-cart-2"></i>
+                        <i class="flaticon-menu-4"></i>
                         <span>UPJ TEKAJE</span>
                     </div>
                     <div>
@@ -196,16 +200,34 @@
                 </a>
                 <ul class="collapse submenu list-unstyled" id="upjtekaje" data-parent="#accordionExample">
                     <li>
-                        <a href="/datajurusan">Kompetensi Keahlian</a>
+                        <a href="/tentangkami">Tentang Kami</a>
                     </li>
                     <li>
-                        <a href="/jadwalkegiatanadmin">Jadwal Kegiatan </a>
+                        <a href="/adminteam">Structure Team</a>
                     </li>
                     <li>
-                        <a href="/kalenderakademikadmin">Kalender Akademik</a>
+                        <a href="/adminkeunggulan">Keunggulan</a>
                     </li>
                     <li>
-                        <a href="/adminkelulusan"> Surat Kelulusan </a>
+                        <a href="/adminjasa">Jasa</a>
+                    </li>
+                    <li>
+                        <a href="/admingalery">Galery</a>
+                    </li>
+                    <li>
+                        <a href="/adminvisimisi">Visi Misi</a>
+                    </li>
+                    <li>
+                        <a href="/admintestimoni">Testimoni</a>
+                    </li>
+                    <li>
+                        <a href="/adminupjfooter">UPJ Footer</a>
+                    </li>
+                    <li>
+                        <a href="/adminupjfooterlink">UPJ Footer Link</a>
+                    </li>
+                    <li>
+                        <a href="/adminupjslider">UPJ Slider</a>
                     </li>
                 </ul>
             </li>

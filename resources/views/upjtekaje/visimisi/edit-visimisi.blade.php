@@ -7,7 +7,7 @@
     </head>
 
     <body>
-        <h1 class="text-center mb-4">Edit UPJ Visi Misi</h1>
+        <h1 style="color: black;" class="text-center mb-4">Edit UPJ Visi Misi</h1>
 
         <div class="container">
 
@@ -78,7 +78,7 @@
                                 </div>
 
 
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" class="btn btn-primary mt-3">Submit</button>
                             </form>
                         </div>
                     </div>

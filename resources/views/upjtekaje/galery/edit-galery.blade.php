@@ -7,7 +7,7 @@
     </head>
 
     <body>
-        <h1 class="text-center mb-4">Edit Galery</h1>
+        <h1 style="color: black;" class="text-center mb-4">Edit Galery</h1>
 
         <div class="container">
 
@@ -22,7 +22,7 @@
                                     <label for="exampleInputEmail1" class="form-label">Foto :</label>
                                     <input type="file" name="foto_tentangkami" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $data->foto_tentangkami }}">
                                     <img src="{{ asset('fotomahasiswa/' . $data->foto_tentangkami) }}" alt="" style="width: 70px">
-                
+
                                     @error('foto_tentangkami')
                                       <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror

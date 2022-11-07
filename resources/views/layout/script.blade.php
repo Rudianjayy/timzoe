@@ -64,4 +64,8 @@
         });
     </script>
 
+    <script src="{{ asset('admintemp/adminnew/riski/nopan/plugins/sweetalerts/sweetalert2.min.js') }}"></script>
+    <script src="{{ asset('admintemp/adminnew/riski/nopan/plugins/sweetalerts/custom-sweetalert.js') }}"></script>
+
+
 </body>

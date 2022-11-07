@@ -7,7 +7,7 @@
     </head>
 
     <body>
-        <h1 class="text-center mb-4">Edit Muhi Printing</h1>
+        <h1 style="color:black;" class="text-center mb-4">Edit Muhi Printing</h1>
 
         <div class="container">
 
@@ -22,7 +22,7 @@
                                     <label for="exampleInputEmail1" class="form-label">Foto :</label>
                                     <input type="file" name="foto_muhiprint" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $data2->foto_muhiprint }}">
                                     <img src="{{ asset('fotomahasiswa/' . $data2->foto_muhiprint) }}" alt="" style="width: 70px">
-                
+
                                     @error('foto_muhiprint')
                                       <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
@@ -47,7 +47,7 @@
                                 </section>
 
 
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" class="btn btn-primary mt-3">Submit</button>
                             </form>
                         </div>
                     </div>

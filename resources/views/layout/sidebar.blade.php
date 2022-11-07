@@ -6,15 +6,11 @@
 
         <ul class="navbar-nav theme-brand flex-row  d-none d-lg-flex">
             <li class="nav-item d-flex">
-                <a href="index.html" class="navbar-brand">
-                    <img src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/logo-3.png') }}" class="img-fluid"
-                        alt="logo">
+                <a href="index.html" class="navbar-brand" style="width:230px;">
+                    <img src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/muhi-2.png') }}" class="img-fluid"
+                        alt="logo" style="width:210px; margin-top:20px; margin-bottom:20px;">
                 </a>
-                <p class="border-underline"></p>
-            </li>
-            <li class="nav-item theme-text">
-                <a href="index.html" class="nav-link"> Equation </a>
-            </li>
+
         </ul>
 
 
@@ -33,6 +29,7 @@
 
                 </ul>
             </li>
+            <li class="menu-title">Menu</li>
 
             <li class="menu">
                 <a href="#tentangkami" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
@@ -96,16 +93,16 @@
                 </a>
                 <ul class="collapse submenu list-unstyled" id="kesiswaan" data-parent="#accordionExample">
                     <li>
-                        <a href="/datajurusan">Kompetensi Keahlian</a>
+                        <a href="/dataakademi"> Akademi</a>
                     </li>
                     <li>
-                        <a href="/jadwalkegiatanadmin">Jadwal Kegiatan </a>
+                        <a href="/ekstrakulikuleradmin">Ekstrakurikuler</a>
                     </li>
                     <li>
-                        <a href="/kalenderakademikadmin">Kalender Akademik</a>
+                        <a href="/osisadmin">Osis</a>
                     </li>
                     <li>
-                        <a href="/adminkelulusan"> Surat Kelulusan </a>
+                        <a href="/alumniadmin">Alumni</a>
                     </li>
                 </ul>
             </li>
@@ -121,19 +118,9 @@
                 </a>
                 <ul class="collapse submenu list-unstyled" id="iduka" data-parent="#accordionExample">
                     <li>
-                        <a href="/datajurusan">Kompetensi Keahlian</a>
-                    </li>
-                    <li>
-                        <a href="/jadwalkegiatanadmin">Jadwal Kegiatan </a>
-                    </li>
-                    <li>
-                        <a href="/kalenderakademikadmin">Kalender Akademik</a>
-                    </li>
-                    <li>
-                        <a href="/adminkelulusan"> Surat Kelulusan </a>
+                        <a href="/idukaadmin">Iduka</a>
                     </li>
                 </ul>
-            </li>
             <li class="menu">
                 <a href="#muhinews" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <div class="">
@@ -151,6 +138,7 @@
                     <li>
                         <a href="/kategoriberita">Kategori Muhinews </a>
                     </li>
+
                 </ul>
             </li>
             <li class="menu">
@@ -230,6 +218,14 @@
                         <a href="/adminupjslider">UPJ Slider</a>
                     </li>
                 </ul>
+            </li>
+            <li class="menu">
+                <a href="/adminmitra" class="waves-effect">
+                    <div class="">
+                        <i class="flaticon-menu-4"></i>
+                        <span>Mitra</span>
+                    </div>
+                </a>
             </li>
 
         </ul>

@@ -29,6 +29,7 @@ class AkademiController extends Controller
         $link = footeerdua::all();
         return view('akademi.akademi', compact('kompetensi','foto','f','kh','pj','kp','akdm','akademi','personal','ft','logo','link'));
     }
+    
 
     public function detailakademi($id){
         $dekad= Akademi::findOrFail($id);

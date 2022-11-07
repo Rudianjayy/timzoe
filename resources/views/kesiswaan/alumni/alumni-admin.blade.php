@@ -22,7 +22,7 @@
                     <div class="crumbs">
                         <ul id="breadcrumbs" class="breadcrumb">
                             <li><a href="index.html"><i class="flaticon-home-fill"></i></a></li>
-                            <li><a href="#">Alumni</a></li>
+                            <li><a href="#">Kesiswaan</a></li>
                             <li class="active"><a href="#">Alumni</a></li>
                         </ul>
                     </div>

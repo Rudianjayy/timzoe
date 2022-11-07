@@ -77,7 +77,7 @@
                                         <td>
                                             <a href="/editupj/{{ $upj->id }}" class="btn btn-warning">Edit</a>
 
-                                             <a href="/deleteupj/{{ $upj->id }}" class="btn btn-danger" onclick="return confirm('yakin gen?')">Delete</a> 
+                                             <a href="/deleteupj/{{ $upj->id }}" class="btn btn-danger" onclick="return confirm('yakin dihapus?')">Delete</a>
 
 
 

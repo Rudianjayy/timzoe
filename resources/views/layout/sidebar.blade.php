@@ -118,8 +118,11 @@
                         <i class="flaticon-right-arrow"></i>
                     </div>
                 </a>
-
+                <ul class="collapse submenu list-unstyled" id="iduka" data-parent="#accordionExample">
+                <li>
+                        <a href="/idukaadmin">Iduka</a>
             </li>
+            </ul>
             <li class="menu">
                 <a href="#muhinews" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <div class="">

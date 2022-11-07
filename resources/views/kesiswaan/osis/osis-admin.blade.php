@@ -22,7 +22,7 @@
                     <div class="crumbs">
                         <ul id="breadcrumbs" class="breadcrumb">
                             <li><a href="index.html"><i class="flaticon-home-fill"></i></a></li>
-                            <li><a href="#">osis</a></li>
+                            <li><a href="#">Kesiswaan</a></li>
                             <li class="active"><a href="#">osis</a></li>
                         </ul>
                     </div>
@@ -80,12 +80,12 @@
                                                                 <i class="flaticon-edit"></i>
                                                             </a>
                                                         </li>
-                                                        {{--  <li>
+                                                        <li>
                                                             <a href="/deleteosis/{{ $d->id }}"
                                                                 data-toggle="tooltip" data-placement="top" title="Delete">
                                                                 <i class="flaticon-delete-5"></i>
                                                             </a>
-                                                        </li>  --}}
+                                                        </li>
                                                     </ul>
                                                 </td>
                                             </tr>

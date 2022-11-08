@@ -33,6 +33,10 @@ use App\Http\Controllers\FotokompetensiController;
 use App\Http\Controllers\PersonaljurusanController;
 use App\Http\Controllers\EkstrakulikulerBlogController;
 use App\Http\Controllers\IdentitasSekolahController;
+use App\Models\Album;
+use App\Models\Mitra;
+use App\Models\Muhinews;
+use App\Models\Prestasi;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,6 +53,8 @@ use App\Http\Controllers\IdentitasSekolahController;
 //     return view('landingpage.landing');
 // });
 Route::get('/',[LandingController::class,'index'])->name('landing');
+
+Route::get('/authors',[LandingController::class,'authors'])->name('authors');
 
 
 
@@ -609,9 +615,24 @@ Route::get('/deletefotomou/{id}',[FotoidukaController::class, 'delete'])->name('
 
 //template metronic
 Route::get('/data-identitas',[DataidentitasController::class,'index'])->name('data-identitas');
+
+
 Route::get('/welcome', function () {
-    return view('welcome');
+    $berita = Muhinews::count();
+    $galery = Album::count();
+    $prestasi = Prestasi::count();
+    $mitra = Mitra::count();
+    return view('welcome',compact('berita','galery','prestasi','mitra'));
 });
+
+
+// Route::get('/welcome', function () {
+//     $jumlahmahasiswa = Employee::count();
+//     $jumlahmahasiswalakilaki = Employee::where('jeniskelamin','laki-laki')->count();
+//     $jumlahmahasiswaperempuan = Employee::where('jeniskelamin','perempuan')->count();
+
+//     return view('welcome',compact('jumlahmahasiswa','jumlahmahasiswalakilaki','jumlahmahasiswaperempuan'));
+// })->middleware('auth');
 
 
 

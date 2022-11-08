@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
     <title>Register | SMK Muhammadiyah 1 Genteng </title>
-    <link rel="icon" type="image/x-icon" href="{{ asset('admintemp/adminnew/riski/nopan/assets/img/favicon.ico') }}" />
+    <link rel="icon" type="image/x-icon" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}" />
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     <link href="{{ asset('admintemp/adminnew/riski/nopan/assets/css/loader.css') }}" rel="stylesheet" type="text/css" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
@@ -32,8 +32,8 @@
         @csrf
         <div class="row">
             <div class="col-md-12 text-center mb-4">
-                <img alt="logo" src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/logo-3.png') }}"
-                    class="theme-logo">
+                <img alt="logo" src="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}"
+                    class="theme-logo" style="width: 80px;">
             </div>
             <div class="col-md-12">
                 <label for="full-name" class="" style="color: black">Full Name</label>

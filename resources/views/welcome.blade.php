@@ -16,11 +16,11 @@
                 <div class="widget  t-sales-widget">
                     <div class="media">
                         <div class="icon ml-2">
-                            <i class="flaticon-line-chart"></i>
+                            <i class="flaticon-double-chat"></i>
                         </div>
                         <div class="media-body text-right">
-                            <p class="widget-text mb-0">Sales</p>
-                            <p class="widget-numeric-value">98,225</p>
+                            <p class="widget-text mb-0">Berita</p>
+                            <p class="widget-numeric-value count">{{ $berita }}</p>
                         </div>
                     </div>
                     <p class="widget-total-stats mt-2">94% New Sales</p>
@@ -36,8 +36,8 @@
                             <i class="flaticon-cart-bag"></i>
                         </div>
                         <div class="media-body text-right">
-                            <p class="widget-text mb-0">Orders</p>
-                            <p class="widget-numeric-value">24,017</p>
+                            <p class="widget-text mb-0">Album</p>
+                            <p class="widget-numeric-value count">{{ $galery }}</p>
                         </div>
                     </div>
                     <p class="widget-total-stats mt-2">552 New Orders</p>
@@ -53,8 +53,8 @@
                             <i class="flaticon-user-11"></i>
                         </div>
                         <div class="media-body text-right">
-                            <p class="widget-text mb-0">Customers</p>
-                            <p class="widget-numeric-value">92,251</p>
+                            <p class="widget-text mb-0">Prestasi</p>
+                            <p class="widget-numeric-value count">{{ $prestasi }}</p>
                         </div>
                     </div>
                     <p class="widget-total-stats mt-2">390 New Customers</p>
@@ -71,8 +71,8 @@
                             <i class="flaticon-money"></i>
                         </div>
                         <div class="media-body text-right">
-                            <p class="widget-text mb-0">Income</p>
-                            <p class="widget-numeric-value">9.5 M</p>
+                            <p class="widget-text mb-0">Mitra</p>
+                            <p class="widget-numeric-value count">{{ $mitra }}</p>
                         </div>
                     </div>
                     <p class="widget-total-stats mt-2">$2.1 M This Week</p>
@@ -82,7 +82,7 @@
 
     </div>
 
-    <div class="row">
+    {{-- <div class="row">
         <div class="col-xl-4 col-lg-6 col-md-6 col-12 layout-spacing">
             <div class="widget-content-area chat-messages p-0  br-4">
 
@@ -1139,9 +1139,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 
-    <div class="row">
+    {{-- <div class="row">
         <div class="col-xl-5 col-lg-12 col-md-12 col-12 layout-spacing">
             <div class="widget-content-area page-views p-0  br-4">
                 <ul class="nav nav-pills py-3" id="pills-tab" role="tablist">
@@ -1255,7 +1255,7 @@
 
             </div>
         </div>
-    </div>
+    </div> --}}
 
     @include('sweetalert::alert')
 

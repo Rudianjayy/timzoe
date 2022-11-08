@@ -83,7 +83,7 @@
     <div class="container">
         <div class="bottom-inner">
             Copyright © 2022 at SMK Muhammadiyah 1 Genteng. Supported by <a
-                href="https://www.instagram.com/timzoe_/?next=%2F&hl=id"> Team Zoe</a>
+                href="/authors"> Team Zoe</a>
         </div>
     </div>
 </div>

@@ -33,6 +33,10 @@ use App\Http\Controllers\FotokompetensiController;
 use App\Http\Controllers\PersonaljurusanController;
 use App\Http\Controllers\EkstrakulikulerBlogController;
 use App\Http\Controllers\IdentitasSekolahController;
+use App\Http\Controllers\ProfiladminController;
+use App\Http\Controllers\AccountsettingsController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -579,6 +583,29 @@ Route::get('/pendaftaran', [PpdbController::class, 'pendaftaran'])->name('pendaf
 
 
 
+
+
+//Profiladmin
+Route::get('/profiladmin',[ProfiladminController::class,'profiladmin'])->name('profiladmin');
+
+Route::get('/adminprofil',[ProfiladminController::class, 'adminprofil'])->name('adminprofil');
+// Route::get('/tambahprofiladmin',[ProfiladminController::class, 'tambahprofiladmin'])->name('tambahprofiladmin');
+// Route::post('/submitprofil',[ProfiladminController::class, 'submitprofil'])->name('submitprofil');
+// Route::get('/editprofiladmin/{id}',[ProfiladminController::class, 'editprofiladmin'])->name('editprofiladmin');
+// Route::post('/editproses/{id}',[ProfiladminController::class, 'editproses'])->name('editproses');
+// Route::get('/deleteprofiladmin/{id}',[ProfiladminController::class, 'deleteprofiladmin'])->name('deleteprofiladmin');
+
+
+
+//account setting
+Route::get('/accountsettings',[AccountsettingsController::class, 'accountsettings'])->name('accountsettings');
+Route::get('/adminaccountsettings',[AccountsettingsadminController::class, 'adminaccountsettings'])->name('adminaccountsettings');
+
+Route::get('/tambahaccountsettings',[AccountsettingsController::class, 'tambahaccountsettings'])->name('tambahaccountsettings');
+Route::post('/submitprofil',[AccountsettingsController::class, 'submitprofil'])->name('submitprofil');
+Route::get('/editaccountsettings/{id}',[AccountsettingsController::class, 'editaccountsettings'])->name('editaccountsettings');
+Route::post('/editproses/{id}',[AccountsettingsController::class, 'editproses'])->name('editproses');
+Route::get('/deleteaccountsettings/{id}',[AccountsettingsController::class, 'deleteaccountsettings'])->name('deleteaccountsettings');
 
 
 

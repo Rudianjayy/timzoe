@@ -5,13 +5,7 @@
             <a href="javascript:void(0);" class="nav-link dropdown-toggle" id="flagDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <img src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/ca.svg') }}" alt=""> <span class="d-lg-inline-block d-none"></span>
             </a>
-            <div class="dropdown-menu position-absolute" aria-labelledby="flagDropdown">
-                <a class="dropdown-item" href="javascript:void(0);"><img src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/de.svg') }}" class="flag-width" alt=""> &#xA0;German</a>
-                <a class="dropdown-item" href="javascript:void(0);"><img src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/jp.svg') }}" class="flag-width" alt=""> &#xA0;Japanese</a>
-                <a class="dropdown-item" href="javascript:void(0);"><img src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/fr.svg') }}" class="flag-width" alt=""> &#xA0;French</a>
-                <a class="dropdown-item" href="javascript:void(0);"><img src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/ru.svg') }}" class="flag-width" alt=""> &#xA0;Russian</a>
-                <a class="dropdown-item" href="javascript:void(0);"><img src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/ca.svg') }}" class="flag-width" alt=""> &#xA0;English</a>
-            </div>
+
         </li>
     </ul>
 
@@ -122,7 +116,7 @@
 
                         </div>
 
-                        <div class="notification-item position-relative  mb-3"> 
+                        <div class="notification-item position-relative  mb-3">
 
                             <div class="c-dropdown text-right">
                                 <span id="c-dropdonbtn2" class="c-dropbtn mr-2"><i class="flaticon-dots"></i></span>

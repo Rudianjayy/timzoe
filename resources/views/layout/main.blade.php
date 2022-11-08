@@ -140,9 +140,11 @@
                 </div>
                 <div class="col-md-12">
                     <div class="usr-info text-center mb-5">
-                        <img alt="admin-profile" src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/c-14.jpg') }}" class="img-fluid rounded-circle mb-3">
-                        <div class=" mt-2">
+                    <img src="{{asset ('fotomahasiswa/' .Auth::user()->foto)}}" class="cover-photo" alt="" height="300" >
+                      <div class=" mt-2">
+
                             <h5 class="usr-name mb-0">Linda Nelson</h5>
+
                             <p class="usr-occupation mb-0 mt-1">Developer</p>
                         </div>
                     </div>

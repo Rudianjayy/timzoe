@@ -118,7 +118,7 @@
                                 </ul>
                             </div>
                         </div>
-                    </div>
+                    </div>  
                 </div>
             </section>
             <section class="tf-section login-page register-page">
@@ -136,29 +136,11 @@
                                         </div>
 
                                         <div class="input-group" id="create-item-1">
-<<<<<<< HEAD
-                                            <input name="name" value="" type="text" placeholder="Nama">
-                                            {{-- <input name="name" value="" type="text"
-                                            placeholder="Nama Belakang" required=""> --}}
-                                        </div>
-                                        @error('name')
-                                            <div>
-                                                <div class="alert alert-danger">{{ $message }}</div>
-                                            </div>
-                                        @enderror
-                                        {{-- <div class="input-group" id="create-item-1">
-                                            <input name="phone" value="" type="text"
-                                                placeholder="Nomor Telepon" required="">
-                                            <input name="name" value="" type="text" placeholder="Username"
-                                                required="">
-                                        </div> --}}
-=======
                                             <input name="name" value="" type="text" placeholder="Nama "
                                                 required="">
-                                          
+
                                         </div>
 
->>>>>>> 4ff67921228b256a08f39b7964109bf1e36876c4
                                         <div class="input-group" id="create-item-1">
                                             <input name="email" value="" type="email"
                                                 placeholder="Masukkan Email">
@@ -173,16 +155,6 @@
                                             <input name="password" value="" type="password"
                                                 placeholder="Masukkan Sandi">
                                         </div>
-<<<<<<< HEAD
-                                        @error('password')
-                                            <div>
-                                                <div class="alert alert-danger">{{ $message }}</div>
-                                            </div>
-                                        @enderror
-
-                                        <input type="text" value="user" name="role" hidden>
-=======
->>>>>>> 4ff67921228b256a08f39b7964109bf1e36876c4
 
                                         <div class="input-group" id="create-item-1">
                                             <button name="submit" type="submit"

@@ -7,8 +7,6 @@ use App\Http\Controllers\AlbumController;
 use App\Http\Controllers\IdukaController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MitraController;
-use App\Http\Controllers\DetailController;
-use App\Http\Controllers\KepsekController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\AkademiController;
 use App\Http\Controllers\FooteerController;
@@ -27,14 +25,11 @@ use App\Http\Controllers\KurikulumController;
 use App\Http\Controllers\UpjtekajeController;
 use App\Http\Controllers\KompetensiController;
 use App\Http\Controllers\DataidentitasController;
-use App\Http\Controllers\DetailakademiController;
 use App\Http\Controllers\ProfilSekolahController;
 use App\Http\Controllers\FotokompetensiController;
-use App\Http\Controllers\PersonaljurusanController;
 use App\Http\Controllers\EkstrakulikulerBlogController;
 use App\Http\Controllers\IdentitasSekolahController;
 use App\Http\Controllers\ProfiladminController;
-use App\Http\Controllers\AccountsettingsController;
 
 
 

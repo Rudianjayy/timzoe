@@ -163,6 +163,7 @@ class ProfilSekolahController extends Controller
     }
     public function visimisiadmin()
     {
+        
         $data = visimisi::all();
         return view('visimisi.admin.visimisiadmin', compact('data'));;
     }

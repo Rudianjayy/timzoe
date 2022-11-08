@@ -16,18 +16,18 @@
 
         <ul class="list-unstyled menu-categories" id="accordionExample">
             <li class="menu">
-                <a href="#dashboard" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
+                <a href="/welcome"  aria-expanded="true" class="dropdown-toggle">
                     <div class="">
-                        <i class="flaticon-home-fill"></i>
-                        <span>Dashboard</span>
+                        <i class="flaticon-home-line"></i>
+                        <span>Beranda</span>
                     </div>
                 </a>
-                <ul class="collapse submenu list-unstyled show" id="dashboard" data-parent="#accordionExample">
+                {{-- <ul class="collapse submenu list-unstyled show" id="dashboard" data-parent="#accordionExample">
                     <li class="active">
                         <a href="/welcome"> <i class="flaticon-home-line"></i> Dashboard </a>
                     </li>
 
-                </ul>
+                </ul> --}}
             </li>
             <li class="menu-title">Menu</li>
 

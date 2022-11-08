@@ -287,7 +287,6 @@
                 </ul>
             </li>
 
-<<<<<<< HEAD
 
             <li class="menu-title"></li>
             <li class="menu">
@@ -302,31 +301,15 @@
                 </a>
                 <ul class="collapse submenu list-unstyled" id="profiladmin" data-parent="#accordionExample">
                     <li>
-                        <a href="/adminprofil">Profil Admin</a>
+                        <a href="#">Profil Admin</a>
                     </li>
-                    <li>
-                        <a href="/adminaccountsettings">Account Settings</a>
-                    </li>
-                    <li>
-                        <a href="/loginadmin">Login</a>
-                    </li>
-                    <li>
-                        <a href="/adminprofil">Register</a>
-                    </li>
-                    <li>
-                        <a href="/adminpassword">Password Recovery</a>
-                    </li>
-                    <li>
-                        <a href="/adminlockscreen">Lockscreen</a>
-                    </li>
+
                 </ul>
             </li>
 
 
         </ul>
     </nav>
-=======
->>>>>>> 41f9e641380e7cc88d1a0bcf73db38b1e3a4449a
 
         </ul>
 

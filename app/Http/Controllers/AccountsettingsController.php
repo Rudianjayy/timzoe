@@ -1,4 +1,4 @@
-<?php
+admintemp/designreset.com/preview-equation/default-light/apps_mailbox.htmladmintemp/designreset.com/preview-equation/default-light/apps_mailbox.html<?php
 
 namespace App\Http\Controllers;
 

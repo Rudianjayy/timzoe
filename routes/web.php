@@ -589,11 +589,11 @@ Route::get('/pendaftaran', [PpdbController::class, 'pendaftaran'])->name('pendaf
 Route::get('/profiladmin',[ProfiladminController::class,'profiladmin'])->name('profiladmin');
 
 Route::get('/adminprofil',[ProfiladminController::class, 'adminprofil'])->name('adminprofil');
-// Route::get('/tambahprofiladmin',[ProfiladminController::class, 'tambahprofiladmin'])->name('tambahprofiladmin');
-// Route::post('/submitprofil',[ProfiladminController::class, 'submitprofil'])->name('submitprofil');
-// Route::get('/editprofiladmin/{id}',[ProfiladminController::class, 'editprofiladmin'])->name('editprofiladmin');
-// Route::post('/editproses/{id}',[ProfiladminController::class, 'editproses'])->name('editproses');
-// Route::get('/deleteprofiladmin/{id}',[ProfiladminController::class, 'deleteprofiladmin'])->name('deleteprofiladmin');
+Route::get('/tambahprofiladmin',[ProfiladminController::class, 'tambahprofiladmin'])->name('tambahprofiladmin');
+Route::post('/submitprofil',[ProfiladminController::class, 'submitprofil'])->name('submitprofil');
+Route::get('/editprofiladmin/{id}',[ProfiladminController::class, 'editprofiladmin'])->name('editprofiladmin');
+Route::post('/editproses/{id}',[ProfiladminController::class, 'editproses'])->name('editproses');
+Route::get('/deleteprofiladmin/{id}',[ProfiladminController::class, 'deleteprofiladmin'])->name('deleteprofiladmin');
 
 
 
@@ -602,9 +602,9 @@ Route::get('/accountsettings',[AccountsettingsController::class, 'accountsetting
 Route::get('/adminaccountsettings',[AccountsettingsadminController::class, 'adminaccountsettings'])->name('adminaccountsettings');
 
 Route::get('/tambahaccountsettings',[AccountsettingsController::class, 'tambahaccountsettings'])->name('tambahaccountsettings');
-Route::post('/submitprofil',[AccountsettingsController::class, 'submitprofil'])->name('submitprofil');
+Route::post('/submitaccountsettings',[AccountsettingsController::class, 'submitaccountsettings'])->name('submitaccountsettings');
 Route::get('/editaccountsettings/{id}',[AccountsettingsController::class, 'editaccountsettings'])->name('editaccountsettings');
-Route::post('/editproses/{id}',[AccountsettingsController::class, 'editproses'])->name('editproses');
+Route::post('/editprosesaccountsettings/{id}',[AccountsettingsController::class, 'editprosesaccountsettings'])->name('editprosesaccountsettings');
 Route::get('/deleteaccountsettings/{id}',[AccountsettingsController::class, 'deleteaccountsettings'])->name('deleteaccountsettings');
 
 
@@ -667,7 +667,7 @@ Route::get('/profil',[ProfilController::class, 'index'])->name('profil');
 
     Route::get('/register',[LoginController::class, 'register'])->name('register');
     Route::post('/registeruser',[LoginController::class, 'registeruser'])->name('registeruser');
-    
+
     Route::get('/login',[LoginController::class, 'login'])->name('login');
     Route::post('/loginproses',[LoginController::class, 'loginproses'])->name('loginproses');
 

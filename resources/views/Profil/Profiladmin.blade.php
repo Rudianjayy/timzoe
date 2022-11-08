@@ -2968,7 +2968,7 @@
         </div>
     </aside>
     <!--  END CONTROL SIDEBAR  -->
-    
+
     <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
     <script src="{{ asset('admintemp/adminnew/riski/nopan/assets/js/libs/jquery-3.1.1.min.js') }}"></script>
     <script src="{{ asset('admintemp/adminnew/riski/nopan/assets/js/loader.js') }}"></script>

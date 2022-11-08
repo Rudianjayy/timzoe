@@ -9,7 +9,7 @@
     </head>
 
     <body>
-        <h1 class="text-center mb-4">Tambah Data Album</h1>
+        <h1 class="text-center mb-4 mt-3">Tambah Data Album</h1>
 
         <div class="container" mb-5>
 
@@ -36,13 +36,7 @@
                                     @enderror
                                 </div>
 
-                                {{--  <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">Deskripsi :</label>
-                  <textarea class="form-control form-control-solid" name="deskripsi"></textarea>
-                  @error('deskripsi')
-                    <div class="alert alert-danger">{{ $message }}</div>
-                  @enderror
-                </div>  --}}
+
                                 <section style="padding-top:60px;">
                                     <div class="container">
                                         <div class="row">
@@ -60,8 +54,8 @@
                                         </div>
                                     </div>
                                 </section>
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                                <a href="/data-album" class="btn btn-danger">Kembali</a>
+                                <button type="submit" class="btn btn-primary mt-3">Submit</button>
+                                <a href="/data-album" class="btn btn-danger mt-3">Kembali</a>
                             </form>
                         </div>
                     </div>

@@ -18,11 +18,11 @@
     <script src="{{ asset('admintemp/adminnew/riski/nopan/plugins/charts/chartist/chartist.js') }}"></script>
     <script src="{{ asset('admintemp/adminnew/riski/nopan/plugins/maps/vector/jvector/jquery-jvectormap-2.0.3.min.js') }}"></script>
     <script src="{{ asset('admintemp/adminnew/riski/nopan/plugins/maps/vector/jvector/worldmap_script/jquery-jvectormap-world-mill-en.js') }}"></script>
-    <script src="{{ asset('admintemp/adminnew/riski/nopan/') }}plugins/calendar/pignose/moment.latest.min.js"></script>
-    <script src="{{ asset('admintemp/adminnew/riski/nopan/') }}plugins/calendar/pignose/pignose.calendar.js"></script>
-    <script src="{{ asset('admintemp/adminnew/riski/nopan/') }}plugins/progressbar/progressbar.min.js"></script>
-    <script src="{{ asset('admintemp/adminnew/riski/nopan/') }}assets/js/default-dashboard/default-custom.js"></script>
-    <script src="{{ asset('admintemp/adminnew/riski/nopan/') }}assets/js/support-chat.js"></script>
+    <script src="{{ asset('admintemp/adminnew/riski/nopan/plugins/calendar/pignose/moment.latest.min.js') }}"></script>
+    <script src="{{ asset('admintemp/adminnew/riski/nopan/plugins/calendar/pignose/pignose.calendar.js') }}"></script>
+    <script src="{{ asset('admintemp/adminnew/riski/nopan/plugins/progressbar/progressbar.min.js') }}"></script>
+    <script src="{{ asset('admintemp/adminnew/riski/nopan/assets/js/default-dashboard/default-custom.js') }}"></script>
+    <script src="{{ asset('admintemp/adminnew/riski/nopan/assets/js/support-chat.js') }}"></script>
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
     <script src="{{ asset('admintemp/adminnew/riski/nopan/plugins/table/datatable/datatables.js') }}"></script>
     <script>
@@ -64,8 +64,6 @@
         });
     </script>
 
-    <script src="{{ asset('admintemp/adminnew/riski/nopan/plugins/sweetalerts/sweetalert2.min.js') }}"></script>
-    <script src="{{ asset('admintemp/adminnew/riski/nopan/plugins/sweetalerts/custom-sweetalert.js') }}"></script>
 
 
 </body>

@@ -55,7 +55,7 @@ class PersonaljurusanController extends Controller
     public function delete($id){
         $data = Personaljurusan::find($id);
         $data->delete();
-        return redirect('adminfotojurusan')->with('toast_error',' Data Berhasil di Hapus!');
+        return redirect('adminfotojurusan')->with('toast_success',' Data Berhasil di Hapus!');
     }
 
 }

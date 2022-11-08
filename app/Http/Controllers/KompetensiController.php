@@ -103,7 +103,7 @@ class KompetensiController extends Controller
     public function delete($id){
         $data = Kompetensi::find($id);
         $data->delete();
-        return redirect('kompetensiadmin')->with('toast_error',' Data Berhasil di Hapus!');
+        return redirect('kompetensiadmin')->with('toast_success',' Data Berhasil di Hapus!');
     }
 
 

@@ -74,7 +74,7 @@ class SliderController extends Controller
     public function delete($id){
         $data = Slider::find($id);
         $data->delete();
-        return redirect('slideradmin')->with('toast_error',' Data Berhasil di Hapus!');
+        return redirect('slideradmin')->with('toast_success',' Data Berhasil di Hapus!');
     }
 
 
@@ -155,6 +155,6 @@ class SliderController extends Controller
     public function delete2($id){
         $data2 = Fotoslider::find($id);
         $data2->delete();
-        return redirect('fotoslideradmin')->with('toast_error',' Data Berhasil di Hapus!');
+        return redirect('fotoslideradmin')->with('toast_success',' Data Berhasil di Hapus!');
     }
 }

@@ -75,6 +75,6 @@ class KepsekController extends Controller
     public function delete($id){
         $data = Sambutan::find($id);
         $data->delete();
-        return redirect('sambutanadmin')->with('toast_error',' Data Berhasil di Hapus!');
+        return redirect('sambutanadmin')->with('toast_success',' Data Berhasil di Hapus!');
     }
 }

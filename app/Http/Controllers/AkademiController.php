@@ -137,6 +137,6 @@ class AkademiController extends Controller
     public function delete($id){
         $data = Akademi::find($id);
         $data->delete();
-        return redirect('dataakademi')->with('toast_error',' Data Berhasil di Hapus!');
+        return redirect('dataakademi')->with('toast_success',' Data Berhasil di Hapus!');
     }
 }

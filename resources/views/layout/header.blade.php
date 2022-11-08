@@ -81,7 +81,7 @@
             </div>  --}}
         </li>
 
-        <li class="nav-item dropdown notification-dropdown ml-3">
+        {{--  <li class="nav-item dropdown notification-dropdown ml-3">  --}}
             {{--  <a href="javascript:void(0);" class="nav-link dropdown-toggle" id="notificationDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="flaticon-bell-4"></span><span class="badge badge-success">15</span>
             </a>  --}}
@@ -122,7 +122,7 @@
 
                         </div>
 
-                        <div class="notification-item position-relative  mb-3"> 
+                        <div class="notification-item position-relative  mb-3">
 
                             <div class="c-dropdown text-right">
                                 <span id="c-dropdonbtn2" class="c-dropbtn mr-2"><i class="flaticon-dots"></i></span>
@@ -184,8 +184,8 @@
                     <div class="btn btn-gradient-warning rounded-circle"><i class="flaticon-arrow-right flaticon-circle-p"></i></div>
                 </a>
             </div>  --}}
-        </li>
-    </ul> --}}
+        {{--  </li>  --}}
+    </ul>
 
 
     <ul class="navbar-nav flex-row ml-lg-auto">

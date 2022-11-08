@@ -88,7 +88,7 @@ class IdukaController extends Controller
     public function delete($id){
         $data = Iduka::find($id);
         $data->delete();
-        return redirect('idukaadmin')->with('toast_error',' Data Berhasil di Hapus!');
+        return redirect('idukaadmin')->with('toast_success',' Data Berhasil di Hapus!');
     }
 
 

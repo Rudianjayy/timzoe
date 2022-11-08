@@ -8,7 +8,7 @@
             <li class="nav-item d-flex">
                 <a href="index.html" class="navbar-brand" style="width:230px;">
                     <img src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/muhi-2.png') }}" class="img-fluid"
-                        alt="logo" style="width:210px; margin-top:20px; margin-bottom:20px;">
+                        alt="logo" style="width:209px; margin-top:14px; margin-bottom:9px;">
                 </a>
 
         </ul>
@@ -56,7 +56,7 @@
                     </li>
                 </ul>
             </li>
-            
+
             <li class="menu">
                 <a href="#kurikulum" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <div class="">
@@ -222,19 +222,74 @@
                         <a href="/adminupjslider">UPJ Slider</a>
                     </li>
                 </ul>
+
             </li>
-            <li class="menu">
+            <li class="menu-title mb-2">Mitra</li>
+            <li>
                 <a href="/adminmitra" class="waves-effect">
-                    <div class="">
-                        <i class="flaticon-menu-4"></i>
-                        <span>Mitra</span>
+                    <div class="" style="font-size:16px; padding:6px; color:#4f5163;">
+                        <i class="flaticon-primary"></i>
+                        <span style="margin-left: 15px; color:#4f5163;">Mitra</span>
                     </div>
                 </a>
             </li>
-            <li class="menu-title">Manajemen Beranda</li>
+            <li class="menu-title mb-2">Management Beranda</li>
+            <li>
+                <a href="/data-album" class="waves-effect">
+                    <div class="" style="font-size:16px; padding:6px; margin-bottom:8px; color:#4f5163;">
+                        <i class="flaticon-note-1"></i>
+                        <span style="margin-left: 15px; color:#4f5163;">Data Album</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="/indexprestasi" class="waves-effect">
+                    <div class="" style="font-size:16px; padding:6px; margin-bottom:8px; color:#4f5163;">
+                        <i class="flaticon-elements"></i>
+                        <span style="margin-left: 15px; color:#4f5163;">Prestasi</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="/sambutanadmin" class="waves-effect">
+                    <div class="" style="font-size:16px; padding:6px; margin-bottom:8px; color:#4f5163;">
+                        <i class="flaticon-3d-cube"></i>
+                        <span style="margin-left: 15px; color:#4f5163;">Sambutan Kepsek</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="/fotoslideradmin" class="waves-effect">
+                    <div class="" style="font-size:16px; padding:6px; margin-bottom:8px; color:#4f5163;">
+                        <i class="flaticon-layers"></i>
+                        <span style="margin-left: 15px; color:#4f5163;">Slider</span>
+                    </div>
+                </a>
+            </li>
+            <li class="menu">
+                <a href="#footer" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <div class="">
+                        <i class="flaticon-simple-screen-line"></i>
+                        <span>Footer</span>
+                    </div>
+                    <div>
+                        <i class="flaticon-right-arrow"></i>
+                    </div>
+                </a>
+                <ul class="collapse submenu list-unstyled" id="footer" data-parent="#accordionExample">
+                    <li>
+                        <a href="/footeeradmin">Footer</a>
+                    </li>
+                    <li>
+                        <a href="/adminfooteerdua">Footer Link </a>
+                    </li>
+
+                </ul>
+            </li>
 
 
         </ul>
-    </nav>
 
+
+    </nav>
 </div>

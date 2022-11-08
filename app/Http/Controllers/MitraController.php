@@ -69,6 +69,6 @@ class MitraController extends Controller
     public function deletemitra($id){
         $data = Mitra::find($id);
         $data->delete();
-        return redirect('adminmitra')->with('toast_error',' Data Berhasil di Hapus!');
+        return redirect('adminmitra')->with('toast_success',' Data Berhasil di Hapus!');
     }
 }

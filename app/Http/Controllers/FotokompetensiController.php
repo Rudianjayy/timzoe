@@ -71,7 +71,7 @@ class FotokompetensiController extends Controller
     public function delete($id){
         $data = Fotokompetensi::find($id);
         $data->delete();
-        return redirect('fotokompetensiadmin')->with('toast_error',' Data Berhasil di Hapus!');
+        return redirect('fotokompetensiadmin')->with('toast_success',' Data Berhasil di Hapus!');
     }
 
 }

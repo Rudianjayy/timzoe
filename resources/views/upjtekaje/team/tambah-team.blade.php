@@ -7,7 +7,7 @@
     </head>
 
     <body>
-        <h1 class="text-center mb-4">Tambah Data Anggota Team</h1>
+        <h1 style="color: black;" class="text-center mb-4">Tambah Data Anggota Team</h1>
 
         <div class="container" mb-5>
 

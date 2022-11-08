@@ -116,7 +116,7 @@ class IdentitasSekolahController extends Controller
     public function delete($id){
         $data = IdentitasSekolah::find($id);
         $data->delete();
-        return redirect('identitas_admin')->with('toast_error',' Data Berhasil di Hapus!');
+        return redirect('identitas_admin')->with('toast_success',' Data Berhasil di Hapus!');
     }
 
 }

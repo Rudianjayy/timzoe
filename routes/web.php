@@ -664,8 +664,10 @@ Route::get('/profil',[ProfilController::class, 'index'])->name('profil');
 //login&register
 // Route::group(['middleware'=> ['auth','hakakses:admin,user']],function() {
     Route::get('/data-identitas',[DataidentitasController::class, 'index'])->name('data-identitas');
+
     Route::get('/register',[LoginController::class, 'register'])->name('register');
     Route::post('/registeruser',[LoginController::class, 'registeruser'])->name('registeruser');
+    
     Route::get('/login',[LoginController::class, 'login'])->name('login');
     Route::post('/loginproses',[LoginController::class, 'loginproses'])->name('loginproses');
 

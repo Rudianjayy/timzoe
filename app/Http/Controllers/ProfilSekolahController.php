@@ -123,7 +123,7 @@ class ProfilSekolahController extends Controller
     {
         $data = profilsekolah::find($id);
         $data->delete();
-        return redirect('profilsekolahadmin')->with('toast_error', ' Data Berhasil di Hapus!');
+        return redirect('profilsekolahadmin')->with('toast_success', ' Data Berhasil di Hapus!');
     }
 
 
@@ -163,6 +163,7 @@ class ProfilSekolahController extends Controller
     }
     public function visimisiadmin()
     {
+        
         $data = visimisi::all();
         return view('visimisi.admin.visimisiadmin', compact('data'));;
     }
@@ -223,6 +224,6 @@ class ProfilSekolahController extends Controller
     {
         $data = visimisi::find($id);
         $data->delete();
-        return redirect('visimisiadmin')->with('toast_error', ' Data Berhasil di Hapus!');
+        return redirect('visimisiadmin')->with('toast_success', ' Data Berhasil di Hapus!');
     }
 }

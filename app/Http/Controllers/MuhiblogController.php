@@ -67,7 +67,7 @@ class MuhiblogController extends Controller
     public function deletekategori($id){
         $data = Kategoriberita::find($id);
         $data->delete();
-        return redirect('kategoriberita')->with('toast_error',' Data Berhasil di Hapus!');
+        return redirect('kategoriberita')->with('toast_success',' Data Berhasil di Hapus!');
         $kategori = Muhinews::all();
         return view('muhinews.muhiblog',compact('d','blog','kategori'));
     }
@@ -156,6 +156,6 @@ class MuhiblogController extends Controller
     {
         $data = Muhiblog::find($id);
         $data->delete();
-        return redirect('muhiblogadmin')->with('toast_error', ' Data Berhasil di Hapus!');
+        return redirect('muhiblogadmin')->with('toast_success', ' Data Berhasil di Hapus!');
     }
 }

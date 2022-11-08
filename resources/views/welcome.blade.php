@@ -1257,6 +1257,8 @@
         </div>
     </div>
 
+    @include('sweetalert::alert')
+
     @include('layout.script')
 </div>
 

@@ -108,7 +108,7 @@ class UpjController extends Controller
     {
         $data = upj::find($id);
         $data->delete();
-        return redirect('adminupj')->with('toast_error', ' Data Berhasil di Hapus!');
+        return redirect('adminupj')->with('toast_success', ' Data Berhasil di Hapus!');
     }
 
 
@@ -189,7 +189,7 @@ class UpjController extends Controller
     {
         $data = upj::find($id);
         $data->delete();
-        return redirect('adminupj2')->with('toast_error', ' Data Berhasil di Hapus!');
+        return redirect('adminupj2')->with('toast_success', ' Data Berhasil di Hapus!');
     }
 
 
@@ -270,7 +270,7 @@ class UpjController extends Controller
     {
         $data = Bsi::find($id);
         $data->delete();
-        return redirect('adminbsi')->with('toast_error', ' Data Berhasil di Hapus!');
+        return redirect('adminbsi')->with('toast_success', ' Data Berhasil di Hapus!');
     }
 
 
@@ -353,11 +353,11 @@ class UpjController extends Controller
         return redirect('adminmuhiprint')->with('toast_success', ' Data Berhasil di Ubah!');
     }
 
-    public function deletemuhiprinnt($id)
+    public function deletemuhiprint($id)
     {
         $data2 = Printing::find($id);
         $data2->delete();
-        return redirect('adminmuhiprint')->with('toast_error', ' Data Berhasil di Hapus!');
+        return redirect('adminmuhiprint')->with('toast_success', ' Data Berhasil di Hapus!');
     }
 
 
@@ -441,7 +441,7 @@ class UpjController extends Controller
     {
         $data3 = Pegadaian::find($id);
         $data3->delete();
-        return redirect('adminpegadaian')->with('toast_error', ' Data Berhasil di Hapus!');
+        return redirect('adminpegadaian')->with('toast_success', ' Data Berhasil di Hapus!');
     }
 
 
@@ -524,7 +524,7 @@ class UpjController extends Controller
     {
         $data4 = Suryamart::find($id);
         $data4->delete();
-        return redirect('adminsuryamart')->with('toast_error', ' Data Berhasil di Hapus!');
+        return redirect('adminsuryamart')->with('toast_success', ' Data Berhasil di Hapus!');
     }
 
 
@@ -609,6 +609,6 @@ class UpjController extends Controller
     {
         $data5 = Edotel::find($id);
         $data5->delete();
-        return redirect('adminedotel')->with('toast_error', ' Data Berhasil di Hapus!');
+        return redirect('adminedotel')->with('toast_success', ' Data Berhasil di Hapus!');
     }
 }

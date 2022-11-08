@@ -6,6 +6,9 @@ use App\Models\User;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use GrahamCampbell\ResultType\Success;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Validator;
 
 class LoginController extends Controller
 {
@@ -14,6 +17,8 @@ class LoginController extends Controller
     }
 
     public function loginproses(Request $request){
+        Session::flash('email', $request->email);
+        Session::flash('password', $request->password);
         $this->validate($request,[
             'email' =>'required|exists:users,email',
             'password' =>'required',
@@ -32,20 +37,25 @@ class LoginController extends Controller
         
     }
 
- 
+    public function register(){
+        return view('daftar.register');
+    }
 
     public function registeruser(Request $request){
+
+        Session::flash('name', $request->name);
+        Session::flash('email', $request->email);
+        Session::flash('password', $request->password);
+        
         $this->validate($request,[
             'name' =>'required|unique:users,name',
             'email' =>'required|unique:users,email',
             'password' =>'required',
         ],[
-            'name.required' =>' Harus diisi',
+            'name.required' =>'Nama harus diisi',
             'name.unique' =>' Nama sudah dipakai',
             'email.unique' =>'Email sudah dipakai',
             'email.required' =>'Email harus diisi',
-            // 'nidn.min' =>'min 4 karakter',
-            // 'nidn.max' =>'max 7 karakter',
             'password.required' =>'Sandi harus diisi',
         ]);
         User::create([
@@ -61,7 +71,7 @@ class LoginController extends Controller
 
     public function logout(){
         Auth::logout();
-        return redirect('login');
+        return redirect('login')->with('toast_success', 'Anda berhasil logout!');
     }
 
 }

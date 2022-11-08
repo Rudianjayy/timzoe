@@ -97,7 +97,7 @@ class DetailEkstrakulikulerController extends Controller
     public function deletedetail($id){
         $data = Detailekstrakulikuler::find($id);
         $data->delete();
-        return redirect('admindetailekstrakulikuler')->with('toast_error',' Data Berhasil di Hapus!');
+        return redirect('admindetailekstrakulikuler')->with('toast_success',' Data Berhasil di Hapus!');
     }
 
 

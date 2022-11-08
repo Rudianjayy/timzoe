@@ -91,7 +91,7 @@ class KurikulumController extends Controller
     {
         $data = kalenderakademik::find($id);
         $data->delete();
-        return redirect('kalenderakademikadmin')->with('toast_error', ' Data Berhasil di Hapus!');
+        return redirect('kalenderakademikadmin')->with('toast_success', ' Data Berhasil di Hapus!');
     }
 
 
@@ -183,7 +183,7 @@ class KurikulumController extends Controller
     {
         $data = kalenderakademik::find($id);
         $data->delete();
-        return redirect('kalenderakademikadmin')->with('toast_error', ' Data Berhasil di Hapus!');
+        return redirect('kalenderakademikadmin')->with('toast_success', ' Data Berhasil di Hapus!');
     }
 
 
@@ -404,7 +404,7 @@ class KurikulumController extends Controller
     {
         $data = Suratkelulusan::find($id);
         $data->delete();
-        return redirect('adminkelulusan')->with('toast_error', ' Data Berhasil di Hapus!');
+        return redirect('adminkelulusan')->with('toast_success', ' Data Berhasil di Hapus!');
     }
 }
 

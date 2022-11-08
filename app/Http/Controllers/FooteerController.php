@@ -76,7 +76,7 @@ class FooteerController extends Controller
     public function deletefooteer($id){
         $data = footeer::find($id);
         $data->delete();
-        return redirect('footeeradmin')->with('toast_error',' Data Berhasil di Hapus!');
+        return redirect('footeeradmin')->with('toast_success',' Data Berhasil di Hapus!');
     }
 
 

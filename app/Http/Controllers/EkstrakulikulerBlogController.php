@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\ekstrakulikulerblog;
 use App\Models\ekstrakulikuler;
-use App\Models\Personaljurusan;
-use App\Models\footeer;
 use Illuminate\Http\Request;
 
 class EkstrakulikulerBlogController extends Controller
@@ -102,6 +100,6 @@ class EkstrakulikulerBlogController extends Controller
     {
         $data = ekstrakulikulerblog::find($id);
         $data->delete();
-        return redirect('ekstrakulikulerblogadmin')->with('toast_error', ' Data Berhasil di Hapus!');
+        return redirect('ekstrakulikulerblogadmin')->with('toast_success', ' Data Berhasil di Hapus!');
     }
 }

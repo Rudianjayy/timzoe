@@ -7,7 +7,7 @@
     </head>
 
     <body>
-        <h1 class="text-center mb-4">Edit Data Prestasi</h1>
+        <h1 style="color: black;" class="text-center mb-4">Edit Data Prestasi</h1>
 
         <div class="container">
 
@@ -39,7 +39,7 @@
                                                         Judul Prestasi
                                                     </div>
                                                     <div class="card-body">
-                                                        
+
                                                         <textarea name="judul_prestasi" id="mytextarea">{!! $data->judul_prestasi !!}</textarea>
                                                     </div>
                                                 </div>
@@ -57,7 +57,7 @@
                                                         Deskripsi
                                                     </div>
                                                     <div class="card-body">
-                                                        
+
                                                         <textarea name="deskripsi_prestasi" id="mytextarea">{!! $data->deskripsi_prestasi !!}</textarea>
                                                     </div>
                                                 </div>
@@ -66,7 +66,7 @@
                                     </div>
                                 </div>
 
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" class="btn btn-primary mt-3">Submit</button>
                             </form>
                         </div>
                     </div>
@@ -80,7 +80,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
         </script>
-        
+
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
             integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
         </script>

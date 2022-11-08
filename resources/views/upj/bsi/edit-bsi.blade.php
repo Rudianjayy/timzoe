@@ -7,7 +7,7 @@
     </head>
 
     <body>
-        <h1 class="text-center mb-4">Edit BSI</h1>
+        <h1 style="color: black" class="text-center mb-4">Edit BSI</h1>
 
         <div class="container">
 
@@ -22,7 +22,7 @@
                                     <label for="exampleInputEmail1" class="form-label">Foto :</label>
                                     <input type="file" name="foto" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $data->foto }}">
                                     <img src="{{ asset('fotomahasiswa/' . $data->foto) }}" alt="" style="width: 70px">
-                
+
                                     @error('foto')
                                       <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
@@ -47,7 +47,7 @@
                                 </section>
 
 
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" class="btn btn-primary mt-3">Submit</button>
                             </form>
                         </div>
                     </div>

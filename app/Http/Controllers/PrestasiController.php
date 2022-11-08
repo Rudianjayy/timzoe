@@ -78,6 +78,6 @@ class PrestasiController extends Controller
     public function delete($id){
         $data = Prestasi::find($id);
         $data->delete();
-        return redirect('indexprestasi')->with('toast_error',' Data Berhasil di Hapus!');
+        return redirect('indexprestasi')->with('toast_success',' Data Berhasil di Hapus!');
     }
 }

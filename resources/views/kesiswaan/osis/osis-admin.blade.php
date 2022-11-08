@@ -18,12 +18,12 @@
         <div class="container">
             <div class="page-header">
                 <div class="page-title">
-                    <h3>osis</h3>
+                    <h3>IPM/OSIS</h3>
                     <div class="crumbs">
                         <ul id="breadcrumbs" class="breadcrumb">
                             <li><a href="index.html"><i class="flaticon-home-fill"></i></a></li>
                             <li><a href="#">Kesiswaan</a></li>
-                            <li class="active"><a href="#">osis</a></li>
+                            <li class="active"><a href="#">IPM/OSIS</a></li>
                         </ul>
                     </div>
                 </div>
@@ -35,7 +35,7 @@
                         <div class="widget-header">
                             <div class="row">
                                 <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                    <h4>osis</h4>
+                                    <h4>IPM/OSIS</h4>
                                 </div>
                             </div>
                         </div>
@@ -80,12 +80,12 @@
                                                                 <i class="flaticon-edit"></i>
                                                             </a>
                                                         </li>
-                                                        <li>
+                                                        {{--  <li>
                                                             <a href="/deleteosis/{{ $d->id }}"
                                                                 data-toggle="tooltip" data-placement="top" title="Delete">
                                                                 <i class="flaticon-delete-5"></i>
                                                             </a>
-                                                        </li>
+                                                        </li>  --}}
                                                     </ul>
                                                 </td>
                                             </tr>

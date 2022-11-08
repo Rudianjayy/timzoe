@@ -288,6 +288,29 @@
             </li>
 
 
+            <li class="menu-title"></li>
+            <li class="menu">
+                <a href="#profiladmin" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <div class="">
+                        <i class="flaticon-user-5"></i>
+                        <span>Profil Admin</span>
+                    </div>
+                    <div>
+                        <i class="flaticon-right-arrow"></i>
+                    </div>
+                </a>
+                <ul class="collapse submenu list-unstyled" id="profiladmin" data-parent="#accordionExample">
+                    <li>
+                        <a href="#">Profil Admin</a>
+                    </li>
+
+                </ul>
+            </li>
+
+
+        </ul>
+    </nav>
+
         </ul>
 
 

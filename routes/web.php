@@ -587,6 +587,20 @@ Route::get('/pendaftaran', [PpdbController::class, 'pendaftaran'])->name('pendaf
 
 
 
+//Profiladmin
+Route::get('/profiladmin',[ProfiladminController::class,'profiladmin'])->name('profiladmin');
+
+Route::get('/adminprofil',[ProfiladminController::class, 'adminprofil'])->name('adminprofil');
+Route::get('/tambahprofiladmin',[ProfiladminController::class, 'tambahprofiladmin'])->name('tambahprofiladmin');
+Route::post('/submitprofil',[ProfiladminController::class, 'submitprofil'])->name('submitprofil');
+Route::get('/editprofiladmin/{id}',[ProfiladminController::class, 'editprofiladmin'])->name('editprofiladmin');
+Route::post('/editproses/{id}',[ProfiladminController::class, 'editproses'])->name('editproses');
+Route::get('/deleteprofiladmin/{id}',[ProfiladminController::class, 'deleteprofiladmin'])->name('deleteprofiladmin');
+
+
+
+
+
 
 
 //Iduka
@@ -661,7 +675,7 @@ Route::get('/profil',[ProfilController::class, 'index'])->name('profil');
 
     Route::get('/register',[LoginController::class, 'register'])->name('register');
     Route::post('/registeruser',[LoginController::class, 'registeruser'])->name('registeruser');
-    
+
     Route::get('/login',[LoginController::class, 'login'])->name('login');
     Route::post('/loginproses',[LoginController::class, 'loginproses'])->name('loginproses');
 

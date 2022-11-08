@@ -597,15 +597,6 @@ Route::get('/deleteprofiladmin/{id}',[ProfiladminController::class, 'deleteprofi
 
 
 
-//account setting
-Route::get('/accountsettings',[AccountsettingsController::class, 'accountsettings'])->name('accountsettings');
-Route::get('/adminaccountsettings',[AccountsettingsadminController::class, 'adminaccountsettings'])->name('adminaccountsettings');
-
-Route::get('/tambahaccountsettings',[AccountsettingsController::class, 'tambahaccountsettings'])->name('tambahaccountsettings');
-Route::post('/submitaccountsettings',[AccountsettingsController::class, 'submitaccountsettings'])->name('submitaccountsettings');
-Route::get('/editaccountsettings/{id}',[AccountsettingsController::class, 'editaccountsettings'])->name('editaccountsettings');
-Route::post('/editprosesaccountsettings/{id}',[AccountsettingsController::class, 'editprosesaccountsettings'])->name('editprosesaccountsettings');
-Route::get('/deleteaccountsettings/{id}',[AccountsettingsController::class, 'deleteaccountsettings'])->name('deleteaccountsettings');
 
 
 

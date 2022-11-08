@@ -116,7 +116,7 @@
                                 <p>Mulai dari tanggal 10-22 Januari,
                                     terdapat diskon 50%
                                 </p>
-                                
+
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -260,8 +260,7 @@
             <div class="section-title">
                 <h2>Syarat Pendaftaran</h2>
                 <div class="bar"></div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidiunt labore et
-                    dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
+                <p> </p>
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-6">

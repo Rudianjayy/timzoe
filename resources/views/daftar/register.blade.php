@@ -64,6 +64,101 @@
                 <a href="/login" class="btn btn-lg btn-outline-dark btn-block btn-rounded mb-3">Kembali</a>
             </div>
 
+<<<<<<< HEAD
+
+            <section class="fl-page-title">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="breadcrumbs">
+                                <ul>
+                                    <li><a href="index.html">PPDB</a></li>
+                                    <li>Daftar</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+            </section>
+            <section class="tf-section login-page register-page">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-create-item-content">
+                                <div class="form-create-item">
+                                    <form action="/registeruser" method="post">
+                                        @csrf
+                                        <div class="sc-heading">
+                                            <h1>Buat Akun</h1>
+                                            <p class="desc">Klik masuk dibawah ini jika sudah punya akun!! </p>
+                                            <a href="/login">Masuk</a>
+                                        </div>
+
+                                        <div class="input-group" id="create-item-1">
+                                            <input name="name" value="" type="text" placeholder="Nama "
+                                                required="">
+
+                                        </div>
+
+                                        <div class="input-group" id="create-item-1">
+                                            <input name="email" value="" type="email"
+                                                placeholder="Masukkan Email">
+                                        </div>
+                                        @error('email')
+                                            <div>
+                                                <div class="alert alert-danger">{{ $message }}</div>
+                                            </div>
+                                        @enderror
+
+                                        <div class="input-group" id="create-item-1">
+                                            <input name="password" value="" type="password"
+                                                placeholder="Masukkan Sandi">
+                                        </div>
+
+                                        <div class="input-group" id="create-item-1">
+                                            <button name="submit" type="submit"
+                                                class="sc-button style letter style-2"><span>Daftar Sekarang</span>
+                                            </button>
+                                        </div>
+
+                                        <div class="other-login">
+                                            <div class="text">Atau</div>
+                                            <div class="widget-social">
+                                                <ul>
+                                                    <li><a href="#" class="active"><i
+                                                                class="fab fa-facebook-f"></i></a>
+                                                    </li>
+                                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                                    <li><a href="#"><i class="fab fa-google-plus-g"></i></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        {{-- </form> --}}
+                                    </form>
+                                </div>
+                                <div class="form-background">
+                                    <img src="{{ asset('nopan2/assets/images/background/img-register.jpg') }}"
+                                        alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+            <div class="bottom">
+                <div class="container">
+                    <div class="bottom-inner">
+                        Copyright © 2022 SMK Muhammadiyah 1 Genteng. Supported by <a
+                            href="https://themeforest.net/user/themesflat/portfolio"> Team Zoe</a>
+                    </div>
+                </div>
+=======
             <div class="col-md-12 mb-0 text-center social-icons">
                 <h5 class="mt-4 mb-4">atau</h5>
                 <button class="btn btn-outline-secondary rounded-circle btn-rounded mb-4 mr-2"><i
@@ -72,6 +167,7 @@
                         class="flaticon-google-plus-bold flaticon-circle-p"></i></button>
                 <button class="btn btn-outline-secondary rounded-circle btn-rounded mb-4 mr-2"><i
                         class="flaticon-twitter-logo flaticon-circle-p"></i></button>
+>>>>>>> 41f9e641380e7cc88d1a0bcf73db38b1e3a4449a
             </div>
         </div>
     </form>

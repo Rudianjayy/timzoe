@@ -97,7 +97,7 @@ class MuhinewsController extends Controller
     public function delete($id){
         $data = Muhinews::find($id);
         $data->delete();
-        return redirect('muhinewsadmin')->with('toast_error',' Data Berhasil di Hapus!');
+        return redirect('muhinewsadmin')->with('toast_success',' Data Berhasil di Hapus!');
     }
 
 

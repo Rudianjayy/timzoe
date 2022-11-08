@@ -74,14 +74,11 @@
                                                                 <i class="flaticon-edit"></i>
                                                             </a>
                                                         </li>
-                                                        <li>
-                                                            <a href="#" class="delete fire"
-                                                                data-id="{{ $v->id }}"
-                                                                data-nama="{{ $v->judulvisi }}" data-toggle="tooltip"
-                                                                data-placement="top" title="Delete">
-                                                                <i class="flaticon-delete-5"></i>
-                                                            </a>
-                                                        </li>
+                                                        {{--  <li>
+                                                                <a href="#" class="delete fire" data-id="{{ $v->id }}" data-nama="{{ $v->judulvisi }}" data-toggle="tooltip" data-placement="top" title="Delete">
+                                                                    <i class="flaticon-delete-5"></i>
+                                                                </a>
+                                                            </li>  --}}
                                                     </ul>
                                                 </td>
                                             </tr>

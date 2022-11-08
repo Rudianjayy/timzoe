@@ -121,7 +121,7 @@ class FasilitasController extends Controller
     {
         $data = fasilitassekolah::find($id);
         $data->delete();
-        return redirect('fasilitasadmin')->with('toast_error', ' Data Berhasil di Hapus!');
+        return redirect('fasilitasadmin')->with('toast_success', ' Data Berhasil di Hapus!');
     }
 
 }

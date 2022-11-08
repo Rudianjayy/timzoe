@@ -93,7 +93,7 @@ class FotoidukaController extends Controller
     public function delete($id){
         $data = Fotoiduka::find($id);
         $data->delete();
-        return redirect('mouadmin')->with('toast_error',' Data Berhasil di Hapus!');
+        return redirect('mouadmin')->with('toast_success',' Data Berhasil di Hapus!');
     }
 
 }

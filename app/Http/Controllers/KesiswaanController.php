@@ -96,7 +96,7 @@ class KesiswaanController extends Controller
     public function deleteekstra($id){
         $data = ekstrakulikuler::find($id);
         $data->delete();
-        return redirect('ekstrakulikuleradmin')->with('toast_error',' Data Berhasil di Hapus!');
+        return redirect('ekstrakulikuleradmin')->with('toast_success',' Data Berhasil di Hapus!');
     }
 
 
@@ -190,7 +190,7 @@ class KesiswaanController extends Controller
     public function deleteosis($id){
         $data = osis::find($id);
         $data->delete();
-        return redirect('osisadmin')->with('toast_error',' Data Berhasil di Hapus!');
+        return redirect('osisadmin')->with('toast_success',' Data Berhasil di Hapus!');
     }
 
 
@@ -289,7 +289,7 @@ class KesiswaanController extends Controller
     public function deletealumni($id){
         $data = alumni::find($id);
         $data->delete();
-        return redirect('alumniadmin')->with('toast_error',' Data Berhasil di Hapus!');
+        return redirect('alumniadmin')->with('toast_success',' Data Berhasil di Hapus!');
     }
 
 

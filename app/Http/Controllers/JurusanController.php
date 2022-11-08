@@ -112,7 +112,7 @@ class JurusanController extends Controller
     public function delete($id){
         $data = Jurusan::find($id);
         $data->delete();
-        return redirect('datajurusan')->with('toast_error',' Data Berhasil di Hapus!');
+        return redirect('datajurusan')->with('toast_success',' Data Berhasil di Hapus!');
     }
 
 }

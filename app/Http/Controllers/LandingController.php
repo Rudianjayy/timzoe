@@ -41,4 +41,8 @@ class LandingController extends Controller
 
 
     }
+
+    public function authors(){
+        return view('authors.zoe-team');
+    }
 }

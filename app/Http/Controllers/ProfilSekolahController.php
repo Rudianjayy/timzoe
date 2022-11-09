@@ -70,7 +70,7 @@ class ProfilSekolahController extends Controller
             $data->save();
         }
 
-        return redirect()->route('profilsekolahadmin')->with('toast_success', 'Data Berhasil Di Tambahkan!');
+        return redirect()->route('profilsekolahadmin')->with('success', 'Data Berhasil Di Tambahkan!');
     }
 
     public function editprofilsekolah($id)
@@ -116,14 +116,14 @@ class ProfilSekolahController extends Controller
         }
 
 
-        return redirect('profilsekolahadmin')->with('toast_success', ' Data Berhasil di Ubah!');
+        return redirect('profilsekolahadmin')->with('success', ' Data Berhasil di Ubah!');
     }
 
     public function delete($id)
     {
         $data = profilsekolah::find($id);
         $data->delete();
-        return redirect('profilsekolahadmin')->with('toast_success', ' Data Berhasil di Hapus!');
+        return redirect('profilsekolahadmin')->with('success', ' Data Berhasil di Hapus!');
     }
 
 
@@ -163,7 +163,7 @@ class ProfilSekolahController extends Controller
     }
     public function visimisiadmin()
     {
-        
+
         $data = visimisi::all();
         return view('visimisi.admin.visimisiadmin', compact('data'));;
     }
@@ -193,7 +193,7 @@ class ProfilSekolahController extends Controller
             'deskripsimisi' => $request->deskripsimisi,
         ]);
 
-        return redirect()->route('visimisiadmin')->with('toast_success', 'Data Berhasil Di Tambahkan!');
+        return redirect()->route('visimisiadmin')->with('success', 'Data Berhasil Di Tambahkan!');
     }
     public function editvisimisi($id)
     {
@@ -218,12 +218,12 @@ class ProfilSekolahController extends Controller
             'judulmisi' => $request->judulmisi,
             'deskripsimisi' => $request->deskripsimisi,
         ]);
-        return redirect('visimisiadmin')->with('toast_success', ' Data Berhasil di Ubah!');
+        return redirect('visimisiadmin')->with('success', ' Data Berhasil di Ubah!');
     }
     public function deletevisimisi($id)
     {
         $data = visimisi::find($id);
         $data->delete();
-        return redirect('visimisiadmin')->with('toast_success', ' Data Berhasil di Hapus!');
+        return redirect('visimisiadmin')->with('success', ' Data Berhasil di Hapus!');
     }
 }

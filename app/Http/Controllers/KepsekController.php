@@ -41,7 +41,7 @@ class KepsekController extends Controller
             $data->save();
         }
 
-        return redirect()->route('data-album')->with('toast_success', 'Data Berhasil Di Tambahkan!');
+        return redirect()->route('data-album')->with('success', 'Data Berhasil Di Tambahkan!');
     }
 
     public function editsambutan($id){
@@ -68,13 +68,13 @@ class KepsekController extends Controller
             $data->save();
         }
 
-        return redirect('sambutanadmin')->with('toast_success',' Data Berhasil di Ubah!');
+        return redirect('sambutanadmin')->with('success',' Data Berhasil di Ubah!');
 
     }
 
     public function delete($id){
         $data = Sambutan::find($id);
         $data->delete();
-        return redirect('sambutanadmin')->with('toast_success',' Data Berhasil di Hapus!');
+        return redirect('sambutanadmin')->with('success',' Data Berhasil di Hapus!');
     }
 }

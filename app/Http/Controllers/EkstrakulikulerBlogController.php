@@ -58,7 +58,7 @@ class EkstrakulikulerBlogController extends Controller
         }
 
 
-        return redirect()->route('ekstrakulikulerblogadmin')->with('toast_success', ' Data Berhasil di Tambahkan!');
+        return redirect()->route('ekstrakulikulerblogadmin')->with('success', ' Data Berhasil di Tambahkan!');
     }
 
     public function editekstrakulikulerblog($id)
@@ -93,13 +93,13 @@ class EkstrakulikulerBlogController extends Controller
             'kategori_blog' => $request->kategori_blog,
         ]);
 
-        return redirect('ekstrakulikulerblogadmin')->with('toast_success', ' Data Berhasil di Ubah!');
+        return redirect('ekstrakulikulerblogadmin')->with('success', ' Data Berhasil di Ubah!');
     }
 
     public function delete($id)
     {
         $data = ekstrakulikulerblog::find($id);
         $data->delete();
-        return redirect('ekstrakulikulerblogadmin')->with('toast_success', ' Data Berhasil di Hapus!');
+        return redirect('ekstrakulikulerblogadmin')->with('success', ' Data Berhasil di Hapus!');
     }
 }

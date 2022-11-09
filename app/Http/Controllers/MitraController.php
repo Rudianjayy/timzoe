@@ -36,7 +36,7 @@ class MitraController extends Controller
             $data->save();
         }
 
-        return redirect()->route('adminmitra')->with('toast_success',' Data Berhasil di Tambahkan!');
+        return redirect()->route('adminmitra')->with('success',' Data Berhasil di Tambahkan!');
     }
 
     public function editmitra($id){
@@ -62,13 +62,13 @@ class MitraController extends Controller
             $data->save();
         }
 
-        return redirect('adminmitra')->with('toast_success',' Data Berhasil di Ubah!');
+        return redirect('adminmitra')->with('success',' Data Berhasil di Ubah!');
 
     }
 
     public function deletemitra($id){
         $data = Mitra::find($id);
         $data->delete();
-        return redirect('adminmitra')->with('toast_success',' Data Berhasil di Hapus!');
+        return redirect('adminmitra')->with('success',' Data Berhasil di Hapus!');
     }
 }

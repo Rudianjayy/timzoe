@@ -59,7 +59,7 @@ class KurikulumController extends Controller
             $data->save();
         }
 
-        return redirect()->route('kalenderakademikadmin')->with('toast_success', ' Data Berhasil di Tambahkan!');
+        return redirect()->route('kalenderakademikadmin')->with('success', ' Data Berhasil di Tambahkan!');
     }
 
     public function editkalenderakademik($id)
@@ -84,14 +84,14 @@ class KurikulumController extends Controller
             $data->save();
         }
 
-        return redirect('kalenderakademikadmin')->with('toast_success', ' Data Berhasil di Ubah!');
+        return redirect('kalenderakademikadmin')->with('success', ' Data Berhasil di Ubah!');
     }
 
     public function delete($id)
     {
         $data = kalenderakademik::find($id);
         $data->delete();
-        return redirect('kalenderakademikadmin')->with('toast_success', ' Data Berhasil di Hapus!');
+        return redirect('kalenderakademikadmin')->with('success', ' Data Berhasil di Hapus!');
     }
 
 
@@ -149,7 +149,7 @@ class KurikulumController extends Controller
             $data->save();
         }
 
-        return redirect()->route('jadwalkegiatanadmin')->with('toast_success', ' Data Berhasil di Tambahkan!');
+        return redirect()->route('jadwalkegiatanadmin')->with('success', ' Data Berhasil di Tambahkan!');
     }
 
     public function editjadwalkegiatan($id)
@@ -176,14 +176,14 @@ class KurikulumController extends Controller
             $data->save();
         }
 
-        return redirect('jadwalkegiatanadmin')->with('toast_success', ' Data Berhasil di Ubah!');
+        return redirect('jadwalkegiatanadmin')->with('success', ' Data Berhasil di Ubah!');
     }
 
     public function deletejadwalkegiatan($id)
     {
         $data = kalenderakademik::find($id);
         $data->delete();
-        return redirect('kalenderakademikadmin')->with('toast_success', ' Data Berhasil di Hapus!');
+        return redirect('kalenderakademikadmin')->with('success', ' Data Berhasil di Hapus!');
     }
 
 
@@ -277,7 +277,7 @@ class KurikulumController extends Controller
 
 
 
-        return redirect()->route('kurikulumadmin')->with('toast_success', ' Data Berhasil di Tambahkan!');
+        return redirect()->route('kurikulumadmin')->with('success', ' Data Berhasil di Tambahkan!');
     }
 
 
@@ -367,7 +367,7 @@ class KurikulumController extends Controller
             'hasil' => $request->hasil,
         ]);
 
-        return redirect()->route('adminkelulusan')->with('toast_success', 'Data Berhasil Di Tambahkan!');
+        return redirect()->route('adminkelulusan')->with('success', 'Data Berhasil Di Tambahkan!');
     }
 
     public function editkelulusan($id)
@@ -397,14 +397,14 @@ class KurikulumController extends Controller
             'tanggal_lahir' => $request->tanggal_lahir,
             'hasil' => $request->hasil,
         ]);
-        return redirect('adminkelulusan')->with('toast_success', ' Data Berhasil di Ubah!');
+        return redirect('adminkelulusan')->with('success', ' Data Berhasil di Ubah!');
     }
 
     public function deletekelulusan($id)
     {
         $data = Suratkelulusan::find($id);
         $data->delete();
-        return redirect('adminkelulusan')->with('toast_success', ' Data Berhasil di Hapus!');
+        return redirect('adminkelulusan')->with('success', ' Data Berhasil di Hapus!');
     }
 }
 

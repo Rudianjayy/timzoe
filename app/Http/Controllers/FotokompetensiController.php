@@ -38,7 +38,7 @@ class FotokompetensiController extends Controller
             $data->save();
         }
 
-        return redirect()->route('fotokompetensiadmin')->with('toast_success',' Data Berhasil di Tambahkan!');
+        return redirect()->route('fotokompetensiadmin')->with('success',' Data Berhasil di Tambahkan!');
     }
 
     public function editfotokompetensi($id){
@@ -64,14 +64,14 @@ class FotokompetensiController extends Controller
             $data->save();
         }
 
-        return redirect('fotokompetensiadmin')->with('toast_success',' Data Berhasil di Ubah!');
+        return redirect('fotokompetensiadmin')->with('success',' Data Berhasil di Ubah!');
 
     }
 
     public function delete($id){
         $data = Fotokompetensi::find($id);
         $data->delete();
-        return redirect('fotokompetensiadmin')->with('toast_success',' Data Berhasil di Hapus!');
+        return redirect('fotokompetensiadmin')->with('success',' Data Berhasil di Hapus!');
     }
 
 }

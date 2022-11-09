@@ -27,7 +27,7 @@
                     <i class="mr-1 flaticon-lock-2"></i> <span>Lock Screen</span>
                 </a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="/login">
+                <a class="dropdown-item" href="/logout">
                     <i class="flaticon-logout"></i> <span>Log Out</span>
                 </a>
             </div>

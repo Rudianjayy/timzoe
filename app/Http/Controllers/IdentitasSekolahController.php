@@ -82,7 +82,7 @@ class IdentitasSekolahController extends Controller
 
 
 
-     return redirect('identitas_admin')->with('toast_success', 'Data Berhasil Di Tambahkan!');
+     return redirect('identitas_admin')->with('success', 'Data Berhasil Di Tambahkan!');
     }
 
     public function editidentitas($id){
@@ -109,14 +109,14 @@ class IdentitasSekolahController extends Controller
             'youtube' =>$request->youtube,
         ]);
 
-        return redirect('identitas_admin')->with('toast_success',' Data Berhasil di Ubah!');
+        return redirect('identitas_admin')->with('success',' Data Berhasil di Ubah!');
 
     }
 
     public function delete($id){
         $data = IdentitasSekolah::find($id);
         $data->delete();
-        return redirect('identitas_admin')->with('toast_success',' Data Berhasil di Hapus!');
+        return redirect('identitas_admin')->with('success',' Data Berhasil di Hapus!');
     }
 
 }

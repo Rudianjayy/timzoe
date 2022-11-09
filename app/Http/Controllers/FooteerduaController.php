@@ -33,7 +33,7 @@ class FooteerduaController extends Controller
             'link' =>$request->link,
         ]);
 
-        return redirect()->route('adminfooteerdua')->with('toast_success',' Data Berhasil di Tambahkan!');
+        return redirect()->route('adminfooteerdua')->with('success',' Data Berhasil di Tambahkan!');
     }
 
     public function editfooteerdua($id){
@@ -61,14 +61,14 @@ class FooteerduaController extends Controller
             $data->save();
         }
 
-        return redirect('adminfooteerdua')->with('toast_success',' Data Berhasil di Ubah!');
+        return redirect('adminfooteerdua')->with('success',' Data Berhasil di Ubah!');
 
     }
 
     public function delete($id){
         $data = footeerdua::find($id);
         $data->delete();
-        return redirect('adminfooteerdua')->with('toast_success',' Data Berhasil di Hapus!');
+        return redirect('adminfooteerdua')->with('success',' Data Berhasil di Hapus!');
     }
 
 }

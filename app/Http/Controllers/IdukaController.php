@@ -52,7 +52,7 @@ class IdukaController extends Controller
         //     $data->save();
         // }
 
-        return redirect()->route('idukaadmin')->with('toast_success',' Data Berhasil di Tambahkan!');
+        return redirect()->route('idukaadmin')->with('success',' Data Berhasil di Tambahkan!');
     }
 
     public function editiduka($id){
@@ -81,14 +81,14 @@ class IdukaController extends Controller
         //     $data->save();
         // }
 
-        return redirect('idukaadmin')->with('toast_success',' Data Berhasil di Ubah!');
+        return redirect('idukaadmin')->with('success',' Data Berhasil di Ubah!');
 
     }
 
     public function delete($id){
         $data = Iduka::find($id);
         $data->delete();
-        return redirect('idukaadmin')->with('toast_success',' Data Berhasil di Hapus!');
+        return redirect('idukaadmin')->with('success',' Data Berhasil di Hapus!');
     }
 
 

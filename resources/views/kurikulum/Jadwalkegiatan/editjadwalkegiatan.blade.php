@@ -6,7 +6,7 @@
 </head>
 
     <body>
-        <h1 class="text-center mb-4">Edit Jadwal Kegiatan</h1>
+        <h1 style="color: black;" class="text-center mb-4">Edit Jadwal Kegiatan</h1>
 
         <div class="container">
 
@@ -18,27 +18,27 @@
 
                                 @csrf
                                 <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Nama kegiatan:</label>
-                                    <textarea class="form-control form-control-solid" rows="6x" name="namakegiatan">{{ $data->namakegiatan }}</textarea>
-
+                                    <label for="exampleInputEmail1" class="form-label">Nama Kegiatan:</label>
+                                    <input type="text" name="namakegiatan" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" {{ $data->namakegiatan }}>
                                     @error('namakegiatan')
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">waktu :</label>
-                                    <textarea class="form-control form-control-solid" rows="6x" name="waktu">{{ $data->waktu }}</textarea>
-
+                                    <label for="exampleInputEmail1" class="form-label">Waktu:</label>
+                                    <input type="text" name="waktu" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" {{ $data->waktu }}>
                                     @error('waktu')
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">tempat :</label>
-                                    <textarea class="form-control form-control-solid" rows="6x" name="tempat">{{ $data->tempat }}</textarea>
-
+                                    <label for="exampleInputEmail1" class="form-label">Tempat:</label>
+                                    <input type="text" name="tempat" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" {{ $data->tempat }}>
                                     @error('tempat')
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror

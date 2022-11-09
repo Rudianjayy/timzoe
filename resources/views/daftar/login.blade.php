@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
     <title>Login | SMK Muhammadiyah 1 Genteng</title>
-    <link rel="icon" type="image/x-icon" href="{{ asset('admintemp/adminnew/riski/nopan/assets/img/favicon.ico') }}" />
+    <link rel="icon" type="image/x-icon" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}" />
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     <link href="{{ asset('admintemp/adminnew/riski/nopan/assets/css/loader.css') }}" rel="stylesheet" type="text/css" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
@@ -32,18 +32,19 @@
         @csrf
         <div class="row">
             <div class="col-md-12 text-center mb-4">
-                <img alt="logo" src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/logo-3.png') }}"
-                    class="theme-logo">
+                <img alt="logo" src="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}"
+                    class="theme-logo" style="width: 80px;">
             </div>
 
             <div class="col-md-12">
                 <label for="inputEmail" class="" style="color: black">Login</label>
                 <input type="email" name="email" id="inputEmail" class="form-control mb-4" placeholder="Login" value="{{ Session::get('email') }}">
-               
+
 
                 <label for="inputPassword" class="" style="color: black">Password</label>
                 <input type="password" name="password" id="password" class="form-control mb-5" placeholder="Password" value="{{ Session::get('password') }}">
-              
+
+                
                 <div class="checkbox d-flex justify-content-between mb-4 mt-3">
                     {{-- <div class="custom-control custom-checkbox mr-3">
                         <input type="checkbox" class="custom-control-input" id="customCheck1" value="remember-me">
@@ -143,7 +144,13 @@
 
 
     <!-- END GLOBAL MANDATORY SCRIPTS -->
+    <script>
+        @if (Session::has('success'))
+            toastr.success("{{ Session::get('success') }}")
+        @endif
+    </script>
 </body>
+
 
 <!-- Mirrored from designreset.com/preview-equation/default-light/user_login_1.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Oct 2022 08:31:29 GMT -->
 

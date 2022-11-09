@@ -74,7 +74,7 @@ class FasilitasController extends Controller
             $data->save();
         }
 
-        return redirect('fasilitasadmin')->with('toast_success', ' Data Berhasil di tambahkan!');
+        return redirect('fasilitasadmin')->with('success', ' Data Berhasil di tambahkan!');
     }
 
 
@@ -114,14 +114,14 @@ class FasilitasController extends Controller
             $data->save();
         }
 
-        return redirect('fasilitasadmin')->with('toast_success', ' Data Berhasil di Ubah!');
+        return redirect('fasilitasadmin')->with('success', ' Data Berhasil di Ubah!');
     }
 
     public function deletefasilitas($id)
     {
         $data = fasilitassekolah::find($id);
         $data->delete();
-        return redirect('fasilitasadmin')->with('toast_success', ' Data Berhasil di Hapus!');
+        return redirect('fasilitasadmin')->with('success', ' Data Berhasil di Hapus!');
     }
 
 }

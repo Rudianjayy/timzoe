@@ -1,5 +1,9 @@
 <?php
 
+use App\Models\Album;
+use App\Models\Mitra;
+use App\Models\Muhinews;
+use App\Models\Prestasi;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UpjController;
 use App\Http\Controllers\PpdbController;
@@ -10,7 +14,6 @@ use App\Http\Controllers\MitraController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\AkademiController;
 use App\Http\Controllers\FooteerController;
-use App\Http\Controllers\FooteerduaController;
 use App\Http\Controllers\JurusanController;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\MuhiblogController;
@@ -20,16 +23,17 @@ use App\Http\Controllers\SambutanController;
 use App\Http\Controllers\FasilitasController;
 use App\Http\Controllers\FotoidukaController;
 use App\Http\Controllers\KesiswaanController;
-use App\Http\Controllers\DetailEkstrakulikulerController;
 use App\Http\Controllers\KurikulumController;
 use App\Http\Controllers\UpjtekajeController;
+use App\Http\Controllers\FooteerduaController;
 use App\Http\Controllers\KompetensiController;
+use App\Http\Controllers\ProfiladminController;
 use App\Http\Controllers\DataidentitasController;
 use App\Http\Controllers\ProfilSekolahController;
 use App\Http\Controllers\FotokompetensiController;
-use App\Http\Controllers\EkstrakulikulerBlogController;
 use App\Http\Controllers\IdentitasSekolahController;
-use App\Http\Controllers\ProfiladminController;
+use App\Http\Controllers\EkstrakulikulerBlogController;
+use App\Http\Controllers\DetailEkstrakulikulerController;
 
 
 
@@ -48,6 +52,8 @@ use App\Http\Controllers\ProfiladminController;
 //     return view('landingpage.landing');
 // });
 Route::get('/',[LandingController::class,'index'])->name('landing');
+
+Route::get('/authors',[LandingController::class,'authors'])->name('authors');
 
 
 
@@ -622,9 +628,24 @@ Route::get('/deletefotomou/{id}',[FotoidukaController::class, 'delete'])->name('
 
 //template metronic
 Route::get('/data-identitas',[DataidentitasController::class,'index'])->name('data-identitas');
+
+
 Route::get('/welcome', function () {
-    return view('welcome');
+    $berita = Muhinews::count();
+    $galery = Album::count();
+    $prestasi = Prestasi::count();
+    $mitra = Mitra::count();
+    return view('welcome',compact('berita','galery','prestasi','mitra'));
 });
+
+
+// Route::get('/welcome', function () {
+//     $jumlahmahasiswa = Employee::count();
+//     $jumlahmahasiswalakilaki = Employee::where('jeniskelamin','laki-laki')->count();
+//     $jumlahmahasiswaperempuan = Employee::where('jeniskelamin','perempuan')->count();
+
+//     return view('welcome',compact('jumlahmahasiswa','jumlahmahasiswalakilaki','jumlahmahasiswaperempuan'));
+// })->middleware('auth');
 
 
 

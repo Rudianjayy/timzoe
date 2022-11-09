@@ -103,36 +103,9 @@
                 </div>
             </div>
         </div>
-   
 
-    @include('sweetalert::alert')
+
     @include('layout.script')
-   
-
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"
-        integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <title>Data Mahasiswa - Laravel</title>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
-    </script>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="{{ asset('style/assets/js/jquery.dataTables.min.js') }}"></script>
-    <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap4.min.js"></script>
     </body>
 
     <script>
@@ -143,7 +116,7 @@
 
             swal({
                     title: "Apa kamu yakin ingin menghapus data ini?",
-                    text: "Kamu akan menghapus data dengan nama " + nama + "! ",
+                    text: "Kamu akan menghapus data dengan foto " + nama + "! ",
                     icon: "warning",
                     buttons: true,
                     dangerMode: true,
@@ -151,18 +124,21 @@
                 .then((willDelete) => {
                     if (willDelete) {
                         window.location = "/deletefasilitas/" + id + ""
-                        // swal("Data berhasil dihapus!", {
-                        //   icon: "success",
-                        // });
+                        swal("Data berhasil dihapus!", {
+                          icon: "success",
+                         });
                     } else {
                         swal("Data tidak jadi dihapus!");
                     }
                 });
         });
-
-
+    </script>
+    <script>
+        @if (Session::has('success'))
+            toastr.success("{{ Session::get('success') }}")
+        @endif
     </script>
 
- 
+
 
 @endsection

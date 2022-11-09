@@ -591,11 +591,13 @@ Route::get('/pendaftaran', [PpdbController::class, 'pendaftaran'])->name('pendaf
 //Profiladmin
 Route::get('/profiladmin',[ProfiladminController::class,'profiladmin'])->name('profiladmin');
 
-Route::get('/adminprofil',[ProfiladminController::class, 'adminprofil'])->name('adminprofil');
-Route::get('/tambahprofiladmin',[ProfiladminController::class, 'tambahprofiladmin'])->name('tambahprofiladmin');
+Route::get('/admin',[ProfiladminController::class, 'admin'])->name('admin');
+
+Route::get('/tambahprofiladmin/{id}',[ProfiladminController::class, 'tambahprofiladmin'])->name('tambahprofiladmin');
 Route::post('/submitprofil',[ProfiladminController::class, 'submitprofil'])->name('submitprofil');
+
 Route::get('/editprofiladmin/{id}',[ProfiladminController::class, 'editprofiladmin'])->name('editprofiladmin');
-Route::post('/editproses/{id}',[ProfiladminController::class, 'editproses'])->name('editproses');
+Route::post('/editprosesadmin/{id}',[ProfiladminController::class, 'editprosesadmin'])->name('editprosesadmin');
 Route::get('/deleteprofiladmin/{id}',[ProfiladminController::class, 'deleteprofiladmin'])->name('deleteprofiladmin');
 
 

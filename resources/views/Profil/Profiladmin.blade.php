@@ -78,17 +78,9 @@
                                     </div>
                                     <div class="col-xl-7 col-lg-6 col-md-7 col-sm-8 col-12">
                                         <ul class="nav nav-pills justify-content-xl-end justify-content-lg-start justify-content-md-start justify-content-sm-start justify-content-center mt-2" id="pills-tab1" role="tablist">
+
                                             <li class="nav-item">
-                                                <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-selected="true">Timeline</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" id="pills-about-tab" data-toggle="pill" href="#pills-about" role="tab" aria-selected="false">About</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" id="pills-picture-tab" data-toggle="pill" href="#pills-picture" role="tab" aria-selected="false">Pictures</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" id="pills-friend-tab" data-toggle="pill" href="#pills-friend" role="tab" aria-selected="false">Friends</a>
+                                                <a class="nav-link" id="pills-friend-tab" data-toggle="pill" href="/editprofiladmin" role="admin" aria-selected="false">Edit Profil</a>
                                             </li>
                                             <li class="nav-item dropdown">
                                                 <div class="dropdown custom-dropdown-icon mt-2">
@@ -124,13 +116,7 @@
                                     <div class="profile-info-section mb-4">
                                         <div class="card" style="">
                                             <div class="card-body">
-                                                <h4 class="mb-4"><i class="flaticon-user-plus"></i> Profile info</h4>
-                                                <p class="mb-3"><span class="usr-work-position">Project Manager </span> at <a href="#">DesignReset</a></p>
-                                                <p class="mb-4"><span class="usr-work-position">3D Artist and Animator</span> at <a href="#">Concept Agency</a></p>
-                                                <p>Lives in Los Angeles, CA</p>
-                                                <p>Joined March 2014</p>
-                                                <p>Followed by 256 people</p>
-                                                <p>Joined 17 Groups</p>
+                                              
                                                 <div class="social-networks-section mt-5">
                                                     <h4 class="mb-4">Other Networks</h4>
                                                     <div class="row">

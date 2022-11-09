@@ -301,12 +301,8 @@
                 </a>
                 <ul class="collapse submenu list-unstyled" id="profiladmin" data-parent="#accordionExample">
                     <li>
-                        <a href="/profiladmin">Profil Admin</a>
+                        <a href="/admin">Profil Admin</a>
                     </li>
-                    <li>
-                        <a href="/pa">PA</a>
-                    </li>
-
                 </ul>
             </li>
 
@@ -314,8 +310,6 @@
         </ul>
     </nav>
 
-        </ul>
 
 
-    </nav>
 </div>

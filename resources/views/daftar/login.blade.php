@@ -39,11 +39,12 @@
             <div class="col-md-12">
                 <label for="inputEmail" class="" style="color: black">Login</label>
                 <input type="email" name="email" id="inputEmail" class="form-control mb-4" placeholder="Login" value="{{ Session::get('email') }}">
-               
+
 
                 <label for="inputPassword" class="" style="color: black">Password</label>
                 <input type="password" name="password" id="password" class="form-control mb-5" placeholder="Password" value="{{ Session::get('password') }}">
-              
+
+                
                 <div class="checkbox d-flex justify-content-between mb-4 mt-3">
                     {{-- <div class="custom-control custom-checkbox mr-3">
                         <input type="checkbox" class="custom-control-input" id="customCheck1" value="remember-me">
@@ -143,7 +144,13 @@
 
 
     <!-- END GLOBAL MANDATORY SCRIPTS -->
+    <script>
+        @if (Session::has('success'))
+            toastr.success("{{ Session::get('success') }}")
+        @endif
+    </script>
 </body>
+
 
 <!-- Mirrored from designreset.com/preview-equation/default-light/user_login_1.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Oct 2022 08:31:29 GMT -->
 

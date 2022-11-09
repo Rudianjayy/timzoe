@@ -102,10 +102,14 @@
 
 
 
-        @include('sweetalert::alert')
 
-        @include('layout.script')
     </body>
+    @include('layout.script')
+    <script>
+        @if (Session::has('success'))
+            toastr.success("{{ Session::get('success') }}")
+        @endif
+    </script>
 
     {{-- @endpush --}}
 @endsection

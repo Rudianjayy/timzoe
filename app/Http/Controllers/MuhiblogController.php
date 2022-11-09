@@ -40,7 +40,7 @@ class MuhiblogController extends Controller
         $data = Kategoriberita::create([
             'kategori' =>$request->kategori,
         ]);
-        return redirect()->route('kategoriberita')->with('toast_success',' Data Berhasil di Tambahkan!');
+        return redirect()->route('kategoriberita')->with('success',' Data Berhasil di Tambahkan!');
     }
 
     public function editkategori($id){
@@ -60,14 +60,14 @@ class MuhiblogController extends Controller
             'kategori' =>$request->kategori,
         ]);
 
-        return redirect('kategoriberita')->with('toast_success',' Data Berhasil di Ubah!');
+        return redirect('kategoriberita')->with('success',' Data Berhasil di Ubah!');
 
     }
 
     public function deletekategori($id){
         $data = Kategoriberita::find($id);
         $data->delete();
-        return redirect('kategoriberita')->with('toast_success',' Data Berhasil di Hapus!');
+        return redirect('kategoriberita')->with('success',' Data Berhasil di Hapus!');
         $kategori = Muhinews::all();
         return view('muhinews.muhiblog',compact('d','blog','kategori'));
     }
@@ -114,7 +114,7 @@ class MuhiblogController extends Controller
         }
 
 
-        return redirect()->route('muhiblogadmin')->with('toast_success', ' Data Berhasil di Tambahkan!');
+        return redirect()->route('muhiblogadmin')->with('success', ' Data Berhasil di Tambahkan!');
     }
 
     public function editmuhiblog($id)
@@ -149,13 +149,13 @@ class MuhiblogController extends Controller
             'kategori_blog' => $request->kategori_blog,
         ]);
 
-        return redirect('muhiblogadmin')->with('toast_success', ' Data Berhasil di Ubah!');
+        return redirect('muhiblogadmin')->with('success', ' Data Berhasil di Ubah!');
     }
 
     public function delete($id)
     {
         $data = Muhiblog::find($id);
         $data->delete();
-        return redirect('muhiblogadmin')->with('toast_success', ' Data Berhasil di Hapus!');
+        return redirect('muhiblogadmin')->with('success', ' Data Berhasil di Hapus!');
     }
 }

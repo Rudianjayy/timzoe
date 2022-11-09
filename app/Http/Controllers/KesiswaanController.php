@@ -58,7 +58,7 @@ class KesiswaanController extends Controller
             $data->save();
         }
 
-        return redirect()->route('ekstrakulikuleradmin')->with('toast_success',' Data Berhasil di Tambahkan!');
+        return redirect()->route('ekstrakulikuleradmin')->with('success',' Data Berhasil di Tambahkan!');
     }
 
     public function editekstrakulikuler($id){
@@ -89,14 +89,14 @@ class KesiswaanController extends Controller
             $data->save();
         }
 
-        return redirect('ekstrakulikuleradmin')->with('toast_success',' Data Berhasil di Ubah!');
+        return redirect('ekstrakulikuleradmin')->with('success',' Data Berhasil di Ubah!');
 
     }
 
     public function deleteekstra($id){
         $data = ekstrakulikuler::find($id);
         $data->delete();
-        return redirect('ekstrakulikuleradmin')->with('toast_success',' Data Berhasil di Hapus!');
+        return redirect('ekstrakulikuleradmin')->with('success',' Data Berhasil di Hapus!');
     }
 
 
@@ -152,7 +152,7 @@ class KesiswaanController extends Controller
             $data->save();
         }
 
-        return redirect()->route('osisadmin')->with('toast_success',' Data Berhasil di Tambahkan!');
+        return redirect()->route('osisadmin')->with('success',' Data Berhasil di Tambahkan!');
     }
 
     public function editosis($id){
@@ -183,14 +183,14 @@ class KesiswaanController extends Controller
             $data->save();
         }
 
-        return redirect('osisadmin')->with('toast_success',' Data Berhasil di Ubah!');
+        return redirect('osisadmin')->with('success',' Data Berhasil di Ubah!');
 
     }
 
     public function deleteosis($id){
         $data = osis::find($id);
         $data->delete();
-        return redirect('osisadmin')->with('toast_success',' Data Berhasil di Hapus!');
+        return redirect('osisadmin')->with('success',' Data Berhasil di Hapus!');
     }
 
 
@@ -253,7 +253,7 @@ class KesiswaanController extends Controller
             $data->save();
         }
 
-        return redirect()->route('alumniadmin')->with('toast_success',' Data Berhasil di Tambahkan!');
+        return redirect()->route('alumniadmin')->with('success',' Data Berhasil di Tambahkan!');
     }
 
     public function editalumni($id){
@@ -282,14 +282,14 @@ class KesiswaanController extends Controller
             $data->foto_alumni = $request->file('foto_alumni')->getClientOriginalName();
             $data->save();
         }
-        return redirect('alumniadmin')->with('toast_success',' Data Berhasil di Ubah!');
+        return redirect('alumniadmin')->with('success',' Data Berhasil di Ubah!');
 
     }
 
     public function deletealumni($id){
         $data = alumni::find($id);
         $data->delete();
-        return redirect('alumniadmin')->with('toast_success',' Data Berhasil di Hapus!');
+        return redirect('alumniadmin')->with('success',' Data Berhasil di Hapus!');
     }
 
 

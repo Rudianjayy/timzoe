@@ -28,13 +28,13 @@ class LoginController extends Controller
             'password.required' =>'Harus diisi',
         ]);
         if(Auth::attempt($request->only('email','password'))){
-            return redirect('/welcome')->with('toast_success','Login Berhasil!');
+            return redirect('/welcome')->with('success','Login Berhasil!');
         }else{
             return redirect()->back()->with('password','password salah');
         }
 
 
-        
+
     }
 
     public function register(){
@@ -46,7 +46,7 @@ class LoginController extends Controller
         Session::flash('name', $request->name);
         Session::flash('email', $request->email);
         Session::flash('password', $request->password);
-        
+
         $this->validate($request,[
             'name' =>'required|unique:users,name',
             'email' =>'required|unique:users,email',
@@ -66,12 +66,15 @@ class LoginController extends Controller
             'remember_token' => Str::random(60),
 
         ]);
-        return redirect('/login')->with('toast_success','Berhasil daftar!');
+        return redirect('/login')->with('success','Berhasil daftar!');
     }
 
     public function logout(){
         Auth::logout();
-        return redirect('login')->with('toast_success', 'Anda berhasil logout!');
+        return redirect('login')->with('success', 'Anda berhasil logout!');
     }
 
+
+
+  
 }

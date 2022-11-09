@@ -39,7 +39,7 @@ class SliderController extends Controller
             $data->save();
         }
 
-        return redirect()->route('slideradmin')->with('toast_success',' Data Berhasil di Tambahkan!');
+        return redirect()->route('slideradmin')->with('success',' Data Berhasil di Tambahkan!');
     }
 
     public function editslider($id){
@@ -67,14 +67,14 @@ class SliderController extends Controller
             $data->save();
         }
 
-        return redirect('slideradmin')->with('toast_success',' Data Berhasil di Ubah!');
+        return redirect('slideradmin')->with('success',' Data Berhasil di Ubah!');
 
     }
 
     public function delete($id){
         $data = Slider::find($id);
         $data->delete();
-        return redirect('slideradmin')->with('toast_success',' Data Berhasil di Hapus!');
+        return redirect('slideradmin')->with('success',' Data Berhasil di Hapus!');
     }
 
 
@@ -124,7 +124,7 @@ class SliderController extends Controller
             $data2->save();
         }
 
-        return redirect()->route('fotoslideradmin')->with('toast_success',' Data Berhasil di Tambahkan!');
+        return redirect()->route('fotoslideradmin')->with('success',' Data Berhasil di Tambahkan!');
     }
     public function editfotoslider($id){
 
@@ -148,13 +148,13 @@ class SliderController extends Controller
             $data2->save();
         }
 
-        return redirect('fotoslideradmin')->with('toast_success',' Data Berhasil di Ubah!');
+        return redirect('fotoslideradmin')->with('success',' Data Berhasil di Ubah!');
 
     }
 
     public function delete2($id){
         $data2 = Fotoslider::find($id);
         $data2->delete();
-        return redirect('fotoslideradmin')->with('toast_success',' Data Berhasil di Hapus!');
+        return redirect('fotoslideradmin')->with('success',' Data Berhasil di Hapus!');
     }
 }

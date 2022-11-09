@@ -62,7 +62,7 @@ class DetailEkstrakulikulerController extends Controller
             $data->save();
         }
 
-        return redirect()->route('admindetailekstrakulikuler')->with('toast_success',' Data Berhasil di Tambahkan!');
+        return redirect()->route('admindetailekstrakulikuler')->with('success',' Data Berhasil di Tambahkan!');
     }
     public function editdetailekstrakulikuler($id){
 
@@ -90,14 +90,14 @@ class DetailEkstrakulikulerController extends Controller
         //     $data->save();
         // }
 
-        return redirect('admindetailekstrakulikuler')->with('toast_success',' Data Berhasil di Ubah!');
+        return redirect('admindetailekstrakulikuler')->with('success',' Data Berhasil di Ubah!');
 
     }
 
     public function deletedetail($id){
         $data = Detailekstrakulikuler::find($id);
         $data->delete();
-        return redirect('admindetailekstrakulikuler')->with('toast_success',' Data Berhasil di Hapus!');
+        return redirect('admindetailekstrakulikuler')->with('success',' Data Berhasil di Hapus!');
     }
 
 

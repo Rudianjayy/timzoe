@@ -40,7 +40,7 @@ class JurusanController extends Controller
     public function tambahjurusan()
     {
         $personal = Personaljurusan::all();
-        
+
         return view('kurikulum.kompetensi.tambah-jurusan', compact('personal'));
     }
 
@@ -71,7 +71,7 @@ class JurusanController extends Controller
             $data->save();
         }
 
-        return redirect()->route('datajurusan')->with('toast_success', 'Data Berhasil Di Tambahkan!');
+        return redirect()->route('datajurusan')->with('success', 'Data Berhasil Di Tambahkan!');
     }
 
     public function editjurusan($id){
@@ -105,14 +105,14 @@ class JurusanController extends Controller
             $data->save();
         }
 
-        return redirect('datajurusan')->with('toast_success',' Data Berhasil di Ubah!');
+        return redirect('datajurusan')->with('success',' Data Berhasil di Ubah!');
 
     }
 
     public function delete($id){
         $data = Jurusan::find($id);
         $data->delete();
-        return redirect('datajurusan')->with('toast_success',' Data Berhasil di Hapus!');
+        return redirect('datajurusan')->with('success',' Data Berhasil di Hapus!');
     }
 
 }

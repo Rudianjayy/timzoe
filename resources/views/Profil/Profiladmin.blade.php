@@ -116,7 +116,7 @@
                                     <div class="profile-info-section mb-4">
                                         <div class="card" style="">
                                             <div class="card-body">
-                                              
+
                                                 <div class="social-networks-section mt-5">
                                                     <h4 class="mb-4">Other Networks</h4>
                                                     <div class="row">
@@ -676,23 +676,9 @@
                             </div>
                         </div>
 
-                    </div>
-                </div>
-            </div>
-
-    <script src="{{ asset('admintemp/adminnew/riski/nopan/assets/js/libs/jquery-3.1.1.min.js') }}"></script>
-    <script src="{{ asset('admintemp/adminnew/riski/nopan/assets/js/loader.js') }}"></script>
-    <script src="bootstrap/js/popper.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script src="plugins/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="{{ asset('admintemp/adminnew/riski/nopan/assets/js/app.js') }}"></script>
-
-    <script>
-        $(document).ready(function() {
-            App.init();
-        });
-    </script>
-    <script src="{{ asset('admintemp/adminnew/riski/nopan/assets/js/custom.js') }}"></script>
+  </div>
+       </div>
+</script>
     <!-- END GLOBAL MANDATORY SCRIPTS -->
 
     <!--  BEGIN CUSTOM SCRIPTS FILE  -->

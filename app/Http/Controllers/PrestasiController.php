@@ -40,7 +40,7 @@ class PrestasiController extends Controller
             $data->save();
         }
 
-        return redirect()->route('indexprestasi')->with('toast_success', 'Data Berhasil Di Tambahkan!');
+        return redirect()->route('indexprestasi')->with('success', 'Data Berhasil Di Tambahkan!');
     }
 
     public function editprestasi($id){
@@ -71,13 +71,13 @@ class PrestasiController extends Controller
             $data->save();
         }
 
-        return redirect('indexprestasi')->with('toast_success',' Data Berhasil di Ubah!');
+        return redirect('indexprestasi')->with('success',' Data Berhasil di Ubah!');
 
     }
 
     public function delete($id){
         $data = Prestasi::find($id);
         $data->delete();
-        return redirect('indexprestasi')->with('toast_success',' Data Berhasil di Hapus!');
+        return redirect('indexprestasi')->with('success',' Data Berhasil di Hapus!');
     }
 }

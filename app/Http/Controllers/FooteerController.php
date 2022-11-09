@@ -41,7 +41,7 @@ class FooteerController extends Controller
             $data->save();
         }
 
-        return redirect()->route('footeeradmin')->with('toast_success',' Data Berhasil di Tambahkan!');
+        return redirect()->route('footeeradmin')->with('success',' Data Berhasil di Tambahkan!');
     }
 
     public function editfooteer($id){
@@ -69,14 +69,14 @@ class FooteerController extends Controller
             $data->save();
         }
 
-        return redirect('footeeradmin')->with('toast_success',' Data Berhasil di Ubah!');
+        return redirect('footeeradmin')->with('success',' Data Berhasil di Ubah!');
 
     }
 
     public function deletefooteer($id){
         $data = footeer::find($id);
         $data->delete();
-        return redirect('footeeradmin')->with('toast_success',' Data Berhasil di Hapus!');
+        return redirect('footeeradmin')->with('success',' Data Berhasil di Hapus!');
     }
 
 

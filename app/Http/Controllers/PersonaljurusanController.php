@@ -50,12 +50,12 @@ class PersonaljurusanController extends Controller
             $data->save();
         }
 
-        return redirect()->route('adminfotojurusan')->with('toast_success', 'Data Berhasil Di Tambahkan!');
+        return redirect()->route('adminfotojurusan')->with('success', 'Data Berhasil Di Tambahkan!');
     }
     public function delete($id){
         $data = Personaljurusan::find($id);
         $data->delete();
-        return redirect('adminfotojurusan')->with('toast_success',' Data Berhasil di Hapus!');
+        return redirect('adminfotojurusan')->with('success',' Data Berhasil di Hapus!');
     }
 
 }

@@ -7,12 +7,9 @@ use App\Http\Controllers\AlbumController;
 use App\Http\Controllers\IdukaController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MitraController;
-use App\Http\Controllers\DetailController;
-use App\Http\Controllers\KepsekController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\AkademiController;
 use App\Http\Controllers\FooteerController;
-use App\Http\Controllers\FooteerduaController;
 use App\Http\Controllers\JurusanController;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\MuhiblogController;
@@ -22,21 +19,19 @@ use App\Http\Controllers\SambutanController;
 use App\Http\Controllers\FasilitasController;
 use App\Http\Controllers\FotoidukaController;
 use App\Http\Controllers\KesiswaanController;
-use App\Http\Controllers\DetailEkstrakulikulerController;
 use App\Http\Controllers\KurikulumController;
 use App\Http\Controllers\UpjtekajeController;
+use App\Http\Controllers\FooteerduaController;
 use App\Http\Controllers\KompetensiController;
 use App\Http\Controllers\DataidentitasController;
-use App\Http\Controllers\DetailakademiController;
 use App\Http\Controllers\ProfilSekolahController;
 use App\Http\Controllers\FotokompetensiController;
-use App\Http\Controllers\PersonaljurusanController;
-use App\Http\Controllers\EkstrakulikulerBlogController;
 use App\Http\Controllers\IdentitasSekolahController;
 use App\Models\Album;
 use App\Models\Mitra;
 use App\Models\Muhinews;
 use App\Models\Prestasi;
+use App\Http\Controllers\ProfiladminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -600,14 +595,8 @@ Route::get('/deletedeskripsipendaftaran/{id}',[PpdbController::class, 'deletedes
 
 //Profiladmin
 Route::get('/profiladmin',[ProfiladminController::class,'profiladmin'])->name('profiladmin');
-
-Route::get('/adminprofil',[ProfiladminController::class, 'adminprofil'])->name('adminprofil');
-Route::get('/tambahprofiladmin',[ProfiladminController::class, 'tambahprofiladmin'])->name('tambahprofiladmin');
-Route::post('/submitprofil',[ProfiladminController::class, 'submitprofil'])->name('submitprofil');
-Route::get('/editprofiladmin/{id}',[ProfiladminController::class, 'editprofiladmin'])->name('editprofiladmin');
-Route::post('/editproses/{id}',[ProfiladminController::class, 'editproses'])->name('editproses');
-Route::get('/deleteprofiladmin/{id}',[ProfiladminController::class, 'deleteprofiladmin'])->name('deleteprofiladmin');
-
+Route::get('/editprofiladmin',[ProfiladminController::class,'editprofiladmin'])->name('editprofiladmin');
+Route::post('/updateprofiladmin',[ProfiladminController::class, 'updateprofiladmin'])->name('updateprofiladmin');
 
 
 

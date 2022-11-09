@@ -49,7 +49,7 @@ class FotoidukaController extends Controller
 
 
 
-        return redirect()->route('mouadmin')->with('toast_success',' Data Berhasil di Tambahkan!');
+        return redirect()->route('mouadmin')->with('success',' Data Berhasil di Tambahkan!');
     }
 
     public function editfotomou($id){
@@ -86,14 +86,14 @@ class FotoidukaController extends Controller
             $data->save();
         }
 
-        return redirect('mouadmin')->with('toast_success',' Data Berhasil di Ubah!');
+        return redirect('mouadmin')->with('success',' Data Berhasil di Ubah!');
 
     }
 
     public function delete($id){
         $data = Fotoiduka::find($id);
         $data->delete();
-        return redirect('mouadmin')->with('toast_success',' Data Berhasil di Hapus!');
+        return redirect('mouadmin')->with('success',' Data Berhasil di Hapus!');
     }
 
 }

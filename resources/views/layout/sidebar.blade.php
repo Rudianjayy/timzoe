@@ -248,14 +248,14 @@
             <li>
                 <a href="/indexprestasi" class="waves-effect">
                     <div class="" style="font-size:16px; padding:6px; margin-bottom:8px; color:#4f5163;">
-                        <i class="flaticon-elements"></i>
+                        <i class="flaticon-user-11"></i>
                         <span style="margin-left: 15px; color:#4f5163;">Prestasi</span>
                     </div>
                 </a>
             </li>
             <li>
                 <a href="/sambutanadmin" class="waves-effect">
-                    <div class="" style="font-size:16px; padding:6px; margin-bottom:8px; color:#4f5163;">
+                    <div class=""  style="font-size:16px; padding:6px; margin-bottom:8px; color:#4f5163;">
                         <i class="flaticon-3d-cube"></i>
                         <span style="margin-left: 15px; color:#4f5163;">Sambutan Kepsek</span>
                     </div>
@@ -304,7 +304,10 @@
                 </a>
                 <ul class="collapse submenu list-unstyled" id="profiladmin" data-parent="#accordionExample">
                     <li>
-                        <a href="#">Profil Admin</a>
+                        <a href="/profiladmin">Profil Admin</a>
+                    </li>
+                    <li>
+                        <a href="/pa">PA</a>
                     </li>
 
                 </ul>

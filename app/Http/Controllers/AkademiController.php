@@ -29,7 +29,7 @@ class AkademiController extends Controller
         $link = footeerdua::all();
         return view('akademi.akademi', compact('kompetensi','foto','f','kh','pj','kp','akdm','akademi','personal','ft','logo','link'));
     }
-    
+
 
     public function detailakademi($id){
         $dekad= Akademi::findOrFail($id);
@@ -90,7 +90,7 @@ class AkademiController extends Controller
             $data->save();
         }
 
-        return redirect()->route('dataakademi')->with('toast_success',' Data Berhasil di Tambahkan!');
+        return redirect()->route('dataakademi')->with('success',' Data Berhasil di Tambahkan!');
     }
     public function editakademi($id){
 
@@ -130,13 +130,13 @@ class AkademiController extends Controller
         //     $data->save();
         // }
 
-        return redirect('dataakademi')->with('toast_success',' Data Berhasil di Ubah!');
+        return redirect('dataakademi')->with('success',' Data Berhasil di Ubah!');
 
     }
 
     public function delete($id){
         $data = Akademi::find($id);
         $data->delete();
-        return redirect('dataakademi')->with('toast_success',' Data Berhasil di Hapus!');
+        return redirect('dataakademi')->with('success',' Data Berhasil di Hapus!');
     }
 }

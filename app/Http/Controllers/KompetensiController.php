@@ -68,7 +68,7 @@ class KompetensiController extends Controller
         //     $data->save();
         // }
 
-        return redirect()->route('kompetensiadmin')->with('toast_success',' Data Berhasil di Tambahkan!');
+        return redirect()->route('kompetensiadmin')->with('success',' Data Berhasil di Tambahkan!');
     }
     public function editkompetensi($id){
 
@@ -96,14 +96,14 @@ class KompetensiController extends Controller
         //     $data->save();
         // }
 
-        return redirect('kompetensiadmin')->with('toast_success',' Data Berhasil di Ubah!');
+        return redirect('kompetensiadmin')->with('success',' Data Berhasil di Ubah!');
 
     }
 
     public function delete($id){
         $data = Kompetensi::find($id);
         $data->delete();
-        return redirect('kompetensiadmin')->with('toast_success',' Data Berhasil di Hapus!');
+        return redirect('kompetensiadmin')->with('success',' Data Berhasil di Hapus!');
     }
 
 

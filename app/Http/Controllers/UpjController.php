@@ -69,7 +69,7 @@ class UpjController extends Controller
         }
 
 
-        return redirect()->route('adminupj')->with('toast_success', ' Data Berhasil di Tambahkan!');
+        return redirect()->route('adminupj')->with('success', ' Data Berhasil di Tambahkan!');
     }
     public function editupj($id)
     {
@@ -102,13 +102,13 @@ class UpjController extends Controller
             $data->save();
         }
 
-        return redirect('adminupj')->with('toast_success', ' Data Berhasil di Ubah!');
+        return redirect('adminupj')->with('success', ' Data Berhasil di Ubah!');
     }
     public function deleteupj($id)
     {
         $data = upj::find($id);
         $data->delete();
-        return redirect('adminupj')->with('toast_success', ' Data Berhasil di Hapus!');
+        return redirect('adminupj')->with('success', ' Data Berhasil di Hapus!');
     }
 
 
@@ -154,7 +154,7 @@ class UpjController extends Controller
             $data->save();
         }
 
-        return redirect()->route('adminupj2')->with('toast_success', 'Data Berhasil Di Tambahkan!');
+        return redirect()->route('adminupj2')->with('success', 'Data Berhasil Di Tambahkan!');
     }
     public function editupj2($id)
     {
@@ -183,13 +183,13 @@ class UpjController extends Controller
             $data->save();
         }
 
-        return redirect('adminupj2')->with('toast_success', ' Data Berhasil di Ubah!');
+        return redirect('adminupj2')->with('success', ' Data Berhasil di Ubah!');
     }
     public function deleteupj2($id)
     {
         $data = upj::find($id);
         $data->delete();
-        return redirect('adminupj2')->with('toast_success', ' Data Berhasil di Hapus!');
+        return redirect('adminupj2')->with('success', ' Data Berhasil di Hapus!');
     }
 
 
@@ -235,7 +235,7 @@ class UpjController extends Controller
             $data->save();
         }
 
-        return redirect()->route('adminbsi')->with('toast_success', ' Data Berhasil di Tambahkan!');
+        return redirect()->route('adminbsi')->with('success', ' Data Berhasil di Tambahkan!');
     }
 
     public function editbsi($id)
@@ -263,14 +263,14 @@ class UpjController extends Controller
             $data->save();
         }
 
-        return redirect('adminbsi')->with('toast_success', ' Data Berhasil di Ubah!');
+        return redirect('adminbsi')->with('success', ' Data Berhasil di Ubah!');
     }
 
     public function deletebsi($id)
     {
         $data = Bsi::find($id);
         $data->delete();
-        return redirect('adminbsi')->with('toast_success', ' Data Berhasil di Hapus!');
+        return redirect('adminbsi')->with('success', ' Data Berhasil di Hapus!');
     }
 
 
@@ -322,7 +322,7 @@ class UpjController extends Controller
             $data2->save();
         }
 
-        return redirect()->route('adminmuhiprint')->with('toast_success', ' Data Berhasil di Tambahkan!');
+        return redirect()->route('adminmuhiprint')->with('success', ' Data Berhasil di Tambahkan!');
     }
 
     public function editmuhiprint($id)
@@ -350,14 +350,14 @@ class UpjController extends Controller
             $data2->save();
         }
 
-        return redirect('adminmuhiprint')->with('toast_success', ' Data Berhasil di Ubah!');
+        return redirect('adminmuhiprint')->with('success', ' Data Berhasil di Ubah!');
     }
 
     public function deletemuhiprint($id)
     {
         $data2 = Printing::find($id);
         $data2->delete();
-        return redirect('adminmuhiprint')->with('toast_success', ' Data Berhasil di Hapus!');
+        return redirect('adminmuhiprint')->with('success', ' Data Berhasil di Hapus!');
     }
 
 
@@ -406,7 +406,7 @@ class UpjController extends Controller
             $data3->save();
         }
 
-        return redirect()->route('adminpegadaian')->with('toast_success', ' Data Berhasil di Tambahkan!');
+        return redirect()->route('adminpegadaian')->with('success', ' Data Berhasil di Tambahkan!');
     }
 
     public function editpegadaian($id)
@@ -434,14 +434,14 @@ class UpjController extends Controller
             $data3->save();
         }
 
-        return redirect('adminpegadaian')->with('toast_success', ' Data Berhasil di Ubah!');
+        return redirect('adminpegadaian')->with('success', ' Data Berhasil di Ubah!');
     }
 
     public function deletepegadaian($id)
     {
         $data3 = Pegadaian::find($id);
         $data3->delete();
-        return redirect('adminpegadaian')->with('toast_success', ' Data Berhasil di Hapus!');
+        return redirect('adminpegadaian')->with('success', ' Data Berhasil di Hapus!');
     }
 
 
@@ -489,7 +489,7 @@ class UpjController extends Controller
             $data4->save();
         }
 
-        return redirect()->route('adminsuryamart')->with('toast_success', ' Data Berhasil di Tambahkan!');
+        return redirect()->route('adminsuryamart')->with('success', ' Data Berhasil di Tambahkan!');
     }
 
     public function editsuryamart($id)
@@ -517,14 +517,14 @@ class UpjController extends Controller
             $data4->save();
         }
 
-        return redirect('adminsuryamart')->with('toast_success', ' Data Berhasil di Ubah!');
+        return redirect('adminsuryamart')->with('success', ' Data Berhasil di Ubah!');
     }
 
     public function deletesuryamart($id)
     {
         $data4 = Suryamart::find($id);
         $data4->delete();
-        return redirect('adminsuryamart')->with('toast_success', ' Data Berhasil di Hapus!');
+        return redirect('adminsuryamart')->with('success', ' Data Berhasil di Hapus!');
     }
 
 
@@ -574,7 +574,7 @@ class UpjController extends Controller
             $data5->save();
         }
 
-        return redirect()->route('adminedotel')->with('toast_success', ' Data Berhasil di Tambahkan!');
+        return redirect()->route('adminedotel')->with('success', ' Data Berhasil di Tambahkan!');
     }
 
     public function editedoel($id)
@@ -602,13 +602,13 @@ class UpjController extends Controller
             $data5->save();
         }
 
-        return redirect('adminedotel')->with('toast_success', ' Data Berhasil di Ubah!');
+        return redirect('adminedotel')->with('success', ' Data Berhasil di Ubah!');
     }
 
     public function deleteedotel($id)
     {
         $data5 = Edotel::find($id);
         $data5->delete();
-        return redirect('adminedotel')->with('toast_success', ' Data Berhasil di Hapus!');
+        return redirect('adminedotel')->with('success', ' Data Berhasil di Hapus!');
     }
 }

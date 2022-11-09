@@ -65,7 +65,7 @@ class UpjtekajeController extends Controller
     //         $data->save();
     //     }
 
-    //     return redirect()->route('tentangkami')->with('toast_success',' Data Berhasil di Tambahkan!');
+    //     return redirect()->route('tentangkami')->with('success',' Data Berhasil di Tambahkan!');
     // }
 
     public function edittentangkami($id){
@@ -91,14 +91,14 @@ class UpjtekajeController extends Controller
             $data->save();
         }
 
-        return redirect('tentangkami')->with('toast_success',' Data Berhasil di Ubah!');
+        return redirect('tentangkami')->with('success',' Data Berhasil di Ubah!');
 
     }
 
     public function deletetentangkami($id){
         $data = Upjtentangkami::find($id);
         $data->delete();
-        return redirect('tentangkami')->with('toast_error',' Data Berhasil di Hapus!');
+        return redirect('tentangkami')->with('success',' Data Berhasil di Hapus!');
     }
 
 
@@ -153,7 +153,7 @@ class UpjtekajeController extends Controller
             $data2->save();
         }
 
-        return redirect()->route('adminteam')->with('toast_success',' Data Berhasil di Tambahkan!');
+        return redirect()->route('adminteam')->with('success',' Data Berhasil di Tambahkan!');
     }
 
     public function editteam($id){
@@ -191,7 +191,7 @@ class UpjtekajeController extends Controller
             $data2->save();
         }
 
-        return redirect('adminteam')->with('toast_success',' Data Berhasil di Ubah!');
+        return redirect('adminteam')->with('success',' Data Berhasil di Ubah!');
 
     }
 
@@ -239,7 +239,7 @@ class UpjtekajeController extends Controller
         ]);
 
 
-        return redirect()->route('adminkeunggulan')->with('toast_success',' Data Berhasil di Tambahkan!');
+        return redirect()->route('adminkeunggulan')->with('success',' Data Berhasil di Tambahkan!');
     }
 
     public function editkeunggulan($id){
@@ -262,7 +262,7 @@ class UpjtekajeController extends Controller
             'icon' =>$request->icon,
             'keterangan' =>$request->keterangan,
         ]);
-        return redirect('adminkeunggulan')->with('toast_success',' Data Berhasil di Ubah!');
+        return redirect('adminkeunggulan')->with('success',' Data Berhasil di Ubah!');
 
     }
 
@@ -318,7 +318,7 @@ class UpjtekajeController extends Controller
             $data4->save();
         }
 
-        return redirect()->route('adminjasa')->with('toast_success',' Data Berhasil di Tambahkan!');
+        return redirect()->route('adminjasa')->with('success',' Data Berhasil di Tambahkan!');
     }
 
     public function editjasa($id){
@@ -340,7 +340,7 @@ class UpjtekajeController extends Controller
             $data4->foto_jasa = $request->file('foto_jasa')->getClientOriginalName();
             $data4->save();
         }
-        return redirect('adminjasa')->with('toast_success',' Data Berhasil di Ubah!');
+        return redirect('adminjasa')->with('success',' Data Berhasil di Ubah!');
 
     }
 
@@ -389,7 +389,7 @@ class UpjtekajeController extends Controller
             $data5->save();
         }
 
-        return redirect()->route('admingalery')->with('toast_success',' Data Berhasil di Tambahkan!');
+        return redirect()->route('admingalery')->with('success',' Data Berhasil di Tambahkan!');
     }
 
     public function editgalery($id){
@@ -412,7 +412,7 @@ class UpjtekajeController extends Controller
             $data5->save();
         }
 
-        return redirect('admingalery')->with('toast_success',' Data Berhasil di Ubah!');
+        return redirect('admingalery')->with('success',' Data Berhasil di Ubah!');
 
     }
 
@@ -454,7 +454,7 @@ class UpjtekajeController extends Controller
             $data6->save();
         }
 
-        return redirect('adminvisimisi')->with('toast_success',' Data Berhasil di Ubah!');
+        return redirect('adminvisimisi')->with('success',' Data Berhasil di Ubah!');
 
     }
 
@@ -502,7 +502,7 @@ class UpjtekajeController extends Controller
         //     $data7->save();
         // }
 
-        return redirect()->route('admintestimoni')->with('toast_success',' Data Berhasil di Tambahkan!');
+        return redirect()->route('admintestimoni')->with('success',' Data Berhasil di Tambahkan!');
     }
 
     public function edittestimoni($id){
@@ -525,7 +525,7 @@ class UpjtekajeController extends Controller
         //     $data7->save();
         // }
 
-        return redirect('admintestimoni')->with('toast_success',' Data Berhasil di Ubah!');
+        return redirect('admintestimoni')->with('success',' Data Berhasil di Ubah!');
 
     }
 
@@ -571,7 +571,7 @@ class UpjtekajeController extends Controller
         //     $data9->save();
         // }
 
-        return redirect()->route('adminupjfooterlink')->with('toast_success',' Data Berhasil di Tambahkan!');
+        return redirect()->route('adminupjfooterlink')->with('success',' Data Berhasil di Tambahkan!');
     }
 
     public function editupjfooterlink($id){
@@ -596,7 +596,7 @@ class UpjtekajeController extends Controller
         //     $data9->save();
         // }
 
-        return redirect('adminupjfooterlink')->with('toast_success',' Data Berhasil di Ubah!');
+        return redirect('adminupjfooterlink')->with('success',' Data Berhasil di Ubah!');
 
     }
 
@@ -643,7 +643,7 @@ class UpjtekajeController extends Controller
         //     $data8->save();
         // }
 
-        return redirect()->route('adminupjfooter')->with('toast_success',' Data Berhasil di Tambahkan!');
+        return redirect()->route('adminupjfooter')->with('success',' Data Berhasil di Tambahkan!');
     }
 
     public function editupjfooter($id){
@@ -673,7 +673,7 @@ class UpjtekajeController extends Controller
         //     $data8->save();
         // }
 
-        return redirect('adminupjfooter')->with('toast_success',' Data Berhasil di Ubah!');
+        return redirect('adminupjfooter')->with('success',' Data Berhasil di Ubah!');
 
     }
 
@@ -734,7 +734,7 @@ class UpjtekajeController extends Controller
             $data10->save();
         }
 
-        return redirect('adminupjslider')->with('toast_success',' Data Berhasil di Ubah!');
+        return redirect('adminupjslider')->with('success',' Data Berhasil di Ubah!');
 
     }
 

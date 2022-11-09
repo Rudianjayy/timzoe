@@ -65,89 +65,17 @@
             </div>
 
 
-            <section class="fl-page-title">
-                <div class="overlay"></div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="breadcrumbs">
-                                <ul>
-                                    <li><a href="index.html">PPDB</a></li>
-                                    <li>Daftar</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>  
-                </div>
-            </section>
-            <section class="tf-section login-page register-page">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-create-item-content">
-                                <div class="form-create-item">
-                                    <form action="/registeruser" method="post">
-                                        @csrf
-                                        <div class="sc-heading">
-                                            <h1>Buat Akun</h1>
-                                            <p class="desc">Klik masuk dibawah ini jika sudah punya akun!! </p>
-                                            <a href="/login">Masuk</a>
-                                        </div>
 
-                                        <div class="input-group" id="create-item-1">
-                                            <input name="name" value="" type="text" placeholder="Nama "
-                                                required="">
 
-                                        </div>
 
-                                        <div class="input-group" id="create-item-1">
-                                            <input name="email" value="" type="email"
-                                                placeholder="Masukkan Email">
-                                        </div>
-                                        @error('email')
-                                            <div>
-                                                <div class="alert alert-danger">{{ $message }}</div>
-                                            </div>
-                                        @enderror
 
-                                        <div class="input-group" id="create-item-1">
-                                            <input name="password" value="" type="password"
-                                                placeholder="Masukkan Sandi">
-                                        </div>
 
-                                        <div class="input-group" id="create-item-1">
-                                            <button name="submit" type="submit"
-                                                class="sc-button style letter style-2"><span>Daftar Sekarang</span>
-                                            </button>
-                                        </div>
-
-                                        <div class="other-login">
-                                            <div class="text">Atau</div>
-                                            <div class="widget-social">
-                                                <ul>
-                                                    <li><a href="#" class="active"><i
-                                                                class="fab fa-facebook-f"></i></a>
-                                                    </li>
-                                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                                    <li><a href="#"><i class="fab fa-google-plus-g"></i></a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        {{-- </form> --}}
-                                    </form>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+          
         </div>
     </form>
 
     @include('layout.validasi')
-    
+
     @include('sweetalert::alert')
 
     @include('layout.script')

@@ -16,6 +16,11 @@ class ProfiladminController extends Controller
         return view('profil.profiladmin', compact('d'));
     }
 
+    public function pa()
+    {
+        return view('pa.pa');
+    }
+
 
     // public function adminprofil()
     // {

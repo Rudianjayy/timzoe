@@ -37,6 +37,7 @@ use App\Models\Album;
 use App\Models\Mitra;
 use App\Models\Muhinews;
 use App\Models\Prestasi;
+use App\Http\Controllers\ProfiladminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -589,6 +590,7 @@ Route::get('/pendaftaran', [PpdbController::class, 'pendaftaran'])->name('pendaf
 
 //Profiladmin
 Route::get('/profiladmin',[ProfiladminController::class,'profiladmin'])->name('profiladmin');
+Route::get('/pa',[ProfiladminController::class,'pa'])->name('pa');
 
 Route::get('/adminprofil',[ProfiladminController::class, 'adminprofil'])->name('adminprofil');
 Route::get('/tambahprofiladmin',[ProfiladminController::class, 'tambahprofiladmin'])->name('tambahprofiladmin');

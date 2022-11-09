@@ -130,5 +130,15 @@ class WebSeeder extends Seeder
             'foto_bg' => 'bg2.jpeg',
             'link_yt' => 'https://www.youtube.com/watch?v=FTTBAw6R2EY',
         ]);
+
+        // PPDB
+        DB::table('deskripsipendaftarans')->insert([
+            'judul_slider' => 'Ayo Daftar sekarang!',
+            'deskripsi_slider' => 'Mulai tanggal 10-22 Januari terdapat diskon sebesar 50%',
+            'deskripsi_pendaftaran' => 'Dibawah ini merupakan beberapa cara pendaftaran untuk PPDB Online',
+            'deskripsi_kontak' => 'Silahkan hubungi kontak di bawah ini jika ada pertanyaan atau perlu bantuan',
+            
+        ]);
+
     }
 }

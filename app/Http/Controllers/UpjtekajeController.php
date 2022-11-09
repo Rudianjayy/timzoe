@@ -743,4 +743,5 @@ class UpjtekajeController extends Controller
         $data10->delete();
         return redirect('adminupjslider')->with('toast_error',' Data Berhasil di Hapus!');
     }
+    
 }

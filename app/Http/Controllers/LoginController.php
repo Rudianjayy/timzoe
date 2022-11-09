@@ -74,4 +74,7 @@ class LoginController extends Controller
         return redirect('login')->with('success', 'Anda berhasil logout!');
     }
 
+
+
+  
 }

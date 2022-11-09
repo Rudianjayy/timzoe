@@ -14,7 +14,7 @@
                 <span class="flaticon-user-12"></span>
             </a>
             <div class="dropdown-menu  position-absolute" aria-labelledby="userProfileDropdown">
-                <a class="dropdown-item" href="user_profile.html">
+                <a class="dropdown-item" href="/profiladmin">
                     <i class="mr-1 flaticon-user-6"></i> <span>My Profile</span>
                 </a>
                 <a class="dropdown-item" href="apps_scheduler.html">

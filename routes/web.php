@@ -585,6 +585,17 @@ Route::get('/pendaftaran', [PpdbController::class, 'pendaftaran'])->name('pendaf
 
 
 
+Route::get('/deskripsipendaftaran',[PpdbController::class, 'loby24'])->name('deskripsipendaftaran');
+Route::get('/editdeskripsipendaftaran/{id}',[PpdbController::class, 'editdeskripsipendaftaran'])->name('editdeskripsipendaftaran');
+Route::post('/submitedit24/{id}',[PpdbController::class, 'submitedit24'])->name('submitedit24');
+Route::get('/deletedeskripsipendaftaran/{id}',[PpdbController::class, 'deletedeskripsipendaftaran'])->name('deletedeskripsipendaftaran');
+
+
+
+
+
+
+
 
 
 //Profiladmin

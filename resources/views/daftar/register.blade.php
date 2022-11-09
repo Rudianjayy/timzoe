@@ -137,27 +137,12 @@
                                         {{-- </form> --}}
                                     </form>
                                 </div>
-                                <div class="form-background">
-                                    <img src="{{ asset('nopan2/assets/images/background/img-register.jpg') }}"
-                                        alt="">
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-
-
-
-
-            <div class="bottom">
-                <div class="container">
-                    <div class="bottom-inner">
-                        Copyright © 2022 SMK Muhammadiyah 1 Genteng. Supported by <a
-                            href="https://themeforest.net/user/themesflat/portfolio"> Team Zoe</a>
-                    </div>
-                </div>
-            </div>
         </div>
     </form>
 

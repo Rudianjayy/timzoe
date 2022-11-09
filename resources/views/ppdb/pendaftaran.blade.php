@@ -110,15 +110,17 @@
             <div class="d-table-cell">
                 <div class="container-fluid">
                     <div class="row align-items-center">
+                        @foreach ($dp as $dp )
                         <div class="col-lg-6">
                             <div class="banner-content">
-                                <h1>AYO DAFTAR SEKARANG!!</h1>
-                                <p>Mulai dari tanggal 10-22 Januari,
-                                    terdapat diskon 50%
+                                <h1>{{ $dp->judul_slider }}</h1>
+                                <p>
+                                    {{$dp->deskripsi_slider}}
                                 </p>
-
+                                
                             </div>
                         </div>
+                        @endforeach
                         <div class="col-lg-6">
                             <div class="banner-image">
                                 <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/mobile.png') }}" alt="image">
@@ -266,7 +268,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-features">
                         <div class="icon">
-                            <i class="fa fa-sun"></i>
+                            <i class="fa-solid fa-download"></i>
                         </div>
                         <h3>High Resolution</h3>
                         <p>Lorem ipsum dolor sit amet, con se ctetur adipiscing elit. In sagittis eg esta ante, sed
@@ -967,12 +969,13 @@
 
     <section id="daftar" class="faq-area ptb-100">
         <div class="container">
+            @foreach ($pd as $pd )
             <div class="section-title">
                 <h2>Cara Pendaftaran</h2>
                 <div class="bar"></div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidiunt labore et
-                    dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
+                <p>{!! $pd->deskripsi_pendaftaran !!}</p>
             </div>
+            @endforeach
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="faq-accordion-content">
@@ -1326,12 +1329,14 @@
 
     <section id="kontak" class="contact-area ptb-100">
         <div class="container">
+            @foreach ($kontak as $kontak )
+                
             <div class="section-title">
                 <h2>Kontak Kami</h2>
                 <div class="bar"></div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidiunt labore et
-                    dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
-            </div>
+                <p>{!! $kontak->deskripsi_kontak !!}</p>
+                </div>
+                @endforeach
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="contact-form">

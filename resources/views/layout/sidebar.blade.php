@@ -46,6 +46,9 @@
                         <a href="/profilsekolahadmin"> Profil Sekolah</a>
                     </li>
                     <li>
+                        <a href="/paa"> Profil </a>
+                    </li>
+                    <li>
                         <a href="/visimisiadmin"> Visi & Misi </a>
                     </li>
                     <li>
@@ -304,6 +307,25 @@
                         <a href="#">Profil Admin</a>
                     </li>
 
+                </ul>
+            </li>
+
+            <li class="menu-title">Form PPDB</li>
+
+            <li class="menu">
+                <a href="#tentangkami" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <div class="">
+                        <i class="flaticon-menu-list"></i>
+                        <span>Landing PPDB</span>
+                    </div>
+                    <div>
+                        <i class="flaticon-right-arrow"></i>
+                    </div>
+                </a>
+                <ul class="collapse submenu list-unstyled" id="tentangkami" data-parent="#accordionExample">
+                    <li>
+                        <a href="/deskripsipendaftaran"> Deskripsi Pendaftaran</a>
+                    </li>
                 </ul>
             </li>
 

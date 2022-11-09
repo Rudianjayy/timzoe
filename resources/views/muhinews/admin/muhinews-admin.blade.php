@@ -139,6 +139,8 @@
         <script src="{{ asset('style/assets/js/jquery.dataTables.min.js') }}"></script>
         <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap4.min.js"></script>
 
+
+    </body>
     <script>
         $('.delete').click(function() {
             var id = $(this).attr('data-id');
@@ -164,8 +166,6 @@
                 });
         });
     </script>
-
-    </body>
 
     {{-- @endpush --}}
 @endsection

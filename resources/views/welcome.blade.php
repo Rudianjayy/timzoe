@@ -83,6 +83,74 @@
                     </div>
                 </div>
             </div>
+            <div class="col-xl-3 mb-xl-0 col-lg-6 mb-4 col-md-6 col-sm-6">
+                <div class="widget-content-area  data-widgets br-4" style="margin-top: 10px;">
+                    <div class="widget  t-sales-widget">
+                        <div class="media">
+                            <div class="icon ml-2">
+                                <i class="flaticon-double-chat"></i>
+                            </div>
+                            <div class="media-body text-right">
+                                <p class="widget-text mb-0">Pendaftar</p>
+                                <p class="widget-numeric-value count"></p>
+                            </div>
+                        </div>
+                        <p class="widget-total-stats mt-2">94% New Sales</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 mb-xl-0 col-lg-6 mb-4 col-md-6 col-sm-6">
+                <div class="widget-content-area  data-widgets br-4" style="margin-top: 10px;">
+                    <div class="widget  t-order-widget">
+                        <div class="media">
+                            <div class="icon ml-2">
+                                <i class="flaticon-single-circle-tick"></i>
+                            </div>
+                            <div class="media-body text-right">
+                                <p class="widget-text mb-0">Siswa Diterima</p>
+                                <p class="widget-numeric-value count">{{ $mitra }}</p>
+                            </div>
+                        </div>
+                        <p class="widget-total-stats mt-2">552 New Orders</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 mb-sm-0 mb-4">
+                <div class="widget-content-area  data-widgets br-4" style="margin-top: 10px;">
+                    <div class="widget  t-customer-widget">
+                        <div class="media">
+                            <div class="icon ml-2">
+                                <i class="flaticon-circle-cross"></i>
+                            </div>
+                            <div class="media-body text-right">
+                                <p class="widget-text mb-0">Siswa Ditolak</p>
+                                <p class="widget-numeric-value count"></p>
+                            </div>
+                        </div>
+                        <p class="widget-total-stats mt-2">390 New Customers</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+
+                <div class="widget-content-area  data-widgets br-4" style="margin-top: 10px;">
+                    <div class="widget  t-income-widget">
+                        <div class="media">
+                            <div class="icon ml-2">
+                                <i class="flaticon-primary"></i>
+                            </div>
+                            <div class="media-body text-right">
+                                <p class="widget-text mb-0">Pengunjung</p>
+                                <p class="widget-numeric-value count"></p>
+                            </div>
+                        </div>
+                        <p class="widget-total-stats mt-2">$2.1 M This Week</p>
+                    </div>
+                </div>
+            </div>
 
         </div>
 
@@ -1262,9 +1330,9 @@
         </div> --}}
 
     </div>
-    @include('sweetalert::alert')
-
-    @include('layout.script')
 </body>
+@include('sweetalert::alert')
+
+@include('layout.script')
 
 @endsection

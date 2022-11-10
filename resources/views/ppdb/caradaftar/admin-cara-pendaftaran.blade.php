@@ -13,12 +13,12 @@
         <div class="container">
             <div class="page-header">
                 <div class="page-title">
-                    <h3>Muhinews</h3>
+                    <h3>Cara Pendaftaran</h3>
                     <div class="crumbs">
                         <ul id="breadcrumbs" class="breadcrumb">
                             <li><a href="index.html"><i class="flaticon-home-fill"></i></a></li>
-                            <li><a href="#">Muhinews</a></li>
-                            <li class="active"><a href="#">Muhinews</a></li>
+                            <li><a href="#">PPDB</a></li>
+                            <li class="active"><a href="#">Cara Pendaftaran</a></li>
                         </ul>
                     </div>
                 </div>
@@ -30,10 +30,10 @@
                         <div class="widget-header">
                             <div class="row">
                                 <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                    <h4>Muhinews </h4>
+                                    <h4>Form Cara Pendaftaran </h4>
                                 </div>
                                 <div>
-                                    <a href="/tambahmuhinews" class="btn btn-primary "
+                                    <a href="/tambahcarapendaftaran" class="btn btn-primary "
                                         id="kt_account_profile_details_submit" style="margin-left: 30px;">Tambah
                                         +</a>
                                 </div>
@@ -46,11 +46,8 @@
                                     <thead>
                                         <tr>
                                             <th scope="col">#</th>
-                                            <th scope="col">Foto</th>
-                                            <th scope="col">judul</th>
-                                            <th scope="col">Deskripsi</th>
-                                            <th scope="col">Deskripsi Detail</th>
-                                            <th scope="col">Dibuat</th>
+                                            <th scope="col">Cara daftar</th>
+                                            <th scope="col">Penjelasan</th>
                                             <th scope="col">Aksi</th>
                                         </tr>
                                     </thead>
@@ -59,27 +56,22 @@
                                         @php
                                             $no = 1;
                                         @endphp
-                                        @foreach ($data as $d)
+                                        @foreach ($data1 as $d)
                                             <tr>
                                                 <th>{{ $no++ }}</th>
-                                                <td>
-                                                    <img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt=""
-                                                        style="width: 50px;">
-                                                </td>
 
-                                                <td>{{ $d->judul }}</td>
-                                                <td>{{ $d->deskripsi_muhinews }}</td>
-                                                <td>
+                                                <td>{{ $d->deskripsi }}</td>
+                                                <td>{{ $d->deskripsi_detail }}</td>
+                                                {{-- <td>
                                                     <a href="/detailmuhinews/{{ $d->id }}"
                                                         class="btn btn-success">Detail</a>
-                                                </td>
-                                                <td>{{ $d->created_at }}</td>
+                                                </td> --}}
 
                                                 {{-- <td>{{ $d->created_at->format('D M Y') }}</td> --}}
                                                 <td class="align-center">
                                                     <ul class="table-controls">
                                                         <li>
-                                                            <a href="/editmuhinews/{{ $d->id }}"
+                                                            <a href="/editcarapendaftaran/{{ $d->id }}"
                                                                 data-toggle="tooltip" data-placement="top" title="Edit">
                                                                 <i class="flaticon-edit"></i>
                                                             </a>
@@ -105,49 +97,39 @@
             </div>
         </div>
 
-
-
-
-
-
-        @include('sweetalert::alert')
         @include('layout.script')
 
 
-
-
-
     </body>
-    <script>
-        $('.delete').click(function() {
-            var id = $(this).attr('data-id');
-            var nama = $(this).attr('data-nama');
+
+        <script>
+            $('.delete').click(function() {
+                var id = $(this).attr('data-id');
+                var nama = $(this).attr('data-nama');
 
 
-            swal({
-                    title: "Apa kamu yakin ingin menghapus data ini?",
-                    text: "Kamu akan menghapus data dengan nama " + nama + "! ",
-                    icon: "warning",
-                    buttons: true,
-                    dangerMode: true,
-                })
-                .then((willDelete) => {
-                    if (willDelete) {
-                        window.location = "/deletemuhinews/" + id + ""
-                         swal("Data berhasil dihapus!", {
-                           icon: "success",
-                         });
-                    } else {
-                        swal("Data tidak jadi dihapus!");
-                    }
-                });
-        });
-    </script>
-    <script>
-        @if (Session::has('success'))
-            toastr.success("{{ Session::get('success') }}")
-        @endif
-    </script>
-
-    {{-- @endpush --}}
+                swal({
+                        title: "Apa kamu yakin ingin menghapus data ini?",
+                        text: "Kamu akan menghapus data dengan album  " + nama + "! ",
+                        icon: "warning",
+                        buttons: true,
+                        dangerMode: true,
+                    })
+                    .then((willDelete) => {
+                        if (willDelete) {
+                            window.location = "/deletecarapendaftaran/" + id + ""
+                             swal("Data berhasil dihapus!", {
+                               icon: "success",
+                             });
+                        } else {
+                            swal("Data tidak jadi dihapus!");
+                        }
+                    });
+            });
+        </script>
+        <script>
+            @if (Session::has('success'))
+                toastr.success("{{ Session::get('success') }}")
+            @endif
+        </script>
 @endsection

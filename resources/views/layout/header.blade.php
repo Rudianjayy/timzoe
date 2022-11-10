@@ -4,7 +4,7 @@
 
     <div>
         <p class="info">
-            <a href="#" class="d-block" style="color: black; align-items:center; display:flex;">Hai {{ Auth::user()->name }}..!!</a>
+           <h6> <a href="#" class="d-block" style="color: rgb(226, 10, 10); align-items:center; display:flex; margin-top:12px;">Halo {{ Auth::user()->name }} :)</a></h6>
         </p>
     </div>
 
@@ -27,17 +27,17 @@
                     <i class="mr-1 flaticon-lock-2"></i> <span>Lock Screen</span>
                 </a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="/logout">
+                <a class="dropdown-item" href="/logout"  onclick="return confirm('Anda yakin ingin logout?')">
                     <i class="flaticon-logout"></i> <span>Log Out</span>
                 </a>
             </div>
         </li>
 
-        <li class="nav-item dropdown cs-toggle order-lg-0 order-3">
+        {{-- <li class="nav-item dropdown cs-toggle order-lg-0 order-3">
             <a href="#" class="nav-link toggle-control-sidebar suffle">
                 <span class="flaticon-menu-dot-fill d-lg-inline-block d-none"></span>
                 <span class="flaticon-dots d-lg-none"></span>
             </a>
-        </li>
+        </li> --}}
     </ul>
 </header>

@@ -330,6 +330,11 @@
                         <a href="/deskripsipendaftaran"> Deskripsi Pendaftaran</a>
                     </li>
                 </ul>
+                <ul class="collapse submenu list-unstyled" id="tentangkami" data-parent="#accordionExample">
+                    <li>
+                        <a href="/admincarapendaftaran"> Cara Pendaftaran</a>
+                    </li>
+                </ul>
             </li>
 
 

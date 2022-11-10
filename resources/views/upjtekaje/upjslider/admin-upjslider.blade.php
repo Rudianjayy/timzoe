@@ -116,7 +116,34 @@
 
 
         @include('layout.script')
+
     </body>
+
+    <script>
+        $('.delete').click(function() {
+            var id = $(this).attr('data-id');
+            var nama = $(this).attr('data-nama');
+
+
+            swal({
+                    title: "Apa kamu yakin ingin menghapus data ini?",
+                    text: "Kamu akan menghapus data dengan nama " + nama + "! ",
+                    icon: "warning",
+                    buttons: true,
+                    dangerMode: true,
+                })
+                .then((willDelete) => {
+                    if (willDelete) {
+                        window.location = "/deleteupjslider/" + id + ""
+                        //  swal("Data berhasil dihapus!", {
+                        //    icon: "success",
+                        //  });
+                    } else {
+                        swal("Data tidak jadi dihapus!");
+                    }
+                });
+        });
+    </script>
     <script>
         @if (Session::has('success'))
             toastr.success("{{ Session::get('success') }}")

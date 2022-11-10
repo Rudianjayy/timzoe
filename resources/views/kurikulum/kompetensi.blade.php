@@ -101,13 +101,13 @@
                                                         $foto = App\Models\Jurusan::where('personaljurusans_id',$khj->id)->first();
                                                     @endphp
                                                     <a href="/indexjurusan/{{ $khj->id }}">
-                                                     @if ($foto != null)
-                                                        <img src="{{ asset('fotojurusan/'. $foto->foto) }}"
+                                                        @if ($foto != null)
+                                                            <img src="{{ asset('fotojurusan/'. $foto->foto) }}"
+                                                                class="img-fluid" alt="">
+                                                        @else
+                                                            <img src="{{ asset('fotomahasiswa/album1.jpg') }}"
                                                             class="img-fluid" alt="">
-                                                    @else
-                                                        <img src="{{ asset('fotomahasiswa/album1.jpg') }}"
-                                                        class="img-fluid" alt="">
-                                                    @endif
+                                                        @endif
                                                     </a>
                                                 </div>
                                             </div>

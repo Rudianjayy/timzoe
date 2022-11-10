@@ -16,7 +16,7 @@
 
         <ul class="list-unstyled menu-categories" id="accordionExample">
             <li class="menu">
-                <a href="/welcome"  aria-expanded="true" class="dropdown-toggle">
+                <a href="/welcome" aria-expanded="true" class="dropdown-toggle">
                     <div class="">
                         <i class="flaticon-home-line"></i>
                         <span>Beranda</span>
@@ -29,62 +29,63 @@
 
                 </ul> --}}
             </li>
-            <li class="menu-title">Menu</li>
+            @if (auth()->user()->role == 'admin')
+                <li class="menu-title">Menu</li>
+                <li class="menu">
+                    <a href="#tentangkami" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <div class="">
+                            <i class="flaticon-menu-list"></i>
+                            <span>Tentang Kami</span>
+                        </div>
+                        <div>
+                            <i class="flaticon-right-arrow"></i>
+                        </div>
+                    </a>
+                    <ul class="collapse submenu list-unstyled" id="tentangkami" data-parent="#accordionExample">
+                        <li>
+                            <a href="/profilsekolahadmin"> Profil Sekolah</a>
+                        </li>
+                        <li>
+                            <a href="/visimisiadmin"> Visi & Misi </a>
+                        </li>
+                        <li>
+                            <a href="/identitas_admin"> Identitas Sekolah </a>
+                        </li>
+                        <li>
+                            <a href="/fasilitasadmin"> Fasilitas Sekolah </a>
+                        </li>
+                    </ul>
+                </li>
+            @endif
 
-            <li class="menu">
-                <a href="#tentangkami" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                    <div class="">
-                        <i class="flaticon-menu-list"></i>
-                        <span>Tentang Kami</span>
-                    </div>
-                    <div>
-                        <i class="flaticon-right-arrow"></i>
-                    </div>
-                </a>
-                <ul class="collapse submenu list-unstyled" id="tentangkami" data-parent="#accordionExample">
-                    <li>
-                        <a href="/profilsekolahadmin"> Profil Sekolah</a>
-                    </li>
-                    <li>
-                        <a href="/paa"> Profil </a>
-                    </li>
-                    <li>
-                        <a href="/visimisiadmin"> Visi & Misi </a>
-                    </li>
-                    <li>
-                        <a href="/identitas_admin"> Identitas Sekolah </a>
-                    </li>
-                    <li>
-                        <a href="/fasilitasadmin"> Fasilitas Sekolah </a>
-                    </li>
-                </ul>
-            </li>
-
-            <li class="menu">
-                <a href="#kurikulum" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                    <div class="">
-                        <i class="flaticon-chat-line-1"></i>
-                        <span>Kurikulum</span>
-                    </div>
-                    <div>
-                        <i class="flaticon-right-arrow"></i>
-                    </div>
-                </a>
-                <ul class="collapse submenu list-unstyled" id="kurikulum" data-parent="#accordionExample">
-                    <li>
-                        <a href="/datajurusan">Kompetensi Keahlian</a>
-                    </li>
-                    <li>
-                        <a href="/jadwalkegiatanadmin">Jadwal Kegiatan </a>
-                    </li>
-                    <li>
-                        <a href="/kalenderakademikadmin">Kalender Akademik</a>
-                    </li>
-                    <li>
-                        <a href="/adminkelulusan"> Surat Kelulusan </a>
-                    </li>
-                </ul>
-            </li>
+            @if (auth()->user()->role == 'admin')
+                <li class="menu">
+                    <a href="#kurikulum" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <div class="">
+                            <i class="flaticon-chat-line-1"></i>
+                            <span>Kurikulum</span>
+                        </div>
+                        <div>
+                            <i class="flaticon-right-arrow"></i>
+                        </div>
+                    </a>
+                    <ul class="collapse submenu list-unstyled" id="kurikulum" data-parent="#accordionExample">
+                        <li>
+                            <a href="/datajurusan">Kompetensi Keahlian</a>
+                        </li>
+                        <li>
+                            <a href="/jadwalkegiatanadmin">Jadwal Kegiatan </a>
+                        </li>
+                        <li>
+                            <a href="/kalenderakademikadmin">Kalender Akademik</a>
+                        </li>
+                        <li>
+                            <a href="/adminkelulusan"> Surat Kelulusan </a>
+                        </li>
+                    </ul>
+                </li>
+            @endif
+            @if (auth()->user()->role == 'admin')
             <li class="menu">
                 <a href="#kesiswaan" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <div class="">
@@ -110,6 +111,8 @@
                     </li>
                 </ul>
             </li>
+            @endif
+            @if (auth()->user()->role == 'admin')
             <li class="menu">
                 <a href="#iduka" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <div class="">
@@ -128,6 +131,9 @@
                         <a href="/mouadmin">Foto Mou</a>
                     </li>
                 </ul>
+            </li>
+            @endif
+            @if (auth()->user()->role == 'admin')
             <li class="menu">
                 <a href="#muhinews" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <div class="">
@@ -148,6 +154,8 @@
 
                 </ul>
             </li>
+            @endif
+            @if (auth()->user()->role == 'admin') 
             <li class="menu">
                 <a href="#upj" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <div class="">
@@ -182,6 +190,8 @@
                     </li>
                 </ul>
             </li>
+            @endif
+            @if (auth()->user()->role == 'admin')
             <li class="menu-title">UPJ TEKAJE</li>
             <li class="menu">
                 <a href="#upjtekaje" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
@@ -225,8 +235,9 @@
                         <a href="/adminupjslider">UPJ Slider</a>
                     </li>
                 </ul>
-
             </li>
+            @endif
+            @if (auth()->user()->role == 'admin')  
             <li class="menu-title mb-2">Mitra</li>
             <li>
                 <a href="/adminmitra" class="waves-effect">
@@ -236,6 +247,8 @@
                     </div>
                 </a>
             </li>
+            @endif
+            @if (auth()->user()->role == 'admin') 
             <li class="menu-title mb-2">Management Beranda</li>
             <li>
                 <a href="/data-album" class="waves-effect">
@@ -255,7 +268,7 @@
             </li>
             <li>
                 <a href="/sambutanadmin" class="waves-effect">
-                    <div class=""  style="font-size:16px; padding:6px; margin-bottom:8px; color:#4f5163;">
+                    <div class="" style="font-size:16px; padding:6px; margin-bottom:8px; color:#4f5163;">
                         <i class="flaticon-3d-cube"></i>
                         <span style="margin-left: 15px; color:#4f5163;">Sambutan Kepsek</span>
                     </div>
@@ -286,63 +299,12 @@
                     <li>
                         <a href="/adminfooteerdua">Footer Link </a>
                     </li>
-
+                    
                 </ul>
             </li>
-
-
-            <li class="menu-title"></li>
-            <li class="menu">
-                <a href="#profiladmin" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                    <div class="">
-                        <i class="flaticon-user-5"></i>
-                        <span>Profil Admin</span>
-                    </div>
-                    <div>
-                        <i class="flaticon-right-arrow"></i>
-                    </div>
-                </a>
-                <ul class="collapse submenu list-unstyled" id="profiladmin" data-parent="#accordionExample">
-                    <li>
-                        <a href="/profiladmin">Profil Admin</a>
-                    </li>
-                    <li>
-                        <a href="/pa">PA</a>
-                    </li>
-
-                </ul>
-            </li>
-
-            <li class="menu-title">Form PPDB</li>
-
-            <li class="menu">
-                <a href="#tentangkami" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                    <div class="">
-                        <i class="flaticon-menu-list"></i>
-                        <span>Landing PPDB</span>
-                    </div>
-                    <div>
-                        <i class="flaticon-right-arrow"></i>
-                    </div>
-                </a>
-                <ul class="collapse submenu list-unstyled" id="tentangkami" data-parent="#accordionExample">
-                    <li>
-                        <a href="/deskripsipendaftaran"> Deskripsi Pendaftaran</a>
-                    </li>
-                </ul>
-                <ul class="collapse submenu list-unstyled" id="tentangkami" data-parent="#accordionExample">
-                    <li>
-                        <a href="/admincarapendaftaran"> Cara Pendaftaran</a>
-                    </li>
-                </ul>
-            </li>
-
-
+            @endif
+            
         </ul>
-    </nav>
-
-        </ul>
-
-
     </nav>
 </div>
+

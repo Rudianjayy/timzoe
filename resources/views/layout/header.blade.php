@@ -15,7 +15,7 @@
             </a>
             <div class="dropdown-menu  position-absolute" aria-labelledby="userProfileDropdown">
                 <a class="dropdown-item" href="/profiladmin">
-                    <i class="mr-1 flaticon-user-6"></i> <span>My Profile</span>
+                    <i class="mr-1 flaticon-user-6"></i> <span>Profil</span>
                 </a>
                 <a class="dropdown-item" href="apps_scheduler.html">
                     <i class="mr-1 flaticon-calendar-bold"></i> <span>My Schedule</span>

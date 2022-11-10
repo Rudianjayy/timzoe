@@ -117,6 +117,10 @@
 
 
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> 42c8731b1d8eac8f986959af1037135d072ae698
     </body>
     <script>
         $('.delete').click(function() {

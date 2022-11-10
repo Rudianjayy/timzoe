@@ -64,6 +64,17 @@ Route::post('/registeruser', [LoginController::class, 'registeruser'])->name('re
 Route::get('/login', [LoginController::class, 'login'])->name('login')->middleware('guest');
 Route::post('/loginproses', [LoginController::class, 'loginproses'])->name('loginproses');
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+Route::get('/deskripsipendaftaran',[PpdbController::class, 'loby24'])->name('deskripsipendaftaran');
+Route::get('/editdeskripsipendaftaran/{id}',[PpdbController::class, 'editdeskripsipendaftaran'])->name('editdeskripsipendaftaran');
+Route::post('/submitedit24/{id}',[PpdbController::class, 'submitedit24'])->name('submitedit24');
+Route::get('/deletedeskripsipendaftaran/{id}',[PpdbController::class, 'deletedeskripsipendaftaran'])->name('deletedeskripsipendaftaran');
+
+
+
+
+
+
+
 
 
 //crud yang bisa diakses oleh admin, user tidak bisa

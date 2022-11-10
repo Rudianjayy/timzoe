@@ -36,16 +36,36 @@
                     class="theme-logo" style="width: 80px;">
             </div>
 
-            <div class="col-md-12">
-                <label for="inputEmail" class="" style="color: black">Login</label>
-                <input type="email" name="email" id="inputEmail" class="form-control mb-4" placeholder="Login" value="{{ Session::get('email') }}">
+            <div class="col-md-12 mt-2">
+
+                <div class="mb-3">
+                    <label for="inputEmail" class="" style="color: black">Login</label>
+                    <input type="email" name="email" id="inputEmail" class="form-control mb-2" placeholder="Login">
+                    @error('email')
+                        <div class="alert alert-danger">
+                            {{ $message }}
+                        </div>
+                    @enderror
+                </div>
 
 
-                <label for="inputPassword" class="" style="color: black">Password</label>
-                <input type="password" name="password" id="password" class="form-control mb-5" placeholder="Password" value="{{ Session::get('password') }}">
+                <div class="mb-3 mt-3">
+                    <label for="inputPassword" class="" style="color: black">Password</label>
+                    <input type="password" name="password" id="password" class="form-control mb-2"
+                        placeholder="Password">
+                    @error('password')
+                        <div class="alert alert-danger">
+                            {{ $message }}
+                        </div>
+                    @enderror
+                    @if (Session::has('password'))
+                        <div>
+                            <div class="alert alert-danger">Sandi salah</div>
+                        </div>
+                    @endif
+                </div>
 
-                
-                <div class="checkbox d-flex justify-content-between mb-4 mt-3">
+                <div class="checkbox d-flex justify-content-between mb-4 mt-5">
                     {{-- <div class="custom-control custom-checkbox mr-3">
                         <input type="checkbox" class="custom-control-input" id="customCheck1" value="remember-me">
                         <label class="custom-control-label" for="customCheck1">Remember</label>
@@ -64,7 +84,7 @@
             </div>
 
             <div class="col-md-12 mb-0 text-center social-icons">
-                <h5 class="mt-4 mb-4">or</h5>
+                <h5 class="mt-4 mb-4">atau</h5>
                 <button class="btn btn-outline-secondary rounded-circle btn-rounded mb-4 mr-2"><i
                         class="flaticon-facebook-logo flaticon-circle-p"></i></button>
                 <button class="btn btn-outline-secondary rounded-circle btn-rounded mb-4 mr-2"><i
@@ -75,7 +95,7 @@
         </div>
     </form>
 
-    @include('layout.validasi')
+    {{-- @include('layout.validasi') --}}
 
     @include('sweetalert::alert')
 

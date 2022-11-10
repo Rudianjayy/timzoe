@@ -67,6 +67,15 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 
 
+Route::get('/admincarapendaftaran',[PpdbController::class, 'loby25'])->name('admincarapendaftaran');
+Route::get('/tambahcarapendaftaran',[PpdbController::class, 'tambahcarapendaftaran'])->name('tambahcarapendaftaran');
+Route::post('/submitdata25',[PpdbController::class, 'submitdata25'])->name('submitdata25');
+Route::get('/editcarapendaftaran/{id}',[PpdbController::class, 'editcarapendaftaran'])->name('editcarapendaftaran');
+Route::post('/submitedit25/{id}',[PpdbController::class, 'submitedit25'])->name('submitedit25');
+Route::get('/deletecarapendaftaran/{id}',[PpdbController::class, 'deletecarapendaftaran'])->name('deletecarapendaftaran');
+
+
+
 
 
 

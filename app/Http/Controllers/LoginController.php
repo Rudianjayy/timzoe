@@ -17,15 +17,9 @@ class LoginController extends Controller
     }
 
     public function loginproses(Request $request){
-        Session::flash('email', $request->email);
-        Session::flash('password', $request->password);
         $this->validate($request,[
             'email' =>'required|exists:users,email',
             'password' =>'required',
-        ],[
-            'email.required' =>'Harus diisi',
-            'email.exists' =>'Email salah',
-            'password.required' =>'Harus diisi',
         ]);
         if(Auth::attempt($request->only('email','password'))){
             return redirect('/welcome')->with('success','Login Berhasil!');
@@ -42,15 +36,10 @@ class LoginController extends Controller
     }
 
     public function registeruser(Request $request){
-
-        Session::flash('name', $request->name);
-        Session::flash('email', $request->email);
-        Session::flash('password', $request->password);
-
         $this->validate($request,[
-            'name' =>'required|unique:users,name',
+            'name' =>'required|max:150',
             'email' =>'required|unique:users,email',
-            'password' =>'required',
+            'password' =>'required|min:5|max:50',
         ],[
             'name.required' =>'Nama harus diisi',
             'name.unique' =>' Nama sudah dipakai',

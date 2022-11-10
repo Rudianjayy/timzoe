@@ -25,7 +25,7 @@ h5 { font-size: 0.875rem; }
     margin: auto;
 }
 .form-register label {
-    color: #888ea8;
+    color: #000000;
     text-transform: uppercase;
     font-size: 13px;
 }
@@ -37,7 +37,7 @@ h5 { font-size: 0.875rem; }
     font-size: 16px;
     border: none;
     background: transparent;
-    border-bottom: 1px solid #e9ecef;
+    border-bottom: 1px solid #b0b2b4;
 }
 .form-register .form-control::-webkit-input-placeholder {
     color: #3862f5;

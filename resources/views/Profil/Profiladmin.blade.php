@@ -32,40 +32,24 @@
 
                         <!-- Profile Header -->
                         <div class="col-sm-12">
-                            <div id="profile-header" class="" style="background: #fff url({{ asset('admintemp/adminnew/riski/nopan/assets/img/header.jpg') }}) no-repeat center center;background-size: cover;">
+                            @foreach ($fotoprofil as $fotoprofil )
+                            <div id="profile-header" class="" style="background: #fff url({{ asset('fotoprofil/' . $fotoprofil->foto_bg) }}) no-repeat center center;background-size: cover;">
                                 <div class="row">
                                     <div class=" profile-section col-md-12">
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="media ml-sm-5 ml-1">
-                                                    <img class="mr-sm-3 mr-2 usr-img" src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/user-profile.jpg') }}" alt="usr-img">
+                                                    <img class="mr-sm-3 mr-2 usr-img" src="{{ asset('fotoprofil/' . $fotoprofil->foto) }}" alt="usr-img">
                                                     <div class="media-body">
                                                         <h5 class="usr-name">{{ Auth::user()->name }}</h5>
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="social-contacts">
-                                                    <ul class="list-inline justify-content-around d-flex">
-                                                        <li class="list-inline-item">
-                                                            <span class="s-m-name">Tweets</span>
-                                                            <span class="s-m-count">15.1K</span>
-                                                        </li>
-                                                        <li class="list-inline-item">
-                                                            <span class="s-m-name">Following</span>
-                                                            <span class="s-m-count">902</span>
-                                                        </li>
-                                                        <li class="list-inline-item">
-                                                            <span class="s-m-name">Followers</span>
-                                                            <span class="s-m-count">787</span>
-                                                        </li>
-                                                    </ul>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            @endforeach
                         </div>
                         <!-- /Profile Header -->
 
@@ -73,9 +57,9 @@
                         <div class="col-sm-12">
                             <div class="nav-tab-section">
                                 <div class="row">
-                                    <div class="col-xl-3 col-lg-3 col-md-2 col-sm-4 col-12 ml-auto usr-loc-join text-sm-left text-center">
-                                        <h4>Los Angeles, CA</h4>
-                                    </div>
+                                        <div class="col-xl-3 col-lg-3 col-md-2 col-sm-4 col-12 ml-auto usr-loc-join text-sm-left text-center">
+                                            <h4>Los Angeles, CA</h4>
+                                        </div>
                                     <div class="col-xl-7 col-lg-6 col-md-7 col-sm-8 col-12">
                                         <ul class="nav nav-pills justify-content-xl-end justify-content-lg-start justify-content-md-start justify-content-sm-start justify-content-center mt-2" id="pills-tab1" role="tablist">
                                             <li class="nav-item">
@@ -108,7 +92,7 @@
                                                 <p class="mb-3">Nama :<span class="usr-work-position">{{ Auth::user()->name }}</span></p>
                                                 <p class="mb-3">Alamat :<span class="usr-work-position">{{ Auth::user()->alamat }}</span></p>
                                                 <p class="mb-3">No Telpon :<span class="usr-work-position">{{ Auth::user()->notelpon }}</span></p>
-                                              
+
 
                                             </div>
                                         </div>
@@ -131,7 +115,7 @@
                                                 <div class="col-sm-12">
                                                     <div class="card post-editor mb-4" style="">
                                                         <div class="card-body p-0">
-                                                            <ul class="nav nav-pills mb-3" id="pills-tab2" role="tablist">
+                                                            {{--  <ul class="nav nav-pills mb-3" id="pills-tab2" role="tablist">
                                                                 <li class="nav-item text-sm-left text-center">
                                                                     <a class="nav-link active" id="pills-status-tab" data-toggle="pill" href="#pills-status" role="tab" aria-selected="true"><i class="flaticon-copy-line"></i> Status</a>
                                                                 </li>
@@ -141,8 +125,8 @@
                                                                 <li class="nav-item text-sm-left text-center">
                                                                     <a class="nav-link" id="pills-blog-post-tab" data-toggle="pill" href="#pills-blog-post" role="tab" aria-selected="false"><i class="flaticon-edit-6"></i> Post</a>
                                                                 </li>
-                                                            </ul>
-                                                            <div class="tab-content" id="pills-tabContent2">
+                                                            </ul>  --}}
+                                                            {{--  <div class="tab-content" id="pills-tabContent2">
 
                                                                 <div class="tab-pane fade show active" id="pills-status" role="tabpanel" aria-labelledby="pills-status-tab">
                                                                     <form>
@@ -182,9 +166,9 @@
                                                                         </div>
                                                                     </form>
                                                                 </div>
-                                                            </div>
+                                                            </div>  --}}
 
-                                                            <div class="editor-bottom-section">
+                                                            {{--  <div class="editor-bottom-section">
                                                                 <div class="row">
                                                                     <div class="col-sm-6 col-12">
                                                                         <ul class="list-inline editor-options">
@@ -218,7 +202,7 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                            </div>
+                                                            </div>  --}}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -253,5 +237,10 @@
     <!--  END CUSTOM SCRIPTS FILE  -->
 </body>
 @include('layout.script')
+<script>
+    @if (Session::has('success'))
+        toastr.success("{{ Session::get('success') }}")
+    @endif
+</script>
 
 @endsection

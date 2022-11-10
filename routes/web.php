@@ -53,8 +53,7 @@ Route::get('/authors', [LandingController::class, 'authors'])->name('authors');
 
 
 
-//ppdb
-Route::get('/pendaftaran', [PpdbController::class, 'pendaftaran'])->name('pendaftaran');
+
 
 
 
@@ -64,10 +63,7 @@ Route::post('/registeruser', [LoginController::class, 'registeruser'])->name('re
 Route::get('/login', [LoginController::class, 'login'])->name('login')->middleware('guest');
 Route::post('/loginproses', [LoginController::class, 'loginproses'])->name('loginproses');
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
-Route::get('/deskripsipendaftaran',[PpdbController::class, 'loby24'])->name('deskripsipendaftaran');
-Route::get('/editdeskripsipendaftaran/{id}',[PpdbController::class, 'editdeskripsipendaftaran'])->name('editdeskripsipendaftaran');
-Route::post('/submitedit24/{id}',[PpdbController::class, 'submitedit24'])->name('submitedit24');
-Route::get('/deletedeskripsipendaftaran/{id}',[PpdbController::class, 'deletedeskripsipendaftaran'])->name('deletedeskripsipendaftaran');
+
 
 
 
@@ -539,11 +535,13 @@ Route::post('/updateprofiladmin', [ProfiladminController::class, 'updateprofilad
 
 
 
-//index yang bisa diakses user dan admin
+//ppdb
 Route::group(['middleware' => ['auth', 'hakakses:admin,user']], function () {
 
+    //landing ppdb
+    Route::get('/pendaftaran', [PpdbController::class, 'pendaftaran'])->name('pendaftaran');
+    Route::get('/deskripsipendaftaran', [PpdbController::class, 'loby24'])->name('deskripsipendaftaran');
+    Route::get('/editdeskripsipendaftaran/{id}', [PpdbController::class, 'editdeskripsipendaftaran'])->name('editdeskripsipendaftaran');
+    Route::post('/submitedit24/{id}', [PpdbController::class, 'submitedit24'])->name('submitedit24');
+    Route::get('/deletedeskripsipendaftaran/{id}', [PpdbController::class, 'deletedeskripsipendaftaran'])->name('deletedeskripsipendaftaran');
 });
-
-
-
-

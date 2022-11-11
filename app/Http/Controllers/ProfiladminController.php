@@ -16,7 +16,8 @@ class ProfiladminController extends Controller
         $fotobg = User::all();
         $data = User::all();
         $fotoprofil = User::all();
-        return view('Profil.Profiladmin', compact('data','fotoprofil','fotobg'));
+        $alamat = User::all();
+        return view('Profil.Profiladmin', compact('data','fotoprofil','fotobg','alamat'));
     }
     public function editprofiladmin(request $request){
         $fotoprofil = User::all();
@@ -28,8 +29,8 @@ class ProfiladminController extends Controller
         $data = User::find(Auth::user()->id);
         $data->update([
             'name' => $request->name,
-            'alamat' => '-',
-            'notelpon' => '-',
+            'alamat' => $request->alamat,
+            'notelpon' => $request->notelpon,
             //  'foto' => null,
             // 'foto_bg' => null,
         ]);

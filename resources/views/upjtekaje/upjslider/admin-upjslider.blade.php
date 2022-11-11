@@ -92,10 +92,12 @@
                                                             </a>
                                                         </li>
                                                             <li>
-                                                            <a href="/deleteupjslider/{{ $d10->id }}" data-toggle="tooltip"
-                                                                    data-placement="top" title="Delete">
-                                                                    <i class="flaticon-delete-5"></i>
-                                                                </a>
+                                                                <a href="#" class="delete fire"
+                                                                data-id="{{ $d10->id }}"
+                                                                data-nama="{{ $d10->judul }}" data-toggle="tooltip"
+                                                                data-placement="top" title="Delete">
+                                                                <i class="flaticon-delete-5"></i>
+                                                            </a>
                                                             </li>
                                                     </ul>
                                                 </td>
@@ -117,38 +119,39 @@
 
         @include('layout.script')
 
+
     </body>
 
-    <script>
-        $('.delete').click(function() {
-            var id = $(this).attr('data-id');
-            var nama = $(this).attr('data-nama');
+        <script>
+            $('.delete').click(function() {
+                var id = $(this).attr('data-id');
+                var nama = $(this).attr('data-nama');
 
 
-            swal({
-                    title: "Apa kamu yakin ingin menghapus data ini?",
-                    text: "Kamu akan menghapus data dengan nama " + nama + "! ",
-                    icon: "warning",
-                    buttons: true,
-                    dangerMode: true,
-                })
-                .then((willDelete) => {
-                    if (willDelete) {
-                        window.location = "/deleteupjslider/" + id + ""
-                        //  swal("Data berhasil dihapus!", {
-                        //    icon: "success",
-                        //  });
-                    } else {
-                        swal("Data tidak jadi dihapus!");
-                    }
-                });
-        });
-    </script>
-    <script>
-        @if (Session::has('success'))
-            toastr.success("{{ Session::get('success') }}")
-        @endif
-    </script>
+                swal({
+                        title: "Apa kamu yakin ingin menghapus data ini?",
+                        text: "Kamu akan menghapus data dengan album  " + nama + "! ",
+                        icon: "warning",
+                        buttons: true,
+                        dangerMode: true,
+                    })
+                    .then((willDelete) => {
+                        if (willDelete) {
+                            window.location = "/deleteupjslider/" + id + ""
+                             swal("Data berhasil dihapus!", {
+                               icon: "success",
+                             });
+                        } else {
+                            swal("Data tidak jadi dihapus!");
+                        }
+                    });
+            });
+        </script>
+        <script>
+            @if (Session::has('success'))
+                toastr.success("{{ Session::get('success') }}")
+            @endif
+        </script>
 
-    {{-- @endpush --}}
+
 @endsection

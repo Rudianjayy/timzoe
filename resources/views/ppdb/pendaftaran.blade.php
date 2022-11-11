@@ -75,8 +75,8 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#screenshots" class="nav-link">
-                            Screenshots
+                        <a href="#biaya" class="nav-link">
+                            Biaya & Jadwal
                         </a>
                     </li>
                     <li class="nav-item">
@@ -681,7 +681,7 @@
     </section>
 
 
-    <section class="pricing-area pt-100 pb-70">
+    <section id="biaya" class="pricing-area pt-100 pb-70">
         <div class="container">
             <div class="section-title">
                 <h2>Pricing Plan</h2>

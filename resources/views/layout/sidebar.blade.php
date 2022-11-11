@@ -304,6 +304,32 @@
             </li>
             @endif
             
+
+            @if (auth()->user()->role == 'admin')
+                <li class="menu-title">PPDB</li>
+                <li class="menu">
+                    <a href="#ppdb" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <div class="">
+                            <i class="flaticon-menu-list"></i>
+                            <span>Landing Ppdb</span>
+                        </div>
+                        <div>
+                            <i class="flaticon-right-arrow"></i>
+                        </div>
+                    </a>
+                    <ul class="collapse submenu list-unstyled" id="ppdb" data-parent="#accordionExample">
+                        <li>
+                            <a href="/deskripsipendaftaran"> Deskripsi Landing PPDB</a>
+                        </li>
+                        <li>
+                            <a href="/admincarapendaftaran"> Cara Penddaftaran </a>
+                        </li>
+                        <li>
+                            <a href="/adminbiaya"> Biaya </a>
+                        </li>
+                    </ul>
+                </li>
+            @endif
         </ul>
     </nav>
 </div>

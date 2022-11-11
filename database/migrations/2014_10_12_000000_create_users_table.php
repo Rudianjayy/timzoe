@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('notelpon')->nullable();
             $table->string('foto')->nullable();
             $table->string('foto_bg')->nullable();
-            $table->string('alamat')->nullable();
+            $table->text('alamat')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

@@ -35,33 +35,24 @@
 
                     <!-- Profile Header -->
                     <div class="col-sm-12">
-                        <div id="profile-header" class=""
-                            style="background: #fff url({{ asset('admintemp/adminnew/riski/nopan/assets/img/header.jpg') }}) no-repeat center center;background-size: cover;">
+                        @foreach ($fotoprofil as $fotoprofil )
+                        <div id="profile-header" class="" style="background: #fff url({{ asset('fotoprofil/' . $fotoprofil->foto_bg) }}) no-repeat center center;background-size: cover;">
                             <div class="row">
                                 <div class=" profile-section col-md-12">
                                     <div class="row">
                                         <div class="col-md-6">
-                                            @foreach ($fotoprofil as $fotoprofil )
                                             <div class="media ml-sm-5 ml-1">
-                                                @if ($fotoprofil->foto != null)
-                                                    <img class="mr-sm-3 mr-2 usr-img"
-                                                        src="{{ asset('fotoprofil/' . $fotoprofil->foto) }}" alt="usr-img">
-                                                @else
-                                                    <img class="mr-sm-3 mr-2 usr-img"
-                                                        src="{{ asset('fotoprofil/ppkosong.jpg') }}" class="img-fluid"
-                                                        alt="usr-img">
-                                                @endif
+                                                <img class="mr-sm-3 mr-2 usr-img" src="{{ asset('fotoprofil/' . $fotoprofil->foto) }}" alt="usr-img">
                                                 <div class="media-body">
                                                     <h5 class="usr-name">{{ Auth::user()->name }}</h5>
                                                 </div>
                                             </div>
-                                            @endforeach
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        @endforeach
                     </div>
                     <!-- /Profile Header -->
 
@@ -71,7 +62,7 @@
                             <div class="row">
                                 <div
                                     class="col-xl-3 col-lg-3 col-md-2 col-sm-4 col-12 ml-auto usr-loc-join text-sm-left text-center">
-                                    <h4>Los Angeles, CA</h4>
+                                    <h4>{{ Auth::user()->alamat }}</h4>
                                 </div>
                                 <div class="col-xl-7 col-lg-6 col-md-7 col-sm-8 col-12">
                                     <ul class="nav nav-pills justify-content-xl-end justify-content-lg-start justify-content-md-start justify-content-sm-start justify-content-center mt-2"

@@ -55,15 +55,15 @@ class LoginController extends Controller
             'remember_token' => Str::random(60),
 
         ]);
-        return redirect('/login')->with('success','Berhasil daftar!');
+        return redirect('/login')->with('toast_success','Berhasil daftar!');
     }
 
     public function logout(){
         Auth::logout();
-        return redirect('login')->with('success', 'Anda berhasil logout!');
+        return redirect('login')->with('toast_success', 'Anda berhasil logout!');
     }
 
 
 
-  
+
 }

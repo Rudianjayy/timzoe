@@ -32,6 +32,8 @@ use App\Models\Mitra;
 use App\Models\Muhinews;
 use App\Models\Prestasi;
 use App\Http\Controllers\ProfiladminController;
+use App\Http\Controllers\PasswordController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -597,9 +599,7 @@ Route::get('/deletedeskripsipendaftaran/{id}',[PpdbController::class, 'deletedes
 Route::get('/profiladmin',[ProfiladminController::class,'profiladmin'])->name('profiladmin');
 Route::get('/editprofiladmin',[ProfiladminController::class,'editprofiladmin'])->name('editprofiladmin');
 Route::post('/updateprofiladmin',[ProfiladminController::class, 'updateprofiladmin'])->name('updateprofiladmin');
-
-
-
+Route::post('/updatepassword',[ProfiladminController::class, 'updatepassword'])->name('updatepassword');
 
 
 

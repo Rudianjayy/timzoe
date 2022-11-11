@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Hash;
 
 class ProfiladminController extends Controller
 {
@@ -30,4 +30,40 @@ class ProfiladminController extends Controller
         ]);
         return redirect()->route('profiladmin')->with('success' , 'Data Berhasil Di Update!');
     }
+
+
+
+    //editpassword
+
+
+    public function editpassword(){
+        return view('profil.editpassword');
+    }
+
+    public function updatepassword(request $request){
+        $request->validate([
+            'password_lama' => 'required|min:6|max:100',
+            'password' => 'required|min:6|max:100',
+            'password_confirmation' => 'required',
+        ],[
+        'password_lama.required' => 'password lama harus diisi',
+        'password_lama.min' => 'password lama harus diisi lebih dari 6',
+        'password.required' => 'password baru harus diisi',
+        'password.min' => 'password lama harus lebih dari 6',
+        'password.confirmed.required' => 'password tidak sama',
+        'password_confirmation.required' => 'password harus diisi',
+        ]);
+        $current_user=auth()->user();
+        if(Hash::check($request->password_lama,$current_user->password)){
+            $current_user->update([
+                'password'=>bcrypt($request->password)
+            ]);
+            return redirect()->back()->with('succes','password sukses diganti');
+            
+        } else{
+        return redirect()->back()->with('error','password lama tidak bisa.');
+
+        }
+    }
+
 }

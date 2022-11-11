@@ -175,9 +175,9 @@
                                     @if (session('success'))
                                         <div class="text-danger">{{ session('success') }}</div>
                                     @endif
-                                   
 
-                                    <button type="submit" class="btn btn-button-7 mt-3 mb-4">Submit</button>                               
+
+                                    <button type="submit" class="btn btn-button-7 mt-3 mb-4">Submit</button>
                                  </form>
                             </div>
                         </div>

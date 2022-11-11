@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Carapendaftaran;
 use App\Models\Deskripsipendaftaran;
 use App\Models\Jurusan;
 use App\Models\Muhinews;
@@ -15,7 +16,8 @@ class PpdbController extends Controller
         $dp = Deskripsipendaftaran::all();
         $pd = Deskripsipendaftaran::all();
         $kontak = Deskripsipendaftaran::all();
-        return view('ppdb.pendaftaran', compact('f','kh','dp','pd','kontak'));
+        $cp = Carapendaftaran::all();
+        return view('ppdb.pendaftaran', compact('f','kh','dp','pd','kontak','cp'));
     }
 
 
@@ -53,5 +55,77 @@ class PpdbController extends Controller
         $data = Deskripsipendaftaran::find($id);
         $data->delete();
         return redirect('deskripsipendaftaran')->with('toast_error',' Data Berhasil di Hapus!');
+    }
+
+
+
+
+
+
+
+
+    
+
+    public function loby25()
+    {
+        $data1 = Carapendaftaran::all();
+        return view('ppdb.caradaftar.admin-cara-pendaftaran', compact('data1'));
+    }
+    public function tambahcarapendaftaran()
+    {
+        return view('ppdb.caradaftar.tambah-cara-pendaftaran');
+    }
+
+    public function submitdata25(Request $request)
+    {
+        // dd($request->all());
+        $this->validate($request, [
+            'deskripsi' => 'required',
+            'deskripsi_detail' => 'required',
+        ], [
+            'deskripsi.required' => 'Harus diisi',
+            'deskripsi_detail.required' => 'Harus diisi',
+
+        ]);
+        $data1 = Carapendaftaran::create([
+            'deskripsi' => $request->deskripsi,
+            'deskripsi_detail' => $request->deskripsi_detail,
+
+        ]);
+
+        return redirect()->route('admincarapendaftaran')->with('success', ' Data Berhasil di Tambahkan!');
+    }
+
+    public function editCarapendaftaran($id)
+    {
+
+        $data1 = Carapendaftaran::findOrFail($id);
+        return view('ppdb.caradaftar.edit-cara-pendaftaran', compact('data1'));
+    }
+
+    public function submitedit25(Request $request, $id)
+    {
+        $this->validate($request, [
+            'deskripsi' => 'required',
+            'deskripsi_detail' => 'required',
+        ], [
+            'deskripsi' => 'harus diisi',
+            'deskripsi_detail' => 'harus diisi',
+
+        ]);
+        $data1 = Carapendaftaran::find($id);
+        $data1->update([
+            'deskripsi' => $request->deskripsi,
+            'deskripsi_detail' => $request->deskripsi_detail,
+        ]);
+
+        return redirect('admincarapendaftaran')->with('success', ' Data Berhasil di Ubah!');
+    }
+
+    public function deletecarapendaftaran($id)
+    {
+        $data1 = Carapendaftaran::find($id);
+        $data1->delete();
+        return redirect('admincarapendaftaran')->with('success', ' Data Berhasil di Hapus!');
     }
 }

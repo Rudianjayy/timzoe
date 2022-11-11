@@ -35,16 +35,38 @@
                 <img alt="logo" src="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}"
                     class="theme-logo" style="width: 80px;">
             </div>
-            <div class="col-md-12">
-                <label for="full-name" class="" style="color: black">Full Name</label>
-                <input type="text" name="name" id="full-name" class="form-control mb-4" placeholder="Full Name" value="{{ Session::get('name') }}">
+            <div class="col-md-12 mt-5">
+                <div class="col-md-12">
+                    <label for="full-name" class="">Nama Pengguna</label>
+                    <input type="text" name="name" id="full-name" class="form-control mb-2"
+                        placeholder="Full Name">
+                    @error('name')
+                        <div class="alert alert-danger">
+                            {{ $message }}
+                        </div>
+                    @enderror
+                </div>
 
-                <label for="inputEmail" class="" style="color: black">Email</label>
-                <input type="email" name="email" id="inputEmail" class="form-control mb-4" placeholder="Email" value="{{ Session::get('email') }}">
+                <div class="col-md-12 mt-5">
+                    <label for="inputEmail" class="">Email</label>
+                    <input type="email" name="email" id="inputEmail" class="form-control mb-2" placeholder="Email">
+                    @error('email')
+                        <div class="alert alert-danger">
+                            {{ $message }}
+                        </div>
+                    @enderror
+                </div>
 
-                <label for="inputPassword" class="" style="color: black">Password</label>
-                <input type="password" name="password" id="password" class="form-control mb-5" placeholder="Password" value="{{ Session::get('password') }}">
-
+                <div class="col-md-12 mt-5">
+                    <label for="inputPassword" class="">Password</label>
+                    <input type="password" name="password" id="password" class="form-control mb-2"
+                        placeholder="Password">
+                    @error('password')
+                        <div class="alert alert-danger">
+                            {{ $message }}
+                        </div>
+                    @enderror
+                </div>
                 {{-- <label for="inputRepeatPassword" class="">Repeat Password</label>
                 <input type="password" id="inputRepeatPassword" class="form-control mb-5" placeholder="Repeat Password" required>
                  --}}
@@ -53,11 +75,11 @@
                         {{-- <input type="checkbox" class="custom-control-input" id="customCheck1" value="remember-me">
                         <label class="custom-control-label" for="customCheck1"> <span class="d-block mt-1">I agree to
                             all <a href="#">Terms</a></span> </label> --}}
-                        </div>
-                        <div class="foto">
-                            <img src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/eye-close.png') }}" alt=""
-                                title="Lihat Password" id="eyeicon">
-                        </div>
+                    </div>
+                    <div class="foto">
+                        <img src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/eye-close.png') }}" alt=""
+                            title="Lihat Password" id="eyeicon">
+                    </div>
                 </div>
                 <button class="btn btn-lg btn-gradient-danger btn-block btn-rounded mb-4 mt-5"
                     type="submit">Register</button>
@@ -70,7 +92,7 @@
 
 
 
-          
+
         </div>
     </form>
 

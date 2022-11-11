@@ -22,6 +22,7 @@ class User extends Authenticatable
         'email',
         'password',
         'foto',
+        'foto_bg',
         'alamat',
         'notelpon',
     ];

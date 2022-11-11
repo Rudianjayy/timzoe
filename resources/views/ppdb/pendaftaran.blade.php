@@ -110,20 +110,21 @@
             <div class="d-table-cell">
                 <div class="container-fluid">
                     <div class="row align-items-center">
-                        @foreach ($dp as $dp )
-                        <div class="col-lg-6">
-                            <div class="banner-content">
-                                <h1>{{ $dp->judul_slider }}</h1>
-                                <p>
-                                    {{$dp->deskripsi_slider}}
-                                </p>
-                                
+                        @foreach ($dp as $dp)
+                            <div class="col-lg-6">
+                                <div class="banner-content">
+                                    <h1>{{ $dp->judul_slider }}</h1>
+                                    <p>
+                                        {{ $dp->deskripsi_slider }}
+                                    </p>
+
+                                </div>
                             </div>
-                        </div>
                         @endforeach
                         <div class="col-lg-6">
                             <div class="banner-image">
-                                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/mobile.png') }}" alt="image">
+                                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/mobile.png') }}"
+                                    alt="image">
                             </div>
                         </div>
                     </div>
@@ -132,19 +133,24 @@
         </div>
         <div class="default-shape">
             <div class="shape-1">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/1.png') }}" alt="image">
+                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/1.png') }}"
+                    alt="image">
             </div>
             <div class="shape-2 rotateme">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/2.png') }}" alt="image">
+                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/2.png') }}"
+                    alt="image">
             </div>
             <div class="shape-3">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/3.svg') }}" alt="image">
+                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/3.svg') }}"
+                    alt="image">
             </div>
             <div class="shape-4">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/4.svg') }}" alt="image">
+                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/4.svg') }}"
+                    alt="image">
             </div>
             <div class="shape-5">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/5.png') }}" alt="image">
+                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/5.png') }}"
+                    alt="image">
             </div>
         </div>
     </div>
@@ -232,26 +238,32 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="about-image">
-                        <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/about.png') }}" alt="image">
+                        <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/about.png') }}"
+                            alt="image">
                     </div>
                 </div>
             </div>
         </div>
         <div class="default-shape">
             <div class="shape-1">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/1.png') }}" alt="image">
+                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/1.png') }}"
+                    alt="image">
             </div>
             <div class="shape-2 rotateme">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/2.png') }}" alt="image">
+                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/2.png') }}"
+                    alt="image">
             </div>
             <div class="shape-3">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/3.svg') }}" alt="image">
+                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/3.svg') }}"
+                    alt="image">
             </div>
             <div class="shape-4">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/4.svg') }}" alt="image">
+                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/4.svg') }}"
+                    alt="image">
             </div>
             <div class="shape-5">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/5.png') }}" alt="image">
+                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/5.png') }}"
+                    alt="image">
             </div>
         </div>
     </section>
@@ -329,19 +341,24 @@
         </div>
         <div class="default-shape">
             <div class="shape-1">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/1.png') }}" alt="image">
+                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/1.png') }}"
+                    alt="image">
             </div>
             <div class="shape-2 rotateme">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/2.png') }}" alt="image">
+                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/2.png') }}"
+                    alt="image">
             </div>
             <div class="shape-3">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/3.svg') }}" alt="image">
+                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/3.svg') }}"
+                    alt="image">
             </div>
             <div class="shape-4">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/4.svg') }}" alt="image">
+                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/4.svg') }}"
+                    alt="image">
             </div>
             <div class="shape-5">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/5.png') }}" alt="image">
+                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/5.png') }}"
+                    alt="image">
             </div>
         </div>
     </section>
@@ -358,62 +375,74 @@
             <div class="screenshot-slider owl-carousel owl-theme">
                 <div class="screenshot-item">
                     <div class="image">
-                        <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/screenshot/1.png') }}" alt="image">
+                        <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/screenshot/1.png') }}"
+                            alt="image">
                     </div>
                 </div>
                 <div class="screenshot-item">
                     <div class="image">
-                        <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/screenshot/2.png') }}" alt="image">
+                        <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/screenshot/2.png') }}"
+                            alt="image">
                     </div>
                 </div>
                 <div class="screenshot-item">
                     <div class="image">
-                        <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/screenshot/3.png') }}" alt="image">
+                        <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/screenshot/3.png') }}"
+                            alt="image">
                     </div>
                 </div>
                 <div class="screenshot-item">
                     <div class="image">
-                        <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/screenshot/4.png') }}" alt="image">
+                        <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/screenshot/4.png') }}"
+                            alt="image">
                     </div>
                 </div>
                 <div class="screenshot-item">
                     <div class="image">
-                        <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/screenshot/5.png') }}" alt="image">
+                        <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/screenshot/5.png') }}"
+                            alt="image">
                     </div>
                 </div>
                 <div class="screenshot-item">
                     <div class="image">
-                        <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/screenshot/6.png') }}" alt="image">
+                        <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/screenshot/6.png') }}"
+                            alt="image">
                     </div>
                 </div>
                 <div class="screenshot-item">
                     <div class="image">
-                        <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/screenshot/1.png') }}" alt="image">
+                        <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/screenshot/1.png') }}"
+                            alt="image">
                     </div>
                 </div>
                 <div class="screenshot-item">
                     <div class="image">
-                        <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/screenshot/2.png') }}" alt="image">
+                        <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/screenshot/2.png') }}"
+                            alt="image">
                     </div>
                 </div>
                 <div class="screenshot-item">
                     <div class="image">
-                        <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/screenshot/3.png') }}" alt="image">
+                        <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/screenshot/3.png') }}"
+                            alt="image">
                     </div>
                 </div>
                 <div class="screenshot-item">
                     <div class="image">
-                        <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/screenshot/4.png') }}" alt="image">
+                        <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/screenshot/4.png') }}"
+                            alt="image">
                     </div>
                 </div>
                 <div class="screenshot-item">
                     <div class="image">
-                        <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/screenshot/5.png') }}" alt="image">
+                        <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/screenshot/5.png') }}"
+                            alt="image">
                     </div>
                 </div>
                 <div class="screenshot-item">
                     <div class="image">
-                        <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/screenshot/6.png') }}" alt="image">
+                        <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/screenshot/6.png') }}"
+                            alt="image">
                     </div>
                 </div>
             </div>
@@ -516,7 +545,8 @@
                     <div>
                         <div class="item">
                             <div class="img-fill">
-                                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/client/1.jpg') }}" alt="client">
+                                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/client/1.jpg') }}"
+                                    alt="client">
                             </div>
                             <div class="title">
                                 <h3>Jonus Nathan</h3>
@@ -525,7 +555,8 @@
                         </div>
                         <div class="item">
                             <div class="img-fill">
-                                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/client/2.jpg') }}" alt="client">
+                                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/client/2.jpg') }}"
+                                    alt="client">
                             </div>
                             <div class="title">
                                 <h3>Sadio Finn</h3>
@@ -534,7 +565,8 @@
                         </div>
                         <div class="item">
                             <div class="img-fill">
-                                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/client/3.jpg') }}" alt="client">
+                                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/client/3.jpg') }}"
+                                    alt="client">
                             </div>
                             <div class="title">
                                 <h3>Tom Olivar</h3>
@@ -543,7 +575,8 @@
                         </div>
                         <div class="item">
                             <div class="img-fill">
-                                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/client/4.jpg') }}" alt="client">
+                                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/client/4.jpg') }}"
+                                    alt="client">
                             </div>
                             <div class="title">
                                 <h3>James Finn</h3>
@@ -552,7 +585,8 @@
                         </div>
                         <div class="item">
                             <div class="img-fill">
-                                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/client/5.jpg') }}" alt="client">
+                                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/client/5.jpg') }}"
+                                    alt="client">
                             </div>
                             <div class="title">
                                 <h3>John Lucy</h3>
@@ -561,7 +595,8 @@
                         </div>
                         <div class="item">
                             <div class="img-fill">
-                                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/client/1.jpg') }}" alt="client">
+                                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/client/1.jpg') }}"
+                                    alt="client">
                             </div>
                             <div class="title">
                                 <h3>Sarah Taylor</h3>
@@ -570,7 +605,8 @@
                         </div>
                         <div class="item">
                             <div class="img-fill">
-                                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/client/2.jpg') }}" alt="client">
+                                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/client/2.jpg') }}"
+                                    alt="client">
                             </div>
                             <div class="title">
                                 <h3>James Anderson</h3>
@@ -579,7 +615,8 @@
                         </div>
                         <div class="item">
                             <div class="img-fill">
-                                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/client/3.jpg') }}" alt="client">
+                                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/client/3.jpg') }}"
+                                    alt="client">
                             </div>
                             <div class="title">
                                 <h3>Steven Smith</h3>
@@ -592,19 +629,24 @@
         </div>
         <div class="default-shape">
             <div class="shape-1">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/1.png') }}" alt="image">
+                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/1.png') }}"
+                    alt="image">
             </div>
             <div class="shape-2 rotateme">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/2.png') }}" alt="image">
+                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/2.png') }}"
+                    alt="image">
             </div>
             <div class="shape-3">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/3.svg') }}" alt="image">
+                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/3.svg') }}"
+                    alt="image">
             </div>
             <div class="shape-4">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/4.svg') }}" alt="image">
+                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/4.svg') }}"
+                    alt="image">
             </div>
             <div class="shape-5">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/5.png') }}" alt="image">
+                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/5.png') }}"
+                    alt="image">
             </div>
         </div>
     </section>
@@ -630,7 +672,8 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="overview-image">
-                        <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/overview.png') }}" alt="image">
+                        <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/overview.png') }}"
+                            alt="image">
                     </div>
                 </div>
             </div>
@@ -949,19 +992,24 @@
         </div>
         <div class="default-shape">
             <div class="shape-1">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/1.png') }}" alt="image">
+                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/1.png') }}"
+                    alt="image">
             </div>
             <div class="shape-2 rotateme">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/2.png') }}" alt="image">
+                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/2.png') }}"
+                    alt="image">
             </div>
             <div class="shape-3">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/3.svg') }}" alt="image">
+                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/3.svg') }}"
+                    alt="image">
             </div>
             <div class="shape-4">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/4.svg') }}" alt="image">
+                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/4.svg') }}"
+                    alt="image">
             </div>
             <div class="shape-5">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/5.png') }}" alt="image">
+                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/5.png') }}"
+                    alt="image">
             </div>
         </div>
     </section>
@@ -969,37 +1017,29 @@
 
     <section id="daftar" class="faq-area ptb-100">
         <div class="container">
-            @foreach ($pd as $pd )
-            <div class="section-title">
-                <h2>Cara Pendaftaran</h2>
-                <div class="bar"></div>
-                <p>{!! $pd->deskripsi_pendaftaran !!}</p>
-            </div>
+            @foreach ($pd as $pd)
+                <div class="section-title">
+                    <h2>Cara Pendaftaran</h2>
+                    <div class="bar"></div>
+                    <p>{!! $pd->deskripsi_pendaftaran !!}</p>
+                </div>
             @endforeach
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="faq-accordion-content">
                         <ul class="accordion">
-                            <li class="accordion-item">
-                                <a class="accordion-title active" href="javascript:void(0)">
-                                    <i class="fa fa-chevron-down"></i>
-                                    Which material types can you work with?
-                                </a>
-                                <p class="accordion-content show">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
-                                    suspendisse ultrices gravida. Lorem ipsum dolor sit amet.</p>
-                            </li>
+                            @foreach ($cp as $cp )
+                                
                             <li class="accordion-item">
                                 <a class="accordion-title" href="javascript:void(0)">
                                     <i class="fa fa-chevron-down"></i>
-                                    What access do I have on the free plan?
+                                    {{ $cp->deskripsi }}
                                 </a>
-                                <p class="accordion-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
-                                    suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing
-                                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
-                                    suspendisse ultrices gravida</p>
-                            </li>
+                                <p class="accordion-content">
+                                    {{ $cp->deskripsi_detail }}
+                                </p>
+                                </li>
+                                @endforeach
                             <li class="accordion-item">
                                 <a class="accordion-title" href="javascript:void(0)">
                                     <i class="fa fa-chevron-down"></i>
@@ -1038,26 +1078,32 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="faq-image">
-                        <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/faq-mobile.png') }}" alt="image">
+                        <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/faq-mobile.png') }}"
+                            alt="image">
                     </div>
                 </div>
             </div>
         </div>
         <div class="default-shape">
             <div class="shape-1">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/1.png') }}" alt="image">
+                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/1.png') }}"
+                    alt="image">
             </div>
             <div class="shape-2 rotateme">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/2.png') }}" alt="image">
+                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/2.png') }}"
+                    alt="image">
             </div>
             <div class="shape-3">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/3.svg') }}" alt="image">
+                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/3.svg') }}"
+                    alt="image">
             </div>
             <div class="shape-4">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/4.svg') }}" alt="image">
+                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/4.svg') }}"
+                    alt="image">
             </div>
             <div class="shape-5">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/5.png') }}" alt="image">
+                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/5.png') }}"
+                    alt="image">
             </div>
         </div>
     </section>
@@ -1075,7 +1121,8 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-team">
                         <div class="image">
-                            <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/team/image1.jpg') }}" alt="image">
+                            <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/team/image1.jpg') }}"
+                                alt="image">
                             <ul class="social">
                                 <li>
                                     <a href="#" target="_blank">
@@ -1108,7 +1155,8 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-team">
                         <div class="image">
-                            <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/team/image2.jpg') }}" alt="image">
+                            <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/team/image2.jpg') }}"
+                                alt="image">
                             <ul class="social">
                                 <li>
                                     <a href="#" target="_blank">
@@ -1141,7 +1189,8 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-team">
                         <div class="image">
-                            <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/team/image3.jpg') }}" alt="image">
+                            <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/team/image3.jpg') }}"
+                                alt="image">
                             <ul class="social">
                                 <li>
                                     <a href="#" target="_blank">
@@ -1175,19 +1224,24 @@
         </div>
         <div class="default-shape">
             <div class="shape-1">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/1.png') }}" alt="image">
+                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/1.png') }}"
+                    alt="image">
             </div>
             <div class="shape-2 rotateme">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/2.png') }}" alt="image">
+                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/2.png') }}"
+                    alt="image">
             </div>
             <div class="shape-3">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/3.svg') }}" alt="image">
+                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/3.svg') }}"
+                    alt="image">
             </div>
             <div class="shape-4">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/4.svg') }}" alt="image">
+                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/4.svg') }}"
+                    alt="image">
             </div>
             <div class="shape-5">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/5.png') }}" alt="image">
+                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/5.png') }}"
+                    alt="image">
             </div>
         </div>
     </section>
@@ -1203,10 +1257,12 @@
                     explore.</p>
                 <div class="app-holder">
                     <a href="#">
-                        <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/store/1.png') }}" alt="image">
+                        <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/store/1.png') }}"
+                            alt="image">
                     </a>
                     <a href="#">
-                        <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/store/2.png') }}" alt="image">
+                        <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/store/2.png') }}"
+                            alt="image">
                     </a>
                 </div>
             </div>
@@ -1329,14 +1385,13 @@
 
     <section id="kontak" class="contact-area ptb-100">
         <div class="container">
-            @foreach ($kontak as $kontak )
-                
-            <div class="section-title">
-                <h2>Kontak Kami</h2>
-                <div class="bar"></div>
-                <p>{!! $kontak->deskripsi_kontak !!}</p>
+            @foreach ($kontak as $kontak)
+                <div class="section-title">
+                    <h2>Kontak Kami</h2>
+                    <div class="bar"></div>
+                    <p>{!! $kontak->deskripsi_kontak !!}</p>
                 </div>
-                @endforeach
+            @endforeach
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="contact-form">
@@ -1434,19 +1489,24 @@
         </div>
         <div class="default-shape">
             <div class="shape-1">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/1.png') }}" alt="image">
+                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/1.png') }}"
+                    alt="image">
             </div>
             <div class="shape-2 rotateme">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/2.png') }}" alt="image">
+                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/2.png') }}"
+                    alt="image">
             </div>
             <div class="shape-3">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/3.svg') }}" alt="image">
+                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/3.svg') }}"
+                    alt="image">
             </div>
             <div class="shape-4">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/4.svg') }}" alt="image">
+                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/4.svg') }}"
+                    alt="image">
             </div>
             <div class="shape-5">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/5.png') }}" alt="image">
+                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/5.png') }}"
+                    alt="image">
             </div>
         </div>
     </section>
@@ -1589,12 +1649,14 @@
                         <ul class="footer-holder">
                             <li>
                                 <a href="#">
-                                    <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/store/1.png') }}" alt="image">
+                                    <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/store/1.png') }}"
+                                        alt="image">
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/store/2.png') }}" alt="image">
+                                    <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/store/2.png') }}"
+                                        alt="image">
                                 </a>
                             </li>
                         </ul>
@@ -1625,7 +1687,9 @@
     </div>
 
 
-    <script data-cfasync="false" src="{{ asset('ps/templates.hibootstrap.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js') }}"></script>
+    <script data-cfasync="false"
+        src="{{ asset('ps/templates.hibootstrap.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js') }}">
+    </script>
     <script src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/js/jquery.min.js') }}"></script>
 
     <script src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/js/bootstrap.bundle.min.js') }}"></script>

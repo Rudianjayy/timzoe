@@ -72,9 +72,25 @@ Route::post('/submitedit24/{id}',[PpdbController::class, 'submitedit24'])->name(
 Route::get('/deletedeskripsipendaftaran/{id}',[PpdbController::class, 'deletedeskripsipendaftaran'])->name('deletedeskripsipendaftaran');
 
 
+//syaratpendaftaran
+Route::get('/syaratpendaftaran',[PpdbController::class, 'syaratpendaftaran'])->name('syaratpendaftaran');
+Route::get('/adminsyaratdaftar',[PpdbController::class, 'adminsyaratdaftar'])->name('adminsyaratdaftar');
+Route::get('/editsyaratdaftar/{id}',[PpdbController::class, 'editsyaratdaftar'])->name('editsyaratdaftar');
+Route::post('/editproses12/{id}',[PpdbController::class, 'editproses12'])->name('editproses12');
+Route::get('/tambahsyaratdaftar/{id}',[PpdbController::class, 'tambahsyaratdaftar'])->name('tambahsyaratdaftar');
+Route::post('/submitproses12/{id}',[PpdbController::class, 'submitproses12'])->name('submitproses12');
+Route::get('/deletesyaratpendaftaran/{id}',[PpdbController::class, 'deletesyaratpendaftaran'])->name('deletesyaratpendaftaran');
 
 
+//kontak
 
+Route::get('/kontak',[PpdbController::class, 'kontak'])->name('kontak');
+Route::get('/adminkontak',[PpdbController::class, 'adminkontak'])->name('adminkontak');
+Route::get('/editkontak/{id}',[PpdbController::class, 'editkontak'])->name('editkontak');
+Route::post('/editproses14/{id}',[PpdbController::class, 'editproses14'])->name('editproses14');
+Route::get('/tambahkontak/{id}',[PpdbController::class, 'tambahkontak'])->name('tambahkontak');
+Route::post('/submitproses14/{id}',[PpdbController::class, 'submitproses14'])->name('submitproses14');
+Route::get('/deletekontak/{id}',[PpdbController::class, 'deletekontak'])->name('deletekontak');
 
 
 

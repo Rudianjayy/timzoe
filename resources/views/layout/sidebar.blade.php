@@ -338,6 +338,12 @@
                     <li>
                         <a href="/deskripsipendaftaran"> Deskripsi Pendaftaran</a>
                     </li>
+                    <li>
+                        <a href="/adminsyaratdaftar"> syarat Pendaftaran</a>
+                    </li>
+                    <li>
+                        <a href="/adminkontak">Kontak</a>
+                    </li>
                 </ul>
             </li>
 

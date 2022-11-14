@@ -155,7 +155,7 @@
                 </ul>
             </li>
             @endif
-            @if (auth()->user()->role == 'admin') 
+            @if (auth()->user()->role == 'admin')
             <li class="menu">
                 <a href="#upj" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <div class="">
@@ -237,7 +237,7 @@
                 </ul>
             </li>
             @endif
-            @if (auth()->user()->role == 'admin')  
+            @if (auth()->user()->role == 'admin')
             <li class="menu-title mb-2">Mitra</li>
             <li>
                 <a href="/adminmitra" class="waves-effect">
@@ -248,7 +248,7 @@
                 </a>
             </li>
             @endif
-            @if (auth()->user()->role == 'admin') 
+            @if (auth()->user()->role == 'admin')
             <li class="menu-title mb-2">Management Beranda</li>
             <li>
                 <a href="/data-album" class="waves-effect">
@@ -299,10 +299,9 @@
                     <li>
                         <a href="/adminfooteerdua">Footer Link </a>
                     </li>
-                    
+
                 </ul>
             </li>
-<<<<<<< HEAD
 
 
             <li class="menu-title"></li>
@@ -318,7 +317,7 @@
                 </a>
                 <ul class="collapse submenu list-unstyled" id="profiladmin" data-parent="#accordionExample">
                     <li>
-                        <a href="/admin">Profil Admin</a>
+                        <a href="/profiladmin">Profil Admin</a>
                     </li>
                 </ul>
             </li>
@@ -348,11 +347,9 @@
 
 
 
-=======
             @endif
-            
+
         </ul>
     </nav>
->>>>>>> 73df2128d3eb3e0c077efb2350d4a12f920eae69
 </div>
 

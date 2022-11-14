@@ -73,7 +73,6 @@ Route::get('/deletedeskripsipendaftaran/{id}',[PpdbController::class, 'deletedes
 
 
 
-<<<<<<< HEAD
 
 
 
@@ -104,14 +103,12 @@ Route::post('/fotomouproses',[FotoidukaController::class, 'fotomouproses'])->nam
 Route::get('/editfotomou/{id}',[FotoidukaController::class, 'editfotomou'])->name('editfotomou');
 Route::post('/editproses4/{id}',[FotoidukaController::class, 'editproses4'])->name('editproses4');
 Route::get('/deletefotomou/{id}',[FotoidukaController::class, 'delete'])->name('delete');
-=======
 Route::get('/admincarapendaftaran',[PpdbController::class, 'loby25'])->name('admincarapendaftaran');
 Route::get('/tambahcarapendaftaran',[PpdbController::class, 'tambahcarapendaftaran'])->name('tambahcarapendaftaran');
 Route::post('/submitdata25',[PpdbController::class, 'submitdata25'])->name('submitdata25');
 Route::get('/editcarapendaftaran/{id}',[PpdbController::class, 'editcarapendaftaran'])->name('editcarapendaftaran');
 Route::post('/submitedit25/{id}',[PpdbController::class, 'submitedit25'])->name('submitedit25');
 Route::get('/deletecarapendaftaran/{id}',[PpdbController::class, 'deletecarapendaftaran'])->name('deletecarapendaftaran');
->>>>>>> 73df2128d3eb3e0c077efb2350d4a12f920eae69
 
 
 

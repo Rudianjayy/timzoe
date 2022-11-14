@@ -139,12 +139,17 @@
                         </div>
 
                     </div>
-                     <div class="row">
-                    <div class="col-sm-12">
-                    <div class="card post-editor mb-4" style=>
-                        <div class="card-body p-0">
-                        Ganti Password
-                            <div class="widget-content widget-content-area">
+            <div class="col-sm-12 mt-5">
+                <div class="row">
+                    <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                        <div class="tab-content post-section" id="pills-tabContent1">
+                            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="card post-editor mb-4" style=>
+                                           <p> Ganti Password </p>
+                                     <div class="card-body p-0">
+                                    <div class="widget-content widget-content-area">
                                 <form action="/updatepassword"  method="POST" id ="gantipassword" class="form-horizontal">
                                     @csrf
                                     <div class="form-group">
@@ -155,7 +160,7 @@
                                          @if($errors->any('password_lama'))
                                             <span class="text-danger">{{ $errors->first('password_lama') }}</span>
                                          @endif
-                                    </div>
+
                                     <div class="form-group">
                                         <label for="password">Password Baru</label>
                                         <input type="password" class="form-control"
@@ -181,32 +186,44 @@
                                  </form>
                             </div>
                         </div>
+                        </div>
+                        </div>
                     </div>
                 </div>
                 </div>
                 </div>
             </div>
 
-    <script src="{{ asset('admintemp/adminnew/riski/nopan/assets/js/libs/jquery-3.1.1.min.js') }}"></script>
-    <script src="{{ asset('admintemp/adminnew/riski/nopan/assets/js/loader.js') }}"></script>
-    <script src="bootstrap/js/popper.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script src="plugins/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="{{ asset('admintemp/adminnew/riski/nopan/assets/js/app.js') }}"></script>
+            @include('layout.script')
 
-    <script>
-        $(document).ready(function() {
-            App.init();
-        });
-    </script>
-    <script src="{{ asset('admintemp/adminnew/riski/nopan/assets/js/custom.js') }}"></script>
-    <!-- END GLOBAL MANDATORY SCRIPTS -->
 
-    <!--  BEGIN CUSTOM SCRIPTS FILE  -->
-    <script src="{{ asset('admintemp/adminnew/riski/nopan/assets/js/users/calendar.js') }}"></script>
-    <script src="{{ asset('admintemp/adminnew/riski/nopan/assets/js/users/custom-profile.js') }}"></script>
-    <!--  END CUSTOM SCRIPTS FILE  -->
+
 </body>
-@include('layout.script')
+<script>
+    $('.delete').click(function() {
+        var id = $(this).attr('data-id');
+        var nama = $(this).attr('data-nama');
+
+
+        swal({
+                title: "Apa kamu yakin ingin menghapus data ini?",
+                text: "Kamu akan menghapus data dengan id  " + nama + "! ",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+            })
+            .then((willDelete) => {
+                if (willDelete) {
+                    window.location = "/deleteprestasi/" + id + ""
+                    // swal("Data berhasil dihapus!", {
+                    //   icon: "success",
+                    // });`
+                } else {
+                    swal("Data tidak jadi dihapus!");
+                }
+            });
+    });
+</script>
+
 
 @endsection

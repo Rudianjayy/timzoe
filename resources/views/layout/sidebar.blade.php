@@ -317,7 +317,7 @@
                 </a>
             </li>
             @endif
-            @if (auth()->user()->role == 'admin') 
+            @if (auth()->user()->role == 'admin')
             <li class="menu-title mb-2">Management Beranda</li>
             <li>
                 <a href="/data-album" class="waves-effect">
@@ -368,7 +368,7 @@
                     <li>
                         <a href="/adminfooteerdua">Footer Link </a>
                     </li>
-                    
+
                 </ul>
             </li>
             @endif

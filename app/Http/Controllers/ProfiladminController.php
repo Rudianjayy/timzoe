@@ -75,8 +75,8 @@ class ProfiladminController extends Controller
             $current_user->update([
                 'password'=>bcrypt($request->password)
             ]);
-            return redirect()->back()->with('succes','password sukses diganti');
-            
+            return redirect()->back()->with('success','password sukses diganti');
+
         } else{
         return redirect()->back()->with('error','password lama tidak bisa.');
 

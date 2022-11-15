@@ -84,7 +84,6 @@ Route::post('/submitedit24/{id}',[PpdbController::class, 'submitedit24'])->name(
 Route::get('/deletedeskripsipendaftaran/{id}',[PpdbController::class, 'deletedeskripsipendaftaran'])->name('deletedeskripsipendaftaran');
 
 
-
 Route::get('/admincarapendaftaran',[PpdbController::class, 'loby25'])->name('admincarapendaftaran');
 Route::get('/tambahcarapendaftaran',[PpdbController::class, 'tambahcarapendaftaran'])->name('tambahcarapendaftaran');
 Route::post('/submitdata25',[PpdbController::class, 'submitdata25'])->name('submitdata25');

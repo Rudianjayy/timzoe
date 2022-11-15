@@ -69,20 +69,21 @@
                         </div>
                         <!-- /Profile Header -->
 
-                        <!-- Nav Tabs -->
-                        <div class="col-sm-12">
-                            <div class="nav-tab-section">
-                                <div class="row">
-                                    <div class="col-xl-3 col-lg-3 col-md-2 col-sm-4 col-12 ml-auto usr-loc-join text-sm-left text-center">
-                                        <h4>Los Angeles, CA</h4>
-                                    </div>
-                                    <div class="col-xl-7 col-lg-6 col-md-7 col-sm-8 col-12">
-                                        <ul class="nav nav-pills justify-content-xl-end justify-content-lg-start justify-content-md-start justify-content-sm-start justify-content-center mt-2" id="pills-tab1" role="tablist">
-                                            <li class="nav-item">
-                                                <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-selected="true">Edit Profile</a>
-                                            </li>
-                                        </ul>
-                                    </div>
+                    <!-- Nav Tabs -->
+                    <div class="col-sm-12">
+                        <div class="nav-tab-section">
+                            <div class="row">
+                                <div
+                                class="col-xl-3 col-lg-3 col-md-2 col-sm-4 col-12 ml-auto usr-loc-join text-sm-left text-center">
+                                <h4>{{ Auth::user()->alamat }}</h4>
+                            </div>
+                                <div class="col-xl-7 col-lg-6 col-md-7 col-sm-8 col-12">
+                                    <ul class="nav nav-pills justify-content-xl-end justify-content-lg-start justify-content-md-start justify-content-sm-start justify-content-center mt-2"
+                                        id="pills-tab1" role="tablist">
+                                        <li class="nav-item">
+                                            {{--  <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-selected="true">Edit Profile</a>  --}}
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>

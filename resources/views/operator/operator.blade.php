@@ -13,12 +13,12 @@
         <div class="container">
             <div class="page-header">
                 <div class="page-title">
-                    <h3>UPJ Slider</h3>
+                    <h3>Operator</h3>
                     <div class="crumbs">
                         <ul id="breadcrumbs" class="breadcrumb">
                             <li><a href="index.html"><i class="flaticon-home-fill"></i></a></li>
-                            <li><a href="#">UPJ</a></li>
-                            <li class="active"><a href="#">UPJ Slider</a></li>
+                            <li><a href="#">Operator</a></li>
+                            <li class="active"><a href="#">Operator</a></li>
                         </ul>
                     </div>
                 </div>
@@ -30,13 +30,13 @@
                         <div class="widget-header">
                             <div class="row">
                                 <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                    <h4>UPJ Slider</h4>
+                                    <h4>Form Operator </h4>
                                 </div>
-                                {{--  <div>
-                                    <a href="/tambahupjfooterlink" class="btn btn-primary " id="kt_account_profile_details_submit"
-                                        style="margin-left: 30px;">Tambah
+                                <div>
+                                    <a href="/tambahoperator" class="btn btn-primary "
+                                        id="kt_account_profile_details_submit" style="margin-left: 30px;">Tambah
                                         +</a>
-                                </div>  --}}
+                                </div>
                             </div>
                         </div>
                         <div class="widget-content widget-content-area">
@@ -46,12 +46,14 @@
                                     <thead>
                                         <tr>
                                             <th scope="col">#</th>
-                                            <th scope="col">Foto Slider1</th>
-                                            <th scope="col">Foto Slider2</th>
-                                            <th scope="col">Foto Slider3</th>
-                                            <th scope="col">Foto Slider4</th>
-                                            <th scope="col">Judul Slider</th>
-                                            <th scope="col">Deskripsi Slider</th>
+                                            <th scope="col">Nama</th>
+                                            <th scope="col">Email</th>
+                                            <th scope="col">Alamat</th>
+                                            <th scope="col">No Telpon</th>
+                                            <th scope="col">Foto</th>
+                                            <th scope="col">Foto Bg</th>
+                                            <th scope="col">Password</th>
+                                            <th scope="col">Role</th>
                                             <th scope="col">Aksi</th>
                                         </tr>
                                     </thead>
@@ -60,51 +62,46 @@
                                         @php
                                             $no = 1;
                                         @endphp
-                                        @foreach ($data10 as $d10)
+                                        @foreach ($data1 as $d)
                                             <tr>
                                                 <th>{{ $no++ }}</th>
+                                                
+                                                <td>{{ $d->name }}</td>
+                                                <td>{{ $d->email }}</td>
                                                 <td>
-                                                    <img src="{{ asset('fotomahasiswa/' . $d10->foto_slider1) }}"
-                                                        alt="" style="width: 50px;">
+                                                    <img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt=""
+                                                        style="width: 50px;">
                                                 </td>
                                                 <td>
-                                                    <img src="{{ asset('fotomahasiswa/' . $d10->foto_slider2) }}"
-                                                        alt="" style="width: 50px;">
+                                                    <img src="{{ asset('fotomahasiswa/' . $d->foto_bg) }}" alt=""
+                                                        style="width: 50px;">
                                                 </td>
-                                                <td>
-                                                    <img src="{{ asset('fotomahasiswa/' . $d10->foto_slider3) }}"
-                                                        alt="" style="width: 50px;">
-                                                </td>
-                                                <td>
-                                                    <img src="{{ asset('fotomahasiswa/' . $d10->foto_slider4) }}"
-                                                        alt="" style="width: 50px;">
-                                                </td>
-                                                <td>{{ $d10->judul_slider }}</td>
-                                                <td>{{ $d10->deskripsi_slider }}</td>
-
+                                                <td>{{ $d->notelpon }}</td>
+                                                <td>{{ $d->password }}</td>
+                                                <td>{{ $d->alamat }}</td>
+                                                <td>{{ $d->role }}</td>
 
                                                 <td class="align-center">
                                                     <ul class="table-controls">
                                                         <li>
-                                                        <a href="/editupjslider/{{ $d10->id }}" data-toggle="tooltip"
-                                                                data-placement="top" title="Edit">
+                                                            <a href="/editoperator/{{ $d->id }}"
+                                                                data-toggle="tooltip" data-placement="top" title="Edit">
                                                                 <i class="flaticon-edit"></i>
                                                             </a>
                                                         </li>
-                                                            <li>
-                                                                <a href="#" class="delete fire"
-                                                                data-id="{{ $d10->id }}"
-                                                                data-nama="{{ $d10->judul }}" data-toggle="tooltip"
+                                                        <li>
+                                                            <a href="#" class="delete fire"
+                                                                data-id="{{ $d->id }}"
+                                                                data-nama="{{ $d->judul }}" data-toggle="tooltip"
                                                                 data-placement="top" title="Delete">
                                                                 <i class="flaticon-delete-5"></i>
                                                             </a>
-                                                            </li>
+                                                        </li>
                                                     </ul>
                                                 </td>
                                             </tr>
                                         @endforeach
                                     </tbody>
-
                                 </table>
                             </div>
                         </div>
@@ -112,10 +109,6 @@
                 </div>
             </div>
         </div>
-
-
-
-
 
         @include('layout.script')
 
@@ -137,7 +130,7 @@
                     })
                     .then((willDelete) => {
                         if (willDelete) {
-                            window.location = "/deleteupjslider/" + id + ""
+                            window.location = "/deleteoperator/" + id + ""
                              swal("Data berhasil dihapus!", {
                                icon: "success",
                              });
@@ -152,6 +145,4 @@
                 toastr.success("{{ Session::get('success') }}")
             @endif
         </script>
-
-
 @endsection

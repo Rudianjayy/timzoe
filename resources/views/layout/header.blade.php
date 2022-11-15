@@ -4,10 +4,10 @@
 
     <div>
         <p class="info">
-           <h6> <a href="#" class="d-block" style="color: rgb(226, 10, 10); align-items:center; display:flex; margin-top:12px;">Halo {{ Auth::user()->name }} :)</a></h6>
+           <h6> <a href="#" class="d-block" style="color: #805dca; align-items:center; display:flex; margin-top:12px;">Halo {{ Auth::user()->name }} :)</a></h6>
         </p>
     </div>
-
+    
     <ul class="navbar-nav flex-row ml-lg-auto">
         <li class="nav-item dropdown user-profile-dropdown ml-lg-0 mr-lg-2 ml-3 order-lg-0 order-1">
             <a href="javascript:void(0);" class="nav-link dropdown-toggle user" id="userProfileDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

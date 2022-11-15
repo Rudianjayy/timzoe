@@ -155,6 +155,28 @@
                 </ul>
             </li>
             @endif
+            @if (auth()->user()->role == 'operator2')
+            <li class="menu">
+                <a href="#muhinews" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <div class="">
+                        <i class="flaticon-shuffle-4"></i>
+                        <span>Muhinews</span>
+                    </div>
+                    <div>
+                        <i class="flaticon-right-arrow"></i>
+                    </div>
+                </a>
+                <ul class="collapse submenu list-unstyled" id="muhinews" data-parent="#accordionExample">
+                    <li>
+                        <a href="/muhinewsadmin">Muhinews</a>
+                    </li>
+                    <li>
+                        <a href="/kategoriberita">Kategori Muhinews </a>
+                    </li>
+
+                </ul>
+            </li>
+            @endif
             @if (auth()->user()->role == 'admin')
             <li class="menu">
                 <a href="#upj" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
@@ -187,6 +209,52 @@
                     </li>
                     <li>
                         <a href="/adminedotel">Edotel</a>
+                    </li>
+                </ul>
+            </li>
+            @endif
+            @if (auth()->user()->role == 'operator1')
+            <li class="menu-title">UPJ TEKAJE</li>
+            <li class="menu">
+                <a href="#upjtekaje" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <div class="">
+                        <i class="flaticon-menu-line-3"></i>
+                        <span>UPJ TEKAJE</span>
+                    </div>
+                    <div>
+                        <i class="flaticon-right-arrow"></i>
+                    </div>
+                </a>
+                <ul class="collapse submenu list-unstyled" id="upjtekaje" data-parent="#accordionExample">
+                    <li>
+                        <a href="/tentangkami">Tentang Kami</a>
+                    </li>
+                    <li>
+                        <a href="/adminteam">Structure Team</a>
+                    </li>
+                    <li>
+                        <a href="/adminkeunggulan">Keunggulan</a>
+                    </li>
+                    <li>
+                        <a href="/adminjasa">Jasa</a>
+                    </li>
+                    <li>
+                        <a href="/admingalery">Galery</a>
+                    </li>
+                    <li>
+                        <a href="/adminvisimisi">Visi Misi</a>
+                    </li>
+                    <li>
+                        <a href="/admintestimoni">Testimoni</a>
+                    </li>
+                    <li>
+                        <a href="/adminupjfooter">UPJ Footer</a>
+                    </li>
+                    <li>
+                        <a href="/adminupjfooterlink">UPJ Footer Link</a>
+                    </li>
+                    <li>
+                        <a href="/adminupjslider">UPJ Slider</a>
                     </li>
                 </ul>
             </li>
@@ -237,6 +305,7 @@
                 </ul>
             </li>
             @endif
+
             @if (auth()->user()->role == 'admin')
             <li class="menu-title mb-2">Mitra</li>
             <li>
@@ -302,59 +371,96 @@
 
                 </ul>
             </li>
-
-
-            <li class="menu-title"></li>
-            <li class="menu">
-                <a href="#profiladmin" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                    <div class="">
-                        <i class="flaticon-user-5"></i>
-                        <span>Profil Admin</span>
-                    </div>
-                    <div>
-                        <i class="flaticon-right-arrow"></i>
-                    </div>
-                </a>
-                <ul class="collapse submenu list-unstyled" id="profiladmin" data-parent="#accordionExample">
-                    <li>
-                        <a href="/profiladmin">Profil Admin</a>
-                    </li>
-                </ul>
-            </li>
-
-            <li class="menu-title">Form PPDB</li>
-
-            <li class="menu">
-                <a href="#tentangkami" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                    <div class="">
-                        <i class="flaticon-menu-list"></i>
-                        <span>Landing PPDB</span>
-                    </div>
-                    <div>
-                        <i class="flaticon-right-arrow"></i>
-                    </div>
-                </a>
-                <ul class="collapse submenu list-unstyled" id="tentangkami" data-parent="#accordionExample">
-                    <li>
-                        <a href="/deskripsipendaftaran"> Deskripsi Pendaftaran</a>
-                    </li>
-                    <li>
-                        <a href="/adminsyaratdaftar"> syarat Pendaftaran</a>
-                    </li>
-                    <li>
-                        <a href="/adminkontak">Kontak</a>
-                    </li>
-                </ul>
-            </li>
-
-
-        </ul>
-    </nav>
-
-
-
             @endif
 
+
+            @if (auth()->user()->role == 'admin')
+                <li class="menu-title">PPDB</li>
+                <li class="menu">
+                    <a href="#ppdb" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <div class="">
+                            <i class="flaticon-menu-list"></i>
+                            <span>Landing Ppdb</span>
+                        </div>
+                        <div>
+                            <i class="flaticon-right-arrow"></i>
+                        </div>
+                    </a>
+                    <ul class="collapse submenu list-unstyled" id="ppdb" data-parent="#accordionExample">
+                        <li>
+                            <a href="/deskripsipendaftaran"> Deskripsi Landing PPDB</a>
+                        </li>
+                        <li>
+                            <a href="/adminsyaratdaftar"> Syarat Pendaftaran</a>
+                        </li>
+                        <li>
+                            <a href="/adminkontak">Kontak</a>
+                        </li>
+                        <li>
+                            <a href="/adminbiaya"> Biaya </a>
+                        </li>
+                    </ul>
+                </li>
+            @endif
+
+
+
+
+
+
+
+
+            @if (auth()->user()->role == 'admin')
+            <li class="menu">
+                <a href="#footerppdb" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <div class="">
+                        <i class="flaticon-menu-list"></i>
+                        <span>Footer PPDB</span>
+                    </div>
+                    <div>
+                        <i class="flaticon-right-arrow"></i>
+                    </div>
+                </a>
+                <ul class="collapse submenu list-unstyled" id="footerppdb" data-parent="#accordionExample">
+                    <li>
+                        <a href="/adminfooterppdb"> Footer PPDB</a>
+                    </li>
+                    <li>
+                        <a href="/"> Footer Link</a>
+                    </li>
+
+                </ul>
+            </li>
+        @endif
+
+
+
+
+
+
+
+
+
+            @if (auth()->user()->role == 'admin')
+                <li class="menu-title">Operator</li>
+                <li class="menu">
+                    <a href="#operator" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <div class="">
+                            <i class="flaticon-menu-list"></i>
+                            <span>Operator</span>
+                        </div>
+                        <div>
+                            <i class="flaticon-right-arrow"></i>
+                        </div>
+                    </a>
+                    <ul class="collapse submenu list-unstyled" id="operator" data-parent="#accordionExample">
+                        <li>
+                            <a href="/adminoperator"> Operator</a>
+                        </li>
+
+                    </ul>
+                </li>
+            @endif
         </ul>
     </nav>
 </div>

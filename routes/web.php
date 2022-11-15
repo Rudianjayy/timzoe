@@ -60,12 +60,37 @@ Route::get('/pendaftaran', [PpdbController::class, 'pendaftaran'])->name('pendaf
 
 
 
+//footerPPDB
+
+Route::get('/adminfooterppdb', [FooteerController::class, 'adminfooterppdb'])->name('adminfooterppdb');
+Route::get('/tambahfooterppdb', [FooteerController::class, 'tambahfooterppdb'])->name('tambahfooterppdb');
+Route::post('/prosesfooter', [FooteerController::class, 'prosesfooter'])->name('prosesfooter');
+Route::get('/editfooteerppdb/{id}', [FooteerController::class, 'editfooteerppdb'])->name('editfooteerppdb');
+Route::post('/editprosesfooter/{id}', [FooteerController::class, 'editprosesfooter'])->name('editprosesfooter');
+Route::get('/deletefooteerppdb/{id}', [FooteerController::class, 'deletefooteerppdb'])->name('deletefooteerppdb');
+
+
+
+
+
 //login&register
 Route::get('/register', [LoginController::class, 'register'])->name('register')->middleware('guest');
 Route::post('/registeruser', [LoginController::class, 'registeruser'])->name('registeruser');
 Route::get('/login', [LoginController::class, 'login'])->name('login')->middleware('guest');
 Route::post('/loginproses', [LoginController::class, 'loginproses'])->name('loginproses');
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+
+Route::get('/adminoperator',[LoginController::class, 'loby26'])->name('adminoperator');
+Route::get('/tambahoperator',[LoginController::class, 'tambahoperator'])->name('tambahoperator');
+Route::post('/submitdata26',[LoginController::class, 'submitdata26'])->name('submitdata26');
+Route::get('/editoperator/{id}',[LoginController::class, 'editoperator'])->name('editoperator');
+Route::post('/submitedit26/{id}',[LoginController::class, 'submitedit26'])->name('submitedit26');
+Route::get('/deleteoperator/{id}',[LoginController::class, 'deleteoperator'])->name('deleteoperator');
+
+
+
+
+
 Route::get('/deskripsipendaftaran',[PpdbController::class, 'loby24'])->name('deskripsipendaftaran');
 Route::get('/editdeskripsipendaftaran/{id}',[PpdbController::class, 'editdeskripsipendaftaran'])->name('editdeskripsipendaftaran');
 Route::post('/submitedit24/{id}',[PpdbController::class, 'submitedit24'])->name('submitedit24');
@@ -590,15 +615,41 @@ Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
 
 
 //Profiladmin
-Route::get('/profiladmin', [ProfiladminController::class, 'profiladmin'])->name('profiladmin');
-Route::get('/editprofiladmin', [ProfiladminController::class, 'editprofiladmin'])->name('editprofiladmin');
-Route::post('/updateprofiladmin', [ProfiladminController::class, 'updateprofiladmin'])->name('updateprofiladmin');
 
 
 
 //index yang bisa diakses user dan admin
 Route::group(['middleware' => ['auth', 'hakakses:admin,user']], function () {
 
+    Route::get('/welcome', function () {
+        $berita = Muhinews::count();
+        $galery = Album::count();
+        $prestasi = Prestasi::count();
+        $mitra = Mitra::count();
+        return view ('welcome', compact('berita', 'galery', 'prestasi', 'mitra'));
+    })->middleware('auth');
+
+    Route::get('/profiladmin', [ProfiladminController::class, 'profiladmin'])->name('profiladmin');
+    Route::get('/editprofiladmin', [ProfiladminController::class, 'editprofiladmin'])->name('editprofiladmin');
+    Route::post('/updateprofiladmin', [ProfiladminController::class, 'updateprofiladmin'])->name('updateprofiladmin');
+})
+
+;
+Route::group(['middleware' => ['auth', 'hakakses:admin,operator1,operator2']], function () {
+
+    Route::get('/welcome', function () {
+        $berita = Muhinews::count();
+        $galery = Album::count();
+        $prestasi = Prestasi::count();
+        $mitra = Mitra::count();
+        return view ('welcome', compact('berita', 'galery', 'prestasi', 'mitra'));
+    })->middleware('auth');
+
+    Route::get('/adminupjfooter', [UpjtekajeController::class, 'loby21'])->name('adminupjfooter')->middleware('operator1');
+    Route::post('/submitdata21', [UpjtekajeController::class, 'submitdata21'])->name('submitdata21');
+    Route::get('/editupjfooter/{id}', [UpjtekajeController::class, 'editupjfooter'])->name('editupjfooter');
+    Route::post('/submitedit21/{id}', [UpjtekajeController::class, 'submitedit21'])->name('submitedit21');
+    Route::get('/deleteupjfooter/{id}', [UpjtekajeController::class, 'deleteupjfooter'])->name('deleteupjfooter');
 });
 
 

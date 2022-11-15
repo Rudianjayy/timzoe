@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\footeer;
-
+use App\Models\footerppdb;
 use Illuminate\Http\Request;
 use App\Models\Footeerdua;
 
@@ -79,6 +79,83 @@ class FooteerController extends Controller
         return redirect('footeeradmin')->with('success',' Data Berhasil di Hapus!');
     }
 
+
+
+
+
+
+
+
+    //FOOTER PPDB
+
+    public function adminfooterppdb(){
+        $link = footeerdua::all();
+        $data = footeer::all();
+        return view('ppdb.footer.adminfooterppdb', compact('data','link'));
+    }
+    public function tambahfooterppdb()
+    {
+        return view('ppdb.footer.tambahfooterppdb');
+    }
+
+    public function prosesfooter(Request $request){
+        // dd($request->all());
+        $this->validate($request,[
+            'foto' =>'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
+            'deskripsi_footeer' =>'required',
+        ],[
+            'foto.required' =>'Harus diisi',
+            'foto.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
+            'deskripsi_footeer.required' =>'Harus diisi',
+
+        ]);
+        $data = footeer::create([
+            'foto' =>$request->foto,
+            'deskripsi_footeer' =>$request->deskripsi_footeer,
+        ]);
+        if($request->hasFile('foto')){
+            $request->file('foto')->move('fotomahasiswa/', $request->file('foto')->getClientOriginalName());
+            $data->foto = $request->file('foto')->getClientOriginalName();
+            $data->save();
+        }
+
+        return redirect()->route('footeeradmin')->with('success',' Data Berhasil di Tambahkan!');
+    }
+
+    public function editfooteerppdb($id){
+
+        $data = footeer::findOrFail($id);
+        return view('footeer.editfooteer', compact('data'));
+    }
+
+    public function editprosesfooter(Request $request, $id){
+        $this->validate($request,[
+            'foto' =>'mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
+            'deskripsi_footeer' =>'required',
+        ],[
+            'foto.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
+            'deskripsi_footeer' =>'harus diisi',
+
+        ]);
+        $data = footeer::find($id);
+        $data->update([
+            'deskripsi_footeer' =>$request->deskripsi_footeer,
+        ]);
+        if($request->hasFile('foto')){
+            $request->file('foto')->move('fotomahasiswa/',$request->file('foto')->getClientOriginalName());
+            $data->foto = $request->file('foto')->getClientOriginalName();
+            $data->save();
+        }
+
+        return redirect('footeeradmin')->with('success',' Data Berhasil di Ubah!');
+
+    }
+
+    public function deletefooteerppdb($id){
+        $data = footeer::find($id);
+        $data->delete();
+        return redirect('footeeradmin')->with('success',' Data Berhasil di Hapus!');
+    }
 
 
 

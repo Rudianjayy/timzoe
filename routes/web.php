@@ -23,7 +23,6 @@ use App\Http\Controllers\KurikulumController;
 use App\Http\Controllers\UpjtekajeController;
 use App\Http\Controllers\FooteerduaController;
 use App\Http\Controllers\KompetensiController;
-use App\Http\Controllers\DataidentitasController;
 use App\Http\Controllers\ProfilSekolahController;
 use App\Http\Controllers\FotokompetensiController;
 use App\Http\Controllers\IdentitasSekolahController;
@@ -32,6 +31,7 @@ use App\Models\Mitra;
 use App\Models\Muhinews;
 use App\Models\Prestasi;
 use App\Http\Controllers\ProfiladminController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -52,37 +52,7 @@ Route::get('/', [LandingController::class, 'index'])->name('landing');
 Route::get('/authors', [LandingController::class, 'authors'])->name('authors');
 
 
-
-
-
-
-
-//login&register
-Route::get('/register', [LoginController::class, 'register'])->name('register')->middleware('guest');
-Route::post('/registeruser', [LoginController::class, 'registeruser'])->name('registeruser');
-Route::get('/login', [LoginController::class, 'login'])->name('login')->middleware('guest');
-Route::post('/loginproses', [LoginController::class, 'loginproses'])->name('loginproses');
-Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
-
-
-
-
-Route::get('/admincarapendaftaran',[PpdbController::class, 'loby25'])->name('admincarapendaftaran');
-Route::get('/tambahcarapendaftaran',[PpdbController::class, 'tambahcarapendaftaran'])->name('tambahcarapendaftaran');
-Route::post('/submitdata25',[PpdbController::class, 'submitdata25'])->name('submitdata25');
-Route::get('/editcarapendaftaran/{id}',[PpdbController::class, 'editcarapendaftaran'])->name('editcarapendaftaran');
-Route::post('/submitedit25/{id}',[PpdbController::class, 'submitedit25'])->name('submitedit25');
-Route::get('/deletecarapendaftaran/{id}',[PpdbController::class, 'deletecarapendaftaran'])->name('deletecarapendaftaran');
-
-
-
-
-
-
-
-
-
-//crud yang bisa diakses oleh admin, user tidak bisa
+//dashboard admin
 Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
     //dashboard
     Route::get('/welcome', function () {
@@ -92,6 +62,78 @@ Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
         $mitra = Mitra::count();
         return view('welcome', compact('berita', 'galery', 'prestasi', 'mitra'));
     })->middleware('auth');
+});
+
+Route::group(['middleware' => ['auth', 'hakakses:admin,user']], function () {
+    //dashboard
+    Route::get('/welcome', function () {
+        $berita = Muhinews::count();
+        $galery = Album::count();
+        $prestasi = Prestasi::count();
+        $mitra = Mitra::count();
+        return view('welcome', compact('berita', 'galery', 'prestasi', 'mitra'));
+    });
+});
+
+
+
+
+
+//login&register
+Route::get('/register', [LoginController::class, 'register'])->name('register');
+Route::post('/registeruser', [LoginController::class, 'registeruser'])->name('registeruser');
+Route::get('/login', [LoginController::class, 'login'])->name('login');
+Route::post('/loginproses', [LoginController::class, 'loginproses'])->name('loginproses');
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+
+
+
+
+
+
+
+
+
+
+//Profiladmin
+Route::get('/profiladmin',[ProfiladminController::class,'profiladmin'])->name('profiladmin');
+Route::get('/editprofiladmin',[ProfiladminController::class,'editprofiladmin'])->name('editprofiladmin');
+Route::post('/updateprofiladmin',[ProfiladminController::class, 'updateprofiladmin'])->name('updateprofiladmin');
+Route::post('/updatepassword',[ProfiladminController::class, 'updatepassword'])->name('updatepassword');
+Route::post('/crop',[ProfiladminController::class, 'crop'])->name('user.crop');
+
+
+
+
+//Iduka
+Route::get('/iduka',[IdukaController::class, 'index'])->name('iduka');
+Route::get('/idukaadmin',[IdukaController::class, 'indexadmin'])->name('idukaadmin');
+Route::get('/tambahiduka',[IdukaController::class, 'tambahiduka'])->name('tambahiduka');
+Route::post('/idukaproses',[IdukaController::class, 'idukaproses'])->name('idukaproses');
+Route::get('/editiduka/{id}',[IdukaController::class, 'editiduka'])->name('editiduka');
+Route::post('/editproses3/{id}',[IdukaController::class, 'editproses3'])->name('editproses3');
+Route::get('/deleteiduka/{id}',[IdukaController::class, 'delete'])->name('delete');
+
+
+Route::get('/mouadmin',[FotoidukaController::class, 'mouadmin'])->name('mouadmin');
+Route::get('/tambahfotomou',[FotoidukaController::class, 'tambahfotomou'])->name('tambahfotomou');
+Route::post('/fotomouproses',[FotoidukaController::class, 'fotomouproses'])->name('fotomouproses');
+Route::get('/editfotomou/{id}',[FotoidukaController::class, 'editfotomou'])->name('editfotomou');
+Route::post('/editproses4/{id}',[FotoidukaController::class, 'editproses4'])->name('editproses4');
+Route::get('/deletefotomou/{id}',[FotoidukaController::class, 'delete'])->name('delete');
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     //tentangkami
     //profilsekolah
@@ -534,7 +576,6 @@ Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
     Route::get('/editupjfooter/{id}', [UpjtekajeController::class, 'editupjfooter'])->name('editupjfooter');
     Route::post('/submitedit21/{id}', [UpjtekajeController::class, 'submitedit21'])->name('submitedit21');
     Route::get('/deleteupjfooter/{id}', [UpjtekajeController::class, 'deleteupjfooter'])->name('deleteupjfooter');
-});
 
 
 //Profiladmin
@@ -554,3 +595,6 @@ Route::group(['middleware' => ['auth', 'hakakses:admin,user']], function () {
     Route::post('/submitedit24/{id}', [PpdbController::class, 'submitedit24'])->name('submitedit24');
     Route::get('/deletedeskripsipendaftaran/{id}', [PpdbController::class, 'deletedeskripsipendaftaran'])->name('deletedeskripsipendaftaran');
 });
+
+
+

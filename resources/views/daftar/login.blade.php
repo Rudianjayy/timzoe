@@ -49,7 +49,7 @@
                 </div>
 
 
-                <div class="mb-3 mt-3">
+                <div class="mb-3 mt-5">
                     <label for="inputPassword" class="" style="color: black">Password</label>
                     <input type="password" name="password" id="password" class="form-control mb-2"
                         placeholder="Password">
@@ -83,7 +83,7 @@
                 <a href="/register" class="btn btn-lg btn-outline-dark btn-block btn-rounded mb-3">Register</a>
             </div>
 
-            <div class="col-md-12 mb-0 text-center social-icons">
+            {{-- <div class="col-md-12 mb-0 text-center social-icons">
                 <h5 class="mt-4 mb-4">atau</h5>
                 <button class="btn btn-outline-secondary rounded-circle btn-rounded mb-4 mr-2"><i
                         class="flaticon-facebook-logo flaticon-circle-p"></i></button>
@@ -91,7 +91,7 @@
                         class="flaticon-google-plus-bold flaticon-circle-p"></i></button>
                 <button class="btn btn-outline-secondary rounded-circle btn-rounded mb-4 mr-2"><i
                         class="flaticon-twitter-logo flaticon-circle-p"></i></button>
-            </div>
+            </div> --}}
         </div>
     </form>
 

@@ -73,13 +73,13 @@ Route::get('/deletedeskripsipendaftaran/{id}',[PpdbController::class, 'deletedes
 
 
 //syaratpendaftaran
-Route::get('/syaratpendaftaran',[PpdbController::class, 'syaratpendaftaran'])->name('syaratpendaftaran');
+Route::get('/syaratdaftar',[PpdbController::class, 'syaratdaftar'])->name('syaratdaftar');
 Route::get('/adminsyaratdaftar',[PpdbController::class, 'adminsyaratdaftar'])->name('adminsyaratdaftar');
 Route::get('/editsyaratdaftar/{id}',[PpdbController::class, 'editsyaratdaftar'])->name('editsyaratdaftar');
 Route::post('/editproses12/{id}',[PpdbController::class, 'editproses12'])->name('editproses12');
 Route::get('/tambahsyaratdaftar/{id}',[PpdbController::class, 'tambahsyaratdaftar'])->name('tambahsyaratdaftar');
 Route::post('/submitproses12/{id}',[PpdbController::class, 'submitproses12'])->name('submitproses12');
-Route::get('/deletesyaratpendaftaran/{id}',[PpdbController::class, 'deletesyaratpendaftaran'])->name('deletesyaratpendaftaran');
+Route::get('/deletesyaratdaftar/{id}',[PpdbController::class, 'deletesyaratdaftar'])->name('deletesyaratdaftar');
 
 
 //kontak

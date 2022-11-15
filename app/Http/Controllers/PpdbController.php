@@ -182,7 +182,7 @@ class PpdbController extends Controller
             'deskripsi_detail' =>$request->deskripsi_detail,
         ]);
 
-        return redirect('deskripsipendaftaran')->with('toast_success',' Data Berhasil di Ubah!');
+        return redirect('syaratdaftar')->with('toast_success',' Data Berhasil di Ubah!');
 
     }
 
@@ -204,14 +204,14 @@ class PpdbController extends Controller
             'deskripsi' =>$request->deskripsi,
             'deskripsi_detail' =>$request->deskripsi_detail,
         ]);
-        return redirect()->route('deskripsipendaftaran')->with('success',' Data Berhasil di Tambahkan!');
+        return redirect()->route('syaratdaftar')->with('success',' Data Berhasil di Tambahkan!');
     }
 
 
     public function deletesyaratdaftar($id){
         $data = Deskripsipendaftaran::find($id);
         $data->delete();
-        return redirect('deskripsipendaftaran')->with('toast_error',' Data Berhasil di Hapus!');
+        return redirect('syaratdaftar')->with('toast_error',' Data Berhasil di Hapus!');
     }
 
 
@@ -226,7 +226,7 @@ class PpdbController extends Controller
         $kontak = Deskripsipendaftaran::all();
         $cp = Carapendaftaran::all();
         $data3 = kontak::all();
-        return view('ppdb.syarat.kontak', compact('f','kh','dp','pd','kontak','cp','data3'));
+        return view('ppdb.kontak.kontak', compact('f','kh','dp','pd','kontak','cp','data3'));
     }
 
 
@@ -240,8 +240,8 @@ class PpdbController extends Controller
 
     public function editkontak($id){
 
-        $data = Deskripsipendaftaran::findOrFail($id);
-        return view('ppdb.kontak.editkontak', compact('data'));
+        $data3 = kontak::findOrFail($id);
+        return view('ppdb.kontak.editkontak', compact('data3'));
     }
 
     public function editproses14(Request $request, $id){

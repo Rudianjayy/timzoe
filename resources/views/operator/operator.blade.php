@@ -114,13 +114,12 @@
 
 
     </body>
-
         <script>
             $('.delete').click(function() {
                 var id = $(this).attr('data-id');
                 var nama = $(this).attr('data-nama');
 
-
+                
                 swal({
                         title: "Apa kamu yakin ingin menghapus data ini?",
                         text: "Kamu akan menghapus data dengan album  " + nama + "! ",
@@ -140,6 +139,7 @@
                     });
             });
         </script>
+
         <script>
             @if (Session::has('success'))
                 toastr.success("{{ Session::get('success') }}")

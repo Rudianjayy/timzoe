@@ -25,6 +25,7 @@ class User extends Authenticatable
         'foto_bg',
         'alamat',
         'notelpon',
+        'role',
     ];
 
     /**

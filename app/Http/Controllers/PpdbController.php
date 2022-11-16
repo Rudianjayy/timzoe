@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Carapendaftaran;
 use App\Models\Deskripsipendaftaran;
+use App\Models\Formulir;
 use App\Models\syaratdaftar;
 use App\Models\kontak;
 use App\Models\Jurusan;
@@ -218,6 +219,10 @@ class PpdbController extends Controller
 
 
 
+
+
+
+
     public function kontak(){
         $f = Muhinews::all();
         $kh = Jurusan::all();
@@ -302,6 +307,71 @@ class PpdbController extends Controller
         $data = Deskripsipendaftaran::find($id);
         $data->delete();
         return redirect('deskripsipendaftaran')->with('toast_error',' Data Berhasil di Hapus!');
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    public function adminformulir(){
+       $data4 = Formulir::all();
+        return view('ppdb.formulir.formulir', compact('data4'));
+    }
+
+    public function tambahformulir()
+    {
+        return view('ppdb.formulir.tambah-formulir');
+    }
+
+    public function submitdata27(Request $request){
+        $this->validate($request,[
+            'nama' =>'required',
+            'nama_email' =>'required',
+            'notelpon' =>'required',
+            'subjek' =>'required',
+            'pesan' =>'required',
+
+        ],[
+            'nama.required' =>'Harus diisi',
+            'nama_email.required' =>'Harus diisi',
+            'notelpon.required' =>'Harus diisi',
+            'subjek.required' =>'Harus diisi',
+            'pesan.required' =>'Harus diisi',
+
+
+        ]);
+        $data4 = Formulir::create([
+            'nama' =>$request->nama,
+            'nama_email' =>$request->nama_email,
+            'notelpon' =>$request->notelpon,
+            'subjek' =>$request->subjek,
+            'pesan' =>$request->pesan,
+
+        ]);
+        return redirect()->route('adminformulir')->with('success',' Data Berhasil di Tambahkan!');
+    }
+
+    public function deleteformulir($id){
+        $data4 = Formulir::find($id);
+        $data4 ->delete();
+        return redirect('adminformulir')->with('toast_error',' Data Berhasil di Hapus!');
     }
 
 

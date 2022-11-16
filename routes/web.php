@@ -73,6 +73,8 @@ Route::post('/submitdata26',[LoginController::class, 'submitdata26'])->name('sub
 Route::get('/editoperator/{id}',[LoginController::class, 'editoperator'])->name('editoperator');
 Route::post('/submitedit26/{id}',[LoginController::class, 'submitedit26'])->name('submitedit26');
 Route::get('/deleteoperator/{id}',[LoginController::class, 'deleteoperator'])->name('deleteoperator');
+Route::get('/logoutoperator', [LoginController::class, 'logoutoperator'])->name('logoutoperator');
+Route::get('/logoutuser', [LoginController::class, 'logoutuser'])->name('logoutuser');
 
 
 
@@ -90,6 +92,9 @@ Route::post('/submitdata25',[PpdbController::class, 'submitdata25'])->name('subm
 Route::get('/editcarapendaftaran/{id}',[PpdbController::class, 'editcarapendaftaran'])->name('editcarapendaftaran');
 Route::post('/submitedit25/{id}',[PpdbController::class, 'submitedit25'])->name('submitedit25');
 Route::get('/deletecarapendaftaran/{id}',[PpdbController::class, 'deletecarapendaftaran'])->name('deletecarapendaftaran');
+
+
+
 
 
 
@@ -569,13 +574,19 @@ Route::group(['middleware' => ['auth', 'hakakses:admin,user']], function () {
         return view ('welcome', compact('berita', 'galery', 'prestasi', 'mitra'));
     })->middleware('auth');
     
+    Route::get('/adminformulir',[PpdbController::class, 'loby27'])->name('adminformulir');
+Route::get('/tambahformulir',[PpdbController::class, 'tambahformulir'])->name('tambahformulir');
+Route::post('/submitdata27',[PpdbController::class, 'submitdata27'])->name('submitdata27');
+Route::get('/deleteformulir/{id}',[PpdbController::class, 'deleteformulir'])->name('deleteformulir');
+
+
     Route::get('/profiladmin', [ProfiladminController::class, 'profiladmin'])->name('profiladmin');
     Route::get('/editprofiladmin', [ProfiladminController::class, 'editprofiladmin'])->name('editprofiladmin');
     Route::post('/updateprofiladmin', [ProfiladminController::class, 'updateprofiladmin'])->name('updateprofiladmin');
 })
 
 ;
-Route::group(['middleware' => ['auth', 'hakakses:admin,operator1,operator2']], function () {
+Route::group(['middleware' => ['auth', 'hakakses:admin,user,operator1,operator2']], function () {
     
     Route::get('/welcome', function () {
         $berita = Muhinews::count();

@@ -26,9 +26,6 @@ class LoginController extends Controller
         }else{
             return redirect()->back()->with('password','password salah');
         }
-
-
-
     }
 
     public function register(){
@@ -51,7 +48,7 @@ class LoginController extends Controller
             'name' => $request->name ,
             'email' => $request->email,
             'password' => bcrypt($request->password),
-            'role' => $request->role,
+            'role' => 'user',
             'remember_token' => Str::random(60),
 
         ]);
@@ -77,7 +74,8 @@ class LoginController extends Controller
     }
     public function tambahoperator()
     {
-        return view('operator.tambah-operator');
+        $admin = User::findOrFail(Auth::guard('admin')->user()->id);
+        return view('operator.tambah-operator', compact('admin'));
     }
 
     public function submitdata26(Request $request)
@@ -159,6 +157,16 @@ class LoginController extends Controller
         $data1 = User::find($id);
         $data1->delete();
         return redirect('adminoperator')->with('success', ' Data Berhasil di Hapus!');
+    }
+
+    public function logoutoperator(){
+        Auth::guard('operator1')->logout();
+        return redirect('login')->with('success', 'Anda berhasil logout!');
+    }
+
+    public function logoutuser(){
+        Auth::guard('user')->logout();
+        return redirect('login')->with('success', 'Anda berhasil logout!');
     }
 
   

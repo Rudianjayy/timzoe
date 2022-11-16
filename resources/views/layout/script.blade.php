@@ -92,5 +92,12 @@
     </script>
 
 
+    <script src="{{ asset('admintemp/adminnew/riski/nopan/plugins/charts/amcharts/amcharts.js') }}"></script>
+    <script src="{{ asset('admintemp/adminnew/riski/nopan/plugins/charts/amcharts/serial.js') }}"></script>
+    <script src="{{ asset('admintemp/adminnew/riski/nopan/plugins/charts/amcharts/light.js') }}"></script>
+    <!-- END PAGE LEVEL SCRIPTS -->
+
+    <!-- BEGIN CUSTOM SCRIPTS FILE -->
+    <script src="{{ asset('admintemp/adminnew/riski/nopan/plugins/charts/amcharts/column_and_barchart.js') }}"></script>
 
 </body>

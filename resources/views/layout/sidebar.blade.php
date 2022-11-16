@@ -57,6 +57,26 @@
                     </ul>
                 </li>
             @endif
+            @if (auth()->user()->role == 'user')
+                <li class="menu-title">Menu</li>
+                <li class="menu">
+                    <a href="#tentangkami" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <div class="">
+                            <i class="flaticon-menu-list"></i>
+                            <span>formulir</span>
+                        </div>
+                        <div>
+                            <i class="flaticon-right-arrow"></i>
+                        </div>
+                    </a>
+                    <ul class="collapse submenu list-unstyled" id="tentangkami" data-parent="#accordionExample">
+                        <li>
+                            <a href="/tambahformulir"> Formulir</a>
+                        </li>
+                       
+                    </ul>
+                </li>
+            @endif
 
             @if (auth()->user()->role == 'admin')
                 <li class="menu">

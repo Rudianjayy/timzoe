@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Carapendaftaran;
 use App\Models\Deskripsipendaftaran;
+use App\Models\Formulir;
 use App\Models\syaratdaftar;
 use App\Models\kontak;
 use App\Models\Jurusan;
@@ -182,7 +183,7 @@ class PpdbController extends Controller
             'deskripsi_detail' =>$request->deskripsi_detail,
         ]);
 
-        return redirect('deskripsipendaftaran')->with('toast_success',' Data Berhasil di Ubah!');
+        return redirect('syaratdaftar')->with('toast_success',' Data Berhasil di Ubah!');
 
     }
 
@@ -204,15 +205,19 @@ class PpdbController extends Controller
             'deskripsi' =>$request->deskripsi,
             'deskripsi_detail' =>$request->deskripsi_detail,
         ]);
-        return redirect()->route('deskripsipendaftaran')->with('success',' Data Berhasil di Tambahkan!');
+        return redirect()->route('syaratdaftar')->with('success',' Data Berhasil di Tambahkan!');
     }
 
 
     public function deletesyaratdaftar($id){
         $data = Deskripsipendaftaran::find($id);
         $data->delete();
-        return redirect('deskripsipendaftaran')->with('toast_error',' Data Berhasil di Hapus!');
+        return redirect('syaratdaftar')->with('toast_error',' Data Berhasil di Hapus!');
     }
+
+
+
+
 
 
 
@@ -226,7 +231,7 @@ class PpdbController extends Controller
         $kontak = Deskripsipendaftaran::all();
         $cp = Carapendaftaran::all();
         $data3 = kontak::all();
-        return view('ppdb.syarat.kontak', compact('f','kh','dp','pd','kontak','cp','data3'));
+        return view('ppdb.kontak.kontak', compact('f','kh','dp','pd','kontak','cp','data3'));
     }
 
 
@@ -240,8 +245,8 @@ class PpdbController extends Controller
 
     public function editkontak($id){
 
-        $data = Deskripsipendaftaran::findOrFail($id);
-        return view('ppdb.kontak.editkontak', compact('data'));
+        $data3 = kontak::findOrFail($id);
+        return view('ppdb.kontak.editkontak', compact('data3'));
     }
 
     public function editproses14(Request $request, $id){
@@ -302,6 +307,71 @@ class PpdbController extends Controller
         $data = Deskripsipendaftaran::find($id);
         $data->delete();
         return redirect('deskripsipendaftaran')->with('toast_error',' Data Berhasil di Hapus!');
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    public function adminformulir(){
+       $data4 = Formulir::all();
+        return view('ppdb.formulir.formulir', compact('data4'));
+    }
+
+    public function tambahformulir()
+    {
+        return view('ppdb.formulir.tambah-formulir');
+    }
+
+    public function submitdata27(Request $request){
+        $this->validate($request,[
+            'nama' =>'required',
+            'nama_email' =>'required',
+            'notelpon' =>'required',
+            'subjek' =>'required',
+            'pesan' =>'required',
+
+        ],[
+            'nama.required' =>'Harus diisi',
+            'nama_email.required' =>'Harus diisi',
+            'notelpon.required' =>'Harus diisi',
+            'subjek.required' =>'Harus diisi',
+            'pesan.required' =>'Harus diisi',
+
+
+        ]);
+        $data4 = Formulir::create([
+            'nama' =>$request->nama,
+            'nama_email' =>$request->nama_email,
+            'notelpon' =>$request->notelpon,
+            'subjek' =>$request->subjek,
+            'pesan' =>$request->pesan,
+
+        ]);
+        return redirect()->route('adminformulir')->with('success',' Data Berhasil di Tambahkan!');
+    }
+
+    public function deleteformulir($id){
+        $data4 = Formulir::find($id);
+        $data4 ->delete();
+        return redirect('adminformulir')->with('toast_error',' Data Berhasil di Hapus!');
     }
 
 

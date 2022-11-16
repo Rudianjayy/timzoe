@@ -13,12 +13,12 @@
         <div class="container">
             <div class="page-header">
                 <div class="page-title">
-                    <h3>syarat Pendaftaran</h3>
+                    <h3>syarat Daftar</h3>
                     <div class="crumbs">
                         <ul id="breadcrumbs" class="breadcrumb">
                             <li><a href="index.html"><i class="flaticon-home-fill"></i></a></li>
                             <li><a href="#">PPDB</a></li>
-                            <li class="active"><a href="#">syarat Pendaftaran</a></li>
+                            <li class="active"><a href="#">syarat Daftar</a></li>
                         </ul>
                     </div>
                 </div>
@@ -67,7 +67,7 @@
                                                         class="btn btn-success">Detail</a>
                                                 </td> --}}
 
-                                                {{-- <td>{{ $d->created_at->format('D M Y') }}</td> --}}
+                                                <td>{{ $d->created_at->format('D M Y') }}</td>
                                                 <td class="align-center">
                                                     <ul class="table-controls">
                                                         <li>
@@ -77,7 +77,7 @@
                                                             </a>
                                                         </li>
                                                         <li>
-                                                            <a href="#" class="delete fire"
+                                                            <a href="/deletesyaratdaftar" class="delete fire"
                                                                 data-id="{{ $d->id }}"
                                                                 data-nama="{{ $d->judul }}" data-toggle="tooltip"
                                                                 data-placement="top" title="Delete">

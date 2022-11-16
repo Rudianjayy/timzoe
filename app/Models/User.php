@@ -28,7 +28,7 @@ class User extends Authenticatable
         'twi',
         'alamat',
         'notelpon',
-        'role'
+        'role',
     ];
 
     /**

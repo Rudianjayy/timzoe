@@ -57,6 +57,26 @@
                     </ul>
                 </li>
             @endif
+            @if (auth()->user()->role == 'user')
+                <li class="menu-title">Menu</li>
+                <li class="menu">
+                    <a href="#tentangkami" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <div class="">
+                            <i class="flaticon-menu-list"></i>
+                            <span>formulir</span>
+                        </div>
+                        <div>
+                            <i class="flaticon-right-arrow"></i>
+                        </div>
+                    </a>
+                    <ul class="collapse submenu list-unstyled" id="tentangkami" data-parent="#accordionExample">
+                        <li>
+                            <a href="/tambahformulir"> Formulir</a>
+                        </li>
+
+                    </ul>
+                </li>
+            @endif
 
             @if (auth()->user()->role == 'admin')
                 <li class="menu">
@@ -314,6 +334,7 @@
                         <span>Mitra</span>
                     </div>
                     <div>
+
                         <i class="flaticon-right-arrow"></i>
                     </div>
                 </a>
@@ -394,7 +415,10 @@
                             <a href="/deskripsipendaftaran"> Deskripsi Landing PPDB</a>
                         </li>
                         <li>
-                            <a href="/admincarapendaftaran"> Cara Penddaftaran </a>
+                            <a href="/adminsyaratdaftar"> Syarat Pendaftaran</a>
+                        </li>
+                        <li>
+                            <a href="/adminkontak">Kontak</a>
                         </li>
                         <li>
                             <a href="/adminbiaya"> Biaya </a>
@@ -404,7 +428,65 @@
             @endif
 
 
+
+
+
+
+
+
             @if (auth()->user()->role == 'admin')
+            <li class="menu">
+                <a href="#footerppdb" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <div class="">
+                        <i class="flaticon-menu-list"></i>
+                        <span>Footer PPDB</span>
+                    </div>
+                    <div>
+                        <i class="flaticon-right-arrow"></i>
+                    </div>
+                </a>
+                <ul class="collapse submenu list-unstyled" id="footerppdb" data-parent="#accordionExample">
+                    <li>
+                        <a href="/adminfooterppdb"> Footer PPDB</a>
+                    </li>
+                    <li>
+                        <a href="/"> Footer Link</a>
+                    </li>
+
+                </ul>
+            </li>
+        @endif
+
+
+
+
+
+
+
+
+
+            @if (auth()->user()->role == 'admin')
+                <li class="menu-title">Operator</li>
+                <li class="menu">
+                    <a href="#operator" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <div class="">
+                            <i class="flaticon-menu-list"></i>
+                            <span>Operator</span>
+                        </div>
+                        <div>
+                            <i class="flaticon-right-arrow"></i>
+                        </div>
+                    </a>
+                    <ul class="collapse submenu list-unstyled" id="operator" data-parent="#accordionExample">
+                        <li>
+                            <a href="/adminoperator"> Operator</a>
+                        </li>
+
+                    </ul>
+                </li>
+            @endif
+
+            @if (auth()->user()->role == 'user')
                 <li class="menu-title">Operator</li>
                 <li class="menu">
                     <a href="#operator" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">

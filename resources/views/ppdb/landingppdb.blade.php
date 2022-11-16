@@ -1616,9 +1616,9 @@
         <div class="container">
             <div class="copy-right-content">
                 <p>
-                    Copyright @2022 Colugo. All Rights Reserved by
-                    <a href="https://hibootstrap.com/" target="_blank">
-                        Hibootsrap
+                    Copyright  © 2022 at SMK Muhammadiyah 1 Genteng. Supported by
+                    <a href="# target="_blank">
+                    Team Zoe
                     </a>
                 </p>
             </div>

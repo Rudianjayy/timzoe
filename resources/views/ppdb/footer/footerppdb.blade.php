@@ -3,17 +3,17 @@
         <div class="row">
             <div class="col-lg-3 col-md-6 col-12">
                 @php
-                    $ppdb = \App\Models\footeer::all();
+                    $logo = \App\Models\footeer::all();
                 @endphp
-                @foreach ($ppdb as $ppdb)
+                @foreach ($logo as $lg)
                     <div class="widget widget-logo">
                         <div class="logo-footer" id="logo-footer">
                             <a href="#">
-                                <img id="logo_footer" src="{{ asset('fotomahasiswa/' . $ppdb->foto) }}" alt="nft-gaming"
+                                <img id="logo_footer" src="{{ asset('fotomahasiswa/' . $lg->foto) }}" alt="nft-gaming"
                                     width="120" height="100" style="margin-left:50px;">
                             </a>
                         </div>
-                        <p class="sub-widget-logo">{!! $ppdb->deskripsi_footeer !!}</p>
+                        <p class="sub-widget-logo">{!! $lg->deskripsi_footeer !!}</p>
                         <div class="widget-social">
                             <ul>
                                 <li><a href="https://www.facebook.com/smkmuhigenteng"><i
@@ -45,15 +45,15 @@
                             <li><a href="{{ $pp->link }}">{{ $pp->judul }}</a></li>
                         @endforeach
 
-                          <li><a href="https://sekolah.data.kemdikbud.go.id/index.php/chome/profil/39108646-470a-4aac-bee3-bc8ea91b8973">Dapodik</a></li>
+                        {{--  <li><a href="https://sekolah.data.kemdikbud.go.id/index.php/chome/profil/39108646-470a-4aac-bee3-bc8ea91b8973">Dapodik</a></li>
                         <li><a href="https://sekolah.data.kemdikbud.go.id/index.php/chome/profil/39108646-470a-4aac-bee3-bc8ea91b8973">UPJ TKJ</a></li>
                         <li><a href="/profilsekolah">Tentang Kami</a></li>
-                        <li><a href="#">PPDB</a></li>
+                        <li><a href="#">PPDB</a></li>  --}}
 
                     </ul>
                 </div>
             </div>
-             <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+            {{--  <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                 <div class="widget widget-post">
                     <h5 class="title-widget">Berita </h5>
                     @php
@@ -74,7 +74,7 @@
                         @endforeach
                     </ul>
                 </div>
-            </div>
+            </div>  --}}
         </div>
     </div>
 </footer>

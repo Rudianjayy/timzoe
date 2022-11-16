@@ -278,7 +278,7 @@
             </div>
             <div class="row">
                 @foreach ($cp as $cp )
-                    
+
                 <div class="col-lg-4 col-md-6">
                     <div class="single-features">
                         <div class="icon">
@@ -720,9 +720,9 @@
                                             <i class="fas fa-check"></i>
                                             18 Januari - 28 Februari
                                         </li>
-                                       
+
                                     </ul>
-                                    
+
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6">
@@ -1002,7 +1002,7 @@
                 <div class="col-lg-6">
                     <div class="faq-accordion-content">
                         <ul class="accordion">
-                            
+
                             <li class="accordion-item">
                                 <a class="accordion-title" href="javascript:void(0)">
                                     <i class="fa fa-chevron-down"></i>
@@ -1499,134 +1499,122 @@
 
 
     <section class="footer-area pt-100 pb-70">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-footer-widget">
-                        <a href="#" class="logo">
-                            <h2>Colugo</h2>
-                        </a>
-                        <p>Plan ahead by day, week, or month, and see project status at a glance. Search and filter to
-                            focus in on anything form a single project individual.</p>
-                        <ul class="social-list">
-                            <li>
-                                <a href="#" target="_blank">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                            </li>
-                        </ul>
+    <footer id="footer" class="clearfix bg-style ft-home-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-12">
+                @php
+                    $ppdb = \App\Models\footeer::all();
+                @endphp
+                @foreach ($ppdb as $ppdb)
+                    <div class="widget widget-logo">
+                        <div class="logo-footer" id="logo-footer">
+                            <a href="#">
+                                <img id="logo_footer" src="{{ asset('fotomahasiswa/' . $ppdb->foto) }}" alt="nft-gaming"
+                                    width="120" height="100" style="margin-left:50px;">
+                            </a>
+                        </div>
+                        <p class="sub-widget-logo">{!! $ppdb->deskripsi_footeer !!}</p>
+                        <div class="widget-social">
+                            <ul>
+                                <li><a href="https://www.facebook.com/smkmuhigenteng"><i
+                                            class="fab fa-facebook-f"></i></a>
+                                </li>
+                                {{--  <li><a href="#"><i class="fab fa-gmail"></i></a></li>  --}}
+                                <li><a href="https://www.instagram.com/muhi.ig/?next=%2F&hl=id"><i
+                                            class="fab fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fal fa-envelope"></i></a></li>
+                                <li><a href="https://www.youtube.com/channel/UCJOjJCbfEcApeNYmDJ4tCCw"><i
+                                            class="fab fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-footer-widget pl-5">
-                        <h3>Company</h3>
-                        <ul class="list">
-                            <li>
-                                <a href="#">
-                                    About
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Carrers
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Awards
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    User Program
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Locations
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Login
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-footer-widget">
-                        <h3>Products</h3>
-                        <ul class="list">
-                            <li>
-                                <a href="#">
-                                    Integrations
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    API
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Documentation
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Sign Up
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Release Notes
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    User Program
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-footer-widget">
-                        <h3>Download</h3>
-                        <ul class="footer-holder">
-                            <li>
-                                <a href="#">
-                                    <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/store/1.png') }}"
-                                        alt="image">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/store/2.png') }}"
-                                        alt="image">
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                @endforeach
+            </div>
+            <div class="col-lg-2 col-md-6 col-sm-6 col-6">
+                <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+                <div class="elfsight-app-7e06bf3a-c3dd-4ad3-a974-4f6c4b30ba1e"></div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-6">
+                <div class="widget widget-menu menu-supports">
+                    <h5 class="title-widget">Lainnya</h5>
+                    @php
+                        $link = \App\Models\Footeerdua::all();
+                    @endphp
+                    <ul>
+                        @foreach ($link as $pp)
+                            <li><a href="{{ $pp->link }}">{{ $pp->judul }}</a></li>
+                        @endforeach
+
+                        {{--  <li><a href="https://sekolah.data.kemdikbud.go.id/index.php/chome/profil/39108646-470a-4aac-bee3-bc8ea91b8973">Dapodik</a></li>
+                        <li><a href="https://sekolah.data.kemdikbud.go.id/index.php/chome/profil/39108646-470a-4aac-bee3-bc8ea91b8973">UPJ TKJ</a></li>
+                        <li><a href="/profilsekolah">Tentang Kami</a></li>
+                        <li><a href="#">PPDB</a></li>  --}}
+
+                    </ul>
                 </div>
             </div>
+            {{--  <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+                <div class="widget widget-post">
+                    <h5 class="title-widget">Berita </h5>
+                    @php
+                        $muhiberita = \App\Models\Muhinews::orderBy('created_at','desc')->paginate(3);
+                    @endphp
+                    <ul class="post-new">
+                        @foreach ($muhiberita as $mb)
+                            <li>
+                                <div class="post-img">
+                                    <img src="{{ asset('fotomahasiswa/' . $mb->foto) }}" alt="Post New">
+                                </div>
+                                <div class="post-content">
+                                    <h6 class="title"><a href="/muhinews">{{ $mb->deskripsi_muhinews }}</a></h6>
+                                    <a href="/muhinews" class="post-date"><i
+                                            class="far fa-calendar-week"></i>{{ $mb->created_at }}</a>
+                                </div>
+                            </li>
+                        @endforeach
+                    </ul>
+                </div>
+            </div>  --}}
         </div>
+    </div>
+</footer>
+
+
+</div>
+
+</div>
+
+<a id="scroll-top"></a>
+
+<div class="modal fade popup" id="popup_bid_success" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="modal-body space-y-20 pd-40">
+                <h3 class="text-center">Your Bidding
+                    Successfuly Added</h3>
+                <p class="text-center">your bid <span class="price color-popup">(5.23ETH) </span> has been
+                    listing
+                    to our database</p>
+                <a href="#" class="btn btn-primary"> Watch the listings</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade popup" id="popup_bid" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+
+        </div>
+    </div>
+</div>
+
     </section>
 
 
@@ -1634,9 +1622,9 @@
         <div class="container">
             <div class="copy-right-content">
                 <p>
-                    Copyright @2022 Colugo. All Rights Reserved by
+                    Copyright © 2022 at SMK Muhammadiyah 1 Genteng. Supported by
                     <a href="https://hibootstrap.com/" target="_blank">
-                        Hibootsrap
+                        Team Zoe
                     </a>
                 </p>
             </div>

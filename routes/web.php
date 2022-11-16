@@ -54,6 +54,7 @@ Route::get('/', [LandingController::class, 'index'])->name('landing');
 Route::get('/authors', [LandingController::class, 'authors'])->name('authors');
 
 
+ Route::get('/upj', [UpjtekajeController::class, 'upj'])->name('upj');
 
 //ppdb
 Route::get('/pendaftaran', [PpdbController::class, 'pendaftaran'])->name('pendaftaran');
@@ -465,7 +466,7 @@ Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
 
     //upj
     Route::get('/indexupj', [UpjController::class, 'indexupj'])->name('indexupj');
-    Route::get('/upj', [UpjtekajeController::class, 'upj'])->name('upj');
+   
     Route::get('/adminupj', [UpjController::class, 'adminupj'])->name('adminupj');
     Route::get('/tambahupj', [UpjController::class, 'tambahupj'])->name('tambahupj');
     Route::post('/upjproses', [UpjController::class, 'upjproses'])->name('upjproses');

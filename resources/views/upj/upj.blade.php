@@ -112,7 +112,7 @@
             }
 
             @endforeach
-            
+
         </style>
 
         @foreach ($us as $ul )
@@ -265,7 +265,7 @@
         <section class="cta-one cta-one__about-one" style="background-image: url({{ asset('landingppdb/ppdb/style/assets/images/shapes/cta-bg-2-1.png') }});">
             <div class="container">
                 <h3>Visi <br></h3>
-                <p>{!! $upjvisimisi->upj_visi !!}</p>
+                <p style="color: black;">{!! $upjvisimisi->upj_visi !!}</p>
                 <h3>Misi <br></h3>
                 <p style="color:black !important;">{!! $upjvisimisi->upj_misi !!}</p>
             </div><!-- /.container -->

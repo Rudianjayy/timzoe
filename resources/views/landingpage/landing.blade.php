@@ -217,7 +217,7 @@
                 <h3>Album Galeri</h3>
             </div><!-- /.block-title text-center -->
             <ul class="portfolio-filter list-unstyled post-filter ">
-                <li data-filter=".filter-item" class="active"><span>All</span></li>
+                <!-- <li data-filter=".filter-item" class="active"><span>All</span></li> -->
 
             </ul><!-- /.portfolio-filter list-unstyled -->
             <div class="row masonary-layout filter-layout">
@@ -243,7 +243,7 @@
         <div class="row">
             <iframe class="map-contact"
                 src="https://maps.google.com/maps?q=smk%20muhammadiyah%201%20genteng&#038;t=m&#038;z=10&#038;output=embed&#038;iwloc=near"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                width="650" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </div>
 

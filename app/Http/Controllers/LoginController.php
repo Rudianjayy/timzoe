@@ -48,16 +48,17 @@ class LoginController extends Controller
             'name' => $request->name ,
             'email' => $request->email,
             'password' => bcrypt($request->password),
+            'foto' => 'noimg.png',
             'role' => 'user',
             'remember_token' => Str::random(60),
 
         ]);
-        return redirect('/login')->with('success','Berhasil daftar!');
+        return redirect('/login')->with('toast_success','Berhasil daftar!');
     }
 
     public function logout(){
         Auth::logout();
-        return redirect('login')->with('success', 'Anda berhasil logout!');
+        return redirect('login')->with('toast_success', 'Anda berhasil logout!');
     }
 
 
@@ -102,7 +103,7 @@ class LoginController extends Controller
             'foto' => $request->foto,
             'foto_bg' => $request->foto_bg,
             'alamat' => $request->alamat,
-            
+
 
         ]);
         if($request->hasFile('foto')){
@@ -169,5 +170,5 @@ class LoginController extends Controller
         return redirect('login')->with('success', 'Anda berhasil logout!');
     }
 
-  
+
 }

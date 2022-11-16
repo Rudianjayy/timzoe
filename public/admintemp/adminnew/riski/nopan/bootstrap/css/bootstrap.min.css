@@ -38,8 +38,9 @@
 *,
 ::after,
 ::before {
-    box-sizing: border-box
+    box-sizing: border-box;
 }
+
 
 html {
     font-family: sans-serif;
@@ -240,7 +241,7 @@ label {
     display: inline-block;
     color: black;
     margin-bottom: .5rem
-    
+
 }
 
 button {

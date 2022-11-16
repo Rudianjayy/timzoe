@@ -62,9 +62,9 @@ class UpjController extends Controller
             'judul3' => $request->judul3,
             'foto_upjj' => $request->foto_upjj,
         ]);
-        if ($request->hasFile('foto_upjj')) {
-            $request->file('foto_upjj')->move('fotomahasiswa/', $request->file('foto_upjj')->getClientOriginalName());
-            $data->foto_upjj = $request->file('foto_upj')->getClientOriginalName();
+        if ($request->hasFile('foto_upj')) {
+            $request->file('foto_upj')->move('fotomahasiswa/', $request->file('foto_upj')->getClientOriginalName());
+            $data->foto_upj = $request->file('foto_upj')->getClientOriginalName();
             $data->save();
         }
 

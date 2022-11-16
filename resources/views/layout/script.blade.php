@@ -90,6 +90,27 @@
             }
         });
     </script>
+    <script>
+        function initCustomScrollbar() {
+            var scrollPane = document.querySelector(".scroll-content");
+            var scrollPaneInit = $(scrollPane).mCustomScrollbar();
+
+            setTimeout(function () {
+                var scrollInnerPane = $(scrollPane).find(".mCustomScrollBox");
+                $(scrollInnerPane).height(window.innerHeight + "px");
+            }, 500);
+
+            $(window).resize(function () {
+                if (window.innerWidth < 768) {
+                    initCustomScrollbar();
+                } else {
+                    $(scrollPane).mCustomScrollBar('destroy');
+                }
+            });
+        }
+
+        initCustomScrollbar();
+</script>
 
 
     <script src="{{ asset('admintemp/adminnew/riski/nopan/plugins/charts/amcharts/amcharts.js') }}"></script>

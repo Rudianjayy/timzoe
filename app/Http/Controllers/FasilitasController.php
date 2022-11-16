@@ -45,11 +45,9 @@ class FasilitasController extends Controller
         // dd($request->all());
         $this->validate($request, [
 
-            'foto_sampul' => 'required',
             'judul_fasilitas' => 'required',
             'deskripsi' => 'required',
         ], [
-            'foto_sampul.required' => 'Harus diisi',
             'foto.mimes' => 'Harus jpg,jpeg,bmp,gif,png,webp',
             'judul_fasilitas.required' => 'Harus diisi',
             'deskripsi.required' => 'Harus diisi',
@@ -59,15 +57,10 @@ class FasilitasController extends Controller
 
         $data = fasilitassekolah::create([
             'foto' => $request->foto,
-            'foto_sampul' => $request->foto_sampul,
             'judul_fasilitas' => $request->judul_fasilitas,
             'deskripsi' => $request->deskripsi,
         ]);
-        if ($request->hasFile('foto_sampul')) {
-            $request->file('foto_sampul')->move('fotomahasiswa/', $request->file('foto_sampul')->getClientOriginalName());
-            $data->foto_sampul = $request->file('foto_sampul')->getClientOriginalName();
-            $data->save();
-        }
+
         if ($request->hasFile('foto')) {
             $request->file('foto')->move('fotomahasiswa/', $request->file('foto')->getClientOriginalName());
             $data->foto = $request->file('foto')->getClientOriginalName();
@@ -103,11 +96,7 @@ class FasilitasController extends Controller
             'judul_fasilitas' => $request->judul_fasilitas,
             'deskripsi' => $request->deskripsi,
         ]);
-        if ($request->hasFile('foto_sampul')) {
-            $request->file('foto_sampul')->move('fotomahasiswa/', $request->file('foto_sampul')->getClientOriginalName());
-            $data->foto_sampul = $request->file('foto_sampul')->getClientOriginalName();
-            $data->save();
-        }
+      
         if ($request->hasFile('foto')) {
             $request->file('foto')->move('fotomahasiswa/', $request->file('foto')->getClientOriginalName());
             $data->foto = $request->file('foto')->getClientOriginalName();

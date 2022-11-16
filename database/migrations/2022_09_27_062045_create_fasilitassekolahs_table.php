@@ -15,7 +15,6 @@ return new class extends Migration
     {
         Schema::create('fasilitassekolahs', function (Blueprint $table) {
             $table->id();
-            $table->string('foto_sampul');
             $table->string('foto');
             $table->string('judul_fasilitas');
             $table->string('deskripsi');

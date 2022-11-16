@@ -20,9 +20,12 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('notelpon')->nullable();
-            $table->string('foto')->nullable();
-            $table->string('foto_bg')->nullable();
-            $table->string('alamat')->nullable();
+            $table->string('foto')->default('noimg.png');
+            $table->string('foto_bg')->default('/user_image/header.jpg');
+            $table->string('fb')->nullable();
+            $table->string('ig')->nullable();
+            $table->string('twi')->nullable();
+            $table->text('alamat')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

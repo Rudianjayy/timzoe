@@ -32,7 +32,10 @@ class ProfiladminController extends Controller
             'name' => $request->name,
             'alamat' => $request->alamat,
             'notelpon' => $request->notelpon,
-            'foto' => $request->file('foto'),
+            'fb' => $request->fb,
+            'ig' => $request->ig,
+            'twi' => $request->twi,
+            'foto' => 'wa.png',
         ]);
         // dd($request);
         if ($request->hasFile('foto')) {
@@ -110,4 +113,55 @@ class ProfiladminController extends Controller
     //         ]);
     //     }
     // }
+
+    function crop(Request $request){
+        $path = '';
+        $file = $request->file('foto_id')->store('', 'public');
+
+        if( !$file ){
+            return response()->json(['status'=>0, 'msg'=>'Something went wrong, upload new picture failed.']);
+        }else{
+            $fotoLama = User::find(Auth::user()->id)->getAttributes()['foto'];
+
+            if ( $fotoLama != '') {
+                if (\File::exists(public_path($path.$fotoLama))) {
+                    \File::delete(public_path($path.$fotoLama));
+                    }
+                }
+
+                //Update foto
+                $update = User::find(Auth::user()->id)->update(['foto'=>$file]);
+
+                if ( !$file ) {
+                    return response()->json(['status'=>0, 'msg'=>'Something went wrong, updating picture in db failed.']);
+                } else{
+                    return response()->json(['status'=>1, 'msg'=>'Your profile picture has been updated succesfully.']);
+                }
+            }
+        }
+    function cropbg(Request $request){
+        $path = '/';
+        $file = $request->file('foto_bg_id')->store('user_images', 'public');
+
+        if( !$file ){
+            return response()->json(['status'=>0, 'msg'=>'Something went wrong, upload new picture failed.']);
+        }else{
+            $fotoLama = User::find(Auth::user()->id)->getAttributes()['foto_bg'];
+
+            if ( $fotoLama != '') {
+                if (\File::exists(public_path($path.$fotoLama))) {
+                    \File::delete(public_path($path.$fotoLama));
+                    }
+                }
+
+                //Update foto
+                $update = User::find(Auth::user()->id)->update(['foto_bg'=>$file]);
+
+                if ( !$file ) {
+                    return response()->json(['status'=>0, 'msg'=>'Something went wrong, updating picture in db failed.']);
+                } else{
+                    return response()->json(['status'=>1, 'msg'=>'Your profile picture has been updated succesfully.', 'name' => $file]);
+                }
+            }
+        }
 }

@@ -13,8 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('ekstrakulikuler_blogs', function (Blueprint $table) {
+        Schema::create('syaratdaftars', function (Blueprint $table) {
             $table->id();
+            $table->string('deskripsi');
+            $table->text('deskripsi_detail');
             $table->timestamps();
         });
     }
@@ -26,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ekstrakulikuler_blogs');
+        Schema::dropIfExists('syaratpendaftarans');
     }
 };

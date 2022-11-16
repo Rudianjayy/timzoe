@@ -51,7 +51,8 @@ class LoginController extends Controller
             'name' => $request->name ,
             'email' => $request->email,
             'password' => bcrypt($request->password),
-            'role' => $request->role,   
+            'role' => $request->role,
+            'foto' => 'noimg.png',
             'remember_token' => Str::random(60),
 
         ]);
@@ -64,6 +65,102 @@ class LoginController extends Controller
     }
 
 
+
+
+
+
+
+
+    public function loby26()
+    {
+        $data1 = User::all();
+        return view('operator.operator', compact('data1'));
+    }
+    public function tambahoperator()
+    {
+        return view('operator.tambah-operator');
+    }
+
+    public function submitdata26(Request $request)
+    {
+        // dd($request->all());
+        $this->validate($request, [
+            'name' => 'required',
+            'email' => 'required',
+            'password' => 'required',
+            'role' => 'required',
+        ], [
+            'name.required' => 'Harus diisi',
+            'email.required' => 'Harus diisi',
+            'password.required' => 'Harus diisi',
+            'role.required' => 'Harus diisi',
+
+        ]);
+        $data1 = User::create([
+            'role' => $request->role,
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => bcrypt($request->password),
+            'notelpon' => $request->notelpon,
+            'foto' => $request->foto,
+            'foto_bg' => $request->foto_bg,
+            'alamat' => $request->alamat,
+
+
+        ]);
+        if($request->hasFile('foto')){
+            $request->file('foto')->move('fotojurusan/', $request->file('foto')->getClientOriginalName());
+            $data1->foto = $request->file('foto')->getClientOriginalName();
+            $data1->save();
+        }
+        if($request->hasFile('foto_bg')){
+            $request->file('foto_bg')->move('fotojurusan/', $request->file('foto_bg')->getClientOriginalName());
+            $data1->foto_bg = $request->file('foto_bg')->getClientOriginalName();
+            $data1->save();
+        }
+
+        return redirect()->route('adminoperator')->with('success', ' Data Berhasil di Tambahkan!');
+    }
+
+    public function editoperator($id)
+    {
+
+        $data1 = User::findOrFail($id);
+        return view('operator.edit-operator', compact('data1'));
+    }
+
+    public function submitedit26(Request $request, $id)
+    {
+        $this->validate($request, [
+            'name' => 'required',
+            'email' => 'required',
+            'password' => 'required',
+            'role' => 'required',
+        ], [
+            'name.required' => 'Harus diisi',
+            'email.required' => 'Harus diisi',
+            'password.required' => 'Harus diisi',
+            'role.required' => 'Harus diisi',
+        ]);
+        $data1 = User::find($id);
+        $data1->update([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => bcrypt($request->password),
+            'notelpon' => $request->notelpon,
+            'alamat' => $request->alamat,
+            'role' => $request->role,
+        ]);
+
+        return redirect('adminoperator')->with('success', ' Data Berhasil di Ubah!');
+    }
+
+    public function deleteoperator($id)
+    {
+        $data1 = User::find($id);
+        $data1->delete();
+        return redirect('adminoperator')->with('success', ' Data Berhasil di Hapus!');
+    }
 
 
 }

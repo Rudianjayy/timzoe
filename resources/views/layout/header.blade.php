@@ -4,7 +4,7 @@
 
     <div>
         <p class="info">
-           <h6> <a href="#" class="d-block" style="color: rgb(226, 10, 10); align-items:center; display:flex; margin-top:12px;">Halo {{ Auth::user()->name }} :)</a></h6>
+           <h6> <a href="#" class="d-block" style="color: #805dca; align-items:center; display:flex; margin-top:12px;">Halo {{ Auth::user()->name }} :)</a></h6>
         </p>
     </div>
 
@@ -16,15 +16,6 @@
             <div class="dropdown-menu  position-absolute" aria-labelledby="userProfileDropdown">
                 <a class="dropdown-item" href="/profiladmin">
                     <i class="mr-1 flaticon-user-6"></i> <span>Profil</span>
-                </a>
-                <a class="dropdown-item" href="apps_scheduler.html">
-                    <i class="mr-1 flaticon-calendar-bold"></i> <span>My Schedule</span>
-                </a>
-                <a class="dropdown-item" href="apps_mailbox.html">
-                    <i class="mr-1 flaticon-email-fill-1"></i> <span>My Inbox</span>
-                </a>
-                <a class="dropdown-item" href="user_lockscreen_1.html">
-                    <i class="mr-1 flaticon-lock-2"></i> <span>Lock Screen</span>
                 </a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="/logout"  onclick="return confirm('Anda yakin ingin logout?')">

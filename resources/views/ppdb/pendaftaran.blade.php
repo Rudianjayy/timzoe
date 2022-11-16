@@ -70,18 +70,18 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#syarat" class="nav-link">
-                            Syarat Pendaftaran
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#screenshots" class="nav-link">
-                            Screenshots
-                        </a>
-                    </li>
-                    <li class="nav-item">
                         <a href="#daftar" class="nav-link">
                             Cara Pendaftaran
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#biaya" class="nav-link">
+                            Biaya & Jadwal
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#syarat" class="nav-link">
+                            Syarat Pendaftaran
                         </a>
                     </li>
                     <li class="nav-item">
@@ -277,16 +277,18 @@
                 <p> </p>
             </div>
             <div class="row">
+                @foreach ($cp as $cp )
+                    
                 <div class="col-lg-4 col-md-6">
                     <div class="single-features">
                         <div class="icon">
                             <i class="fa-solid fa-download"></i>
                         </div>
-                        <h3>High Resolution</h3>
-                        <p>Lorem ipsum dolor sit amet, con se ctetur adipiscing elit. In sagittis eg esta ante, sed
-                            viverra nunc tinci dunt nec elei fend et tiram.</p>
+                        <h3>{{ $cp->deskripsi }}</h3>
+                        <p>{{$cp->deskripsi_detail}}</p>
+                        </div>
                     </div>
-                </div>
+                    @endforeach
                 <div class="col-lg-4 col-md-6">
                     <div class="single-features">
                         <div class="icon">
@@ -681,7 +683,7 @@
     </section>
 
 
-    <section class="pricing-area pt-100 pb-70">
+    <section id="biaya" class="pricing-area pt-100 pb-70">
         <div class="container">
             <div class="section-title">
                 <h2>Pricing Plan</h2>
@@ -708,47 +710,19 @@
                             <div class="col-lg-4 col-md-6">
                                 <div class="single-pricing-table">
                                     <div class="pricing-header">
-                                        <h3>Standard</h3>
+                                        <h3>Gelombang 1</h3>
                                     </div>
                                     <div class="price">
-                                        <sup>$</sup>33 <sub>/ monthly</sub>
+                                       <h5>Geratis biaya pendaftaran</h5>
                                     </div>
                                     <ul class="pricing-features">
                                         <li>
                                             <i class="fas fa-check"></i>
-                                            Extra features
+                                            18 Januari - 28 Februari
                                         </li>
-                                        <li>
-                                            <i class="fa fa-check"></i>
-                                            Lifetime free support
-                                        </li>
-                                        <li>
-                                            <i class="fa fa-check"></i>
-                                            Upgrate options
-                                        </li>
-                                        <li>
-                                            <i class="fa fa-check"></i>
-                                            Full access
-                                        </li>
-                                        <li>
-                                            <i class="fa fa-times"></i>
-                                            Web Design
-                                        </li>
-                                        <li>
-                                            <i class="fa fa-times"></i>
-                                            App Design
-                                        </li>
-                                        <li>
-                                            <i class="fa fa-times"></i>
-                                            Web Developement
-                                        </li>
+                                       
                                     </ul>
-                                    <div class="pricing-btn">
-                                        <a href="#" class="default-btn">
-                                            Purchase
-                                            <span></span>
-                                        </a>
-                                    </div>
+                                    
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6">
@@ -1028,18 +1002,7 @@
                 <div class="col-lg-6">
                     <div class="faq-accordion-content">
                         <ul class="accordion">
-                            @foreach ($cp as $cp )
-                                
-                            <li class="accordion-item">
-                                <a class="accordion-title" href="javascript:void(0)">
-                                    <i class="fa fa-chevron-down"></i>
-                                    {{ $cp->deskripsi }}
-                                </a>
-                                <p class="accordion-content">
-                                    {{ $cp->deskripsi_detail }}
-                                </p>
-                                </li>
-                                @endforeach
+                            
                             <li class="accordion-item">
                                 <a class="accordion-title" href="javascript:void(0)">
                                     <i class="fa fa-chevron-down"></i>

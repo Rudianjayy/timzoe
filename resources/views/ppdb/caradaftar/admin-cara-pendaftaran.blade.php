@@ -42,7 +42,7 @@
                         <div class="widget-content widget-content-area">
                             <div class="table-responsive mb-4">
 
-                                <table id="ecommerce-product-list" class="table  table-bordered">
+                                <table id="ecommerce-product-list" class="table table-bordered">
                                     <thead>
                                         <tr>
                                             <th scope="col">#</th>

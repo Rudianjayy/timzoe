@@ -13,13 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('biayas', function (Blueprint $table) {
+        Schema::create('mitrappdbs', function (Blueprint $table) {
             $table->id();
-            $table->string('judul');
-            $table->string('deskripsi');
-            $table->string('gelombang');
-            $table->string('penjelasan');
-            $table->string('jadwal');
+            $table->string('foto');
             $table->timestamps();
         });
     }
@@ -31,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('biayas');
+        Schema::dropIfExists('mitrappdbs');
     }
 };

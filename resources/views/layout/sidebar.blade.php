@@ -399,6 +399,12 @@
                         <li>
                             <a href="/adminbiaya"> Biaya </a>
                         </li>
+                        <li>
+                            <a href="/adminmitrappdb"> Mitra PPDB</a>
+                        </li>
+                        <li>
+                            <a href="/admininfo"> Informasi</a>
+                        </li>
                     </ul>
                 </li>
             @endif
@@ -435,10 +441,11 @@
 
 
 
+        
 
 
 
-
+    
 
 
             @if (auth()->user()->role == 'admin')

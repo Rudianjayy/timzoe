@@ -51,6 +51,9 @@ use App\Http\Controllers\PasswordController;
 // });
 Route::get('/', [LandingController::class, 'index'])->name('landing');
 
+// Route::get('/', [LandingppdbController::class, 'landingppdb'])->name('landingppdb');
+
+
 Route::get('/authors', [LandingController::class, 'authors'])->name('authors');
 
 
@@ -98,13 +101,12 @@ Route::get('/deletedeskripsipendaftaran/{id}',[PpdbController::class, 'deletedes
 
 
 //syaratpendaftaran
-Route::get('/syaratdaftar',[PpdbController::class, 'syaratdaftar'])->name('syaratdaftar');
-Route::get('/adminsyaratdaftar',[PpdbController::class, 'adminsyaratdaftar'])->name('adminsyaratdaftar');
-Route::get('/editsyaratdaftar/{id}',[PpdbController::class, 'editsyaratdaftar'])->name('editsyaratdaftar');
-Route::post('/editproses12/{id}',[PpdbController::class, 'editproses12'])->name('editproses12');
-Route::get('/tambahsyaratdaftar/{id}',[PpdbController::class, 'tambahsyaratdaftar'])->name('tambahsyaratdaftar');
-Route::post('/submitproses12/{id}',[PpdbController::class, 'submitproses12'])->name('submitproses12');
-Route::get('/deletesyaratdaftar/{id}',[PpdbController::class, 'deletesyaratdaftar'])->name('deletesyaratdaftar');
+Route::get('/adminsyaratdaftar', [PpdbController::class, 'adminsyaratdaftar'])->name('adminsyaratdaftar');
+Route::get('/editsyaratdaftar/{id}', [PpdbController::class, 'editsyaratdaftar'])->name('editsyaratdaftar');
+Route::post('/prosesdaftar', [PpdbController::class, 'prosesdaftar'])->name('prosesdaftar');
+Route::get('/tambahsyaratdaftar', [PpdbController::class, 'tambahsyaratdaftar'])->name('tambahsyaratdaftar');
+Route::post('/submitdaftar/{id}', [PpdbController::class, 'submitdaftar'])->name('submitdaftar');
+Route::get('/deletedaftar/{id}', [PpdbController::class, 'deletedaftar'])->name('deletedaftar');
 
 
 //kontak
@@ -112,11 +114,45 @@ Route::get('/deletesyaratdaftar/{id}',[PpdbController::class, 'deletesyaratdafta
 Route::get('/kontak',[PpdbController::class, 'kontak'])->name('kontak');
 Route::get('/adminkontak',[PpdbController::class, 'adminkontak'])->name('adminkontak');
 Route::get('/editkontak/{id}',[PpdbController::class, 'editkontak'])->name('editkontak');
-Route::post('/editproses14/{id}',[PpdbController::class, 'editproses14'])->name('editproses14');
-Route::get('/tambahkontak/{id}',[PpdbController::class, 'tambahkontak'])->name('tambahkontak');
-Route::post('/submitproses14/{id}',[PpdbController::class, 'submitproses14'])->name('submitproses14');
+Route::post('/editproses14',[PpdbController::class, 'editproses14'])->name('editproses14');
+Route::get('/tambahkontak',[PpdbController::class, 'tambahkontak'])->name('tambahkontak');
+Route::post('/submitproses14',[PpdbController::class, 'submitproses14'])->name('submitproses14');
 Route::get('/deletekontak/{id}',[PpdbController::class, 'deletekontak'])->name('deletekontak');
 
+
+
+
+//Biaya
+
+Route::get('/biaya',[PpdbController::class, 'biaya'])->name('biaya');
+Route::get('/adminbiaya',[PpdbController::class, 'adminbiaya'])->name('adminbiaya');
+Route::get('/editbiaya/{id}',[PpdbController::class, 'editbiaya'])->name('editbiaya');
+Route::post('/editprosesbiaya1',[PpdbController::class, 'editprosesbiaya1'])->name('editprosesbiaya1');
+Route::get('/tambahbiaya',[PpdbController::class, 'tambahbiaya'])->name('tambahbiaya');
+Route::post('/submitprosesbiaya',[PpdbController::class, 'submitprosesbiaya'])->name('submitprosesbiaya');
+Route::get('/deletebiaya/{id}',[PpdbController::class, 'deletebiaya'])->name('deletebiaya');
+
+
+
+//mitrappdb
+
+Route::get('/adminmitrappdb',[PpdbController::class, 'adminmitrappdb'])->name('adminmitrappdb');
+Route::get('/editmitrappdb/{id}',[PpdbController::class, 'editmitrappdb'])->name('editmitrappdb');
+Route::post('/prosesmitra',[PpdbController::class, 'prosesmitra'])->name('prosesmitra');
+Route::get('/tambahmitrappdb',[PpdbController::class, 'tambahmitrappdb'])->name('tambahmitrappdb');
+Route::post('/submitprosesmitra',[PpdbController::class, 'submitprosesmitra'])->name('submitprosesmitra');
+Route::get('/deletemitrappdb/{id}',[PpdbController::class, 'deletemitrappdb'])->name('deletemitrappdb');
+
+
+
+//InfoPPDB
+
+Route::get('/admininfo',[PpdbController::class, 'admininfo'])->name('admininfo');
+Route::get('/editinfo/{id}',[PpdbController::class, 'editinfo'])->name('editinfo');
+Route::post('/prosesinfo',[PpdbController::class, 'prosesinfo'])->name('prosesinfo');
+Route::get('/tambahinfo',[PpdbController::class, 'tambahinfo'])->name('tambahinfo');
+Route::post('/submitinfo',[PpdbController::class, 'submitinfo'])->name('submitinfo');
+Route::get('/deleteinfo/{id}',[PpdbController::class, 'deleteinfo'])->name('deleteinfo');
 
 
 

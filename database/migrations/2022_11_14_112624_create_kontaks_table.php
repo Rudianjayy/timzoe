@@ -17,10 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string('nama');
             $table->string('namaemail');
-            $table->interger('notelpon');
+            $table->integer('notelpon');
             $table->string('subjek');
             $table->string('pesan');
-
             $table->timestamps();
         });
     }

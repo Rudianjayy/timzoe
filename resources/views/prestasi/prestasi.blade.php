@@ -37,7 +37,7 @@
                                     <h4>Prestasi</h4>
                                 </div>
                                 <div>
-                                    <a href="/tambahprestasi" class="btn btn-primary mt-5"
+                                    <a href="/tambahprestasi" class="btn btn-primary mt-3"
                                         id="kt_account_profile_details_submit" style="margin-left: 30px;">Tambah
                                         +</a>
                                 </div>
@@ -124,9 +124,9 @@
                 .then((willDelete) => {
                     if (willDelete) {
                         window.location = "/deleteprestasi/" + id + ""
-                        // swal("Data berhasil dihapus!", {
-                        //   icon: "success",
-                        // });
+                         swal("Data berhasil dihapus!", {
+                           icon: "success",
+                         });
                     } else {
                         swal("Data tidak jadi dihapus!");
                     }

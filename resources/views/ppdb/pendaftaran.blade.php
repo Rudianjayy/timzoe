@@ -210,30 +210,27 @@
 
     <section id="about" class="about-area pb-100">
         <div class="container">
+            @foreach ($info as $info)
             <div class="section-title">
-                
-                @foreach ($info as $info)                            
-                <h2{{ $info->judul}}</h2>
+                <h2>{{ $info->judul}}</h2>
                 <div class="bar"></div>
-                @endforeach
             </div>
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="about-content">
-                        <h3>{{ $info->judul }}</h3>
-                        <div class="bar"></div>
-                        <p>{{ $info->deskripsi }}</p>
-                       
+                        <p>{!! $info->deskripsi !!}</p>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="about-image">
                         <img src="{{ asset('fotomahasiswa/' . $info->foto) }}"
                             alt="image">
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+            @endforeach
+
         <div class="default-shape">
             <div class="shape-1">
                 <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/1.png') }}"
@@ -266,7 +263,7 @@
                 <div class="bar"></div>
             @foreach ($ac as $ac)
 
-            <p>{{ $ac->deskripsi }} </p>
+            <p>{{!! $ac->deskripsi !!}} </p>
             @endforeach
 
 

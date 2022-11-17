@@ -57,6 +57,26 @@
                     </ul>
                 </li>
             @endif
+            @if (auth()->user()->role == 'user')
+                <li class="menu-title">Menu</li>
+                <li class="menu">
+                    <a href="#tentangkami" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <div class="">
+                            <i class="flaticon-menu-list"></i>
+                            <span>formulir</span>
+                        </div>
+                        <div>
+                            <i class="flaticon-right-arrow"></i>
+                        </div>
+                    </a>
+                    <ul class="collapse submenu list-unstyled" id="tentangkami" data-parent="#accordionExample">
+                        <li>
+                            <a href="/tambahformulir"> Formulir</a>
+                        </li>
+
+                    </ul>
+                </li>
+            @endif
 
             @if (auth()->user()->role == 'admin')
                 <li class="menu">
@@ -305,52 +325,56 @@
                 </ul>
             </li>
             @endif
-
             @if (auth()->user()->role == 'admin')
             <li class="menu-title mb-2">Mitra</li>
-            <li>
-                <a href="/adminmitra" class="waves-effect">
-                    <div class="" style="font-size:16px; padding:6px; color:#4f5163;">
-                        <i class="flaticon-primary"></i>
-                        <span style="margin-left: 15px; color:#4f5163;">Mitra</span>
+            <li class="menu">
+                <a href="#mitra" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <div class="">
+                        <i class="flaticon-shuffle-4"></i>
+                        <span>Mitra</span>
+                    </div>
+                    <div>
+
+                        <i class="flaticon-right-arrow"></i>
                     </div>
                 </a>
+                <ul class="collapse submenu list-unstyled" id="mitra" data-parent="#accordionExample">
+                    <li>
+                        <a href="/adminmitra">Mitra</a>
+                    </li>
+                </ul>
             </li>
             @endif
             @if (auth()->user()->role == 'admin')
             <li class="menu-title mb-2">Management Beranda</li>
-            <li>
-                <a href="/data-album" class="waves-effect">
-                    <div class="" style="font-size:16px; padding:6px; margin-bottom:8px; color:#4f5163;">
-                        <i class="flaticon-note-1"></i>
-                        <span style="margin-left: 15px; color:#4f5163;">Data Album</span>
+            <li class="menu">
+                <a href="#managementberanda" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <div class="">
+                        <i class="flaticon-shuffle-4"></i>
+                        <span>Beranda</span>
+                    </div>
+                    <div>
+                        <i class="flaticon-right-arrow"></i>
                     </div>
                 </a>
+                <ul class="collapse submenu list-unstyled" id="managementberanda" data-parent="#accordionExample">
+                    <li>
+                        <a href="/data-album">Data Album</a>
+                    </li>
+                    <li>
+                        <a href="/indexprestasi">Prestasi</a>
+                    </li>
+                    <li>
+                        <a href="/sambutanadmin">Smbutan Kepsek</a>
+                    </li>
+                    <li>
+                        <a href="/fotoslideradmin">Slider</a>
+                    </li>
+                </ul>
             </li>
-            <li>
-                <a href="/indexprestasi" class="waves-effect">
-                    <div class="" style="font-size:16px; padding:6px; margin-bottom:8px; color:#4f5163;">
-                        <i class="flaticon-user-11"></i>
-                        <span style="margin-left: 15px; color:#4f5163;">Prestasi</span>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="/sambutanadmin" class="waves-effect">
-                    <div class="" style="font-size:16px; padding:6px; margin-bottom:8px; color:#4f5163;">
-                        <i class="flaticon-3d-cube"></i>
-                        <span style="margin-left: 15px; color:#4f5163;">Sambutan Kepsek</span>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="/fotoslideradmin" class="waves-effect">
-                    <div class="" style="font-size:16px; padding:6px; margin-bottom:8px; color:#4f5163;">
-                        <i class="flaticon-layers"></i>
-                        <span style="margin-left: 15px; color:#4f5163;">Slider</span>
-                    </div>
-                </a>
-            </li>
+            @endif
+            @if (auth()->user()->role == 'admin')
+            <li class="menu-title mb-2">Footer</li>
             <li class="menu">
                 <a href="#footer" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <div class="">
@@ -449,6 +473,27 @@
 
 
             @if (auth()->user()->role == 'admin')
+                <li class="menu-title">Operator</li>
+                <li class="menu">
+                    <a href="#operator" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <div class="">
+                            <i class="flaticon-menu-list"></i>
+                            <span>Operator</span>
+                        </div>
+                        <div>
+                            <i class="flaticon-right-arrow"></i>
+                        </div>
+                    </a>
+                    <ul class="collapse submenu list-unstyled" id="operator" data-parent="#accordionExample">
+                        <li>
+                            <a href="/adminoperator"> Operator</a>
+                        </li>
+
+                    </ul>
+                </li>
+            @endif
+
+            @if (auth()->user()->role == 'user')
                 <li class="menu-title">Operator</li>
                 <li class="menu">
                     <a href="#operator" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">

@@ -19,7 +19,7 @@
                                 enctype="multipart/form-data">
                                 @csrf
 
-                                <div class="mb-3">
+                                {{--  <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Foto Sampul :</label>
                                     <img class="img mb-3" src="{{ asset('fotomahasiswa/' . $data->foto_sampul) }}"
                                         alt="" style="width: 70px">
@@ -28,7 +28,7 @@
                                     @error('foto_sampul')
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
-                                </div>
+                                </div>  --}}
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Judul Fasilitas :</label>
                                     <input type="text" name="judul_fasilitas" class="form-control"

@@ -18,6 +18,14 @@
                                 @csrf
 
                                 <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Judul :</label>
+                                    <input type="text" name="judul" class="form-control" value="{{ $data3->judul }}">
+                                    @error('judul')
+                                        <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
+
+                                <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Ubah Foto :</label>
                                     <img class="img mb-3" src="{{ asset('fotomahasiswa/' . $data->foto) }}" alt=""
                                         style="width: 70px">

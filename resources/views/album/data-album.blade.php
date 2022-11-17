@@ -116,7 +116,7 @@
 
                 swal({
                         title: "Apa kamu yakin ingin menghapus data ini?",
-                        text: "Kamu akan menghapus data dengan album  " + nama + "! ",
+                        text: "Kamu akan menghapus data dengan album " + nama + "! ",
                         icon: "warning",
                         buttons: true,
                         dangerMode: true,
@@ -124,7 +124,7 @@
                     .then((willDelete) => {
                         if (willDelete) {
                             window.location = "/deletealbum/" + id + ""
-                             swal("Data berhasil dihapus!", {
+                             swal("Data berhasil dih apus!", {
                                icon: "success",
                              });
                         } else {
@@ -138,6 +138,8 @@
                 toastr.success("{{ Session::get('success') }}")
             @endif
         </script>
+
+        
 
     {{-- @endpush --}}
 @endsection

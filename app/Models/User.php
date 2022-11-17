@@ -23,8 +23,12 @@ class User extends Authenticatable
         'password',
         'foto',
         'foto_bg',
+        'fb',
+        'ig',
+        'twi',
         'alamat',
         'notelpon',
+        'role',
     ];
 
     /**

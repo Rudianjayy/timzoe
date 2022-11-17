@@ -110,7 +110,7 @@
 
 
 
-        @include('sweetalert::alert')
+        {{--  @include('sweetalert::alert')  --}}
         @include('layout.script')
 
 

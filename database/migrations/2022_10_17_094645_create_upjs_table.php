@@ -18,7 +18,7 @@ return new class extends Migration
             $table->text('judul1');
             $table->text('judul2');
             $table->text('judul3');
-            $table->string('foto_upj');
+            $table->string('foto_upjj');
             $table->timestamps();
         });
     }

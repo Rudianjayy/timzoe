@@ -48,11 +48,11 @@
                                             <th scope="col">#</th>
                                             <th scope="col">Nama</th>
                                             <th scope="col">Email</th>
+                                            <th scope="col">Password</th>
                                             <th scope="col">Alamat</th>
                                             <th scope="col">No Telpon</th>
                                             <th scope="col">Foto</th>
                                             <th scope="col">Foto Bg</th>
-                                            <th scope="col">Password</th>
                                             <th scope="col">Role</th>
                                             <th scope="col">Aksi</th>
                                         </tr>
@@ -65,9 +65,12 @@
                                         @foreach ($data1 as $d)
                                             <tr>
                                                 <th>{{ $no++ }}</th>
-                                                
+
                                                 <td>{{ $d->name }}</td>
                                                 <td>{{ $d->email }}</td>
+                                                <td>{{ $d->password }}</td>
+                                                <td>{{ $d->alamat }}</td>
+                                                <td>{{ $d->notelpon }}</td>
                                                 <td>
                                                     <img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt=""
                                                         style="width: 50px;">
@@ -76,9 +79,6 @@
                                                     <img src="{{ asset('fotomahasiswa/' . $d->foto_bg) }}" alt=""
                                                         style="width: 50px;">
                                                 </td>
-                                                <td>{{ $d->notelpon }}</td>
-                                                <td>{{ $d->password }}</td>
-                                                <td>{{ $d->alamat }}</td>
                                                 <td>{{ $d->role }}</td>
 
                                                 <td class="align-center">
@@ -114,13 +114,12 @@
 
 
     </body>
-
         <script>
             $('.delete').click(function() {
                 var id = $(this).attr('data-id');
                 var nama = $(this).attr('data-nama');
 
-
+                
                 swal({
                         title: "Apa kamu yakin ingin menghapus data ini?",
                         text: "Kamu akan menghapus data dengan album  " + nama + "! ",
@@ -140,6 +139,7 @@
                     });
             });
         </script>
+
         <script>
             @if (Session::has('success'))
                 toastr.success("{{ Session::get('success') }}")

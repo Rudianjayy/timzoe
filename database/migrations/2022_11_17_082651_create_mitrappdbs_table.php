@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('mitrappdbs', function (Blueprint $table) {
             $table->id();
+            $table->string('judul');
             $table->string('foto');
             $table->timestamps();
         });

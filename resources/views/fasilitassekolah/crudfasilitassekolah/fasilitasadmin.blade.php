@@ -37,7 +37,7 @@
                                     <h4>Fasilitas</h4>
                                 </div>
                                 <div>
-                                    <a href="/tambahfasilitas" class="btn btn-primary mt-5"
+                                    <a href="/tambahfasilitas" class="btn btn-primary mt-3"
                                         id="kt_account_profile_details_submit" style="margin-left: 30px;">Tambah
                                         +</a>
                                 </div>
@@ -50,7 +50,6 @@
                                         <tr>
 
                                             <th scope="col">#</th>
-                                            <th scope="col">Foto Sampul</th>
                                             <th scope="col">Foto</th>
                                             <th scope="col">Judul Fasilitas</th>
                                             <th scope="col">Deskripsi</th>
@@ -64,10 +63,7 @@
                                         @foreach ($data as $y)
                                             <tr>
                                                 <th>{{ $no++ }}</th>
-                                                <td>
-                                                    <img src="{{ asset('fotomahasiswa/' . $y->foto_sampul) }}"
-                                                        alt="" style="width: 50px;">
-                                                </td>
+                                              
                                                 <td>
                                                     <img src="{{ asset('fotomahasiswa/' . $y->foto) }}" alt=""
                                                         style="width: 50px;">

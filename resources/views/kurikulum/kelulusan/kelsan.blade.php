@@ -37,6 +37,7 @@
     <!-- Template Styles -->
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/responsive.css') }}">
+
 </head>
 
 <body class="body header-fixed">
@@ -68,46 +69,76 @@
                 </div>
             </section>
         </div>
-        <div class="breadcrumbs">
-            <div class="row">
-                <div class="col-12">
-                    <div class="card">
-                        <div class="card-body">
-
-                            <div>
-
-                                <a href="/exportpdf" class="btn btn-danger"> Export PDF</a>
-                                <a href="/exportexcel" class="btn btn-success">Export Excel</a>
-                                <a href="/exportword" class="btn btn-primary">Export Word</a>
+        <div class="container">
+            <div class="row margin-bottom-120">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="statbox widget box box-shadow">
+                        <div class="widget-header">
+                            <div class="row mt-3">
+                                <div class="col-xl-12 col-md-12 col-sm-12 col-12 mb-2">
+                                  <center><h4 style="font-size: 23px;">Surat Kelulusan </h4></center>
+                                </div>
                             </div>
-                            <table id="example" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                        </div>
+                        <div class="widget-content widget-content-area">
+                            <div class="table-responsive mb-4">
+                                <div>
+                                    <!-- <a href="/tambahkelulusan" class="btn btn-primary sm-3 mb-3"
+                                        id="kt_account_profile_details_submit">Tambah
+                                        +</a> -->
+                                    <a href="/exportpdf" class="btn btn-danger mb-3"> Export PDF</a>
+                                    <a href="/exportexcel" class="btn btn-success mb-3">Export Excel</a>
+                                    <a href="/exportword" class="btn btn-primary mb-3">Export Word</a>
+                                </div>
+                                <table id="example" class="table  table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Nama Siswa</th>
+                                            <th scope="col">Nisn</th>
+                                            <th scope="col">Tanggal Lahir</th>
+                                            <th scope="col">Hasil</th>
+                                            <!-- <th scope="col">Aksi</th> -->
+                                        </tr>
+                                    </thead>
 
-                                <thead>
-                                    <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">Nama Siswa</th>
-                                        <th scope="col">Nisn</th>
-                                        <th scope="col">Hasil</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @php
-                                    $no = 1;
-                                    @endphp
-                                    @foreach ($data as $d)
-                                    <tr>
-                                        <th>{{ $no++ }}</th>
-                                        <td>{{ $d->nama_siswa }}</td>
-                                        <td>{{ $d->nisn }}</td>
-                                        <td>{{ $d->hasil }}</td>
-                                    </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
-
+                                    <tbody>
+                                        @php
+                                            $no = 1;
+                                        @endphp
+                                        @foreach ($data as $d)
+                                            <tr>
+                                                <th>{{ $no++ }}</th>
+                                                <td>{{ $d->nama_siswa }}</td>
+                                                <td>{{ $d->nisn }}</td>
+                                                <td>{{ $d->tanggal_lahir }}</td>
+                                                <td>{{ $d->hasil }}</td>
+                                                <!-- <td class="align-center">
+                                                    <ul class="table-controls">
+                                                        <li>
+                                                            <a href="/editkelulusan/{{ $d->id }}"
+                                                                data-toggle="tooltip" data-placement="top" title="Edit">
+                                                                <i class="flaticon-edit"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" class="delete fire"
+                                                                data-id="{{ $d->id }}"
+                                                                data-nama="{{ $d->nama_siswa }}" data-toggle="tooltip"
+                                                                data-placement="top" title="Delete">
+                                                                <i class="flaticon-delete-5"></i>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </td> -->
+                                            </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
-                </div> <!-- end col -->
+                </div>
             </div>
         </div>
     </div>
@@ -133,6 +164,8 @@
             $('#example').DataTable();
         });
     </script>
+
+
 
 
 </body>

@@ -49,6 +49,7 @@ class LoginController extends Controller
             'email' => $request->email,
             'password' => bcrypt($request->password),
             'foto' => 'noimg.png',
+            'foto_bg' => 'header.jpg',
             'role' => 'user',
             'remember_token' => Str::random(60),
 

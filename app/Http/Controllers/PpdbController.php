@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Carapendaftaran;
 use App\Models\Deskripsipendaftaran;
+use App\Models\footeer;
+use App\Models\Footeerdua;
 use App\Models\Formulir;
 use App\Models\syaratdaftar;
 use App\Models\biaya;
@@ -21,13 +23,8 @@ class PpdbController extends Controller
         $pd = Deskripsipendaftaran::all();
         $kontak = Deskripsipendaftaran::all();
         $cp = Carapendaftaran::all();
-        $ab = biaya::all();
-        $ac = syaratdaftar::all();
-        $ar = kontak::all();
-        $bd =mitrappdb::all();
-        $info = info::all();
-        $dd = mitrappdb::all();
-        return view('ppdb.pendaftaran', compact('dp','pd','kontak','cp','ab','ac','ar','bd','info','dd'));
+        $footerppdb = footeer::all();
+        return view('ppdb.pendaftaran', compact('dp','pd','kontak','cp','footerppdb'));
     }
 
 
@@ -154,8 +151,6 @@ class PpdbController extends Controller
 
 
     public function syaratdaftar(){
-        $f = Muhinews::all();
-        $kh = Jurusan::all();
         $dp = Deskripsipendaftaran::all();
         $pd = Deskripsipendaftaran::all();
         $kontak = Deskripsipendaftaran::all();
@@ -201,7 +196,7 @@ class PpdbController extends Controller
         return view('ppdb.syarat.tambahsyaratdaftar');
     }
 
-    public function submitdaftar(Request $request){
+    public function submitproses12(Request $request){
         $this->validate($request,[
             'deskripsi' =>'required',
 
@@ -230,14 +225,12 @@ class PpdbController extends Controller
 
 
     public function kontak(){
-        $f = Muhinews::all();
-        $kh = Jurusan::all();
         $dp = Deskripsipendaftaran::all();
         $pd = Deskripsipendaftaran::all();
         $kontak = Deskripsipendaftaran::all();
         $cp = Carapendaftaran::all();
         $data3 = kontak::all();
-        return view('ppdb.kontak.kontak', compact('f','kh','dp','pd','kontak','cp','data3'));
+        return view('ppdb.kontak.kontak', compact('dp','pd','kontak','cp','data3'));
     }
 
     public function submitproses14(Request $request){
@@ -321,28 +314,28 @@ class PpdbController extends Controller
         $data->delete();
         return redirect('kontakadmin')->with('success',' Data Berhasil di Hapus!');
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public function loby27(){
        $data4 = Formulir::all();
         return view('ppdb.formulir.formulir', compact('data4'));
@@ -527,80 +520,6 @@ class PpdbController extends Controller
         $data = biaya::find($id);
         $data->delete();
         return redirect('adminbiaya')->with('toast_error',' Data Berhasil di Hapus!');
-    }
-
-
-    public function mitrappdb() {
-        return view('ppdb.mitrappdb.mitrappdb');
-    }
-    public function adminmitrappdb() {
-        $data = mitrappdb::all();
-        return view('ppdb.mitrappdb.adminmitrappdb', compact('data'));
-    }
-    public function tambahmitrappdb()
-    {
-        return view('ppdb.mitrappdb.tambahmitrappdb');
-    }
-
-    public function submitprosesmitra(Request $request){
-        // dd($request->all());
-        $this->validate($request,[
-            'judul' =>'required',
-            'foto' =>'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
-        ],[
-            'judul' =>'Harus diisi',
-            'foto.required' =>'Harus diisi',
-            'foto.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
-
-        ]);
-        $data = mitrappdb::create([
-            'judul' =>$request->judul,
-            'foto' =>$request->foto,
-
-        ]);
-        if($request->hasFile('foto')){
-            $request->file('foto')->move('fotomahasiswa/', $request->file('foto')->getClientOriginalName());
-            $data->foto = $request->file('foto')->getClientOriginalName();
-            $data->save();
-        }
-
-        return redirect()->route('adminmitrappdb')->with('success',' Data Berhasil di Tambahkan!');
-    }
-
-    public function editmitrappdb($id){
-
-        $data = mitrappdb::findOrFail($id);
-        return view('ppdb.mitrappdb.editmitrappdb', compact('data'));
-    }
-
-    public function prosesmitra(Request $request, $id){
-        $this->validate($request,[
-            'judul' =>'required',
-            'foto' =>'mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
-        ],[
-            'judul' =>'Harus diisi',
-            'foto.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
-
-        ]);
-        $data = mitrappdb::find($id);
-        $data->update([
-            'judul' =>$request->judul,
-            'foto' =>$request->foto,
-        ]);
-        if($request->hasFile('foto')){
-            $request->file('foto')->move('fotomahasiswa/',$request->file('foto')->getClientOriginalName());
-            $data->foto = $request->file('foto')->getClientOriginalName();
-            $data->save();
-        }
-
-        return redirect('adminmitrappdb')->with('success',' Data Berhasil di Ubah!');
-
-    }
-
-    public function deletemitrappdb($id){
-        $data = mitrappdb::find($id);
-        $data->delete();
-        return redirect('adminmitrappdb')->with('success',' Data Berhasil di Hapus!');
     }
 
 

@@ -76,6 +76,7 @@
                     <div class="my-auto">
                         <div class="service-two__main ">
                             <div class="block-title text-left">
+                                <h3>Tentang Kami</h3>
                                 <h3>{!! $upj->judul1 !!}</h3>
                             </div><!-- /.block-title text-center -->
                             <img src="assets/images/shapes/service-sign-1-1.png" alt="">

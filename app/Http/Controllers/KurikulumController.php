@@ -115,7 +115,8 @@ class KurikulumController extends Controller
         $personal = Personaljurusan::all();
         $logo = footeer::all();
         $link = footeerdua::all();
-        return view('kurikulum.jadwalkegiatan.jadwalkegiatan', compact('f', 'kh', 'ft', 'personal', 'logo', 'link','d'));
+        $data = jadwalkegiatan::all();
+        return view('kurikulum.jadwalkegiatan.jadwalkegiatan', compact('f', 'kh', 'ft', 'personal', 'logo', 'link','d','data'));
     }
 
     public function jadwalkegiatanadmin()

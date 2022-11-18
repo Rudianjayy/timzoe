@@ -156,7 +156,7 @@
     </div>
 
 
-    {{-- <section class="fun-facts-area pt-100 pb-70">
+    <section class="fun-facts-area pt-100 pb-70">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-3 col-sm-6">
@@ -205,52 +205,93 @@
                 </div>
             </div>
         </div>
-    </section> --}}
+    </section>
 
 
-    <section id="about" class="about-area pb-100">
+   <section id="whatson" class="feature-section ptb-100">
         <div class="container">
-            @foreach ($info as $info)
-            <div class="section-title">
-                <h2>{{ $info->judul}}</h2>
+        <div class="section-title">
+                <h2>Informasi</h2>
                 <div class="bar"></div>
+                <p>SMK Muhammadiyah 1 Genteng</p>
             </div>
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="about-content">
-                        <p>{!! $info->deskripsi !!}</p>
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md-5">
+                    <div class="download-img">
+                        <img src="{{asset('ps/templates.hibootstrap.com/colugo/default/assets/img/mahok.png')}}" alt="download" class="img-fluid">
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="about-image">
-                        <img src="{{ asset('fotomahasiswa/' . $info->foto) }}"
-                            alt="image">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            @endforeach
 
-        <div class="default-shape">
-            <div class="shape-1">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/1.png') }}"
-                    alt="image">
-            </div>
-            <div class="shape-2 rotateme">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/2.png') }}"
-                    alt="image">
-            </div>
-            <div class="shape-3">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/3.svg') }}"
-                    alt="image">
-            </div>
-            <div class="shape-4">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/4.svg') }}"
-                    alt="image">
-            </div>
-            <div class="shape-5">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/5.png') }}"
-                    alt="image">
+                <div class="col-md-7">
+                    <div class="feature-contents section-heading">
+                        <h2>Apa Yang Ada Di SMK Muhammadiyah 1 Genteng?<br></h2>
+
+                        <ul class="list-unstyled">
+                            <li class="py-2">
+                                <div class="d-flex align-items-right">
+                                    <div>
+                                        <div class="badge badge-circle badge-danger mr-3">
+                                            <span class="ti-check"></span>
+                                        </div>
+                                    </div>
+                                    <div><p class="mb-0">Pelopor sekolah IT pertama di Indonesia sejak 1992.</p></div>
+                                </div>
+                            </li>
+                            <li class="py-2">
+                                <div class="d-flex align-items-right">
+                                    <div>
+                                        <div class="badge badge-circle badge-danger mr-3">
+                                            <span class="ti-check"></span>
+                                        </div>
+                                    </div>
+                                    <div><p class="mb-0">SMK swasta terbaik nasional 2020 dan 2021 dinobatkan oleh Lembaga Tes Masuk Perguruan Tinggi (LTMPT) Kemdikbud.</p></div>
+                                </div>
+                            </li>
+                            <li class="py-2">
+                                <div class="d-flex align-items-right">
+                                    <div>
+                                        <div class="badge badge-circle badge-danger mr-3">
+                                            <span class="ti-check"></span>
+                                        </div>
+                                    </div>
+                                    <div><p class="mb-0">Inovator muda terbaik 2021 - SMK Digisocial Fest dengan nama aplikasi NGAMEN HUB.</p></div>
+                                </div>
+                            </li>
+                            <li class="py-2">
+                                <div class="d-flex align-items-right">
+                                    <div>
+                                        <div class="badge badge-circle badge-danger mr-3">
+                                            <span class="ti-check"></span>
+                                        </div>
+                                    </div>
+                                    <div><p class="mb-0">Kelas Telkom Digital Business Technology dengan peluang rekruitmen.</p></div>
+                                </div>
+                            </li>
+                            <li class="py-2">
+                                <div class="d-flex align-items-right">
+                                    <div>
+                                        <div class="badge badge-circle badge-danger mr-3">
+                                            <span class="ti-check"></span>
+                                        </div>
+                                    </div>
+                                    <div><p class="mb-0"><i>One Pipe Education System</i> (OPES), yaitu kesempatan untuk melanjutkan ke Telkom Campus dengan tawaran beasiswa.</p></div>
+                                </div>
+                            </li>
+                            <li class="py-2">
+                                <div class="d-flex align-items-right">
+                                    <div>
+                                        <div class="badge badge-circle badge-danger mr-3">
+                                            <span class="ti-check"></span>
+                                        </div>
+                                    </div>
+                                    <div><p class="mb-0">Sertifikasi <b>ISO 21001:2018</b> dan <b>Akreditasi "A" (unggul)</b></p></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
             </div>
         </div>
     </section>
@@ -263,8 +304,11 @@
                 <div class="bar"></div>
             @foreach ($ac as $ac)
 
-            <p>{{!! $ac->deskripsi !!}} </p>
+
+
+
             @endforeach
+            <p>{!! $ac->deskripsi !!}</p>
 
 
             </div>

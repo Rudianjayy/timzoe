@@ -25,7 +25,7 @@ return new class extends Migration
             $table->bigInteger('nokk');
             $table->string('foto_kk');
             $table->string('foto_bukti');
-            $table->string('status');
+            $table->string('status_anak');
             $table->text('alamat_rumah');
             $table->string('nama_ayah');
             $table->string('nama_ibu');
@@ -37,6 +37,7 @@ return new class extends Migration
             $table->string('prestasi');
             $table->string('ukuran_kaos');
             $table->string('jurusan');
+            $table->string('status');
             $table->timestamps();
         });
     }

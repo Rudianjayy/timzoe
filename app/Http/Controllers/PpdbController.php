@@ -347,6 +347,22 @@ class PpdbController extends Controller
        $data4 = Formulir::all();
         return view('ppdb.formulir.formulir', compact('data4'));
     }
+    
+    public function setuju($id){
+        $data = Formulir::find($id);
+        $data->update([
+            'status' => 'diterima',
+        ]);
+        return redirect()->back()->with('success','status berhasil diubah');
+    }
+    
+    public function tolak($id){
+        $data = Formulir::find($id);
+        $data->update([
+            'status' => 'ditolak',
+        ]);
+        return redirect()->back()->with('success','status berhasil diubah');
+    }
 
     public function tambahformulir()
     {
@@ -391,7 +407,7 @@ class PpdbController extends Controller
             'nokk' =>$request->nokk,
             'foto_kk' =>$request->foto_kk,
             'foto_bukti' =>$request->foto_bukti,
-            'status' =>$request->status,
+            'status_anak' =>$request->status_anak,
             'alamat_rumah' =>$request->alamat_rumah,
             'nama_ayah' =>$request->nama_ayah,
             'nama_ibu' =>$request->nama_ibu,
@@ -403,6 +419,7 @@ class PpdbController extends Controller
             'prestasi' =>$request->prestasi,
             'ukuran_kaos' =>implode(',',$request-> ukuran_kaos),
             'jurusan' =>$request->jurusan,
+            'status' => 'pending',
 
         ]);
         if($request->hasFile('foto_kk')){

@@ -2,7 +2,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
-    <title>Admin | SMK Muhammadiyah 1 Genteng</title>
+    
     <link rel="icon" type="image/x-icon" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}"/>
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     <link href="{{ asset('admintemp/adminnew/riski/nopan/assets/css/loader.css') }}" rel="stylesheet" type="text/css" />
@@ -21,10 +21,10 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('admintemp/adminnew/riski/nopan/plugins/table/datatable/custom_dt_scrollable.css') }}">
 
     <!-- END PAGE LEVEL PLUGINS/CUSTOM STYLES -->
+    <link href="assets/css/plugins.css" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('admintemp/adminnew/riski/nopan/assets/css/components/custom-counter.css') }}" rel="stylesheet" type="text/css">
 
-
-
-
+    <link href="{{ asset('admintemp/adminnew/riski/nopan/assets/css/components/custom-counter.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('admintemp/adminnew/riski/nopan/plugins/animate/animate.css') }}" rel="stylesheet" type="text/css" />
     <script src="{{ asset('admintemp/adminnew/riski/nopan/plugins/sweetalerts/promise-polyfill.js') }}"></script>
     <link href="{{ asset('admintemp/adminnew/riski/nopan/plugins/sweetalerts/sweetalert2.min.css') }}" rel="stylesheet" type="text/css" />

@@ -121,4 +121,6 @@
     <!-- BEGIN CUSTOM SCRIPTS FILE -->
     <script src="{{ asset('admintemp/adminnew/riski/nopan/plugins/charts/amcharts/column_and_barchart.js') }}"></script>
 
+    <script src="{{ asset('admintemp/adminnew/riski/nopan/plugins/sweetalerts/promise-polyfill.js') }}"></script>
+
 </body>

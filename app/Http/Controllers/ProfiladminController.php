@@ -32,10 +32,8 @@ class ProfiladminController extends Controller
             'name' => $request->name,
             'alamat' => $request->alamat,
             'notelpon' => $request->notelpon,
-            'fb' => $request->fb,
-            'ig' => $request->ig,
-            'twi' => $request->twi,
-            'foto' => 'wa.png',
+            'foto' => 'noimg.png',
+            'foto_bg' => 'header.jpg',
         ]);
         // dd($request);
         if ($request->hasFile('foto')) {
@@ -48,6 +46,16 @@ class ProfiladminController extends Controller
             $data->foto_bg = $request->file('foto_bg')->getClientOriginalName();
             $data->save();
         }
+        return redirect()->route('profiladmin')->with('success', 'Profil Berhasil Di Update!');
+    }
+    public function updatesosmed(request $request)
+    {
+        $data = User::find(Auth::user()->id);
+        $data->update([
+            'fb' => $request->fb,
+            'ig' => $request->ig,
+            'twi' => $request->twi,
+        ]);
         return redirect()->route('profiladmin')->with('success', 'Profil Berhasil Di Update!');
     }
 
@@ -163,5 +171,6 @@ class ProfiladminController extends Controller
                     return response()->json(['status'=>1, 'msg'=>'Your profile picture has been updated succesfully.', 'name' => $file]);
                 }
             }
+
         }
 }

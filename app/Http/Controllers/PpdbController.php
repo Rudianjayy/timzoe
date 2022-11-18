@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Carapendaftaran;
 use App\Models\Deskripsipendaftaran;
+use App\Models\footeer;
+use App\Models\Footeerdua;
 use App\Models\Formulir;
 use App\Models\syaratdaftar;
 use App\Models\biaya;
@@ -21,11 +23,8 @@ class PpdbController extends Controller
         $pd = Deskripsipendaftaran::all();
         $kontak = Deskripsipendaftaran::all();
         $cp = Carapendaftaran::all();
-        $ab = biaya::all();
-        $ac = syaratdaftar::all();
-        $ar = kontak::all();
-        $info = info::all();
-        return view('ppdb.pendaftaran', compact('dp','pd','kontak','cp','ab','ac','ar','info'));
+        $footerppdb = footeer::all();
+        return view('ppdb.pendaftaran', compact('dp','pd','kontak','cp','footerppdb'));
     }
 
 
@@ -152,8 +151,6 @@ class PpdbController extends Controller
 
 
     public function syaratdaftar(){
-        $f = Muhinews::all();
-        $kh = Jurusan::all();
         $dp = Deskripsipendaftaran::all();
         $pd = Deskripsipendaftaran::all();
         $kontak = Deskripsipendaftaran::all();
@@ -228,14 +225,12 @@ class PpdbController extends Controller
 
 
     public function kontak(){
-        $f = Muhinews::all();
-        $kh = Jurusan::all();
         $dp = Deskripsipendaftaran::all();
         $pd = Deskripsipendaftaran::all();
         $kontak = Deskripsipendaftaran::all();
         $cp = Carapendaftaran::all();
         $data3 = kontak::all();
-        return view('ppdb.kontak.kontak', compact('f','kh','dp','pd','kontak','cp','data3'));
+        return view('ppdb.kontak.kontak', compact('dp','pd','kontak','cp','data3'));
     }
 
     public function submitproses14(Request $request){
@@ -341,7 +336,7 @@ class PpdbController extends Controller
 
 
 
-    public function adminformulir(){
+    public function loby27(){
        $data4 = Formulir::all();
         return view('ppdb.formulir.formulir', compact('data4'));
     }
@@ -352,30 +347,67 @@ class PpdbController extends Controller
     }
 
     public function submitdata27(Request $request){
-        $this->validate($request,[
-            'nama' =>'required',
-            'nama_email' =>'required',
-            'notelpon' =>'required',
-            'subjek' =>'required',
-            'pesan' =>'required',
+        // $this->validate($request,[
+        //     'nama_peserta' =>'required',
+        //     'jeniskelamin' =>'required',
+        //     'tempat_lahir' =>'required',
+        //     'tanggal_lahir' =>'required',
+        //     'agama' =>'required',
+        //     'nisn' =>'required',
+        //     'nik' =>'required',
+        //     'nokk' =>'required',
+        //     'foto_kk' =>'required',
+        //     'foto_bukti' =>'required',
+        //     'status' =>'required',
+        //     'alamat_rumah' =>'required',
+        //     'nama_ayah' =>'required',
+        //     'nama_ibu' =>'required',
+        //     'pekerjaan_ayah' =>'required',
+        //     'pekerjaan_ibu' =>'required',
+        //     'sekolah_asal' =>'required',
+        //     'notelpon_siswa' =>'required',
+        //     'notelpon_orangtua' =>'required',
+        //     'prestasi' =>'required',
+        //     'ukuran_kaos' =>'required',
+        //     'jurusan' =>'required',
 
-        ],[
-            'nama.required' =>'Harus diisi',
-            'nama_email.required' =>'Harus diisi',
-            'notelpon.required' =>'Harus diisi',
-            'subjek.required' =>'Harus diisi',
-            'pesan.required' =>'Harus diisi',
 
-
-        ]);
+        // ]);
         $data4 = Formulir::create([
-            'nama' =>$request->nama,
-            'nama_email' =>$request->nama_email,
-            'notelpon' =>$request->notelpon,
-            'subjek' =>$request->subjek,
-            'pesan' =>$request->pesan,
+            'nama_peserta' =>$request->nama_peserta,
+            'jeniskelamin' =>$request->jeniskelamin,
+            'tempat_lahir' =>$request->tempat_lahir,
+            'tanggal_lahir' =>$request->tanggal_lahir,
+            'agama' =>$request->agama,
+            'nisn' =>$request->nisn,
+            'nik' =>$request->nik,
+            'nokk' =>$request->nokk,
+            'foto_kk' =>$request->foto_kk,
+            'foto_bukti' =>$request->foto_bukti,
+            'status' =>$request->status,
+            'alamat_rumah' =>$request->alamat_rumah,
+            'nama_ayah' =>$request->nama_ayah,
+            'nama_ibu' =>$request->nama_ibu,
+            'pekerjaan_ayah' =>$request->pekerjaan_ayah,
+            'pekerjaan_ibu' =>$request->pekerjaan_ibu,
+            'sekolah_asal' =>$request->sekolah_asal,
+            'notelpon_siswa' =>$request->notelpon_siswa,
+            'notelpon_orangtua' =>$request->notelpon_orangtua,
+            'prestasi' =>$request->prestasi,
+            'ukuran_kaos' =>implode(',',$request-> ukuran_kaos),
+            'jurusan' =>$request->jurusan,
 
         ]);
+        if($request->hasFile('foto_kk')){
+            $request->file('foto_kk')->move('fotomahasiswa/', $request->file('foto_kk')->getClientOriginalName());
+            $data4->foto_kk = $request->file('foto_kk')->getClientOriginalName();
+            $data4->save();
+        }
+        if($request->hasFile('foto_bukti')){
+            $request->file('foto_bukti')->move('fotomahasiswa/', $request->file('foto_bukti')->getClientOriginalName());
+            $data4->foto_bukti = $request->file('foto_bukti')->getClientOriginalName();
+            $data4->save();
+        }
         return redirect()->route('adminformulir')->with('success',' Data Berhasil di Tambahkan!');
     }
 

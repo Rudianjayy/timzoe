@@ -37,7 +37,7 @@
                                     <h4>Kalender Akademik </h4>
                                 </div>
                                 <div>
-                                    <a href="/tambahjurusan" class="btn btn-primary " id="kt_account_profile_details_submit"
+                                    <a href="/tambahkalenderakademik" class="btn btn-primary " id="kt_account_profile_details_submit"
                                         style="margin-left: 30px;">Tambah
                                         +</a>
                                 </div>
@@ -94,7 +94,6 @@
                 </div>
             </div>
         </div>
-        @include('sweetalert::alert')
         @include('layout.script')
 
 

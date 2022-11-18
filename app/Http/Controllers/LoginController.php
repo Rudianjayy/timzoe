@@ -49,6 +49,7 @@ class LoginController extends Controller
             'email' => $request->email,
             'password' => bcrypt($request->password),
             'foto' => 'noimg.png',
+            'foto_bg' => 'header.jpg',
             'role' => 'user',
             'remember_token' => Str::random(60),
 
@@ -75,8 +76,7 @@ class LoginController extends Controller
     }
     public function tambahoperator()
     {
-        $admin = User::findOrFail(Auth::guard('admin')->user()->id);
-        return view('operator.tambah-operator', compact('admin'));
+        return view('operator.tambah-operator');
     }
 
     public function submitdata26(Request $request)

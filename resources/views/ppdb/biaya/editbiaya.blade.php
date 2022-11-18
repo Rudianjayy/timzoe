@@ -7,7 +7,7 @@
     </head>
 
     <body>
-        <h1 style="color: black" class="text-center mb-4">Edit Syarat Pendaftaran</h1>
+        <h1 style="color: black" class="text-center mb-4">Edit Biaya</h1>
 
         <div class="container">
 
@@ -15,26 +15,48 @@
                 <div class="col-8">
                     <div class="card">
                         <div class="card-body">
-                            <form action="/prosesdaftar/{{ $data2->id }}" method="POST" enctype="multipart/form-data">
+                            <form action="/editprosesbiaya1{{ $data3->id }}" method="POST" enctype="multipart/form-data">
                                 @csrf
 
-                                <section style="padding-top:60px;">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="card">
-                                                    <div class="card-header">
-                                                        Deskripsi Detail
-                                                    </div>
-                                                    <div class="card-body">
-                                                        <textarea name="deskripsi" id="mytextarea">{{ $data->deskripsi_detail }}</textarea>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Judul :</label>
+                                    <input type="text" name="judul" class="form-control" value="{{ $data3->judul }}">
+                                    @error('judul')
+                                        <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
 
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Deskripsi :</label>
+                                    <input type="text" name="deskripsi" class="form-control" value="{{ $data3->deskripsi }}">
+                                    @error('deskripsi')
+                                        <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Gelombang :</label>
+                                    <input type="text" name="gelombang" class="form-control" value="{{ $data3->gelombang }}">
+                                    @error('gelombang')
+                                        <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Penjelas :</label>
+                                    <textarea class="form-control form-control-solid" name="penjelas">{{ $data3->penjelas }}</textarea>
+                                    @error('penjelas')
+                                        <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
+
+
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Tanggal :</label>
+                                    <input type="text" name="jadwal" class="form-control" value="{{ $data3->jadwal }}">
+                                    @error('jadwal')
+                                        <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
 
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </form>

@@ -24,7 +24,9 @@ class PpdbController extends Controller
         $kontak = Deskripsipendaftaran::all();
         $cp = Carapendaftaran::all();
         $footerppdb = footeer::all();
-        return view('ppdb.pendaftaran', compact('dp','pd','kontak','cp','footerppdb'));
+        $info = info::all();
+        $biaya = biaya::all();
+        return view('ppdb.pendaftaran', compact('dp','pd','kontak','cp','footerppdb','info','biaya'));
     }
 
 
@@ -425,19 +427,11 @@ class PpdbController extends Controller
 
 
 
-    public function biaya(){
-        $ab = biaya::all();
-        return view('ppdb.biaya.biaya');
-    }
-
 
 
     public function adminbiaya() {
-        $data = biaya::all();
-        $us = biaya::all();
         $data3 = biaya::all();
-        $ab = biaya::all();
-        return view('ppdb.biaya.adminbiaya', compact('data','us','ab','data3'));
+        return view('ppdb.biaya.adminbiaya', compact('data3'));
     }
 
     public function editbiaya($id){
@@ -454,8 +448,6 @@ class PpdbController extends Controller
         $data = biaya::find($id);
         $data->update([
 
-            'judul' =>$request->judul,
-            'deskripsi' =>$request->deskripsi,
             'gelombang' =>$request->gelombang,
             'penjelas' =>$request->penjelas,
             'jadwal' =>$request->jadwal,
@@ -474,25 +466,19 @@ class PpdbController extends Controller
 
     public function submitprosesbiaya(Request $request){
         $this->validate($request,[
-            'judul' =>'required',
-            'deskripsi' =>'required',
             'gelombang' =>'required',
-            'penjelas' =>'required',
+            'penjelasan' =>'required',
             'jadwal' =>'required',
 
         ],[
-            'judul.required' =>'Harus diisi',
-            'deskripsi.required' =>'Harus diisi',
             'gelombang.required' =>'Harus diisi',
-            'penjelas.required' =>'Harus diisi',
+            'penjelasan.required' =>'Harus diisi',
             'jadwal.required' =>'Harus diisi',
 
         ]);
         $data3 = biaya::create([
-            'judul' =>$request->judul,
-            'deskripsi' =>$request->deskripsi,
             'gelombang' =>$request->gelombang,
-            'penjelas' =>$request->penjelas,
+            'penjelasan' =>$request->penjelasan,
             'jadwal' =>$request->jadwal,
 
         ]);

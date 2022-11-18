@@ -46,10 +46,8 @@
                                     <thead>
                                         <tr>
                                             <th scope="col">No</th>
-                                            <th scope="col">Judul</th>
-                                            <th scope="col">Deskripsi</th>
                                             <th scope="col">Gelombang</th>
-                                            <th scope="col">Penjelas</th>
+                                            <th scope="col">Penjelasan</th>
                                             <th scope="col">Jadwal</th>
                                             <th scope="col">Aksi</th>
                                         </tr>
@@ -62,10 +60,8 @@
                                         @foreach ($data3 as $d)
                                             <tr>
                                                 <th>{{ $no++ }}</th>
-                                                <td>{{ $d->judul }}</td>
-                                                <td>{{ $d->deskripsi }}</td>
                                                 <td>{{ $d->gelombang }}</td>
-                                                <td>{{ $d->penjelas }}</td>
+                                                <td>{{ $d->penjelasan }}</td>
                                                 <td>{{ $d->jadwal }}</td>
 
 

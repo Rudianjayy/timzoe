@@ -17,23 +17,8 @@
                         <div class="card-body">
                             <form action="/submitprosesbiaya" method="POST" enctype="multipart/form-data">
                                 @csrf
-                                <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Judul :</label>
-                                    <input type="text" name="judul" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp">
-                                    @error('judul')
-                                        <div class="alert alert-danger">{{ $message }}</div>
-                                    @enderror
-                                </div>
 
-                                <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Deskripsi :</label>
-                                    <input type="text" name="deskripsi" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp">
-                                    @error('deskripsi')
-                                        <div class="alert alert-danger">{{ $message }}</div>
-                                    @enderror
-                                </div>
+
 
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Gelombang :</label>
@@ -45,16 +30,16 @@
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Penjelas :</label>
-                                    <textarea class="form-control form-control-solid" name="penjelas"></textarea>
-                                    @error('penjelas')
+                                    <label for="exampleInputEmail1" class="form-label">Penjelasan :</label>
+                                    <textarea class="form-control form-control-solid" name="penjelasan"></textarea>
+                                    @error('penjelasan')
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
 
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Tanggal :</label>
-                                    <input type="text" name="jadwal" class="form-control" id="exampleInputEmail1"
+                                    <input type="date" name="jadwal" class="form-control" id="exampleInputEmail1"
                                         aria-describedby="emailHelp">
                                     @error('jadwal')
                                         <div class="alert alert-danger">{{ $message }}</div>

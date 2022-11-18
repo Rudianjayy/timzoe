@@ -15,8 +15,6 @@ return new class extends Migration
     {
         Schema::create('biayas', function (Blueprint $table) {
             $table->id();
-            $table->string('judul');
-            $table->string('deskripsi');
             $table->string('gelombang');
             $table->string('penjelasan');
             $table->string('jadwal');

@@ -623,6 +623,7 @@ Route::group(['middleware' => ['auth', 'hakakses:admin,user']], function () {
     Route::get('/editprofiladmin', [ProfiladminController::class, 'editprofiladmin'])->name('editprofiladmin');
     Route::post('/updateprofiladmin', [ProfiladminController::class, 'updateprofiladmin'])->name('updateprofiladmin');
 });
+
 Route::group(['middleware' => ['auth', 'hakakses:admin,user,operator1,operator2']], function () {
 
     Route::get('/welcome', function () {
@@ -657,3 +658,12 @@ Route::group(['middleware' => ['auth', 'hakakses:admin,user']], function () {
     Route::post('/submitdata27', [PpdbController::class, 'submitdata27'])->name('submitdata27');
     Route::get('/deleteformulir/{id}', [PpdbController::class, 'deleteformulir'])->name('deleteformulir');
 });
+
+Route::get('/biaya',[PpdbController::class, 'biaya'])->name('biaya');
+Route::get('/adminbiaya',[PpdbController::class, 'adminbiaya'])->name('adminbiaya');
+Route::get('/editbiaya/{id}',[PpdbController::class, 'editbiaya'])->name('editbiaya');
+Route::post('/editprosesbiaya1',[PpdbController::class, 'editprosesbiaya1'])->name('editprosesbiaya1');
+Route::get('/tambahbiaya',[PpdbController::class, 'tambahbiaya'])->name('tambahbiaya');
+Route::post('/submitprosesbiaya',[PpdbController::class, 'submitprosesbiaya'])->name('submitprosesbiaya');
+Route::get('/deletebiaya/{id}',[PpdbController::class, 'deletebiaya'])->name('deletebiaya');
+

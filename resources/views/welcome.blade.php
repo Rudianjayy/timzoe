@@ -3,7 +3,18 @@
 @section('content')
     @include('layout.css')
 
-    <style>
+
+    @if (auth()->user()->role == 'admin')
+    <title>Admin | SMK Muhammadiyah 1 Genteng</title>
+    @endif
+    @if (auth()->user()->role == 'user')
+    <title>User | SMK Muhammadiyah 1 Genteng</title>
+    @endif
+    @if (auth()->user()->role == 'operator1')
+    <title>Operator | SMK Muhammadiyah 1 Genteng</title>
+    @endif
+
+<style>
         #simplecolumnchartdiv,
         #columnlinemixchartdiv,
         #clusteredbarchartdiv,
@@ -20,6 +31,8 @@
             top: 40px !important;
         }
     </style>
+    <link rel="icon" type="image/x-icon" href="{{ asset('admintemp/adminnew/riski/nopan/assets/img/favicon.ico') }}"/>
+
 
     <body>
 
@@ -166,6 +179,44 @@
                 </div>
             </div>
 
+            <div class="col-lg-12 layout-spacing">
+                <div class="statbox widget box box-shadow">
+                    <div class="widget-header">
+                        <div class="row">
+                            <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                <h4>With Icon</h4>
+                            </div>                 
+                        </div>
+                    </div>
+                    <div class="widget-content widget-content-area text-center icon-counter-container">
+                        <div class="row mb-5">
+                            <div class="col-xl-3 col-lg-3 mb-md-0 col-md-3 mb-5 col-sm-6">
+                                <i class="counter-ico flaticon-user-11"></i>
+                                <h1 class="ico-counter1 ico-counter mt-2">1005</h1>
+                                <p class="ico-counter-text">Happy Clients</p>
+                            </div>
+                            
+                            <div class="col-xl-3 col-lg-3 mb-md-0 col-md-3 mb-5 col-sm-6">
+                                <i class="counter-ico flaticon-downloading"></i>
+                                <h1 class="ico-counter2 ico-counter mt-2">3100</h1>
+                                <p class="ico-counter-text">Total Downloads</p>
+                            </div>
+                            
+                            <div class="col-xl-3 col-lg-3 mb-md-0 col-md-3 mb-5 col-sm-6">
+                                <i class="counter-ico flaticon-cup"></i>
+                                <h1 class="ico-counter3 ico-counter mt-2">58</h1>
+                                <p class="ico-counter-text">Awards Won</p>
+                            </div>
+
+                            <div class="col-xl-3 col-lg-3 mb-md-0 col-md-3 mb-5 col-sm-6">
+                                <i class="counter-ico flaticon-like-3"></i>
+                                <h1 class="ico-counter4 ico-counter mt-2">8858</h1>
+                                <p class="ico-counter-text">Likes</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="row layout-spacing">
                 <div class="col-lg-12">

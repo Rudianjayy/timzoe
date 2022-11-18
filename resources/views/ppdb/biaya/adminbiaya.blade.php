@@ -13,12 +13,12 @@
         <div class="container">
             <div class="page-header">
                 <div class="page-title">
-                    <h3>syarat Daftar</h3>
+                    <h3>Biaya </h3>
                     <div class="crumbs">
                         <ul id="breadcrumbs" class="breadcrumb">
                             <li><a href="index.html"><i class="flaticon-home-fill"></i></a></li>
                             <li><a href="#">PPDB</a></li>
-                            <li class="active"><a href="#">syarat Daftar</a></li>
+                            <li class="active"><a href="#">Biaya</a></li>
                         </ul>
                     </div>
                 </div>
@@ -30,10 +30,10 @@
                         <div class="widget-header">
                             <div class="row">
                                 <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                    <h4>Form syarat Pendaftaran </h4>
+                                    <h4>Form Biaya </h4>
                                 </div>
                                 <div>
-                                    <a href="/tambahsyaratdaftar" class="btn btn-primary "
+                                    <a href="/tambahbiaya" class="btn btn-primary "
                                         id="kt_account_profile_details_submit" style="margin-left: 30px;">Tambah
                                         +</a>
                                 </div>
@@ -46,7 +46,11 @@
                                     <thead>
                                         <tr>
                                             <th scope="col">No</th>
-                                            <th scope="col">syarat daftar</th>
+                                            <th scope="col">Judul</th>
+                                            <th scope="col">Deskripsi</th>
+                                            <th scope="col">Gelombang</th>
+                                            <th scope="col">Penjelas</th>
+                                            <th scope="col">Jadwal</th>
                                             <th scope="col">Aksi</th>
                                         </tr>
                                     </thead>
@@ -55,29 +59,29 @@
                                         @php
                                             $no = 1;
                                         @endphp
-                                        @foreach ($data2 as $d)
+                                        @foreach ($data3 as $d)
                                             <tr>
                                                 <th>{{ $no++ }}</th>
-
+                                                <td>{{ $d->judul }}</td>
                                                 <td>{{ $d->deskripsi }}</td>
+                                                <td>{{ $d->gelombang }}</td>
+                                                <td>{{ $d->penjelas }}</td>
+                                                <td>{{ $d->jadwal }}</td>
 
 
-                                                <td>{{ $d->created_at->format('D M Y') }}</td>
                                                 <td class="align-center">
                                                     <ul class="table-controls">
                                                         <li>
-                                                            <a href="/editsyaratdaftar/{{ $d->id }}"
+                                                            <a href="/editbiaya/{{ $d->id }}"
                                                                 data-toggle="tooltip" data-placement="top" title="Edit">
                                                                 <i class="flaticon-edit"></i>
                                                             </a>
                                                         </li>
                                                         <li>
-                                                            <li>
-                                                            <a href="/deletedaftar{{ $d->id }}"
+                                                            <a href="/deletebiaya/{{ $d->id }}"
                                                                 data-toggle="tooltip" data-placement="top" title="Delete">
                                                                 <i class="flaticon-delete-5"></i>
                                                             </a>
-                                                        </li>
                                                         </li>
                                                     </ul>
                                                 </td>

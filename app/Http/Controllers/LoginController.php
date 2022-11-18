@@ -76,8 +76,7 @@ class LoginController extends Controller
     }
     public function tambahoperator()
     {
-        $admin = User::findOrFail(Auth::guard('admin')->user()->id);
-        return view('operator.tambah-operator', compact('admin'));
+        return view('operator.tambah-operator');
     }
 
     public function submitdata26(Request $request)

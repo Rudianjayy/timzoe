@@ -16,7 +16,6 @@ return new class extends Migration
         Schema::create('syaratdaftars', function (Blueprint $table) {
             $table->id();
             $table->string('deskripsi');
-            $table->text('deskripsi_detail');
             $table->timestamps();
         });
     }

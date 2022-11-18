@@ -77,6 +77,46 @@
                     </ul>
                 </li>
             @endif
+            @if (auth()->user()->role == 'admin')
+                <li class="menu-title">Menu</li>
+                <li class="menu">
+                    <a href="#formulir" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <div class="">
+                            <i class="flaticon-menu-list"></i>
+                            <span>formulir</span>
+                        </div>
+                        <div>
+                            <i class="flaticon-right-arrow"></i>
+                        </div>
+                    </a>
+                    <ul class="collapse submenu list-unstyled" id="formulir" data-parent="#accordionExample">
+                        <li>
+                            <a href="/tambahformulir"> Formulir</a>
+                        </li>
+
+                    </ul>
+                </li>
+            @endif
+            @if (auth()->user()->role == 'admin')
+                <li class="menu-title">Menu</li>
+                <li class="menu">
+                    <a href="#formulir" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <div class="">
+                            <i class="flaticon-menu-list"></i>
+                            <span>formulir</span>
+                        </div>
+                        <div>
+                            <i class="flaticon-right-arrow"></i>
+                        </div>
+                    </a>
+                    <ul class="collapse submenu list-unstyled" id="formulir" data-parent="#accordionExample">
+                        <li>
+                            <a href="/adminformulir"> Formulir</a>
+                        </li>
+
+                    </ul>
+                </li>
+            @endif
 
             @if (auth()->user()->role == 'admin')
                 <li class="menu">
@@ -423,6 +463,12 @@
                         <li>
                             <a href="/adminbiaya"> Biaya </a>
                         </li>
+                        <li>
+                            <a href="/adminmitrappdb"> Mitra PPDB</a>
+                        </li>
+                        <li>
+                            <a href="/admininfo"> Informasi</a>
+                        </li>
                     </ul>
                 </li>
             @endif
@@ -459,10 +505,11 @@
 
 
 
+        
 
 
 
-
+    
 
 
             @if (auth()->user()->role == 'admin')

@@ -20,9 +20,9 @@ return new class extends Migration
             $table->string('tempat_lahir');
             $table->string('tanggal_lahir');
             $table->string('agama');
-            $table->string('nisn');
-            $table->string('nik');
-            $table->string('nokk');
+            $table->bigInteger('nisn');
+            $table->bigInteger('nik');
+            $table->bigInteger('nokk');
             $table->string('foto_kk');
             $table->string('foto_bukti');
             $table->string('status');
@@ -32,10 +32,10 @@ return new class extends Migration
             $table->string('pekerjaan_ayah');
             $table->string('pekerjaan_ibu');
             $table->string('sekolah_asal');
-            $table->string('notelpon_siswa');
-            $table->string('notelpon_orangtua');
+            $table->bigInteger('notelpon_siswa');
+            $table->bigInteger('notelpon_orangtua');
             $table->string('prestasi');
-            $table->string('ukuran kaos olahraga');
+            $table->string('ukuran_kaos');
             $table->string('jurusan');
             $table->timestamps();
         });

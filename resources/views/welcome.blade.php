@@ -44,7 +44,6 @@
                                     <p class="widget-numeric-value count">{{ $berita }}</p>
                                 </div>
                             </div>
-                            <p class="widget-total-stats mt-2">94% New Sales</p>
                         </div>
                     </div>
                 </div>
@@ -61,7 +60,6 @@
                                     <p class="widget-numeric-value count">{{ $galery }}</p>
                                 </div>
                             </div>
-                            <p class="widget-total-stats mt-2">552 New Orders</p>
                         </div>
                     </div>
                 </div>
@@ -78,7 +76,6 @@
                                     <p class="widget-numeric-value count">{{ $prestasi }}</p>
                                 </div>
                             </div>
-                            <p class="widget-total-stats mt-2">390 New Customers</p>
                         </div>
                     </div>
                 </div>
@@ -96,7 +93,6 @@
                                     <p class="widget-numeric-value count">{{ $mitra }}</p>
                                 </div>
                             </div>
-                            <p class="widget-total-stats mt-2">$2.1 M This Week</p>
                         </div>
                     </div>
                 </div>

@@ -78,11 +78,11 @@
                                 <br>
                                <center> <button type="submit" class="btn btn-info" style="margin-left: 90px;">Download</button></center>
                             </a>
+                            @endforeach
                         </div>
                     </div>
                 </div>
             </section>
-            @endforeach
         </div>
     </div>
 

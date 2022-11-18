@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Carapendaftaran;
 use App\Models\Deskripsipendaftaran;
+use App\Models\footeer;
+use App\Models\Footeerdua;
 use App\Models\Formulir;
 use App\Models\syaratdaftar;
 use App\Models\kontak;
@@ -14,13 +16,12 @@ use Illuminate\Http\Request;
 class PpdbController extends Controller
 {
     public function pendaftaran(){
-        $f = Muhinews::all();
-        $kh = Jurusan::all();
         $dp = Deskripsipendaftaran::all();
         $pd = Deskripsipendaftaran::all();
         $kontak = Deskripsipendaftaran::all();
         $cp = Carapendaftaran::all();
-        return view('ppdb.pendaftaran', compact('f','kh','dp','pd','kontak','cp'));
+        $footerppdb = footeer::all();
+        return view('ppdb.pendaftaran', compact('dp','pd','kontak','cp','footerppdb'));
     }
 
 
@@ -147,13 +148,11 @@ class PpdbController extends Controller
 
 
     public function syaratdaftar(){
-        $f = Muhinews::all();
-        $kh = Jurusan::all();
         $dp = Deskripsipendaftaran::all();
         $pd = Deskripsipendaftaran::all();
         $kontak = Deskripsipendaftaran::all();
         $cp = Carapendaftaran::all();
-        return view('ppdb.syarat.syaratdaftar', compact('f','kh','dp','pd','kontak','cp'));
+        return view('ppdb.syarat.syaratdaftar', compact('dp','pd','kontak','cp'));
     }
 
 
@@ -224,14 +223,12 @@ class PpdbController extends Controller
 
 
     public function kontak(){
-        $f = Muhinews::all();
-        $kh = Jurusan::all();
         $dp = Deskripsipendaftaran::all();
         $pd = Deskripsipendaftaran::all();
         $kontak = Deskripsipendaftaran::all();
         $cp = Carapendaftaran::all();
         $data3 = kontak::all();
-        return view('ppdb.kontak.kontak', compact('f','kh','dp','pd','kontak','cp','data3'));
+        return view('ppdb.kontak.kontak', compact('dp','pd','kontak','cp','data3'));
     }
 
 
@@ -308,28 +305,28 @@ class PpdbController extends Controller
         $data->delete();
         return redirect('deskripsipendaftaran')->with('toast_error',' Data Berhasil di Hapus!');
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public function adminformulir(){
        $data4 = Formulir::all();
         return view('ppdb.formulir.formulir', compact('data4'));

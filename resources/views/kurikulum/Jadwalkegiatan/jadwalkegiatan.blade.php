@@ -39,125 +39,128 @@
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/responsive.css') }}">
 </head>
+
 <body>
 
-<body class="body header-fixed">
+    <body class="body header-fixed">
 
-    <div class="preload preload-container">
-        {{-- <div class="preload-logo"></div>  --}}
-        <div class="preload-logo"><img src="{{ asset('landing/html/bidzend/assets/images/logo/muhi.jpg') }}" alt="Image" style="width:570 !important;"></div>
-    </div>
-
-
-    @include('koneksi.navbar')
-
-    <section class="fl-page-title">
-        <div class="overlay"></div>
+        <div class="preload preload-container">
+            {{-- <div class="preload-logo"></div>  --}}
+            <div class="preload-logo"><img src="{{ asset('landing/html/bidzend/assets/images/logo/muhi.jpg') }}" alt="Image" style="width:570 !important;"></div>
+        </div>
 
 
+        @include('koneksi.navbar')
 
-        <section>
+        <section class="fl-page-title">
+            <div class="overlay"></div>
+            <section>
+            </section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+
+
+                        <div class="breadcrumbs">
+                            <ul>
+                                <li><a href="index.html">Kurikulum</a></li>
+                                <li>Jadwal Kegiatan</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <div class="container">
-            <div class="row">
-                <div class="col-md-12">
 
 
-                    <div class="breadcrumbs">
-                        <ul>
-                            <li><a href="index.html">Kurikulum</a></li>
-                            <li>Jadwal Kegiatan</li>
-                        </ul>
+            <div class="row margin-bottom-120">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="statbox widget box box-shadow">
+                        <div class="widget-header">
+                            <div class="row">
+                                <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                 <center><h4 style="margin-top: 20px; font-size:23px; margin-bottom:10px;">Jadwal Kegiatan</h4></center>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="widget-content widget-content-area">
+                            <div class="table-responsive mb-4">
+
+                                <table id="ecommerce-product-list" class="table  table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">No.</th>
+                                            <th scope="col">Nama Kegiatan</th>
+                                            <th scope="col">Waktu</th>
+                                            <th scope="col">Tempat</th>
+                                            <th scope="col">Aksi</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        @php
+                                            $no = 1;
+
+                                        @endphp
+                                        @foreach ($data as $d)
+                                            <tr>
+                                                <th>{{ $no++ }}</th>
+
+                                                <td>{{ $d->namakegiatan }}</td>
+                                                <td>{{ $d->waktu }}</td>
+                                                <td>{{ $d->tempat }}</td>
+                                                {{-- <td>{{ $d->created_at->format('D M Y') }}</td> --}}
+
+
+                                                <td class="align-center">
+                                                    <ul class="table-controls">
+                                                        <li>
+                                                            <a href="/editjadwalkegiatan/{{ $d->id }}" data-toggle="tooltip"
+                                                                data-placement="top" title="Edit">
+                                                                <i class="flaticon-edit"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" class="delete fire"
+                                                                data-id="{{ $d->id }}"
+                                                                data-nama="{{ $d->namakegiatan }}" data-toggle="tooltip"
+                                                                data-placement="top" title="Delete">
+                                                                <i class="flaticon-delete-5"></i>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- <section class="tf-section item-details-page">
-        <div class="author-item">
-            <div class="avatar">
-                <img src="assets/images/avatar/avt-4.jpg" alt="">
-            </div>
-            <div class="infor">
-                <h6><a href="author.html">Bagikan</a> </h6>
-                <div class="widget-social">
-                    <ul>
-                        <li><a href="#" class="active"><i class="fab fa-facebook-f"></i></a>
-                        </li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section> -->
-    <section class="blog-standard blog-details">
-        <img src="assets/images/shapes/bg-shape-1-1.png" class="section__bg-shape-1" alt="">
-        <img src="assets/images/shapes/bg-shape-1-2.png" class="section__bg-shape-2" alt="">
-        <img src="assets/images/shapes/bg-shape-1-3.png" class="section__bg-shape-3" alt="">
 
 
 
-        <div class="row">
-            <div class="col-12">
-                <div class="">
-                    <div class="card-body">
-
-                        <table id="datatable" class="table table-bordered dt-responsive nowrap"
-                            style="border-collapse: collapse; border-spacing: 0; width: 100%;">
-
-                            <thead>
-                                <tr>
-                                    <th scope="col">No.</th>
-                                    <th scope="col">Nama Kegiatan</th>
-                                    <th scope="col">Waktu</th>
-                                    <th scope="col">Tempat</th>
-
-                                </tr>
-                            </thead>
-
-                            <tbody>
-                                @php
-                                    $no = 1;
-                                @endphp
-                                @foreach ($d as $d)
-                                    <tr>
-                                        <th>{{ $no++ }}</th>
-                                        <td>{{ $d->namakegiatan }}</td>
-                                        <td>{{ $d->waktu }}</td>
-                                        <td>{{ $d->tempat }}</td>
-                                        {{-- <td>{{ $d->created_at->format('D M Y') }}</td> --}}
-
-                                    </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
-
-                    </div>
-                </div>
-            </div> <!-- end col -->
-        </div>
-
-    </div>
-    </section>
-
-    @include('koneksi.footer')
+        @include('koneksi.footer')
 
 
-    <a id="scroll-top"></a>
+        <a id="scroll-top"></a>
 
 
-    <script src="{{ asset('landing/html/bidzend/assets/js/jquery.min.js') }}"></script>
-    <script src="{{ asset('landing/html/bidzend/assets/js/jquery.easing.js') }}"></script>
-    <script src="{{ asset('landing/html/bidzend/assets/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('landing/html/bidzend/assets/js/swiper-bundle.min.js') }}"></script>
-    <script src="{{ asset('landing/html/bidzend/assets/js/swiper.js') }}"></script>
-    <script src="{{ asset('landing/html/bidzend/assets/js/plugin.js') }}"></script>
-    <script src="{{ asset('landing/html/bidzend/assets/js/count-down.js') }}"></script>
-    <script src="{{ asset('landing/html/bidzend/assets/js/shortcodes.js') }}"></script>
-    <script src="{{ asset('landing/html/bidzend/assets/js/main.js') }}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
+        <script src="{{ asset('landing/html/bidzend/assets/js/jquery.min.js') }}"></script>
+        <script src="{{ asset('landing/html/bidzend/assets/js/jquery.easing.js') }}"></script>
+        <script src="{{ asset('landing/html/bidzend/assets/js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('landing/html/bidzend/assets/js/swiper-bundle.min.js') }}"></script>
+        <script src="{{ asset('landing/html/bidzend/assets/js/swiper.js') }}"></script>
+        <script src="{{ asset('landing/html/bidzend/assets/js/plugin.js') }}"></script>
+        <script src="{{ asset('landing/html/bidzend/assets/js/count-down.js') }}"></script>
+        <script src="{{ asset('landing/html/bidzend/assets/js/shortcodes.js') }}"></script>
+        <script src="{{ asset('landing/html/bidzend/assets/js/main.js') }}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
 
 
         <script src="{{ asset('style/assets/js/jquery.dataTables.min.js') }}"></script>
@@ -171,6 +174,6 @@
 
     </body>
 
-<!-- Mirrored from themesflat.com/html/bidzend/item-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Sep 2022 01:13:11 GMT -->
+    <!-- Mirrored from themesflat.com/html/bidzend/item-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Sep 2022 01:13:11 GMT -->
 
 </html>

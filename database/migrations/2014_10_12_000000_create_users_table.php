@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('password');
             $table->string('notelpon')->nullable();
             $table->string('foto')->default('noimg.png');
-            $table->string('foto_bg')->default('/user_image/header.jpg');
+            $table->string('foto_bg')->default('header.jpg');
             $table->string('fb')->nullable();
             $table->string('ig')->nullable();
             $table->string('twi')->nullable();

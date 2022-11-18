@@ -52,6 +52,9 @@ Route::get('/', [LandingController::class, 'index'])->name('landing');
 Route::get('/authors', [LandingController::class, 'authors'])->name('authors');
 
 
+Route::get('/pendaftaran', [PpdbController::class, 'pendaftaran'])->name('pendaftaran');
+
+
 
 
 
@@ -59,6 +62,7 @@ Route::get('/authors', [LandingController::class, 'authors'])->name('authors');
 Route::get('/profiladmin', [ProfiladminController::class, 'profiladmin'])->name('profiladmin');
 Route::get('/editprofiladmin', [ProfiladminController::class, 'editprofiladmin'])->name('editprofiladmin');
 Route::post('/updateprofiladmin', [ProfiladminController::class, 'updateprofiladmin'])->name('updateprofiladmin');
+Route::post('/updatesosmed', [ProfiladminController::class, 'updatesosmed'])->name('updatesosmed');
 Route::post('/updatepassword', [ProfiladminController::class, 'updatepassword'])->name('updatepassword');
 Route::post('/crop', [ProfiladminController::class, 'crop'])->name('crop');
 Route::post('/cropbg', [ProfiladminController::class, 'cropbg'])->name('cropbg');
@@ -618,7 +622,7 @@ Route::post('/submitedit21/{id}', [UpjtekajeController::class, 'submitedit21'])-
 Route::get('/deleteupjfooter/{id}', [UpjtekajeController::class, 'deleteupjfooter'])->name('deleteupjfooter');
 
 
-//Profiladmin
+
 
 
 
@@ -652,7 +656,7 @@ Route::group(['middleware' => ['auth', 'hakakses:admin,operator1,operator2']], f
 
 
 
-Route::group(['middleware' => ['auth', 'hakakses:user']], function () {
+Route::group(['middleware' => ['auth', 'hakakses:admin,user']], function () {
 
     Route::get('/welcome', function () {
         $berita = Muhinews::count();

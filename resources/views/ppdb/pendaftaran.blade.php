@@ -1301,10 +1301,6 @@
                                 <h2>
                                     <a href="tel:+1-485-456-0102">+1-485-456-0102</a>
                                     <span>Or</span>
-                                    <a
-                                        href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#28404d444447684b47445d4f47064b4745"><span
-                                            class="__cf_email__"
-                                            data-cfemail="0f676a6363604f6c60637a6860216c6062">[email&#160;protected]</span></a>
                                 </h2>
                                 <ul class="social">
                                     <li>

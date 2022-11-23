@@ -188,7 +188,10 @@
                         <a href="/idukaadmin">Iduka</a>
                     </li>
                     <li>
-                        <a href="/mouadmin">Foto Mou</a>
+                        <a href="/fotomouadmin">Foto Mou</a>
+                    </li>
+                    <li>
+                        <a href="/albumiduka">Album Mou</a>
                     </li>
                 </ul>
             </li>
@@ -464,9 +467,6 @@
                             <a href="/adminbiaya"> Biaya </a>
                         </li>
                         <li>
-                            <a href="/adminmitrappdb"> Mitra PPDB</a>
-                        </li>
-                        <li>
                             <a href="/admininfo"> Informasi</a>
                         </li>
                         <li>
@@ -475,6 +475,9 @@
                     </ul>
                 </li>
             @endif
+
+
+
 
             @if (auth()->user()->role == 'admin')
                 <li class="menu-title">Operator</li>

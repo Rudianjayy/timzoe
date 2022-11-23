@@ -14,22 +14,22 @@
                 <div class="col-8">
                     <div class="card">
                         <div class="card-body">
-                            <form action="/editproses4/{{ $data->id }}" method="POST" enctype="multipart/form-data">
+                            <form action="/editadminproses4/{{ $data2->id }}" method="POST" enctype="multipart/form-data">
                                 @csrf
 
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Ubah Foto  :</label>
-                                    <img class="img mb-3" src="{{ asset('fotomahasiswa/' . $data->foto_iduka) }}" alt=""
+                                    <img class="img mb-3" src="{{ asset('fotomahasiswa/' . $data2->foto_iduka) }}" alt=""
                                         style="width: 70px">
                                     <input type="file" name="foto_iduka" class="form-control" id="foto_iduka"
-                                        aria-describedby="emailHelp" value="{{ $data->foto_iduka }}">
+                                        aria-describedby="emailHelp" value="{{ $data2->foto_iduka }}">
                                     @error('foto_iduka')
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Jurusan :</label>
-                                    <textarea class="form-control form-control-solid" rows="6x" name="jurusan_mou">{{ $data->jurusan_mou }}</textarea>
+                                    <textarea class="form-control form-control-solid" rows="6x" name="jurusan_mou">{{ $data2->jurusan_mou }}</textarea>
 
                                     @error('jurusan_mou')
                                         <div class="alert alert-danger">{{ $message }}</div>

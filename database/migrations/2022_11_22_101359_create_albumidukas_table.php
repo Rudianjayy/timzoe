@@ -13,9 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('infos', function (Blueprint $table) {
+        Schema::create('albumidukas', function (Blueprint $table) {
             $table->id();
-            $table->string('deskripsi');
+            $table->string('foto_otkp');
+            $table->string('foto_tjkt');
+            $table->string('foto_akl');
+            $table->string('foto_ph');
+            $table->string('foto_dkv');
+            $table->string('foto_pplg');
             $table->timestamps();
         });
     }
@@ -27,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('infos');
+        Schema::dropIfExists('albumidukas');
     }
 };

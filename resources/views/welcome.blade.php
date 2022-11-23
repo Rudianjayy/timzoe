@@ -5,17 +5,17 @@
 
 
     @if (auth()->user()->role == 'admin')
-    <title>Admin | SMK Muhammadiyah 1 Genteng</title>
+        <title>Admin | SMK Muhammadiyah 1 Genteng</title>
     @endif
     @if (auth()->user()->role == 'user')
-    <title>User | SMK Muhammadiyah 1 Genteng</title>
+        <title>User | SMK Muhammadiyah 1 Genteng</title>
     @endif
     @if (auth()->user()->role == 'operator1')
-    <title>Operator | SMK Muhammadiyah 1 Genteng</title>
+        <title>Operator | SMK Muhammadiyah 1 Genteng</title>
     @endif
 
-<style>
-        #simplecolumnchartdiv,
+    <style>
+        #chartsPpdb,
         #columnlinemixchartdiv,
         #clusteredbarchartdiv,
         #cylinderchartdiv {
@@ -31,7 +31,7 @@
             top: 40px !important;
         }
     </style>
-    <link rel="icon" type="image/x-icon" href="{{ asset('admintemp/adminnew/riski/nopan/assets/img/favicon.ico') }}"/>
+    <link rel="icon" type="image/x-icon" href="{{ asset('admintemp/adminnew/riski/nopan/assets/img/favicon.ico') }}" />
 
 
     <body>
@@ -135,7 +135,7 @@
                                 </div>
                                 <div class="media-body text-right">
                                     <p class="widget-text mb-0">Siswa Diterima</p>
-                                    <p class="widget-numeric-value count">{{ $mitra }}</p>
+                                    <p class="widget-numeric-value count">{{ $formulir }}</p>
                                 </div>
                             </div>
                             <p class="widget-total-stats mt-2">552 New Orders</p>
@@ -152,7 +152,7 @@
                                 </div>
                                 <div class="media-body text-right">
                                     <p class="widget-text mb-0">Siswa Ditolak</p>
-                                    <p class="widget-numeric-value count"></p>
+                                    <p class="widget-numeric-value count">{{ $formulird }}</p>
                                 </div>
                             </div>
                             <p class="widget-total-stats mt-2">390 New Customers</p>
@@ -185,7 +185,7 @@
                         <div class="row">
                             <div class="col-xl-12 col-md-12 col-sm-12 col-12">
                                 <h4>With Icon</h4>
-                            </div>                 
+                            </div>
                         </div>
                     </div>
                     <div class="widget-content widget-content-area text-center icon-counter-container">
@@ -195,13 +195,13 @@
                                 <h1 class="ico-counter1 ico-counter mt-2">1005</h1>
                                 <p class="ico-counter-text">Happy Clients</p>
                             </div>
-                            
+
                             <div class="col-xl-3 col-lg-3 mb-md-0 col-md-3 mb-5 col-sm-6">
                                 <i class="counter-ico flaticon-downloading"></i>
                                 <h1 class="ico-counter2 ico-counter mt-2">3100</h1>
                                 <p class="ico-counter-text">Total Downloads</p>
                             </div>
-                            
+
                             <div class="col-xl-3 col-lg-3 mb-md-0 col-md-3 mb-5 col-sm-6">
                                 <i class="counter-ico flaticon-cup"></i>
                                 <h1 class="ico-counter3 ico-counter mt-2">58</h1>
@@ -225,7 +225,7 @@
 
                             <div class="row">
                                 <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                    <h4>Simple Column Charts</h4>
+                                    <h4>Grafik Siswa Daftar Pertahun</h4>
                                 </div>
 
                             </div>
@@ -233,13 +233,36 @@
                         <div class="widget-content widget-content-area">
                             <div class="row">
                                 <div class="col-lg-12 mb-4">
-                                    <div id="simplecolumnchartdiv"></div>
+                                    <div id="chartsPpdb"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="row layout-spacing">
+                <div class="col-lg-12">
+                    <div class="statbox widget box box-shadow">
+                        <div class="widget-header">
+
+                            <div class="row">
+                                <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                    <h4>Grafik Siswa Daftar Pertahun</h4>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="widget-content widget-content-area">
+                            <div class="row">
+                                <div class="col-lg-12 mb-4">
+                                    <div id="grafik"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             {{-- <div class="row">
             <div class="col-xl-4 col-lg-6 col-md-6 col-12 layout-spacing">
                 <div class="widget-content-area chat-messages p-0  br-4">
@@ -1414,16 +1437,122 @@
                 </div>
                 </div>
             </div> --}}
+      
 
-    </div>
-    @include('layout.script')
-    {{--  @include('sweetalert::alert')  --}}
-    <script>
-        @if (Session::has('success'))
-            toastr.success("{{ Session::get('success') }}")
-        @endif
-    </script>
-</body>
+        </div>
+        @include('layout.script')
+        {{--  @include('sweetalert::alert')  --}}
+        <script>
+            @if (Session::has('success'))
+                toastr.success("{{ Session::get('success') }}")
+            @endif
+        </script>
+
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+
+        <script>
+            Highcharts.chart('grafik', {
+                title: {
+                    text: 'Grafik bulanan'
+                },
+                xAxis: {
+                    categories: {!! $bulan !!}
+                },
+                yAxis: {
+                    titlw: {
+                        text: 'Total pendaftar'
+                    }
+                },
+                plotOptions: {
+                    series: {
+                        allowPoinSelect: true
+                    }
+                },
+                series: [{
+                    name: 'Nominal Pendaftaran',
+                    data: {!! $status !!}
+                }]
 
 
+            });
+        </script>
+
+        <script>
+            AmCharts.makeChart("chartsPpdb", {
+                "type": "serial",
+                "theme": "light",
+                "dataProvider": [{
+                    "country": "USA",
+                    "visits": 2025,
+                }, {
+                    "country": "China",
+                    "visits": 1882,
+                }, {
+                    "country": "Japan",
+                    "visits": 1809,
+                }, {
+                    "country": "Germany",
+                    "visits": 1322,
+                }, {
+                    "country": "UK",
+                    "visits": 1122,
+                }, {
+                    "country": "France",
+                    "visits": 1114,
+                }, {
+                    "country": "India",
+                    "visits": 984,
+                }, {
+                    "country": "Spain",
+                    "visits": 711,
+                }, {
+                    "country": "Netherlands",
+                    "visits": 665,
+                }, {
+                    "country": "Russia",
+                    "visits": 580,
+                }, {
+                    "country": "South Korea",
+                    "visits": 443,
+                }, {
+                    "country": "Canada",
+                    "visits": 441,
+                }, {
+                    "country": "Brazil",
+                    "visits": 395,
+                }],
+                "valueAxes": [{
+                    "gridColor": "#FFFFFF",
+                    "gridAlpha": 0.2,
+                    "dashLength": 0
+                }],
+                "gridAboveGraphs": true,
+                "startDuration": 1,
+                "graphs": [{
+                    "balloonText": "[[category]]: <b>[[value]]</b>",
+                    "fillAlphas": 0.7,
+                    "lineAlpha": 0.2,
+                    "type": "column",
+                    "valueField": "visits",
+                    "fillColors": "#5247bd",
+                    "lineColor": "#5247bd"
+                }],
+                "chartCursor": {
+                    "categoryBalloonEnabled": false,
+                    "cursorAlpha": 0,
+                    "zoomable": false
+                },
+                "categoryField": "country",
+                "categoryAxis": {
+                    "gridPosition": "start",
+                    "gridAlpha": 0,
+                    "tickPosition": "start",
+                    "tickLength": 20
+                },
+                "export": {
+                    "enabled": true
+                }
+            });
+        </script>
+    </body>
 @endsection

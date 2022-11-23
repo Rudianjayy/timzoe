@@ -17,15 +17,6 @@
                             <form action="/prosesinfo/{{ $data->id }}" method="POST" enctype="multipart/form-data">
                                 @csrf
 
-                                <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Judul :</label>
-                                    <input type="text" name="judul" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp">
-                                    @error('judul')
-                                        <div class="alert alert-danger">{{ $message }}</div>
-                                    @enderror
-                                </div>
-                
                                 <section style="padding-top:60px;">
                                     <div class="container">
                                         <div class="row">
@@ -42,18 +33,6 @@
                                         </div>
                                     </div>
                                 </section>
-
-                                <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Ubah Foto :</label>
-                                    <img class="img mb-3" src="{{ asset('fotomahasiswa/' . $data->foto) }}" alt=""
-                                        style="width: 70px">
-                                    <input type="file" name="foto" class="form-control" id="foto"
-                                        aria-describedby="emailHelp" value="{{ $data->foto }}">
-                                    @error('foto')
-                                        <div class="alert alert-danger">{{ $message }}</div>
-                                    @enderror
-                                </div>
-
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </form>
                         </div>

@@ -39,6 +39,7 @@ return new class extends Migration
             $table->string('ukuran_kaos');
             $table->string('jurusan');
             $table->string('status');
+            $table->string('barcode');
             $table->timestamps();
         });
     }

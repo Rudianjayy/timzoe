@@ -8,7 +8,7 @@
     @section('content')
     
     <head>
-        <title>Foto Iduka - Admin</title>
+        <title>Album Iduka - Admin</title>
         @include('layout.css')
     </head>
 
@@ -38,7 +38,7 @@
                                     <h4>Mou</h4>
                                 </div>
                                 <div>
-                                    <a href="/tambahfotomouadmin" class="btn btn-primary mt-2"
+                                    <a href="/tambahalbumfoto" class="btn btn-primary mt-2"
                                         id="kt_account_profile_details_submit" style="margin-left: 30px;">Tambah
                                         +</a>
                                 </div>
@@ -52,8 +52,12 @@
                                         <tr>
 
                                             <th scope="col">#</th>
-                                            <th scope="col">Foto Mou</th>
-                                            <th scope="col">Jurusan Mou</th>
+                                            <th scope="col">MOU OTKP</th>
+                                            <th scope="col">MOU TJKT</th>
+                                            <th scope="col">MOU AKL</th>
+                                            <th scope="col">MOU PH</th>
+                                            <th scope="col">MOU DKV</th>
+                                            <th scope="col">MOU PPLG</th>
                                             <th class="align-center">Action</th>
                                         </tr>
                                     </thead>
@@ -61,20 +65,40 @@
                                         @php
                                             $no = 1;
                                         @endphp
-                                        @foreach ($data2 as $d)
+                                        @foreach ($data3 as $d)
                                             <tr>
                                                 <th>{{ $no++ }}</th>
                                                 <td>
-                                                    <img src="{{ asset('fotomahasiswa/' . $d->foto_iduka) }}" alt=""
+                                                    <img src="{{ asset('fotomahasiswa/' . $d->foto_otkp) }}" alt=""
                                                         style="width: 50px;">
                                                 </td>
-                                                <td>{!! $d->jurusan_mou !!}</td>
+                                                <td>
+                                                    <img src="{{ asset('fotomahasiswa/' . $d->foto_tjkt) }}" alt=""
+                                                        style="width: 50px;">
+                                                </td>
+                                                <td>
+                                                    <img src="{{ asset('fotomahasiswa/' . $d->foto_akl) }}" alt=""
+                                                        style="width: 50px;">
+                                                </td>
+                                                <td>
+                                                    <img src="{{ asset('fotomahasiswa/' . $d->foto_ph) }}" alt=""
+                                                        style="width: 50px;">
+                                                </td>
+                                                <td>
+                                                    <img src="{{ asset('fotomahasiswa/' . $d->foto_dkv) }}" alt=""
+                                                        style="width: 50px;">
+                                                </td>
+                                                <td>
+                                                    <img src="{{ asset('fotomahasiswa/' . $d->foto_pplg) }}" alt=""
+                                                        style="width: 50px;">
+                                                </td>
+                                                
 
 
                                                 <td class="align-center">
                                                     <ul class="table-controls">
                                                         <li>
-                                                            <a href="/editadminfotomou/{{ $d->id }}" data-toggle="tooltip"
+                                                            <a href="/editalbumiduka/{{ $d->id }}" data-toggle="tooltip"
                                                                 data-placement="top" title="Edit">
                                                                 <i class="flaticon-edit"></i>
                                                             </a>
@@ -125,10 +149,10 @@
                 })
                 .then((willDelete) => {
                     if (willDelete) {
-                        window.location = "/deletefotomou/" + id + ""
-                         swal("Data berhasil dihapus!", {
-                           icon: "success",
-                         });
+                        window.location = "/deletealbumiduka/" + id + ""
+                        //  swal("Data berhasil dihapus!", {
+                        //    icon: "success",
+                        //  });
                     } else {
                         swal("Data tidak jadi dihapus!");
                     }

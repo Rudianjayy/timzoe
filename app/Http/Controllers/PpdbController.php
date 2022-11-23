@@ -407,10 +407,11 @@ class PpdbController extends Controller
         return view('ppdb.formulir.formulir', compact('data4'));
     }
 
-    public function setuju($id){
+    public function setuju(Request $request,$id){
         $data = Formulir::find($id);
         $data->update([
             'status' => 'diterima',
+            'barcode' => $request->nisn,
         ]);
         return redirect()->back()->with('success','status berhasil diubah');
     }
@@ -467,7 +468,7 @@ class PpdbController extends Controller
             'nokk' =>$request->nokk,
             'foto_kk' =>$request->foto_kk,
             'foto_bukti' =>$request->foto_bukti,
-            'status_anak' =>$request->status_anak,
+            'status' =>$request->status,
             'alamat_rumah' =>$request->alamat_rumah,
             'nama_ayah' =>$request->nama_ayah,
             'nama_ibu' =>$request->nama_ibu,
@@ -479,7 +480,6 @@ class PpdbController extends Controller
             'prestasi' =>$request->prestasi,
             'ukuran_kaos' =>implode(',',$request-> ukuran_kaos),
             'jurusan' =>$request->jurusan,
-            'status' => 'pending',
 
         ]);
 
@@ -602,16 +602,12 @@ class PpdbController extends Controller
     public function submitinfo(Request $request){
         // dd($request->all());
         $this->validate($request,[
-            'judul' =>'required',
             'deskripsi' =>'required',
         ],[
-            'judul.required' =>'Harus diisi',
             'deskripsi.required' =>'Harus diisi',
 
         ]);
         $data = info::create([
-            'foto' =>$request->foto,
-            'judul' =>$request->judul,
             'deskripsi' =>$request->deskripsi,
         ]);
         if($request->hasFile('foto')){
@@ -631,18 +627,13 @@ class PpdbController extends Controller
 
     public function prosesinfo(Request $request, $id){
         $this->validate($request,[
-            'foto' =>'mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
-            'judul' =>'required',
             'deskripsi' =>'required',
         ],[
-            'foto.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
-            'judul' =>'harus diisi',
             'deskripsi' =>'harus diisi',
 
         ]);
         $data = info::find($id);
         $data->update([
-            'judul' =>$request->judul,
             'deskripsi' =>$request->deskripsi,
         ]);
         if($request->hasFile('foto')){

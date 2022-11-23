@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zxx">
+<html lang="">
 
 <!-- Mirrored from templates.hibootstrap.com/colugo/default/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 02 Nov 2022 08:00:39 GMT -->
 
@@ -12,13 +12,16 @@
 
     <link rel="stylesheet" href="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/css/animate.min.css') }}">
 
-    <link rel="stylesheet" href="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet"
+        href="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/css/owl.carousel.min.css') }}">
 
-    <link rel="stylesheet" href="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/css/fontawesome.min.css') }}">
+    <link rel="stylesheet"
+        href="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/css/fontawesome.min.css') }}">
 
     <link rel="stylesheet" href="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/css/odometer.css') }}">
 
-    <link rel="stylesheet" href="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/css/magnific-popup.min.css') }}">
+    <link rel="stylesheet"
+        href="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/css/magnific-popup.min.css') }}">
 
     <link rel="stylesheet" href="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/css/slick.min.css') }}">
 
@@ -28,9 +31,8 @@
 
     <link rel="stylesheet" href="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/css/responsive.css') }}">
     <title>PPDB - SMK Muhammadiyah 1 Genteng</title>
-    <link rel="icon" type="image/png" href="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/favicon.png') }}">
-
-    <!-- <link rel="stylesheet" href="https://ppdb.smktelkom-mlg.sch.id/assets/home/css/style.css"> -->
+    <link rel="icon" type="image/png"
+        href="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/favicon.png') }}">
 </head>
 
 <body data-bs-spy="scroll" data-bs-offset="120">
@@ -50,7 +52,9 @@
                     <h3>PPDB Online</h3>
                 </a>
             </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -110,12 +114,13 @@
                                     {{ $dp->deskripsi_slider }}
                                 </p>
 
+                                </div>
                             </div>
-                        </div>
                         @endforeach
                         <div class="col-lg-6">
                             <div class="banner-image">
-                                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/mobile.png') }}" alt="image">
+                                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/mobile.png') }}"
+                                    alt="image">
                             </div>
                         </div>
                     </div>
@@ -477,70 +482,94 @@
                                 <p>Founder & CEO</p>
                             </div>
                         </div>
+                        <button class="prev-arrow slick-arrow">
+                            <i class="fa fa-chevron-left"></i>
+                        </button>
+                        <button class="next-arrow slick-arrow">
+                            <i class="fa fa-chevron-right"></i>
+                        </button>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-team">
-                        <div class="image">
-                            <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/team/image2.jpg') }}" alt="image">
-                            <ul class="social">
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class="fab fa-instagram"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class="fab fa-linkedin-in"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                            <div class="content">
-                                <h3>Louis Agassiz</h3>
-                                <p>Co-Founder</p>
+                    <div class="client-thumbnails">
+                        <div>
+                            <div class="item">
+                                <div class="img-fill">
+                                    <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/client/1.jpg') }}"
+                                        alt="client">
+                                </div>
+                                <div class="title">
+                                    <h3>Jonus Nathan</h3>
+                                    <span>CEO at Envato</span>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-team">
-                        <div class="image">
-                            <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/team/image3.jpg') }}" alt="image">
-                            <ul class="social">
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class="fab fa-instagram"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class="fab fa-linkedin-in"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                            <div class="content">
-                                <h3>Carl Anderson</h3>
-                                <p>Web Developer</p>
+                            <div class="item">
+                                <div class="img-fill">
+                                    <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/client/2.jpg') }}"
+                                        alt="client">
+                                </div>
+                                <div class="title">
+                                    <h3>Sadio Finn</h3>
+                                    <span>CEO at FlatIcon</span>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="img-fill">
+                                    <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/client/3.jpg') }}"
+                                        alt="client">
+                                </div>
+                                <div class="title">
+                                    <h3>Tom Olivar</h3>
+                                    <span>CEO at ThemeForest</span>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="img-fill">
+                                    <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/client/4.jpg') }}"
+                                        alt="client">
+                                </div>
+                                <div class="title">
+                                    <h3>James Finn</h3>
+                                    <span>CEO at GitLab</span>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="img-fill">
+                                    <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/client/5.jpg') }}"
+                                        alt="client">
+                                </div>
+                                <div class="title">
+                                    <h3>John Lucy</h3>
+                                    <span>CEO at Linkedin</span>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="img-fill">
+                                    <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/client/1.jpg') }}"
+                                        alt="client">
+                                </div>
+                                <div class="title">
+                                    <h3>Sarah Taylor</h3>
+                                    <span>CEO at Twitter</span>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="img-fill">
+                                    <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/client/2.jpg') }}"
+                                        alt="client">
+                                </div>
+                                <div class="title">
+                                    <h3>James Anderson</h3>
+                                    <span>CEO at Facebook</span>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="img-fill">
+                                    <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/client/3.jpg') }}"
+                                        alt="client">
+                                </div>
+                                <div class="title">
+                                    <h3>Steven Smith</h3>
+                                    <span>CEO at EnvyTheme</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -742,65 +771,20 @@
                     <a href="#">Web Development</a>
                 </div>
             </div>
-            <div class="content">
-                <ul class="post-meta">
-                    <li>
-                        <i class="fa fa-calendar"></i>
-                        18 March 2021
-                    </li>
-                    <li>
-                        <i class="fa fa-comments"></i>
-                        <a href="#">6 Comment</a>
-                    </li>
-                </ul>
-                <h3>
-                    <a href="single-blog.html">
-                        The Most Popular New Apps in 2021
-                    </a>
-                </h3>
-                <p>Water plan dolor sit amet consturisi velised quiLorem</p>
-                <a href="single-blog.html" class="read-more">
-                    Read More
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-4 col-md-6">
-        <div class="single-blog">
-            <div class="image">
-                <a href="single-blog.html">
-                    <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/blog/image3.jpg') }}" alt="image">
-                </a>
-                <div class="btn">
-                    <a href="#">Design Development</a>
+        </section>
+
+
+        <section id="biaya" class="pricing-area pt-100 pb-70">
+            <div class="container">
+                @foreach ($ab as $ab)
+
+                @endforeach
+                <div class="section-title">
+                    <h2>Biaya & Jadwal</h2>
+                    <div class="bar"></div>
+                    <p>Berikut kriteria biaya dan jadwal PPDB online SMK Muhammadiyah 1 Genteng</p>
                 </div>
-            </div>
-            <div class="content">
-                <ul class="post-meta">
-                    <li>
-                        <i class="fa fa-calendar"></i>
-                        28 March 2021
-                    </li>
-                    <li>
-                        <i class="fa fa-comments"></i>
-                        <a href="#">0 Comment</a>
-                    </li>
-                </ul>
-                <h3>
-                    <a href="single-blog.html">
-                        The Best Marketing Management Tools
-                    </a>
-                </h3>
-                <p>Water plan dolor sit amet consturisi velised quiLorem</p>
-                <a href="single-blog.html" class="read-more">
-                    Read More
-                </a>
-            </div>
-        </div>
-    </div>
-    </div>
-    </div>
-    </section> --}}
+                <div class="tab pricing-list-tab">
 
 
     <section id="kontak" class="contact-area ptb-100">
@@ -817,44 +801,58 @@
                     <div class="contact-form">
                         <form id="contactForm">
                             <div class="row">
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="form-group">
-                                        <input type="text" name="name" id="name" class="form-control" required data-error="Please enter your name" placeholder="Your Name">
-                                        <div class="help-block with-errors"></div>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="single-pricing-table">
+                                        <div class="pricing-header">
+                                            <h3>{{ $ab->gelombang }}</h3>
+                                        </div>
+                                        <div class="price">
+                                        <h5>{{ $ab->penjelas }}</h5>
+                                        </div>
+                                        <ul class="pricing-features">
+                                            <li>
+                                                <i class="fas fa-check"></i>
+                                                {{ $ab->jadwal }}
+                                            </li>
+
+                                        </ul>
+
                                     </div>
                                 </div>
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="form-group">
-                                        <input type="email" name="email" id="email" class="form-control" required data-error="Please enter your email" placeholder="Your Email">
-                                        <div class="help-block with-errors"></div>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="single-pricing-table">
+                                        <div class="pricing-header">
+                                        <h3>{{ $ab->gelombang }}</h3>
+                                        </div>
+                                        <div class="price">
+                                        <h5>{{ $ab->penjelas }}</h5>
+                                        </div>
+                                        <ul class="pricing-features">
+                                            <li>
+                                                <i class="fas fa-check"></i>
+                                                {{ $ab->jadwal }}
+                                            </li>
+
+                                        </ul>
+
                                     </div>
                                 </div>
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="form-group">
-                                        <input type="text" name="phone_number" id="phone_number" required data-error="Please enter your number" class="form-control" placeholder="Your Phone">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="form-group">
-                                        <input type="text" name="msg_subject" id="msg_subject" class="form-control" required data-error="Please enter your subject" placeholder="Your Subject">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="form-group">
-                                        <textarea name="message" class="form-control" id="message" cols="30" rows="6" required data-error="Write your message" placeholder="Your Message"></textarea>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="send-btn">
-                                        <button type="submit" class="default-btn">
-                                            Send Message
-                                            <span></span>
-                                        </button>
-                                        <div id="msgSubmit" class="h3 text-center hidden"></div>
-                                        <div class="clearfix"></div>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="single-pricing-table">
+                                        <div class="pricing-header">
+                                        <h3>{{ $ab->gelombang }}</h3>
+                                        </div>
+                                        <div class="price">
+                                        <h5>{{ $ab->penjelas }}</h5>
+                                        </div>
+                                        <ul class="pricing-features">
+                                            <li>
+                                                <i class="fas fa-check"></i>
+                                                {{ $ab->jadwal }}
+                                            </li>
+
+                                        </ul>
+
                                     </div>
                                 </div>
                             </div>
@@ -893,8 +891,53 @@
                                 </li>
                             </ul>
                         </div>
+                    @endforeach
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-6 col-6">
+                    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+                    <div class="elfsight-app-7e06bf3a-c3dd-4ad3-a974-4f6c4b30ba1e"></div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-6">
+                    <div class="widget widget-menu menu-supports">
+                        <h5 class="title-widget">Lainnya</h5>
+                        @php
+                            $link = \App\Models\Footeerdua::all();
+                        @endphp
+                        <ul>
+                            @foreach ($link as $pp)
+                                <li><a href="{{ $pp->link }}">{{ $pp->judul }}</a></li>
+                            @endforeach
+
+                            {{--  <li><a href="https://sekolah.data.kemdikbud.go.id/index.php/chome/profil/39108646-470a-4aac-bee3-bc8ea91b8973">Dapodik</a></li>
+                            <li><a href="https://sekolah.data.kemdikbud.go.id/index.php/chome/profil/39108646-470a-4aac-bee3-bc8ea91b8973">UPJ TKJ</a></li>
+                            <li><a href="/profilsekolah">Tentang Kami</a></li>
+                            <li><a href="#">PPDB</a></li>  --}}
+
+                        </ul>
                     </div>
                 </div>
+                {{--  <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+                    <div class="widget widget-post">
+                        <h5 class="title-widget">Berita </h5>
+                        @php
+                            $muhiberita = \App\Models\Muhinews::orderBy('created_at','desc')->paginate(3);
+                        @endphp
+                        <ul class="post-new">
+                            @foreach ($muhiberita as $mb)
+                                <li>
+                                    <div class="post-img">
+                                        <img src="{{ asset('fotomahasiswa/' . $mb->foto) }}" alt="Post New">
+                                    </div>
+                                    <div class="post-content">
+                                        <h6 class="title"><a href="/muhinews">{{ $mb->deskripsi_muhinews }}</a></h6>
+                                        <a href="/muhinews" class="post-date"><i
+                                                class="far fa-calendar-week"></i>{{ $mb->created_at }}</a>
+                                    </div>
+                                </li>
+                            @endforeach
+                        </ul>
+                    </div>
+                </div>  --}}
             </div>
         </div>
 

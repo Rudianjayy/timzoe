@@ -1,5 +1,11 @@
 <?php
 
+use App\Models\User;
+use App\Models\Album;
+use App\Models\Mitra;
+use App\Models\Muhinews;
+use App\Models\Prestasi;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UpjController;
 use App\Http\Controllers\PpdbController;
@@ -14,6 +20,7 @@ use App\Http\Controllers\JurusanController;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\MuhiblogController;
 use App\Http\Controllers\MuhinewsController;
+use App\Http\Controllers\PasswordController;
 use App\Http\Controllers\PrestasiController;
 use App\Http\Controllers\SambutanController;
 use App\Http\Controllers\FasilitasController;
@@ -23,16 +30,12 @@ use App\Http\Controllers\KurikulumController;
 use App\Http\Controllers\UpjtekajeController;
 use App\Http\Controllers\FooteerduaController;
 use App\Http\Controllers\KompetensiController;
+use App\Http\Controllers\ProfiladminController;
 use App\Http\Controllers\DataidentitasController;
 use App\Http\Controllers\ProfilSekolahController;
 use App\Http\Controllers\FotokompetensiController;
 use App\Http\Controllers\IdentitasSekolahController;
-use App\Models\Album;
-use App\Models\Mitra;
-use App\Models\Muhinews;
-use App\Models\Prestasi;
-use App\Http\Controllers\ProfiladminController;
-use App\Http\Controllers\PasswordController;
+use App\Models\Formulir;
 
 
 /*
@@ -114,6 +117,8 @@ Route::post('/submitdata26', [LoginController::class, 'submitdata26'])->name('su
 Route::get('/editoperator/{id}', [LoginController::class, 'editoperator'])->name('editoperator');
 Route::post('/submitedit26/{id}', [LoginController::class, 'submitedit26'])->name('submitedit26');
 Route::get('/deleteoperator/{id}', [LoginController::class, 'deleteoperator'])->name('deleteoperator');
+
+Route::get('/grafik', [LoginController::class, 'grafik'])->name('grafik');
 
 
 
@@ -200,12 +205,22 @@ Route::post('/editproses3/{id}', [IdukaController::class, 'editproses3'])->name(
 Route::get('/deleteiduka/{id}', [IdukaController::class, 'delete'])->name('delete');
 
 
-Route::get('/mouadmin', [FotoidukaController::class, 'mouadmin'])->name('mouadmin');
-Route::get('/tambahfotomou', [FotoidukaController::class, 'tambahfotomou'])->name('tambahfotomou');
-Route::post('/fotomouproses', [FotoidukaController::class, 'fotomouproses'])->name('fotomouproses');
-Route::get('/editfotomou/{id}', [FotoidukaController::class, 'editfotomou'])->name('editfotomou');
-Route::post('/editproses4/{id}', [FotoidukaController::class, 'editproses4'])->name('editproses4');
-Route::get('/deletefotomou/{id}', [FotoidukaController::class, 'delete'])->name('delete');
+Route::get('/fotomouadmin', [IdukaController::class, 'fotomouadmin'])->name('fotomouadmin');
+Route::get('/tambahfotomouadmin', [IdukaController::class, 'tambahfotomouadmin'])->name('tambahfotomouadmin');
+Route::post('/adminfotomouproses', [IdukaController::class, 'adminfotomouproses'])->name('adminfotomouproses');
+Route::get('/editadminfotomou/{id}', [IdukaController::class, 'editadminfotomou'])->name('editadminfotomou');
+Route::post('/editadminproses4/{id}', [IdukaController::class, 'editadminproses4'])->name('editadminproses4');
+Route::get('/deleteadminfotomou/{id}', [IdukaController::class, 'deleteadminfotomou'])->name('deleteadminfotomou');
+
+Route::get('/albumiduka', [IdukaController::class, 'albumiduka'])->name('albumiduka');
+Route::get('/tambahalbumfoto', [IdukaController::class, 'tambahalbumfoto'])->name('tambahalbumfoto');
+Route::post('/submitdata30', [IdukaController::class, 'submitdata30'])->name('submitdata30');
+Route::get('/editalbumfoto/{id}', [IdukaController::class, 'editalbumfoto'])->name('editalbumfoto');
+Route::post('/submitedit30/{id}', [IdukaController::class, 'submitedit30'])->name('submitedit30');
+Route::get('/deletealbumiduka/{id}', [IdukaController::class, 'deletealbumiduka'])->name('deletealbumiduka');
+
+
+
 Route::get('/admincarapendaftaran', [PpdbController::class, 'loby25'])->name('admincarapendaftaran');
 Route::get('/tambahcarapendaftaran', [PpdbController::class, 'tambahcarapendaftaran'])->name('tambahcarapendaftaran');
 Route::post('/submitdata25', [PpdbController::class, 'submitdata25'])->name('submitdata25');
@@ -694,7 +709,7 @@ Route::group(['middleware' => ['auth', 'hakakses:admin,user']], function () {
         return view('welcome', compact('berita', 'galery', 'prestasi', 'mitra'));
     })->middleware('auth');
 
-    Route::get('/adminformulir', [PpdbController::class, 'loby27'])->name('adminformulir');
+    Route::get('/adminformulir', [PpdbController::class, 'adminformulir'])->name('adminformulir');
     Route::get('/tambahformulir', [PpdbController::class, 'tambahformulir'])->name('tambahformulir');
     Route::post('/submitdata27', [PpdbController::class, 'submitdata27'])->name('submitdata27');
     Route::post('/setuju/{id}', [PpdbController::class, 'setuju'])->name('setuju');
@@ -732,7 +747,18 @@ Route::group(['middleware' => ['auth', 'hakakses:admin,user']], function () {
         $galery = Album::count();
         $prestasi = Prestasi::count();
         $mitra = Mitra::count();
-        return view('welcome', compact('berita', 'galery', 'prestasi', 'mitra'));
+        $formulir = Formulir::where('status','=','diterima')->count();
+        $formulird = Formulir::where('status','=','ditolak')->count();
+        // dd($formulir);
+        $status = Formulir::select(DB::raw("SUM(id) as status"))
+        ->GroupBy(DB::raw("Month(created_at)"))
+        ->pluck('status');
+
+        $bulan = Formulir::select(DB::raw("MONTHNAME(created_at) as bulan"))
+        ->GroupBy(DB::raw("MONTHNAME(created_at)"))
+        ->pluck('bulan');
+        
+        return view('welcome', compact('berita', 'galery', 'prestasi', 'mitra','status','bulan','formulir','formulird'));
     })->middleware('auth');
 
     Route::get('/adminformulir', [PpdbController::class, 'adminformulir'])->name('adminformulir');

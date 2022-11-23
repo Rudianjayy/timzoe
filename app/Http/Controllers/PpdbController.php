@@ -336,15 +336,16 @@ class PpdbController extends Controller
 
 
 
-    public function loby27(){
+    public function adminformulir(){
        $data4 = Formulir::all();
         return view('ppdb.formulir.formulir', compact('data4'));
     }
     
-    public function setuju($id){
+    public function setuju(Request $request,$id){
         $data = Formulir::find($id);
         $data->update([
             'status' => 'diterima',
+            'barcode' => $request->nisn,
         ]);
         return redirect()->back()->with('success','status berhasil diubah');
     }

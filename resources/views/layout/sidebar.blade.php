@@ -188,7 +188,10 @@
                         <a href="/idukaadmin">Iduka</a>
                     </li>
                     <li>
-                        <a href="/mouadmin">Foto Mou</a>
+                        <a href="/fotomouadmin">Foto Mou</a>
+                    </li>
+                    <li>
+                        <a href="/albumiduka">Album Mou</a>
                     </li>
                 </ul>
             </li>

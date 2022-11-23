@@ -23,8 +23,11 @@ class PpdbController extends Controller
         $pd = Deskripsipendaftaran::all();
         $kontak = Deskripsipendaftaran::all();
         $cp = Carapendaftaran::all();
-        $footerppdb = footeer::all();
-        return view('ppdb.pendaftaran', compact('dp','pd','kontak','cp','footerppdb'));
+        $ab = biaya::all();
+        $ac = syaratdaftar::all();
+        $ar = kontak::all();
+        $info = info::all();
+        return view('ppdb.pendaftaran', compact('dp','pd','kontak','cp','ab','ac','ar','info'));
     }
 
 
@@ -401,7 +404,7 @@ class PpdbController extends Controller
             'nokk' =>$request->nokk,
             'foto_kk' =>$request->foto_kk,
             'foto_bukti' =>$request->foto_bukti,
-            'status_anak' =>$request->status_anak,
+            'status' =>$request->status,
             'alamat_rumah' =>$request->alamat_rumah,
             'nama_ayah' =>$request->nama_ayah,
             'nama_ibu' =>$request->nama_ibu,
@@ -413,7 +416,6 @@ class PpdbController extends Controller
             'prestasi' =>$request->prestasi,
             'ukuran_kaos' =>implode(',',$request-> ukuran_kaos),
             'jurusan' =>$request->jurusan,
-            'status' => 'pending',
 
         ]);
         if($request->hasFile('foto_kk')){
@@ -437,25 +439,9 @@ class PpdbController extends Controller
 
 
 
-
-
-
-
-
-
-    public function biaya(){
-        $ab = biaya::all();
-        return view('ppdb.biaya.biaya');
-    }
-
-
-
     public function adminbiaya() {
-        $data = biaya::all();
-        $us = biaya::all();
         $data3 = biaya::all();
-        $ab = biaya::all();
-        return view('ppdb.biaya.adminbiaya', compact('data','us','ab','data3'));
+        return view('ppdb.biaya.adminbiaya', compact('data3'));
     }
 
     public function editbiaya($id){
@@ -472,8 +458,6 @@ class PpdbController extends Controller
         $data = biaya::find($id);
         $data->update([
 
-            'judul' =>$request->judul,
-            'deskripsi' =>$request->deskripsi,
             'gelombang' =>$request->gelombang,
             'penjelas' =>$request->penjelas,
             'jadwal' =>$request->jadwal,
@@ -492,23 +476,17 @@ class PpdbController extends Controller
 
     public function submitprosesbiaya(Request $request){
         $this->validate($request,[
-            'judul' =>'required',
-            'deskripsi' =>'required',
             'gelombang' =>'required',
             'penjelas' =>'required',
             'jadwal' =>'required',
 
         ],[
-            'judul.required' =>'Harus diisi',
-            'deskripsi.required' =>'Harus diisi',
             'gelombang.required' =>'Harus diisi',
             'penjelas.required' =>'Harus diisi',
             'jadwal.required' =>'Harus diisi',
 
         ]);
         $data3 = biaya::create([
-            'judul' =>$request->judul,
-            'deskripsi' =>$request->deskripsi,
             'gelombang' =>$request->gelombang,
             'penjelas' =>$request->penjelas,
             'jadwal' =>$request->jadwal,
@@ -539,16 +517,12 @@ class PpdbController extends Controller
     public function submitinfo(Request $request){
         // dd($request->all());
         $this->validate($request,[
-            'judul' =>'required',
             'deskripsi' =>'required',
         ],[
-            'judul.required' =>'Harus diisi',
             'deskripsi.required' =>'Harus diisi',
 
         ]);
         $data = info::create([
-            'foto' =>$request->foto,
-            'judul' =>$request->judul,
             'deskripsi' =>$request->deskripsi,
         ]);
         if($request->hasFile('foto')){
@@ -568,18 +542,13 @@ class PpdbController extends Controller
 
     public function prosesinfo(Request $request, $id){
         $this->validate($request,[
-            'foto' =>'mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
-            'judul' =>'required',
             'deskripsi' =>'required',
         ],[
-            'foto.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
-            'judul' =>'harus diisi',
             'deskripsi' =>'harus diisi',
 
         ]);
         $data = info::find($id);
         $data->update([
-            'judul' =>$request->judul,
             'deskripsi' =>$request->deskripsi,
         ]);
         if($request->hasFile('foto')){

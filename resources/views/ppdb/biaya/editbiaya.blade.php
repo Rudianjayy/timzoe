@@ -15,24 +15,10 @@
                 <div class="col-8">
                     <div class="card">
                         <div class="card-body">
-                            <form action="/editprosesbiaya1{{ $data3->id }}" method="POST" enctype="multipart/form-data">
+                            <form action="/editprosesbiaya1/{{ $data3->id }}" method="POST" enctype="multipart/form-data">
                                 @csrf
 
-                                <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Judul :</label>
-                                    <input type="text" name="judul" class="form-control" value="{{ $data3->judul }}">
-                                    @error('judul')
-                                        <div class="alert alert-danger">{{ $message }}</div>
-                                    @enderror
-                                </div>
 
-                                <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Deskripsi :</label>
-                                    <input type="text" name="deskripsi" class="form-control" value="{{ $data3->deskripsi }}">
-                                    @error('deskripsi')
-                                        <div class="alert alert-danger">{{ $message }}</div>
-                                    @enderror
-                                </div>
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Gelombang :</label>
                                     <input type="text" name="gelombang" class="form-control" value="{{ $data3->gelombang }}">

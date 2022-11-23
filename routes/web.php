@@ -134,7 +134,7 @@ Route::get('/deletedeskripsipendaftaran/{id}', [PpdbController::class, 'deletede
 Route::get('/syaratdaftar', [PpdbController::class, 'syaratdaftar'])->name('syaratdaftar');
 Route::get('/adminsyaratdaftar', [PpdbController::class, 'adminsyaratdaftar'])->name('adminsyaratdaftar');
 Route::get('/editsyaratdaftar/{id}', [PpdbController::class, 'editsyaratdaftar'])->name('editsyaratdaftar');
-Route::post('/editproses12', [PpdbController::class, 'editproses12'])->name('editproses12');
+Route::post('/editproses12/{id}', [PpdbController::class, 'editproses12'])->name('editproses12');
 Route::get('/tambahsyaratdaftar', [PpdbController::class, 'tambahsyaratdaftar'])->name('tambahsyaratdaftar');
 Route::post('/submitproses12/', [PpdbController::class, 'submitproses12'])->name('submitproses12');
 Route::get('/deletesyaratdaftar/{id}', [PpdbController::class, 'deletesyaratdaftar'])->name('deletesyaratdaftar');
@@ -180,7 +180,7 @@ Route::get('/deletemitrappdb/{id}',[PpdbController::class, 'deletemitrappdb'])->
 
 Route::get('/admininfo',[PpdbController::class, 'admininfo'])->name('admininfo');
 Route::get('/editinfo/{id}',[PpdbController::class, 'editinfo'])->name('editinfo');
-Route::post('/prosesinfo',[PpdbController::class, 'prosesinfo'])->name('prosesinfo');
+Route::post('/prosesinfo/{id}',[PpdbController::class, 'prosesinfo'])->name('prosesinfo');
 Route::get('/tambahinfo',[PpdbController::class, 'tambahinfo'])->name('tambahinfo');
 Route::post('/submitinfo',[PpdbController::class, 'submitinfo'])->name('submitinfo');
 Route::get('/deleteinfo/{id}',[PpdbController::class, 'deleteinfo'])->name('deleteinfo');

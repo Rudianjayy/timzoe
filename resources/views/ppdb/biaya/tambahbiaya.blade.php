@@ -17,23 +17,6 @@
                         <div class="card-body">
                             <form action="/submitprosesbiaya" method="POST" enctype="multipart/form-data">
                                 @csrf
-                                <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Judul :</label>
-                                    <input type="text" name="judul" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp">
-                                    @error('judul')
-                                        <div class="alert alert-danger">{{ $message }}</div>
-                                    @enderror
-                                </div>
-
-                                <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Deskripsi :</label>
-                                    <input type="text" name="deskripsi" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp">
-                                    @error('deskripsi')
-                                        <div class="alert alert-danger">{{ $message }}</div>
-                                    @enderror
-                                </div>
 
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Gelombang :</label>
@@ -62,7 +45,7 @@
                                 </div>
 
                                 <button type="submit" class="btn btn-primary">Submit</button>
-                                <a href="/admincarapendaftaran" class="btn btn-danger">Kembali</a>
+                                <a href="/adminbiaya" class="btn btn-danger">Kembali</a>
                             </form>
                         </div>
                     </div>

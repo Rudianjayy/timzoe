@@ -6,7 +6,7 @@
 </head>
 
 <body>
-  <h1 class="text-center mb-4">Tambah Mitra PPDB</h1>
+  <h1 class="text-center mb-4">Tambah Informasi </h1>
 
   <div class="container" mb-5>
 
@@ -16,41 +16,20 @@
             <div class="card-body">
               <form action="/submitinfo" method="POST" enctype="multipart/form-data">
                 @csrf
+
+
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Judul :</label>
-                    <input type="text" name="judul" class="form-control" id="exampleInputEmail1"
+                    <label for="exampleInputEmail1" class="form-label">Deskripsi :</label>
+                    <input type="text" name="deskripsi" class="form-control" id="exampleInputEmail1"
                         aria-describedby="emailHelp">
-                    @error('judul')
+                    @error('deskripsi')
                         <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
                 </div>
 
-                <section style="padding-top:60px;">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="card">
-                                    <div class="card-header">
-                                    </div>
-                                    <div class="card-body">
-                                        <textarea name="deskripsi" id="mytextarea"></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Foto :</label>
-                    <input type="file" name="foto" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
-                    @error('foto')
-                      <div class="alert alert-danger">{{ $message }}</div>
-                    @enderror
-                  </div>
 
                 <button type="submit" class="btn btn-primary">Submit</button>
-                <a href="/osisadmin" class="btn btn-danger">Kembali</a>
+                <a href="/admininfo" class="btn btn-danger">Kembali</a>
               </form>
             </div>
           </div>

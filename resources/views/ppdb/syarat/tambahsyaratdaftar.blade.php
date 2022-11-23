@@ -36,7 +36,7 @@
 
 
                                 <button type="submit" class="btn btn-primary">Submit</button>
-                                <a href="/admincarapendaftaran" class="btn btn-danger">Kembali</a>
+                                <a href="/adminsyaratdaftar" class="btn btn-danger">Kembali</a>
                             </form>
                         </div>
                     </div>

@@ -36,24 +36,22 @@
                             <div class="row">
                                 <div class="col-xl-12 col-md-12 col-sm-12 col-12">
                                     <h4>Infromasi</h4>
+                                    <div>
+                                        <a href="/tambahinfo" class="btn btn-primary mt-5"
+                                            id="kt_account_profile_details_submit">Tambah
+                                            +</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="widget-content widget-content-area">
                             <div class="table-responsive mb-4">
                                 <table id="ecommerce-product-list" class="table  table-bordered">
-                                    <div>
-                                        <a href="/tambahinfo" class="btn btn-primary mt-5"
-                                            id="kt_account_profile_details_submit">Tambah
-                                            +</a>
-                                    </div>
                                     <thead>
                                         <tr>
 
                                             <th scope="col">#</th>
-                                            <th scope="col">Judul </th>
                                             <th scope="col">Deskripsi </th>
-                                            <th scope="col">Foto </th>
                                             <th class="align-center">Action</th>
                                         </tr>
                                     </thead>
@@ -64,22 +62,17 @@
                                         @foreach ($data as $d)
                                             <tr>
                                                 <th>{{ $no++ }}</th>
-                                                <td>{!! $d->judul !!}</td>
                                                 <td>{!! $d->deskripsi !!}</td>
-                                                <td>
-                                                    <img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt=""
-                                                        style="width: 50px;">
-                                                </td>
                                                 <td class="align-center">
                                                     <ul class="table-controls">
                                                         <li>
-                                                            <a href="/editmitrappdb/{{ $d->id }}"
+                                                            <a href="/editinfo/{{ $d->id }}"
                                                                 data-toggle="tooltip" data-placement="top" title="Edit">
                                                                 <i class="flaticon-edit"></i>
                                                             </a>
                                                         </li>
                                                         <li>
-                                                            <a href="/deletemitrappdb/{{ $d->id }}"
+                                                            <a href="/deleteinfo/{{ $d->id }}"
                                                                 data-toggle="tooltip" data-placement="top" title="Delete">
                                                                 <i class="flaticon-delete-5"></i>
                                                             </a>

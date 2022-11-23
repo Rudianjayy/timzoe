@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zxx">
+<html lang="">
 
 <!-- Mirrored from templates.hibootstrap.com/colugo/default/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 02 Nov 2022 08:00:39 GMT -->
 
@@ -1231,13 +1231,13 @@
 
         <section id="kontak" class="contact-area ptb-100">
             <div class="container">
-                    {{-- @foreach($ar as $ar)
-                    @endforeach --}}
+                {{-- @foreach($ar as $ar) --}}
                     <div class="section-title">
                         <h2>Kontak Kami</h2>
                         <div class="bar"></div>
-                        {{-- <p>$ar->nama --}}</p>
+                        {{-- <p>!!$ar->nama!!</p> --}}
                     </div>
+                {{-- @endforeach --}}
                 <div class="row align-items-center">
                     <div class="col-lg-6">
                         <div class="contact-form">
@@ -1483,53 +1483,22 @@
                     listing
                     to our database</p>
                 <a href="#" class="btn btn-primary"> Watch the listings</a>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="modal fade popup" id="popup_bid" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-
-        </div>
-    </div>
-</div>
-
-    </section>
-
-
-    <div class="copy-right">
         <div class="container">
-            <div class="copy-right-content">
-                <p>
-                    Copyright © 2022 at SMK Muhammadiyah 1 Genteng. Supported by
-                    <a href="https://hibootstrap.com/" target="_blank">
-                        Team Zoe
-                    </a>
-                </p>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="go-top">
-        <i class="fa fa-chevron-up"></i>
-        <i class="fa fa-chevron-up"></i>
-    </div>
-
-
-    <script data-cfasync="false"
-        src="{{ asset('ps/templates.hibootstrap.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js') }}">
-    </script>
-    <script src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/js/jquery.min.js') }}"></script>
-
-    <script src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/js/bootstrap.bundle.min.js') }}"></script>
-
-    <script src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/js/owl.carousel.min.js') }}"></script>
-
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-6">
+                    <div class="subscribe-content">
+                        <h2>Subscribe for our Newsletter</h2>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <form class="newsletter-form">
+                        <input type="email" class="input-newsletter" placeholder="Enter your Email" name="EMAIL" required autocomplete="off">
+                        <button type="submit">
+                            Subscribe Now
+                        </button>
+                        <div id="validator-newsletter" class="form-result"></div>
+                    </form>
+                </div>
     <script src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/js/jquery.appear.js') }}"></script>
 
     <script src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/js/odometer.min.js') }}"></script>

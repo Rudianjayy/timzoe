@@ -697,6 +697,8 @@ Route::group(['middleware' => ['auth', 'hakakses:admin,user']], function () {
     Route::get('/adminformulir', [PpdbController::class, 'loby27'])->name('adminformulir');
     Route::get('/tambahformulir', [PpdbController::class, 'tambahformulir'])->name('tambahformulir');
     Route::post('/submitdata27', [PpdbController::class, 'submitdata27'])->name('submitdata27');
+    Route::post('/setuju/{id}', [PpdbController::class, 'setuju'])->name('setuju');
+    Route::post('/tolak/{id}', [PpdbController::class, 'tolak'])->name('tolak');
     Route::get('/deleteformulir/{id}', [PpdbController::class, 'deleteformulir'])->name('deleteformulir');
 
 

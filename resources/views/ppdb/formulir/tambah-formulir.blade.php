@@ -137,13 +137,13 @@
 
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Status anak dalam keluarga*</label>
-                                    <select name="status" class="form-control">
+                                    <select name="status_anak" class="form-control">
                                         <option disabled selected>Pilih :</option>
                                         <option value="anakkandung">Anak Kandung</option>
                                         <option value="anaktiri">Anak Tiri</option>
                                         <option value="anakasuh">Anak Asuh</option>
                                     </select>
-                                    @error('status')
+                                    @error('status_anak')
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>

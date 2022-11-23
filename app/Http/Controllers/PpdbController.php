@@ -21,12 +21,13 @@ class PpdbController extends Controller
     public function pendaftaran(){
         $dp = Deskripsipendaftaran::all();
         $pd = Deskripsipendaftaran::all();
+        $kontak = Deskripsipendaftaran::all();
         $cp = Carapendaftaran::all();
         $ab = biaya::all();
         $ac = syaratdaftar::all();
         $ar = kontak::all();
         $info = info::all();
-        return view('ppdb.pendaftaran', compact('dp','pd','cp','ab','ac','ar','info'));
+        return view('ppdb.pendaftaran', compact('dp','pd','kontak','cp','ab','ac','ar','info'));
     }
 
 

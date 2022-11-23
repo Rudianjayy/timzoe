@@ -33,7 +33,7 @@ use App\Models\Muhinews;
 use App\Models\Prestasi;
 use App\Http\Controllers\ProfiladminController;
 use App\Http\Controllers\PasswordController;
-
+use App\Http\Controllers\PaymentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -88,14 +88,6 @@ Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
 
 
 
-//footerPPDB
-
-Route::get('/adminfooterppdb', [FooteerController::class, 'adminfooterppdb'])->name('adminfooterppdb');
-Route::get('/tambahfooterppdb', [FooteerController::class, 'tambahfooterppdb'])->name('tambahfooterppdb');
-Route::post('/prosesfooter', [FooteerController::class, 'prosesfooter'])->name('prosesfooter');
-Route::get('/editfooteerppdb/{id}', [FooteerController::class, 'editfooteerppdb'])->name('editfooteerppdb');
-Route::post('/editprosesfooter/{id}', [FooteerController::class, 'editprosesfooter'])->name('editprosesfooter');
-Route::get('/deletefooteerppdb/{id}', [FooteerController::class, 'deletefooteerppdb'])->name('deletefooteerppdb');
 
 
 
@@ -125,6 +117,87 @@ Route::post('/submitedit24/{id}', [PpdbController::class, 'submitedit24'])->name
 Route::get('/deletedeskripsipendaftaran/{id}', [PpdbController::class, 'deletedeskripsipendaftaran'])->name('deletedeskripsipendaftaran');
 
 
+//syaratpendaftaran
+Route::get('/syaratdaftar', [PpdbController::class, 'syaratdaftar'])->name('syaratdaftar');
+Route::get('/adminsyaratdaftar', [PpdbController::class, 'adminsyaratdaftar'])->name('adminsyaratdaftar');
+Route::get('/editsyaratdaftar/{id}', [PpdbController::class, 'editsyaratdaftar'])->name('editsyaratdaftar');
+Route::post('/editproses12', [PpdbController::class, 'editproses12'])->name('editproses12');
+Route::get('/tambahsyaratdaftar', [PpdbController::class, 'tambahsyaratdaftar'])->name('tambahsyaratdaftar');
+Route::post('/submitproses12/', [PpdbController::class, 'submitproses12'])->name('submitproses12');
+Route::get('/deletesyaratdaftar/{id}', [PpdbController::class, 'deletesyaratdaftar'])->name('deletesyaratdaftar');
+
+
+//kontak
+
+Route::get('/kontak',[PpdbController::class, 'kontak'])->name('kontak');
+Route::get('/adminkontak',[PpdbController::class, 'adminkontak'])->name('adminkontak');
+Route::get('/editkontak/{id}',[PpdbController::class, 'editkontak'])->name('editkontak');
+Route::post('/editproses14',[PpdbController::class, 'editproses14'])->name('editproses14');
+Route::get('/tambahkontak',[PpdbController::class, 'tambahkontak'])->name('tambahkontak');
+Route::post('/submitproses14',[PpdbController::class, 'submitproses14'])->name('submitproses14');
+Route::get('/deletekontak/{id}',[PpdbController::class, 'deletekontak'])->name('deletekontak');
+
+
+
+
+//Biaya
+
+Route::get('/biaya',[PpdbController::class, 'biaya'])->name('biaya');
+Route::get('/adminbiaya',[PpdbController::class, 'adminbiaya'])->name('adminbiaya');
+Route::get('/editbiaya/{id}',[PpdbController::class, 'editbiaya'])->name('editbiaya');
+Route::post('/editprosesbiaya1',[PpdbController::class, 'editprosesbiaya1'])->name('editprosesbiaya1');
+Route::get('/tambahbiaya',[PpdbController::class, 'tambahbiaya'])->name('tambahbiaya');
+Route::post('/submitprosesbiaya',[PpdbController::class, 'submitprosesbiaya'])->name('submitprosesbiaya');
+Route::get('/deletebiaya/{id}',[PpdbController::class, 'deletebiaya'])->name('deletebiaya');
+
+
+
+//mitrappdb
+
+Route::get('/adminmitrappdb',[PpdbController::class, 'adminmitrappdb'])->name('adminmitrappdb');
+Route::get('/editmitrappdb/{id}',[PpdbController::class, 'editmitrappdb'])->name('editmitrappdb');
+Route::post('/prosesmitra',[PpdbController::class, 'prosesmitra'])->name('prosesmitra');
+Route::get('/tambahmitrappdb',[PpdbController::class, 'tambahmitrappdb'])->name('tambahmitrappdb');
+Route::post('/submitprosesmitra',[PpdbController::class, 'submitprosesmitra'])->name('submitprosesmitra');
+Route::get('/deletemitrappdb/{id}',[PpdbController::class, 'deletemitrappdb'])->name('deletemitrappdb');
+
+
+
+//InfoPPDB
+
+Route::get('/admininfo',[PpdbController::class, 'admininfo'])->name('admininfo');
+Route::get('/editinfo/{id}',[PpdbController::class, 'editinfo'])->name('editinfo');
+Route::post('/prosesinfo',[PpdbController::class, 'prosesinfo'])->name('prosesinfo');
+Route::get('/tambahinfo',[PpdbController::class, 'tambahinfo'])->name('tambahinfo');
+Route::post('/submitinfo',[PpdbController::class, 'submitinfo'])->name('submitinfo');
+Route::get('/deleteinfo/{id}',[PpdbController::class, 'deleteinfo'])->name('deleteinfo');
+
+
+
+//Profiladmin
+Route::get('/profiladmin',[ProfiladminController::class,'profiladmin'])->name('profiladmin');
+Route::get('/editprofiladmin',[ProfiladminController::class,'editprofiladmin'])->name('editprofiladmin');
+Route::post('/updateprofiladmin',[ProfiladminController::class, 'updateprofiladmin'])->name('updateprofiladmin');
+Route::post('/updatepassword',[ProfiladminController::class, 'updatepassword'])->name('updatepassword');
+
+
+
+//Iduka
+Route::get('/iduka', [IdukaController::class, 'index'])->name('iduka');
+Route::get('/idukaadmin', [IdukaController::class, 'indexadmin'])->name('idukaadmin');
+Route::get('/tambahiduka', [IdukaController::class, 'tambahiduka'])->name('tambahiduka');
+Route::post('/idukaproses', [IdukaController::class, 'idukaproses'])->name('idukaproses');
+Route::get('/editiduka/{id}', [IdukaController::class, 'editiduka'])->name('editiduka');
+Route::post('/editproses3/{id}', [IdukaController::class, 'editproses3'])->name('editproses3');
+Route::get('/deleteiduka/{id}', [IdukaController::class, 'delete'])->name('delete');
+
+
+Route::get('/mouadmin', [FotoidukaController::class, 'mouadmin'])->name('mouadmin');
+Route::get('/tambahfotomou', [FotoidukaController::class, 'tambahfotomou'])->name('tambahfotomou');
+Route::post('/fotomouproses', [FotoidukaController::class, 'fotomouproses'])->name('fotomouproses');
+Route::get('/editfotomou/{id}', [FotoidukaController::class, 'editfotomou'])->name('editfotomou');
+Route::post('/editproses4/{id}', [FotoidukaController::class, 'editproses4'])->name('editproses4');
+Route::get('/deletefotomou/{id}', [FotoidukaController::class, 'delete'])->name('delete');
 Route::get('/admincarapendaftaran', [PpdbController::class, 'loby25'])->name('admincarapendaftaran');
 Route::get('/tambahcarapendaftaran', [PpdbController::class, 'tambahcarapendaftaran'])->name('tambahcarapendaftaran');
 Route::post('/submitdata25', [PpdbController::class, 'submitdata25'])->name('submitdata25');
@@ -613,9 +686,11 @@ Route::group(['middleware' => ['auth', 'hakakses:admin,user']], function () {
         return view('welcome', compact('berita', 'galery', 'prestasi', 'mitra'));
     })->middleware('auth');
 
-    Route::get('/adminformulir', [PpdbController::class, 'loby27'])->name('adminformulir');
+    Route::get('/adminformulir', [PpdbController::class, 'adminformulir'])->name('adminformulir');
     Route::get('/tambahformulir', [PpdbController::class, 'tambahformulir'])->name('tambahformulir');
     Route::post('/submitdata27', [PpdbController::class, 'submitdata27'])->name('submitdata27');
+    Route::post('/setuju/{id}', [PpdbController::class, 'setuju'])->name('setuju');
+    Route::post('/tolak/{id}', [PpdbController::class, 'tolak'])->name('tolak');
     Route::get('/deleteformulir/{id}', [PpdbController::class, 'deleteformulir'])->name('deleteformulir');
 
 
@@ -659,6 +734,11 @@ Route::group(['middleware' => ['auth', 'hakakses:admin,user']], function () {
     Route::get('/deleteformulir/{id}', [PpdbController::class, 'deleteformulir'])->name('deleteformulir');
 });
 
+
+//payment
+Route::post('/pendaftaran',[PpdbController::class, 'payment_post']);
+
+
 Route::get('/biaya',[PpdbController::class, 'biaya'])->name('biaya');
 Route::get('/adminbiaya',[PpdbController::class, 'adminbiaya'])->name('adminbiaya');
 Route::get('/editbiaya/{id}',[PpdbController::class, 'editbiaya'])->name('editbiaya');
@@ -666,4 +746,18 @@ Route::post('/editprosesbiaya1',[PpdbController::class, 'editprosesbiaya1'])->na
 Route::get('/tambahbiaya',[PpdbController::class, 'tambahbiaya'])->name('tambahbiaya');
 Route::post('/submitprosesbiaya',[PpdbController::class, 'submitprosesbiaya'])->name('submitprosesbiaya');
 Route::get('/deletebiaya/{id}',[PpdbController::class, 'deletebiaya'])->name('deletebiaya');
+
+
+Route::get('/adminlangkah', [PpdbController::class, 'adminlangkah'])->name('adminlangkah');
+Route::get('/tambahlangkah', [PpdbController::class, 'tambahlangkah'])->name('tambahlangkah');
+Route::post('/prosestambahlangkah', [PpdbController::class, 'prosestambahlangkah'])->name('prosestambahlangkah');
+Route::get('/editlangkah/{id}', [PpdbController::class, 'editlangkah'])->name('editlangkah');
+Route::post('/proseseditlangkah', [PpdbController::class, 'proseseditlangkah'])->name('proseseditlangkah');
+Route::get('/deletelangkah/{id}', [PpdbController::class, 'deletelangkah'])->name('deletelangkah');
+
+
+
+
+
+
 

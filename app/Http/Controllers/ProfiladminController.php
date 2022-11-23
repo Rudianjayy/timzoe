@@ -133,7 +133,7 @@ class ProfiladminController extends Controller
 
             if ( $fotoLama != '') {
                 if (\File::exists(public_path($path.$fotoLama))) {
-                    \File::delete(public_path($path.$fotoLama));
+                    File::delete(public_path($path.$fotoLama));
                     }
                 }
 

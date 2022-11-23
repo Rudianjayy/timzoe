@@ -52,8 +52,6 @@
                   .upload .round{
                     position: absolute;
                     bottom: 0;
-                    right: 0;
-                    left: 2,5;
                     background: #00B4FF;
                     width: 32px;
                     height: 32px;
@@ -61,6 +59,8 @@
                     text-align: center;
                     border-radius: 50%;
                     overflow: hidden;
+                    margin: 1px 88px;
+
                   }
 
                   .upload .round input[type = "file"]{
@@ -71,6 +71,13 @@
 
                   input[type=file]::-webkit-file-upload-button{
                       cursor: pointer;
+                  }
+
+                  .flaticon-camera-fill{
+                    position: absolute;
+                    width: 32px;
+                    height: 32px;
+                    margin: 9px -16px;
                   }
 
             </style>

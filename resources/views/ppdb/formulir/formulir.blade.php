@@ -74,9 +74,9 @@
                                             <th scope="col">Prestasi</th>
                                             <th scope="col">Ukuran Kaos</th>
                                             <th scope="col">Jurusan</th>
-                                            <th scope="col">Kode QR</th>
+                                            {{-- <th scope="col">Kode QR</th> --}}
+                                            <th scope="col">Status</th>
                                             <th scope="col">Aksi</th>
-
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -95,7 +95,7 @@
                                                 <td>{{ $i->nik }}</td>
                                                 <td>{{ $i->nokk }}</td>
                                                 <td>
-                                                    <a href="{{ asset('fotomahasiswa/' . $i->foto_kk) }}"
+                                                    <a href="{{ asset(' /' . $i->foto_kk) }}"
                                                         data-lightbox="whatever">
                                                         <img src="{{ asset('fotomahasiswa/' . $i->foto_kk) }}"
                                                             alt="" style="width: 80px;">
@@ -108,7 +108,7 @@
                                                             alt="" style="width: 80px;">
                                                     </a>
                                                 </td>
-                                                <td>{{ $i->status }}</td>
+                                                <td>{{ $i->status_anak }}</td>
                                                 <td>{{ $i->alamat_rumah }}</td>
                                                 <td>{{ $i->nama_ayah }}</td>
                                                 <td>{{ $i->nama_ibu }}</td>
@@ -121,31 +121,38 @@
                                                 <td>{{ $i->ukuran_kaos }}</td>
                                                 <td>{{ $i->jurusan }}</td>
 
-                                                <td>
+
+                                                {{-- <td>
                                                     <div class="visible-print text-center">
                                                         {!! QrCode::size(100)->generate('novan') !!}
-                                                        {{-- <p>Scan me to return to the original page.</p> --}}
+                                                        <p>Scan me to return to the original page.</p>
                                                     </div>
-                                                </td>
+                                                </td> --}}
+                                                <td>{{ $i->status }}</td>
+
+                                                @if ( $i->status == 'pending')
 
                                                 <td class="align-center">
                                                     <ul class="table-controls">
-                                                        <li>
-                                                            <a href="/editidentitas/{{ $i->id }}"
-                                                                data-toggle="tooltip" data-placement="top" title="Edit">
-                                                                <i class="flaticon-edit"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" class="delete fire"
-                                                                data-id="{{ $i->id }}"
-                                                                data-nama="{{ $i->judulvisi }}" data-toggle="tooltip"
-                                                                data-placement="top" title="Delete">
-                                                                <i class="flaticon-delete-5"></i>
-                                                            </a>
-                                                        </li>
+                                                        <form action="/setuju/{{ $i->id }}" method="POST">
+                                                            @csrf
+                                                            <li>
+                                                                <button type="submit" title="Terima">
+                                                                    <i class="flaticon-single-circle-tick"></i>
+                                                                </button>
+                                                            </li>
+                                                        </form>
+                                                        <form action="/tolak/{{ $i->id }}" method="POST">
+                                                            @csrf
+                                                            <li>
+                                                                <button type="submit" title="Tolak">
+                                                                    <i class="flaticon-circle-cross"></i>
+                                                                </button>
+                                                            </li>
+                                                        </form>
                                                     </ul>
                                                 </td>
+                                                @endif
                                             </tr>
                                         @endforeach
                                     </tbody>

@@ -15,7 +15,7 @@
                 <div class="col-8">
                     <div class="card">
                         <div class="card-body">
-                            <form action="/submitdaftar" method="POST" enctype="multipart/form-data">
+                            <form action="/submitproses12" method="POST" enctype="multipart/form-data">
                                 @csrf
 
                                 <section style="padding-top:60px;">

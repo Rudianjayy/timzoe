@@ -12,9 +12,13 @@ use App\Models\biaya;
 use App\Models\kontak;
 use App\Models\info;
 use App\Models\Jurusan;
+use App\Models\Langkahpendaftaran;
 use App\Models\mitrappdb;
 use App\Models\Muhinews;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Models\Payment;
+
 
 class PpdbController extends Controller
 {
@@ -24,9 +28,69 @@ class PpdbController extends Controller
         $kontak = Deskripsipendaftaran::all();
         $cp = Carapendaftaran::all();
         $footerppdb = footeer::all();
+        $footerlink = Footeerdua::all();
         $info = info::all();
         $biaya = biaya::all();
-        return view('ppdb.pendaftaran', compact('dp','pd','kontak','cp','footerppdb','info','biaya'));
+        $langkah = Langkahpendaftaran::all();
+        return view('ppdb.pendaftaran', compact('dp','pd','kontak','cp','footerppdb','info','biaya','langkah','footerlink'));
+    }
+
+    public function snap(Request $request){
+        // Set your Merchant Server Key
+        \Midtrans\Config::$serverKey = 'SB-Mid-server-RcFqJE4B66H7TmdNUajirjjK';
+        // Set to Development/Sandbox Environment (default). Set to true for Production Environment (accept real transaction).
+        \Midtrans\Config::$isProduction = false;
+        // Set sanitization on (default)
+        \Midtrans\Config::$isSanitized = true;
+        // Set 3DS transaction for credit card to true
+        \Midtrans\Config::$is3ds = true;
+
+        $params = array(
+            'transaction_details' => array(
+                'order_id' => rand(),
+                'gross_amount' => $request->biaya,
+            ),
+            'item_details' => array(
+                [
+                    'id' => $request->biaya_id,
+                    'price' => $request->biaya,
+                    'quantity' => 1,
+                    'name' => $request->biaya_gelombang,
+                ],
+            ),
+            'customer_details' => array(
+                // 'first_name' => $request->user_name,
+                // 'email' => $request->user_email,
+                // 'phone' => $request->user_telepon,
+            ),
+        );
+
+    $snapToken = \Midtrans\Snap::getSnapToken($params);
+
+    // return view('ppdb.pendaftaran' ,['snapToken' => $snapToken]);
+    return response()->json([
+        'snap' =>$snapToken,
+        'biaya' =>$request->biaya_id
+
+    ]);
+    }
+
+    public function payment_post(Request $request) {
+        $json = json_decode($request->get('json'));
+        // dd($request);
+
+        $order = new Payment();
+        // $order->id_user = Auth::user()->id;
+        $order->id_biaya = $request->biaya_ids;
+        $order->status = isset($json->transaction_status) ? $json->transaction_status : null;
+        $order->transaction_id = isset($json->transaction_id) ? $json->transaction_id : null;
+        $order->order_id = isset($json->order_id) ? $json->order_id : null;
+        $order->gross_amount = isset($json->gross_amount) ? $json->gross_amount : null;
+        $order->payment_type =  isset($json->payment_type) ? $json->payment_type : null;
+        $order->payment_code = isset($json->payment_code) ? $json->payment_code : null;
+        $order->pdf_url = isset($json->pdf_url) ? $json->pdf_url : null;
+
+        return $order->save() ? redirect(url('/'))->with('alert-success', 'Berhasil Berlangganan') : redirect(url('/'))->with('alert-failed', 'Terjadi Kesalahan');
     }
 
 
@@ -198,7 +262,7 @@ class PpdbController extends Controller
         return view('ppdb.syarat.tambahsyaratdaftar');
     }
 
-    public function submitdaftar(Request $request){
+    public function submitproses12(Request $request){
         $this->validate($request,[
             'deskripsi' =>'required',
 
@@ -338,9 +402,25 @@ class PpdbController extends Controller
 
 
 
-    public function loby27(){
+    public function adminformulir(){
        $data4 = Formulir::all();
         return view('ppdb.formulir.formulir', compact('data4'));
+    }
+
+    public function setuju($id){
+        $data = Formulir::find($id);
+        $data->update([
+            'status' => 'diterima',
+        ]);
+        return redirect()->back()->with('success','status berhasil diubah');
+    }
+
+    public function tolak($id){
+        $data = Formulir::find($id);
+        $data->update([
+            'status' => 'ditolak',
+        ]);
+        return redirect()->back()->with('success','status berhasil diubah');
     }
 
     public function tambahformulir()
@@ -376,6 +456,7 @@ class PpdbController extends Controller
 
         // ]);
         $data4 = Formulir::create([
+            'id_user' => Auth::User()->id,
             'nama_peserta' =>$request->nama_peserta,
             'jeniskelamin' =>$request->jeniskelamin,
             'tempat_lahir' =>$request->tempat_lahir,
@@ -386,7 +467,7 @@ class PpdbController extends Controller
             'nokk' =>$request->nokk,
             'foto_kk' =>$request->foto_kk,
             'foto_bukti' =>$request->foto_bukti,
-            'status' =>$request->status,
+            'status_anak' =>$request->status_anak,
             'alamat_rumah' =>$request->alamat_rumah,
             'nama_ayah' =>$request->nama_ayah,
             'nama_ibu' =>$request->nama_ibu,
@@ -398,8 +479,11 @@ class PpdbController extends Controller
             'prestasi' =>$request->prestasi,
             'ukuran_kaos' =>implode(',',$request-> ukuran_kaos),
             'jurusan' =>$request->jurusan,
+            'status' => 'pending',
 
         ]);
+
+        // dd($request);
         if($request->hasFile('foto_kk')){
             $request->file('foto_kk')->move('fotomahasiswa/', $request->file('foto_kk')->getClientOriginalName());
             $data4->foto_kk = $request->file('foto_kk')->getClientOriginalName();
@@ -465,11 +549,11 @@ class PpdbController extends Controller
     }
 
     public function submitprosesbiaya(Request $request){
+        // dd($request->all());
         $this->validate($request,[
             'gelombang' =>'required',
             'penjelasan' =>'required',
             'jadwal' =>'required',
-
         ],[
             'gelombang.required' =>'Harus diisi',
             'penjelasan.required' =>'Harus diisi',
@@ -480,6 +564,8 @@ class PpdbController extends Controller
             'gelombang' =>$request->gelombang,
             'penjelasan' =>$request->penjelasan,
             'jadwal' =>$request->jadwal,
+            'biaya' =>$request->biaya,
+            // dd($request->biaya)
 
         ]);
         return redirect()->route('adminbiaya')->with('success',' Data Berhasil di Tambahkan!');
@@ -492,78 +578,13 @@ class PpdbController extends Controller
     }
 
 
-    public function mitrappdb() {
-        return view('ppdb.mitrappdb.mitrappdb');
-    }
-    public function adminmitrappdb() {
-        $data = mitrappdb::all();
-        return view('ppdb.mitrappdb.adminmitrappdb', compact('data'));
-    }
-    public function tambahmitrappdb()
-    {
-        return view('ppdb.mitrappdb.tambahmitrappdb');
-    }
 
-    public function submitprosesmitra(Request $request){
-        // dd($request->all());
-        $this->validate($request,[
-            'judul' =>'required',
-            'foto' =>'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
-        ],[
-            'judul' =>'Harus diisi',
-            'foto.required' =>'Harus diisi',
-            'foto.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
 
-        ]);
-        $data = mitrappdb::create([
-            'judul' =>$request->judul,
-            'foto' =>$request->foto,
 
-        ]);
-        if($request->hasFile('foto')){
-            $request->file('foto')->move('fotomahasiswa/', $request->file('foto')->getClientOriginalName());
-            $data->foto = $request->file('foto')->getClientOriginalName();
-            $data->save();
-        }
 
-        return redirect()->route('adminmitrappdb')->with('success',' Data Berhasil di Tambahkan!');
-    }
 
-    public function editmitrappdb($id){
 
-        $data = mitrappdb::findOrFail($id);
-        return view('ppdb.mitrappdb.editmitrappdb', compact('data'));
-    }
 
-    public function prosesmitra(Request $request, $id){
-        $this->validate($request,[
-            'judul' =>'required',
-            'foto' =>'mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
-        ],[
-            'judul' =>'Harus diisi',
-            'foto.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
-
-        ]);
-        $data = mitrappdb::find($id);
-        $data->update([
-            'judul' =>$request->judul,
-            'foto' =>$request->foto,
-        ]);
-        if($request->hasFile('foto')){
-            $request->file('foto')->move('fotomahasiswa/',$request->file('foto')->getClientOriginalName());
-            $data->foto = $request->file('foto')->getClientOriginalName();
-            $data->save();
-        }
-
-        return redirect('adminmitrappdb')->with('success',' Data Berhasil di Ubah!');
-
-    }
-
-    public function deletemitrappdb($id){
-        $data = mitrappdb::find($id);
-        $data->delete();
-        return redirect('adminmitrappdb')->with('success',' Data Berhasil di Hapus!');
-    }
 
 
     public function info() {
@@ -655,15 +676,46 @@ class PpdbController extends Controller
 
 
 
+    public function adminlangkah(){
+        $langkah = Langkahpendaftaran::all();
+        return view('ppdb.langkahpendaftaran.adminlangkah', compact('langkah'));
+    }
+    public function tambahlangkah(){
+        $langkah = Langkahpendaftaran::all();
+        return view('ppdb.langkahpendaftaran.tambahlangkah', compact('langkah'));
+    }
+    public function prosestambahlangkah(Request $request){
+        $this->validate($request,[
+            'judul_langkah' =>'required',
+            'deskripsi_langkah' =>'required',
+        ],[
+            'judul_langkah' =>'harus diisi',
+            'deskripsi_langkah' =>'harus diisi',
+        ]);
+        $langkah = Langkahpendaftaran::create([
+            'judul_langkah' => $request->judul_langkah,
+            'deskripsi_langkah' => $request->deskripsi_langkah,
+        ]);
+        return redirect()->route('adminlangkah')->with('success', 'Data Berhasil Di Tambahkan');
+    }
+    public function editlangkah($id){
+        $langkah = Langkahpendaftaran::findOrFail($id);
+         return view('ppdb.langkahpendaftaran.editlangkah', compact('langkah'));
+    }
+    public function proseseditlangkah(Request $request , $id){
+        $langkah = Langkahpendaftaran::find($id);
+        $langkah->update([
+            'judul_langkah' => $request->judul_langkah,
+            'deskripsi_langkah' => $request->deskripsi_langkah,
+        ]);
+        return redirect()->route('adminlangkah')->with('success', 'Data Berhasil Di Edit');
+    }
 
-
-
-
-
-
-
-
-
+        public function deletelangkah($id){
+            $langkah = Langkahpendaftaran::find($id);
+            $langkah->delete();
+            return redirect()->route('adminlangkah')->with('success', 'Data Berhasil Di Hapus');
+        }
 }
 
 

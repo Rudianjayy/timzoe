@@ -13,10 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('mitrappdbs', function (Blueprint $table) {
+        Schema::create('langkahpendaftarans', function (Blueprint $table) {
             $table->id();
-            $table->string('judul');
-            $table->string('foto');
+            $table->string('judul_langkah');
+            $table->text('deskripsi_langkah');
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mitrappdbs');
+        Schema::dropIfExists('langkahpendaftarans');
     }
 };

@@ -104,7 +104,7 @@
                     <div class="row align-items-center">
                         @foreach ($dp as $dp)
                         <div class="col-lg-6">
-                            <div class="banner-content">
+                            <div class="banner-content" style="padding: 58px; padding-top:26px;">
                                 <h1>{{ $dp->judul_slider }}</h1>
                                 <p>
                                     {{ $dp->deskripsi_slider }}
@@ -122,23 +122,6 @@
                 </div>
             </div>
         </div>
-        <div class="default-shape">
-            <div class="shape-1">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/1.png') }}" alt="image">
-            </div>
-            <div class="shape-2 rotateme">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/2.png') }}" alt="image">
-            </div>
-            <div class="shape-3">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/3.svg') }}" alt="image">
-            </div>
-            <div class="shape-4">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/4.svg') }}" alt="image">
-            </div>
-            <div class="shape-5">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/5.png') }}" alt="image">
-            </div>
-        </div>
     </div>
 
     <section class="fun-facts-area pt-100 pb-70">
@@ -152,7 +135,7 @@
                         <h3>
                             <span class="odometer" data-count="1020">00</span>
                         </h3>
-                        <p>Usersr</p>
+                        <p>Pendaftar</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
@@ -163,7 +146,7 @@
                         <h3>
                             <span class="odometer" data-count="5679">00</span>
                         </h3>
-                        <p>Happy Clients</p>
+                        <p>Siswa Diterima</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
@@ -174,7 +157,7 @@
                         <h3>
                             <span class="odometer" data-count="2660">00</span>
                         </h3>
-                        <p>Reviews</p>
+                        <p>Siswa Ditolak</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
@@ -192,44 +175,28 @@
         </div>
     </section>
     <section id="about" class="about-area pb-100">
-                    <div class="container">
-                        @foreach ($info as $info)
-                        <div class="section-title">
-                            <h2>{{ $info->judul}}</h2>
-                            <div class="bar"></div>
-                        </div>
-                        <div class="row align-items-center">
-                            <div class="col-lg-6">
-                                <div class="about-content">
-                                    <p>{!! $info->deskripsi !!}</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="about-image">
-                                    <img src="{{ asset('fotomahasiswa/' . $info->foto) }}" alt="image">
-                                </div>
-                            </div>
-                        </div>
+        <div class="container">
+            @foreach ($info as $info)
+            <div class="section-title">
+                <h2>{{ $info->judul}}</h2>
+                <div class="bar"></div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="about-content">
+                        <p>{!! $info->deskripsi !!}</p>
                     </div>
-                    @endforeach
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-image">
+                        <img src="{{ asset('fotomahasiswa/' . $info->foto) }}" alt="image">
+                    </div>
+                </div>
+            </div>
+        </div>
+        @endforeach
 
-                    <div class="default-shape">
-                        <div class="shape-1">
-                            <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/1.png') }}" alt="image">
-                        </div>
-                        <div class="shape-2 rotateme">
-                            <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/2.png') }}" alt="image">
-                        </div>
-                        <div class="shape-3">
-                            <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/3.svg') }}" alt="image">
-                        </div>
-                        <div class="shape-4">
-                            <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/4.svg') }}" alt="image">
-                        </div>
-                        <div class="shape-5">
-                            <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/5.png') }}" alt="image">
-                        </div>
-                    </div>
+
     </section>
 
 
@@ -237,7 +204,7 @@
     <section id="syarat" class="feature-section ptb-100">
         <div class="container">
             <div class="section-title">
-                <h2>Syarat Pendaftaran</h2>
+                <h2>Why Choose SMK Muhi?</h2>
                 <div class="bar"></div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidiunt labore et
                     dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
@@ -260,7 +227,7 @@
                                         </div>
                                     </div>
                                     <div>
-                                        <p class="mb-0">Pelopor sekolah IT pertama di Indonesia sejak 1992.</p>
+                                        <p class="m b-0">Pelopor sekolah IT pertama di Indonesia sejak 1992.</p>
                                     </div>
                                 </div>
                             </li>
@@ -345,40 +312,15 @@
                 <div class="col-lg-6">
                     <div class="faq-accordion-content">
                         <ul class="accordion">
-
+                            @foreach ($langkah as $l )
                             <li class="accordion-item">
                                 <a class="accordion-title" href="javascript:void(0)">
                                     <i class="fa fa-chevron-down"></i>
-                                    Can I get support from the Author?
+                                    {{ $l->judul_langkah }}
                                 </a>
-                                <p class="accordion-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
-                                    suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing
-                                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
-                                    suspendisse ultrices gravida</p>
+                                <p class="accordion-content">{{$l->deskripsi_langkah}}</p>
                             </li>
-                            <li class="accordion-item">
-                                <a class="accordion-title" href="javascript:void(0)">
-                                    <i class="fa fa-chevron-down"></i>
-                                    Which material types can you work with?
-                                </a>
-                                <p class="accordion-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
-                                    suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing
-                                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
-                                    suspendisse ultrices gravida</p>
-                            </li>
-                            <li class="accordion-item">
-                                <a class="accordion-title" href="javascript:void(0)">
-                                    <i class="fa fa-chevron-down"></i>
-                                    Why Choose Our Services In Your Business?
-                                </a>
-                                <p class="accordion-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
-                                    suspendisse ultrices gravida. Lorem ipsum dolor sit amet, consectetur adipiscing
-                                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
-                                    suspendisse ultrices gravida</p>
-                            </li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>
@@ -389,23 +331,7 @@
                 </div>
             </div>
         </div>
-        <div class="default-shape">
-            <div class="shape-1">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/1.png') }}" alt="image">
-            </div>
-            <div class="shape-2 rotateme">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/2.png') }}" alt="image">
-            </div>
-            <div class="shape-3">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/3.svg') }}" alt="image">
-            </div>
-            <div class="shape-4">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/4.svg') }}" alt="image">
-            </div>
-            <div class="shape-5">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/5.png') }}" alt="image">
-            </div>
-        </div>
+
     </section>
     <section id="biaya" class="pricing-area pt-100 pb-70">
         <div class="container">
@@ -431,7 +357,7 @@
                 <div class="tab_content">
                     <div class="tabs_item">
                         <div class="row">
-                            @foreach  ($biaya as $b )
+                            @foreach ($biaya as $b )
                             <div class="col-lg-4 col-md-6">
                                 <div class="single-pricing-table">
                                     <div class="pricing-header">
@@ -439,6 +365,7 @@
                                     </div>
                                     <div class="price">
                                         <h5>{{$b->penjelasan}}</h5>
+                                        <h5>{{ $b->biaya }}</h5>
                                     </div>
                                     <ul class="pricing-features">
                                         <li>
@@ -447,32 +374,29 @@
                                         </li>
                                     </ul>
                                 </div>
+                                <div class="text-center">
+                                    <div class="send-btn">
+                                        <button class="default-btn pay-button" data-biaya_id={{ $b->id }} data-biaya_gelombang={{ $b->gelombang }} data-biaya={{ (int)$b->biaya }}>
+                                            Bayar Sekarang
+                                            <span></span>
+                                        </button>
+                                        <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
                             </div>
                             @endforeach
-
                         </div>
                     </div>
-
                 </div>
+                <form action="" id="submit_form" method="POST">
+                    @csrf
+                    <input type="hidden" name="json" id="json_callback">
+                    <input type="hidden" name="biaya_ids" id="biaya_ids">
+                </form>
             </div>
         </div>
-        <div class="default-shape">
-            <div class="shape-1">
-                <img src="{{ asset('ps/teadminmplates.hibootstrap.com/colugo/default/assets/img/shape/1.png') }}" alt="image">
-            </div>
-            <div class="shape-2 rotateme">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/2.png') }}" alt="image">
-            </div>
-            <div class="shape-3">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/3.svg') }}" alt="image">
-            </div>
-            <div class="shape-4">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/4.svg') }}" alt="image">
-            </div>
-            <div class="shape-5">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/5.png') }}" alt="image">
-            </div>
-        </div>
+
     </section>
 
 
@@ -623,23 +547,6 @@
                 </div>
             </div>
         </div>
-        <div class="default-shape">
-            <div class="shape-1">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/1.png') }}" alt="image">
-            </div>
-            <div class="shape-2 rotateme">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/2.png') }}" alt="image">
-            </div>
-            <div class="shape-3">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/3.svg') }}" alt="image">
-            </div>
-            <div class="shape-4">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/4.svg') }}" alt="image">
-            </div>
-            <div class="shape-5">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/5.png') }}" alt="image">
-            </div>
-        </div>
     </section>
 
 
@@ -757,23 +664,7 @@
     </div>
     </div>
     </div>
-    <div class="default-shape">
-        <div class="shape-1">
-            <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/1.png') }}" alt="image">
-        </div>
-        <div class="shape-2 rotateme">
-            <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/2.png') }}" alt="image">
-        </div>
-        <div class="shape-3">
-            <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/3.svg') }}" alt="image">
-        </div>
-        <div class="shape-4">
-            <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/4.svg') }}" alt="image">
-        </div>
-        <div class="shape-5">
-            <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/5.png') }}" alt="image">
-        </div>
-    </div>
+
     </section> --}}
 
 
@@ -1006,154 +897,271 @@
                 </div>
             </div>
         </div>
-        <div class="default-shape">
-            <div class="shape-1">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/1.png') }}" alt="image">
-            </div>
-            <div class="shape-2 rotateme">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/2.png') }}" alt="image">
-            </div>
-            <div class="shape-3">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/3.svg') }}" alt="image">
-            </div>
-            <div class="shape-4">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/4.svg') }}" alt="image">
-            </div>
-            <div class="shape-5">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/shape/5.png') }}" alt="image">
+
+    </section>
+    <hr>
+    <section class="footer-area pt-100 pb-70">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-footer-widget">
+                        @foreach ($footerppdb as $f)
+                        <a href="#" class="logo">
+                            <h2>Colugo</h2>
+                        </a>
+
+                        <p>{!! $f->deskripsi_footeer !!}</p>
+                        @endforeach
+                        <ul class="social-list">
+                            <li>
+                                <a href="#" target="_blank">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-footer-widget pl-5">
+                        <h3>Company</h3>
+                        <ul class="list">
+                            <li>
+                                <a href="#">
+                                    About
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Carrers
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Awards
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    User Program
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Locations
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Login
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-footer-widget">
+                        <h3>Lainnya</h3>
+                        @php
+                        $link = \App\Models\Footeerdua::all();
+                        @endphp
+                        <ul class="list">
+                            @foreach ($footerlink as $f)
+                            <li><a href="{{ $f->link }}">{{ $f->judul }}</a></li>
+                            @endforeach
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-footer-widget">
+                        <h3>Pengunjung</h3>
+                        <ul class="footer-holder">
+                            <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+                            <div class="elfsight-app-8ad5f200-9e00-438d-95d7-3ab159095b4f"></div>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-    </section>
-            <section class="footer-area pt-100 pb-70">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-3 col-sm-6">
-                            @php
-                            $footer = \App\Models\footeer::all();
-                            @endphp
-                            @foreach ($footer as $f )
-                            <div class="single-footer-widget">
-                                <a href="#" class="logo">
-                                    <img id="logo_footer" src="{{ asset('fotomahasiswa/' . $f->foto) }}" alt="nft-gaming" width="120" height="100" style="margin-left:50px;"> </a>
-                                <p>{!! $f->deskripsi_footeer !!}</p>
-                                <ul class="social-list">
-                                    <li>
-                                        <a href="#" target="_blank">
-                                            <i class="fab fa-facebook-f"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" target="_blank">
-                                            <i class="fab fa-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" target="_blank">
-                                            <i class="fab fa-linkedin-in"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" target="_blank">
-                                            <i class="fab fa-instagram"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            @endforeach
-                        </div>
-                        <div class="col-lg-3 col-sm-6">
-                            <div class="single-footer-widget pl-5">
-                                <h3>Company</h3>
-                                <ul class="list">
-                                    <li>
-                                        <a href="#">
-                                            About
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Carrers
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Awards
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            User Program
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Locations
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Login
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6">
-                            <div class="single-footer-widget">
-                                <h3>Lainnya</h3>
-                                @php
-                                $footerlink = \App\Models\Footeerdua::all();
-                                @endphp
-                                @foreach ($footerlink as $link )
-                                <ul class="list">
-                                    <li>
-                                        <a href="{{ $link->link }}">{{ $link->judul }}</a>
-                                    </li>
-                                </ul>
-                                @endforeach
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6">
-                            <div class="single-footer-widget">
-                                <h3>Pengunjung</h3>
-                                <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-                                <div class="elfsight-app-8ad5f200-9e00-438d-95d7-3ab159095b4f"></div>
-                            </div>
-                        </div>
-
-                        <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-                        <script src="{{asset('ps/templates.hibootstrap.com/colugo/default/assets/js/jquery.min.js')}}"></script>
-
-                        <script src="{{asset('ps/templates.hibootstrap.com/colugo/default/assets/js/bootstrap.bundle.min.js')}}"></script>
-
-                        <script src="{{asset('ps/templates.hibootstrap.com/colugo/default/assets/js/owl.carousel.min.js')}}"></script>
-
-                        <script src="{{asset('ps/templates.hibootstrap.com/colugo/default/assets/js/jquery.appear.js')}}"></script>
-
-                        <script src="{{asset('ps/templates.hibootstrap.com/colugo/default/assets/js/odometer.min.js')}}"></script>
-
-                        <script src="{{asset('ps/templates.hibootstrap.com/colugo/default/assets/js/slick.min.js')}}"></script>
-
-                        <script src="{{asset('ps/templates.hibootstrap.com/colugo/default/assets/js/particles.min.js')}}"></script>
 
 
-                        <script src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/js/jquery.ripples-min.js') }}"></script>
+    <div class="copy-right">
+        <div class="container">
+            <div class="copy-right-content">
+                <p>
+                    Copyright © 2022 at SMK Muhammadiyah 1 Genteng. Supported by
+                    <a href="https://hibootstrap.com/" target="_blank">
+                        Team Zoe
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
 
-                        <script src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/js/jquery.magnific-popup.min.js') }}">
-                        </script>
 
-                        <script src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/js/wow.min.js') }}"></script>
+    <div class="go-top">
+        <i class="fa fa-chevron-up"></i>
+        <i class="fa fa-chevron-up"></i>
+    </div>
 
-                        <script src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/js/jquery.ajaxchimp.min.js') }}"></script>
+    <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="{{asset('ps/templates.hibootstrap.com/colugo/default/assets/js/jquery.min.js')}}"></script>
 
-                        <script src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/js/form-validator.min.js') }}"></script>
+    <script src="{{asset('ps/templates.hibootstrap.com/colugo/default/assets/js/bootstrap.bundle.min.js')}}"></script>
 
-                        <script src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/js/contact-form-script.js') }}"></script>
+    <script src="{{asset('ps/templates.hibootstrap.com/colugo/default/assets/js/owl.carousel.min.js')}}"></script>
 
-                        <script src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/js/main.js') }}"></script>
+    <script src="{{asset('ps/templates.hibootstrap.com/colugo/default/assets/js/jquery.appear.js')}}"></script>
+
+    <script src="{{asset('ps/templates.hibootstrap.com/colugo/default/assets/js/odometer.min.js')}}"></script>
+
+    <script src="{{asset('ps/templates.hibootstrap.com/colugo/default/assets/js/slick.min.js')}}"></script>
+
+    <script src="{{asset('ps/templates.hibootstrap.com/colugo/default/assets/js/particles.min.js')}}"></script>
+
+
+    <script src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/js/jquery.ripples-min.js') }}"></script>
+
+    <script src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/js/jquery.magnific-popup.min.js') }}">
+    </script>
+
+    <script src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/js/wow.min.js') }}"></script>
+
+    <script src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/js/jquery.ajaxchimp.min.js') }}"></script>
+
+    <script src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/js/form-validator.min.js') }}"></script>
+
+    <script src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/js/contact-form-script.js') }}"></script>
+
+    <script src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/js/main.js') }}"></script>
+
+    <script type="text/javascript" src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="SB-Mid-client-SwazW8iq5q-s8p6I"></script>
+
+    <script type="text/javascript">
+        // For example trigger on button clicked, or any time you need
+        var payButton = document.querySelectorAll('.pay-button');
+        $('.pay-button').click(function() {
+            // alert('aa')
+
+            const biaya_id = $(this).attr('data-biaya_id')
+            const biaya_gelombang = $(this).attr('data-biaya_gelombang')
+            const biaya = $(this).attr('data-biaya')
+
+
+            const data = {
+                biaya_id,
+                biaya_gelombang,
+                biaya
+            }
+
+            console.log(data)
+
+            console.log("{{ URL::to('/api/snap') }}");
+
+            $.ajax({
+                method: 'post',
+                url: "{{ URL::to('/api/pendaftaran/snap') }}",
+                data: data,
+                dataType: 'JSON',
+                success: function(e) {
+
+                    var bebas = document.getElementById('biaya_ids')
+                    // console.log(e)
+                    bebas.value = e.biaya
+
+                    window.snap.pay(e.snap, {
+                        onSuccess: function(result) {
+                            /* You may add your own implementation here */
+                            console.log(result);
+                            send_response_to_form(result);
+                        },
+                        onPending: function(result) {
+                            /* You may add your own implementation here */
+                            console.log(result);
+                            send_response_to_form(result);
+                        },
+                        onError: function(result) {
+                            /* You may add your own implementation here */
+                            console.log(result);
+                            send_response_to_form(result);
+                        },
+                        onClose: function() {
+                            /* You may add your own implementation here */
+                            alert('You closed the popup without finishing the payment');
+                        }
+                    });
+                },
+                error: function(err) {
+                    console.log(err)
+                }
+            })
+
+            // fetch("{{ URL::to('/api/perusahaan/project/snap') }}", {
+            // method: 'POST',
+            // headers: {
+            //     'Content-Type': 'application/json',
+            // },
+            // body: JSON.stringify(data),
+            // })
+            // .then((response) => response.json())
+            // .then((data) => {
+            //     console.log('Success:', data);
+
+            //     var bebas = document.getElementById('jobs_ids')
+
+            //     bebas.value = data.jobs
+
+            //     window.snap.pay(data.snap, {
+            //         onSuccess: function(result){
+            //         /* You may add your own implementation here */
+            //         console.log(result);
+            //         send_response_to_form(result);
+            //         },
+            //         onPending: function(result){
+            //         /* You may add your own implementation here */
+            //         console.log(result);
+            //         send_response_to_form(result);
+            //         },
+            //         onError: function(result){
+            //         /* You may add your own implementation here */
+            //         console.log(result);
+            //         send_response_to_form(result);
+            //         },
+            //         onClose: function(){
+            //         /* You may add your own implementation here */
+            //         alert('You closed the popup without finishing the payment');
+            //         }
+            //     })
+            // })
+            // .catch((error) => {
+            //     console.error('Error:', error);
+            // });
+
+        })
+
+        function send_response_to_form(result) {
+            document.getElementById('json_callback').value = JSON.stringify(result);
+            $('#submit_form').submit();
+        }
+    </script>
+
 </body>
 
-<!-- Mirrored from templates.hibootstrap.com/colugo/default/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 02 Nov 2022 08:01:52 GMT -->
 
 </html>

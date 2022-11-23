@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Pagination\Paginator;
+use Illuminate\Http\Request;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -22,8 +23,12 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(Request $request)
     {
-        Paginator::useBootstrap();   
+        Paginator::useBootstrap();
+
+        if(str_contains($request->getHost(), 'ngrok.io')) {
+            $this->app['request']->server->set('HTTPS', true);
+        }
     }
 }

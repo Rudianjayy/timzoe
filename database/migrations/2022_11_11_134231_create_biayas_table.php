@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('gelombang');
             $table->string('penjelasan');
+            $table->bigInteger('biaya');
             $table->string('jadwal');
             $table->timestamps();
         });

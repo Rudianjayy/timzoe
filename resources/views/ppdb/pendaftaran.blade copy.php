@@ -41,6 +41,9 @@
             <span></span>
         </div>
     </div>
+    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+                                        <div class="elfsight-app-8ad5f200-9e00-438d-95d7-3ab159095b4f"></div>
+
 
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">

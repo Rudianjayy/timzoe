@@ -469,48 +469,12 @@
                         <li>
                             <a href="/admininfo"> Informasi</a>
                         </li>
+                        <li>
+                            <a href="/adminlangkah">Langkah Pendaftaran</a>
+                        </li>
                     </ul>
                 </li>
             @endif
-
-
-
-
-
-
-
-
-            @if (auth()->user()->role == 'admin')
-            <li class="menu">
-                <a href="#footerppdb" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                    <div class="">
-                        <i class="flaticon-menu-list"></i>
-                        <span>Footer PPDB</span>
-                    </div>
-                    <div>
-                        <i class="flaticon-right-arrow"></i>
-                    </div>
-                </a>
-                <ul class="collapse submenu list-unstyled" id="footerppdb" data-parent="#accordionExample">
-                    <li>
-                        <a href="/adminfooterppdb"> Footer PPDB</a>
-                    </li>
-                    <li>
-                        <a href="/"> Footer Link</a>
-                    </li>
-
-                </ul>
-            </li>
-        @endif
-
-
-
-        
-
-
-
-    
-
 
             @if (auth()->user()->role == 'admin')
                 <li class="menu-title">Operator</li>

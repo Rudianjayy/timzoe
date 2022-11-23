@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('formulirs', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('id_user');
             $table->string('nama_peserta');
             $table->enum('jeniskelamin', ['laki-laki','perempuan']);
             $table->string('tempat_lahir');
@@ -25,7 +26,7 @@ return new class extends Migration
             $table->bigInteger('nokk');
             $table->string('foto_kk');
             $table->string('foto_bukti');
-            $table->string('status');
+            $table->string('status_anak');
             $table->text('alamat_rumah');
             $table->string('nama_ayah');
             $table->string('nama_ibu');
@@ -37,6 +38,7 @@ return new class extends Migration
             $table->string('prestasi');
             $table->string('ukuran_kaos');
             $table->string('jurusan');
+            $table->string('status');
             $table->timestamps();
         });
     }

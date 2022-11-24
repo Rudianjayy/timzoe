@@ -7,7 +7,7 @@
     </head>
 
     <body>
-        <h1 class="text-center mb-4">Tambah Footer PPDB</h1>
+        <h1 style="color: black" class="text-center mb-4">Tambah Cara Pendaftaran</h1>
 
         <div class="container" mb-5>
 
@@ -15,41 +15,25 @@
                 <div class="col-8">
                     <div class="card">
                         <div class="card-body">
-                            <form action="/prosesfooter" method="POST" enctype="multipart/form-data">
+                            <form action="/prosestambahlangkah" method="POST" enctype="multipart/form-data">
                                 @csrf
-
-
                                 <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Foto :</label>
-                                    <input type="file" name="foto" class="form-control" id="exampleInputEmail1"
+                                    <label for="exampleInputEmail1" class="form-label">Judul :</label>
+                                    <input type="text" name="judul_langkah" class="form-control" id="exampleInputEmail1"
                                         aria-describedby="emailHelp">
-                                    @error('foto')
+                                    @error('judul_langkah')
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
-
-                                <section style="padding-top:60px;">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="card">
-                                                    <div class="card-header">
-                                                        Deskripsi
-                                                    </div>
-                                                    <div class="card-body">
-                                                        {{--  <form method="POST" enctype="multipart/form-data">  --}}
-                                                        <textarea name="deskripsi_footeer" id="mytextarea"></textarea>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
-
-
-
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Deskripsi :</label>
+                                    <textarea class="form-control form-control-solid" name="deskripsi_langkah"></textarea>
+                                    @error('deskripsi_langkah')
+                                        <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
                                 <button type="submit" class="btn btn-primary">Submit</button>
-                                <a href="/footeeradmin" class="btn btn-danger">Kembali</a>
+                                <a href="/adminlangkah" class="btn btn-danger">Kembali</a>
                             </form>
                         </div>
                     </div>
@@ -57,6 +41,9 @@
             </div>
         </div>
 
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
         </script>
@@ -72,11 +59,6 @@
         <script src="https://cdn.tiny.cloud/1/z3vshivvjuw47heg0vg12ouq5rr8i7ckkxmmjadvrhgsynq8/tinymce/6/tinymce.min.js"
             referrerpolicy="origin"></script>
 
-        <script>
-            tinymce.init({
-                selector: '#mytextarea'
-            });
-        </script>
         <!-- Option 2: Separate Popper and Bootstrap JS -->
 
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
@@ -85,6 +67,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
             integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
         </script>
+
         @include('layout.script')
     </body>
 @endsection

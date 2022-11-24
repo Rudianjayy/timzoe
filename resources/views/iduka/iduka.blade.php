@@ -40,7 +40,8 @@
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/responsive.css') }}">
 
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&amp;display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&amp;display=swap">
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/animate.css') }}">
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap-datepicker.min.css') }}">
@@ -66,7 +67,8 @@
 
     <div class="preload preload-container">
         {{-- <div class="preload-logo"></div>  --}}
-        <div class="preload-logo"><img src="{{ asset('landing/html/bidzend/assets/images/logo/0.png') }}" alt="Image" style="width:570 !important;"></div>
+        <div class="preload-logo"><img src="{{ asset('landing/html/bidzend/assets/images/logo/0.png') }}"
+                alt="Image" style="width:570 !important;"></div>
     </div>
 
     {{--  <div id="wrapper">
@@ -119,12 +121,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                        <div class="breadcrumbs">
-                            <ul>
-                                <li><a href="/">Beranda</a></li>
-                                <li>Iduka</li>
-                            </ul>
-                        </div>
+                    <div class="breadcrumbs">
+                        <ul>
+                            <li><a href="/">Beranda</a></li>
+                            <li>Iduka</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -136,24 +138,22 @@
                 <div class="block-title text-center">
                     <h3>{{ $i->judul_iduka }}</h3>
                 </div><!-- /.block-title text-center -->
-                <div class="block-title text-center">
+                <div class="block-title text-center" style="margin-bottom: 50;">
                     <h4>
                         <p>{!! $i->deskripsi_iduka !!}</p>
                     </h4>
                 </div>
             @endforeach
-            <br>
-            <br>
-            <br>
 
-                <div class="history-one__row-wrap">
-                    <div class="history-one__row-circle"></div><!-- /.history-one__row-circle -->
-                    @foreach ($fotoiduka as $fa)
+            <div class="history-one__row-wrap">
+                <div class="history-one__row-circle"></div><!-- /.history-one__row-circle -->
+                @foreach ($fotoiduka as $fa)
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="history-one__box wow fadeInLeft" data-wow-duration="1500ms">
                                 <div class="history-one__image">
-                                    <img class="zoom" src="{{ asset('fotomahasiswa/' . $fa->foto_iduka) }}" alt="">
+                                    <img class="zoom" src="{{ asset('fotomahasiswa/' . $fa->foto_iduka) }}"
+                                        alt="">
                                 </div><!-- /.history-one__image -->
                                 <!-- /.history-one__content -->
                             </div><!-- /.history-one__box -->
@@ -167,12 +167,12 @@
                             </div><!-- /.my-auto -->
                         </div><!-- /.col-lg-6 d-flex -->
                     </div><!-- /.row -->
-                    @endforeach
-                </div>
+                @endforeach
+            </div>
         </div>
     </section>
 
-    {{-- <section class="portfolio-grid">
+    <section class="portfolio-grid">
         <div class="container">
             <div class="block-title text-center">
                 <p class="color-2"><span>Portfolio</span></p>
@@ -180,96 +180,137 @@
             </div><!-- /.block-title text-center -->
             <ul class="portfolio-filter list-unstyled post-filter ">
                 <li data-filter=".filter-item" class="active"><span>All</span></li>
-                <li data-filter=".otkp"><span>otkp</span></li>
-                <li data-filter=".tkj"><span>tkj</span></li>
-                <li data-filter=".akl"><span>akl</span></li>
-                <li data-filter=".ph"><span>ph</span></li>
+                <li data-filter=".otkp"><span>OTKP</span></li>
+                <li data-filter=".tkj"><span>TJKT</span></li>
+                <li data-filter=".akl"><span>AKL</span></li>
+                <li data-filter=".ph"><span>PH</span></li>
+                <li data-filter=".dkv"><span>DKV</span></li>
+                <li data-filter=".pplg"><span>PPLG</span></li>
             </ul><!-- /.portfolio-filter list-unstyled -->
+            
             <div class="row high-gutters masonary-layout filter-layout">
+
+                @foreach ($otkp as $op )
                 <div class="col-lg-4 col-md-6 col-sm-12 filter-item masonary-item  otkp">
                     <div class="portfolio-one__single">
                         <div class="portfolio-one__image">
-                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-1.jpg') }}" alt="">
-                            <a class="img-popup" href="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-1.jpg') }}"><i
+                            <img src="{{ asset('fotomahasiswa/' . $op->foto_otkp) }}"
+                                alt="">
+                            <a class="img-popup"
+                                href="{{ asset('fotomahasiswa/' . $op->foto_otkp) }}"><i
                                     class="fal fa-plus"></i></a>
                         </div><!-- /.portfolio-one__image -->
                         <div class="portfolio-one__content">
-                            <h3><a href="portfolio-details.html">Content otkp</a></h3>
-                            <p>Customized SEO services</p>
+                            <h3><a href="portfolio-details.html">MOU OTKP</a></h3>
+                            {{-- <p>Customized SEO services</p> --}}
                         </div><!-- /.portfolio-one__content -->
                     </div><!-- /.portfolio-one__single -->
-                </div><!-- /.col-lg-4 col-md-6 col-sm-12 -->
-                <div class="col-lg-4 col-md-6 col-sm-12 filter-item masonary-item tkj ">
+                </div><!-- /.col-lg-4 col-md-6 col-sm-12 -->      
+                @endforeach
+
+
+                @foreach ( $tjkt as $tjkt )
+                <div class="col-lg-4 col-md-6 col-sm-12 filter-item masonary-item tkj">
                     <div class="portfolio-one__single">
                         <div class="portfolio-one__image">
-                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-2.jpg') }}" alt="">
-                            <a class="img-popup" href="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-2.jpg') }}"><i
-                                    class="fal fa-plus"></i></a>
+                            <img src="{{ asset('fotomahasiswa/' . $tjkt->foto_tjkt) }}"
+                            alt="">
+                            <a class="img-popup"
+                            href="{{ asset('fotomahasiswa/' . $tjkt->foto_tjkt) }}"><i
+                            class="fal fa-plus"></i></a>
                         </div><!-- /.portfolio-one__image -->
                         <div class="portfolio-one__content">
-                            <h3><a href="portfolio-details.html">SEO tkj</a></h3>
-                            <p>Customized SEO services</p>
+                            <h3><a href="portfolio-details.html">MOU TJKT</a></h3>
+                            {{-- <p>Customized SEO services</p> --}}
                         </div><!-- /.portfolio-one__content -->
                     </div><!-- /.portfolio-one__single -->
                 </div><!-- /.col-lg-4 col-md-6 col-sm-12 -->
+                @endforeach
+
+                @foreach ( $akl as $akl )
                 <div class="col-lg-4 col-md-6 col-sm-12 filter-item masonary-item akl">
                     <div class="portfolio-one__single">
                         <div class="portfolio-one__image">
-                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-3.jpg') }}" alt="">
-                            <a class="img-popup" href="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-3.jpg') }}"><i
+                            <img src="{{ asset('fotomahasiswa/' . $akl->foto_akl) }}"
+                            alt="">
+                            <a class="img-popup"
+                                href="{{ asset('fotomahasiswa/' . $akl->foto_akl) }}"><i
                                     class="fal fa-plus"></i></a>
-                        </div><!-- /.portfolio-one__image -->
-                        <div class="portfolio-one__content">
-                            <h3><a href="portfolio-details.html">Content Marketing</a></h3>
-                            <p>Customized SEO services</p>
+                                </div><!-- /.portfolio-one__image -->
+                                <div class="portfolio-one__content">
+                            <h3><a href="portfolio-details.html">MOU AKL</a></h3>
+                            {{-- <p>Customized SEO services</p> --}}
                         </div><!-- /.portfolio-one__content -->
                     </div><!-- /.portfolio-one__single -->
                 </div><!-- /.col-lg-4 col-md-6 col-sm-12 -->
+                @endforeach
+
+                @foreach ( $ph as $ph )
                 <div class="col-lg-4 col-md-6 col-sm-12 filter-item masonary-item ph">
                     <div class="portfolio-one__single">
                         <div class="portfolio-one__image">
-                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-4.jpg') }}" alt="">
-                            <a class="img-popup" href="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-4.jpg') }}"><i
+                            <img src="{{ asset('fotomahasiswa/' . $ph->foto_ph) }}"
+                            alt="">
+                            <a class="img-popup"
+                                href="{{ asset('fotomahasiswa/' . $ph->foto_ph) }}"><i
                                     class="fal fa-plus"></i></a>
-                        </div><!-- /.portfolio-one__image -->
+                                </div><!-- /.portfolio-one__image -->
                         <div class="portfolio-one__content">
-                            <h3><a href="portfolio-details.html">PPC Advertising</a></h3>
-                            <p>Customized SEO services</p>
+                            <h3><a href="portfolio-details.html">MOU PH</a></h3>
+                            {{-- <p>Customized SEO services</p> --}}
                         </div><!-- /.portfolio-one__content -->
                     </div><!-- /.portfolio-one__single -->
                 </div><!-- /.col-lg-4 col-md-6 col-sm-12 -->
-                <div class="col-lg-4 col-md-6 col-sm-12 filter-item masonary-item social">
+                @endforeach
+
+                @foreach ( $dkv as $dkv )
+                <div class="col-lg-4 col-md-6 col-sm-12 filter-item masonary-item dkv">
                     <div class="portfolio-one__single">
                         <div class="portfolio-one__image">
-                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-5.jpg') }}" alt="">
-                            <a class="img-popup" href="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-5.jpg') }}"><i
+                            <img src="{{ asset('fotomahasiswa/' . $dkv->foto_dkv) }}"
+                                alt="">
+                            <a class="img-popup"
+                                href="{{ asset('fotomahasiswa/' . $dkv->foto_dkv) }}"><i
                                     class="fal fa-plus"></i></a>
                         </div><!-- /.portfolio-one__image -->
                         <div class="portfolio-one__content">
-                            <h3><a href="portfolio-details.html">Social Marketing</a></h3>
-                            <p>Customized SEO services</p>
+                            <h3><a href="portfolio-details.html">DKV</a></h3>
+                            {{-- <p>Customized SEO services</p> --}}
                         </div><!-- /.portfolio-one__content -->
                     </div><!-- /.portfolio-one__single -->
                 </div><!-- /.col-lg-4 col-md-6 col-sm-12 -->
-                <div class="col-lg-4 col-md-6 col-sm-12 filter-item masonary-item advertising">
+                @endforeach
+
+                @foreach ( $pplg as $pplg )
+                <div class="col-lg-4 col-md-6 col-sm-12 filter-item masonary-item pplg">
                     <div class="portfolio-one__single">
                         <div class="portfolio-one__image">
-                            <img src="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-6.jpg') }}" alt="">
-                            <a class="img-popup" href="{{ asset('landingppdb/ppdb/style/assets/images/portfolio/portfolio-1-6.jpg') }}"><i
-                                    class="fal fa-plus"></i></a>
+                            <img src="{{ asset('fotomahasiswa/' . $pplg->foto_pplg) }}"
+                            alt="">
+                            <a class="img-popup"
+                            href="{{ asset('fotomahasiswa/' . $pplg->foto_pplg) }}"><i
+                            class="fal fa-plus"></i></a>
                         </div><!-- /.portfolio-one__image -->
                         <div class="portfolio-one__content">
-                            <h3><a href="portfolio-details.html">SEM Strategy</a></h3>
-                            <p>Customized SEO services</p>
+                            <h3><a href="portfolio-details.html">MOU PPLG</a></h3>
+                            {{-- <p>Customized SEO services</p> --}}
                         </div><!-- /.portfolio-one__content -->
                     </div><!-- /.portfolio-one__single -->
                 </div><!-- /.col-lg-4 col-md-6 col-sm-12 -->
+                @endforeach
             </div><!-- /.row -->
-            <div class="text-center">
-                <a href="#" class="thm-btn portfolio-grid__more-btn"><span>Load More</span></a><!-- /.thm-btn portfolio-grid__more-btn -->
-            </div><!-- /.text-center -->
+            <div class="col-md-12">
+                {!! $paginate->links() !!}
+            </div>
+            {{-- <div class="text-center">
+                <a href="#" class="thm-btn portfolio-grid__more-btn"><span>Load More</span></a>
+                <!-- /.thm-btn portfolio-grid__more-btn -->
+            </div><!-- /.text-center --> --}}
         </div><!-- /.container -->
-    </section><!-- /.portfolio-grid --> --}}
+    </section><!-- /.portfolio-grid -->
+
+
+    @include('koneksi.mitra')
 
     <a id="scroll-top"></a>
     @include('koneksi.footer')
@@ -288,27 +329,27 @@
     <script>
         mediumZoom('.zoom', {
 
-          })
-    </script>   
-     <script src="{{ asset('landingppdb/ppdb/style/assets/js/bootstrap.bundle.min.js') }}"></script>
-     <script src="{{ asset('landingppdb/ppdb/style/assets/js/bootstrap-datepicker.min.js') }}"></script>
-     <script src="{{ asset('landingppdb/ppdb/style/assets/js/bootstrap-select.min.js') }}"></script>
-     <script src="{{ asset('landingppdb/ppdb/style/assets/js/isotope.js') }}"></script>
-     <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.ajaxchimp.min.js') }}"></script>
-     <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.circleType.js') }}"></script>
-     <script src="{{ asset('landingppdb/ppdb/style/assets/js/waypoints.min.js') }}"></script>
-     <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.counterup.min.js') }}"></script>
-     <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.lettering.min.js') }}"></script>
-     <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.magnific-popup.min.js') }}"></script>
-     <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.mCustomScrollbar.concat.min.js') }}"></script>
-     <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.validate.min.js') }}"></script>
-     <script src="{{ asset('landingppdb/ppdb/style/assets/js/owl.carousel.min.js') }}"></script>
-     <script src="{{ asset('landingppdb/ppdb/style/assets/js/TweenMax.min.js') }}"></script>
-     <script src="{{ asset('landingppdb/ppdb/style/assets/js/wow.min.js') }}"></script>
-     <script src="{{ asset('landingppdb/ppdb/style/assets/js/swiper.min.js') }}"></script>
-     <script src="{{ asset('landingppdb/ppdb/style/assets/js/particles.min.js') }}"></script>
-     <script src="{{ asset('landingppdb/ppdb/style/assets/js/particel-config.js') }}"></script>
-     <script src="{{ asset('landingppdb/ppdb/style/assets/js/theme.js') }}"></script>
+        })
+    </script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/bootstrap-datepicker.min.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/bootstrap-select.min.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/isotope.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.ajaxchimp.min.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.circleType.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/waypoints.min.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.counterup.min.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.lettering.min.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.mCustomScrollbar.concat.min.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/jquery.validate.min.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/TweenMax.min.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/wow.min.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/swiper.min.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/particles.min.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/particel-config.js') }}"></script>
+    <script src="{{ asset('landingppdb/ppdb/style/assets/js/theme.js') }}"></script>
 </body>
 
 <!-- Mirrored from themesflat.com/html/bidzend/item-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Sep 2022 01:13:11 GMT -->

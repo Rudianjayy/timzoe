@@ -2,11 +2,12 @@
 
 @section('content')
 <head>
+  <title>Tambah Foto MOU</title>
     @include('layout.css')
 </head>
 
 <body>
-  <h1 style="color: black;" class="text-center mb-4">Tambah Mou</h1>
+  <h1 style="color: black; margin-top:10px;" class="text-center mb-4">Tambah Mou</h1>
 
   <div class="container" mb-5>
 
@@ -14,7 +15,7 @@
         <div class="col-8">
           <div class="card">
             <div class="card-body">
-              <form action="/fotomouproses" method="POST" enctype="multipart/form-data">
+              <form action="/adminfotomouproses" method="POST" enctype="multipart/form-data">
                 @csrf
 
                 <div class="mb-3">
@@ -35,7 +36,7 @@
 
 
                 <button type="submit" class="btn btn-primary">Submit</button>
-                <a href="/mouadmin" class="btn btn-danger">Kembali</a>
+                <a href="/fotomouadmin" class="btn btn-danger">Kembali</a>
               </form>
             </div>
           </div>
@@ -63,4 +64,4 @@
   @include('layout.script')
 </body>
 
-@endsection --}}
+@endsection

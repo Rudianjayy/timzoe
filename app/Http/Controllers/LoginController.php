@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use GrahamCampbell\ResultType\Success;
 use Illuminate\Support\Facades\Session;
@@ -169,6 +170,19 @@ class LoginController extends Controller
         Auth::guard('user')->logout();
         return redirect('login')->with('success', 'Anda berhasil logout!');
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }

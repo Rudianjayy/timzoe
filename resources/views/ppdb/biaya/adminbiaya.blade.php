@@ -47,7 +47,8 @@
                                         <tr>
                                             <th scope="col">No</th>
                                             <th scope="col">Gelombang</th>
-                                            <th scope="col">Penjelas</th>
+                                            <th scope="col">Penjelasan</th>
+                                            <th scope="col">Biaya</th>
                                             <th scope="col">Jadwal</th>
                                             <th scope="col">Aksi</th>
                                         </tr>
@@ -61,7 +62,8 @@
                                             <tr>
                                                 <th>{{ $no++ }}</th>
                                                 <td>{{ $d->gelombang }}</td>
-                                                <td>{{ $d->penjelas }}</td>
+                                                <td>{{ $d->penjelasan }}</td>
+                                                <td>Rp.{{ number_format($d['biaya'], 2, '.', '.') }}</td>
                                                 <td>{{ $d->jadwal }}</td>
 
 
@@ -74,8 +76,10 @@
                                                             </a>
                                                         </li>
                                                         <li>
-                                                            <a href="/deletebiaya/{{ $d->id }}"
-                                                                data-toggle="tooltip" data-placement="top" title="Delete">
+                                                            <a href="#" class="delete fire"
+                                                                data-id="{{ $d->id }}"
+                                                                data-nama="{{ $d->gelombang }}" data-toggle="tooltip"
+                                                                data-placement="top" title="Delete">
                                                                 <i class="flaticon-delete-5"></i>
                                                             </a>
                                                         </li>
@@ -105,14 +109,14 @@
 
                 swal({
                         title: "Apa kamu yakin ingin menghapus data ini?",
-                        text: "Kamu akan menghapus data dengan album  " + nama + "! ",
+                        text: "Kamu akan menghapus data dengan gelombang  " + nama + "! ",
                         icon: "warning",
                         buttons: true,
                         dangerMode: true,
                     })
                     .then((willDelete) => {
                         if (willDelete) {
-                            window.location = "/deletecarapendaftaran/" + id + ""
+                            window.location = "/deletebiaya/" + id + ""
                              swal("Data berhasil dihapus!", {
                                icon: "success",
                              });

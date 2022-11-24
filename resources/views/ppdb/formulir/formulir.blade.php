@@ -39,11 +39,11 @@
                                 <div class="col-xl-12 col-md-12 col-sm-12 col-12">
                                     <h4>Formulir Pendaftaran</h4>
                                 </div>
-                                <div>
+                                {{-- <div>
                                     <a href="/tambahformulir" class="btn btn-primary "
                                         id="kt_account_profile_details_submit" style="margin-left: 30px;">Tambah
                                         +</a>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                         <div class="widget-content widget-content-area">
@@ -74,7 +74,9 @@
                                             <th scope="col">Prestasi</th>
                                             <th scope="col">Ukuran Kaos</th>
                                             <th scope="col">Jurusan</th>
-                                            {{-- <th scope="col">Kode QR</th> --}}
+
+                                            <th scope="col">Kode QR</th>
+
                                             <th scope="col">Status</th>
                                             <th scope="col">Aksi</th>
                                         </tr>
@@ -95,7 +97,7 @@
                                                 <td>{{ $i->nik }}</td>
                                                 <td>{{ $i->nokk }}</td>
                                                 <td>
-                                                    <a href="{{ asset('fotomahasiswa/' . $i->foto_kk) }}"
+                                                    <a href="{{ asset(' /' . $i->foto_kk) }}"
                                                         data-lightbox="whatever">
                                                         <img src="{{ asset('fotomahasiswa/' . $i->foto_kk) }}"
                                                             alt="" style="width: 80px;">
@@ -108,7 +110,7 @@
                                                             alt="" style="width: 80px;">
                                                     </a>
                                                 </td>
-                                                <td>{{ $i->status }}</td>
+                                                <td>{{ $i->status_anak }}</td>
                                                 <td>{{ $i->alamat_rumah }}</td>
                                                 <td>{{ $i->nama_ayah }}</td>
                                                 <td>{{ $i->nama_ibu }}</td>
@@ -121,36 +123,42 @@
                                                 <td>{{ $i->ukuran_kaos }}</td>
                                                 <td>{{ $i->jurusan }}</td>
 
-
-                                                {{-- <td>
-                                                    <div class="visible-print text-center">
-                                                        {!! QrCode::size(100)->generate('novan') !!}
-                                                        <p>Scan me to return to the original page.</p>
-                                                    </div>
-                                                </td> --}}
+                                                @if ($i->status == 'diterima')
+                                                    <td>
+                                                        <div class="visible-print text-center">
+                                                            {!! QrCode::size(100)->generate($i->nisn) !!}
+                                                            {{-- <p>Scan me to return to the original page.</p> --}}
+                                                        </div>
+                                                    </td>
+                                                @else
+                                                    <td></td>
+                                                @endif
                                                 <td>{{ $i->status }}</td>
 
-
-                                                <td class="align-center">
-                                                    <ul class="table-controls">
-                                                        <form action="/setuju/{{ $i->id }}" method="POST">
-                                                            @csrf
-                                                            <li>
-                                                                <button type="submit" title="Terima">
-                                                                    <i class="flaticon-single-circle-tick"></i>
-                                                                </button>
-                                                            </li>
-                                                        </form>
-                                                        <form action="/tolak/{{ $i->id }}" method="POST">
-                                                            @csrf
-                                                            <li>
-                                                                <button type="submit" title="Tolak">
-                                                                    <i class="flaticon-circle-cross"></i>
-                                                                </button>
-                                                            </li>
-                                                        </form>
-                                                    </ul>
-                                                </td>
+                                                @if ($i->status == 'pending')
+                                                    <td class="align-center">
+                                                        <ul class="table-controls">
+                                                            <form action="/setuju/{{ $i->id }}" method="POST">
+                                                                @csrf
+                                                                <input type="hidden" name="nisn"
+                                      `                              value="{{ $i->nisn }}">
+                                                                <li>
+                                                                    <button type="submit" title="Terima">
+                                                                        <i class="flaticon-single-circle-tick"></i>
+                                                                    </button>
+                                                                </li>
+                                                            </form>
+                                                            <form action="/tolak/{{ $i->id }}" method="POST">
+                                                                @csrf
+                                                                <li>
+                                                                    <button type="submit" title="Tolak">
+                                                                        <i class="flaticon-circle-cross"></i>
+                                                                    </button>
+                                                                </li>
+                                                            </form>
+                                                        </ul>
+                                                    </td>
+                                                @endif
                                             </tr>
                                         @endforeach
                                     </tbody>

@@ -13,10 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('footerppdbs', function (Blueprint $table) {
+        Schema::create('albumidukas', function (Blueprint $table) {
             $table->id();
-            $table->string('foto');
-            $table->text('deskripsi_footeer');
+            $table->string('foto_otkp');
+            $table->string('foto_tjkt');
+            $table->string('foto_akl');
+            $table->string('foto_ph');
+            $table->string('foto_dkv');
+            $table->string('foto_pplg');
             $table->timestamps();
         });
     }
@@ -28,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('footerppdbs');
+        Schema::dropIfExists('albumidukas');
     }
 };

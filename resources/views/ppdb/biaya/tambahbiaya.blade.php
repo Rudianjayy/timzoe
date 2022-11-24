@@ -18,6 +18,8 @@
                             <form action="/submitprosesbiaya" method="POST" enctype="multipart/form-data">
                                 @csrf
 
+
+
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Gelombang :</label>
                                     <input type="text" name="gelombang" class="form-control" id="exampleInputEmail1"
@@ -28,16 +30,24 @@
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Penjelas :</label>
-                                    <textarea class="form-control form-control-solid" name="penjelas"></textarea>
-                                    @error('penjelas')
+                                    <label for="exampleInputEmail1" class="form-label">Penjelasan :</label>
+                                    <textarea class="form-control form-control-solid" name="penjelasan"></textarea>
+                                    @error('penjelasan')
+                                        <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Biaya :</label>
+                                    <input type="number" name="biaya" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp">
+                                    @error('biaya')
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
 
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Tanggal :</label>
-                                    <input type="text" name="jadwal" class="form-control" id="exampleInputEmail1"
+                                    <input type="date" name="jadwal" class="form-control" id="exampleInputEmail1"
                                         aria-describedby="emailHelp">
                                     @error('jadwal')
                                         <div class="alert alert-danger">{{ $message }}</div>

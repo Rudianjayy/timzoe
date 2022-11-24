@@ -45,9 +45,6 @@
                             <li><a href="{{ $pp->link }}">{{ $pp->judul }}</a></li>
                         @endforeach
 
-                          <li><a href="https://sekolah.data.kemdikbud.go.id/index.php/chome/profil/39108646-470a-4aac-bee3-bc8ea91b8973">Dapodik</a></li>
-                        <li><a href="https://sekolah.data.kemdikbud.go.id/index.php/chome/profil/39108646-470a-4aac-bee3-bc8ea91b8973">UPJ TKJ</a></li>
-                        <li><a href="/profilsekolah">Tentang Kami</a></li>
                         <li><a href="#">PPDB</a></li>
 
                     </ul>

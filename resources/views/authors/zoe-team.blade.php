@@ -34,7 +34,7 @@
 
 
 <body>
-    
+
     <section class="team-area pt-100 pb-70">
         <div class="container">
             <div class="section-title">
@@ -94,7 +94,7 @@
                             </ul>
                             <div class="content">
                                 <h3>Novan Ramadani</h3>
-                                <p> Development</p>
+                                <p>Back End Development</p>
                             </div>
                         </div>
                     </div>

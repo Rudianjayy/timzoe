@@ -12,22 +12,86 @@ use App\Models\biaya;
 use App\Models\kontak;
 use App\Models\info;
 use App\Models\Jurusan;
+use App\Models\Langkahpendaftaran;
 use App\Models\mitrappdb;
 use App\Models\Muhinews;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Models\Payment;
+
 
 class PpdbController extends Controller
 {
     public function pendaftaran(){
         $dp = Deskripsipendaftaran::all();
         $pd = Deskripsipendaftaran::all();
+        $ab = biaya::all();
         $kontak = Deskripsipendaftaran::all();
         $cp = Carapendaftaran::all();
-        $ab = biaya::all();
-        $ac = syaratdaftar::all();
-        $ar = kontak::all();
+        $footerppdb = footeer::all();
+        $footerlink = Footeerdua::all();
         $info = info::all();
-        return view('ppdb.pendaftaran', compact('dp','pd','kontak','cp','ab','ac','ar','info'));
+        $biaya = biaya::all();
+        $langkah = Langkahpendaftaran::all();
+        return view('ppdb.pendaftaran', compact('dp','pd','kontak','cp','footerppdb','info','biaya','langkah','footerlink','ab'));
+    }
+
+    public function snap(Request $request){
+        // Set your Merchant Server Key
+        \Midtrans\Config::$serverKey = 'SB-Mid-server-RcFqJE4B66H7TmdNUajirjjK';
+        // Set to Development/Sandbox Environment (default). Set to true for Production Environment (accept real transaction).
+        \Midtrans\Config::$isProduction = false;
+        // Set sanitization on (default)
+        \Midtrans\Config::$isSanitized = true;
+        // Set 3DS transaction for credit card to true
+        \Midtrans\Config::$is3ds = true;
+
+        $params = array(
+            'transaction_details' => array(
+                'order_id' => rand(),
+                'gross_amount' => $request->biaya,
+            ),
+            'item_details' => array(
+                [
+                    'id' => $request->biaya_id,
+                    'price' => $request->biaya,
+                    'quantity' => 1,
+                    'name' => $request->biaya_gelombang,
+                ],
+            ),
+            'customer_details' => array(
+                // 'first_name' => $request->user_name,
+                // 'email' => $request->user_email,
+                // 'phone' => $request->user_telepon,
+            ),
+        );
+
+    $snapToken = \Midtrans\Snap::getSnapToken($params);
+
+    // return view('ppdb.pendaftaran' ,['snapToken' => $snapToken]);
+    return response()->json([
+        'snap' =>$snapToken,
+        'biaya' =>$request->biaya_id
+
+    ]);
+    }
+
+    public function payment_post(Request $request) {
+        $json = json_decode($request->get('json'));
+        // dd($request);
+
+        $order = new Payment();
+        // $order->id_user = Auth::user()->id;
+        $order->id_biaya = $request->biaya_ids;
+        $order->status = isset($json->transaction_status) ? $json->transaction_status : null;
+        $order->transaction_id = isset($json->transaction_id) ? $json->transaction_id : null;
+        $order->order_id = isset($json->order_id) ? $json->order_id : null;
+        $order->gross_amount = isset($json->gross_amount) ? $json->gross_amount : null;
+        $order->payment_type =  isset($json->payment_type) ? $json->payment_type : null;
+        $order->payment_code = isset($json->payment_code) ? $json->payment_code : null;
+        $order->pdf_url = isset($json->pdf_url) ? $json->pdf_url : null;
+
+        return $order->save() ? redirect(url('/'))->with('alert-success', 'Berhasil Berlangganan') : redirect(url('/'))->with('alert-failed', 'Terjadi Kesalahan');
     }
 
 
@@ -339,9 +403,26 @@ class PpdbController extends Controller
 
 
 
-    public function loby27(){
+    public function adminformulir(){
        $data4 = Formulir::all();
         return view('ppdb.formulir.formulir', compact('data4'));
+    }
+
+    public function setuju(Request $request,$id){
+        $data = Formulir::find($id);
+        $data->update([
+            'status' => 'diterima',
+            'barcode' => $request->nisn,
+        ]);
+        return redirect()->back()->with('success','status berhasil diubah');
+    }
+
+    public function tolak($id){
+        $data = Formulir::find($id);
+        $data->update([
+            'status' => 'ditolak',
+        ]);
+        return redirect()->back()->with('success','status berhasil diubah');
     }
 
     public function tambahformulir()
@@ -377,6 +458,7 @@ class PpdbController extends Controller
 
         // ]);
         $data4 = Formulir::create([
+            'id_user' => Auth::User()->id,
             'nama_peserta' =>$request->nama_peserta,
             'jeniskelamin' =>$request->jeniskelamin,
             'tempat_lahir' =>$request->tempat_lahir,
@@ -401,6 +483,8 @@ class PpdbController extends Controller
             'jurusan' =>$request->jurusan,
 
         ]);
+
+        // dd($request);
         if($request->hasFile('foto_kk')){
             $request->file('foto_kk')->move('fotomahasiswa/', $request->file('foto_kk')->getClientOriginalName());
             $data4->foto_kk = $request->file('foto_kk')->getClientOriginalName();
@@ -419,6 +503,14 @@ class PpdbController extends Controller
         $data4 ->delete();
         return redirect('adminformulir')->with('toast_error',' Data Berhasil di Hapus!');
     }
+
+
+
+
+
+
+
+
 
 
 
@@ -458,21 +550,23 @@ class PpdbController extends Controller
     }
 
     public function submitprosesbiaya(Request $request){
+        // dd($request->all());
         $this->validate($request,[
             'gelombang' =>'required',
-            'penjelas' =>'required',
+            'penjelasan' =>'required',
             'jadwal' =>'required',
-
         ],[
             'gelombang.required' =>'Harus diisi',
-            'penjelas.required' =>'Harus diisi',
+            'penjelasan.required' =>'Harus diisi',
             'jadwal.required' =>'Harus diisi',
 
         ]);
         $data3 = biaya::create([
             'gelombang' =>$request->gelombang,
-            'penjelas' =>$request->penjelas,
+            'penjelasan' =>$request->penjelasan,
             'jadwal' =>$request->jadwal,
+            'biaya' =>$request->biaya,
+            // dd($request->biaya)
 
         ]);
         return redirect()->route('adminbiaya')->with('success',' Data Berhasil di Tambahkan!');
@@ -483,6 +577,15 @@ class PpdbController extends Controller
         $data->delete();
         return redirect('adminbiaya')->with('toast_error',' Data Berhasil di Hapus!');
     }
+
+
+
+
+
+
+
+
+
 
 
     public function info() {
@@ -565,15 +668,46 @@ class PpdbController extends Controller
 
 
 
+    public function adminlangkah(){
+        $langkah = Langkahpendaftaran::all();
+        return view('ppdb.langkahpendaftaran.adminlangkah', compact('langkah'));
+    }
+    public function tambahlangkah(){
+        $langkah = Langkahpendaftaran::all();
+        return view('ppdb.langkahpendaftaran.tambahlangkah', compact('langkah'));
+    }
+    public function prosestambahlangkah(Request $request){
+        $this->validate($request,[
+            'judul_langkah' =>'required',
+            'deskripsi_langkah' =>'required',
+        ],[
+            'judul_langkah' =>'harus diisi',
+            'deskripsi_langkah' =>'harus diisi',
+        ]);
+        $langkah = Langkahpendaftaran::create([
+            'judul_langkah' => $request->judul_langkah,
+            'deskripsi_langkah' => $request->deskripsi_langkah,
+        ]);
+        return redirect()->route('adminlangkah')->with('success', 'Data Berhasil Di Tambahkan');
+    }
+    public function editlangkah($id){
+        $langkah = Langkahpendaftaran::findOrFail($id);
+         return view('ppdb.langkahpendaftaran.editlangkah', compact('langkah'));
+    }
+    public function proseseditlangkah(Request $request , $id){
+        $langkah = Langkahpendaftaran::find($id);
+        $langkah->update([
+            'judul_langkah' => $request->judul_langkah,
+            'deskripsi_langkah' => $request->deskripsi_langkah,
+        ]);
+        return redirect()->route('adminlangkah')->with('success', 'Data Berhasil Di Edit');
+    }
 
-
-
-
-
-
-
-
-
+        public function deletelangkah($id){
+            $langkah = Langkahpendaftaran::find($id);
+            $langkah->delete();
+            return redirect()->route('adminlangkah')->with('success', 'Data Berhasil Di Hapus');
+        }
 }
 
 

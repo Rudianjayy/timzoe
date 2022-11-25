@@ -31,6 +31,8 @@
             top: 40px !important;
         }
     </style>
+
+
     <link rel="icon" type="image/x-icon" href="{{ asset('admintemp/adminnew/riski/nopan/assets/img/favicon.ico') }}" />
 
 
@@ -109,74 +111,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 mb-xl-0 col-lg-6 mb-4 col-md-6 col-sm-6">
-                    <div class="widget-content-area  data-widgets br-4" style="margin-top: 10px;">
-                        <div class="widget  t-sales-widget">
-                            <div class="media">
-                                <div class="icon ml-2">
-                                    <i class="flaticon-double-chat"></i>
-                                </div>
-                                <div class="media-body text-right">
-                                    <p class="widget-text mb-0">Pendaftar</p>
-                                    <p class="widget-numeric-value count"></p>
-                                </div>
-                            </div>
-                            <p class="widget-total-stats mt-2">94% New Sales</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-3 mb-xl-0 col-lg-6 mb-4 col-md-6 col-sm-6">
-                    <div class="widget-content-area  data-widgets br-4" style="margin-top: 10px;">
-                        <div class="widget  t-order-widget">
-                            <div class="media">
-                                <div class="icon ml-2">
-                                    <i class="flaticon-single-circle-tick"></i>
-                                </div>
-                                <div class="media-body text-right">
-                                    <p class="widget-text mb-0">Siswa Diterima</p>
-                                    <p class="widget-numeric-value count">{{ $formulir }}</p>
-                                </div>
-                            </div>
-                            <p class="widget-total-stats mt-2">552 New Orders</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 mb-sm-0 mb-4">
-                    <div class="widget-content-area  data-widgets br-4" style="margin-top: 10px;">
-                        <div class="widget  t-customer-widget">
-                            <div class="media">
-                                <div class="icon ml-2">
-                                    <i class="flaticon-circle-cross"></i>
-                                </div>
-                                <div class="media-body text-right">
-                                    <p class="widget-text mb-0">Siswa Ditolak</p>
-                                    <p class="widget-numeric-value count">{{ $formulird }}</p>
-                                </div>
-                            </div>
-                            <p class="widget-total-stats mt-2">390 New Customers</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
-
-                    <div class="widget-content-area  data-widgets br-4" style="margin-top: 10px;">
-                        <div class="widget  t-income-widget">
-                            <div class="media">
-                                <div class="icon ml-2">
-                                    <i class="flaticon-primary"></i>
-                                </div>
-                                <div class="media-body text-right">
-                                    <p class="widget-text mb-0">Pengunjung</p>
-                                    <p class="widget-numeric-value count"></p>
-                                </div>
-                            </div>
-                            <p class="widget-total-stats mt-2">$2.1 M This Week</p>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
 
             <div class="col-lg-12 layout-spacing">
@@ -184,35 +119,36 @@
                     <div class="widget-header">
                         <div class="row">
                             <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                <h4>With Icon</h4>
+                                <h4></h4>
                             </div>
                         </div>
                     </div>
                     <div class="widget-content widget-content-area text-center icon-counter-container">
-                        <div class="row mb-5">
+                        <div class="row mb-5" style="padding-top: 30px;">
                             <div class="col-xl-3 col-lg-3 mb-md-0 col-md-3 mb-5 col-sm-6">
                                 <i class="counter-ico flaticon-user-11"></i>
-                                <h1 class="ico-counter1 ico-counter mt-2">1005</h1>
-                                <p class="ico-counter-text">Happy Clients</p>
+                                <h1 class="ico-counter1 ico-counter mt-2">{{ $total }}</h1>
+                                <p class="ico-counter-text">Total Pendaftar</p>
                             </div>
 
                             <div class="col-xl-3 col-lg-3 mb-md-0 col-md-3 mb-5 col-sm-6">
-                                <i class="counter-ico flaticon-downloading"></i>
-                                <h1 class="ico-counter2 ico-counter mt-2">3100</h1>
-                                <p class="ico-counter-text">Total Downloads</p>
+                                <i class="counter-ico flaticon-users"></i>
+                                <h1 class="ico-counter4 ico-counter mt-2">{{ $formulirp }}</h1>
+                                <p class="ico-counter-text">Siswa Pending</p>
+                            </div>
+                            
+                            <div class="col-xl-3 col-lg-3 mb-md-0 col-md-3 mb-5 col-sm-6">
+                                <i class="counter-ico flaticon-user-group-1"></i>
+                                <h1 class="ico-counter2 ico-counter mt-2">{{ $formulir }}</h1>
+                                <p class="ico-counter-text">Siswa Diterima</p>
                             </div>
 
                             <div class="col-xl-3 col-lg-3 mb-md-0 col-md-3 mb-5 col-sm-6">
-                                <i class="counter-ico flaticon-cup"></i>
-                                <h1 class="ico-counter3 ico-counter mt-2">58</h1>
-                                <p class="ico-counter-text">Awards Won</p>
+                                <i class="counter-ico flaticon-users"></i>
+                                <h1 class="ico-counter3 ico-counter mt-2">{{ $formulird }}</h1>
+                                <p class="ico-counter-text">Siswa Ditolak</p>
                             </div>
 
-                            <div class="col-xl-3 col-lg-3 mb-md-0 col-md-3 mb-5 col-sm-6">
-                                <i class="counter-ico flaticon-like-3"></i>
-                                <h1 class="ico-counter4 ico-counter mt-2">8858</h1>
-                                <p class="ico-counter-text">Likes</p>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -262,6 +198,48 @@
                     </div>
                 </div>
             </div>
+
+            {{-- <div class="row layout-spacing">
+                <div class="col-lg-12">
+                    <div class="statbox widget box box-shadow">
+                        <div class="widget-header">
+                            <div class="row">
+                                <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                    <h4>Line Charts</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="widget-content widget-content-area">
+                            <div class="row">
+                                <div class="col-lg-12 mb-4">
+                                    <div id="chart_line"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> --}}
+
+            {{-- <div class="row layout-spacing">
+                <div class="col-lg-12">
+                    <div class="statbox widget box box-shadow">
+                        <div class="widget-header">
+                            <div class="row">
+                                <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                    <h4>Basic Column Chart</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="widget-content widget-content-area">
+                            <div class="row">
+                                <div class="col-lg-12 mb-4">
+                                    <div id="basic_chart" class="" style="height:400px"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> --}}
 
             {{-- <div class="row">
             <div class="col-xl-4 col-lg-6 col-md-6 col-12 layout-spacing">
@@ -1437,7 +1415,7 @@
                 </div>
                 </div>
             </div> --}}
-      
+
 
         </div>
         @include('layout.script')
@@ -1469,7 +1447,7 @@
                     }
                 },
                 series: [{
-                    name: 'Nominal Pendaftaran',
+                    name: 'Jumlah Pendaftar',
                     data: {!! $status !!}
                 }]
 
@@ -1482,44 +1460,9 @@
                 "type": "serial",
                 "theme": "light",
                 "dataProvider": [{
-                    "country": "USA",
-                    "visits": 2025,
-                }, {
-                    "country": "China",
-                    "visits": 1882,
-                }, {
-                    "country": "Japan",
-                    "visits": 1809,
-                }, {
-                    "country": "Germany",
-                    "visits": 1322,
-                }, {
-                    "country": "UK",
-                    "visits": 1122,
-                }, {
-                    "country": "France",
-                    "visits": 1114,
-                }, {
-                    "country": "India",
-                    "visits": 984,
-                }, {
-                    "country": "Spain",
-                    "visits": 711,
-                }, {
-                    "country": "Netherlands",
-                    "visits": 665,
-                }, {
-                    "country": "Russia",
-                    "visits": 580,
-                }, {
-                    "country": "South Korea",
-                    "visits": 443,
-                }, {
-                    "country": "Canada",
-                    "visits": 441,
-                }, {
-                    "country": "Brazil",
-                    "visits": 395,
+
+                    "year": {!! $bulan !!},
+                    "visits": {!! $status !!},
                 }],
                 "valueAxes": [{
                     "gridColor": "#FFFFFF",
@@ -1542,7 +1485,7 @@
                     "cursorAlpha": 0,
                     "zoomable": false
                 },
-                "categoryField": "country",
+                "categoryField": "year",
                 "categoryAxis": {
                     "gridPosition": "start",
                     "gridAlpha": 0,
@@ -1554,5 +1497,90 @@
                 }
             });
         </script>
+
+
+
+
+        {{-- <script>
+            var chartBasic = echarts.init(document.getElementById('basic_chart'));
+
+            option = {
+                tooltip: {
+                    trigger: 'axis'
+                },
+                color: ["#6156ce", "#ee3d50"],
+                legend: {
+                    data: ['Evaporation', 'Precipitation']
+                },
+                calculable: true,
+                xAxis: [{
+                    type: 'category',
+                    data: ['Jan']
+                }],
+                yAxis: [{
+                    type: 'value'
+                }],
+                series: [{
+                        name: 'Evaporation',
+                        type: 'bar',
+                        data: [2.0],
+                        markPoint: {
+                            data: [{
+                                    type: 'max',
+                                    name: 'The maximum value'
+                                },
+                                {
+                                    type: 'min',
+                                    name: 'Minimum value'
+                                }
+                            ]
+                        },
+                        markLine: {
+                            data: [{
+                                type: 'average',
+                                name: 'average value'
+                            }]
+                        }
+                    },
+                    {
+                        name: 'Precipitation',
+                        type: 'bar',
+                        data: [2.6],
+                        markPoint: {
+                            data: [{
+                                    name: 'The highest year',
+                                    value: 0,
+                                    xAxis: 7,
+                                    yAxis: 183,
+                                    symbolSize: 18
+                                },
+                                {
+                                    name: 'Year minimum',
+                                    value: 2.3,
+                                    xAxis: 11,
+                                    yAxis: 3
+                                }
+                            ]
+                        },
+                        markLine: {
+                            data: [{
+                                type: 'average',
+                                name: 'average value'
+                            }]
+                        }
+                    }
+                ]
+            };
+
+            // Load data into the ECharts instance 
+            chartBasic.setOption(option);
+
+            $(window).on('resize', function() {
+                if (chartBasic != null && chartBasic != undefined) {
+                    chartBasic.resize();
+                }
+            });
+        </script> --}}
+
     </body>
 @endsection

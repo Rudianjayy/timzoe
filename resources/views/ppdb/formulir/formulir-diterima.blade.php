@@ -20,12 +20,12 @@
         <div class="container">
             <div class="page-header">
                 <div class="page-title">
-                    <h3>Formulir Pendaftaran yang Pending</h3>
+                    <h3>Formulir Pendaftaran yang Diterima</h3>
                     <div class="crumbs">
                         <ul id="breadcrumbs" class="breadcrumb">
                             <li><a href="index.html"><i class="flaticon-home-fill"></i></a></li>
                             <li><a href="#">Formulir</a></li>
-                            <li class="active"><a href="#">Formulir Pending</a></li>
+                            <li class="active"><a href="#">Formulir Diterima</a></li>
                         </ul>
                     </div>
                 </div>
@@ -37,7 +37,7 @@
                         <div class="widget-header">
                             <div class="row">
                                 <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                    <h4>Formulir Pendaftaran yang Pending</h4>
+                                    <h4>Formulir Pendaftaran yang Diterima</h4>
                                 </div>
                                 {{-- <div>
                                     <a href="/tambahformulir" class="btn btn-primary "

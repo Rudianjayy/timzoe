@@ -70,7 +70,7 @@
                 </a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="/logout" onclick="return confirm('Anda yakin ingin logout?')">
-                    <i class="flaticon-logout"></i> <span>Log Out</span>
+                    <i class="flaticon-log-2"></i> <span>Log Out</span>
                 </a>
             </div>
         </li>

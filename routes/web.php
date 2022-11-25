@@ -91,6 +91,14 @@ Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
 
 
 
+//footerPPDB
+
+Route::get('/adminfooterppdb', [FooteerController::class, 'adminfooterppdb'])->name('adminfooterppdb');
+Route::get('/tambahfooterppdb', [FooteerController::class, 'tambahfooterppdb'])->name('tambahfooterppdb');
+Route::post('/prosesfooter', [FooteerController::class, 'prosesfooter'])->name('prosesfooter');
+Route::get('/editfooteerppdb/{id}', [FooteerController::class, 'editfooteerppdb'])->name('editfooteerppdb');
+Route::post('/editprosesfooter/{id}', [FooteerController::class, 'editprosesfooter'])->name('editprosesfooter');
+Route::get('/deletefooteerppdb/{id}', [FooteerController::class, 'deletefooteerppdb'])->name('deletefooteerppdb');
 
 
 
@@ -126,7 +134,7 @@ Route::get('/deletedeskripsipendaftaran/{id}', [PpdbController::class, 'deletede
 Route::get('/syaratdaftar', [PpdbController::class, 'syaratdaftar'])->name('syaratdaftar');
 Route::get('/adminsyaratdaftar', [PpdbController::class, 'adminsyaratdaftar'])->name('adminsyaratdaftar');
 Route::get('/editsyaratdaftar/{id}', [PpdbController::class, 'editsyaratdaftar'])->name('editsyaratdaftar');
-Route::post('/editproses12/{id}', [PpdbController::class, 'editproses12'])->name('editproses12');
+Route::post('/editproses12', [PpdbController::class, 'editproses12'])->name('editproses12');
 Route::get('/tambahsyaratdaftar', [PpdbController::class, 'tambahsyaratdaftar'])->name('tambahsyaratdaftar');
 Route::post('/submitproses12/', [PpdbController::class, 'submitproses12'])->name('submitproses12');
 Route::get('/deletesyaratdaftar/{id}', [PpdbController::class, 'deletesyaratdaftar'])->name('deletesyaratdaftar');
@@ -172,7 +180,7 @@ Route::get('/deletemitrappdb/{id}',[PpdbController::class, 'deletemitrappdb'])->
 
 Route::get('/admininfo',[PpdbController::class, 'admininfo'])->name('admininfo');
 Route::get('/editinfo/{id}',[PpdbController::class, 'editinfo'])->name('editinfo');
-Route::post('/prosesinfo/{id}',[PpdbController::class, 'prosesinfo'])->name('prosesinfo');
+Route::post('/prosesinfo',[PpdbController::class, 'prosesinfo'])->name('prosesinfo');
 Route::get('/tambahinfo',[PpdbController::class, 'tambahinfo'])->name('tambahinfo');
 Route::post('/submitinfo',[PpdbController::class, 'submitinfo'])->name('submitinfo');
 Route::get('/deleteinfo/{id}',[PpdbController::class, 'deleteinfo'])->name('deleteinfo');
@@ -713,7 +721,6 @@ Route::group(['middleware' => ['auth', 'hakakses:admin,user']], function () {
     Route::get('/editprofiladmin', [ProfiladminController::class, 'editprofiladmin'])->name('editprofiladmin');
     Route::post('/updateprofiladmin', [ProfiladminController::class, 'updateprofiladmin'])->name('updateprofiladmin');
 });
-
 Route::group(['middleware' => ['auth', 'hakakses:admin,user,operator1,operator2']], function () {
 
     Route::get('/welcome', function () {
@@ -740,50 +747,26 @@ Route::group(['middleware' => ['auth', 'hakakses:admin,user']], function () {
         $galery = Album::count();
         $prestasi = Prestasi::count();
         $mitra = Mitra::count();
+        $total = Formulir::count();
         $formulir = Formulir::where('status','=','diterima')->count();
         $formulird = Formulir::where('status','=','ditolak')->count();
+        $formulirp = Formulir::where('status','=','pending')->count();
         // dd($formulir);
-        $status = Formulir::select(DB::raw("SUM(id) as status"))
-        ->GroupBy(DB::raw("Month(created_at)"))
+        $status = Formulir::select(DB::raw("COUNT(*) as status"))
+        ->GroupBy(DB::raw("Year(created_at)"))
         ->pluck('status');
 
-        $bulan = Formulir::select(DB::raw("MONTHNAME(created_at) as bulan"))
-        ->GroupBy(DB::raw("MONTHNAME(created_at)"))
+        $bulan = Formulir::select(DB::raw("YEAR(created_at) as bulan"))
+        ->GroupBy(DB::raw("YEAR(created_at)"))
         ->pluck('bulan');
-
-        return view('welcome', compact('berita', 'galery', 'prestasi', 'mitra','status','bulan','formulir','formulird'));
+        
+        return view('welcome', compact('berita', 'galery', 'prestasi', 'mitra','status','bulan','formulir','formulird','total','formulirp'));
     })->middleware('auth');
 
     Route::get('/adminformulir', [PpdbController::class, 'adminformulir'])->name('adminformulir');
+    Route::get('/adminformulirditerima', [PpdbController::class, 'adminformulirditerima'])->name('adminformulirditerima');
+    Route::get('/adminformulirditolak', [PpdbController::class, 'adminformulirditolak'])->name('adminformulirditolak');
     Route::get('/tambahfrmulir', [PpdbController::class, 'tambahfrmulir'])->name('tambahfrmulir');
     Route::post('/submitdata27', [PpdbController::class, 'submitdata27'])->name('submitdata27');
     Route::get('/deleteformulir/{id}', [PpdbController::class, 'deleteformulir'])->name('deleteformulir');
 });
-
-
-//payment
-Route::post('/pendaftaran',[PpdbController::class, 'payment_post']);
-
-
-Route::get('/biaya',[PpdbController::class, 'biaya'])->name('biaya');
-Route::get('/adminbiaya',[PpdbController::class, 'adminbiaya'])->name('adminbiaya');
-Route::get('/editbiaya/{id}',[PpdbController::class, 'editbiaya'])->name('editbiaya');
-Route::post('/editprosesbiaya1',[PpdbController::class, 'editprosesbiaya1'])->name('editprosesbiaya1');
-Route::get('/tambahbiaya',[PpdbController::class, 'tambahbiaya'])->name('tambahbiaya');
-Route::post('/submitprosesbiaya',[PpdbController::class, 'submitprosesbiaya'])->name('submitprosesbiaya');
-Route::get('/deletebiaya/{id}',[PpdbController::class, 'deletebiaya'])->name('deletebiaya');
-
-
-Route::get('/adminlangkah', [PpdbController::class, 'adminlangkah'])->name('adminlangkah');
-Route::get('/tambahlangkah', [PpdbController::class, 'tambahlangkah'])->name('tambahlangkah');
-Route::post('/prosestambahlangkah', [PpdbController::class, 'prosestambahlangkah'])->name('prosestambahlangkah');
-Route::get('/editlangkah/{id}', [PpdbController::class, 'editlangkah'])->name('editlangkah');
-Route::post('/proseseditlangkah', [PpdbController::class, 'proseseditlangkah'])->name('proseseditlangkah');
-Route::get('/deletelangkah/{id}', [PpdbController::class, 'deletelangkah'])->name('deletelangkah');
-
-
-
-
-
-
-

@@ -112,6 +112,8 @@
                     <ul class="collapse submenu list-unstyled" id="formulir" data-parent="#accordionExample">
                         <li>
                             <a href="/adminformulir"> Formulir</a>
+                            <a href="/adminformulirditerima"> Formulir Diterima</a>
+                            <a href="/adminformulirditolak"> Formulir Ditolak</a>
                         </li>
 
                     </ul>

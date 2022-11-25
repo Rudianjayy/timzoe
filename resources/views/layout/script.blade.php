@@ -123,4 +123,16 @@
 
     <script src="{{ asset('admintemp/adminnew/riski/nopan/plugins/sweetalerts/promise-polyfill.js') }}"></script>
 
+    
+    {{-- <!-- BEGIN PAGE LEVEL SCRIPTS -->
+    <script src="{{ asset('admintemp/adminnew/riski/nopan/plugins/charts/echarts/basic-charts/echarts_basic.js') }}"></script>
+    <script src="{{ asset('admintemp/adminnew/riski/nopan/plugins/charts/echarts/echarts.js') }}"></script>
+    <script src="{{ asset('admintemp/adminnew/riski/nopan/plugins/charts/echarts/basic-charts/timelineOption.js') }}"></script>
+    <!-- END PAGE LEVEL SCRIPTS -->
+
+    <!--  BEGIN CUSTOM STYLE FILE  -->
+    <script src="{{ asset('admintemp/adminnew/riski/nopan/plugins/charts/echarts/basic-charts/echarts_basic_script.js') }}"></script>
+ --}}
+
+
 </body>

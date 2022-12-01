@@ -46,10 +46,18 @@
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Tanggal :</label>
-                                    <input type="date" name="jadwal" class="form-control" id="exampleInputEmail1"
+                                    <label for="exampleInputEmail1" class="form-label">Tanggal Mulai :</label>
+                                    <input type="date" name="jadwal_mulai" class="form-control" id="exampleInputEmail1"
                                         aria-describedby="emailHelp">
-                                    @error('jadwal')
+                                    @error('jadwal_mulai')
+                                        <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Tanggal Ditutup :</label>
+                                    <input type="date" name="jadwal_ditutup" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp">
+                                    @error('jadwal_ditutup')
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>

@@ -77,7 +77,7 @@
                     </ul>
                 </li>
             @endif
-            @if (auth()->user()->role == 'admin')
+            {{-- @if (auth()->user()->role == 'admin')
                 <li class="menu-title">Menu</li>
                 <li class="menu">
                     <a href="#formulir" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
@@ -96,14 +96,14 @@
 
                     </ul>
                 </li>
-            @endif
+            @endif --}}
             @if (auth()->user()->role == 'admin')
                 <li class="menu-title">Menu</li>
                 <li class="menu">
                     <a href="#formulir" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                         <div class="">
                             <i class="flaticon-menu-list"></i>
-                            <span>formulir</span>
+                            <span>Formulir</span>
                         </div>
                         <div>
                             <i class="flaticon-right-arrow"></i>
@@ -111,7 +111,7 @@
                     </a>
                     <ul class="collapse submenu list-unstyled" id="formulir" data-parent="#accordionExample">
                         <li>
-                            <a href="/adminformulir"> Formulir</a>
+                            <a href="/adminformulir"> Formulir Pending</a>
                             <a href="/adminformulirditerima"> Formulir Diterima</a>
                             <a href="/adminformulirditolak"> Formulir Ditolak</a>
                         </li>
@@ -477,6 +477,26 @@
                     </ul>
                 </li>
             @endif
+            @if (auth()->user()->role == 'user')
+            <li class="menu-title">PPDB</li>
+            <li class="menu">
+                <a href="#bayar" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <div class="">
+                        <i class="flaticon-menu-list"></i>
+                        <span>Tabel Bayar</span>
+                    </div>
+                    <div>
+                        <i class="flaticon-right-arrow"></i>
+                    </div>
+                </a>
+                <ul class="collapse submenu list-unstyled" id="bayar" data-parent="#accordionExample">
+                    <li>
+                        <a href="/bayaruser">Tabel Bayar</a>
+                    </li>
+                </ul>
+            </li>
+        @endif
+
 
 
 
@@ -502,7 +522,7 @@
                 </li>
             @endif
 
-            @if (auth()->user()->role == 'user')
+            {{-- @if (auth()->user()->role == 'user')
                 <li class="menu-title">Operator</li>
                 <li class="menu">
                     <a href="#operator" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
@@ -521,7 +541,7 @@
 
                     </ul>
                 </li>
-            @endif
+            @endif --}}
         </ul>
     </nav>
 </div>

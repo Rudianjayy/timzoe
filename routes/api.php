@@ -20,7 +20,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('pendaftaran/snap', [PpdbController::class, 'snap']);
+Route::post('pendaftaran/snap', [PpdbController::class, 'snap'])->name('apiSnap');
 
 Route::post('payment-handler', [ApiController::class, 'payment_handler']);
 

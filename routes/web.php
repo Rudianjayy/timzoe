@@ -155,6 +155,7 @@ Route::get('/deletekontak/{id}',[PpdbController::class, 'deletekontak'])->name('
 
 //Biaya
 
+
 Route::get('/biaya',[PpdbController::class, 'biaya'])->name('biaya');
 Route::get('/adminbiaya',[PpdbController::class, 'adminbiaya'])->name('adminbiaya');
 Route::get('/editbiaya/{id}',[PpdbController::class, 'editbiaya'])->name('editbiaya');
@@ -162,6 +163,10 @@ Route::post('/editprosesbiaya1',[PpdbController::class, 'editprosesbiaya1'])->na
 Route::get('/tambahbiaya',[PpdbController::class, 'tambahbiaya'])->name('tambahbiaya');
 Route::post('/submitprosesbiaya',[PpdbController::class, 'submitprosesbiaya'])->name('submitprosesbiaya');
 Route::get('/deletebiaya/{id}',[PpdbController::class, 'deletebiaya'])->name('deletebiaya');
+
+//pricing
+Route::get('/bayaruser',[PpdbController::class, 'bayaruser'])->name('bayaruser');
+
 
 
 
@@ -764,6 +769,7 @@ Route::group(['middleware' => ['auth', 'hakakses:admin,user']], function () {
     })->middleware('auth');
 
     Route::get('/adminformulir', [PpdbController::class, 'adminformulir'])->name('adminformulir');
+    Route::get('/userformulir', [PpdbController::class, 'userformulir'])->name('userformulir');
     Route::get('/adminformulirditerima', [PpdbController::class, 'adminformulirditerima'])->name('adminformulirditerima');
     Route::get('/adminformulirditolak', [PpdbController::class, 'adminformulirditolak'])->name('adminformulirditolak');
     Route::get('/tambahfrmulir', [PpdbController::class, 'tambahfrmulir'])->name('tambahfrmulir');

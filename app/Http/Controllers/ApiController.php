@@ -16,11 +16,10 @@ class ApiController extends Controller
         }
 
         // status berhasil
-        $order = Payment::where('order_id', $json->order_id)->first();
+        // $order = Payment::where('order_id', $json->order_id)->first();
         // dd($order);
-        if($json->transaction_status == 'settlement'){
-            return $order->update(['status' => $json->transaction_status]);
-        }
-        return true;
+        // dd($json->order_id);
+            return Payment::updateOrCreate(['order_id' =>  $json->order_id], ['status','id_biaya' => $json->transaction_status]);
+        
     }
 }

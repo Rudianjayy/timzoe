@@ -44,75 +44,76 @@
                     <h3>Dashboard</h3>
                 </div>
             </div>
+            @if (auth()->user()->role == 'admin')
+                <div class="row layout-spacing ">
 
-            <div class="row layout-spacing ">
-
-                <div class="col-xl-3 mb-xl-0 col-lg-6 mb-4 col-md-6 col-sm-6">
-                    <div class="widget-content-area  data-widgets br-4">
-                        <div class="widget  t-sales-widget">
-                            <div class="media">
-                                <div class="icon ml-2">
-                                    <i class="flaticon-double-chat"></i>
-                                </div>
-                                <div class="media-body text-right">
-                                    <p class="widget-text mb-0">Berita</p>
-                                    <p class="widget-numeric-value count">{{ $berita }}</p>
+                    <div class="col-xl-3 mb-xl-0 col-lg-6 mb-4 col-md-6 col-sm-6">
+                        <div class="widget-content-area  data-widgets br-4">
+                            <div class="widget  t-sales-widget">
+                                <div class="media">
+                                    <div class="icon ml-2">
+                                        <i class="flaticon-double-chat"></i>
+                                    </div>
+                                    <div class="media-body text-right">
+                                        <p class="widget-text mb-0">Berita</p>
+                                        <p class="widget-numeric-value count">{{ $berita }}</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-xl-3 mb-xl-0 col-lg-6 mb-4 col-md-6 col-sm-6">
-                    <div class="widget-content-area  data-widgets br-4">
-                        <div class="widget  t-order-widget">
-                            <div class="media">
-                                <div class="icon ml-2">
-                                    <i class="flaticon-note-1"></i>
-                                </div>
-                                <div class="media-body text-right">
-                                    <p class="widget-text mb-0">Album</p>
-                                    <p class="widget-numeric-value count">{{ $galery }}</p>
+                    <div class="col-xl-3 mb-xl-0 col-lg-6 mb-4 col-md-6 col-sm-6">
+                        <div class="widget-content-area  data-widgets br-4">
+                            <div class="widget  t-order-widget">
+                                <div class="media">
+                                    <div class="icon ml-2">
+                                        <i class="flaticon-note-1"></i>
+                                    </div>
+                                    <div class="media-body text-right">
+                                        <p class="widget-text mb-0">Album</p>
+                                        <p class="widget-numeric-value count">{{ $galery }}</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 mb-sm-0 mb-4">
-                    <div class="widget-content-area  data-widgets br-4">
-                        <div class="widget  t-customer-widget">
-                            <div class="media">
-                                <div class="icon ml-2">
-                                    <i class="flaticon-user-11"></i>
-                                </div>
-                                <div class="media-body text-right">
-                                    <p class="widget-text mb-0">Prestasi</p>
-                                    <p class="widget-numeric-value count">{{ $prestasi }}</p>
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 mb-sm-0 mb-4">
+                        <div class="widget-content-area  data-widgets br-4">
+                            <div class="widget  t-customer-widget">
+                                <div class="media">
+                                    <div class="icon ml-2">
+                                        <i class="flaticon-user-11"></i>
+                                    </div>
+                                    <div class="media-body text-right">
+                                        <p class="widget-text mb-0">Prestasi</p>
+                                        <p class="widget-numeric-value count">{{ $prestasi }}</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
 
-                    <div class="widget-content-area  data-widgets br-4">
-                        <div class="widget  t-income-widget">
-                            <div class="media">
-                                <div class="icon ml-2">
-                                    <i class="flaticon-primary"></i>
-                                </div>
-                                <div class="media-body text-right">
-                                    <p class="widget-text mb-0">Mitra</p>
-                                    <p class="widget-numeric-value count">{{ $mitra }}</p>
+                        <div class="widget-content-area  data-widgets br-4">
+                            <div class="widget  t-income-widget">
+                                <div class="media">
+                                    <div class="icon ml-2">
+                                        <i class="flaticon-primary"></i>
+                                    </div>
+                                    <div class="media-body text-right">
+                                        <p class="widget-text mb-0">Mitra</p>
+                                        <p class="widget-numeric-value count">{{ $mitra }}</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
-                
-            </div>
+            @endif
 
             <div class="col-lg-12 layout-spacing">
                 <div class="statbox widget box box-shadow">
@@ -126,19 +127,20 @@
                     <div class="widget-content widget-content-area text-center icon-counter-container">
                         <div class="row mb-5" style="padding-top: 30px;">
                             <div class="col-xl-3 col-lg-3 mb-md-0 col-md-3 mb-5 col-sm-6">
-                                <i class="counter-ico flaticon-user-11"></i>
+                                <i class="counter-ico flaticon-user-group-1"></i>
                                 <h1 class="ico-counter1 ico-counter mt-2">{{ $total }}</h1>
                                 <p class="ico-counter-text">Total Pendaftar</p>
                             </div>
 
                             <div class="col-xl-3 col-lg-3 mb-md-0 col-md-3 mb-5 col-sm-6">
-                                <i class="counter-ico flaticon-users"></i>
+                                <i class="counter-ico flaticon-hourglass"></i>
                                 <h1 class="ico-counter4 ico-counter mt-2">{{ $formulirp }}</h1>
                                 <p class="ico-counter-text">Siswa Pending</p>
                             </div>
-                            
+
                             <div class="col-xl-3 col-lg-3 mb-md-0 col-md-3 mb-5 col-sm-6">
-                                <i class="counter-ico flaticon-user-group-1"></i>
+                     
+                                <i class="counter-ico flaticon-user-11"></i>
                                 <h1 class="ico-counter2 ico-counter mt-2">{{ $formulir }}</h1>
                                 <p class="ico-counter-text">Siswa Diterima</p>
                             </div>
@@ -154,6 +156,7 @@
                 </div>
             </div>
 
+            @if (auth()->user()->role == 'admin')
             <div class="row layout-spacing">
                 <div class="col-lg-12">
                     <div class="statbox widget box box-shadow">
@@ -197,7 +200,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>  
+
+            @endif
 
             {{-- <div class="row layout-spacing">
                 <div class="col-lg-12">
@@ -1581,6 +1586,8 @@
                 }
             });
         </script> --}}
+
+
 
     </body>
 @endsection

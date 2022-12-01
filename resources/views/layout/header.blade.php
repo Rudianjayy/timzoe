@@ -29,7 +29,7 @@
 
                     <a class="dropdown-item text-center  p-1" href="javascript:void(0);">
 
-                        <div class="notification-list ">
+                        <div class="notification-list">
 
                             <div class="notification-item position-relative  mb-3">
                                 <div class="c-dropdown text-right">

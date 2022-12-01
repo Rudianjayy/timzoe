@@ -891,7 +891,6 @@
                                 </li>
                             </ul>
                         </div>
-                    @endforeach
                 </div>
                 <div class="col-lg-2 col-md-6 col-sm-6 col-6">
                     <script src="https://apps.elfsight.com/p/platform.js" defer></script>

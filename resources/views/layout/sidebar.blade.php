@@ -103,7 +103,7 @@
                     <a href="#formulir" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                         <div class="">
                             <i class="flaticon-menu-list"></i>
-                            <span>formulir</span>
+                            <span>Formulir</span>
                         </div>
                         <div>
                             <i class="flaticon-right-arrow"></i>
@@ -111,7 +111,7 @@
                     </a>
                     <ul class="collapse submenu list-unstyled" id="formulir" data-parent="#accordionExample">
                         <li>
-                            <a href="/adminformulir"> Formulir</a>
+                            <a href="/adminformulir"> Formulir Pending</a>
                             <a href="/adminformulirditerima"> Formulir Diterima</a>
                             <a href="/adminformulirditolak"> Formulir Ditolak</a>
                         </li>

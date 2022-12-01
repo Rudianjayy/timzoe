@@ -133,7 +133,7 @@
                                                 @else
                                                     <td></td>
                                                 @endif
-                                                <td>{{ $i->status }}</td>
+                                                <td><span class="badge badge-pills outline-badge-warning">{{ $i->status }}</span></td>
 
                                                 @if ($i->status == 'pending')
                                                     <td class="align-center">
@@ -141,7 +141,7 @@
                                                             <form action="/setuju/{{ $i->id }}" method="POST">
                                                                 @csrf
                                                                 <input type="hidden" name="nisn"
-                                      `                              value="{{ $i->nisn }}">
+                                                                    value="{{ $i->nisn }}">
                                                                 <li>
                                                                     <button type="submit" title="Terima">
                                                                         <i class="flaticon-single-circle-tick"></i>

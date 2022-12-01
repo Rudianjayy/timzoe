@@ -98,14 +98,14 @@
                                                 <td>{{ $i->nokk }}</td>
                                                 <td>
                                                     <a href="{{ asset(' /' . $i->foto_kk) }}"
-                                                        data-lightbox="whatever">
+                                                        data-lightbox="wtf">
                                                         <img src="{{ asset('fotomahasiswa/' . $i->foto_kk) }}"
                                                             alt="" style="width: 80px;">
                                                     </a>
                                                 </td>
                                                 <td>
                                                     <a href="{{ asset('fotomahasiswa/' . $i->foto_bukti) }}"
-                                                        data-lightbox="whatever">
+                                                        data-lightbox="wth">
                                                         <img src="{{ asset('fotomahasiswa/' . $i->foto_bukti) }}"
                                                             alt="" style="width: 80px;">
                                                     </a>
@@ -133,7 +133,7 @@
                                                 @else
                                                     <td></td>
                                                 @endif
-                                                <td>{{ $i->status }}</td>
+                                                <td><span class="badge badge-pills outline-badge-success">{{ $i->status }}</span></td>
 
                                                 @if ($i->status == 'pending')
                                                     <td class="align-center">

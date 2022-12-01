@@ -314,7 +314,7 @@
                         </div>
                     </div>
                 </div>
-                <form action="http://127.0.0.1:8000/api/pendaftaran/snap" id="submit_form" method="POST">
+                <form action="" id="submit_form" method="POST">
                     @csrf
                     <input type="hidden" name="json" id="json_callback">
                     <input type="hidden" name="biaya_ids" id="biaya_ids">

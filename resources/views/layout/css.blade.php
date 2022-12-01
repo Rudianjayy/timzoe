@@ -2,7 +2,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
-    
+    @if (auth()->user()->role == 'admin')
+        <title>Admin | SMK Muhammadiyah 1 Genteng</title>
+    @endif
+    @if (auth()->user()->role == 'user')
+        <title>User | SMK Muhammadiyah 1 Genteng</title>
+    @endif
     <link rel="icon" type="image/x-icon" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}"/>
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     <link href="{{ asset('admintemp/adminnew/riski/nopan/assets/css/loader.css') }}" rel="stylesheet" type="text/css" />
@@ -35,5 +40,8 @@
     <link href="{{ asset('admintemp/adminnew/riski/nopan/plugins/pricing-table/css/demo.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('admintemp/adminnew/riski/nopan/plugins/pricing-table/css/component.css') }}" rel="stylesheet" type="text/css" />
 
+
+    <link href="{{ asset('admintemp/adminnew/riski/nopan/assets/css/ui-kit/tabs-accordian/custom-tabs.css') }}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('admintemp/adminnew/riski/nopan/plugins/jqvalidation/custom-jqBootstrapValidation.css') }}">
 
 </head>

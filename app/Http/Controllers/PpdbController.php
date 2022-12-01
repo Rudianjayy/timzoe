@@ -62,7 +62,7 @@ class PpdbController extends Controller
                     'id' => $request->biaya_id,
                     'price' => (int) $request->biaya,
                     'quantity' => 1,
-                    'name' => "gel",
+                    'name' => $request->gelombang,
                 ],
             ),
             'customer_details' => array(

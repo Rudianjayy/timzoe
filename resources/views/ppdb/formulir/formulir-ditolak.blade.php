@@ -121,7 +121,7 @@
                                                 <td>{{ $i->jurusan }}</td>
 
 
-                                                <td>{{ $i->status }}</td>
+                                                <td><span class="badge badge-pills outline-badge-danger">{{ $i->status }}</span></td>
 
                                                 @if ($i->status == 'pending')
                                                     <td class="align-center">

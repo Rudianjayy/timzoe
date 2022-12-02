@@ -152,7 +152,7 @@ class MuhiblogController extends Controller
         return redirect('muhiblogadmin')->with('success', ' Data Berhasil di Ubah!');
     }
 
-    public function delete($id)
+    public function deletemuhiblog($id)
     {
         $data = Muhiblog::find($id);
         $data->delete();

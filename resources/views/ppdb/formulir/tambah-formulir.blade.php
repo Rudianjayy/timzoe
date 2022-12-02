@@ -13,99 +13,64 @@
         <div class="container" mb-5>
 
             <div class="row layout-spacing">
-                
-                <div class="col-lg-12">
+                <div class="col-lg-12 layout-spacing">
                     <div class="statbox widget box box-shadow">
-                        <div class="widget-header">
+                        <div class="widget-header border-bottom border-default">
                             <div class="row">
                                 <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                    <h4>Actions Buttons</h4>
+                                    <h4>Validation</h4>
                                 </div>
                             </div>
                         </div>
                         <div class="widget-content widget-content-area">
-                            <form class="form-vertical" action="#">
-                                <div class="form-group mb-4">
-                                    <label class="control-label">First Name:</label>
-                                    <input type="text" name="first_name" class="form-control" placeholder="First Name">
-                                </div>
-                                <div class="form-group mb-4">
-                                    <label class="control-label">Email:</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <div class="input-group-text">@</div>
-                                        </div>
-                                        <input type="text" name="email" class="form-control"
-                                            placeholder="Email Address">
-                                    </div>
-                                </div>
-                                <div class="form-group mb-4">
-                                    <label class="control-label">Website:</label>
-                                    <input type="text" name="website" value="http://" class="form-control"
-                                        placeholder="Website name">
-                                </div>
-                                <div class="form-group mb-4">
-                                    <label class="control-label">Password:</label>
-                                    <div class="input-group mb-4">
-                                        <input type="password" name="pass" class="form-control" placeholder="Password">
-                                        <span class="input-group-addon"><i class="icon-user"></i></span>
-                                    </div>
-                                </div>
-                                <div class="form-group mb-4">
-                                    <label class="control-label">Confirm Password:</label>
-                                    <div class="input-group">
-                                        <input type="password" name="cpass" class="form-control"
-                                            placeholder="Confirm Password">
-                                        <span class="input-group-addon"><i class="icon-user"></i></span>
-                                    </div>
-                                </div>
-                                <input type="submit" value="Submit" class="btn btn-button-7 ml-3 mb-4 mt-3">
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <form action="/submitdata27" method="POST" enctype="multipart/form-data">
-                @csrf
-                <div class="row">
-                    {{-- <div class="col-lg-12 layout-spacing">
-                        <div class="statbox widget box box-shadow">
-                            <div class="widget-header">
-                                <div class="row">
-                                    <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                        <h4>Silahkan isi formulir pendaftaran di bawah ini!!</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div> --}}
-
-                    <div class="col-lg-6 layout-spacing">
-                        <div class="statbox widget box box-shadow">
-                            <div class="widget-header border-bottom border-default">
-                                <div class="row">
-                                    <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                        <h4>Validation</h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="widget-content widget-content-area">
-
-
+                            <form id="f-validation" class="underline-content" method="get">
                                 <div id="validation">
+                                    <ul class="nav nav-tabs  mb-4 justify-content-between" id="vValidation" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link nav-item active btn-rounded" id="rounded-pills-home-tab4" data-toggle="tab" href="#simple-ex-2-1" role="tab"  aria-selected="false"><i class="flaticon-home-fill-1"></i> Pembayaran</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link nav-item btn-rounded" id="rounded-pills-profile-tab4" data-toggle="tab" href="#simple-ex-2-2" role="tab" aria-selected="true"><i class="flaticon-user-7"></i> Formulir</a>
 
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link nav-item btn-rounded" id="ronded-pills-contact-tab4" data-toggle="tab" href="#simple-ex-2-3" role="tab" aria-selected="false"><i class="flaticon-telephone"></i> Info</a>
+                                        </li>
+                                    </ul>
                                     <div class="tab-content form-valid" id="vValidationContent">
                                         <div class="tab-pane fade show active" id="simple-ex-2-1" role="tabpanel">
+                                            <div class="form-group control-group mb-4">
+                                                <label class="control-label" for="f_name">Name</label>
+                                                <div class="controls">
+                                                    <input type="text" class="form-control" id="f_name" name="f_name" value="{{ Auth::user()->name }}" placeholder="Enter Full Name" readonly required>
+                                                    <p class="help-block"></p>
+                                                </div>
+                                            </div>
+                                            <div class="form-group control-group mb-4">
+                                                <label class="control-label"  for="f_Email1">Email address</label>
+                                                <div class="controls">
+                                                    <input type="email" class="form-control" id="f_Email1" name="f_Email1" value="{{ Auth::user()->email }}" placeholder="Enter email" readonly required>
+                                                    <p class="help-block"></p>
+                                                </div>
+                                            </div>
+                                            {{-- <div class="form-group control-group mb-4">
+                                                <label class="control-label"  for="f_password1">Password</label>
+                                                <div class="controls">
+                                                    <input type="password" class="form-control" id="f_password1" name="f_password1" placeholder="Password" required>
+                                                    <p class="help-block"></p>
+                                                </div>
+                                            </div> --}}
+                                        </div>
+                                        <div class="tab-pane fade" id="simple-ex-2-2" role="tabpanel">
                                             <div class="form-group mb-4">
                                                 <label for="nama_peserta">Nama Sesuai Ijazah*</label>
-                                                <input type="text" name="nama_peserta" class="form-control"
-                                                    id="nama_peserta">
+                                                <input type="text" name="nama_peserta" class="form-control" id="nama_peserta">
                                                 @error('nama_peserta')
                                                     <div class="alert alert-danger">{{ $message }}</div>
                                                 @enderror
                                             </div>
+            
                                             <div class="form-row mb-4">
                                                 <div class="form-group col-md-6">
                                                     <label for="tempat_lahir">Tempat Lahir*</label>
@@ -117,53 +82,38 @@
                                                 </div>
                                                 <div class="form-group col-md-6">
                                                     <label for="tanggal_lahir">Tanggal Lahir*</label>
-                                                    <input type="date" name="tanggal_lahir" class="form-control"
-                                                        id="tanggal_lahir">
+                                                    <input type="date" name="tanggal_lahir" class="form-control" id="tanggal_lahir">
                                                     @error('tanggal_lahir')
                                                         <div class="alert alert-danger">{{ $message }}</div>
                                                     @enderror
                                                 </div>
                                             </div>
+            
+                                            {{-- <div class="custom-control custom-radio radio-primary">
+                                                <label for="jeniskelamin" class="form-label">Jenis Kelamin</label>
+                                                <br>
+                                                <input type="radio" name="jeniskelamin" id="basicRadio2" value="laki-laki">
+                                                <label class="custom-control-label" for="basicRadio2">Laki-laki</label>
+                                            </div>
+                                            <div>
+                                                <input type="radio" name="jeniskelamin" id="basicRadio2" value="perempuan">
+                                                <label for="basicRadio2" class="custom-control-label">Perempuan</label>
+                                            </div> --}}
+            
+            
                                             <div><label for="jeniskelamin" class="form-label">Jenis Kelamin*</label></div>
                                             <div class="custom-control custom-radio radio-primary">
-                                                <input type="radio" id="laki" name="jeniskelamin" value="laki-laki"
-                                                    class="custom-control-input">
+                                                <input type="radio" id="laki" name="jeniskelamin" value="laki-laki" class="custom-control-input">
                                                 <label class="custom-control-label" for="laki">Laki-laki</label>
                                             </div>
                                             <div class="custom-control custom-radio radio-primary">
-                                                <input type="radio" id="perempuan" name="jeniskelamin"
-                                                    value="perempuan" class="custom-control-input">
+                                                <input type="radio" id="perempuan" name="jeniskelamin" value="perempuan" class="custom-control-input">
                                                 <label class="custom-control-label" for="perempuan">Perempuan</label>
                                             </div>
                                             @error('jeniskelamin')
                                                 <div class="alert alert-danger">{{ $message }}</div>
                                             @enderror
-                                        </div>
-
-
-                                    </div>
-                                </div>
-
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 layout-spacing">
-                        <div class="statbox widget box box-shadow">
-                            <div class="widget-header border-bottom border-default">
-                                <div class="row">
-                                    <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                        <h4>Validation</h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="widget-content widget-content-area">
-
-
-                                <div id="validation">
-
-                                    <div class="tab-content form-valid" id="vValidationContent">
-                                        <div class="tab-pane fade show active" id="simple-ex-2-1" role="tabpanel">
+            
                                             <div class="mb-3">
                                                 <label for="exampleInputEmail1" class="form-label">Agama*</label>
                                                 <select name="agama" class="form-control">
@@ -172,7 +122,6 @@
                                                     <option value="kristen">Kristen</option>
                                                     <option value="hindu">Hindu</option>
                                                     <option value="budha">Budha</option>
-                                                    <option value="jawa">Jawa</option>
                                                 </select>
                                                 @error('agama')
                                                     <div class="alert alert-danger">{{ $message }}</div>
@@ -203,32 +152,7 @@
                                                     @enderror
                                                 </div>
                                             </div>
-                                        </div>
-
-
-                                    </div>
-                                </div>
-
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 layout-spacing">
-                        <div class="statbox widget box box-shadow">
-                            <div class="widget-header border-bottom border-default">
-                                <div class="row">
-                                    <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                        <h4>Validation</h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="widget-content widget-content-area">
-
-
-                                <div id="validation">
-
-                                    <div class="tab-content form-valid" id="vValidationContent">
-                                        <div class="tab-pane fade show active" id="simple-ex-2-1" role="tabpanel">
+            
                                             <div class="form-row mb-4">
                                                 <div class="form-group col-md-6">
                                                     <label for="foto_kk">Foto KK*</label>
@@ -268,31 +192,7 @@
                                                     <div class="alert alert-danger">{{ $message }}</div>
                                                 @enderror
                                             </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 layout-spacing">
-                        <div class="statbox widget box box-shadow">
-                            <div class="widget-header border-bottom border-default">
-                                <div class="row">
-                                    <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                        <h4>Validation</h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="widget-content widget-content-area">
-
-
-                                <div id="validation">
-
-                                    <div class="tab-content form-valid" id="vValidationContent">
-                                        <div class="tab-pane fade show active" id="simple-ex-2-1" role="tabpanel">
+            
                                             <div class="form-row mb-4">
                                                 <div class="form-group col-md-6">
                                                     <label for="nama_ayah">Nama orang tua <span>Ayah* </label>
@@ -345,31 +245,6 @@
                                                     @enderror
                                                 </div>
                                             </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 layout-spacing">
-                        <div class="statbox widget box box-shadow">
-                            <div class="widget-header border-bottom border-default">
-                                <div class="row">
-                                    <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                        <h4>Validation</h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="widget-content widget-content-area">
-
-
-                                <div id="validation">
-
-                                    <div class="tab-content form-valid" id="vValidationContent">
-                                        <div class="tab-pane fade show active" id="simple-ex-2-1" role="tabpanel">
                                             <div class="form-row mb-4">
                                                 <div class="form-group col-md-6">
                                                     <label for="notelpon_siswa">No WhatsApp Siswa* </label>
@@ -435,20 +310,43 @@
                                             @error('ukuran_kaos')
                                                 <div class="alert alert-danger">{{ $message }}</div>
                                             @enderror
+            
                                         </div>
-
+                                        <div class="tab-pane fade" id="simple-ex-2-3" role="tabpanel">
+                                            <div class="form-group  control-group mb-4">
+                                                <label class="control-label" for="f_location">Location</label>
+                                                <div class="controls">
+                                                    <input type="text" class="form-control"  id="f_location" name="f_location" placeholder="Location" required>
+                                                    <p class="help-block"></p>
+                                                </div>
+                                            </div>
+                                            <div class="form-group  control-group">
+                                                <label class="control-label" for="f_skill">Skill</label>
+                                                <div class="controls">
+                                                    <select class="form-control" id="f_skill" name="f_skill" required>
+                                                      <option value="">Select Your Skill</option>
+                                                      <option>CSS</option>
+                                                      <option>Photoshop</option>
+                                                      <option>PHP</option>
+                                                      <option>Boostrap</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <ul class="pagination justify-content-between pager wizard mt-4">
+                                           <li class="previous mt-3"><a href="javascript:void(0);" class="btn-rounded bg-primary btn-primary ml-1">previous</a></li>
+                                            <li class="next mt-3"><a href="javascript:void(0);" class="btn-rounded bg-primary btn-primary ml-1">Next</a></li>
+                                        </ul>
                                     </div>
                                 </div>
+                            </form>
 
-
-                            </div>
                         </div>
                     </div>
                 </div>
-                <ul class="pagination justify-content-center pager wizard mt-4">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </ul>
-            </form>
+            </div>
+
+           
         </div>
 
         <!-- Optional JavaScript; choose one of the two! -->

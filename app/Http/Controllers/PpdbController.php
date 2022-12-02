@@ -138,7 +138,7 @@ class PpdbController extends Controller
         // dd($request);
 
         $order = new Payment();
-        // $order->id_user = Auth::user()->id;
+        $order->id_user = Auth::user()->id;
         $order->id_biaya = $request->biaya_ids;
         $order->status = isset($json->transaction_status) ? $json->transaction_status : null;
         $order->transaction_id = isset($json->transaction_id) ? $json->transaction_id : null;
@@ -602,7 +602,9 @@ class PpdbController extends Controller
     public function bayaruser()
     {
         $pricing = biaya::all();
-        return view('ppdb.bayardaftar.bayar-user',compact('pricing'));
+        $status_pay = Payment::where('id_user',Auth::user()->id)->first();
+        
+        return view('ppdb.bayardaftar.bayar-user',compact('pricing','status_pay'));
     }
 
 

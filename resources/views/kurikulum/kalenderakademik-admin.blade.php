@@ -115,7 +115,7 @@
                 })
                 .then((willDelete) => {
                     if (willDelete) {
-                        window.location = "/delete/" + id + ""
+                        window.location = "/deletekalender/" + id + ""
                          swal("Data berhasil dihapus!", {
                            icon: "success",
                          });

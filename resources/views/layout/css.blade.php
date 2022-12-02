@@ -44,4 +44,9 @@
     <link href="{{ asset('admintemp/adminnew/riski/nopan/assets/css/ui-kit/tabs-accordian/custom-tabs.css') }}" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="{{ asset('admintemp/adminnew/riski/nopan/plugins/jqvalidation/custom-jqBootstrapValidation.css') }}">
 
+    <!-- BEGIN PAGE LEVEL PLUGINS -->
+    <link href="{{ asset('admintemp/adminnew/riski/nopan/plugins/animate/animate.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('admintemp/adminnew/riski/nopan/assets/css/modals/component.css') }}" rel="stylesheet" type="text/css" />
+    <!-- END PAGE LEVEL PLUGINS -->
+
 </head>

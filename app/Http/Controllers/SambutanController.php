@@ -73,7 +73,7 @@ class SambutanController extends Controller
 
     }
 
-    public function delete($id){
+    public function deletesambutan($id){
         $data = Sambutan::find($id);
         $data->delete();
         return redirect('sambutanadmin')->with('success',' Data Berhasil di Hapus!');

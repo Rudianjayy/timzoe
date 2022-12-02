@@ -93,7 +93,7 @@ class IdukaController extends Controller
 
     }
 
-    public function delete($id){
+    public function deleteiduka($id){
         $data = Iduka::find($id);
         $data->delete();
         return redirect('idukaadmin')->with('success',' Data Berhasil di Hapus!');

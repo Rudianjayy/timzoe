@@ -5,6 +5,8 @@
 
     <head>
         @include('layout.css')
+
+        
     </head>
 
     <body>
@@ -23,6 +25,69 @@
                     </div>
                 </div>
             </div>
+
+           <!-- Fade in down modal -->
+        <div id="fadeinModal" class="modal animated fadeInDown" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-body">
+                            <div class="widget-content widget-content-area br-4 p-0">
+ 
+                                <div class="customer-bal-summary">
+                                    <div class="c-b-s-header mt-3 mb-3">
+                                        <h5 class="text-center" >Keterangan status pembayaran</h5>
+                                        @if ($status_pay == null )
+                                        @else
+                                        <h6 class="text-center text-danger" >Kode Transaksi Anda : {{ $status_pay -> order_id }}</h6>
+                                        @endif
+                                    </div>
+ 
+                                    <div class="c-b-s-body">
+ 
+                                        <div class="tab-content">
+                                            <div class="tab-pane active" role="tabpanel" aria-labelledby="c-b-s-monthly-tab">
+                                                <div class="table-responsive customer-bal-summary-scroll-monthly">
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="text-center" scope="col">Status</th>
+                                                                <th class="" scope="col">Keterangan</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="text-center"><span class="badge badge-pills badge-danger">Bayar</span></td>
+                                                                <td class="customer-name">Anda Belum Melakukan Pembayaran</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-center"><span class="badge badge-pills badge-warning">Proses</span></td>
+                                                                <td class="customer-name">Anda Belum Menyelesaikan Proses Pembayaran</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-center"><span class="badge badge-pills badge-success">Selesai</span></td>
+                                                                <td class="customer-name">Pembayaran Telah Selesai</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-center"><span class="badge badge-pills badge-primary">Belum  Aktif</span></td>
+                                                                <td class="customer-name">Pembayaran Belum Di Buka</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+ 
+                                        </div>
+ 
+                                    </div>
+                                </div>
+ 
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
             <div class="col-lg-12 layout-spacing">
                 <div class="statbox widget box box-shadow">
@@ -51,9 +116,26 @@
                                                     </li>
                                                 </ul>
                                                 @if ( $pc->jadwal_mulai < now() && $pc->jadwal_ditutup > now())
-                                                <button class="pricing__action mx-auto mb-4 pay-button" data-biaya_id={{ $pc->id }} data-biaya_gelombang={{ $pc->gelombang }} data-biaya={{ (int)$pc->biaya }}>Bayar Sekarang</button>
+                                                    @if ($status_pay == null )
+                                                    <button class="pricing__action mx-auto mb-4 pay-button" data-biaya_id={{ $pc->id }} data-biaya_gelombang={{ $pc->gelombang }} data-biaya={{ (int)$pc->biaya }}>Bayar Sekarang</button>
+                                                    @elseif($status_pay->status == 'pending')
+                                                    <button type="button" class="btn btn-warning btn-rounded mb-4 mr-2 pay-button" data-toggle="modal" data-target="#fadeinModal" 
+                                                    style="text-transform: uppercase;
+                                                    flex: none;
+                                                    /* padding: 12px 36px; */
+                                                    padding: 12px 45px;
+                                                    color: #ffffff;
+                                                    background: #E9B02B;
+                                                    border: solid 1px #fff;
+                                                    border-radius: 30px;
+                                                    -webkit-transition: background 0.3s;
+                                                    transition: background 0.3s;">Proses</button>
+                                                    @elseif($status_pay->status == 'settlement')
+                                                    <button type="button" class="btn btn-primary btn-rounded mb-4 mr-2 pay-button" data-toggle="modal" data-target="#fadeinModal">Selesai</button>
+                                                    @endif
+                                                    
                                                 @else
-                                                <button class="pricing__action mx-auto mb-4 pay-button">Belum Aktif</button>
+                                                <button class="pricing__action mx-auto mb-4 pay-button" data-toggle="modal" data-target="#fadeinModal">Belum Aktif</button>
                                                 @endif
                                             </div>
                                         @endforeach
@@ -73,7 +155,10 @@
 
         @include('layout.script')
         <script type="text/javascript" src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="SB-Mid-client-SwazW8iq5q-s8p6I"></script>
-
+        <!-- BEGIN PAGE LEVEL PLUGINS -->
+        <script src="{{ asset('admintemp/adminnew/riski/nopan/assets/js/modal/classie.js') }}"></script>
+        <script src="{{ asset('admintemp/adminnew/riski/nopan/assets/js/modal/modalEffects.js') }}"></script>
+        <!-- END PAGE LEVEL PLUGINS -->
         <script type="text/javascript">
             // For example trigger on button clicked, or any time you need
             var payButton = document.querySelectorAll('.pay-button');

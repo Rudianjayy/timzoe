@@ -41,7 +41,7 @@
         <div class="container">
             <div class="page-header">
                 <div class="page-title">
-                    <h3>Dashboard</h3>
+                    <h3>Beranda</h3>
                 </div>
             </div>
             @if (auth()->user()->role == 'admin')
@@ -113,7 +113,6 @@
                     </div>
 
                 </div>
-           
 
             <div class="col-lg-12 layout-spacing">
                 <div class="statbox widget box box-shadow">

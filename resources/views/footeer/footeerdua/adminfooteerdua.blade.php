@@ -124,7 +124,7 @@
                 })
                 .then((willDelete) => {
                     if (willDelete) {
-                        window.location = "/delete/" + id + ""
+                        window.location = "/deletefooterdua/" + id + ""
                          swal("Data berhasil dihapus!", {
                            icon: "success",
                          });

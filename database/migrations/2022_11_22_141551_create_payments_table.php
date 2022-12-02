@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
-            // $table->foreignId('id_user');
+            $table->foreignId('id_user');
             $table->foreignId('id_biaya');
             $table->string('status');
             $table->string('transaction_id');

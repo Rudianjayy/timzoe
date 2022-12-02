@@ -52,7 +52,7 @@ class PersonaljurusanController extends Controller
 
         return redirect()->route('adminfotojurusan')->with('success', 'Data Berhasil Di Tambahkan!');
     }
-    public function delete($id){
+    public function deletefotojurusan($id){
         $data = Personaljurusan::find($id);
         $data->delete();
         return redirect('adminfotojurusan')->with('success',' Data Berhasil di Hapus!');

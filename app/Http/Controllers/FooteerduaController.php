@@ -65,7 +65,7 @@ class FooteerduaController extends Controller
 
     }
 
-    public function delete($id){
+    public function deletefooterdua($id){
         $data = footeerdua::find($id);
         $data->delete();
         return redirect('adminfooteerdua')->with('success',' Data Berhasil di Hapus!');

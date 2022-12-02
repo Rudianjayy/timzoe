@@ -100,7 +100,7 @@ class KompetensiController extends Controller
 
     }
 
-    public function delete($id){
+    public function deletekompetensi($id){
         $data = Kompetensi::find($id);
         $data->delete();
         return redirect('kompetensiadmin')->with('success',' Data Berhasil di Hapus!');

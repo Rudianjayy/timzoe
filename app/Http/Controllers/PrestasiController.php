@@ -75,7 +75,7 @@ class PrestasiController extends Controller
 
     }
 
-    public function delete($id){
+    public function deleteprestasi($id){
         $data = Prestasi::find($id);
         $data->delete();
         return redirect('indexprestasi')->with('success',' Data Berhasil di Hapus!');

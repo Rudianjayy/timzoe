@@ -797,7 +797,7 @@
             </div>
             {{-- @endforeach --}}
             <div class="row align-items-center">
-                <div class="col-lg-6">
+                {{-- <div class="col-lg-6">
                     <div class="contact-form">
                         <form id="contactForm">
                             <div class="row">
@@ -858,7 +858,7 @@
                             </div>
                         </form>
                     </div>
-                </div>
+                </div> --}}
                 <div class="col-lg-6">
                     <div class="contact-info">
                         <div class="contact-info-content">

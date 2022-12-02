@@ -68,7 +68,7 @@ class FotokompetensiController extends Controller
 
     }
 
-    public function delete($id){
+    public function deletefotokompetensi($id){
         $data = Fotokompetensi::find($id);
         $data->delete();
         return redirect('fotokompetensiadmin')->with('success',' Data Berhasil di Hapus!');

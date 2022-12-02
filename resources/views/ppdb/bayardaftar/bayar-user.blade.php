@@ -100,11 +100,11 @@
 
                 console.log(data)
 
-                console.log("{{ URL::to('/api/snap') }}");
+                console.log("{{ URL::to('/api/show') }}");
 
                 $.ajax({
                     method: 'post',
-                    url: "{{ URL::to('/api/pendaftaran/snap') }}",
+                    url: "{{ URL::to('/api/bayaruser/show') }}",
                     data: data, 
                     dataType: 'JSON',
                     success: function(e) {

@@ -62,6 +62,13 @@ Route::get('/authors', [LandingController::class, 'authors'])->name('authors');
 
 Route::get('/pendaftaran', [PpdbController::class, 'pendaftaran'])->name('pendaftaran');
 
+Route::post('/pendaftaran',[PpdbController::class, 'payment_post']);
+
+Route::post('/bayaruser',[PpdbController::class, 'pembayaran_post']);
+
+
+
+Route::get('/bayaruser', [PpdbController::class, 'bayaruser'])->name('bayaruser');
 
 
 
@@ -165,7 +172,9 @@ Route::post('/submitprosesbiaya',[PpdbController::class, 'submitprosesbiaya'])->
 Route::get('/deletebiaya/{id}',[PpdbController::class, 'deletebiaya'])->name('deletebiaya');
 
 //pricing
-Route::get('/bayaruser',[PpdbController::class, 'bayaruser'])->name('bayaruser');
+
+
+
 
 
 

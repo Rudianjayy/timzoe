@@ -113,7 +113,7 @@
                     </div>
 
                 </div>
-            @endif
+           
 
             <div class="col-lg-12 layout-spacing">
                 <div class="statbox widget box box-shadow">
@@ -155,6 +155,7 @@
                     </div>
                 </div>
             </div>
+            @endif
 
             @if (auth()->user()->role == 'admin')
             <div class="row layout-spacing">

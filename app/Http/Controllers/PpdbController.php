@@ -6,11 +6,8 @@ use App\Models\info;
 use App\Models\biaya;
 use App\Models\kontak;
 use App\Models\footeer;
-use App\Models\Jurusan;
 use App\Models\Payment;
 use App\Models\Formulir;
-use App\Models\Muhinews;
-use App\Models\mitrappdb;
 use App\Models\Footeerdua;
 use App\Models\syaratdaftar;
 use Illuminate\Http\Request;
@@ -39,10 +36,7 @@ class PpdbController extends Controller
         $formulirp = Formulir::where('status', '=', 'pending')->count();
         return view('ppdb.pendaftaran', compact('dp', 'pd', 'kontak', 'cp', 'footerppdb', 'info', 'biaya', 'langkah', 'footerlink', 'formulir', 'formulird', 'total', 'formulirp'));
     }
-
-    public function snap(Request $request)
-    {
-        // dd((int) $request->biaya, $request->biaya_gelombang, $request->biaya_id);
+    public function snap(Request $request){
         // Set your Merchant Server Key
         \Midtrans\Config::$serverKey = 'SB-Mid-server-RcFqJE4B66H7TmdNUajirjjK';
         // Set to Development/Sandbox Environment (default). Set to true for Production Environment (accept real transaction).
@@ -55,37 +49,34 @@ class PpdbController extends Controller
         $params = array(
             'transaction_details' => array(
                 'order_id' => rand(),
-                'gross_amount' => (int) $request->biaya,
+                'gross_amount' => $request->biaya,
             ),
             'item_details' => array(
                 [
                     'id' => $request->biaya_id,
-                    'price' => (int) $request->biaya,
+                    'price' => $request->biaya,
                     'quantity' => 1,
-                    'name' => $request->gelombang,
+                    'name' => $request->biaya_gelombang,
                 ],
             ),
             'customer_details' => array(
-                'first_name' => "Rudi",
+                // 'first_name' => $request->user_name,
                 // 'email' => $request->user_email,
-                // 'phone' => $request->user_notelpon,
+                // 'phone' => $request->user_telepon,
             ),
         );
 
-        // dd($params, (int) $request->biaya, $request->biaya_gelombang, $request->biaya_id);
+    $snapToken = \Midtrans\Snap::getSnapToken($params);
 
-        $snapToken = \Midtrans\Snap::getSnapToken($params);
+    // return view('ppdb.pendaftaran' ,['snapToken' => $snapToken]);
+    return response()->json([
+        'snap' =>$snapToken,
+        'biaya' =>$request->biaya_id
 
-        // return view('ppdb.pendaftaran' ,['snapToken' => $snapToken]);
-        return response()->json([
-            'snap' => $snapToken,
-            'biaya' => $request->biaya_id
-
-        ]);
+    ]);
     }
 
-    public function payment_post(Request $request)
-    {
+    public function payment_post(Request $request) {
         $json = json_decode($request->get('json'));
         // dd($request);
 
@@ -102,6 +93,66 @@ class PpdbController extends Controller
 
         return $order->save() ? redirect(url('/'))->with('alert-success', 'Berhasil Berlangganan') : redirect(url('/'))->with('alert-failed', 'Terjadi Kesalahan');
     }
+    public function show(Request $request){
+        // Set your Merchant Server Key
+        \Midtrans\Config::$serverKey = 'SB-Mid-server-RcFqJE4B66H7TmdNUajirjjK';
+        // Set to Development/Sandbox Environment (default). Set to true for Production Environment (accept real transaction).
+        \Midtrans\Config::$isProduction = false;
+        // Set sanitization on (default)
+        \Midtrans\Config::$isSanitized = true;
+        // Set 3DS transaction for credit card to true
+        \Midtrans\Config::$is3ds = true;
+
+        $params = array(
+            'transaction_details' => array(
+                'order_id' => rand(),
+                'gross_amount' => $request->biaya,
+            ),
+            'item_details' => array(
+                [
+                    'id' => $request->biaya_id,
+                    'price' => $request->biaya,
+                    'quantity' => 1,
+                    'name' => $request->biaya_gelombang,
+                ],
+            ),
+            'customer_details' => array(
+                // 'first_name' => $request->user_name,
+                // 'email' => $request->user_email,
+                // 'phone' => $request->user_telepon,
+            ),
+        );
+
+    $snapToken = \Midtrans\Snap::getSnapToken($params);
+
+    // return view('ppdb.pendaftaran' ,['snapToken' => $snapToken]);
+    return response()->json([
+        'snap' =>$snapToken,
+        'biaya' =>$request->biaya_id
+
+    ]);
+    }
+
+    public function pembayaran_post(Request $request) {
+        $json = json_decode($request->get('json'));
+        // dd($request);
+
+        $order = new Payment();
+        // $order->id_user = Auth::user()->id;
+        $order->id_biaya = $request->biaya_ids;
+        $order->status = isset($json->transaction_status) ? $json->transaction_status : null;
+        $order->transaction_id = isset($json->transaction_id) ? $json->transaction_id : null;
+        $order->order_id = isset($json->order_id) ? $json->order_id : null;
+        $order->gross_amount = isset($json->gross_amount) ? $json->gross_amount : null;
+        $order->payment_type =  isset($json->payment_type) ? $json->payment_type : null;
+        $order->payment_code = isset($json->payment_code) ? $json->payment_code : null;
+        $order->pdf_url = isset($json->pdf_url) ? $json->pdf_url : null;
+
+        return $order->save() ? redirect(url('/'))->with('alert-success', 'Berhasil Berlangganan') : redirect(url('/'))->with('alert-failed', 'Terjadi Kesalahan');
+    }
+
+
+ 
 
 
 
@@ -548,11 +599,11 @@ class PpdbController extends Controller
 
 
 
-    // public function bayaruser()
-    // {
-    //     $pricing = biaya::all();
-    //     return view('ppdb.bayardaftar.bayar-user',compact('pricing'));
-    // }
+    public function bayaruser()
+    {
+        $pricing = biaya::all();
+        return view('ppdb.bayardaftar.bayar-user',compact('pricing'));
+    }
 
 
 

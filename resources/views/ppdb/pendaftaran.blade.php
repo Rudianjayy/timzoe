@@ -481,58 +481,48 @@
                 var payButton = document.querySelectorAll('.pay-button');
                 $('.pay-button').click(function() {
                     // alert('aa')
-
+         
                     const biaya_id = $(this).attr('data-biaya_id')
                     const biaya_gelombang = $(this).attr('data-biaya_gelombang')
                     const biaya = $(this).attr('data-biaya')
-
-
+         
+         
                     const data = {
                         biaya_id,
                         biaya_gelombang,
                         biaya
                     }
-
+         
                     console.log(data)
-
+         
                     console.log("{{ URL::to('/api/snap') }}");
-
+         
                     $.ajax({
                         method: 'post',
                         url: "{{ URL::to('/api/pendaftaran/snap') }}",
                         data: data,
                         dataType: 'JSON',
                         success: function(e) {
-
+         
                             var bebas = document.getElementById('biaya_ids')
                             // console.log(e)
                             bebas.value = e.biaya
-                            
+         
                             window.snap.pay(e.snap, {
                                 onSuccess: function(result) {
                                     /* You may add your own implementation here */
                                     console.log(result);
-                                    var json = JSON.stringify(result)
-                                    // $.ajax({
-                                    //     method: 'POST',
-                                    //     url: 'http://127.0.0.1:8000/api/payment-handler',
-                                    //     data: {biaya: e.biaya, json: json},
-                                    //     dataType: 'JSON',
-                                    //     success: function(e){
-                                    //         console.log(e)
-                                    //     }
-                                    // })
-                                    // send_response_to_form(result);
+                                    send_response_to_form(result);
                                 },
                                 onPending: function(result) {
                                     /* You may add your own implementation here */
                                     console.log(result);
-                                    // send_response_to_form(result);
+                                    send_response_to_form(result);
                                 },
                                 onError: function(result) {
                                     /* You may add your own implementation here */
                                     console.log(result);
-                                    // send_response_to_form(result);
+                                    send_response_to_form(result);
                                 },
                                 onClose: function() {
                                     /* You may add your own implementation here */
@@ -544,7 +534,7 @@
                             console.log(err)
                         }
                     })
-
+         
                     // fetch("{{ URL::to('/api/perusahaan/project/snap') }}", {
                     // method: 'POST',
                     // headers: {
@@ -555,11 +545,11 @@
                     // .then((response) => response.json())
                     // .then((data) => {
                     //     console.log('Success:', data);
-
+         
                     //     var bebas = document.getElementById('jobs_ids')
-
+         
                     //     bebas.value = data.jobs
-
+         
                     //     window.snap.pay(data.snap, {
                     //         onSuccess: function(result){
                     //         /* You may add your own implementation here */
@@ -585,15 +575,14 @@
                     // .catch((error) => {
                     //     console.error('Error:', error);
                     // });
-
+         
                 })
-
+         
                 function send_response_to_form(result) {
                     document.getElementById('json_callback').value = JSON.stringify(result);
                     $('#submit_form').submit();
                 }
             </script>
-
 </body>
 
 

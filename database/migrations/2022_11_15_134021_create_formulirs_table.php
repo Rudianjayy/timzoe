@@ -25,7 +25,6 @@ return new class extends Migration
             $table->bigInteger('nik');
             $table->bigInteger('nokk');
             $table->string('foto_kk');
-            $table->string('foto_bukti');
             $table->string('status_anak');
             $table->text('alamat_rumah');
             $table->string('nama_ayah');

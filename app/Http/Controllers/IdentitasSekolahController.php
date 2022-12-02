@@ -113,7 +113,7 @@ class IdentitasSekolahController extends Controller
 
     }
 
-    public function delete($id){
+    public function deleteidentitas($id){
         $data = IdentitasSekolah::find($id);
         $data->delete();
         return redirect('identitas_admin')->with('success',' Data Berhasil di Hapus!');

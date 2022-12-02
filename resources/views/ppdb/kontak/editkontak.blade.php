@@ -34,7 +34,7 @@
                                 </div>
 
 
-                                div class="mb-3">
+                                <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">No. Telpon :</label>
                                     <input type="number" name="notelpon" class="form-control" value="{{ $data3->notelpon }}">
                                     @error('notelpon')
@@ -42,7 +42,7 @@
                                     @enderror
                                 </div>
 
-                                div class="mb-3">
+                                <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Subjek :</label>
                                     <input type="text" name="subjek" class="form-control" value="{{ $data3->subjek }}">
                                     @error('subjek')
@@ -50,7 +50,7 @@
                                     @enderror
                                 </div>
 
-                                div class="mb-3">
+                                <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Pesan :</label>
                                     <input type="text" name="pesan" class="form-control" value="{{ $data3->pesan }}">
                                     @error('pesan')

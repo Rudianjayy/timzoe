@@ -82,7 +82,7 @@ class AlbumController extends Controller
 
     }
 
-    public function delete($id){
+    public function deletealbum($id){
         $data = Album::find($id);
         $data->delete();
         return redirect('data-album')->with('success',' Data Berhasil di Hapus!');

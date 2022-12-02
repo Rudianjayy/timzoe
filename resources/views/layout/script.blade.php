@@ -95,12 +95,12 @@
             var scrollPane = document.querySelector(".scroll-content");
             var scrollPaneInit = $(scrollPane).mCustomScrollbar();
 
-            setTimeout(function () {
+            setTimeout(function() {
                 var scrollInnerPane = $(scrollPane).find(".mCustomScrollBox");
                 $(scrollInnerPane).height(window.innerHeight + "px");
             }, 500);
 
-            $(window).resize(function () {
+            $(window).resize(function() {
                 if (window.innerWidth < 768) {
                     initCustomScrollbar();
                 } else {
@@ -110,7 +110,7 @@
         }
 
         initCustomScrollbar();
-</script>
+    </script>
 
 
     <script src="{{ asset('admintemp/adminnew/riski/nopan/plugins/charts/amcharts/amcharts.js') }}"></script>
@@ -122,5 +122,70 @@
     <script src="{{ asset('admintemp/adminnew/riski/nopan/plugins/charts/amcharts/column_and_barchart.js') }}"></script>
 
     <script src="{{ asset('admintemp/adminnew/riski/nopan/plugins/sweetalerts/promise-polyfill.js') }}"></script>
+
+
+    {{-- <!-- BEGIN PAGE LEVEL SCRIPTS -->
+    <script src="{{ asset('admintemp/adminnew/riski/nopan/plugins/charts/echarts/basic-charts/echarts_basic.js') }}"></script>
+    <script src="{{ asset('admintemp/adminnew/riski/nopan/plugins/charts/echarts/echarts.js') }}"></script>
+    <script src="{{ asset('admintemp/adminnew/riski/nopan/plugins/charts/echarts/basic-charts/timelineOption.js') }}"></script>
+    <!-- END PAGE LEVEL SCRIPTS -->
+
+    <!--  BEGIN CUSTOM STYLE FILE  -->
+    <script src="{{ asset('admintemp/adminnew/riski/nopan/plugins/charts/echarts/basic-charts/echarts_basic_script.js') }}"></script>
+ --}}
+    <script src="{{ asset('admintemp/adminnew/riski/nopan/plugins/bootstrap-wizard/jquery.bootstrap.wizard.js') }}"></script>
+    <script src="{{ asset('admintemp/adminnew/riski/nopan/plugins/bootstrap-wizard/jquery.validate.min.js') }}"></script>
+    <!-- END PAGE LEVEL SCRIPTS -->
+
+    <!--  BEGIN CUSTOM SCRIPTS FILE  -->
+    <script>
+        $('#simple-1').bootstrapWizard();
+        $('#simple-2').bootstrapWizard();
+        $('#p-1').bootstrapWizard({
+            onTabShow: function(tab, navigation, index) {
+                var $total = navigation.find('li').length;
+                var $current = index + 1;
+                var $percent = ($current / $total) * 100;
+                $('#p-1 .progress-bar').css({
+                    width: $percent + '%'
+                });
+            }
+        });
+        var $validator = $("#f-validation").validate({
+            rules: {
+                f_Email1: {
+                    required: true,
+                    email: true,
+                    minlength: 3
+                },
+                f_name: {
+                    required: true,
+                    minlength: 3
+                },
+                f_password1: {
+                    required: true,
+                    minlength: 3,
+                },
+                f_txt_area_field: {
+                    required: true,
+                    minlength: 3,
+                },
+                f_location: {
+                    required: true,
+                    minlength: 3,
+                },
+            },
+        });
+        $('#validation').bootstrapWizard({
+            onNext: function(tab, navigation, index) {
+                var $valid = $("#f-validation").valid();
+                if (!$valid) {
+                    $validator.focusInvalid();
+                    return false;
+                }
+            }
+        });
+    </script>
+
 
 </body>

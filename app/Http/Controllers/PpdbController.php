@@ -11,10 +11,7 @@ use App\Models\syaratdaftar;
 use App\Models\biaya;
 use App\Models\kontak;
 use App\Models\info;
-use App\Models\Jurusan;
 use App\Models\Langkahpendaftaran;
-use App\Models\mitrappdb;
-use App\Models\Muhinews;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Payment;
@@ -404,9 +401,18 @@ class PpdbController extends Controller
 
 
     public function adminformulir(){
-       $data4 = Formulir::all();
+       $data4 = Formulir::where('status','=','pending')->get();
         return view('ppdb.formulir.formulir', compact('data4'));
     }
+    public function adminformulirditerima(){
+       $data4 = Formulir::where('status','=','diterima')->get();
+        return view('ppdb.formulir.formulir-diterima', compact('data4'));
+    }
+    public function adminformulirditolak(){
+       $data4 = Formulir::where('status','=','ditolak')->get();
+        return view('ppdb.formulir.formulir-ditolak', compact('data4'));
+    }
+    
 
     public function setuju(Request $request,$id){
         $data = Formulir::find($id);
@@ -469,7 +475,7 @@ class PpdbController extends Controller
             'nokk' =>$request->nokk,
             'foto_kk' =>$request->foto_kk,
             'foto_bukti' =>$request->foto_bukti,
-            'status' =>$request->status,
+            'status_anak' =>$request->status_anak,
             'alamat_rumah' =>$request->alamat_rumah,
             'nama_ayah' =>$request->nama_ayah,
             'nama_ibu' =>$request->nama_ibu,
@@ -481,6 +487,7 @@ class PpdbController extends Controller
             'prestasi' =>$request->prestasi,
             'ukuran_kaos' =>implode(',',$request-> ukuran_kaos),
             'jurusan' =>$request->jurusan,
+            'status' => 'pending',
 
         ]);
 

@@ -123,7 +123,7 @@
                 })
                 .then((willDelete) => {
                     if (willDelete) {
-                        window.location = "/delete/" + id + ""
+                        window.location = "/deleteupj/" + id + ""
                          swal("Data berhasil dihapus!", {
                            icon: "success",
                          });

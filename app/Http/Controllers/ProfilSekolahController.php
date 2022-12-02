@@ -119,7 +119,7 @@ class ProfilSekolahController extends Controller
         return redirect('profilsekolahadmin')->with('success', ' Data Berhasil di Ubah!');
     }
 
-    public function delete($id)
+    public function deleteprofil($id)
     {
         $data = profilsekolah::find($id);
         $data->delete();

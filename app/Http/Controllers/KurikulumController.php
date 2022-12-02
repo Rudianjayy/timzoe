@@ -87,7 +87,7 @@ class KurikulumController extends Controller
         return redirect('kalenderakademikadmin')->with('success', ' Data Berhasil di Ubah!');
     }
 
-    public function delete($id)
+    public function deletekalender($id)
     {
         $data = kalenderakademik::find($id);
         $data->delete();

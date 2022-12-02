@@ -91,6 +91,14 @@ Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
 
 
 
+//footerPPDB
+
+Route::get('/adminfooterppdb', [FooteerController::class, 'adminfooterppdb'])->name('adminfooterppdb');
+Route::get('/tambahfooterppdb', [FooteerController::class, 'tambahfooterppdb'])->name('tambahfooterppdb');
+Route::post('/prosesfooter', [FooteerController::class, 'prosesfooter'])->name('prosesfooter');
+Route::get('/editfooteerppdb/{id}', [FooteerController::class, 'editfooteerppdb'])->name('editfooteerppdb');
+Route::post('/editprosesfooter/{id}', [FooteerController::class, 'editprosesfooter'])->name('editprosesfooter');
+Route::get('/deletefooteerppdb/{id}', [FooteerController::class, 'deletefooteerppdb'])->name('deletefooteerppdb');
 
 
 
@@ -126,7 +134,7 @@ Route::get('/deletedeskripsipendaftaran/{id}', [PpdbController::class, 'deletede
 Route::get('/syaratdaftar', [PpdbController::class, 'syaratdaftar'])->name('syaratdaftar');
 Route::get('/adminsyaratdaftar', [PpdbController::class, 'adminsyaratdaftar'])->name('adminsyaratdaftar');
 Route::get('/editsyaratdaftar/{id}', [PpdbController::class, 'editsyaratdaftar'])->name('editsyaratdaftar');
-Route::post('/editproses12/{id}', [PpdbController::class, 'editproses12'])->name('editproses12');
+Route::post('/editproses12', [PpdbController::class, 'editproses12'])->name('editproses12');
 Route::get('/tambahsyaratdaftar', [PpdbController::class, 'tambahsyaratdaftar'])->name('tambahsyaratdaftar');
 Route::post('/submitproses12/', [PpdbController::class, 'submitproses12'])->name('submitproses12');
 Route::get('/deletesyaratdaftar/{id}', [PpdbController::class, 'deletesyaratdaftar'])->name('deletesyaratdaftar');
@@ -172,7 +180,7 @@ Route::get('/deletemitrappdb/{id}',[PpdbController::class, 'deletemitrappdb'])->
 
 Route::get('/admininfo',[PpdbController::class, 'admininfo'])->name('admininfo');
 Route::get('/editinfo/{id}',[PpdbController::class, 'editinfo'])->name('editinfo');
-Route::post('/prosesinfo/{id}',[PpdbController::class, 'prosesinfo'])->name('prosesinfo');
+Route::post('/prosesinfo',[PpdbController::class, 'prosesinfo'])->name('prosesinfo');
 Route::get('/tambahinfo',[PpdbController::class, 'tambahinfo'])->name('tambahinfo');
 Route::post('/submitinfo',[PpdbController::class, 'submitinfo'])->name('submitinfo');
 Route::get('/deleteinfo/{id}',[PpdbController::class, 'deleteinfo'])->name('deleteinfo');
@@ -194,7 +202,7 @@ Route::get('/tambahiduka', [IdukaController::class, 'tambahiduka'])->name('tamba
 Route::post('/idukaproses', [IdukaController::class, 'idukaproses'])->name('idukaproses');
 Route::get('/editiduka/{id}', [IdukaController::class, 'editiduka'])->name('editiduka');
 Route::post('/editproses3/{id}', [IdukaController::class, 'editproses3'])->name('editproses3');
-Route::get('/deleteiduka/{id}', [IdukaController::class, 'delete'])->name('delete');
+Route::get('/deleteiduka/{id}', [IdukaController::class, 'deleteiduka'])->name('deleteiduka');
 
 
 Route::get('/fotomouadmin', [IdukaController::class, 'fotomouadmin'])->name('fotomouadmin');
@@ -250,7 +258,7 @@ Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
     Route::post('/prosesprofilsekolah', [ProfilSekolahController::class, 'prosesprofilsekolah'])->name('prosesprofilsekolah');
     Route::get('/editprofilsekolah/{id}', [ProfilSekolahController::class, 'editprofilsekolah'])->name('editprofilsekolah');
     Route::post('/editprosessekolah/{id}', [ProfilSekolahController::class, 'editprosessekolah'])->name('editprosessekolah');
-    Route::get('/deleteprofilsekolah/{id}', [ProfilSekolahController::class, 'delete'])->name('delete');
+    Route::get('/deleteprofilsekolah/{id}', [ProfilSekolahController::class, 'deleteprofilsekolah'])->name('deleteprofilsekolah');
 
     //visimisi
     Route::get('/visimisi', [ProfilSekolahController::class, 'visimisi'])->name('visimisi');
@@ -259,7 +267,7 @@ Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
     Route::post('/prosesvisimisi', [ProfilSekolahController::class, 'prosesvisimisi'])->name('prosesvisimisi');
     Route::get('/editvisimisi/{id}', [ProfilSekolahController::class, 'editvisimisi'])->name('editvisimisi');
     Route::post('/editprosesvisimisi/{id}', [ProfilSekolahController::class, 'editprosesvisimisi'])->name('editprosesvisimisi');
-    Route::get('/deletevisimisi/{id}', [ProfilSekolahController::class, 'deletevisimisi'])->name('delete');
+    Route::get('/deletevisimisi/{id}', [ProfilSekolahController::class, 'deletevisimisi'])->name('deletevisimisi');
 
 
 
@@ -270,7 +278,7 @@ Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
     Route::post('/identitasproses', [IdentitasSekolahController::class, 'identitasproses'])->name('identitasproses');
     Route::get('/editidentitas/{id}', [IdentitasSekolahController::class, 'editidentitas'])->name('editidentitas');
     Route::post('/editprosesidentitas/{id}', [IdentitasSekolahController::class, 'editprosesidentitas'])->name('editprosesidentitas');
-    Route::get('/deleteidentitas/{id}', [IdentitasSekolahController::class, 'delete'])->name('delete');
+    Route::get('/deleteidentitas/{id}', [IdentitasSekolahController::class, 'deleteidentitas'])->name('deleteidentitas');
 
 
     //fasilitas sekolah dan crud
@@ -281,7 +289,7 @@ Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
     Route::post('/prosesfasilitas', [FasilitasController::class, 'prosesfasilitas'])->name('prosesfasilitas');
     Route::get('/editfasilitas/{id}', [FasilitasController::class, 'editfasilitas'])->name('editfasilitas');
     Route::post('/editprosesfasilitas/{id}', [FasilitasController::class, 'editprosesfasilitas'])->name('editprosesfasilitas');
-    Route::get('/deletefasilitas/{id}', [FasilitasController::class, 'deletefasilitas'])->name('delete');
+    Route::get('/deletefasilitas/{id}', [FasilitasController::class, 'deletefasilitas'])->name('deleteidentitas');
 
 
 
@@ -293,7 +301,7 @@ Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
     Route::post('/kalenderakademikproses9', [KurikulumController::class, 'kalenderakademikproses9'])->name('kalenderakademikproses9');
     Route::get('/editkalenderakademik/{id}', [KurikulumController::class, 'editkalenderakademik'])->name('editkalenderakademik');
     Route::post('/editproses9/{id}', [KurikulumController::class, 'editproses9'])->name('editproses9');
-    Route::get('/delete/{id}', [KurikulumController::class, 'delete'])->name('delete');
+    Route::get('/deletekalender/{id}', [KurikulumController::class, 'deletekalender'])->name('deletekalender');
 
 
     Route::get('/jadwalkegiatan', [KurikulumController::class, 'jadwalkegiatan'])->name('jadwalkegiatan');
@@ -326,7 +334,7 @@ Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
     Route::post('/kurikulumproses', [KurikulumController::class, 'kurikulumproses'])->name('kurikulumproses');
     Route::get('/editkurikulum/{id}', [KurikulumController::class, 'editkurikulum'])->name('editkurikulum');
     Route::post('/editproses4/{id}', [KurikulumController::class, 'editproses4'])->name('editproses4');
-    Route::get('/deletekurikulum/{id}', [KurikulumController::class, 'delete'])->name('delete');
+    Route::get('/deletekurikulum/{id}', [KurikulumController::class, 'deletekurikulum'])->name('deletekurikulum');
 
 
 
@@ -342,7 +350,7 @@ Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
     Route::post('/submitdata6', [AkademiController::class, 'submitdata6'])->name('submitdata6');
     Route::get('/editakademi/{id}', [AkademiController::class, 'editakademi'])->name('editakademi');
     Route::post('/submitedit6/{id}', [AkademiController::class, 'submitedit6'])->name('submitedit6');
-    Route::get('/deleteakademi/{id}', [AkademiController::class, 'delete'])->name('delete');
+    Route::get('/deleteakademi/{id}', [AkademiController::class, 'deleteakademi'])->name('deleteakademi');
 
 
 
@@ -363,7 +371,7 @@ Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
     Route::post('/ekstrakulikulerblogproses', [EkstrakulikulerBlogController::class, 'ekstrakulikulerblogproses'])->name('ekstrakulikulerblogproses');
     Route::get('/editekstrakulikulerblog/{id}', [EkstrakulikulerBlogController::class, 'editekstrakulikulerblog'])->name('editekstrakulikulerblog');
     Route::post('/editekstrakulikulerblogproses/{id}', [EkstrakulikulerBlogController::class, 'editekstrakulikulerblogproses'])->name('editekstrakulikulerblogproses');
-    Route::get('/delete/{id}', [EkstrakulikulerBlogController::class, 'delete'])->name('delete');
+    Route::get('/deleteekstra/{id}', [EkstrakulikulerBlogController::class, 'deleteekstra'])->name('deleteekstra');
 
 
     Route::get('/detailekstrakulikuler/{id}', [DetailEkstrakulikulerController::class, 'detailekstrakulikuler'])->name('detailekstrakulikuler');
@@ -403,7 +411,7 @@ Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
     Route::post('/muhinewsproses', [MuhinewsController::class, 'muhinewsproses'])->name('muhinewsproses');
     Route::get('/editmuhinews/{id}', [MuhinewsController::class, 'editmuhinews'])->name('editmuhinews');
     Route::post('/editproses2/{id}', [MuhinewsController::class, 'editproses2'])->name('editproses2');
-    Route::get('/deletemuhinews/{id}', [MuhinewsController::class, 'delete'])->name('delete');
+    Route::get('/deletemuhinews/{id}', [MuhinewsController::class, 'deletemuhinews'])->name('deletemuhinews');
 
     //muhiblog
     Route::get('/muhiblog/{id}', [MuhiblogController::class, 'muhiblog'])->name('muhiblog');
@@ -412,7 +420,7 @@ Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
     Route::post('/muhiblogproses', [MuhiblogController::class, 'muhiblogproses'])->name('muhiblogproses');
     Route::get('/editmuhiblog/{id}', [MuhiblogController::class, 'editmuhiblog'])->name('editmuhiblog');
     Route::post('/editmuhiblogproses/{id}', [MuhiblogController::class, 'editmuhiblogproses'])->name('editmuhiblogproses');
-    Route::get('/deletemuhiblog/{id}', [MuhiblogController::class, 'delete'])->name('delete');
+    Route::get('/deletemuhiblog/{id}', [MuhiblogController::class, 'deletemuhiblog'])->name('deletemuhiblog');
 
     //kategoriberita
 
@@ -421,7 +429,7 @@ Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
     Route::post('/kategoriproses', [MuhiblogController::class, 'kategoriproses'])->name('kategoriproses');
     Route::get('/editkategori/{id}', [MuhiblogController::class, 'editkategori'])->name('editkategori');
     Route::post('/editproseskategori/{id}', [MuhiblogController::class, 'editproseskategori'])->name('editproseskategori');
-    Route::get('/deletekategori/{id}', [MuhiblogController::class, 'deletekategori'])->name('delete');
+    Route::get('/deletekategori/{id}', [MuhiblogController::class, 'deletekategori'])->name('deletekategori');
 
 
     //Iduka
@@ -431,7 +439,7 @@ Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
     Route::post('/idukaproses', [IdukaController::class, 'idukaproses'])->name('idukaproses');
     Route::get('/editiduka/{id}', [IdukaController::class, 'editiduka'])->name('editiduka');
     Route::post('/editproses3/{id}', [IdukaController::class, 'editproses3'])->name('editproses3');
-    Route::get('/deleteiduka/{id}', [IdukaController::class, 'delete'])->name('delete');
+    Route::get('/deleteiduka/{id}', [IdukaController::class, 'deleteiduka'])->name('deleteiduka');
 
 
     Route::get('/mouadmin', [FotoidukaController::class, 'mouadmin'])->name('mouadmin');
@@ -439,7 +447,7 @@ Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
     Route::post('/fotomouproses', [FotoidukaController::class, 'fotomouproses'])->name('fotomouproses');
     Route::get('/editfotomou/{id}', [FotoidukaController::class, 'editfotomou'])->name('editfotomou');
     Route::post('/editproses4/{id}', [FotoidukaController::class, 'editproses4'])->name('editproses4');
-    Route::get('/deletefotomou/{id}', [FotoidukaController::class, 'delete'])->name('delete');
+    Route::get('/deletefotomou/{id}', [FotoidukaController::class, 'deletefotomou'])->name('deletefotomou');
 
     //managementberanda
 
@@ -448,14 +456,14 @@ Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
     Route::post('/fotosliderproses', [SliderController::class, 'fotosliderproses'])->name('fotosliderproses');
     Route::get('/editfotoslider/{id}', [SliderController::class, 'editfotoslider'])->name('editfotoslider');
     Route::post('/prosesfotoslider/{id}', [SliderController::class, 'prosesfotoslider'])->name('prosesfotoslider');
-    Route::get('/deletefotoslider/{id}', [SliderController::class, 'delete2'])->name('delete');
+    Route::get('/deletefotoslider/{id}', [SliderController::class, 'deletefotoslider'])->name('deletefotoslider');
 
     Route::get('/sambutanadmin', [SambutanController::class, 'loby2'])->name('sambutanadmin');
     Route::get('/tambahsambutan', [SambutanController::class, 'tambahsambutan'])->name('tambahsambutan');
     Route::post('/submitdata2', [SambutanController::class, 'submitdata2'])->name('submitdata2');
     Route::get('/editsambutan/{id}', [SambutanController::class, 'editsambutan'])->name('editsambutan');
     Route::post('/submitedit2/{id}', [SambutanController::class, 'submitedit2'])->name('submitedit2');
-    Route::get('/deletesambutan/{id}', [SambutanController::class, 'delete'])->name('delete');
+    Route::get('/deletesambutan/{id}', [SambutanController::class, 'deletesambutan'])->name('deletesambutan');
 
     Route::get('/detailjurusan/{id}', [JurusanController::class, 'detailjurusan'])->name('detailjurusan');
     Route::get('/datajurusan', [JurusanController::class, 'loby3'])->name('datajurusan');
@@ -464,7 +472,7 @@ Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
     Route::post('/submitdata3', [JurusanController::class, 'submitdata3'])->name('submitdata3');
     Route::get('/editjurusan/{id}', [JurusanController::class, 'editjurusan'])->name('editjurusan');
     Route::post('/submitedit3/{id}', [JurusanController::class, 'submitedit3'])->name('submitedit3');
-    Route::get('/deletejurusan/{id}', [JurusanController::class, 'delete'])->name('delete');
+    Route::get('/deletejurusan/{id}', [JurusanController::class, 'deletejurusan'])->name('deletejurusan');
 
 
 
@@ -473,14 +481,14 @@ Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
     Route::post('/submitdata5', [PrestasiController::class, 'submitdata5'])->name('submitdata5');
     Route::get('/editprestasi/{id}', [PrestasiController::class, 'editprestasi'])->name('editprestasi');
     Route::post('/submitedit5/{id}', [PrestasiController::class, 'submitedit5'])->name('submitedit5');
-    Route::get('/deleteprestasi/{id}', [PrestasiController::class, 'delete'])->name('delete');
+    Route::get('/deleteprestasi/{id}', [PrestasiController::class, 'deleteprestasi'])->name('deleteprestasi');
 
     Route::get('/data-album', [AlbumController::class, 'loby'])->name('data-album');
     Route::get('/tambahalbum', [AlbumController::class, 'tambahalbum'])->name('tambahalbum');
     Route::post('/albumproses', [AlbumController::class, 'albumproses'])->name('albumproses');
     Route::get('/editalbum/{id}', [AlbumController::class, 'editalbum'])->name('editalbum');
     Route::post('/editproses/{id}', [AlbumController::class, 'editproses'])->name('editproses');
-    Route::get('/deletealbum/{id}', [AlbumController::class, 'delete'])->name('delete');
+    Route::get('/deletealbum/{id}', [AlbumController::class, 'deletealbum'])->name('deletealbum');
     //kompetensikeahlian
     Route::get('/kompetensi', [KompetensiController::class, 'kompetensi'])->name('kompetensi');
 
@@ -489,14 +497,14 @@ Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
     Route::post('/kompetensiproses', [KompetensiController::class, 'kompetensiproses'])->name('kompetensiproses');
     Route::get('/editkompetensi/{id}', [KompetensiController::class, 'editkompetensi'])->name('editkompetensi');
     Route::post('/editproseskompetensi/{id}', [KompetensiController::class, 'editproseskompetensi'])->name('editproseskompetensi');
-    Route::get('/deletekompetensi/{id}', [KompetensiController::class, 'delete'])->name('delete');
+    Route::get('/deletekompetensi/{id}', [KompetensiController::class, 'deletekompetensi'])->name('deletekompetensi');
 
     Route::get('/fotokompetensiadmin', [FotokompetensiController::class, 'fotokompetensiadmin'])->name('fotokompetensiadmin');
     Route::get('/tambahfotokompetensi', [FotokompetensiController::class, 'tambahfotokompetensi'])->name('tambahfotokompetensi');
     Route::post('/fotokompetensiproses', [FotokompetensiController::class, 'fotokompetensiproses'])->name('fotokompetensiproses');
     Route::get('/editfotokompetensi/{id}', [FotokompetensiController::class, 'editfotokompetensi'])->name('editfotokompetensi');
     Route::post('/editprosesfotokompetensi/{id}', [FotokompetensiController::class, 'editprosesfotokompetensi'])->name('editprosesfotokompetensi');
-    Route::get('/deletefotokompetensi/{id}', [FotokompetensiController::class, 'delete'])->name('delete');
+    Route::get('/deletefotokompetensi/{id}', [FotokompetensiController::class, 'deletefotokompetensi'])->name('deletefotokompetensi');
 
 
 
@@ -516,7 +524,7 @@ Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
     Route::post('/footeerprosesdua', [FooteerduaController::class, 'footeerprosesdua'])->name('footeerprosesdua');
     Route::get('/editfooteerdua/{id}', [FooteerduaController::class, 'editfooteerdua'])->name('editfooteerdua');
     Route::post('/editprosesdua/{id}', [FooteerduaController::class, 'editprosesdua'])->name('editprosesdua');
-    Route::get('/delete/{id}', [FooteerduaController::class, 'delete'])->name('delete');
+    Route::get('/deletefooterdua/{id}', [FooteerduaController::class, 'deletefooterdua'])->name('deletefooterdua');
 
 
 
@@ -538,7 +546,7 @@ Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
     Route::post('/upjproses', [UpjController::class, 'upjproses'])->name('upjproses');
     Route::get('/editupj/{id}', [UpjController::class, 'editupj'])->name('editupj');
     Route::post('/editupjproses/{id}', [UpjController::class, 'editupjproses'])->name('editupjproses');
-    Route::get('/deleteupj/{id}', [UpjController::class, 'deleteupj'])->name('delete');
+    Route::get('/deleteupj/{id}', [UpjController::class, 'deleteupj'])->name('deleteupj');
 
     Route::get('/adminupj2', [UpjController::class, 'adminupj2'])->name('adminupj2');
     Route::get('/tambahupj2', [UpjController::class, 'tambahupj2'])->name('tambahupj2');
@@ -713,7 +721,6 @@ Route::group(['middleware' => ['auth', 'hakakses:admin,user']], function () {
     Route::get('/editprofiladmin', [ProfiladminController::class, 'editprofiladmin'])->name('editprofiladmin');
     Route::post('/updateprofiladmin', [ProfiladminController::class, 'updateprofiladmin'])->name('updateprofiladmin');
 });
-
 Route::group(['middleware' => ['auth', 'hakakses:admin,user,operator1,operator2']], function () {
 
     Route::get('/welcome', function () {
@@ -740,50 +747,26 @@ Route::group(['middleware' => ['auth', 'hakakses:admin,user']], function () {
         $galery = Album::count();
         $prestasi = Prestasi::count();
         $mitra = Mitra::count();
+        $total = Formulir::count();
         $formulir = Formulir::where('status','=','diterima')->count();
         $formulird = Formulir::where('status','=','ditolak')->count();
+        $formulirp = Formulir::where('status','=','pending')->count();
         // dd($formulir);
-        $status = Formulir::select(DB::raw("SUM(id) as status"))
-        ->GroupBy(DB::raw("Month(created_at)"))
+        $status = Formulir::select(DB::raw("COUNT(*) as status"))
+        ->GroupBy(DB::raw("Year(created_at)"))
         ->pluck('status');
 
-        $bulan = Formulir::select(DB::raw("MONTHNAME(created_at) as bulan"))
-        ->GroupBy(DB::raw("MONTHNAME(created_at)"))
+        $bulan = Formulir::select(DB::raw("YEAR(created_at) as bulan"))
+        ->GroupBy(DB::raw("YEAR(created_at)"))
         ->pluck('bulan');
-
-        return view('welcome', compact('berita', 'galery', 'prestasi', 'mitra','status','bulan','formulir','formulird'));
+        
+        return view('welcome', compact('berita', 'galery', 'prestasi', 'mitra','status','bulan','formulir','formulird','total','formulirp'));
     })->middleware('auth');
 
     Route::get('/adminformulir', [PpdbController::class, 'adminformulir'])->name('adminformulir');
+    Route::get('/adminformulirditerima', [PpdbController::class, 'adminformulirditerima'])->name('adminformulirditerima');
+    Route::get('/adminformulirditolak', [PpdbController::class, 'adminformulirditolak'])->name('adminformulirditolak');
     Route::get('/tambahfrmulir', [PpdbController::class, 'tambahfrmulir'])->name('tambahfrmulir');
     Route::post('/submitdata27', [PpdbController::class, 'submitdata27'])->name('submitdata27');
     Route::get('/deleteformulir/{id}', [PpdbController::class, 'deleteformulir'])->name('deleteformulir');
 });
-
-
-//payment
-Route::post('/pendaftaran',[PpdbController::class, 'payment_post']);
-
-
-Route::get('/biaya',[PpdbController::class, 'biaya'])->name('biaya');
-Route::get('/adminbiaya',[PpdbController::class, 'adminbiaya'])->name('adminbiaya');
-Route::get('/editbiaya/{id}',[PpdbController::class, 'editbiaya'])->name('editbiaya');
-Route::post('/editprosesbiaya1',[PpdbController::class, 'editprosesbiaya1'])->name('editprosesbiaya1');
-Route::get('/tambahbiaya',[PpdbController::class, 'tambahbiaya'])->name('tambahbiaya');
-Route::post('/submitprosesbiaya',[PpdbController::class, 'submitprosesbiaya'])->name('submitprosesbiaya');
-Route::get('/deletebiaya/{id}',[PpdbController::class, 'deletebiaya'])->name('deletebiaya');
-
-
-Route::get('/adminlangkah', [PpdbController::class, 'adminlangkah'])->name('adminlangkah');
-Route::get('/tambahlangkah', [PpdbController::class, 'tambahlangkah'])->name('tambahlangkah');
-Route::post('/prosestambahlangkah', [PpdbController::class, 'prosestambahlangkah'])->name('prosestambahlangkah');
-Route::get('/editlangkah/{id}', [PpdbController::class, 'editlangkah'])->name('editlangkah');
-Route::post('/proseseditlangkah', [PpdbController::class, 'proseseditlangkah'])->name('proseseditlangkah');
-Route::get('/deletelangkah/{id}', [PpdbController::class, 'deletelangkah'])->name('deletelangkah');
-
-
-
-
-
-
-

@@ -20,12 +20,12 @@
         <div class="container">
             <div class="page-header">
                 <div class="page-title">
-                    <h3>Formulir Pendaftaran yang Pending</h3>
+                    <h3>Formulir Pendaftaran yang Ditolak</h3>
                     <div class="crumbs">
                         <ul id="breadcrumbs" class="breadcrumb">
                             <li><a href="index.html"><i class="flaticon-home-fill"></i></a></li>
                             <li><a href="#">Formulir</a></li>
-                            <li class="active"><a href="#">Formulir Pending</a></li>
+                            <li class="active"><a href="#">Formulir Ditolak</a></li>
                         </ul>
                     </div>
                 </div>
@@ -37,7 +37,7 @@
                         <div class="widget-header">
                             <div class="row">
                                 <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                    <h4>Formulir Pendaftaran yang Pending</h4>
+                                    <h4>Formulir Pendaftaran yang Ditolak</h4>
                                 </div>
                                 {{-- <div>
                                     <a href="/tambahformulir" class="btn btn-primary "
@@ -75,8 +75,6 @@
                                             <th scope="col">Ukuran Kaos</th>
                                             <th scope="col">Jurusan</th>
 
-                                            <th scope="col">Kode QR</th>
-
                                             <th scope="col">Status</th>
                                             <th scope="col">Aksi</th>
                                         </tr>
@@ -97,8 +95,7 @@
                                                 <td>{{ $i->nik }}</td>
                                                 <td>{{ $i->nokk }}</td>
                                                 <td>
-                                                    <a href="{{ asset(' /' . $i->foto_kk) }}"
-                                                        data-lightbox="whatever">
+                                                    <a href="{{ asset(' /' . $i->foto_kk) }}" data-lightbox="whatever">
                                                         <img src="{{ asset('fotomahasiswa/' . $i->foto_kk) }}"
                                                             alt="" style="width: 80px;">
                                                     </a>
@@ -123,24 +120,15 @@
                                                 <td>{{ $i->ukuran_kaos }}</td>
                                                 <td>{{ $i->jurusan }}</td>
 
-                                                @if ($i->status == 'diterima')
-                                                    <td>
-                                                        <div class="visible-print text-center">
-                                                            {!! QrCode::size(100)->generate($i->nisn) !!}
-                                                            {{-- <p>Scan me to return to the original page.</p> --}}
-                                                        </div>
-                                                    </td>
-                                                @else
-                                                    <td></td>
-                                                @endif
-                                                <td><span class="badge badge-pills outline-badge-warning">{{ $i->status }}</span></td>
+
+                                                <td><span class="badge badge-pills outline-badge-danger">{{ $i->status }}</span></td>
 
                                                 @if ($i->status == 'pending')
                                                     <td class="align-center">
                                                         <ul class="table-controls">
                                                             <form action="/setuju/{{ $i->id }}" method="POST">
                                                                 @csrf
-                                                                <input type="hidden" name="nisn"
+                                                                <input type="hidden" name="nisn" `
                                                                     value="{{ $i->nisn }}">
                                                                 <li>
                                                                     <button type="submit" title="Terima">
@@ -159,6 +147,18 @@
                                                         </ul>
                                                     </td>
                                                 @endif
+                                                <td>
+                                                    <ul class="table-controls">
+                                                        <li>
+                                                            <a href="#" class="delete fire"
+                                                                data-id="{{ $i->id }}"
+                                                                data-nama="{{ $i->judul }}" data-toggle="tooltip"
+                                                                data-placement="top" title="Delete">
+                                                                <i class="flaticon-delete-5"></i>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </td>
                                             </tr>
                                         @endforeach
                                     </tbody>

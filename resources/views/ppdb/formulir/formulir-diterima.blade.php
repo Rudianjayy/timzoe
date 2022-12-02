@@ -20,12 +20,12 @@
         <div class="container">
             <div class="page-header">
                 <div class="page-title">
-                    <h3>Formulir Pendaftaran yang Pending</h3>
+                    <h3>Formulir Pendaftaran yang Diterima</h3>
                     <div class="crumbs">
                         <ul id="breadcrumbs" class="breadcrumb">
                             <li><a href="index.html"><i class="flaticon-home-fill"></i></a></li>
                             <li><a href="#">Formulir</a></li>
-                            <li class="active"><a href="#">Formulir Pending</a></li>
+                            <li class="active"><a href="#">Formulir Diterima</a></li>
                         </ul>
                     </div>
                 </div>
@@ -37,7 +37,7 @@
                         <div class="widget-header">
                             <div class="row">
                                 <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                    <h4>Formulir Pendaftaran yang Pending</h4>
+                                    <h4>Formulir Pendaftaran yang Diterima</h4>
                                 </div>
                                 {{-- <div>
                                     <a href="/tambahformulir" class="btn btn-primary "
@@ -98,14 +98,14 @@
                                                 <td>{{ $i->nokk }}</td>
                                                 <td>
                                                     <a href="{{ asset(' /' . $i->foto_kk) }}"
-                                                        data-lightbox="whatever">
+                                                        data-lightbox="wtf">
                                                         <img src="{{ asset('fotomahasiswa/' . $i->foto_kk) }}"
                                                             alt="" style="width: 80px;">
                                                     </a>
                                                 </td>
                                                 <td>
                                                     <a href="{{ asset('fotomahasiswa/' . $i->foto_bukti) }}"
-                                                        data-lightbox="whatever">
+                                                        data-lightbox="wth">
                                                         <img src="{{ asset('fotomahasiswa/' . $i->foto_bukti) }}"
                                                             alt="" style="width: 80px;">
                                                     </a>
@@ -133,7 +133,7 @@
                                                 @else
                                                     <td></td>
                                                 @endif
-                                                <td><span class="badge badge-pills outline-badge-warning">{{ $i->status }}</span></td>
+                                                <td><span class="badge badge-pills outline-badge-success">{{ $i->status }}</span></td>
 
                                                 @if ($i->status == 'pending')
                                                     <td class="align-center">
@@ -141,7 +141,7 @@
                                                             <form action="/setuju/{{ $i->id }}" method="POST">
                                                                 @csrf
                                                                 <input type="hidden" name="nisn"
-                                                                    value="{{ $i->nisn }}">
+                                      `                              value="{{ $i->nisn }}">
                                                                 <li>
                                                                     <button type="submit" title="Terima">
                                                                         <i class="flaticon-single-circle-tick"></i>

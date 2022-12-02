@@ -29,7 +29,7 @@
 
                     <a class="dropdown-item text-center  p-1" href="javascript:void(0);">
 
-                        <div class="notification-list ">
+                        <div class="notification-list">
 
                             <div class="notification-item position-relative  mb-3">
                                 <div class="c-dropdown text-right">
@@ -70,7 +70,7 @@
                 </a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="/logout" onclick="return confirm('Anda yakin ingin logout?')">
-                    <i class="flaticon-logout"></i> <span>Log Out</span>
+                    <i class="flaticon-log-2"></i> <span>Log Out</span>
                 </a>
             </div>
         </li>

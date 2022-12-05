@@ -69,8 +69,12 @@
                                                                 <td class="customer-name">Pembayaran Telah Selesai</td>
                                                             </tr>
                                                             <tr>
-                                                                <td class="text-center"><span class="badge badge-pills badge-primary">Belum  Aktif</span></td>
+                                                                <td class="text-center"><span class="badge badge-pills badge-secondary">Belum  Aktif</span></td>
                                                                 <td class="customer-name">Pembayaran Belum Di Buka</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-center"><span class="badge badge-pills badge-primary">Isi Formulir</span></td>
+                                                                <td class="customer-name">Form PPDB</td>
                                                             </tr>
                                                         </tbody>
                                                     </table>
@@ -94,7 +98,7 @@
                     <div class="widget-header">
                         <div class="row">
                             <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                <h4>Pricing Table - 1</h4>
+                                <h4>Pembayaran</h4>
                             </div>
                         </div>
                     </div>
@@ -131,7 +135,8 @@
                                                     -webkit-transition: background 0.3s;
                                                     transition: background 0.3s;">Proses</button>
                                                     @elseif($status_pay->status == 'settlement')
-                                                    <button type="button" class="btn btn-primary btn-rounded mb-4 mr-2 pay-button" data-toggle="modal" data-target="#fadeinModal">Selesai</button>
+                                                    <button class="btn btn-success btn-rounded mb-4 mr-2 pay-button" data-toggle="modal" data-target="#fadeinModal">Selesai</button>
+                                                    <a href="/tambahformulir"  class="btn btn-primary btn-rounded mb-4 mr-2 pay-button">Isi Formulir</a>
                                                     @endif
                                                     
                                                 @else

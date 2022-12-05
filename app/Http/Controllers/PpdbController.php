@@ -512,7 +512,8 @@ class PpdbController extends Controller
 
     public function tambahformulir()
     {
-        return view('ppdb.formulir.tambah-formulir');
+        $status_pay = Payment::where('id_user',Auth::user()->id)->first();
+        return view('ppdb.formulir.tambah-formulir',compact('status_pay'));
     }
 
     public function submitdata27(Request $request)
@@ -554,7 +555,6 @@ class PpdbController extends Controller
             'nik' => $request->nik,
             'nokk' => $request->nokk,
             'foto_kk' => $request->foto_kk,
-            'foto_bukti' => $request->foto_bukti,
             'status_anak' => $request->status_anak,
             'alamat_rumah' => $request->alamat_rumah,
             'nama_ayah' => $request->nama_ayah,
@@ -577,11 +577,7 @@ class PpdbController extends Controller
             $data4->foto_kk = $request->file('foto_kk')->getClientOriginalName();
             $data4->save();
         }
-        if ($request->hasFile('foto_bukti')) {
-            $request->file('foto_bukti')->move('fotomahasiswa/', $request->file('foto_bukti')->getClientOriginalName());
-            $data4->foto_bukti = $request->file('foto_bukti')->getClientOriginalName();
-            $data4->save();
-        }
+        
         return redirect()->route('userformulir')->with('success', ' Data Berhasil di Tambahkan!');
     }
 

@@ -61,7 +61,6 @@
                                             <th scope="col">NIK</th>
                                             <th scope="col">NOKK</th>
                                             <th scope="col">Foto KK</th>
-                                            <th scope="col">Foto Bukti</th>
                                             <th scope="col">Status</th>
                                             <th scope="col">Alamat Rumah</th>
                                             <th scope="col">Nama Ayah</th>
@@ -100,13 +99,7 @@
                                                             alt="" style="width: 80px;">
                                                     </a>
                                                 </td>
-                                                <td>
-                                                    <a href="{{ asset('fotomahasiswa/' . $i->foto_bukti) }}"
-                                                        data-lightbox="whatever">
-                                                        <img src="{{ asset('fotomahasiswa/' . $i->foto_bukti) }}"
-                                                            alt="" style="width: 80px;">
-                                                    </a>
-                                                </td>
+                                             
                                                 <td>{{ $i->status_anak }}</td>
                                                 <td>{{ $i->alamat_rumah }}</td>
                                                 <td>{{ $i->nama_ayah }}</td>

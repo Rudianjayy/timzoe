@@ -3,9 +3,7 @@
 @endpush
 @section('content')
 
-    <head>
-        @include('layout.css')
-    </head>
+    
 
     <body>
 

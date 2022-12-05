@@ -12,16 +12,13 @@
 
     <link rel="stylesheet" href="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/css/animate.min.css') }}">
 
-    <link rel="stylesheet"
-        href="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/css/owl.carousel.min.css') }}">
 
-    <link rel="stylesheet"
-        href="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/css/fontawesome.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/css/fontawesome.min.css') }}">
 
     <link rel="stylesheet" href="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/css/odometer.css') }}">
 
-    <link rel="stylesheet"
-        href="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/css/magnific-popup.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/css/magnific-popup.min.css') }}">
 
     <link rel="stylesheet" href="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/css/slick.min.css') }}">
 
@@ -31,8 +28,7 @@
 
     <link rel="stylesheet" href="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/css/responsive.css') }}">
     <title>PPDB - SMK Muhammadiyah 1 Genteng</title>
-    <link rel="icon" type="image/png"
-        href="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/favicon.png') }}">
+    <link rel="icon" type="image/png" href="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/favicon.png') }}">
 </head>
 
 <body data-bs-spy="scroll" data-bs-offset="120">
@@ -52,9 +48,7 @@
                     <h3>PPDB Online</h3>
                 </a>
             </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -65,12 +59,15 @@
                         </a>
                     </li>
                     <li class="nav-item">
+<<<<<<< HEAD
                         <a href="#Informasi" class="nav-link">
                             <a href="#syarat" class="nav-link">
                             Syarat Pendaftaran
                         </a>
                     </li>
                     <li class="nav-item">
+=======
+>>>>>>> 102726059bd1b47e8bac11e5d677da3537c61ea4
                         <a href="#daftar" class="nav-link">
                             Cara Pendaftaran
                         </a>
@@ -115,13 +112,12 @@
                                     {{ $dp->deskripsi_slider }}
                                 </p>
 
-                                </div>
                             </div>
+                        </div>
                         @endforeach
                         <div class="col-lg-6">
                             <div class="banner-image">
-                                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/mobile.png') }}"
-                                    alt="image">
+                                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/mobile.png') }}" alt="image">
                             </div>
                         </div>
                     </div>
@@ -139,7 +135,7 @@
                             <i class="fa fa-users"></i>
                         </div>
                         <h3>
-                            <span class="odometer" data-count="1020">00</span>
+                            <span class="odometer" data-count="{{ $total }}">{{ $total }}</span>
                         </h3>
                         <p>Pendaftar</p>
                     </div>
@@ -150,7 +146,7 @@
                             <i class="fa fa-heart"></i>
                         </div>
                         <h3>
-                            <span class="odometer" data-count="5679">00</span>
+                            <span class="odometer" data-count="{{ $formulir }}">{{ $formulir }}</span>
                         </h3>
                         <p>Siswa Diterima</p>
                     </div>
@@ -161,7 +157,7 @@
                             <i class="fa fa-star"></i>
                         </div>
                         <h3>
-                            <span class="odometer" data-count="2660">00</span>
+                            <span class="odometer" data-count="{{ $formulird }}">{{ $formulird }}</span>
                         </h3>
                         <p>Siswa Ditolak</p>
                     </div>
@@ -172,45 +168,18 @@
                             <i class="fa fa-download"></i>
                         </div>
                         <h3>
-                            <span class="odometer" data-count="6789">00</span>
+                            <span class="odometer" data-count="{{ $formulirp }}">{{ $formulirp }}</span>
                         </h3>
-                        <p>App Downloads</p>
+                        <p>Siswa Pending</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section id="about" class="about-area pb-100">
-        <div class="container">
-            @foreach ($info as $info)
-            <div class="section-title">
-                <h2>{{ $info->judul}}</h2>
-                <div class="bar"></div>
-            </div>
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="about-content">
-                        <p>{!! $info->deskripsi !!}</p>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="about-image">
-                        <img src="{{ asset('fotomahasiswa/' . $info->foto) }}" alt="image">
-                    </div>
-                </div>
-            </div>
-        </div>
-        @endforeach
-
-
-    </section>
-
-
-
     <section id="syarat" class="feature-section ptb-100">
         <div class="container">
             <div class="section-title">
-                <h2>Why Choose SMK Muhi?</h2>
+                <h2>Kenapa Harus SMK Muhi?</h2>
                 <div class="bar"></div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidiunt labore et
                     dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
@@ -225,6 +194,7 @@
                 <div class="col-md-7">
                     <div class="feature-contents section-heading">
                         <ul class="list-unstyled">
+                            @foreach($info as $i)
                             <li class="py-2">
                                 <div class="d-flex align-items-right">
                                     <div>
@@ -237,71 +207,10 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="py-2">
-                                <div class="d-flex align-items-right">
-                                    <div>
-                                        <div class="badge badge-circle badge-danger mr-3">
-                                            <span class="ti-check"></span>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <p class="mb-0">SMK swasta terbaik nasional 2020 dan 2021 dinobatkan oleh Lembaga Tes Masuk Perguruan Tinggi (LTMPT) Kemdikbud.</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="py-2">
-                                <div class="d-flex align-items-right">
-                                    <div>
-                                        <div class="badge badge-circle badge-danger mr-3">
-                                            <span class="ti-check"></span>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <p class="mb-0">Inovator muda terbaik 2021 - SMK Digisocial Fest dengan nama aplikasi NGAMEN HUB.</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="py-2">
-                                <div class="d-flex align-items-right">
-                                    <div>
-                                        <div class="badge badge-circle badge-danger mr-3">
-                                            <span class="ti-check"></span>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <p class="mb-0">Kelas Telkom Digital Business Technology dengan peluang rekruitmen.</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="py-2">
-                                <div class="d-flex align-items-right">
-                                    <div>
-                                        <div class="badge badge-circle badge-danger mr-3">
-                                            <span class="ti-check"></span>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <p class="mb-0"><i>One Pipe Education System</i> (OPES), yaitu kesempatan untuk melanjutkan ke Telkom Campus dengan tawaran beasiswa.</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="py-2">
-                                <div class="d-flex align-items-right">
-                                    <div>
-                                        <div class="badge badge-circle badge-danger mr-3">
-                                            <span class="ti-check"></span>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <p class="mb-0">Sertifikasi <b>ISO 21001:2018</b> dan <b>Akreditasi "A" (unggul)</b></p>
-                                    </div>
-                                </div>
-                            </li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </section>
@@ -364,6 +273,13 @@
                     <div class="tabs_item">
                         <div class="row">
                             @foreach ($biaya as $b )
+
+                            {{-- @php
+                                $tanggal_awal = date('Y-m-d',strtotime('$b->jadwal_mulai'));
+                                $tanggal_akhir = date('Y-m-d',strtotime('$b->jadwal_ditutup' ));
+
+                            @endphp --}}
+
                             <div class="col-lg-4 col-md-6">
                                 <div class="single-pricing-table">
                                     <div class="pricing-header">
@@ -371,26 +287,41 @@
                                     </div>
                                     <div class="price">
                                         <h5>{{$b->penjelasan}}</h5>
-                                        <h5>{{ $b->biaya }}</h5>
+                                        <h5>Rp.{{ number_format($b['biaya'], 2, '.', '.') }}</h5>
                                     </div>
                                     <ul class="pricing-features">
                                         <li>
                                             <i class="fas fa-check"></i>
-                                            {{ $b->jadwal }}
+                                            {{ $b->jadwal_mulai }} - {{ $b -> jadwal_ditutup }}
                                         </li>
                                     </ul>
                                 </div>
+
+                                @if ( $b->jadwal_mulai < now() && $b->jadwal_ditutup > now())
+                                    <div class="text-center">
+                                        <div class="send-btn">
+                                            <button class="default-btn pay-button" data-biaya_id={{ $b->id }} data-biaya_gelombang={{ $b->gelombang }} data-biaya={{ (int)$b->biaya }}>
+                                                Bayar Sekarang
+                                                <span></span>
+                                            </button>
+                                            <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                @else
                                 <div class="text-center">
-                                    <div class="send-btn">
-                                        <button class="default-btn pay-button" data-biaya_id={{ $b->id }} data-biaya_gelombang={{ $b->gelombang }} data-biaya={{ (int)$b->biaya }}>
-                                            Bayar Sekarang
+                                    <div class="send-btn ">
+                                        <button class="default-btn pay-button" >
+                                            Belum Aktif
                                             <span></span>
                                         </button>
-                                        <div id="msgSubmit" class="h3 text-center hidden"></div>
-                                        <div class="clearfix"></div>
                                     </div>
                                 </div>
+<<<<<<< HEAD
                                 @endforeach
+=======
+                                @endif
+>>>>>>> 102726059bd1b47e8bac11e5d677da3537c61ea4
                             </div>
                         </div>
                     </div>
@@ -404,322 +335,160 @@
         </div>
 
     </section>
+         
+            <section class="footer-area pt-100 pb-70">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="single-footer-widget">
+                                @foreach ($footerppdb as $f)
+                                <a href="#" class="logo">
+                                    <h2>Colugo</h2>
+                                </a>
+                                <p>{!! $f->deskripsi_footeer !!}</p>
+                                @endforeach
+                                <ul class="social-list">
+                                    <li>
+                                        <a href="#" target="_blank">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_blank">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_blank">
+                                            <i class="fab fa-linkedin-in"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_blank">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="single-footer-widget pl-5">
+                                <h3>Company</h3>
+                                <ul class="list">
+                                    <li>
+                                        <a href="#">
+                                            About
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Carrers
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Awards
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            User Program
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Locations
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Login
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="single-footer-widget">
+                                <h3>Lainnya</h3>
+                                @php
+                                $link = \App\Models\Footeerdua::all();
+                                @endphp
+                                <ul class="list">
+                                    @foreach ($footerlink as $f)
+                                    <li><a href="{{ $f->link }}">{{ $f->judul }}</a></li>
+                                    @endforeach
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="single-footer-widget">
+                                <h3>Pengunjung</h3>
+                                <ul class="footer-holder">
+                                    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+                                    <div class="elfsight-app-8ad5f200-9e00-438d-95d7-3ab159095b4f"></div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
 
-
-
-
-    <section class="overview-area ptb-100">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="overview-content">
-                        <h3>Overall 400k+ Our Users Please Get Download Now</h3>
-                        <div class="bar"></div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip commodo.</p>
-                        <div class="overview-btn">
-                            <a href="#" class="default-btn">
-                                Get It Now
-                                <span></span>
+            <div class="copy-right">
+                <div class="container">
+                    <div class="copy-right-content">
+                        <p>
+                            Copyright © 2022 at SMK Muhammadiyah 1 Genteng. Supported by
+                            <a href="https://hibootstrap.com/" target="_blank">
+                                Team Zoe
                             </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="overview-image">
-                        <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/overview.png') }}" alt="image">
+                        </p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
 
-
-
-
-
-
-
-    <section class="team-area pt-100 pb-70">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Expert Team</h2>
-                <div class="bar"></div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidiunt labore et
-                    dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
+            <div class="go-top">
+                <i class="fa fa-chevron-up"></i>
+                <i class="fa fa-chevron-up"></i>
             </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-team">
-                        <div class="image">
-                            <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/team/image1.jpg') }}" alt="image">
-                            <ul class="social">
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class="fab fa-instagram"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class="fab fa-linkedin-in"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                            <div class="content">
-                                <h3>Justin Roberto</h3>
-                                <p>Founder & CEO</p>
-                            </div>
-                        </div>
-                        <button class="prev-arrow slick-arrow">
-                            <i class="fa fa-chevron-left"></i>
-                        </button>
-                        <button class="next-arrow slick-arrow">
-                            <i class="fa fa-chevron-right"></i>
-                        </button>
-                    </div>
-                    <div class="client-thumbnails">
-                        <div>
-                            <div class="item">
-                                <div class="img-fill">
-                                    <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/client/1.jpg') }}"
-                                        alt="client">
-                                </div>
-                                <div class="title">
-                                    <h3>Jonus Nathan</h3>
-                                    <span>CEO at Envato</span>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="img-fill">
-                                    <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/client/2.jpg') }}"
-                                        alt="client">
-                                </div>
-                                <div class="title">
-                                    <h3>Sadio Finn</h3>
-                                    <span>CEO at FlatIcon</span>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="img-fill">
-                                    <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/client/3.jpg') }}"
-                                        alt="client">
-                                </div>
-                                <div class="title">
-                                    <h3>Tom Olivar</h3>
-                                    <span>CEO at ThemeForest</span>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="img-fill">
-                                    <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/client/4.jpg') }}"
-                                        alt="client">
-                                </div>
-                                <div class="title">
-                                    <h3>James Finn</h3>
-                                    <span>CEO at GitLab</span>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="img-fill">
-                                    <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/client/5.jpg') }}"
-                                        alt="client">
-                                </div>
-                                <div class="title">
-                                    <h3>John Lucy</h3>
-                                    <span>CEO at Linkedin</span>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="img-fill">
-                                    <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/client/1.jpg') }}"
-                                        alt="client">
-                                </div>
-                                <div class="title">
-                                    <h3>Sarah Taylor</h3>
-                                    <span>CEO at Twitter</span>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="img-fill">
-                                    <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/client/2.jpg') }}"
-                                        alt="client">
-                                </div>
-                                <div class="title">
-                                    <h3>James Anderson</h3>
-                                    <span>CEO at Facebook</span>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="img-fill">
-                                    <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/client/3.jpg') }}"
-                                        alt="client">
-                                </div>
-                                <div class="title">
-                                    <h3>Steven Smith</h3>
-                                    <span>CEO at EnvyTheme</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
+            <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+            <script src="{{asset('ps/templates.hibootstrap.com/colugo/default/assets/js/jquery.min.js')}}"></script>
+
+            <script src="{{asset('ps/templates.hibootstrap.com/colugo/default/assets/js/bootstrap.bundle.min.js')}}"></script>
+
+            <script src="{{asset('ps/templates.hibootstrap.com/colugo/default/assets/js/owl.carousel.min.js')}}"></script>
+
+            <script src="{{asset('ps/templates.hibootstrap.com/colugo/default/assets/js/jquery.appear.js')}}"></script>
+
+            <script src="{{asset('ps/templates.hibootstrap.com/colugo/default/assets/js/odometer.min.js')}}"></script>
+
+            <script src="{{asset('ps/templates.hibootstrap.com/colugo/default/assets/js/slick.min.js')}}"></script>
+
+            <script src="{{asset('ps/templates.hibootstrap.com/colugo/default/assets/js/particles.min.js')}}"></script>
 
 
+            <script src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/js/jquery.ripples-min.js') }}"></script>
 
+            <script src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/js/jquery.magnific-popup.min.js') }}">
+            </script>
 
+            <script src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/js/wow.min.js') }}"></script>
 
-    {{-- <section class="team-area pt-100 pb-70">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Our Expert Team</h2>
-                    <div class="bar"></div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidiunt labore et
-                        dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="single-team">
-                            <div class="image">
-                                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/team/image1.jpg') }}"
-    alt="image">
-    <ul class="social">
-        <li>
-            <a href="#" target="_blank">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-        </li>
-        <li>
-            <a href="#" target="_blank">
-                <i class="fab fa-twitter"></i>
-            </a>
-        </li>
-        <li>
-            <a href="#" target="_blank">
-                <i class="fab fa-instagram"></i>
-            </a>
-        </li>
-        <li>
-            <a href="#" target="_blank">
-                <i class="fab fa-linkedin-in"></i>
-            </a>
-        </li>
-    </ul>
-    <div class="content">
-        <h3>Justin Roberto</h3>
-        <p>Founder & CEO</p>
-    </div>
-    </div>
-    </div>
-    </div>
-    <div class="col-lg-4 col-md-6">
-        <div class="single-team">
-            <div class="image">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/team/image2.jpg') }}" alt="image">
-                <ul class="social">
-                    <li>
-                        <a href="#" target="_blank">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" target="_blank">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" target="_blank">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" target="_blank">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                    </li>
-                </ul>
-                <div class="content">
-                    <h3>Louis Agassiz</h3>
-                    <p>Co-Founder</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-4 col-md-6">
-        <div class="single-team">
-            <div class="image">
-                <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/team/image3.jpg') }}" alt="image">
-                <ul class="social">
-                    <li>
-                        <a href="#" target="_blank">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" target="_blank">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" target="_blank">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" target="_blank">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                    </li>
-                </ul>
-                <div class="content">
-                    <h3>Carl Anderson</h3>
-                    <p>Web Developer</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-    </div>
+            <script src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/js/jquery.ajaxchimp.min.js') }}"></script>
 
-    </section> --}}
+            <script src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/js/form-validator.min.js') }}"></script>
 
+            <script src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/js/contact-form-script.js') }}"></script>
 
-    {{-- <section class="app-download ptb-100">
-            <div class="container">
-                <div class="app-download-content">
-                    <h3>Download Our Apps Today</h3>
-                    <div class="bar"></div>
-                    <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was
-                        born and I will give you a complete account the system and expound the actual teachings of the great
-                        explore.</p>
-                    <div class="app-holder">
-                        <a href="#">
-                            <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/store/1.png') }}"
-    alt="image">
-    </a>
-    <a href="#">
-        <img src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/store/2.png') }}" alt="image">
-    </a>
-    </div>
-    </div>
-    </div>
-    </section> --}}
+            <script src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/js/main.js') }}"></script>
 
+            <script type="text/javascript" src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="SB-Mid-client-SwazW8iq5q-s8p6I"></script>
 
+<<<<<<< HEAD
     {{-- <section class="blog-area pt-100 pb-70">
             <div class="container">
                 <div class="section-title">
@@ -1136,76 +905,119 @@
                             /* You may add your own implementation here */
                             console.log(result);
                             send_response_to_form(result);
+=======
+            <script type="text/javascript">
+                // For example trigger on button clicked, or any time you need
+                var payButton = document.querySelectorAll('.pay-button');
+                $('.pay-button').click(function() {
+                    // alert('aa')
+         
+                    const biaya_id = $(this).attr('data-biaya_id')
+                    const biaya_gelombang = $(this).attr('data-biaya_gelombang')
+                    const biaya = $(this).attr('data-biaya')
+         
+         
+                    const data = {
+                        biaya_id,
+                        biaya_gelombang,
+                        biaya
+                    }
+         
+                    console.log(data)
+         
+                    console.log("{{ URL::to('/api/snap') }}");
+         
+                    $.ajax({
+                        method: 'post',
+                        url: "{{ URL::to('/api/pendaftaran/snap') }}",
+                        data: data,
+                        dataType: 'JSON',
+                        success: function(e) {
+         
+                            var bebas = document.getElementById('biaya_ids')
+                            // console.log(e)
+                            bebas.value = e.biaya
+         
+                            window.snap.pay(e.snap, {
+                                onSuccess: function(result) {
+                                    /* You may add your own implementation here */
+                                    console.log(result);
+                                    send_response_to_form(result);
+                                },
+                                onPending: function(result) {
+                                    /* You may add your own implementation here */
+                                    console.log(result);
+                                    send_response_to_form(result);
+                                },
+                                onError: function(result) {
+                                    /* You may add your own implementation here */
+                                    console.log(result);
+                                    send_response_to_form(result);
+                                },
+                                onClose: function() {
+                                    /* You may add your own implementation here */
+                                    alert('You closed the popup without finishing the payment');
+                                }
+                            });
+>>>>>>> 102726059bd1b47e8bac11e5d677da3537c61ea4
                         },
-                        onPending: function(result) {
-                            /* You may add your own implementation here */
-                            console.log(result);
-                            send_response_to_form(result);
-                        },
-                        onError: function(result) {
-                            /* You may add your own implementation here */
-                            console.log(result);
-                            send_response_to_form(result);
-                        },
-                        onClose: function() {
-                            /* You may add your own implementation here */
-                            alert('You closed the popup without finishing the payment');
+                        error: function(err) {
+                            console.log(err)
                         }
-                    });
-                },
-                error: function(err) {
-                    console.log(err)
+                    })
+         
+                    // fetch("{{ URL::to('/api/perusahaan/project/snap') }}", {
+                    // method: 'POST',
+                    // headers: {
+                    //     'Content-Type': 'application/json',
+                    // },
+                    // body: JSON.stringify(data),
+                    // })
+                    // .then((response) => response.json())
+                    // .then((data) => {
+                    //     console.log('Success:', data);
+         
+                    //     var bebas = document.getElementById('jobs_ids')
+         
+                    //     bebas.value = data.jobs
+         
+                    //     window.snap.pay(data.snap, {
+                    //         onSuccess: function(result){
+                    //         /* You may add your own implementation here */
+                    //         console.log(result);
+                    //         send_response_to_form(result);
+                    //         },
+                    //         onPending: function(result){
+                    //         /* You may add your own implementation here */
+                    //         console.log(result);
+                    //         send_response_to_form(result);
+                    //         },
+                    //         onError: function(result){
+                    //         /* You may add your own implementation here */
+                    //         console.log(result);
+                    //         send_response_to_form(result);
+                    //         },
+                    //         onClose: function(){
+                    //         /* You may add your own implementation here */
+                    //         alert('You closed the popup without finishing the payment');
+                    //         }
+                    //     })
+                    // })
+                    // .catch((error) => {
+                    //     console.error('Error:', error);
+                    // });
+         
+                })
+         
+                function send_response_to_form(result) {
+                    document.getElementById('json_callback').value = JSON.stringify(result);
+                    $('#submit_form').submit();
                 }
-            })
-
-            // fetch("{{ URL::to('/api/perusahaan/project/snap') }}", {
-            // method: 'POST',
-            // headers: {
-            //     'Content-Type': 'application/json',
-            // },
-            // body: JSON.stringify(data),
-            // })
-            // .then((response) => response.json())
-            // .then((data) => {
-            //     console.log('Success:', data);
-
-            //     var bebas = document.getElementById('jobs_ids')
-
-            //     bebas.value = data.jobs
-
-            //     window.snap.pay(data.snap, {
-            //         onSuccess: function(result){
-            //         /* You may add your own implementation here */
-            //         console.log(result);
-            //         send_response_to_form(result);
-            //         },
-            //         onPending: function(result){
-            //         /* You may add your own implementation here */
-            //         console.log(result);
-            //         send_response_to_form(result);
-            //         },
-            //         onError: function(result){
-            //         /* You may add your own implementation here */
-            //         console.log(result);
-            //         send_response_to_form(result);
-            //         },
-            //         onClose: function(){
-            //         /* You may add your own implementation here */
-            //         alert('You closed the popup without finishing the payment');
-            //         }
-            //     })
-            // })
-            // .catch((error) => {
-            //     console.error('Error:', error);
-            // });
-
-        })
-
-        function send_response_to_form(result) {
-            document.getElementById('json_callback').value = JSON.stringify(result);
-            $('#submit_form').submit();
-        }
-    </script>
-
+            </script>
 </body>
 
+<<<<<<< HEAD
+=======
+
+</html>
+>>>>>>> 102726059bd1b47e8bac11e5d677da3537c61ea4

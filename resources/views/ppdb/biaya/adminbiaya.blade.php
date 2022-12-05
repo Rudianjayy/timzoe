@@ -49,7 +49,8 @@
                                             <th scope="col">Gelombang</th>
                                             <th scope="col">Penjelasan</th>
                                             <th scope="col">Biaya</th>
-                                            <th scope="col">Jadwal</th>
+                                            <th scope="col">Tanggal Mulai</th>
+                                            <th scope="col">Tanggal Ditutup</th>
                                             <th scope="col">Aksi</th>
                                         </tr>
                                     </thead>
@@ -64,7 +65,8 @@
                                                 <td>{{ $d->gelombang }}</td>
                                                 <td>{{ $d->penjelasan }}</td>
                                                 <td>Rp.{{ number_format($d['biaya'], 2, '.', '.') }}</td>
-                                                <td>{{ $d->jadwal }}</td>
+                                                <td>{{ $d->jadwal_mulai }}</td>
+                                                <td>{{ $d->jadwal_ditutup }}</td>
 
 
                                                 <td class="align-center">

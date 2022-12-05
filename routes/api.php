@@ -24,3 +24,8 @@ Route::post('pendaftaran/snap', [PpdbController::class, 'snap']);
 
 Route::post('payment-handler', [ApiController::class, 'payment_handler']);
 
+
+Route::post('bayaruser/show', [PpdbController::class, 'show']);
+
+Route::post('pembayaran', [ApiController::class, 'pembayaran']);
+

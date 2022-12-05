@@ -18,7 +18,8 @@ return new class extends Migration
             $table->string('gelombang');
             $table->string('penjelasan');
             $table->bigInteger('biaya');
-            $table->string('jadwal');
+            $table->string('jadwal_mulai');
+            $table->string('jadwal_ditutup');
             $table->timestamps();
         });
     }

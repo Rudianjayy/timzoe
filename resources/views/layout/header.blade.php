@@ -48,8 +48,6 @@
                                 @endif
 
                                 {{--  <p><span class="meta-time">1 minute ago</span> . <span class="meta-member-notification">4 members</span></p>  --}}
-
-
                             </div>
 
                         </div>

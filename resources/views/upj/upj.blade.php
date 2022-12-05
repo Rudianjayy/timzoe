@@ -101,16 +101,13 @@
                 50% {
                     background-image: url('{{ asset('fotomahasiswa/' . $ul->foto_slider3) }}');
                 }
-
                 75% {
                     background-image: url('{{ asset('fotomahasiswa/' . $ul->foto_slider4) }}');
                 }
-
                 100% {
                     background-image: url('{{ asset('fotomahasiswa/' . $ul->foto_slider2) }}');
-                }
+                } 
             }
-
             @endforeach
 
         </style>
@@ -126,7 +123,7 @@
             </div>
             <div class="banner3">
                 <img class="img-slider3" src="{{ asset('fotomahasiswa/' . $ul->foto_slider3) }}" >
-            </div>
+            </div>iiiiui
             <div class="banner4">
                 <img class="img-slider3" src="{{ asset('fotomahasiswa/' . $ul->foto_slider4) }}" >
             </div> -->

@@ -36,8 +36,17 @@
     <link href="{{ asset('admintemp/adminnew/riski/nopan/plugins/sweetalerts/sweetalert.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('admintemp/adminnew/riski/nopan/assets/css/ui-kit/custom-sweetalert.css') }}" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('admintemp/adminnew/riski/nopan/assets/css/modules/modules-card.css') }}">    
+    <link href="{{ asset('admintemp/adminnew/riski/nopan/plugins/pricing-table/css/demo.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('admintemp/adminnew/riski/nopan/plugins/pricing-table/css/component.css') }}" rel="stylesheet" type="text/css" />
+
 
     <link href="{{ asset('admintemp/adminnew/riski/nopan/assets/css/ui-kit/tabs-accordian/custom-tabs.css') }}" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="{{ asset('admintemp/adminnew/riski/nopan/plugins/jqvalidation/custom-jqBootstrapValidation.css') }}">
+
+    <!-- BEGIN PAGE LEVEL PLUGINS -->
+    <link href="{{ asset('admintemp/adminnew/riski/nopan/plugins/animate/animate.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('admintemp/adminnew/riski/nopan/assets/css/modals/component.css') }}" rel="stylesheet" type="text/css" />
+    <!-- END PAGE LEVEL PLUGINS -->
 
 </head>

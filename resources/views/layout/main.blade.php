@@ -239,8 +239,6 @@
                             </div>
 
                         </div>
-div
-
                         <div class="today mt-5">
 
                             <div class="d-flex justify-content-between mb-5">

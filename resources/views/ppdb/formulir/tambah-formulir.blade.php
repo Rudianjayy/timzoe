@@ -5,6 +5,11 @@
     <head>
         @include('layout.css')
         <title>Formulir Pendaftaran</title>
+        <script src="{{ asset('admintemp/adminnew/riski/nopan/plugins/sweetalerts/promise-polyfill.js') }}"></script>
+        <link rel="stylesheet" type="text/css" href="{{ asset('admintemp/adminnew/riski/nopan/plugins/jquery-step/jquery.steps.css') }}">
+        <link href="{{ asset('admintemp/adminnew/riski/nopan/assets/css/ecommerce/ecommerce-wizards.css') }}" rel="stylesheet" type="text/css">
+        <link href="{{ asset('admintemp/adminnew/riski/nopan/plugins/sweetalerts/sweetalert2.min.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('admintemp/adminnew/riski/nopan/plugins/sweetalerts/sweetalert.css') }}" rel="stylesheet" type="text/css" />
     </head>
 
     <body>
@@ -12,57 +17,53 @@
 
         <div class="container" mb-5>
 
-            <div class="row layout-spacing">
-                <div class="col-lg-12 layout-spacing">
-                    <div class="statbox widget box box-shadow">
-                        <div class="widget-header border-bottom border-default">
+            <div class="row margin-bottom-120" id="cancel-row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="statbox widget box box-shadow" id="form_wizard">
+                        <div class="widget-header">
                             <div class="row">
                                 <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                    <h4>Validation</h4>
+                                    <h4>Payment Wizard - <span class="step-title">Step 1 of 4</span></h4>
                                 </div>
                             </div>
                         </div>
                         <div class="widget-content widget-content-area">
-
-                            <form id="f-validation" class="underline-content" method="get">
-                                <div id="validation">
-                                    <ul class="nav nav-tabs  mb-4 justify-content-between" id="vValidation" role="tablist">
-                                        <li class="nav-item">
-                                            <a class="nav-link nav-item active btn-rounded" id="rounded-pills-home-tab4" data-toggle="tab" href="#simple-ex-2-1" role="tab"  aria-selected="false"><i class="flaticon-home-fill-1"></i> Pembayaran</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link nav-item btn-rounded" id="rounded-pills-profile-tab4" data-toggle="tab" href="#simple-ex-2-2" role="tab" aria-selected="true"><i class="flaticon-user-7"></i> Formulir</a>
-
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link nav-item btn-rounded" id="ronded-pills-contact-tab4" data-toggle="tab" href="#simple-ex-2-3" role="tab" aria-selected="false"><i class="flaticon-telephone"></i> Info</a>
-                                        </li>
-                                    </ul>
-                                    <div class="tab-content form-valid" id="vValidationContent">
-                                        <div class="tab-pane fade show active" id="simple-ex-2-1" role="tabpanel">
-                                            <div class="form-group control-group mb-4">
-                                                <label class="control-label" for="f_name">Name</label>
-                                                <div class="controls">
-                                                    <input type="text" class="form-control" id="f_name" name="f_name" value="{{ Auth::user()->name }}" placeholder="Enter Full Name" required>
-                                                    <p class="help-block"></p>
-                                                </div>
+                            <div id="circle-basic" class="mt-5 mb-5">
+                                <h3>
+                                    <span class="icon">
+                                        <i class="done flaticon-double-check" style="display: none;"></i>
+                                        <i class="active flaticon-user-7" style="display: none"></i>
+                                    </span>
+                                    <span class="mt-3">Pembayaran</span>
+                                </h3>
+                                <section>
+                                    <h5 class="mt-5 mb-5 w-title text-danger">"Silahkan melakukan pembayaran terlebih dahulu untuk menuju langkah berikutnya!!"</h5>
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-sm-6 col-12">
+                                                <input type="text" class="form-control mt-3 mb-5" value="{{ Auth::user()->name }}" readonly placeholder="Username">
                                             </div>
-                                            <div class="form-group control-group mb-4">
-                                                <label class="control-label"  for="f_Email1">Email address</label>
-                                                <div class="controls">
-                                                    <input type="email" class="form-control" id="f_Email1" name="f_Email1" value="{{ Auth::user()->email }}" placeholder="Enter email" required>
-                                                    <p class="help-block"></p>
-                                                </div>
+                                            <div class="col-sm-6 col-12">
+                                                <input type="text" class="form-control mt-3 mb-5" value="{{ Auth::user()->email }}" readonly placeholder="Email">
                                             </div>
-                                            {{-- <div class="form-group control-group mb-4">
-                                                <label class="control-label"  for="f_password1">Password</label>
-                                                <div class="controls">
-                                                    <input type="password" class="form-control" id="f_password1" name="f_password1" placeholder="Password" required>
-                                                    <p class="help-block"></p>
-                                                </div>
-                                            </div> --}}
+                                            <div class="col-sm-6 col-12">
+                                                <input type="number" class="form-control mt-3 mb-5" value="{{ Auth::user()->notelpon }}" placeholder="Notelpon">
+                                            </div>
+                                            
                                         </div>
-                                        <div class="tab-pane fade" id="simple-ex-2-2" role="tabpanel">
+                                    </form>
+                                </section>
+                                <h3>
+                                    <span class="icon">
+                                        <i class="done flaticon-double-check" style="display: none;"></i>
+                                        <i class="active flaticon-placeholder-fill" style="display: none"></i>
+                                    </span>
+                                    <span class="mt-3">Formulir Pendaftaran</span>
+                                </h3>
+                                <section>
+                                    <h5 class="mt-5 mb-5 w-title">Silahkan mengisi formulir sesuai data anda!</h5>
+                                        <form action="/submitdata27" method="POST" enctype="multipart/form-data">
+                                            @csrf
                                             <div class="form-group mb-4">
                                                 <label for="nama_peserta">Nama Sesuai Ijazah*</label>
                                                 <input type="text" name="nama_peserta" class="form-control" id="nama_peserta">
@@ -122,6 +123,7 @@
                                                     <option value="kristen">Kristen</option>
                                                     <option value="hindu">Hindu</option>
                                                     <option value="budha">Budha</option>
+                                                    <option value="jawa">Jawa</option>
                                                 </select>
                                                 @error('agama')
                                                     <div class="alert alert-danger">{{ $message }}</div>
@@ -311,42 +313,85 @@
                                                 <div class="alert alert-danger">{{ $message }}</div>
                                             @enderror
             
+            
+            
+            
+                                            <button class="btn btn-success btn-rounded my-4  confirm-cash">Simpan</button>
+                                        </form>
+                                </section>
+                                <h3>
+                                    <span class="icon">
+                                        <i class="done flaticon-double-check" style="display: none;"></i>
+                                        <i class="active flaticon-document-3" style="display: none"></i>
+                                    </span>
+                                    <span class="mt-3">Info</span>
+                                </h3>
+                                <section>
+                                    <h5 class="mt-5 mb-5 w-title">Info</h5>
+                                    <div class="row">
+                                        <div class="col-xl-4 col-12">
+                                            <div class="total-amount text-center">
+                                                <i class="flaticon-cart-bag-1"></i>
+                                                <h6>Order Total</h6>
+                                                <p class="t-amount mb-2 mt-2">26,500</p>
+                                                <p class="t-product">7 Products</p>
+                                            </div>
                                         </div>
-                                        <div class="tab-pane fade" id="simple-ex-2-3" role="tabpanel">
-                                            <div class="form-group  control-group mb-4">
-                                                <label class="control-label" for="f_location">Location</label>
-                                                <div class="controls">
-                                                    <input type="text" class="form-control"  id="f_location" name="f_location" placeholder="Location" required>
-                                                    <p class="help-block"></p>
+                                        <div class="col-xl-8 col-12 mt-xl-0 mt-4">
+                                            <div class="order-product-list">
+                                                <div class="table-responsive">
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col">Product</th>
+                                                                <th scope="col">Qty</th>
+                                                                <th scope="col">Price</th>
+                                                                <th scope="col">Action</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th>
+                                                                    <span>Gaming Monitor</span>
+                                                                    <p>SKU-001</p>
+                                                                </th>
+                                                                <td>4</td>
+                                                                <td class="pricing">$3488</td>
+                                                                <td><i class="flaticon-cancel-12"></i></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    <span>Electric Shaver</span>
+                                                                    <p>SKU-002</p>
+                                                                </th>
+                                                                <td>2</td>
+                                                                <td class="pricing">$105</td>
+                                                                <td><i class="flaticon-cancel-12"></i></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    <span>Microwave</span>
+                                                                    <p>SKU-003</p>
+                                                                </th>
+                                                                <td>1</td>
+                                                                <td class="pricing">$999</td>
+                                                                <td><i class="flaticon-cancel-12"></i></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
                                                 </div>
                                             </div>
-                                            <div class="form-group  control-group">
-                                                <label class="control-label" for="f_skill">Skill</label>
-                                                <div class="controls">
-                                                    <select class="form-control" id="f_skill" name="f_skill" required>
-                                                      <option value="">Select Your Skill</option>
-                                                      <option>CSS</option>
-                                                      <option>Photoshop</option>
-                                                      <option>PHP</option>
-                                                      <option>Boostrap</option>
-                                                    </select>
-                                                </div>
-                                            </div>
                                         </div>
-                                        <ul class="pagination justify-content-between pager wizard mt-4">
-                                           <li class="previous mt-3"><a href="javascript:void(0);" class="btn-rounded bg-primary btn-primary ml-1">previous</a></li>
-                                            <li class="next mt-3"><a href="javascript:void(0);" class="btn-rounded bg-primary btn-primary ml-1">Next</a></li>
-                                        </ul>
                                     </div>
-                                </div>
-                            </form>
-
+                                </section>
+                                
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-           
+
         </div>
 
         <!-- Optional JavaScript; choose one of the two! -->
@@ -367,11 +412,7 @@
         <script src="https://cdn.tiny.cloud/1/z3vshivvjuw47heg0vg12ouq5rr8i7ckkxmmjadvrhgsynq8/tinymce/6/tinymce.min.js"
             referrerpolicy="origin"></script>
 
-        <script>
-            tinymce.init({
-                selector: '#mytextarea'
-            });
-        </script>
+    
 
         <!-- Option 2: Separate Popper and Bootstrap JS -->
 
@@ -381,7 +422,42 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
             integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
         </script>
-
         @include('layout.script')
+        <script src="{{ asset('admintemp/adminnew/riski/nopan/plugins/jquery-step/jquery.steps.min.js') }}"></script>
+        <script src="{{ asset('admintemp/adminnew/riski/nopan/plugins/sweetalerts/sweetalert2.min.js') }}"></script>
+        <script>
+            $("#circle-basic").steps({
+                headerTag: "h3",
+                bodyTag: "section",
+                transitionEffect: "slideLeft",
+                autoFocus: true,
+                titleTemplate: '#title#',
+                cssClass: 'circle wizard',
+                onFinished: function(event, currentIndex) {
+                    swal('Order Placed!', 'Your order has been successfully placed', 'success')
+                }
+            });
+            $('.confirm-credit').on('click', function() {
+                swal({
+                    title: 'Your Credit Card Payment is Successfull!',
+                    text: "Please click on finish button to place your order.",
+                    type: 'success',
+                })
+            })
+            $('.confirm-paypal').on('click', function() {
+                swal({
+                    title: 'Your Credit Paypal Payment is Successfull!',
+                    text: "Please click on finish button to place your order.",
+                    type: 'success',
+                })
+            })
+            $('.confirm-cash').on('click', function() {
+                swal({
+                    title: 'Pay cash on delivery!',
+                    text: "Please click on finish button to place your order.",
+                    type: 'success',
+                })
+            })
+        </script>
     </body>
 @endsection

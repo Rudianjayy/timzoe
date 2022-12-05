@@ -91,7 +91,7 @@ Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
 
 
 
-//footerPPDB
+    //footerPPDB
 
 Route::get('/adminfooterppdb', [FooteerController::class, 'adminfooterppdb'])->name('adminfooterppdb');
 Route::get('/tambahfooterppdb', [FooteerController::class, 'tambahfooterppdb'])->name('tambahfooterppdb');
@@ -759,7 +759,7 @@ Route::group(['middleware' => ['auth', 'hakakses:admin,user']], function () {
         $bulan = Formulir::select(DB::raw("YEAR(created_at) as bulan"))
         ->GroupBy(DB::raw("YEAR(created_at)"))
         ->pluck('bulan');
-        
+
         return view('welcome', compact('berita', 'galery', 'prestasi', 'mitra','status','bulan','formulir','formulird','total','formulirp'));
     })->middleware('auth');
 

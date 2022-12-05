@@ -155,6 +155,6 @@
     <script src="{{ asset('landing/html/bidzend/assets/js/main.js') }}"></script>
 </body>
 
-<!-- Mirrored from themesflat.com/html/bidzend/item-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Sep 2022 01:13:11 GMT -->
+<!-- Mirrored from themesflat.com/html/bidzend/item-deetails.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Sep 2022 01:13:11 GMT -->
 
 </html>

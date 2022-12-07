@@ -42,11 +42,11 @@
                         <div class="widget-content widget-content-area">
                             <div class="table-responsive mb-4">
                                 <table id="ecommerce-product-list" class="table  table-bordered">
-                                    {{--  <div>
+                                    <div>
                                         <a href="/tambahosis" class="btn btn-primary mt-5"
                                             id="kt_account_profile_details_submit">Tambah
                                             +</a>
-                                    </div>  --}}
+                                    </div>
                                     <thead>
                                         <tr>
 

@@ -93,13 +93,14 @@
                                                 <td>{{ $i->nisn }}</td>
                                                 <td>{{ $i->nik }}</td>
                                                 <td>{{ $i->nokk }}</td>
+                                               
                                                 <td>
-                                                    <a href="{{ asset(' /' . $i->foto_kk) }}" data-lightbox="whatever">
+                                                    <a href="{{ asset('fotomahasiswa/' . $i->foto_kk) }}"
+                                                        data-lightbox="whatever">
                                                         <img src="{{ asset('fotomahasiswa/' . $i->foto_kk) }}"
                                                             alt="" style="width: 80px;">
                                                     </a>
                                                 </td>
-                                             
                                                 <td>{{ $i->status_anak }}</td>
                                                 <td>{{ $i->alamat_rumah }}</td>
                                                 <td>{{ $i->nama_ayah }}</td>

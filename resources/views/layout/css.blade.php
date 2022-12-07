@@ -8,6 +8,7 @@
     @if (auth()->user()->role == 'user')
         <title>User | SMK Muhammadiyah 1 Genteng</title>
     @endif
+    
     <link rel="icon" type="image/x-icon" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}"/>
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     <link href="{{ asset('admintemp/adminnew/riski/nopan/assets/css/loader.css') }}" rel="stylesheet" type="text/css" />
@@ -48,5 +49,10 @@
     <link href="{{ asset('admintemp/adminnew/riski/nopan/plugins/animate/animate.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('admintemp/adminnew/riski/nopan/assets/css/modals/component.css') }}" rel="stylesheet" type="text/css" />
     <!-- END PAGE LEVEL PLUGINS -->
+    <link href="{{ asset('admintemp/adminnew/riski/nopan/plugins/notification/toastr/toastr.min.css') }}" rel="stylesheet" type="text/css" />
+    <!-- END PAGE LEVEL PLUGINS -->
 
+    <!--  BEGIN CUSTOM STYLE FILE  -->
+    <link href="{{ asset('admintemp/adminnew/riski/nopan/assets/css/ui-kit/custom-notification.css') }}" rel="stylesheet" type="text/css" />
+    <!--  END CUSTOM STYLE FILE  -->    
 </head>

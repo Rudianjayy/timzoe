@@ -36,38 +36,6 @@
                                 <h3>
                                     <span class="icon">
                                         <i class="done flaticon-double-check" style="display: none;"></i>
-                                        <i class="active flaticon-user-7" style="display: none"></i>
-                                    </span>
-                                    <span class="mt-3">Pembayaran</span>
-                                </h3>
-                                <section>
-                                    @if ($status_pay == null)
-                                        <h5 class="mt-5 mb-5 w-title text-danger">"Anda belum melakukan pembayaran , lakukan
-                                            terlebih dahulu untuk menuju langkah berikutnya!!"</h5>
-                                    @endif
-
-                                    <form>
-                                        <div class="row">
-                                            <div class="col-sm-6 col-12">
-                                                <input type="text" class="form-control mt-3 mb-5"
-                                                    value="{{ Auth::user()->name }}" readonly placeholder="Username">
-                                            </div>
-                                            <div class="col-sm-6 col-12">
-                                                <input type="text" class="form-control mt-3 mb-5"
-                                                    value="{{ Auth::user()->email }}" readonly placeholder="Email">
-                                            </div>
-                                            <div class="col-sm-6 col-12">
-                                                <input type="number" class="form-control mt-3 mb-5"
-                                                    value="{{ Auth::user()->notelpon }}" placeholder="Notelpon">
-                                            </div>
-
-                                        </div>
-                                    </form>
-                                    
-                                </section>
-                                <h3>
-                                    <span class="icon">
-                                        <i class="done flaticon-double-check" style="display: none;"></i>
                                         <i class="active flaticon-placeholder-fill" style="display: none"></i>
                                     </span>
                                     <span class="mt-3">Formulir Pendaftaran</span>
@@ -330,6 +298,7 @@
                                         @error('ukuran_kaos')
                                             <div class="alert alert-danger">{{ $message }}</div>
                                         @enderror
+                                        <button type="submit" class="btn btn-button-7 mb-4 mt-3">Kirim</button>
                                     </form>
                                 </section>
                                 <h3>

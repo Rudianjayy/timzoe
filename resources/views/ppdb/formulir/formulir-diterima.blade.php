@@ -96,13 +96,13 @@
                                                 <td>{{ $i->nik }}</td>
                                                 <td>{{ $i->nokk }}</td>
                                                 <td>
-                                                    <a href="{{ asset(' /' . $i->foto_kk) }}"
-                                                        data-lightbox="wtf">
+                                                    <a href="{{ asset('fotomahasiswa/' . $i->foto_kk) }}"
+                                                        data-lightbox="whatever">
                                                         <img src="{{ asset('fotomahasiswa/' . $i->foto_kk) }}"
                                                             alt="" style="width: 80px;">
                                                     </a>
                                                 </td>
-                                                
+
                                                 <td>{{ $i->status_anak }}</td>
                                                 <td>{{ $i->alamat_rumah }}</td>
                                                 <td>{{ $i->nama_ayah }}</td>
@@ -126,15 +126,17 @@
                                                 @else
                                                     <td></td>
                                                 @endif
-                                                <td><span class="badge badge-pills outline-badge-success">{{ $i->status }}</span></td>
+                                                <td><span
+                                                        class="badge badge-pills outline-badge-success">{{ $i->status }}</span>
+                                                </td>
 
                                                 @if ($i->status == 'pending')
                                                     <td class="align-center">
                                                         <ul class="table-controls">
                                                             <form action="/setuju/{{ $i->id }}" method="POST">
                                                                 @csrf
-                                                                <input type="hidden" name="nisn"
-                                      `                              value="{{ $i->nisn }}">
+                                                                <input type="hidden" name="nisn" `
+                                                                    value="{{ $i->nisn }}">
                                                                 <li>
                                                                     <button type="submit" title="Terima">
                                                                         <i class="flaticon-single-circle-tick"></i>
@@ -165,6 +167,8 @@
 
     </body>
     @include('layout.script')
+    
+
     <script src="{{ asset('dist/js/lightbox-plus-jquery.min.js') }}"></script>
     <script>
         @if (Session::has('success'))

@@ -65,9 +65,6 @@
                                 </div>
 
 
-
-
-
                                 <button type="submit" class="btn btn-primary">Submit</button>
                                 <a href="/adminteam" class="btn btn-danger">Kembali</a>
                             </form>

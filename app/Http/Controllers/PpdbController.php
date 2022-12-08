@@ -31,15 +31,11 @@ class PpdbController extends Controller
         $info = info::all();
         $biaya = biaya::all();
         $langkah = Langkahpendaftaran::all();
-<<<<<<< HEAD
-        return view('ppdb.pendaftaran', compact('dp','pd','kontak','cp','footerppdb','info','biaya','langkah','footerlink','ab'));
-=======
         $total = Formulir::count();
         $formulir = Formulir::where('status', '=', 'diterima')->count();
         $formulird = Formulir::where('status', '=', 'ditolak')->count();
         $formulirp = Formulir::where('status', '=', 'pending')->count();
         return view('ppdb.pendaftaran', compact('dp', 'pd', 'kontak', 'cp', 'footerppdb', 'info', 'biaya', 'langkah', 'footerlink', 'formulir', 'formulird', 'total', 'formulirp'));
->>>>>>> 102726059bd1b47e8bac11e5d677da3537c61ea4
     }
     public function snap(Request $request){
         // Set your Merchant Server Key
@@ -492,13 +488,15 @@ class PpdbController extends Controller
     public function userformulir()
     {
         $data4 = Formulir::all();
-        return view('ppdb.formulir.formulir-user', compact('data4'));
+        $status_pay = Payment::where('id_user',Auth::user()->id)->first();
+
+        return view('ppdb.formulir.formulir-user', compact('data4','status_pay'));
     }
 
 
     public function setuju(Request $request, $id)
     {
-        $data = Formulir::find($id);
+        $data = Formulir::find($id);                        
         $data->update([
             'status' => 'diterima',
             'barcode' => $request->nisn,

@@ -85,7 +85,7 @@
                             <p>{!! $data->deskripsi_kompetensi2!!} </p>
 
                             <p>{!! $data->deskripsi_detail2 !!}</p>
-                            {{-- <div class="row">
+                            {{-- <div class="row">  
                                 <div class="col-sm-4">
                                     <img src="{{ asset('landingppdb/ppdb/style/assets/images/blog/blog-d-1-1.jpg') }}" alt="" class="img-fluid2">
                                 </div><!-- /.col-md-4 -->

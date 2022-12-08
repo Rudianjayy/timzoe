@@ -91,18 +91,23 @@
                     </a>
                     @endif
                     <ul class="collapse submenu list-unstyled" id="tentangkami" data-parent="#accordionExample">
+                        @php
+                            $formulir_bayar = App\Models\Formulir::where('id_user',Auth::user()->id)->get();
+                        @endphp
                         <li>
 
                             @if ($status_pay == null)
                                 <a href="/bayaruser" hidden>Isi Formulir</a>
                             @elseif($status_pay->status == 'pending')
                                 <a href="/bayaruser">Isi Formulir</a>
-                            @elseif($status_pay->status == 'settlement')
+                            @elseif($status_pay->status == 'settlement' && $formulir_bayar == null  )
                                 <a href="/tambahformulir">Isi Formulir</a>
+                            @elseif($formulir_bayar)
+                                <a href="/userformulir" >Formulir Anda</a>
                             @endif
                         </li>
 
-                    </ul>
+                    </ul>   
                 </li>
             @endif
             {{-- @if (auth()->user()->role == 'admin')

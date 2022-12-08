@@ -23,7 +23,7 @@
                                             <div class="col-md-12">
                                                 <div class="card">
                                                     <div class="card-header">
-                                                        Deskripsi Detail
+                                                    Deskripsi Info
                                                     </div>
                                                     <div class="card-body">
                                                         <textarea name="deskripsi" id="mytextarea">{{ $data->deskripsi_detail }}</textarea>
@@ -54,6 +54,8 @@
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
             integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
         </script>
+        <script src="https://cdn.ckeditor.com/ckeditor5/35.3.2/classic/ckeditor.js"></script>
+        @yield('script')
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
             integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
         </script>
@@ -66,4 +68,15 @@
             document.getElementById('dosen').value = dosen;
         }
     </script>
+@endsection
+
+@section('script')
+<script>
+    ClassicEditor
+        .create( document.querySelector( '#script' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+</script>
+
 @endsection

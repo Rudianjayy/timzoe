@@ -235,7 +235,7 @@
                     </div><!-- /.col-lg-4 col-md-6 col-sm-12 -->
                 @endforeach
             </div><!-- /.row -->
-
+`
         </div><!-- /.container -->
     </section><!-- /.portfolio-grid -->
 

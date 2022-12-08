@@ -153,7 +153,7 @@ class PpdbController extends Controller
     }
 
 
- 
+
 
 
 
@@ -555,7 +555,7 @@ class PpdbController extends Controller
             'tanggal_lahir' => $request->tanggal_lahir,
             'agama' => $request->agama,
             'nisn' => $request->nisn,
-            'nik' => $request->nik,
+            'nik' =>$request->nik,
             'nokk' => $request->nokk,
             'foto_kk' => $request->foto_kk,
             'status_anak' => $request->status_anak,
@@ -580,7 +580,7 @@ class PpdbController extends Controller
             $data4->foto_kk = $request->file('foto_kk')->getClientOriginalName();
             $data4->save();
         }
-        
+
         return redirect()->route('userformulir')->with('success', ' Data Berhasil di Tambahkan!');
     }
 
@@ -602,7 +602,7 @@ class PpdbController extends Controller
     {
         $pricing = biaya::all();
         $status_pay = Payment::where('id_user',Auth::user()->id)->first();
-        
+
         return view('ppdb.bayardaftar.bayar-user',compact('pricing','status_pay'));
     }
 
@@ -663,7 +663,7 @@ class PpdbController extends Controller
             'gelombang' => $request->gelombang,
             'penjelasan' => $request->penjelasan,
             'jadwal_mulai' => $request->jadwal_mulai,
-            'jadwal_ditutup' => $request->jadwal_ditutup,           
+            'jadwal_ditutup' => $request->jadwal_ditutup,
              'biaya' => $request->biaya,
             // dd($request->biaya)
 

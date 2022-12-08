@@ -58,20 +58,48 @@
                 </li>
             @endif
             @if (auth()->user()->role == 'user')
-                <li class="menu-title">Menu</li>
+
+
+
+                @php
+                    $status_pay = App\Models\Payment::where('id_user', Auth::user()->id)->first();
+                @endphp
                 <li class="menu">
-                    <a href="#tentangkami" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+
+
+                    @if ($status_pay == null) 
+                    <a href="#tentangkami" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" hidden>
+
                         <div class="">
                             <i class="flaticon-menu-list"></i>
-                            <span>formulir</span>
+                            <span>Formulir</span>
                         </div>
                         <div>
                             <i class="flaticon-right-arrow"></i>
                         </div>
                     </a>
+                    @elseif ($status_pay->status == 'settlement')
+                    <a href="#tentangkami" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+
+                        <div class="">
+                            <i class="flaticon-menu-list"></i>
+                            <span>Formulir</span>
+                        </div>
+                        <div>
+                            <i class="flaticon-right-arrow"></i>
+                        </div>
+                    </a>
+                    @endif
                     <ul class="collapse submenu list-unstyled" id="tentangkami" data-parent="#accordionExample">
                         <li>
-                            <a href="/tambahformulir"> Formulir</a>
+
+                            @if ($status_pay == null)
+                                <a href="/bayaruser" hidden>Isi Formulir</a>
+                            @elseif($status_pay->status == 'pending')
+                                <a href="/bayaruser">Isi Formulir</a>
+                            @elseif($status_pay->status == 'settlement')
+                                <a href="/tambahformulir">Isi Formulir</a>
+                            @endif
                         </li>
 
                     </ul>
@@ -148,298 +176,300 @@
                 </li>
             @endif
             @if (auth()->user()->role == 'admin')
-            <li class="menu">
-                <a href="#kesiswaan" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                    <div class="">
-                        <i class="flaticon-plus"></i>
-                        <span>Kesiswaan</span>
-                    </div>
-                    <div>
-                        <i class="flaticon-right-arrow"></i>
-                    </div>
-                </a>
-                <ul class="collapse submenu list-unstyled" id="kesiswaan" data-parent="#accordionExample">
-                    <li>
-                        <a href="/dataakademi"> Akademi</a>
-                    </li>
-                    <li>
-                        <a href="/ekstrakulikuleradmin">Ekstrakurikuler</a>
-                    </li>
-                    <li>
-                        <a href="/osisadmin">Osis</a>
-                    </li>
-                    <li>
-                        <a href="/alumniadmin">Alumni</a>
-                    </li>
-                </ul>
-            </li>
+                <li class="menu">
+                    <a href="#kesiswaan" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <div class="">
+                            <i class="flaticon-plus"></i>
+                            <span>Kesiswaan</span>
+                        </div>
+                        <div>
+                            <i class="flaticon-right-arrow"></i>
+                        </div>
+                    </a>
+                    <ul class="collapse submenu list-unstyled" id="kesiswaan" data-parent="#accordionExample">
+                        <li>
+                            <a href="/dataakademi"> Akademi</a>
+                        </li>
+                        <li>
+                            <a href="/ekstrakulikuleradmin">Ekstrakurikuler</a>
+                        </li>
+                        <li>
+                            <a href="/osisadmin">Osis</a>
+                        </li>
+                        <li>
+                            <a href="/alumniadmin">Alumni</a>
+                        </li>
+                    </ul>
+                </li>
             @endif
             @if (auth()->user()->role == 'admin')
-            <li class="menu">
-                <a href="#iduka" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                    <div class="">
-                        <i class="flaticon-menu-4"></i>
-                        <span>Iduka</span>
-                    </div>
-                    <div>
-                        <i class="flaticon-right-arrow"></i>
-                    </div>
-                </a>
-                <ul class="collapse submenu list-unstyled" id="iduka" data-parent="#accordionExample">
-                    <li>
-                        <a href="/idukaadmin">Iduka</a>
-                    </li>
-                    <li>
-                        <a href="/fotomouadmin">Foto Mou</a>
-                    </li>
-                    <li>
-                        <a href="/albumiduka">Album Mou</a>
-                    </li>
-                </ul>
-            </li>
+                <li class="menu">
+                    <a href="#iduka" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <div class="">
+                            <i class="flaticon-menu-4"></i>
+                            <span>Iduka</span>
+                        </div>
+                        <div>
+                            <i class="flaticon-right-arrow"></i>
+                        </div>
+                    </a>
+                    <ul class="collapse submenu list-unstyled" id="iduka" data-parent="#accordionExample">
+                        <li>
+                            <a href="/idukaadmin">Iduka</a>
+                        </li>
+                        <li>
+                            <a href="/fotomouadmin">Foto Mou</a>
+                        </li>
+                        <li>
+                            <a href="/albumiduka">Album Mou</a>
+                        </li>
+                    </ul>
+                </li>
             @endif
             @if (auth()->user()->role == 'admin')
-            <li class="menu">
-                <a href="#muhinews" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                    <div class="">
-                        <i class="flaticon-shuffle-4"></i>
-                        <span>Muhinews</span>
-                    </div>
-                    <div>
-                        <i class="flaticon-right-arrow"></i>
-                    </div>
-                </a>
-                <ul class="collapse submenu list-unstyled" id="muhinews" data-parent="#accordionExample">
-                    <li>
-                        <a href="/muhinewsadmin">Muhinews</a>
-                    </li>
-                    <li>
-                        <a href="/kategoriberita">Kategori Muhinews </a>
-                    </li>
+                <li class="menu">
+                    <a href="#muhinews" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <div class="">
+                            <i class="flaticon-shuffle-4"></i>
+                            <span>Muhinews</span>
+                        </div>
+                        <div>
+                            <i class="flaticon-right-arrow"></i>
+                        </div>
+                    </a>
+                    <ul class="collapse submenu list-unstyled" id="muhinews" data-parent="#accordionExample">
+                        <li>
+                            <a href="/muhinewsadmin">Muhinews</a>
+                        </li>
+                        <li>
+                            <a href="/kategoriberita">Kategori Muhinews </a>
+                        </li>
 
-                </ul>
-            </li>
+                    </ul>
+                </li>
             @endif
             @if (auth()->user()->role == 'operator2')
-            <li class="menu">
-                <a href="#muhinews" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                    <div class="">
-                        <i class="flaticon-shuffle-4"></i>
-                        <span>Muhinews</span>
-                    </div>
-                    <div>
-                        <i class="flaticon-right-arrow"></i>
-                    </div>
-                </a>
-                <ul class="collapse submenu list-unstyled" id="muhinews" data-parent="#accordionExample">
-                    <li>
-                        <a href="/muhinewsadmin">Muhinews</a>
-                    </li>
-                    <li>
-                        <a href="/kategoriberita">Kategori Muhinews </a>
-                    </li>
+                <li class="menu">
+                    <a href="#muhinews" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <div class="">
+                            <i class="flaticon-shuffle-4"></i>
+                            <span>Muhinews</span>
+                        </div>
+                        <div>
+                            <i class="flaticon-right-arrow"></i>
+                        </div>
+                    </a>
+                    <ul class="collapse submenu list-unstyled" id="muhinews" data-parent="#accordionExample">
+                        <li>
+                            <a href="/muhinewsadmin">Muhinews</a>
+                        </li>
+                        <li>
+                            <a href="/kategoriberita">Kategori Muhinews </a>
+                        </li>
 
-                </ul>
-            </li>
+                    </ul>
+                </li>
             @endif
             @if (auth()->user()->role == 'admin')
-            <li class="menu">
-                <a href="#upj" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                    <div class="">
-                        <i class="flaticon-link-2"></i>
-                        <span>UPJ</span>
-                    </div>
-                    <div>
-                        <i class="flaticon-right-arrow"></i>
-                    </div>
-                </a>
-                <ul class="collapse submenu list-unstyled" id="upj" data-parent="#accordionExample">
-                    <li>
-                        <a href="/adminupj">UPJ TEKAJE</a>
-                    </li>
-                    <li>
-                        <a href="/adminupj2">Foto & Jasa UPJ </a>
-                    </li>
-                    <li>
-                        <a href="/adminbsi">BSI</a>
-                    </li>
-                    <li>
-                        <a href="/adminmuhiprint">Muhi Printing</a>
-                    </li>
-                    <li>
-                        <a href="/adminpegadaian">Pegadaian</a>
-                    </li>
-                    <li>
-                        <a href="/adminsuryamart">Suryamart</a>
-                    </li>
-                    <li>
-                        <a href="/adminedotel">Edotel</a>
-                    </li>
-                </ul>
-            </li>
+                <li class="menu">
+                    <a href="#upj" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <div class="">
+                            <i class="flaticon-link-2"></i>
+                            <span>UPJ</span>
+                        </div>
+                        <div>
+                            <i class="flaticon-right-arrow"></i>
+                        </div>
+                    </a>
+                    <ul class="collapse submenu list-unstyled" id="upj" data-parent="#accordionExample">
+                        <li>
+                            <a href="/adminupj">UPJ TEKAJE</a>
+                        </li>
+                        <li>
+                            <a href="/adminupj2">Foto & Jasa UPJ </a>
+                        </li>
+                        <li>
+                            <a href="/adminbsi">BSI</a>
+                        </li>
+                        <li>
+                            <a href="/adminmuhiprint">Muhi Printing</a>
+                        </li>
+                        <li>
+                            <a href="/adminpegadaian">Pegadaian</a>
+                        </li>
+                        <li>
+                            <a href="/adminsuryamart">Suryamart</a>
+                        </li>
+                        <li>
+                            <a href="/adminedotel">Edotel</a>
+                        </li>
+                    </ul>
+                </li>
             @endif
             @if (auth()->user()->role == 'operator1')
-            <li class="menu-title">UPJ TEKAJE</li>
-            <li class="menu">
-                <a href="#upjtekaje" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                    <div class="">
-                        <i class="flaticon-menu-line-3"></i>
-                        <span>UPJ TEKAJE</span>
-                    </div>
-                    <div>
-                        <i class="flaticon-right-arrow"></i>
-                    </div>
-                </a>
-                <ul class="collapse submenu list-unstyled" id="upjtekaje" data-parent="#accordionExample">
-                    <li>
-                        <a href="/tentangkami">Tentang Kami</a>
-                    </li>
-                    <li>
-                        <a href="/adminteam">Structure Team</a>
-                    </li>
-                    <li>
-                        <a href="/adminkeunggulan">Keunggulan</a>
-                    </li>
-                    <li>
-                        <a href="/adminjasa">Jasa</a>
-                    </li>
-                    <li>
-                        <a href="/admingalery">Galery</a>
-                    </li>
-                    <li>
-                        <a href="/adminvisimisi">Visi Misi</a>
-                    </li>
-                    <li>
-                        <a href="/admintestimoni">Testimoni</a>
-                    </li>
-                    <li>
-                        <a href="/adminupjfooter">UPJ Footer</a>
-                    </li>
-                    <li>
-                        <a href="/adminupjfooterlink">UPJ Footer Link</a>
-                    </li>
-                    <li>
-                        <a href="/adminupjslider">UPJ Slider</a>
-                    </li>
-                </ul>
-            </li>
+                <li class="menu-title">UPJ TEKAJE</li>
+                <li class="menu">
+                    <a href="#upjtekaje" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <div class="">
+                            <i class="flaticon-menu-line-3"></i>
+                            <span>UPJ TEKAJE</span>
+                        </div>
+                        <div>
+                            <i class="flaticon-right-arrow"></i>
+                        </div>
+                    </a>
+                    <ul class="collapse submenu list-unstyled" id="upjtekaje" data-parent="#accordionExample">
+                        <li>
+                            <a href="/tentangkami">Tentang Kami</a>
+                        </li>
+                        <li>
+                            <a href="/adminteam">Structure Team</a>
+                        </li>
+                        <li>
+                            <a href="/adminkeunggulan">Keunggulan</a>
+                        </li>
+                        <li>
+                            <a href="/adminjasa">Jasa</a>
+                        </li>
+                        <li>
+                            <a href="/admingalery">Galery</a>
+                        </li>
+                        <li>
+                            <a href="/adminvisimisi">Visi Misi</a>
+                        </li>
+                        <li>
+                            <a href="/admintestimoni">Testimoni</a>
+                        </li>
+                        <li>
+                            <a href="/adminupjfooter">UPJ Footer</a>
+                        </li>
+                        <li>
+                            <a href="/adminupjfooterlink">UPJ Footer Link</a>
+                        </li>
+                        <li>
+                            <a href="/adminupjslider">UPJ Slider</a>
+                        </li>
+                    </ul>
+                </li>
             @endif
             @if (auth()->user()->role == 'admin')
-            <li class="menu-title">UPJ TEKAJE</li>
-            <li class="menu">
-                <a href="#upjtekaje" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                    <div class="">
-                        <i class="flaticon-menu-line-3"></i>
-                        <span>UPJ TEKAJE</span>
-                    </div>
-                    <div>
-                        <i class="flaticon-right-arrow"></i>
-                    </div>
-                </a>
-                <ul class="collapse submenu list-unstyled" id="upjtekaje" data-parent="#accordionExample">
-                    <li>
-                        <a href="/tentangkami">Tentang Kami</a>
-                    </li>
-                    <li>
-                        <a href="/adminteam">Structure Team</a>
-                    </li>
-                    <li>
-                        <a href="/adminkeunggulan">Keunggulan</a>
-                    </li>
-                    <li>
-                        <a href="/adminjasa">Jasa</a>
-                    </li>
-                    <li>
-                        <a href="/admingalery">Galery</a>
-                    </li>
-                    <li>
-                        <a href="/adminvisimisi">Visi Misi</a>
-                    </li>
-                    <li>
-                        <a href="/admintestimoni">Testimoni</a>
-                    </li>
-                    <li>
-                        <a href="/adminupjfooter">UPJ Footer</a>
-                    </li>
-                    <li>
-                        <a href="/adminupjfooterlink">UPJ Footer Link</a>
-                    </li>
-                    <li>
-                        <a href="/adminupjslider">UPJ Slider</a>
-                    </li>
-                </ul>
-            </li>
+                <li class="menu-title">UPJ TEKAJE</li>
+                <li class="menu">
+                    <a href="#upjtekaje" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <div class="">
+                            <i class="flaticon-menu-line-3"></i>
+                            <span>UPJ TEKAJE</span>
+                        </div>
+                        <div>
+                            <i class="flaticon-right-arrow"></i>
+                        </div>
+                    </a>
+                    <ul class="collapse submenu list-unstyled" id="upjtekaje" data-parent="#accordionExample">
+                        <li>
+                            <a href="/tentangkami">Tentang Kami</a>
+                        </li>
+                        <li>
+                            <a href="/adminteam">Structure Team</a>
+                        </li>
+                        <li>
+                            <a href="/adminkeunggulan">Keunggulan</a>
+                        </li>
+                        <li>
+                            <a href="/adminjasa">Jasa</a>
+                        </li>
+                        <li>
+                            <a href="/admingalery">Galery</a>
+                        </li>
+                        <li>
+                            <a href="/adminvisimisi">Visi Misi</a>
+                        </li>
+                        <li>
+                            <a href="/admintestimoni">Testimoni</a>
+                        </li>
+                        <li>
+                            <a href="/adminupjfooter">UPJ Footer</a>
+                        </li>
+                        <li>
+                            <a href="/adminupjfooterlink">UPJ Footer Link</a>
+                        </li>
+                        <li>
+                            <a href="/adminupjslider">UPJ Slider</a>
+                        </li>
+                    </ul>
+                </li>
             @endif
             @if (auth()->user()->role == 'admin')
-            <li class="menu-title mb-2">Mitra</li>
-            <li class="menu">
-                <a href="#mitra" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                    <div class="">
-                        <i class="flaticon-shuffle-4"></i>
-                        <span>Mitra</span>
-                    </div>
-                    <div>
+                <li class="menu-title mb-2">Mitra</li>
+                <li class="menu">
+                    <a href="#mitra" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <div class="">
+                            <i class="flaticon-shuffle-4"></i>
+                            <span>Mitra</span>
+                        </div>
+                        <div>
 
-                        <i class="flaticon-right-arrow"></i>
-                    </div>
-                </a>
-                <ul class="collapse submenu list-unstyled" id="mitra" data-parent="#accordionExample">
-                    <li>
-                        <a href="/adminmitra">Mitra</a>
-                    </li>
-                </ul>
-            </li>
+                            <i class="flaticon-right-arrow"></i>
+                        </div>
+                    </a>
+                    <ul class="collapse submenu list-unstyled" id="mitra" data-parent="#accordionExample">
+                        <li>
+                            <a href="/adminmitra">Mitra</a>
+                        </li>
+                    </ul>
+                </li>
             @endif
             @if (auth()->user()->role == 'admin')
-            <li class="menu-title mb-2">Management Beranda</li>
-            <li class="menu">
-                <a href="#managementberanda" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                    <div class="">
-                        <i class="flaticon-shuffle-4"></i>
-                        <span>Beranda</span>
-                    </div>
-                    <div>
-                        <i class="flaticon-right-arrow"></i>
-                    </div>
-                </a>
-                <ul class="collapse submenu list-unstyled" id="managementberanda" data-parent="#accordionExample">
-                    <li>
-                        <a href="/data-album">Data Album</a>
-                    </li>
-                    <li>
-                        <a href="/indexprestasi">Prestasi</a>
-                    </li>
-                    <li>
-                        <a href="/sambutanadmin">Smbutan Kepsek</a>
-                    </li>
-                    <li>
-                        <a href="/fotoslideradmin">Slider</a>
-                    </li>
-                </ul>
-            </li>
+                <li class="menu-title mb-2">Management Beranda</li>
+                <li class="menu">
+                    <a href="#managementberanda" data-toggle="collapse" aria-expanded="false"
+                        class="dropdown-toggle">
+                        <div class="">
+                            <i class="flaticon-shuffle-4"></i>
+                            <span>Beranda</span>
+                        </div>
+                        <div>
+                            <i class="flaticon-right-arrow"></i>
+                        </div>
+                    </a>
+                    <ul class="collapse submenu list-unstyled" id="managementberanda"
+                        data-parent="#accordionExample">
+                        <li>
+                            <a href="/data-album">Data Album</a>
+                        </li>
+                        <li>
+                            <a href="/indexprestasi">Prestasi</a>
+                        </li>
+                        <li>
+                            <a href="/sambutanadmin">Smbutan Kepsek</a>
+                        </li>
+                        <li>
+                            <a href="/fotoslideradmin">Slider</a>
+                        </li>
+                    </ul>
+                </li>
             @endif
             @if (auth()->user()->role == 'admin')
-            <li class="menu-title mb-2">Footer</li>
-            <li class="menu">
-                <a href="#footer" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                    <div class="">
-                        <i class="flaticon-simple-screen-line"></i>
-                        <span>Footer</span>
-                    </div>
-                    <div>
-                        <i class="flaticon-right-arrow"></i>
-                    </div>
-                </a>
-                <ul class="collapse submenu list-unstyled" id="footer" data-parent="#accordionExample">
-                    <li>
-                        <a href="/footeeradmin">Footer</a>
-                    </li>
-                    <li>
-                        <a href="/adminfooteerdua">Footer Link </a>
-                    </li>
+                <li class="menu-title mb-2">Footer</li>
+                <li class="menu">
+                    <a href="#footer" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <div class="">
+                            <i class="flaticon-simple-screen-line"></i>
+                            <span>Footer</span>
+                        </div>
+                        <div>
+                            <i class="flaticon-right-arrow"></i>
+                        </div>
+                    </a>
+                    <ul class="collapse submenu list-unstyled" id="footer" data-parent="#accordionExample">
+                        <li>
+                            <a href="/footeeradmin">Footer</a>
+                        </li>
+                        <li>
+                            <a href="/adminfooteerdua">Footer Link </a>
+                        </li>
 
-                </ul>
-            </li>
+                    </ul>
+                </li>
             @endif
 
 
@@ -478,24 +508,24 @@
                 </li>
             @endif
             @if (auth()->user()->role == 'user')
-            <li class="menu-title">PPDB</li>
-            <li class="menu">
-                <a href="#bayar" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                    <div class="">
-                        <i class="flaticon-menu-list"></i>
-                        <span>Tabel Bayar</span>
-                    </div>
-                    <div>
-                        <i class="flaticon-right-arrow"></i>
-                    </div>
-                </a>
-                <ul class="collapse submenu list-unstyled" id="bayar" data-parent="#accordionExample">
-                    <li>
-                        <a href="/bayaruser">Tabel Bayar</a>
-                    </li>
-                </ul>
-            </li>
-        @endif
+                <li class="menu-title">PPDB</li>
+                <li class="menu">
+                    <a href="#bayar" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <div class="">
+                            <i class="flaticon-menu-list"></i>
+                            <span>Tabel Bayar</span>
+                        </div>
+                        <div>
+                            <i class="flaticon-right-arrow"></i>
+                        </div>
+                    </a>
+                    <ul class="collapse submenu list-unstyled" id="bayar" data-parent="#accordionExample">
+                        <li>
+                            <a href="/bayaruser">Tabel Bayar</a>
+                        </li>
+                    </ul>
+                </li>
+            @endif
 
 
 
@@ -545,4 +575,3 @@
         </ul>
     </nav>
 </div>
-

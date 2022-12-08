@@ -47,6 +47,21 @@
     <!-- BEGIN PAGE LEVEL PLUGINS -->
     <link href="{{ asset('admintemp/adminnew/riski/nopan/plugins/animate/animate.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('admintemp/adminnew/riski/nopan/assets/css/modals/component.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('admintemp/adminnew/riski/nopan/assets/css/pages/helpdesk.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('admintemp/adminnew/riski/nopan/assets/css/ecommerce/invoice.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('admintemp/adminnew/riski/nopan/assets/css/components/portlets/portlet.css') }}" rel="stylesheet" type="text/css" />
+
+    <link href="{{ asset('admintemp/adminnew/riski/nopan/plugins/lightbox/photoswipe.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('admintemp/adminnew/riski/nopan/plugins/lightbox/default-skin/default-skin.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('admintemp/adminnew/riski/nopan/plugins/lightbox/custom-photswipe.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('admintemp/adminnew/riski/nopan/assets/css/components/custom-carousel.css') }}" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('admintemp/adminnew/riski/nopan/plugins/table/datatable/datatables.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('admintemp/adminnew/riski/nopan/plugins/table/datatable/custom_dt_zero_config.css') }}">
+
+
+
+
+
     <!-- END PAGE LEVEL PLUGINS -->
 
 </head>

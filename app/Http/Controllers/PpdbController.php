@@ -149,7 +149,7 @@ class PpdbController extends Controller
         $order->payment_code = isset($json->payment_code) ? $json->payment_code : null;
         $order->pdf_url = isset($json->pdf_url) ? $json->pdf_url : null;
 
-        return $order->save() ? redirect(url('/'))->with('alert-success', 'Berhasil Berlangganan') : redirect(url('/'))->with('alert-failed', 'Terjadi Kesalahan');
+        return $order->save() ? redirect(url('/bayaruser'))->with('alert-success', 'Berhasil Berlangganan') : redirect(url('/bayaruser'))->with('alert-failed', 'Terjadi Kesalahan');
     }
 
 

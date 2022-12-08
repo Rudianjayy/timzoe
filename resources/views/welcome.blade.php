@@ -38,12 +38,14 @@
 
     <body>
 
+
         <div class="container">
             <div class="page-header">
                 <div class="page-title">
                     <h3>Beranda</h3>
                 </div>
             </div>
+
             @if (auth()->user()->role == 'admin')
                 <div class="row layout-spacing ">
 
@@ -114,97 +116,180 @@
 
                 </div>
 
-            <div class="col-lg-12 layout-spacing">
-                <div class="statbox widget box box-shadow">
-                    <div class="widget-header">
-                        <div class="row">
-                            <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                <h4></h4>
+                <div class="col-lg-12 layout-spacing">
+                    <div class="statbox widget box box-shadow">
+                        <div class="widget-header">
+                            <div class="row">
+                                <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                    <h4></h4>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="widget-content widget-content-area text-center icon-counter-container">
-                        <div class="row mb-5" style="padding-top: 30px;">
-                            <div class="col-xl-3 col-lg-3 mb-md-0 col-md-3 mb-5 col-sm-6">
-                                <i class="counter-ico flaticon-user-group-1"></i>
-                                <h1 class="ico-counter1 ico-counter mt-2">{{ $total }}</h1>
-                                <p class="ico-counter-text">Total Pendaftar</p>
-                            </div>
+                        <div class="widget-content widget-content-area text-center icon-counter-container">
+                            <div class="row mb-5" style="padding-top: 30px;">
+                                <div class="col-xl-3 col-lg-3 mb-md-0 col-md-3 mb-5 col-sm-6">
+                                    <i class="counter-ico flaticon-user-group-1"></i>
+                                    <h1 class="ico-counter1 ico-counter mt-2">{{ $total }}</h1>
+                                    <p class="ico-counter-text">Total Pendaftar</p>
+                                </div>
 
-                            <div class="col-xl-3 col-lg-3 mb-md-0 col-md-3 mb-5 col-sm-6">
-                                <i class="counter-ico flaticon-hourglass"></i>
-                                <h1 class="ico-counter4 ico-counter mt-2">{{ $formulirp }}</h1>
-                                <p class="ico-counter-text">Siswa Pending</p>
-                            </div>
+                                <div class="col-xl-3 col-lg-3 mb-md-0 col-md-3 mb-5 col-sm-6">
+                                    <i class="counter-ico flaticon-hourglass"></i>
+                                    <h1 class="ico-counter4 ico-counter mt-2">{{ $formulirp }}</h1>
+                                    <p class="ico-counter-text">Siswa Pending</p>
+                                </div>
 
-                            <div class="col-xl-3 col-lg-3 mb-md-0 col-md-3 mb-5 col-sm-6">
-                     
-                                <i class="counter-ico flaticon-user-11"></i>
-                                <h1 class="ico-counter2 ico-counter mt-2">{{ $formulir }}</h1>
-                                <p class="ico-counter-text">Siswa Diterima</p>
-                            </div>
+                                <div class="col-xl-3 col-lg-3 mb-md-0 col-md-3 mb-5 col-sm-6">
 
-                            <div class="col-xl-3 col-lg-3 mb-md-0 col-md-3 mb-5 col-sm-6">
-                                <i class="counter-ico flaticon-users"></i>
-                                <h1 class="ico-counter3 ico-counter mt-2">{{ $formulird }}</h1>
-                                <p class="ico-counter-text">Siswa Ditolak</p>
-                            </div>
+                                    <i class="counter-ico flaticon-user-11"></i>
+                                    <h1 class="ico-counter2 ico-counter mt-2">{{ $formulir }}</h1>
+                                    <p class="ico-counter-text">Siswa Diterima</p>
+                                </div>
 
+                                <div class="col-xl-3 col-lg-3 mb-md-0 col-md-3 mb-5 col-sm-6">
+                                    <i class="counter-ico flaticon-users"></i>
+                                    <h1 class="ico-counter3 ico-counter mt-2">{{ $formulird }}</h1>
+                                    <p class="ico-counter-text">Siswa Ditolak</p>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
             @endif
+
+
 
             @if (auth()->user()->role == 'admin')
-            <div class="row layout-spacing">
-                <div class="col-lg-12">
+                <div class="row layout-spacing">
+                    <div class="col-lg-12">
+                        <div class="statbox widget box box-shadow">
+                            <div class="widget-header">
+
+                                <div class="row">
+                                    <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                        <h4>Grafik Siswa Daftar Pertahun</h4>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="widget-content widget-content-area">
+                                <div class="row">
+                                    <div class="col-lg-12 mb-4">
+                                        <div id="chartsPpdb"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row layout-spacing">
+                    <div class="col-lg-12">
+                        <div class="statbox widget box box-shadow">
+                            <div class="widget-header">
+
+                                <div class="row">
+                                    <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                        <h4>Grafik Siswa Daftar Pertahun</h4>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="widget-content widget-content-area">
+                                <div class="row">
+                                    <div class="col-lg-12 mb-4">
+                                        <div id="grafik"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @endif
+            <div class="row">
+                <div class="col-lg-6 col-md-6 layout-spacing">
                     <div class="statbox widget box box-shadow">
                         <div class="widget-header">
-
                             <div class="row">
                                 <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                    <h4>Grafik Siswa Daftar Pertahun</h4>
+                                    <h4>With indicators</h4>
                                 </div>
-
                             </div>
                         </div>
                         <div class="widget-content widget-content-area">
                             <div class="row">
-                                <div class="col-lg-12 mb-4">
-                                    <div id="chartsPpdb"></div>
+                                <div class="col-sm-12 mb-5">
+                                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                                        <ol class="carousel-indicators">
+                                            <li data-target="#carouselExampleIndicators" data-slide-to="0"
+                                                class="active m"></li>
+                                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                        </ol>
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img class="d-block w-100"
+                                                    src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/pamflet1.jpg') }}"
+                                                    alt="First slide">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block w-100"
+                                                    src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/pamflet2.jpg') }}"
+                                                    alt="Second slide">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block w-100"
+                                                    src="{{ asset('admintemp/adminnew/riski/nopan/assets/img/pamflet1.jpg') }}"
+                                                    alt="Third slide">
+                                            </div>
+                                        </div>
+                                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+                                            data-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+                                            data-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                @php
+                    $status_pay = App\Models\Payment::where('id_user', Auth::user()->id)->first();
+                @endphp
+                <div class="col-lg-6 col-md-6 layout-spacing">
+                    @if ($status_pay == null )
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 mt-3">
+                            <blockquote class="blockquote">
+                                <h5>Status Pembayaran</h5>
+                                <p> ANDA BELUM BAYAR. </p>
+                            </blockquote>
+                        </div>
+                    </div>
+                    @endif
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                            <blockquote class="blockquote">
+                                <h5>Status Penerimaan</h5>
+                                <p>Bootstrap 4 grid systems enable you to create advanced layouts using rows and columns.
+                                    The Bootstrap grid system can have up to 12 columns, and you can specify how these
+                                    columns scale for different viewport sizes. </p>
+                            </blockquote>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row layout-spacing">
-                <div class="col-lg-12">
-                    <div class="statbox widget box box-shadow">
-                        <div class="widget-header">
-
-                            <div class="row">
-                                <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                    <h4>Grafik Siswa Daftar Pertahun</h4>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="widget-content widget-content-area">
-                            <div class="row">
-                                <div class="col-lg-12 mb-4">
-                                    <div id="grafik"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>  
-
-            @endif
-
-            {{-- <div class="row layout-spacing">
+        </div>
+      
+        {{-- <div class="row layout-spacing">
                 <div class="col-lg-12">
                     <div class="statbox widget box box-shadow">
                         <div class="widget-header">
@@ -225,7 +310,7 @@
                 </div>
             </div> --}}
 
-            {{-- <div class="row layout-spacing">
+        {{-- <div class="row layout-spacing">
                 <div class="col-lg-12">
                     <div class="statbox widget box box-shadow">
                         <div class="widget-header">
@@ -246,7 +331,7 @@
                 </div>
             </div> --}}
 
-            {{-- <div class="row">
+        {{-- <div class="row">
             <div class="col-xl-4 col-lg-6 col-md-6 col-12 layout-spacing">
                 <div class="widget-content-area chat-messages p-0  br-4">
 
@@ -1305,7 +1390,7 @@
                 </div>
             </div> --}}
 
-            {{-- <div class="row">
+        {{-- <div class="row">
             <div class="col-xl-5 col-lg-12 col-md-12 col-12 layout-spacing">
                 <div class="widget-content-area page-views p-0  br-4">
                     <ul class="nav nav-pills py-3" id="pills-tab" role="tablist">
@@ -1422,7 +1507,294 @@
             </div> --}}
 
 
+            <div class="statbox widget box box-shadow">
+                <div class="widget-header">
+                    <div class="row">
+                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                            <h4>Zero Configuration</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="widget-content widget-content-area">
+                    <div class="table-responsive mb-4">
+                        <table id="zero-config" class="table table-striped table-hover table-bordered" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Position</th>
+                                    <th>Office</th>
+                                    <th>Age</th>
+                                    <th>Start date</th>
+                                    <th>Salary</th>
+                                    <th class="invisible"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-primary">Tiger Nixon</td>
+                                    <td>System Architect</td>
+                                    <td>Edinburgh</td>
+                                    <td>61</td>
+                                    <td>2011/04/25</td>
+                                    <td>$320,800</td>
+                                    <td><i class="flaticon-cancel-12 t-icon t-hover-icon"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-primary">Garrett Winters</td>
+                                    <td>Accountant</td>
+                                    <td>Tokyo</td>
+                                    <td>63</td>
+                                    <td>2011/07/25</td>
+                                    <td>$170,750</td>
+                                    <td><i class="flaticon-cancel-12 t-icon t-hover-icon"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-primary">Ashton Cox</td>
+                                    <td>Junior Technical Author</td>
+                                    <td>San Francisco</td>
+                                    <td>66</td>
+                                    <td>2009/01/12</td>
+                                    <td>$86,000</td>
+                                    <td><i class="flaticon-cancel-12 t-icon t-hover-icon"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-primary">Cedric Kelly</td>
+                                    <td>Senior Javascript Developer</td>
+                                    <td>Edinburgh</td>
+                                    <td>22</td>
+                                    <td>2012/03/29</td>
+                                    <td>$433,060</td>
+                                    <td><i class="flaticon-cancel-12 t-icon t-hover-icon"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-primary">Airi Satou</td>
+                                    <td>Accountant</td>
+                                    <td>Tokyo</td>
+                                    <td>33</td>
+                                    <td>2008/11/28</td>
+                                    <td>$162,700</td>
+                                    <td><i class="flaticon-cancel-12 t-icon t-hover-icon"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-primary">Brielle Williamson</td>
+                                    <td>Integration Specialist</td>
+                                    <td>New York</td>
+                                    <td>61</td>
+                                    <td>2012/12/02</td>
+                                    <td>$372,000</td>
+                                    <td><i class="flaticon-cancel-12 t-icon t-hover-icon"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-primary">Herrod Chandler</td>
+                                    <td>Sales Assistant</td>
+                                    <td>San Francisco</td>
+                                    <td>59</td>
+                                    <td>2012/08/06</td>
+                                    <td>$137,500</td>
+                                    <td><i class="flaticon-cancel-12 t-icon t-hover-icon"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-primary">Rhona Davidson</td>
+                                    <td>Integration Specialist</td>
+                                    <td>Tokyo</td>
+                                    <td>55</td>
+                                    <td>2010/10/14</td>
+                                    <td>$327,900</td>
+                                    <td><i class="flaticon-cancel-12 t-icon t-hover-icon"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-primary">Colleen Hurst</td>
+                                    <td>Javascript Developer</td>
+                                    <td>San Francisco</td>
+                                    <td>39</td>
+                                    <td>2009/09/15</td>
+                                    <td>$205,500</td>
+                                    <td><i class="flaticon-cancel-12 t-icon t-hover-icon"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-primary">Sonya Frost</td>
+                                    <td>Software Engineer</td>
+                                    <td>Edinburgh</td>
+                                    <td>23</td>
+                                    <td>2008/12/13</td>
+                                    <td>$103,600</td>
+                                    <td><i class="flaticon-cancel-12 t-icon t-hover-icon"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-primary">Jena Gaines</td>
+                                    <td>Office Manager</td>
+                                    <td>London</td>
+                                    <td>30</td>
+                                    <td>2008/12/19</td>
+                                    <td>$90,560</td>
+                                    <td><i class="flaticon-cancel-12 t-icon t-hover-icon"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-primary">Quinn Flynn</td>
+                                    <td>Support Lead</td>
+                                    <td>Edinburgh</td>
+                                    <td>22</td>
+                                    <td>2013/03/03</td>
+                                    <td>$342,000</td>
+                                    <td><i class="flaticon-cancel-12 t-icon t-hover-icon"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-primary">Charde Marshall</td>
+                                    <td>Regional Director</td>
+                                    <td>San Francisco</td>
+                                    <td>36</td>
+                                    <td>2008/10/16</td>
+                                    <td>$470,600</td>
+                                    <td><i class="flaticon-cancel-12 t-icon t-hover-icon"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-primary">Haley Kennedy</td>
+                                    <td>Senior Marketing Designer</td>
+                                    <td>London</td>
+                                    <td>43</td>
+                                    <td>2012/12/18</td>
+                                    <td>$313,500</td>
+                                    <td><i class="flaticon-cancel-12 t-icon t-hover-icon"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-primary">Tatyana Fitzpatrick</td>
+                                    <td>Regional Director</td>
+                                    <td>London</td>
+                                    <td>19</td>
+                                    <td>2010/03/17</td>
+                                    <td>$385,750</td>
+                                    <td><i class="flaticon-cancel-12 t-icon t-hover-icon"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-primary">Michael Silva</td>
+                                    <td>Marketing Designer</td>
+                                    <td>London</td>
+                                    <td>66</td>
+                                    <td>2012/11/27</td>
+                                    <td>$198,500</td>
+                                    <td><i class="flaticon-cancel-12 t-icon t-hover-icon"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-primary">Paul Byrd</td>
+                                    <td>Chief Financial Officer (CFO)</td>
+                                    <td>New York</td>
+                                    <td>64</td>
+                                    <td>2010/06/09</td>
+                                    <td>$725,000</td>
+                                    <td><i class="flaticon-cancel-12 t-icon t-hover-icon"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-primary">Gloria Little</td>
+                                    <td>Systems Administrator</td>
+                                    <td>New York</td>
+                                    <td>59</td>
+                                    <td>2009/04/10</td>
+                                    <td>$237,500</td>
+                                    <td><i class="flaticon-cancel-12 t-icon t-hover-icon"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-primary">Bradley Greer</td>
+                                    <td>Software Engineer</td>
+                                    <td>London</td>
+                                    <td>41</td>
+                                    <td>2012/10/13</td>
+                                    <td>$132,000</td>
+                                    <td><i class="flaticon-cancel-12 t-icon t-hover-icon"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-primary">Dai Rios</td>
+                                    <td>Personnel Lead</td>
+                                    <td>Edinburgh</td>
+                                    <td>35</td>
+                                    <td>2012/09/26</td>
+                                    <td>$217,500</td>
+                                    <td><i class="flaticon-cancel-12 t-icon t-hover-icon"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-primary">Jenette Caldwell</td>
+                                    <td>Development Lead</td>
+                                    <td>New York</td>
+                                    <td>30</td>
+                                    <td>2011/09/03</td>
+                                    <td>$345,000</td>
+                                    <td><i class="flaticon-cancel-12 t-icon t-hover-icon"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-primary">Yuri Berry</td>
+                                    <td>Chief Marketing Officer (CMO)</td>
+                                    <td>New York</td>
+                                    <td>40</td>
+                                    <td>2009/06/25</td>
+                                    <td>$675,000</td>
+                                    <td><i class="flaticon-cancel-12 t-icon t-hover-icon"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-primary">Caesar Vance</td>
+                                    <td>Pre-Sales Support</td>
+                                    <td>New York</td>
+                                    <td>21</td>
+                                    <td>2011/12/12</td>
+                                    <td>$106,450</td>
+                                    <td><i class="flaticon-cancel-12 t-icon t-hover-icon"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-primary">Doris Wilder</td>
+                                    <td>Sales Assistant</td>
+                                    <td>Sidney</td>
+                                    <td>23</td>
+                                    <td>2010/09/20</td>
+                                    <td>$85,600</td>
+                                    <td><i class="flaticon-cancel-12 t-icon t-hover-icon"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-primary">Angelica Ramos</td>
+                                    <td>Chief Executive Officer (CEO)</td>
+                                    <td>London</td>
+                                    <td>47</td>
+                                    <td>2009/10/09</td>
+                                    <td>$1,200,000</td>
+                                    <td><i class="flaticon-cancel-12 t-icon t-hover-icon"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-primary">Gavin Joyce</td>
+                                    <td>Developer</td>
+                                    <td>Edinburgh</td>
+                                    <td>42</td>
+                                    <td>2010/12/22</td>
+                                    <td>$92,575</td>
+                                    <td><i class="flaticon-cancel-12 t-icon t-hover-icon"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-primary">Jennifer Chang</td>
+                                    <td>Regional Director</td>
+                                    <td>Singapore</td>
+                                    <td>28</td>
+                                    <td>2010/11/14</td>
+                                    <td>$357,650</td>
+                                    <td><i class="flaticon-cancel-12 t-icon t-hover-icon"></i></td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Position</th>
+                                    <th>Office</th>
+                                    <th>Age</th>
+                                    <th>Start date</th>
+                                    <th>Salary</th>
+                                    <th></th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
+    
+
+          
+       
+ 
         @include('layout.script')
         {{--  @include('sweetalert::alert')  --}}
         <script>
@@ -1430,6 +1802,15 @@
                 toastr.success("{{ Session::get('success') }}")
             @endif
         </script>
+         <script src="{{ asset('admintemp/adminnew/riski/nopan/plugins/table/datatable/datatables.js') }}"></script>
+         <script>
+             $('#zero-config').DataTable({
+                 "language": {
+                     "paginate": { "previous": "<i class='flaticon-arrow-left-1'></i>", "next": "<i class='flaticon-arrow-right'></i>" },
+                     "info": "Showing page _PAGE_ of _PAGES_"
+                 }
+             });
+         </script>
 
         <script src="https://code.highcharts.com/highcharts.js"></script>
 

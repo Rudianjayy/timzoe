@@ -57,59 +57,7 @@
                     </ul>
                 </li>
             @endif
-            @if (auth()->user()->role == 'user')
-
-
-
-                @php
-                    $status_pay = App\Models\Payment::where('id_user', Auth::user()->id)->first();
-                @endphp
-                <li class="menu">
-
-
-                    @if ($status_pay == null) 
-                    <a href="#tentangkami" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" hidden>
-
-                        <div class="">
-                            <i class="flaticon-menu-list"></i>
-                            <span>Formulir</span>
-                        </div>
-                        <div>
-                            <i class="flaticon-right-arrow"></i>
-                        </div>
-                    </a>
-                    @elseif ($status_pay->status == 'settlement')
-                    <a href="#tentangkami" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-
-                        <div class="">
-                            <i class="flaticon-menu-list"></i>
-                            <span>Formulir</span>
-                        </div>
-                        <div>
-                            <i class="flaticon-right-arrow"></i>
-                        </div>
-                    </a>
-                    @endif
-                    <ul class="collapse submenu list-unstyled" id="tentangkami" data-parent="#accordionExample">
-                        @php
-                            $formulir_bayar = App\Models\Formulir::where('id_user',Auth::user()->id)->get();
-                        @endphp
-                        <li>
-
-                            @if ($status_pay == null)
-                                <a href="/bayaruser" hidden>Isi Formulir</a>
-                            @elseif($status_pay->status == 'pending')
-                                <a href="/bayaruser">Isi Formulir</a>
-                            @elseif($status_pay->status == 'settlement' && $formulir_bayar == null  )
-                                <a href="/tambahformulir">Isi Formulir</a>
-                            @elseif($formulir_bayar)
-                                <a href="/userformulir" >Formulir Anda</a>
-                            @endif
-                        </li>
-
-                    </ul>   
-                </li>
-            @endif
+            
             {{-- @if (auth()->user()->role == 'admin')
                 <li class="menu-title">Menu</li>
                 <li class="menu">
@@ -530,6 +478,77 @@
                         </li>
                     </ul>
                 </li>
+       
+
+
+
+                @php
+                    $status_pay = App\Models\Payment::where('id_user', Auth::user()->id)->first();
+                @endphp
+                <li class="menu">
+
+
+                    @if ($status_pay == null) 
+                    <a href="#tentangkami" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" hidden>
+
+                        <div class="">
+                            <i class="flaticon-menu-list"></i>
+                            <span>Formulir</span>
+                        </div>
+                        <div>
+                            <i class="flaticon-right-arrow"></i>
+                        </div>
+                    </a>
+                    @elseif ($status_pay->status == 'settlement')
+                    <a href="#tentangkami" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+
+                        <div class="">
+                            <i class="flaticon-menu-list"></i>
+                            <span>Formulir</span>
+                        </div>
+                        <div>
+                            <i class="flaticon-right-arrow"></i>
+                        </div>
+                    </a>
+                    @endif
+                    <ul class="collapse submenu list-unstyled" id="tentangkami" data-parent="#accordionExample">
+                        @php
+                            $formulir_bayar = App\Models\Formulir::where('id_user',Auth::user()->id)->get();
+                        @endphp
+                        <li>
+
+                            @if ($status_pay == null)
+                                <a href="/bayaruser" hidden>Isi Formulir</a>
+                            @elseif($status_pay->status == 'settlement')
+                                <a href="/tambahformulir">Isi Formulir</a>
+                            @elseif($formulir_bayar == null)
+                                <a href="/userformulir" >Formulir Anda</a>
+                            @endif
+                        </li>
+
+                    </ul>   
+                </li>
+
+                @if ($status_pay->status == 'settlement')
+                    
+                <li class="menu">
+                    <a href="#History" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <div class="">
+                            <i class="flaticon-menu-list"></i>
+                            <span>Riwayat Pembayaran</span>
+                        </div>
+                        <div>
+                            <i class="flaticon-right-arrow"></i>
+                        </div>
+                    </a>
+                    <ul class="collapse submenu list-unstyled" id="History" data-parent="#accordionExample">
+                        <li>
+                            <a href="/history"> Riwayat Pembayaran</a>
+                        </li>
+
+                    </ul>
+                </li>
+                @endif
             @endif
 
 

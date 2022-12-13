@@ -73,9 +73,7 @@
                                             <th scope="col">Prestasi</th>
                                             <th scope="col">Ukuran Kaos</th>
                                             <th scope="col">Jurusan</th>
-
                                             <th scope="col">Kode QR</th>
-
                                             <th scope="col">Status</th>
                                             <th scope="col">Aksi</th>
                                         </tr>
@@ -96,7 +94,7 @@
                                                 <td>{{ $i->nik }}</td>
                                                 <td>{{ $i->nokk }}</td>
                                                 <td>
-                                                    <a href="{{ asset(' /' . $i->foto_kk) }}"
+                                                    <a href="{{ asset('/fotomahasiswa' . $i->foto_kk) }}"
                                                         data-lightbox="whatever">
                                                         <img src="{{ asset('fotomahasiswa/' . $i->foto_kk) }}"
                                                             alt="" style="width: 80px;">

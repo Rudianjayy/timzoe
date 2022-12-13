@@ -1,5 +1,7 @@
 @extends('layout.main')
 
+
+
 @section('content')
 
     <head>
@@ -41,8 +43,10 @@
                                         <p>Biodata</p>
                                     </div>
                                     <div class="f1-step">
-                                        <div class="f1-step-icon"><i class="fa fa-home"></i></div>
-                                        <p>Alamat</p>
+                                        <div class="f1-step-icon"><i style="margin-top: 10px;
+                                            margin-left: 10px;
+                                            font-size: 19px;" class="flaticon-bulb"></i></div>
+                                        <p>Info</p>
                                     </div>
 
                                 </div>
@@ -292,21 +296,7 @@
 
                                 <!-- step 4 -->
                                 <fieldset>
-                                    <h4>Sosial Media</h4>
-                                    <div class="form-group">
-                                        <label>Facebook</label>
-                                        <input type="text" name="facebook" placeholder="Facebook"
-                                            class="form-control">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Twitter</label>
-                                        <input type="text" name="twitter" placeholder="Twitter" class="form-control">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Google plus</label>
-                                        <input type="text" name="google_plus" placeholder="Google plus"
-                                            class="form-control">
-                                    </div>
+                                    <h4>Info</h4>
                                     <div class="f1-buttons">
                                         <button type="button" class="btn btn-warning btn-previous"><i
                                                 class="fa fa-arrow-left"></i> Sebelumnya</button>

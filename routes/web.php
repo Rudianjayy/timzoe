@@ -35,6 +35,7 @@ use App\Http\Controllers\DataidentitasController;
 use App\Http\Controllers\ProfilSekolahController;
 use App\Http\Controllers\FotokompetensiController;
 use App\Http\Controllers\IdentitasSekolahController;
+use App\Http\Controllers\WelcomeController;
 use App\Models\Formulir;
 
 
@@ -143,7 +144,7 @@ Route::get('/adminsyaratdaftar', [PpdbController::class, 'adminsyaratdaftar'])->
 Route::get('/editsyaratdaftar/{id}', [PpdbController::class, 'editsyaratdaftar'])->name('editsyaratdaftar');
 Route::post('/editproses12', [PpdbController::class, 'editproses12'])->name('editproses12');
 Route::get('/tambahsyaratdaftar', [PpdbController::class, 'tambahsyaratdaftar'])->name('tambahsyaratdaftar');
-Route::post('/submitproses12/', [PpdbController::class, 'submitproses12'])->name('submitproses12');
+Route::post('/submitproses12/ ', [PpdbController::class, 'submitproses12'])->name('submitproses12');
 Route::get('/deletesyaratdaftar/{id}', [PpdbController::class, 'deletesyaratdaftar'])->name('deletesyaratdaftar');
 
 
@@ -757,31 +758,26 @@ Route::group(['middleware' => ['auth', 'hakakses:admin,user,operator1,operator2'
 Route::group(['middleware' => ['auth', 'hakakses:admin,user']], function () {
 
     Route::get('/welcome', function () {
-        $berita = Muhinews::count();
-        $galery = Album::count();
-        $prestasi = Prestasi::count();
-        $mitra = Mitra::count();
-        $total = Formulir::count();
-        $formulir = Formulir::where('status','=','diterima')->count();
-        $formulird = Formulir::where('status','=','ditolak')->count();
-        $formulirp = Formulir::where('status','=','pending')->count();
-        // dd($formulir);
-        $status = Formulir::select(DB::raw("COUNT(*) as status"))
-        ->GroupBy(DB::raw("Year(created_at)"))
-        ->pluck('status');
 
-        $bulan = Formulir::select(DB::raw("YEAR(created_at) as bulan"))
-        ->GroupBy(DB::raw("YEAR(created_at)"))
-        ->pluck('bulan');
-
-        return view('welcome', compact('berita', 'galery', 'prestasi', 'mitra','status','bulan','formulir','formulird','total','formulirp'));
+        return view('welcome');
     })->middleware('auth');
+
+    
+    
+    Route::get('/welcome', [WelcomeController::class, 'welcome'])->name('welcome');
+    Route::get('/ajaxgrafik', [WelcomeController::class, 'ajaxgrafik'])->name('ajaxgrafik');
+
+
 
     Route::get('/adminformulir', [PpdbController::class, 'adminformulir'])->name('adminformulir');
     Route::get('/userformulir', [PpdbController::class, 'userformulir'])->name('userformulir');
+    Route::get('/history', [PpdbController::class, 'history'])->name('history');
+    Route::get('/historypembayaran', [PpdbController::class, 'historypembayaran'])->name('historypembayaran');
     Route::get('/adminformulirditerima', [PpdbController::class, 'adminformulirditerima'])->name('adminformulirditerima');
     Route::get('/adminformulirditolak', [PpdbController::class, 'adminformulirditolak'])->name('adminformulirditolak');
     Route::get('/tambahfrmulir', [PpdbController::class, 'tambahfrmulir'])->name('tambahfrmulir');
     Route::post('/submitdata27', [PpdbController::class, 'submitdata27'])->name('submitdata27');
     Route::get('/deleteformulir/{id}', [PpdbController::class, 'deleteformulir'])->name('deleteformulir');
+
+
 });

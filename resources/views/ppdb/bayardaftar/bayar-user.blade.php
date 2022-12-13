@@ -77,8 +77,8 @@
                                                                 <td class="customer-name">Pembayaran Telah Selesai</td>
                                                             </tr>
                                                             <tr>
-                                                                <td class="text-center"><span class="badge badge-pills badge-dark">History</span></td>
-                                                                <td class="customer-name">History Pembayaran</td>
+                                                                <td class="text-center"><span class="badge badge-pills badge-dark">Riwayat Pembayaran</span></td>
+                                                                <td class="customer-name">Riwayat Pembayaran</td>
                                                             </tr>
                                                         </tbody>
                                                     </table>
@@ -141,7 +141,7 @@
                                                     @elseif($status_pay->status == 'settlement')
                                                     <button class="btn btn-success btn-rounded mb-4 mr-2 pay-button" data-toggle="modal" data-target="#fadeinModal">Selesai</button>
                                                     <a href="/tambahformulir"  class="btn btn-primary btn-rounded mb-4 mr-2 pay-button">Isi Formulir</a>
-                                                    <a href="/history"  class="btn btn-dark btn-rounded mb-4 mr-2 pay-button">History</a>
+                                                    <a href="/history"  class="btn btn-dark btn-rounded mb-4 mr-2 pay-button">Riwayat Pembayaran</a>
                                                     @endif
                                                     
                                                 @else

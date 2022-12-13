@@ -67,6 +67,10 @@
                     <i class="mr-1 flaticon-user-6"></i> <span>Profil</span>
                 </a>
                 <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/historypembayaran">
+                    <i class="flaticon-log-2"></i> <span>Histori Pembayaran</span>
+                </a>
+                <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="/logout" onclick="return confirm('Anda yakin ingin logout?')">
                     <i class="flaticon-log-2"></i> <span>Log Out</span>
                 </a>

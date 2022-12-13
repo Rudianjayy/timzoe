@@ -52,6 +52,10 @@
                                         </div>
                                         <div class="col-sm-6 mb-4">
                                             <h5 class="invoice-info-title">Biodata Formulir</h5>
+                                            @if ($status_pay == null )
+                                            @else
+                                            <p class="invoice-serial-number" style="margin-top: 40px;">Kode Transaksi Anda : {{ $status_pay -> order_id }}</p>
+                                            @endif
                                         </div>
                                         <div class="col-sm-6 mb-4 text-sm-right">
                                                 @foreach($status as $s)

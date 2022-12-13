@@ -265,11 +265,11 @@
                         <div class="row">
                             @foreach ($biaya as $b )
 
-                            {{-- @php
+                            @php
                                 $tanggal_awal = date('Y-m-d',strtotime('$b->jadwal_mulai'));
-                                $tanggal_akhir = date('Y-m-d',strtotime('$b->jadwal_ditutup' ));
-
-                            @endphp --}}
+                                $tanggal_akhir = date('Y-m-d',strtotime('$b->jadwal_ditutup' ));    
+                            @endphp
+                            
 
                             <div class="col-lg-4 col-md-6">
                                 <div class="single-pricing-table">
@@ -310,6 +310,7 @@
                                 </div>
                                 @endif
                             </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>

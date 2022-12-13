@@ -118,9 +118,9 @@ class PpdbController extends Controller
                 ],
             ),
             'customer_details' => array(
-                // 'first_name' => $request->user_name,
-                // 'email' => $request->user_email,
-                // 'phone' => $request->user_telepon,
+                'first_name' => $request->user_name,
+                'email' => $request->user_email,
+                'phone' => $request->user_telepon,
             ),
         );
 
@@ -150,6 +150,10 @@ class PpdbController extends Controller
         $order->pdf_url = isset($json->pdf_url) ? $json->pdf_url : null;
 
         return $order->save() ? redirect(url('/bayaruser'))->with('alert-success', 'Berhasil Berlangganan') : redirect(url('/bayaruser'))->with('alert-failed', 'Terjadi Kesalahan');
+    }
+    public function historypembayaran(){
+        $pricing = Payment::all();
+        return view('ppdb.formulir.historypembayaran', compact('pricing'));
     }
 
 
@@ -491,6 +495,13 @@ class PpdbController extends Controller
         $status_pay = Payment::where('id_user',Auth::user()->id)->first();
 
         return view('ppdb.formulir.formulir-user', compact('data4','status_pay'));
+    }
+    public function history()
+    {
+        $data4 = Formulir::all();
+        $status_pay = Payment::where('id_user',Auth::user()->id)->first();
+
+        return view('ppdb.formulir.history', compact('data4','status_pay'));
     }
 
 

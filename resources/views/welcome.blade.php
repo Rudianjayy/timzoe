@@ -278,6 +278,16 @@
                                 </blockquote>
                             </div>
                         </div>
+                    </div>
+                    @elseif($status_pay->status == 'settlement')
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 mt-3">
+                            <blockquote class="blockquote">
+                                <h5>Status Pembayaran</h5>
+                                <p> ANDA Sudah Bayar. </p>
+                            </blockquote>
+                        </div>
+                    </div>
                     @endif
                     <div class="row">
                         <div class="col-lg-12 col-md-12">

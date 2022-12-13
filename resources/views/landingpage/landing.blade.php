@@ -130,7 +130,7 @@
                                         {{ $js->nama_kompetensi2 }}</a>
                                 </h5>
                                 <p>{!! $js->deskripsi_kompetensi2 !!}</p>
-                            </div>
+                            </div>  
                         </div>
                     </div>
                 @endforeach
@@ -235,7 +235,7 @@
                     </div><!-- /.col-lg-4 col-md-6 col-sm-12 -->
                 @endforeach
             </div><!-- /.row -->
-
+`
         </div><!-- /.container -->
     </section><!-- /.portfolio-grid -->
 

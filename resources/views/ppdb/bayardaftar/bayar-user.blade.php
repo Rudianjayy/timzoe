@@ -65,16 +65,20 @@
                                                                 <td class="customer-name">Anda Belum Menyelesaikan Proses Pembayaran</td>
                                                             </tr>
                                                             <tr>
-                                                                <td class="text-center"><span class="badge badge-pills badge-success">Selesai</span></td>
-                                                                <td class="customer-name">Pembayaran Telah Selesai</td>
-                                                            </tr>
-                                                            <tr>
                                                                 <td class="text-center"><span class="badge badge-pills badge-secondary">Belum  Aktif</span></td>
                                                                 <td class="customer-name">Pembayaran Belum Di Buka</td>
                                                             </tr>
                                                             <tr>
                                                                 <td class="text-center"><span class="badge badge-pills badge-primary">Isi Formulir</span></td>
                                                                 <td class="customer-name">Form PPDB</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-center"><span class="badge badge-pills badge-success">Selesai</span></td>
+                                                                <td class="customer-name">Pembayaran Telah Selesai</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-center"><span class="badge badge-pills badge-dark">History</span></td>
+                                                                <td class="customer-name">History Pembayaran</td>
                                                             </tr>
                                                         </tbody>
                                                     </table>
@@ -137,6 +141,7 @@
                                                     @elseif($status_pay->status == 'settlement')
                                                     <button class="btn btn-success btn-rounded mb-4 mr-2 pay-button" data-toggle="modal" data-target="#fadeinModal">Selesai</button>
                                                     <a href="/tambahformulir"  class="btn btn-primary btn-rounded mb-4 mr-2 pay-button">Isi Formulir</a>
+                                                    <a href="/history"  class="btn btn-dark btn-rounded mb-4 mr-2 pay-button">History</a>
                                                     @endif
                                                     
                                                 @else

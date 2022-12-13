@@ -32,13 +32,11 @@ class PpdbController extends Controller
         $info = info::all();
         $biaya = biaya::all();
         $langkah = Langkahpendaftaran::all();
-        return view('ppdb.pendaftaran', compact('dp', 'pd', 'kontak', 'cp', 'footerppdb', 'info', 'biaya', 'langkah', 'footerlink', 'ab'));
         $total = Formulir::count();
         $formulir = Formulir::where('status', '=', 'diterima')->count();
         $formulird = Formulir::where('status', '=', 'ditolak')->count();
         $formulirp = Formulir::where('status', '=', 'pending')->count();
-
-        return view('ppdb.pendaftaran', compact('dp', 'pd', 'kontak', 'cp', 'footerppdb', 'info', 'biaya', 'langkah', 'footerlink', 'formulir', 'formulird', 'total', 'formulirp', 'data3'));
+        return view('ppdb.pendaftaran', compact('dp', 'pd', 'kontak', 'cp', 'footerppdb', 'info', 'biaya', 'langkah', 'footerlink', 'formulir', 'formulird', 'total', 'formulirp'));
     }
     public function snap(Request $request)
     {
@@ -495,13 +493,15 @@ class PpdbController extends Controller
     public function userformulir()
     {
         $data4 = Formulir::all();
-        return view('ppdb.formulir.formulir-user', compact('data4'));
+        $status_pay = Payment::where('id_user',Auth::user()->id)->first();
+
+        return view('ppdb.formulir.formulir-user', compact('data4','status_pay'));
     }
 
 
     public function setuju(Request $request, $id)
     {
-        $data = Formulir::find($id);
+        $data = Formulir::find($id);                        
         $data->update([
             'status' => 'diterima',
             'barcode' => $request->nisn,
@@ -560,7 +560,7 @@ class PpdbController extends Controller
             'tanggal_lahir' => $request->tanggal_lahir,
             'agama' => $request->agama,
             'nisn' => $request->nisn,
-            'nik' => $request->nik,
+            'nik' =>$request->nik,
             'nokk' => $request->nokk,
             'foto_kk' => $request->foto_kk,
             'status_anak' => $request->status_anak,
@@ -606,9 +606,9 @@ class PpdbController extends Controller
     public function bayaruser()
     {
         $pricing = biaya::all();
-        $status_pay = Payment::where('id_user', Auth::user()->id)->first();
+        $status_pay = Payment::where('id_user',Auth::user()->id)->first();
 
-        return view('ppdb.bayardaftar.bayar-user', compact('pricing', 'status_pay'));
+        return view('ppdb.bayardaftar.bayar-user',compact('pricing','status_pay'));
     }
 
 
@@ -669,7 +669,7 @@ class PpdbController extends Controller
             'penjelasan' => $request->penjelasan,
             'jadwal_mulai' => $request->jadwal_mulai,
             'jadwal_ditutup' => $request->jadwal_ditutup,
-            'biaya' => $request->biaya,
+             'biaya' => $request->biaya,
             // dd($request->biaya)
 
         ]);

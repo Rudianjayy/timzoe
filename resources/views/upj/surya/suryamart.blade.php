@@ -160,7 +160,7 @@
                                         <img src="assets/images/blog/comment-1-2.jpg" alt="">
                                     </div><!-- /.comment-one__image -->
                                     <div class="comment-one__content">
-                                        <h3>Lydia Sparks</h3>
+                                        <h3>Lydia Spark</h3>
                                         <span class="comment-one__date">Mar 15, 2020</span>
                                         <p>Lorem ipsum dolor sit amet consectetur adipcing elit sed do eiusmod tempor
                                             incididunt labore et dolore magna aliqua.</p>

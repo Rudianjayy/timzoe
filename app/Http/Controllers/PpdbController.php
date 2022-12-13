@@ -14,6 +14,7 @@ use Illuminate\Http\Request;
 use App\Models\Carapendaftaran;
 use App\Models\Langkahpendaftaran;
 use App\Models\Deskripsipendaftaran;
+use App\Models\Pamfletppdb;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -23,6 +24,7 @@ class PpdbController extends Controller
     {
         $dp = Deskripsipendaftaran::all();
         $pd = Deskripsipendaftaran::all();
+        $ab = biaya::all();
         $kontak = Deskripsipendaftaran::all();
         $cp = Carapendaftaran::all();
         $footerppdb = footeer::all();
@@ -30,13 +32,16 @@ class PpdbController extends Controller
         $info = info::all();
         $biaya = biaya::all();
         $langkah = Langkahpendaftaran::all();
+        return view('ppdb.pendaftaran', compact('dp', 'pd', 'kontak', 'cp', 'footerppdb', 'info', 'biaya', 'langkah', 'footerlink', 'ab'));
         $total = Formulir::count();
         $formulir = Formulir::where('status', '=', 'diterima')->count();
         $formulird = Formulir::where('status', '=', 'ditolak')->count();
         $formulirp = Formulir::where('status', '=', 'pending')->count();
-        return view('ppdb.pendaftaran', compact('dp', 'pd', 'kontak', 'cp', 'footerppdb', 'info', 'biaya', 'langkah', 'footerlink', 'formulir', 'formulird', 'total', 'formulirp'));
+
+        return view('ppdb.pendaftaran', compact('dp', 'pd', 'kontak', 'cp', 'footerppdb', 'info', 'biaya', 'langkah', 'footerlink', 'formulir', 'formulird', 'total', 'formulirp', 'data3'));
     }
-    public function snap(Request $request){
+    public function snap(Request $request)
+    {
         // Set your Merchant Server Key
         \Midtrans\Config::$serverKey = 'SB-Mid-server-RcFqJE4B66H7TmdNUajirjjK';
         // Set to Development/Sandbox Environment (default). Set to true for Production Environment (accept real transaction).
@@ -66,17 +71,18 @@ class PpdbController extends Controller
             ),
         );
 
-    $snapToken = \Midtrans\Snap::getSnapToken($params);
+        $snapToken = \Midtrans\Snap::getSnapToken($params);
 
-    // return view('ppdb.pendaftaran' ,['snapToken' => $snapToken]);
-    return response()->json([
-        'snap' =>$snapToken,
-        'biaya' =>$request->biaya_id
+        // return view('ppdb.pendaftaran' ,['snapToken' => $snapToken]);
+        return response()->json([
+            'snap' => $snapToken,
+            'biaya' => $request->biaya_id
 
-    ]);
+        ]);
     }
 
-    public function payment_post(Request $request) {
+    public function payment_post(Request $request)
+    {
         $json = json_decode($request->get('json'));
         // dd($request);
 
@@ -93,7 +99,8 @@ class PpdbController extends Controller
 
         return $order->save() ? redirect(url('/'))->with('alert-success', 'Berhasil Berlangganan') : redirect(url('/'))->with('alert-failed', 'Terjadi Kesalahan');
     }
-    public function show(Request $request){
+    public function show(Request $request)
+    {
         // Set your Merchant Server Key
         \Midtrans\Config::$serverKey = 'SB-Mid-server-RcFqJE4B66H7TmdNUajirjjK';
         // Set to Development/Sandbox Environment (default). Set to true for Production Environment (accept real transaction).
@@ -123,17 +130,18 @@ class PpdbController extends Controller
             ),
         );
 
-    $snapToken = \Midtrans\Snap::getSnapToken($params);
+        $snapToken = \Midtrans\Snap::getSnapToken($params);
 
-    // return view('ppdb.pendaftaran' ,['snapToken' => $snapToken]);
-    return response()->json([
-        'snap' =>$snapToken,
-        'biaya' =>$request->biaya_id
+        // return view('ppdb.pendaftaran' ,['snapToken' => $snapToken]);
+        return response()->json([
+            'snap' => $snapToken,
+            'biaya' => $request->biaya_id
 
-    ]);
+        ]);
     }
 
-    public function pembayaran_post(Request $request) {
+    public function pembayaran_post(Request $request)
+    {
         $json = json_decode($request->get('json'));
         // dd($request);
 
@@ -148,11 +156,11 @@ class PpdbController extends Controller
         $order->payment_code = isset($json->payment_code) ? $json->payment_code : null;
         $order->pdf_url = isset($json->pdf_url) ? $json->pdf_url : null;
 
-        return $order->save() ? redirect(url('/'))->with('alert-success', 'Berhasil Berlangganan') : redirect(url('/'))->with('alert-failed', 'Terjadi Kesalahan');
+        return $order->save() ? redirect(url('/bayaruser'))->with('alert-success', 'Berhasil Berlangganan') : redirect(url('/bayaruser'))->with('alert-failed', 'Terjadi Kesalahan');
     }
 
 
- 
+
 
 
 
@@ -512,8 +520,8 @@ class PpdbController extends Controller
 
     public function tambahformulir()
     {
-        $status_pay = Payment::where('id_user',Auth::user()->id)->first();
-        return view('ppdb.formulir.tambah-formulir',compact('status_pay'));
+        $status_pay = Payment::where('id_user', Auth::user()->id)->first();
+        return view('ppdb.formulir.tambah-formulir', compact('status_pay'));
     }
 
     public function submitdata27(Request $request)
@@ -577,7 +585,7 @@ class PpdbController extends Controller
             $data4->foto_kk = $request->file('foto_kk')->getClientOriginalName();
             $data4->save();
         }
-        
+
         return redirect()->route('userformulir')->with('success', ' Data Berhasil di Tambahkan!');
     }
 
@@ -598,9 +606,9 @@ class PpdbController extends Controller
     public function bayaruser()
     {
         $pricing = biaya::all();
-        $status_pay = Payment::where('id_user',Auth::user()->id)->first();
-        
-        return view('ppdb.bayardaftar.bayar-user',compact('pricing','status_pay'));
+        $status_pay = Payment::where('id_user', Auth::user()->id)->first();
+
+        return view('ppdb.bayardaftar.bayar-user', compact('pricing', 'status_pay'));
     }
 
 
@@ -660,8 +668,8 @@ class PpdbController extends Controller
             'gelombang' => $request->gelombang,
             'penjelasan' => $request->penjelasan,
             'jadwal_mulai' => $request->jadwal_mulai,
-            'jadwal_ditutup' => $request->jadwal_ditutup,           
-             'biaya' => $request->biaya,
+            'jadwal_ditutup' => $request->jadwal_ditutup,
+            'biaya' => $request->biaya,
             // dd($request->biaya)
 
         ]);
@@ -812,5 +820,70 @@ class PpdbController extends Controller
         $langkah = Langkahpendaftaran::find($id);
         $langkah->delete();
         return redirect()->route('adminlangkah')->with('success', 'Data Berhasil Di Hapus');
+    }
+
+
+
+
+
+
+
+
+
+
+
+    public function adminpamflet()
+    {
+        $pamflet = Pamfletppdb::all();
+        return view('ppdb.pamflet.admin-pamflet', compact('pamflet'));
+    }
+
+    public function tambahpamflet()
+    {
+        $pamflet = Pamfletppdb::all();
+        return view('ppdb.pamflet.tambah-pamflet', compact('pamflet'));
+    }
+    public function prosestambahpamflet(Request $request)
+    {
+        $this->validate($request, [
+            'foto_pamflet' =>'required|mimes:jpg,jpeg,bmp,gif,png,webp',
+        ], [
+            'foto_pamflet.required' =>'Harus diisi',
+            'foto_pamflet.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
+        ]);
+        $pamflet = Pamfletppdb::create([
+            'foto_pamflet' => $request->foto_pamflet,
+        ]);
+        if ($request->hasFile('foto_pamflet')) {
+            $request->file('foto_pamflet')->move('fotomahasiswa/', $request->file('foto_pamflet')->getClientOriginalName());
+            $pamflet->foto_pamflet = $request->file('foto_pamflet')->getClientOriginalName();
+            $pamflet->save();
+        }
+        return redirect()->route('adminpamflet')->with('success', 'Data Berhasil Di Tambahkan');
+    }
+    public function editpamflet($id)
+    {
+        $pamflet = Pamfletppdb::findOrFail($id);
+        return view('ppdb.pamflet.edit-pamflet', compact('pamflet'));
+    }
+    public function editprosespamflet(Request $request, $id)
+    {
+        $pamflet = Pamfletppdb::find($id);
+        $pamflet->update([
+            'foto_pamflet' => $request->foto_pamflet,
+        ]);
+        if ($request->hasFile('foto_pamflet')) {
+            $request->file('foto_pamflet')->move('fotomahasiswa/', $request->file('foto_pamflet')->getClientOriginalName());
+            $pamflet->foto_pamflet = $request->file('foto_pamflet')->getClientOriginalName();
+            $pamflet->save();
+        }
+        return redirect()->route('adminpamflet')->with('success', 'Data Berhasil Di Edit');
+    }
+
+    public function deletepamflet($id)
+    { 
+        $pamflet = Pamfletppdb::find($id);
+        $pamflet->delete();
+        return redirect()->route('adminpamflet')->with('success', 'Data Berhasil Di Hapus');
     }
 }

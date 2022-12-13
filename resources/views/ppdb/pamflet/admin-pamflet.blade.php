@@ -1,10 +1,5 @@
 @extends('layout.main')
 @push('css')
-    {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> --}}
-    <title>Data Dosen - Laravel</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css"
-        integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
 @endpush
 @section('content')
 
@@ -18,12 +13,12 @@
         <div class="container">
             <div class="page-header">
                 <div class="page-title">
-                    <h3>IPM/OSIS</h3>
+                    <h3>Welcome </h3>
                     <div class="crumbs">
                         <ul id="breadcrumbs" class="breadcrumb">
                             <li><a href="index.html"><i class="flaticon-home-fill"></i></a></li>
-                            <li><a href="#">Kesiswaan</a></li>
-                            <li class="active"><a href="#">IPM/OSIS</a></li>
+                            <li><a href="#">Pamflet PPDB</a></li>
+                            <li class="active"><a href="#">Pamflet PPDB</a></li>
                         </ul>
                     </div>
                 </div>
@@ -35,57 +30,55 @@
                         <div class="widget-header">
                             <div class="row">
                                 <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                    <h4>IPM/OSIS</h4>
+                                    <h4>Pamflet PPDB</h4>
+                                </div>
+                                <div>
+                                    <a href="/tambahpamflet" class="btn btn-primary mb-3 "
+                                        id="kt_account_profile_details_submit" style="margin-left: 30px;">Tambah
+                                        +</a>
                                 </div>
                             </div>
                         </div>
                         <div class="widget-content widget-content-area">
                             <div class="table-responsive mb-4">
+
                                 <table id="ecommerce-product-list" class="table  table-bordered">
-                                    <div>
-                                        <a href="/tambahosis" class="btn btn-primary mt-5"
-                                            id="kt_account_profile_details_submit">Tambah
-                                            +</a>
-                                    </div>
                                     <thead>
                                         <tr>
-
-                                            <th scope="col">#</th>
-                                            <th scope="col">judul osis</th>
-                                            <th scope="col">Foto osis</th>
-                                            <th scope="col">Deskripsi osis</th>
-                                            <th class="align-center">Action</th>
+                                            <th scope="col">No</th>
+                                            <th scope="col">Foto Pamflet</th>
+                                            <th scope="col">Aksi</th>
                                         </tr>
                                     </thead>
+
                                     <tbody>
                                         @php
                                             $no = 1;
                                         @endphp
-                                        @foreach ($data as $d)
+                                        @foreach ($pamflet as $d)
                                             <tr>
                                                 <th>{{ $no++ }}</th>
-                                                <td>{{ $d->judul_osis }}</td>
                                                 <td>
-                                                    <img src="{{ asset('fotomahasiswa/' . $d->foto) }}" alt=""
-                                                        style="width: 50px;">
+                                                    <img src="{{ asset('fotomahasiswa/' . $d->foto_pamflet) }}" alt="" style="width: 80px;">
                                                 </td>
-                                                <td>{!! $d->deskripsi_osis !!}</td>
 
 
                                                 <td class="align-center">
                                                     <ul class="table-controls">
                                                         <li>
-                                                            <a href="/editosis/{{ $d->id }}"
+                                                            <a href="/editpamflet/{{ $d->id }}"
                                                                 data-toggle="tooltip" data-placement="top" title="Edit">
                                                                 <i class="flaticon-edit"></i>
                                                             </a>
                                                         </li>
-                                                        {{--  <li>
-                                                            <a href="/deleteosis/{{ $d->id }}"
-                                                                data-toggle="tooltip" data-placement="top" title="Delete">
+                                                        <li>
+                                                            <a href="#" class="delete fire"
+                                                                data-id="{{ $d->id }}"
+                                                                data-nama="{{ $d->foto_pamflet }}" data-toggle="tooltip"
+                                                                data-placement="top" title="Delete">
                                                                 <i class="flaticon-delete-5"></i>
                                                             </a>
-                                                        </li>  --}}
+                                                        </li>
                                                     </ul>
                                                 </td>
                                             </tr>
@@ -99,17 +92,39 @@
             </div>
         </div>
 
-
-
+        @include('layout.script')
 
 
     </body>
-    @include('layout.script')
-    <script>
-        @if (Session::has('success'))
-            toastr.success("{{ Session::get('success') }}")
-        @endif
-    </script>
 
-    {{-- @endpush --}}
+        <script>
+            $('.delete').click(function() {
+                var id = $(this).attr('data-id');
+                var nama = $(this).attr('data-nama');
+
+
+                swal({
+                        title: "Apa kamu yakin ingin menghapus data ini?",
+                        text: "Kamu akan menghapus data dengan foto  " + nama + "! ",
+                        icon: "warning",
+                        buttons: true,
+                        dangerMode: true,
+                    })
+                    .then((willDelete) => {
+                        if (willDelete) {
+                            window.location = "/deletepamflet/" + id + ""
+                             swal("Data berhasil dihapus!", {
+                               icon: "success",
+                             });
+                        } else {
+                            swal("Data tidak jadi dihapus!");
+                        }
+                    });
+            });
+        </script>
+        <script>
+            @if (Session::has('success'))
+                toastr.success("{{ Session::get('success') }}")
+            @endif
+        </script>
 @endsection

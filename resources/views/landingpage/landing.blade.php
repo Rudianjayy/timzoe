@@ -112,7 +112,7 @@
                         </div>
                         <div class="content-right">
                             <button class="sc-button style letter style-2"><a href="/kompetensi"><span>Baca
-                                        Selengkapnya</span></a> </button>
+                                Selengkapnya</span></a> </button>
                         </div>
                     </div>
                 </div>

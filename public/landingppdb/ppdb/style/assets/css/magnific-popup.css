@@ -152,8 +152,7 @@ button::-moz-focus-inner {
   right: -6px;
   text-align: right;
   padding-right: 6px;
-  width: 100%;
-}
+  width: 100%; }
 
 .mfp-counter {
   position: absolute;
@@ -244,7 +243,7 @@ button::-moz-focus-inner {
 
 /* Main image in popup */
 img.mfp-img {
-  width: 500px;
+  width: auto;
   max-width: 100%;
   height: auto;
   display: block;

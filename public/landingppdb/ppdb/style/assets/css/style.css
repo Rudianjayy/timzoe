@@ -5,11 +5,11 @@
 # common
 # Animations
 # Main Menu
-# SideMenu
-# Banner One
+# SideMenu 
+# Banner One 
 	## Banner One Home Two
-	## Banner Three
-# Search Popup
+	## Banner Three 
+# Search Popup 
 # Footer
 # Contact One
 	## Contact Two
@@ -70,14 +70,6 @@ font-family: 'Poppins', sans-serif; */
 	--thm-black: #162f62;
 	--thm-black-rgb: 22, 47, 98;
 }
-html {
-    scroll-behavior: smooth;
-  }
-
-
-html {
-	scroll-behavior: smooth;
-}
 
 body {
 	font-family: var(--thm-font);
@@ -107,7 +99,6 @@ a:focus {
 	text-decoration: none;
 }
 
-
 .page-wrapper {
 	position: relative;
 	margin: 0 auto;
@@ -119,12 +110,6 @@ a:focus {
 @media (min-width: 1200px) {
 	.container {
 		max-width: 1200px;
-	}
-}
-@media (min-width: 1200px) {
-	.container-riski {
-		max-width: 1200px;
-        margin-left: 300px;
 	}
 }
 
@@ -182,7 +167,7 @@ a:focus {
 	font-weight: 500;
 	color: #fff;
 	background-size: 200% auto;
-	background-image: linear-gradient(90deg, #2f5bea 0%, #2f5bea 51%, #ffbc45 100%);
+	background-image: linear-gradient(90deg, #ffbc45 0%, #ff5959 51%, #ffbc45 100%);
 	transition: all 500ms ease;
 	box-shadow: 0px 30px 50px 0px rgba(25, 71, 174, 0.1);
 	border-radius: 27.5px;
@@ -743,129 +728,9 @@ a:focus {
 	right: 20%;
 }
 
-.banner,.banner2,.banner3,.banner4 {
-	height: 100vh;
-	width: 100%;
-	position: absolute;
-	left: 0;
-	top: 0;
-}
-
-.img-slider1,.img-slider2,.img-slider3,.img-slider4 {
-	width: 100%;
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%,-50%);
-}
-
-.banner {
-	animation: img-slider1 16s linear infinite 0s;
-}
-.banner2 {
-	animation: img-slider2 16s linear infinite 0s;
-}
-.banner3 {
-	animation: img-slider3 16s linear infinite 0s;
-}
-.banner4 {
-	animation: img-slider3 16s linear infinite 0s;
-}
-
-@keyframes img-slider1{
-	0%{
-		visibility: visible;
-	}
-	25%{
-		visibility: hidden;
-	}
-	50%{
-		visibility: hidden;
-	}
-	75%{
-		visibility: hidden;
-	}
-	100%{
-		visibility: visible;
-	}
-}
-@keyframes img-slider2{
-	0%{
-		visibility: hidden;
-	}
-	25%{
-		visibility: hidden;
-	}
-	50%{
-		visibility: visible;
-	}
-	75%{
-		visibility: hidden;
-	}
-	100%{
-		visibility: hidden;
-	}
-}
-@keyframes img-slider3{
-	0%{
-		visibility: hidden;
-	}
-	25%{
-		visibility: hidden;
-	}
-	50%{
-		visibility: hidden;
-	}
-	75%{
-		visibility: visible;
-	}
-	100%{
-		visibility: hidden;
-	}
-}
-@keyframes img-slider4{
-	0%{
-		visibility: hidden;
-	}
-	25%{
-		visibility: hidden;
-	}
-	50%{
-		visibility: hidden;
-	}
-	75%{
-		visibility: hidden;
-	}
-	100%{
-		visibility: visible;
-	}
-}
 
 
-/* .rudi {
-	text-align: center;
-}
-.rudi h1 {
-	font-size: 160px;
-	color: #fff;
-	font-weight: 600;
-
-}
-.rudi a {
-	text-decoration: none;
-	display: inline-block;
-	color: #fff;
-	font-size: 24px;
-	break-inside: 2px solid #fff;
-	padding: 17px 70px;
-	border-radius: 50%;
-	margin-top: 20px;
-} */
-
-
-
-
-/*--------------------------------------------------------------
+/*-------------------------------------------------------------- 
 # Animations
 --------------------------------------------------------------*/
 
@@ -1272,7 +1137,7 @@ a:focus {
 	}
   }
 
-/*--------------------------------------------------------------
+/*-------------------------------------------------------------- 
 # Main Menu
 --------------------------------------------------------------*/
 
@@ -1342,7 +1207,6 @@ a:focus {
 
 .main-nav-one .main-nav__main-navigation .main-nav__navigation-box {
 	display: flex;
-	margin-left: 171px;
 	align-items: center;
 }
 
@@ -1548,12 +1412,8 @@ a:focus {
 
 .stricked-menu.stricky-fixed {
 	opacity: 1;
-	padding-top: 10px;
-	padding-bottom: 10px;
 	transform: translateY(0%);
 }
-
-
 
 
 .main-nav-one.stricked-menu .main-nav__navigation-box>li {
@@ -1563,32 +1423,32 @@ a:focus {
 /* main nav home three */
 
 .main-nav-one__home-three .main-nav__navigation-box>li>a {
-	color: #fff;
+	color: #162f62;
 }
 
 @media(max-width: 1915px) {
-
+	
 	.main-nav-one__home-three .main-nav__navigation-box>li:last-child>a {
 		color: #fff;
 	}
 }
 
 @media(max-width: 1740px) {
-
+	
 	.main-nav-one__home-three .main-nav__navigation-box>li:nth-child(5)>a {
 		color: #fff;
 	}
 }
 
 @media(max-width: 1635px) {
-
+	
 	.main-nav-one__home-three .main-nav__navigation-box>li:nth-child(4)>a {
 		color: #fff;
 	}
 }
 
 @media(max-width: 1555px) {
-
+	
 	.main-nav-one__home-three .main-nav__navigation-box>li:nth-child(3)>a {
 		color: #fff;
 	}
@@ -1615,8 +1475,8 @@ a:focus {
 	color: #fff;
 }
 
-/*--------------------------------------------------------------
-# SideMenu
+/*-------------------------------------------------------------- 
+# SideMenu 
 --------------------------------------------------------------*/
 
 .side-menu__block {
@@ -1814,8 +1674,8 @@ a:focus {
 }
 
 
-/*--------------------------------------------------------------
-# Banner One
+/*-------------------------------------------------------------- 
+# Banner One 
 --------------------------------------------------------------*/
 
 .banner-one {
@@ -2022,7 +1882,7 @@ a:focus {
 }
 
 
-/*--------------------------------------------------------------
+/*-------------------------------------------------------------- 
 ## Banner One Home Two
 --------------------------------------------------------------*/
 
@@ -2109,7 +1969,7 @@ a:focus {
 }
 
 .banner-one__home-two .container {
-	padding-top: 100px;
+	padding-top: 195px;
 	padding-bottom: 452px;
 }
 
@@ -2169,8 +2029,8 @@ a:focus {
 
 
 
-/*--------------------------------------------------------------
-## Banner Three
+/*-------------------------------------------------------------- 
+## Banner Three 
 --------------------------------------------------------------*/
 
 .banner-two {
@@ -2263,8 +2123,8 @@ a:focus {
 	background-image: linear-gradient(90deg, #61d8ff 0%, #6168ff 51%, #61d8ff 100%);
 }
 
-/*--------------------------------------------------------------
-# Search Popup
+/*-------------------------------------------------------------- 
+# Search Popup 
 --------------------------------------------------------------*/
 
 .search-popup {
@@ -2394,18 +2254,10 @@ a:focus {
 }
 
 
-/*--------------------------------------------------------------
+/*-------------------------------------------------------------- 
 # Footer
 --------------------------------------------------------------*/
 
-.site-footer-upj {
-	padding-top: 50px;
-	background-image: url(../images/shapes/cta-bg-1-1.jpg);
-	background-position: bottom center;
-	position: relative;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
 .site-footer {
 	padding-top: 339px;
 	background-image: url(../images/shapes/footer-bg-1-1.png);
@@ -2676,7 +2528,7 @@ a:focus {
 	color: #ff8b4f;
 }
 
-/*--------------------------------------------------------------
+/*-------------------------------------------------------------- 
 # Contact One
 --------------------------------------------------------------*/
 
@@ -2800,7 +2652,7 @@ a:focus {
 	display: block;
 }
 
-/*--------------------------------------------------------------
+/*-------------------------------------------------------------- 
 ## Contact Two
 --------------------------------------------------------------*/
 
@@ -3042,7 +2894,7 @@ a:focus {
 	margin-top: 14px;
 }
 
-/*--------------------------------------------------------------
+/*-------------------------------------------------------------- 
 # Mailchimp One
 --------------------------------------------------------------*/
 
@@ -3143,7 +2995,7 @@ a:focus {
 	transform: translateY(-50%);
 }
 
-/*--------------------------------------------------------------
+/*-------------------------------------------------------------- 
 # Blog One
 --------------------------------------------------------------*/
 
@@ -3163,6 +3015,7 @@ a:focus {
 .blog-one__image {
 	overflow: hidden;
 	position: relative;
+	background-color: var(--thm-black);
 	border-radius: 10px;
 	border-bottom-left-radius: 0;
 	border-bottom-right-radius: 0;
@@ -3175,11 +3028,39 @@ a:focus {
 	transition: opacity 500ms ease, transform 500ms ease;
 }
 
+.blog-one__single:hover .blog-one__image>img {
+	opacity: 0.4;
+	transform: scale(1.05);
+}
 
+.blog-one__image>a {
+	width: 65px;
+	height: 65px;
+	border-radius: 50%;
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--thm-primary);
+	font-size: 23px;
+	position: absolute;
+	top: calc(50% - 32.5px);
+	left: calc(50% - 32.5px);
+	opacity: 0;
+	transform: perspective(100px) translateZ(30px) rotate(45deg);
+	transition: opacity 500ms ease 0ms, transform 500ms ease 0ms, background 500ms ease, color 500ms ease;
+}
 
+.blog-one__image>a:hover {
+	background-color: var(--thm-base);
+	color: #fff;
+}
 
-
-
+.blog-one__single:hover .blog-one__image>a {
+	opacity: 1;
+	transform: perspective(100px) translateZ(0px) rotate(0deg);
+	transition: opacity 500ms ease 300ms, transform 500ms ease 300ms, background 500ms ease, color 500ms ease;
+}
 
 .blog-one__content {
 	padding-left: 30px;
@@ -3279,7 +3160,7 @@ a:focus {
 	padding-top: 0;
 }
 
-/*--------------------------------------------------------------
+/*-------------------------------------------------------------- 
 ## Blog One Carousel
 --------------------------------------------------------------*/
 
@@ -3357,38 +3238,36 @@ a:focus {
 }
 
 
-/*--------------------------------------------------------------
+/*-------------------------------------------------------------- 
 ## Blog Grid
 --------------------------------------------------------------*/
 
 .blog-grid {
-	padding-top: 40px;
-	padding-bottom: 17px;
+	padding-top: 170px;
+	padding-bottom: 170px;
 }
 
 .blog-grid .high-gutters {
 	margin-left: -20px;
 	margin-right: -20px;
-
 }
 
 .blog-grid .high-gutters>[class*=col-] {
 	padding-left: 20px;
 	padding-right: 20px;
-
 }
 
 .blog-grid .blog-one__single {
 	margin-bottom: 40px;
 }
 
-/*--------------------------------------------------------------
+/*-------------------------------------------------------------- 
 ## Blog Standard
 --------------------------------------------------------------*/
 
 .blog-standard {
-	padding-top: 100px;
-	padding-bottom: 100px;
+	padding-top: 170px;
+	padding-bottom: 170px;
 	position: relative;
 }
 
@@ -3396,7 +3275,7 @@ a:focus {
 	position: relative;
 }
 
-/*--------------------------------------------------------------
+/*-------------------------------------------------------------- 
 ## Blog Two
 --------------------------------------------------------------*/
 
@@ -3460,14 +3339,14 @@ a:focus {
 .blog-two__meta {
 	display: flex;
 	align-items: center;
-	margin-top: 100px;
+	margin-top: 31px;
 	margin-bottom: 8px;
 }
 
 .blog-two__meta a,
 .blog-two__meta span {
 	font-size: 16px;
-	color: #0c0c0c;
+	color: #8a919e;
 	transition: all 500ms ease;
 }
 
@@ -3539,8 +3418,8 @@ a:focus {
 }
 
 
-/*--------------------------------------------------------------
-## Blog Detail
+/*-------------------------------------------------------------- 
+## Blog Details
 --------------------------------------------------------------*/
 
 .blog-details__main h3 {
@@ -3550,18 +3429,19 @@ a:focus {
 	color: var(--thm-black);
 	font-weight: 600;
 	margin-bottom: 25px;
-
 }
 
 .blog-details__main p {
 	margin: 0;
 }
 
-
+.blog-details__main p+p {
+	margin-top: 35px;
+}
 
 .blog-details__main img {
 	border-radius: 10px;
-	/* margin-top: 50px; */
+	margin-top: 50px;
 	margin-bottom: 50px;
 }
 
@@ -3640,11 +3520,6 @@ a:focus {
 .blog-details__social {
 	display: flex;
 	align-items: center;
-	margin-top: 40px;
-	border-top: 1px solid rgba(var(--thm-black-rgb), 0.1);
-	border-bottom: 1px solid rgba(var(--thm-black-rgb), 0.1);
-	padding-top: 20px;
-	padding-bottom: 20px;
 }
 
 .blog-details__social a {
@@ -3690,8 +3565,6 @@ a:focus {
 .blog-details__social a i {
 	position: relative;
 }
-
-
 
 .blog-details__meta {
 	margin-bottom: 50px;
@@ -3739,7 +3612,7 @@ a:focus {
 }
 
 
-/*--------------------------------------------------------------
+/*-------------------------------------------------------------- 
 ## Comments
 --------------------------------------------------------------*/
 
@@ -3839,7 +3712,7 @@ a:focus {
 }
 
 
-/*--------------------------------------------------------------
+/*-------------------------------------------------------------- 
 # Sidebar
 --------------------------------------------------------------*/
 
@@ -4057,8 +3930,8 @@ a:focus {
 	border: 1px solid #e5e5e5;
 	line-height: 60px;
 	border-radius: 30px;
-	padding-left: 10px;
-	font-size: 16px;
+	padding-left: 30px;
+	font-size: 18px;
 	font-weight: 600;
 	color: var(--thm-black);
 	font-family: var(--heading-font);
@@ -4183,7 +4056,7 @@ a:focus {
 }
 
 
-/*--------------------------------------------------------------
+/*-------------------------------------------------------------- 
 # Page Header
 --------------------------------------------------------------*/
 
@@ -4323,7 +4196,7 @@ a:focus {
 	font-family: var(--heading-font);
 }
 
-/*--------------------------------------------------------------
+/*-------------------------------------------------------------- 
 # Brand One
 --------------------------------------------------------------*/
 
@@ -4341,7 +4214,7 @@ a:focus {
 	padding-top: 0;
 }
 
-/*--------------------------------------------------------------
+/*-------------------------------------------------------------- 
 # Error Page
 --------------------------------------------------------------*/
 
@@ -4499,7 +4372,7 @@ a:focus {
 	margin-top: 5px;
 }
 
-/*--------------------------------------------------------------
+/*-------------------------------------------------------------- 
 # Portfolio One
 --------------------------------------------------------------*/
 
@@ -4620,7 +4493,7 @@ a:focus {
 	font-size: 16px;
 }
 
-/*--------------------------------------------------------------
+/*-------------------------------------------------------------- 
 ## Portfolio Two
 --------------------------------------------------------------*/
 
@@ -4719,13 +4592,13 @@ a:focus {
 	font-size: 16px;
 }
 
-/*--------------------------------------------------------------
+/*-------------------------------------------------------------- 
 ## Portfolio Grid
 --------------------------------------------------------------*/
 
 
 .portfolio-grid {
-	padding-top: 20px;
+	padding-top: 170px;
 }
 
 .portfolio-grid .row.high-gutters {
@@ -4743,7 +4616,7 @@ a:focus {
 }
 
 
-/*--------------------------------------------------------------
+/*-------------------------------------------------------------- 
 ## Portfolio Column
 --------------------------------------------------------------*/
 
@@ -4752,10 +4625,10 @@ a:focus {
 }
 
 .portfolio-column {
-	padding-top: 17px;
+	padding-top: 170px;
 }
 
-/*--------------------------------------------------------------
+/*-------------------------------------------------------------- 
 ## Portfolio Carousel
 --------------------------------------------------------------*/
 
@@ -4791,20 +4664,17 @@ a:focus {
 	margin-bottom: 50px;
 }
 
-/*--------------------------------------------------------------
+/*-------------------------------------------------------------- 
 ## Portfolio Details
 --------------------------------------------------------------*/
 
+.portfolio-details {
+	padding-top: 170px;
+}
 
 .portfolio-details__image img {
 	border-radius: 10px;
 	max-width: 100%;
-}
-.portfolio-details__imaged img {
-	border-radius: 10px;
-	max-width: 100%;
-	height: 400px;
-	width: 80%;
 }
 
 .portfolio-details__content h3 {
@@ -4928,12 +4798,12 @@ a:focus {
 	margin-top: 50px;
 }
 
-/*--------------------------------------------------------------
+/*-------------------------------------------------------------- 
 # Testimonials One
 --------------------------------------------------------------*/
 
 .testimonials-one {
-	padding-top: 50px;
+	padding-top: 170px;
 	padding-bottom: 95px;
 	position: relative;
 }
@@ -5046,7 +4916,7 @@ a:focus {
 	padding-top: 0;
 }
 
-/*--------------------------------------------------------------
+/*-------------------------------------------------------------- 
 ## Testimonials One Carousel
 --------------------------------------------------------------*/
 
@@ -5091,7 +4961,7 @@ a:focus {
 	background-image: linear-gradient(-45deg, #61d8ff 0%, #6168ff 100%);
 }
 
-/*--------------------------------------------------------------
+/*-------------------------------------------------------------- 
 # Team One
 --------------------------------------------------------------*/
 
@@ -5103,7 +4973,6 @@ a:focus {
 
 .team-one .container {
 	position: relative;
-	padding-bottom: 150px;
 }
 
 .team-one .row.high-gutters {
@@ -5269,19 +5138,18 @@ a:focus {
 	position: absolute;
 	top: 40%;
 	left: 0;
-	/* padding-top: 10000px; */
 }
 
 .team-one__home-two {
 	padding-top: 170px;
 }
 
-/*--------------------------------------------------------------
+/*-------------------------------------------------------------- 
 # FAQ One
 --------------------------------------------------------------*/
 
 .faq-one {
-	padding-top: 20px;
+	padding-top: 170px;
 }
 
 
@@ -5341,133 +5209,28 @@ a:focus {
 	line-height: 40px;
 }
 
-         /* .faq-one .accrodion-title h4::before {
-            content: '\f309';
-            font-family: 'Font Awesome 5 Pro';
-            font-weight: 400;
-            width: 40px;
-            height: 40px;
-            color: #fff;
-            font-size: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            border-radius: 50%;
-            background-image: linear-gradient(-45deg, #dc88ff 0%, #8035ff 100%);
-            transition: transform 500ms ease;
-            transform: rotate(0deg);
-            position: absolute;
-            top: 70%;
-            left: 0;
-            transform: rotate(0deg) translateY(-50%);
-            transform-origin: top;
-        }  */
-         .youtube{
-            position: absolute;
-            top: 92%;
-            left: 5%;
-            font-size: 30px;
-            /* transform: rotate(0deg) translateY(-50%); */
-            /* transform-origin: top; */
-        }
-        .facebook{
-            position: absolute;
-            top: 77%;
-            left: 5%;
-            font-size: 30px;
-            /* transform: rotate(0deg) translateY(-50%); */
-            /* transform-origin: top; */
-        }
-        .instagram{
-            position: absolute;
-            top: 77%;
-            left: 5%;
-            font-size: 30px;
-            /* transform: rotate(0deg) translateY(-50%); */
-            /* transform-origin: top; */
-        }
-        .email{
-            position: absolute;
-            top: 62%;
-            left: 5%;
-            font-size: 30px;
-            /* transform: rotate(0deg) translateY(-50%); */
-            /* transform-origin: top; */
-        }
-        .namasekolah{
-            position: absolute;
-            /* color: ; */
-            top: 1%;
-            left: 5%;
-            font-size: 30px;
-            /* transform: rotate(0deg) translateY(-50%); */
-            /* transform-origin: top; */
-        }
-        .telepon{
-            position: absolute;
-            top: 47%;
-            left: 5%;
-            font-size: 30px;
-            /* transform: rotate(0deg) translateY(-50%); */
-            /* transform-origin: top; */
-        }
-        .alamat{
-            position: absolute;
-            top: 32%;
-            left: 5%;
-            font-size: 30px;
-            /* transform: rotate(0deg) translateY(-50%); */
-            /* transform-origin: top; */
-        }
-        .fax{
-            position: absolute;
-            top: 62%;
-            left: 5%;
-            font-size: 30px;
-            /* transform: rotate(0deg) translateY(-50%); */
-            /* transform-origin: top; */
-        }
-        .npsn{
-            position: absolute;
-            top: 16%;
-            left: 5%;
-            font-size: 30px;
-            /* transform: rotate(0deg) translateY(-50%); */
-            /* transform-origin: top; */
-        }
-        .provinsi{
-            position: absolute;
-            top: 16%;
-            left: 5%;
-            font-size: 30px;
-            /* transform: rotate(0deg) translateY(-50%); */
-            /* transform-origin: top; */
-        }
-        .kabupaten{
-            position: absolute;
-            top: 1%;
-            left: 5%;
-            font-size: 30px;
-            /* transform: rotate(0deg) translateY(-50%); */
-            /* transform-origin: top; */
-        }
-        .kecamatan{
-            position: absolute;
-            top: 47%;
-            left: 5%;
-            font-size: 30px;
-            /* transform: rotate(0deg) translateY(-50%); */
-            /* transform-origin: top; */
-        }
-        .kodepos{
-            position: absolute;
-            top: 32%;
-            left: 5%;
-            font-size: 30px;
-            /* transform: rotate(0deg) translateY(-50%); */
-            /* transform-origin: top; */
-        }
+.faq-one .accrodion-title h4::before {
+	content: '\f309';
+	font-family: 'Font Awesome 5 Pro';
+	font-weight: 400;
+	width: 40px;
+	height: 40px;
+	color: #fff;
+	font-size: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	border-radius: 50%;
+	background-image: linear-gradient(-45deg, #dc88ff 0%, #8035ff 100%);
+	transition: transform 500ms ease;
+	transform: rotate(0deg);
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: rotate(0deg) translateY(-50%);
+	transform-origin: top;
+}
 
 .faq-one .accrodion:nth-child(2) .accrodion-title h4::before {
 	background-image: linear-gradient(-45deg, #ffbc45 0%, #ff5959 100%);
@@ -5496,12 +5259,6 @@ a:focus {
 .faq-one .accrodion-content {
 	padding-left: 70px;
 	margin-bottom: -10px;
-    margin: 0 auto;
-
-}
-.content-center{
-    margin: 0 auto;
-    left: 50%;
 }
 
 .faq-one .row.high-gutters {
@@ -5510,7 +5267,7 @@ a:focus {
 }
 
 .faq-one .row.high-gutters>[class*=col-] {
-	padding-left: px;
+	padding-left: 27px;
 	padding-right: 27px;
 }
 
@@ -5528,7 +5285,7 @@ a:focus {
 	left: auto;
 }
 
-/*--------------------------------------------------------------
+/*-------------------------------------------------------------- 
 # Pricing One
 --------------------------------------------------------------*/
 
@@ -5656,7 +5413,7 @@ a:focus {
 	padding-top: 0;
 }
 
-/*--------------------------------------------------------------
+/*-------------------------------------------------------------- 
 ## Pricing Two
 --------------------------------------------------------------*/
 
@@ -5730,7 +5487,7 @@ a:focus {
 
 
 
-/*--------------------------------------------------------------
+/*-------------------------------------------------------------- 
 # Call to Action One
 --------------------------------------------------------------*/
 
@@ -5857,7 +5614,7 @@ a:focus {
 	top: 10%;
 }
 
-/*--------------------------------------------------------------
+/*-------------------------------------------------------------- 
 # Video One
 --------------------------------------------------------------*/
 
@@ -5901,12 +5658,12 @@ a:focus {
 	opacity: 0.7;
 }
 
-/*--------------------------------------------------------------
+/*-------------------------------------------------------------- 
 # Service One
 --------------------------------------------------------------*/
 
 .service-one {
-	padding-top: 40px;
+	padding-top: 170px;
 	padding-bottom: 120px;
 }
 
@@ -6043,7 +5800,7 @@ a:focus {
 	right: 15%;
 }
 
-/*--------------------------------------------------------------
+/*-------------------------------------------------------------- 
 ## Service Details
 --------------------------------------------------------------*/
 
@@ -6121,7 +5878,7 @@ a:focus {
 	background-image: linear-gradient(-45deg, #61d8ff 0%, #6168ff 100%);
 }
 
-/*--------------------------------------------------------------
+/*-------------------------------------------------------------- 
 ## Service Two
 --------------------------------------------------------------*/
 
@@ -6266,22 +6023,14 @@ a:focus {
 }
 
 
-/*--------------------------------------------------------------
+/*-------------------------------------------------------------- 
 ## Service Three
 --------------------------------------------------------------*/
 
-.service-three-bg {
-	padding-top: 50px;
-	padding-bottom: 50px;
-	position: relative;
-	background-color: darkgrey;
-
-}
 .service-three {
 	padding-top: 170px;
 	padding-bottom: 130px;
 	position: relative;
-
 }
 
 .service-three [class*=section__bubble-] {
@@ -6297,23 +6046,11 @@ a:focus {
 .service-three .row.high-gutters {
 	margin-left: -20px;
 	margin-right: -20px;
-
 }
 
 .service-three .row.high-gutters [class*=col-] {
 	padding-left: 20px;
 	padding-right: 20px;
-    color: #125f04;
-    text-decoration: none;
-    font-size: 0.85em;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    text-overflow: ellipsis;
-    overflow: hidden;
-
-
-
 }
 
 .service-three__single {
@@ -6343,7 +6080,7 @@ a:focus {
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
-	background-image: url(../images/shapes/bgcc2.png);
+	background-image: url(../images/shapes/service-3-bg-shape-1-1.png);
 	margin-left: auto;
 	margin-right: auto;
 	justify-content: center;
@@ -6425,7 +6162,7 @@ a:focus {
 
 
 
-/*--------------------------------------------------------------
+/*-------------------------------------------------------------- 
 # About One
 --------------------------------------------------------------*/
 
@@ -6496,15 +6233,15 @@ a:focus {
 	font-size: 20px;
 	position: relative;
 	top: -6px;
-	background-image: linear-gradient(-45deg, #ffbc45  0%, #ff5959 51%,#ffbc45 100%);
+	background-image: linear-gradient(-45deg, #dc88ff 0%, #8035ff 100%);
 }
 
 .about-one__box:nth-child(2) .about-one__box-icon i {
-	background-image: linear-gradient(-45deg, #ffbc45  0%, #ff5959 51%,#ffbc45 100%);
+	background-image: linear-gradient(-45deg, #ffbc45 0%, #ff5959 100%);
 }
 
 .about-one__box:nth-child(3) .about-one__box-icon i {
-	background-image: linear-gradient(-45deg, #ffbc45  0%, #ff5959 51%,#ffbc45 100%);
+	background-image: linear-gradient(-45deg, #61d8ff 0%, #6168ff 100%);
 }
 
 .about-one__home-two {
@@ -6515,7 +6252,7 @@ a:focus {
 	top: 10px;
 }
 
-/*--------------------------------------------------------------
+/*-------------------------------------------------------------- 
 ## About Two
 --------------------------------------------------------------*/
 
@@ -6631,14 +6368,13 @@ a:focus {
 	margin-top: 20px;
 }
 
-/*--------------------------------------------------------------
+/*-------------------------------------------------------------- 
 ## About Three
 --------------------------------------------------------------*/
 
 .about-three {
 	position: relative;
 	padding-bottom: 170px;
-	padding-top: 100px;
 }
 
 [class*=about-three__bg-image-] {
@@ -6772,7 +6508,7 @@ a:focus {
 	right: 200px;
 }
 
-/*--------------------------------------------------------------
+/*-------------------------------------------------------------- 
 # History One
 --------------------------------------------------------------*/
 
@@ -6936,7 +6672,7 @@ a:focus {
 	width: 100%;
 }
 
-/*--------------------------------------------------------------
+/*-------------------------------------------------------------- 
 # Step One
 --------------------------------------------------------------*/
 

@@ -58,9 +58,18 @@
                 </li>
             @endif
             @if (auth()->user()->role == 'user')
-                <li class="menu-title">Menu</li>
+
+
+
+                @php
+                    $status_pay = App\Models\Payment::where('id_user', Auth::user()->id)->first();
+                @endphp
                 <li class="menu">
-                    <a href="#tentangkami" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+
+
+                    @if ($status_pay == null) 
+                    <a href="#tentangkami" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" hidden>
+
                         <div class="">
                             <i class="flaticon-menu-list"></i>
                             <span>Formulir</span>
@@ -69,23 +78,30 @@
                             <i class="flaticon-right-arrow"></i>
                         </div>
                     </a>
+                    @elseif ($status_pay->status == 'settlement')
+                    <a href="#tentangkami" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+
+                        <div class="">
+                            <i class="flaticon-menu-list"></i>
+                            <span>Formulir</span>
+                        </div>
+                        <div>
+                            <i class="flaticon-right-arrow"></i>
+                        </div>
+                    </a>
+                    @endif
                     <ul class="collapse submenu list-unstyled" id="tentangkami" data-parent="#accordionExample">
                         @php
                             $status_pay = App\Models\Payment::where('id_user',Auth::user()->id)->first();
                         @endphp
                         <li>
+
                             @if ($status_pay == null)
-                                
-                            <a href="/bayaruser">Isi Formulir</a>
-
-                            @elseif ($status_pay == 'pending')
-                            
-                            <a href="/bayaruser">Isi Formulir</a>
-                            
-                            @elseif ($status_pay == 'settlement')
-
-                            <a href="/tambahformulir">Isi Formulir</a>
-
+                                <a href="/bayaruser" hidden>Isi Formulir</a>
+                            @elseif($status_pay->status == 'pending')
+                                <a href="/bayaruser">Isi Formulir</a>
+                            @elseif($status_pay->status == 'settlement')
+                                <a href="/tambahformulir">Isi Formulir</a>
                             @endif
                         </li>
 
@@ -533,6 +549,26 @@
                     <ul class="collapse submenu list-unstyled" id="operator" data-parent="#accordionExample">
                         <li>
                             <a href="/adminoperator"> Operator</a>
+                        </li>
+
+                    </ul>
+                </li>
+            @endif
+            @if (auth()->user()->role == 'admin')
+                <li class="menu-title">Welcome</li>
+                <li class="menu">
+                    <a href="#welcome" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <div class="">
+                            <i class="flaticon-menu-list"></i>
+                            <span>Welcome</span>
+                        </div>
+                        <div>
+                            <i class="flaticon-right-arrow"></i>
+                        </div>
+                    </a>
+                    <ul class="collapse submenu list-unstyled" id="welcome" data-parent="#accordionExample">
+                        <li>
+                            <a href="/adminpamflet"> Pamflet PPDB</a>
                         </li>
 
                     </ul>

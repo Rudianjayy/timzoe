@@ -421,6 +421,7 @@ h5 {
 
 .h6,
 h6 {
+    color: blackpdem;
     font-size: 1rem
 }
 
@@ -8568,7 +8569,8 @@ button.bg-dark:hover {
 }
 
 .w-100 {
-    width: 100% !important
+    width: 472px;
+    height: 327px;
 }
 
 .w-auto {
@@ -8709,7 +8711,7 @@ button.bg-dark:hover {
 
 .mt-3,
 .my-3 {
-    margin-top: 1rem !important
+    margin-top: -1rem !important
 }
 
 .mr-3,
@@ -8767,7 +8769,7 @@ button.bg-dark:hover {
 
 .mb-5,
 .my-5 {
-    margin-bottom: 3rem !important
+    margin-bottom: 0rem !important
 }
 
 .ml-5,

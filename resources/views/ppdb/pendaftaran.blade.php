@@ -1,46 +1,46 @@
 <!doctype html>
 <html lang="">
-
+ 
 <!-- Mirrored from templates.hibootstrap.com/colugo/default/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 02 Nov 2022 08:00:39 GMT -->
-
+ 
 <head>
-
+ 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+ 
     <link rel="stylesheet" href="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/css/bootstrap.min.css') }}">
-
+ 
     <link rel="stylesheet" href="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/css/animate.min.css') }}">
-
+ 
     <link rel="stylesheet" href="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/css/owl.carousel.min.css') }}">
-
+ 
     <link rel="stylesheet" href="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/css/fontawesome.min.css') }}">
-
+ 
     <link rel="stylesheet" href="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/css/odometer.css') }}">
-
+ 
     <link rel="stylesheet" href="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/css/magnific-popup.min.css') }}">
-
+ 
     <link rel="stylesheet" href="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/css/slick.min.css') }}">
-
+ 
     <link rel="stylesheet" href="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/css/style.css') }}">
-
+ 
     <link rel="stylesheet" href="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/css/dark.css') }}">
-
+ 
     <link rel="stylesheet" href="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/css/responsive.css') }}">
     <title>PPDB - SMK Muhammadiyah 1 Genteng</title>
     <link rel="icon" type="image/png" href="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/img/favicon.png') }}">
 </head>
-
+ 
 <body data-bs-spy="scroll" data-bs-offset="120">
-
+ 
     <div class="preloader">
         <div class="preloader">
             <span></span>
             <span></span>
         </div>
     </div>
-
-
+ 
+ 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <div class="logo">
@@ -68,7 +68,7 @@
                             Biaya & Jadwal
                         </a>
                     </li>
-
+ 
                     <li class="nav-item">
                         <a href="#kontak" class="nav-link">
                             Kontak
@@ -88,8 +88,8 @@
             </div>
         </div>
     </nav>
-
-
+ 
+ 
     <div id="home" class="main-banner">
         <div class="d-table">
             <div class="d-table-cell">
@@ -102,7 +102,7 @@
                                 <p>
                                     {{ $dp->deskripsi_slider }}
                                 </p>
-
+ 
                             </div>
                         </div>
                         @endforeach
@@ -116,57 +116,8 @@
             </div>
         </div>
     </div>
-
-    <section class="fun-facts-area pt-100 pb-70">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-fun-fact">
-                        <div class="icon">
-                            <i class="fa fa-users"></i>
-                        </div>
-                        <h3>
-                            <span class="odometer" data-count="{{ $total }}">{{ $total }}</span>
-                        </h3>
-                        <p>Pendaftar</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-fun-fact">
-                        <div class="icon">
-                            <i class="fa fa-heart"></i>
-                        </div>
-                        <h3>
-                            <span class="odometer" data-count="{{ $formulir }}">{{ $formulir }}</span>
-                        </h3>
-                        <p>Siswa Diterima</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-fun-fact">
-                        <div class="icon">
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h3>
-                            <span class="odometer" data-count="{{ $formulird }}">{{ $formulird }}</span>
-                        </h3>
-                        <p>Siswa Ditolak</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-fun-fact">
-                        <div class="icon">
-                            <i class="fa fa-download"></i>
-                        </div>
-                        <h3>
-                            <span class="odometer" data-count="{{ $formulirp }}">{{ $formulirp }}</span>
-                        </h3>
-                        <p>Siswa Pending</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+ 
+   
     <section id="syarat" class="feature-section ptb-100">
         <div class="container">
             <div class="section-title">
@@ -181,7 +132,7 @@
                         <img src="{{asset('ps/templates.hibootstrap.com/colugo/default/assets/img/mahok.png')}}" alt="download" class="img-fluid">
                     </div>
                 </div>
-
+ 
                 <div class="col-md-7">
                     <div class="feature-contents section-heading">
                         <ul class="list-unstyled">
@@ -237,7 +188,7 @@
                 </div>
             </div>
         </div>
-
+ 
     </section>
     <section id="biaya" class="pricing-area pt-100 pb-70">
         <div class="container">
@@ -264,13 +215,13 @@
                     <div class="tabs_item">
                         <div class="row">
                             @foreach ($biaya as $b )
-
-                            {{-- @php
+ 
+                            @php
                                 $tanggal_awal = date('Y-m-d',strtotime('$b->jadwal_mulai'));
-                                $tanggal_akhir = date('Y-m-d',strtotime('$b->jadwal_ditutup' ));
-
-                            @endphp --}}
-
+                                $tanggal_akhir = date('Y-m-d',strtotime('$b->jadwal_ditutup' ));    
+                            @endphp
+ 
+ 
                             <div class="col-lg-4 col-md-6">
                                 <div class="single-pricing-table">
                                     <div class="pricing-header">
@@ -287,14 +238,11 @@
                                         </li>
                                     </ul>
                                 </div>
-
+ 
                                 @if ( $b->jadwal_mulai < now() && $b->jadwal_ditutup > now())
                                     <div class="text-center">
                                         <div class="send-btn">
-                                            <button class="default-btn pay-button" data-biaya_id={{ $b->id }} data-biaya_gelombang={{ $b->gelombang }} data-biaya={{ (int)$b->biaya }}>
-                                                Bayar Sekarang
-                                                <span></span>
-                                            </button>
+                                          
                                             <div id="msgSubmit" class="h3 text-center hidden"></div>
                                             <div class="clearfix"></div>
                                         </div>
@@ -302,10 +250,7 @@
                                 @else
                                 <div class="text-center">
                                     <div class="send-btn ">
-                                        <button class="default-btn pay-button" >
-                                            Belum Aktif
-                                            <span></span>
-                                        </button>
+                                     
                                     </div>
                                 </div>
                                 @endif
@@ -321,9 +266,9 @@
                 </form>
             </div>
         </div>
-
+ 
     </section>
-         
+ 
             <section class="footer-area pt-100 pb-70">
                 <div class="container">
                     <div class="row">
@@ -406,7 +351,7 @@
                                     @foreach ($footerlink as $f)
                                     <li><a href="{{ $f->link }}">{{ $f->judul }}</a></li>
                                     @endforeach
-
+ 
                                 </ul>
                             </div>
                         </div>
@@ -422,8 +367,8 @@
                     </div>
                 </div>
             </section>
-
-
+ 
+ 
             <div class="copy-right">
                 <div class="container">
                     <div class="copy-right-content">
@@ -436,78 +381,78 @@
                     </div>
                 </div>
             </div>
-
-
+ 
+ 
             <div class="go-top">
                 <i class="fa fa-chevron-up"></i>
                 <i class="fa fa-chevron-up"></i>
             </div>
-
+ 
             <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
             <script src="{{asset('ps/templates.hibootstrap.com/colugo/default/assets/js/jquery.min.js')}}"></script>
-
+ 
             <script src="{{asset('ps/templates.hibootstrap.com/colugo/default/assets/js/bootstrap.bundle.min.js')}}"></script>
-
+ 
             <script src="{{asset('ps/templates.hibootstrap.com/colugo/default/assets/js/owl.carousel.min.js')}}"></script>
-
+ 
             <script src="{{asset('ps/templates.hibootstrap.com/colugo/default/assets/js/jquery.appear.js')}}"></script>
-
+ 
             <script src="{{asset('ps/templates.hibootstrap.com/colugo/default/assets/js/odometer.min.js')}}"></script>
-
+ 
             <script src="{{asset('ps/templates.hibootstrap.com/colugo/default/assets/js/slick.min.js')}}"></script>
-
+ 
             <script src="{{asset('ps/templates.hibootstrap.com/colugo/default/assets/js/particles.min.js')}}"></script>
-
-
+ 
+ 
             <script src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/js/jquery.ripples-min.js') }}"></script>
-
+ 
             <script src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/js/jquery.magnific-popup.min.js') }}">
             </script>
-
+ 
             <script src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/js/wow.min.js') }}"></script>
-
+ 
             <script src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/js/jquery.ajaxchimp.min.js') }}"></script>
-
+ 
             <script src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/js/form-validator.min.js') }}"></script>
-
+ 
             <script src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/js/contact-form-script.js') }}"></script>
-
+ 
             <script src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/js/main.js') }}"></script>
-
+ 
             <script type="text/javascript" src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="SB-Mid-client-SwazW8iq5q-s8p6I"></script>
-
+ 
             <script type="text/javascript">
                 // For example trigger on button clicked, or any time you need
                 var payButton = document.querySelectorAll('.pay-button');
                 $('.pay-button').click(function() {
                     // alert('aa')
-         
+ 
                     const biaya_id = $(this).attr('data-biaya_id')
                     const biaya_gelombang = $(this).attr('data-biaya_gelombang')
                     const biaya = $(this).attr('data-biaya')
-         
-         
+ 
+ 
                     const data = {
                         biaya_id,
                         biaya_gelombang,
                         biaya
                     }
-         
+ 
                     console.log(data)
-         
+ 
                     console.log("{{ URL::to('/api/snap') }}");
-         
+ 
                     $.ajax({
                         method: 'post',
                         url: "{{ URL::to('/api/pendaftaran/snap') }}",
                         data: data,
                         dataType: 'JSON',
                         success: function(e) {
-         
+ 
                             var bebas = document.getElementById('biaya_ids')
                             // console.log(e)
                             bebas.value = e.biaya
-         
+ 
                             window.snap.pay(e.snap, {
                                 onSuccess: function(result) {
                                     /* You may add your own implementation here */
@@ -534,7 +479,7 @@
                             console.log(err)
                         }
                     })
-         
+ 
                     // fetch("{{ URL::to('/api/perusahaan/project/snap') }}", {
                     // method: 'POST',
                     // headers: {
@@ -545,11 +490,11 @@
                     // .then((response) => response.json())
                     // .then((data) => {
                     //     console.log('Success:', data);
-         
+ 
                     //     var bebas = document.getElementById('jobs_ids')
-         
+ 
                     //     bebas.value = data.jobs
-         
+ 
                     //     window.snap.pay(data.snap, {
                     //         onSuccess: function(result){
                     //         /* You may add your own implementation here */
@@ -575,15 +520,15 @@
                     // .catch((error) => {
                     //     console.error('Error:', error);
                     // });
-         
+ 
                 })
-         
+ 
                 function send_response_to_form(result) {
                     document.getElementById('json_callback').value = JSON.stringify(result);
                     $('#submit_form').submit();
                 }
             </script>
 </body>
-
-
+ 
+ 
 </html>

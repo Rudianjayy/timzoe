@@ -35,8 +35,9 @@ use App\Http\Controllers\DataidentitasController;
 use App\Http\Controllers\ProfilSekolahController;
 use App\Http\Controllers\FotokompetensiController;
 use App\Http\Controllers\IdentitasSekolahController;
+use App\Models\Biaya;
 use App\Models\Formulir;
-
+use App\Models\Pamfletppdb;
 
 /*
 |--------------------------------------------------------------------------
@@ -98,7 +99,7 @@ Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
 
 
 
-//footerPPDB
+    //footerPPDB
 
 Route::get('/adminfooterppdb', [FooteerController::class, 'adminfooterppdb'])->name('adminfooterppdb');
 Route::get('/tambahfooterppdb', [FooteerController::class, 'tambahfooterppdb'])->name('tambahfooterppdb');
@@ -705,6 +706,16 @@ Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
     Route::get('/editupjfooter/{id}', [UpjtekajeController::class, 'editupjfooter'])->name('editupjfooter');
     Route::post('/submitedit21/{id}', [UpjtekajeController::class, 'submitedit21'])->name('submitedit21');
     Route::get('/deleteupjfooter/{id}', [UpjtekajeController::class, 'deleteupjfooter'])->name('deleteupjfooter');
+
+
+    Route::get('/adminpamflet', [PpdbController::class, 'adminpamflet'])->name('adminpamflet');
+    Route::get('/tambahpamflet', [PpdbController::class, 'tambahpamflet'])->name('tambahpamflet');
+    Route::post('/prosestambahpamflet', [PpdbController::class, 'prosestambahpamflet'])->name('prosestambahpamflet');
+    Route::get('/editpamflet/{id}', [PpdbController::class, 'editpamflet'])->name('editpamflet');
+    Route::post('/editprosespamflet/{id}', [PpdbController::class, 'editprosespamflet'])->name('editprosespamflet');
+    Route::get('/deletepamflet/{id}', [PpdbController::class, 'deletepamflet'])->name('deletepamflet');
+
+
 });
 
 
@@ -765,6 +776,8 @@ Route::group(['middleware' => ['auth', 'hakakses:admin,user']], function () {
         $formulir = Formulir::where('status','=','diterima')->count();
         $formulird = Formulir::where('status','=','ditolak')->count();
         $formulirp = Formulir::where('status','=','pending')->count();
+        $data3 = Biaya::all();
+        $pamflet= Pamfletppdb::all();
         // dd($formulir);
         $status = Formulir::select(DB::raw("COUNT(*) as status"))
         ->GroupBy(DB::raw("Year(created_at)"))
@@ -773,8 +786,8 @@ Route::group(['middleware' => ['auth', 'hakakses:admin,user']], function () {
         $bulan = Formulir::select(DB::raw("YEAR(created_at) as bulan"))
         ->GroupBy(DB::raw("YEAR(created_at)"))
         ->pluck('bulan');
-        
-        return view('welcome', compact('berita', 'galery', 'prestasi', 'mitra','status','bulan','formulir','formulird','total','formulirp'));
+
+        return view('welcome', compact('berita', 'galery', 'prestasi', 'mitra','status','bulan','formulir','formulird','total','formulirp','data3','pamflet'));
     })->middleware('auth');
 
     Route::get('/adminformulir', [PpdbController::class, 'adminformulir'])->name('adminformulir');

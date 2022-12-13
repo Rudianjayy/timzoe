@@ -114,7 +114,7 @@
                                 </li>
                                 <li>
                                     <a href="/ekstra">Ekstrakulikuler</a>
-                                </li>
+                                <./li>
                                 <li>
                                     <a href="/osis">IPM</a>
                                 </li>

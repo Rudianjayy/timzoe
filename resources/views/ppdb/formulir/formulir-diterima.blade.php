@@ -39,11 +39,11 @@
                                 <div class="col-xl-12 col-md-12 col-sm-12 col-12">
                                     <h4>Formulir Pendaftaran yang Diterima</h4>
                                 </div>
-                                {{-- <div>
+                                {{--  <div>
                                     <a href="/tambahformulir" class="btn btn-primary "
                                         id="kt_account_profile_details_submit" style="margin-left: 30px;">Tambah
                                         +</a>
-                                </div> --}}
+                                </div>  --}}
                             </div>
                         </div>
                         <div class="widget-content widget-content-area">
@@ -102,7 +102,7 @@
                                                             alt="" style="width: 80px;">
                                                     </a>
                                                 </td>
-                                                
+
                                                 <td>{{ $i->status_anak }}</td>
                                                 <td>{{ $i->alamat_rumah }}</td>
                                                 <td>{{ $i->nama_ayah }}</td>

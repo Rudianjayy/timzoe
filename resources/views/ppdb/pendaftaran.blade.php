@@ -181,7 +181,6 @@
                         <img src="{{asset('ps/templates.hibootstrap.com/colugo/default/assets/img/mahok.png')}}" alt="download" class="img-fluid">
                     </div>
                 </div>
-
                 <div class="col-md-7">
                     <div class="feature-contents section-heading">
                         <ul class="list-unstyled">

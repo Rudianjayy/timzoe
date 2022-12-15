@@ -29,7 +29,7 @@ select.form-custom::-ms-expand {
 }
 .jumbotron { background-color: #f1f3f9; }
 .mark, mark { background-color: #ffeccb }
-p { margin-top: 0; margin-bottom: 0.625rem; }
+p { margin-top: 0; margin-bottom: 0.625rem; color: black; }
 hr {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -766,7 +766,7 @@ ul.inline-ordered-list li:before {
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
     -webkit-box-shadow: 0px 2px 4px rgba(126,142,177,0.12);
-    box-shadow: 0px 2px 4px rgba(126,142,177,0.12);
+    box-shadow: 10px 5px 13px rgba(126 142 177 / 28%);
 }
 .btn,
 .ui-state-default,

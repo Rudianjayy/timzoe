@@ -117,56 +117,7 @@
         </div>
     </div>
 
-    <section class="fun-facts-area pt-100 pb-70">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-fun-fact">
-                        <div class="icon">
-                            <i class="fa fa-users"></i>
-                        </div>
-                        <h3>
-                            <span class="odometer" data-count="{{ $total }}">{{ $total }}</span>
-                        </h3>
-                        <p>Pendaftar</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-fun-fact">
-                        <div class="icon">
-                            <i class="fa fa-heart"></i>
-                        </div>
-                        <h3>
-                            <span class="odometer" data-count="{{ $formulir }}">{{ $formulir }}</span>
-                        </h3>
-                        <p>Siswa Diterima</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-fun-fact">
-                        <div class="icon">
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <h3>
-                            <span class="odometer" data-count="{{ $formulird }}">{{ $formulird }}</span>
-                        </h3>
-                        <p>Siswa Ditolak</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-fun-fact">
-                        <div class="icon">
-                            <i class="fa fa-download"></i>
-                        </div>
-                        <h3>
-                            <span class="odometer" data-count="{{ $formulirp }}">{{ $formulirp }}</span>
-                        </h3>
-                        <p>Siswa Pending</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
     <section id="syarat" class="feature-section ptb-100">
         <div class="container">
             <div class="section-title">
@@ -181,6 +132,7 @@
                         <img src="{{asset('ps/templates.hibootstrap.com/colugo/default/assets/img/mahok.png')}}" alt="download" class="img-fluid">
                     </div>
                 </div>
+
                 <div class="col-md-7">
                     <div class="feature-contents section-heading">
                         <ul class="list-unstyled">
@@ -264,11 +216,11 @@
                         <div class="row">
                             @foreach ($biaya as $b )
 
-                            {{-- @php
+                            @php
                                 $tanggal_awal = date('Y-m-d',strtotime('$b->jadwal_mulai'));
                                 $tanggal_akhir = date('Y-m-d',strtotime('$b->jadwal_ditutup' ));
+                            @endphp
 
-                            @endphp --}}
 
                             <div class="col-lg-4 col-md-6">
                                 <div class="single-pricing-table">
@@ -290,10 +242,7 @@
                                 @if ( $b->jadwal_mulai < now() && $b->jadwal_ditutup > now())
                                     <div class="text-center">
                                         <div class="send-btn">
-                                            <button class="default-btn pay-button" data-biaya_id={{ $b->id }} data-biaya_gelombang={{ $b->gelombang }} data-biaya={{ (int)$b->biaya }}>
-                                                Bayar Sekarang
-                                                <span></span>
-                                            </button>
+
                                             <div id="msgSubmit" class="h3 text-center hidden"></div>
                                             <div class="clearfix"></div>
                                         </div>
@@ -301,14 +250,12 @@
                                 @else
                                 <div class="text-center">
                                     <div class="send-btn ">
-                                        <button class="default-btn pay-button" >
-                                            Belum Aktif
-                                            <span></span>
-                                        </button>
+
                                     </div>
                                 </div>
                                 @endif
                             </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
@@ -321,7 +268,6 @@
         </div>
 
     </section>
-
             <section class="footer-area pt-100 pb-70">
                 <div class="container">
                     <div class="row">
@@ -473,7 +419,6 @@
             <script src="{{ asset('ps/templates.hibootstrap.com/colugo/default/assets/js/main.js') }}"></script>
 
             <script type="text/javascript" src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="SB-Mid-client-SwazW8iq5q-s8p6I"></script>
-
             <script type="text/javascript">
                 // For example trigger on button clicked, or any time you need
                 var payButton = document.querySelectorAll('.pay-button');
@@ -532,7 +477,6 @@
                             console.log(err)
                         }
                     })
-
                     // fetch("{{ URL::to('/api/perusahaan/project/snap') }}", {
                     // method: 'POST',
                     // headers: {

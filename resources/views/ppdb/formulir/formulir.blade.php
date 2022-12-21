@@ -5,6 +5,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css"
         integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    
 @endpush
 @section('content')
 
@@ -12,6 +14,7 @@
         @include('layout.css')
         <title>Admin - Formulir</title>
         <link rel="stylesheet" href="{{ asset('dist/css/lightbox.css') }}">
+        
     </head>
 
     <body>
@@ -100,6 +103,7 @@
                                                             alt="" style="width: 80px;">
                                                     </a>
                                                 </td>
+                                                
                                                
                                                 <td>{{ $i->status_anak }}</td>
                                                 <td>{{ $i->alamat_rumah }}</td>
@@ -159,10 +163,59 @@
                     </div>
                 </div>
             </div>
+
+            <div class="row layout-spacing">
+                <div class="col-lg-12">
+                    <div class="statbox widget box box-shadow">
+                        <div class="widget-header">
+                            <div class="row">
+                                <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                    <h4>Style 2</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="widget-content widget-content-area">
+                            <div class="table-responsive mb-4">
+                                <table id="customer-info-detail-2" class="table style-2 table-bordered  table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th class="checkbox-column"> Record Id </th>
+                                            <th>First Name</th>
+                                            <th>Last Name</th>
+                                            <th>Email</th>
+                                            <th>Mobile No.</th>
+                                            <th class="text-center">Image</th>
+                                            <th class="text-center">Status</th>
+                                            <th class="text-center">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="checkbox-column"> 1 </td>
+                                            <td>Jane</td>
+                                            <td>Lamb</td>
+                                            <td>johndoe@yahoo.com</td>
+                                            <td>555-555-5555</td>
+                                            <td class="align-center">
+                                                <span><img src="assets/img/profile-9.jpg" class="img-thumbnail rounded-circle" alt="profile"></span>
+                                            </td>
+                                            <td class="align-center"><span class="shadow-none badge badge-success">Approved</span></td>
+                                            <td class="text-center"><a href="javascript:void(0);" class="bs-tooltip" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="flaticon-close-fill fs-20"></i></a></td>
+                                        </tr>
+                                       
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
     </body>
     @include('layout.script')
+    
     <script src="{{ asset('dist/js/lightbox-plus-jquery.min.js') }}"></script>
     <script>
         @if (Session::has('success'))
@@ -194,6 +247,63 @@
                 });
         });
     </script>
+    <script src="{{ asset('admintemp/adminnew/riski/nopan/plugins/table/datatable/datatables.js') }}"></script>
+    <script>
+        // var e;
+        c1 = $('#customer-info-detail-1').DataTable({
+            "lengthMenu": [ 5, 10, 20, 50, 100 ],
+            headerCallback:function(e, a, t, n, s) {
+                e.getElementsByTagName("th")[0].innerHTML='<label class="new-control new-checkbox checkbox-outline-primary m-auto">\n<input type="checkbox" class="new-control-input chk-parent select-customers-info" id="customer-all-info">\n<span class="new-control-indicator"></span><span style="visibility:hidden">c</span>\n</label>'
+            },
+            columnDefs:[ {
+                targets:0, width:"30px", className:"", orderable:!1, render:function(e, a, t, n) {
+                    return'<label class="new-control new-checkbox checkbox-outline-primary  m-auto">\n<input type="checkbox" class="new-control-input child-chk select-customers-info" id="customer-all-info">\n<span class="new-control-indicator"></span><span style="visibility:hidden">c</span>\n</label>'
+                }
+            }],
+            "language": {
+                "paginate": {
+                "previous": "<i class='flaticon-arrow-left-1'></i>",
+                "next": "<i class='flaticon-arrow-right'></i>"
+                },
+                "info": "Showing page _PAGE_ of _PAGES_"
+            }
+        });
 
+        multiCheck(c1);
+
+        c2 = $('#customer-info-detail-2').DataTable({
+            "lengthMenu": [ 5, 10, 20, 50, 100 ],
+            headerCallback:function(e, a, t, n, s) {
+                e.getElementsByTagName("th")[0].innerHTML='<label class="new-control new-checkbox checkbox-outline-primary m-auto">\n<input type="checkbox" class="new-control-input chk-parent select-customers-info" id="customer-all-info">\n<span class="new-control-indicator"></span><span style="visibility:hidden">c</span>\n</label>'
+            },
+            columnDefs:[ {
+                targets:0, width:"30px", className:"", orderable:!1, render:function(e, a, t, n) {
+                    return'<label class="new-control new-checkbox checkbox-outline-primary  m-auto">\n<input type="checkbox" class="new-control-input child-chk select-customers-info" id="customer-all-info">\n<span class="new-control-indicator"></span><span style="visibility:hidden">c</span>\n</label>'
+                }
+            }],
+            "language": {
+                "paginate": {
+                "previous": "<i class='flaticon-arrow-left-1'></i>",
+                "next": "<i class='flaticon-arrow-right'></i>"
+                },
+                "info": "Showing page _PAGE_ of _PAGES_"
+            }
+        });
+
+        multiCheck(c2);
+
+        c3 = $('#customer-info-detail-3').DataTable({
+            "lengthMenu": [ 5, 10, 20, 50, 100 ],
+            "language": {
+                "paginate": {
+                "previous": "<i class='flaticon-arrow-left-1'></i>",
+                "next": "<i class='flaticon-arrow-right'></i>"
+                },
+                "info": "Showing page _PAGE_ of _PAGES_"
+            }
+        });
+
+        multiCheck(c3);
+    </script>
     {{-- @endpush --}}
 @endsection

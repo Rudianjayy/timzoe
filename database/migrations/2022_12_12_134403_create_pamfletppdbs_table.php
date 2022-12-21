@@ -13,14 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('biayas', function (Blueprint $table) {
+        Schema::create('pamfletppdbs', function (Blueprint $table) {
             $table->id();
-            $table->string('gelombang');
-            $table->string('penjelasan');
-            $table->bigInteger('biaya');
-            $table->string('jadwal_mulai');
-            $table->string('jadwal_ditutup');
-            $table->string('tanggal_pengumuman');
+            $table->string('foto_pamflet');
             $table->timestamps();
         });
     }
@@ -32,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('biayas');
+        Schema::dropIfExists('pamfletppdbs');
     }
 };

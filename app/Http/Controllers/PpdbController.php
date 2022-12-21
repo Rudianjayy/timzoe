@@ -3,12 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Models\info;
+use App\Models\User;
 use App\Models\biaya;
 use App\Models\kontak;
 use App\Models\footeer;
 use App\Models\Payment;
 use App\Models\Formulir;
+use App\Models\infoppdb;
 use App\Models\Footeerdua;
+use App\Models\Pamfletppdb;
 use App\Models\syaratdaftar;
 use Illuminate\Http\Request;
 use App\Models\Carapendaftaran;
@@ -37,7 +40,8 @@ class PpdbController extends Controller
         $formulirp = Formulir::where('status', '=', 'pending')->count();
         return view('ppdb.pendaftaran', compact('dp', 'pd', 'kontak', 'cp', 'footerppdb', 'info', 'biaya', 'langkah', 'footerlink', 'formulir', 'formulird', 'total', 'formulirp'));
     }
-    public function snap(Request $request){
+    public function snap(Request $request)
+    {
         // Set your Merchant Server Key
         \Midtrans\Config::$serverKey = 'SB-Mid-server-RcFqJE4B66H7TmdNUajirjjK';
         // Set to Development/Sandbox Environment (default). Set to true for Production Environment (accept real transaction).
@@ -67,17 +71,18 @@ class PpdbController extends Controller
             ),
         );
 
-    $snapToken = \Midtrans\Snap::getSnapToken($params);
+        $snapToken = \Midtrans\Snap::getSnapToken($params);
 
-    // return view('ppdb.pendaftaran' ,['snapToken' => $snapToken]);
-    return response()->json([
-        'snap' =>$snapToken,
-        'biaya' =>$request->biaya_id
+        // return view('ppdb.pendaftaran' ,['snapToken' => $snapToken]);
+        return response()->json([
+            'snap' => $snapToken,
+            'biaya' => $request->biaya_id
 
-    ]);
+        ]);
     }
 
-    public function payment_post(Request $request) {
+    public function payment_post(Request $request)
+    {
         $json = json_decode($request->get('json'));
         // dd($request);
 
@@ -94,7 +99,8 @@ class PpdbController extends Controller
 
         return $order->save() ? redirect(url('/'))->with('alert-success', 'Berhasil Berlangganan') : redirect(url('/'))->with('alert-failed', 'Terjadi Kesalahan');
     }
-    public function show(Request $request){
+    public function show(Request $request)
+    {
         // Set your Merchant Server Key
         \Midtrans\Config::$serverKey = 'SB-Mid-server-RcFqJE4B66H7TmdNUajirjjK';
         // Set to Development/Sandbox Environment (default). Set to true for Production Environment (accept real transaction).
@@ -124,17 +130,18 @@ class PpdbController extends Controller
             ),
         );
 
-    $snapToken = \Midtrans\Snap::getSnapToken($params);
+        $snapToken = \Midtrans\Snap::getSnapToken($params);
 
-    // return view('ppdb.pendaftaran' ,['snapToken' => $snapToken]);
-    return response()->json([
-        'snap' =>$snapToken,
-        'biaya' =>$request->biaya_id
+        // return view('ppdb.pendaftaran' ,['snapToken' => $snapToken]);
+        return response()->json([
+            'snap' => $snapToken,
+            'biaya' => $request->biaya_id
 
-    ]);
+        ]);
     }
 
-    public function pembayaran_post(Request $request) {
+    public function pembayaran_post(Request $request)
+    {
         $json = json_decode($request->get('json'));
         // dd($request);
 
@@ -152,7 +159,7 @@ class PpdbController extends Controller
         return $order->save() ? redirect(url('/bayaruser'))->with('alert-success', 'Berhasil Berlangganan') : redirect(url('/bayaruser'))->with('alert-failed', 'Terjadi Kesalahan');
     }
     public function historypembayaran(){
-        $pricing = Payment::all();
+        $pricing = Payment::all();  
         return view('ppdb.formulir.historypembayaran', compact('pricing'));
     }
 
@@ -498,10 +505,14 @@ class PpdbController extends Controller
     }
     public function history()
     {
-        $data4 = Formulir::all();
+        $pricing = Payment::where('id_user', Auth::user()->id)->get();
         $status_pay = Payment::where('id_user',Auth::user()->id)->first();
 
-        return view('ppdb.formulir.history', compact('data4','status_pay'));
+        return view('ppdb.formulir.history', compact('pricing','status_pay'));
+    }
+    public function detailformulir($id){
+        $fo =Formulir::findOrFail($id);
+        return view('ppdb.formulir.detailformulir',compact('fo'));
     }
 
 
@@ -526,8 +537,9 @@ class PpdbController extends Controller
 
     public function tambahformulir()
     {
-        $status_pay = Payment::where('id_user',Auth::user()->id)->first();
-        return view('ppdb.formulir.tambah-formulir',compact('status_pay'));
+        $infoppdb = infoppdb::all();
+        $status_pay = Payment::where('id_user', Auth::user()->id)->first();
+        return view('ppdb.formulir.tambah-formulir', compact('status_pay','infoppdb'));
     }
 
     public function submitdata27(Request $request)
@@ -558,6 +570,7 @@ class PpdbController extends Controller
 
 
         // ]);
+        $biaya = Payment::where('id_user', Auth::user()->id)->first();
         $data4 = Formulir::create([
             'id_user' => Auth::User()->id,
             'nama_peserta' => $request->nama_peserta,
@@ -582,6 +595,7 @@ class PpdbController extends Controller
             'ukuran_kaos' => implode(',', $request->ukuran_kaos),
             'jurusan' => $request->jurusan,
             'status' => 'pending',
+            'id_biaya' => $biaya -> id_biaya,
 
         ]);
 
@@ -613,8 +627,9 @@ class PpdbController extends Controller
     {
         $pricing = biaya::all();
         $status_pay = Payment::where('id_user',Auth::user()->id)->first();
+        $status_formulir = Formulir::where('id_user',Auth::user()->id)->first();
 
-        return view('ppdb.bayardaftar.bayar-user',compact('pricing','status_pay'));
+        return view('ppdb.bayardaftar.bayar-user',compact('pricing','status_pay','status_formulir'));
     }
 
 
@@ -643,6 +658,7 @@ class PpdbController extends Controller
             'penjelas' => $request->penjelas,
             'jadwal_mulai' => $request->jadwal_mulai,
             'jadwal_ditutup' => $request->jadwal_ditutup,
+            'tanggal_pengumuman' => $request->tanggal_pengumuman,
 
         ]);
 
@@ -652,7 +668,8 @@ class PpdbController extends Controller
 
     public function tambahbiaya()
     {
-        return view('ppdb.biaya.tambahbiaya');
+        $pengumum = Biaya::all();
+        return view('ppdb.biaya.tambahbiaya',compact('pengumum'));
     }
 
     public function submitprosesbiaya(Request $request)
@@ -663,11 +680,13 @@ class PpdbController extends Controller
             'penjelasan' => 'required',
             'jadwal_mulai' => 'required',
             'jadwal_ditutup' => 'required',
+            'tanggal_pengumuman' => 'required',
         ], [
             'gelombang.required' => 'Harus diisi',
             'penjelasan.required' => 'Harus diisi',
             'jadwal_mulai.required' => 'Harus diisi',
             'jadwal_ditutup.required' => 'Harus diisi',
+            'tanggal_pengumuman.required' => 'Harus diisi',
 
         ]);
         $data3 = biaya::create([
@@ -676,6 +695,7 @@ class PpdbController extends Controller
             'jadwal_mulai' => $request->jadwal_mulai,
             'jadwal_ditutup' => $request->jadwal_ditutup,
              'biaya' => $request->biaya,
+             'tanggal_pengumuman' => $request->tanggal_pengumuman,
             // dd($request->biaya)
 
         ]);
@@ -781,10 +801,10 @@ class PpdbController extends Controller
 
 
 
-    public function adminlangkah()
+    public function langkah()
     {
         $langkah = Langkahpendaftaran::all();
-        return view('ppdb.langkahpendaftaran.adminlangkah', compact('langkah'));
+        return view('ppdb.langkahpendaftaran.langkah', compact('langkah'));
     }
     public function tambahlangkah()
     {
@@ -804,7 +824,7 @@ class PpdbController extends Controller
             'judul_langkah' => $request->judul_langkah,
             'deskripsi_langkah' => $request->deskripsi_langkah,
         ]);
-        return redirect()->route('adminlangkah')->with('success', 'Data Berhasil Di Tambahkan');
+        return redirect()->route('langkah')->with('success', 'Data Berhasil Di Tambahkan');
     }
     public function editlangkah($id)
     {
@@ -818,13 +838,65 @@ class PpdbController extends Controller
             'judul_langkah' => $request->judul_langkah,
             'deskripsi_langkah' => $request->deskripsi_langkah,
         ]);
-        return redirect()->route('adminlangkah')->with('success', 'Data Berhasil Di Edit');
+        return redirect()->route('langkah')->with('success', 'Data Berhasil Di Edit');
     }
 
     public function deletelangkah($id)
     {
         $langkah = Langkahpendaftaran::find($id);
         $langkah->delete();
-        return redirect()->route('adminlangkah')->with('success', 'Data Berhasil Di Hapus');
+        return redirect()->route('langkah')->with('success', 'Data Berhasil Di Hapus');
+    }
+
+
+
+
+
+
+
+
+
+
+    public function infoppdb()
+    {
+        $infoppdb = infoppdb::all();
+        return view('ppdb.infoppdb.infoppdb', compact('infoppdb'));
+    }
+    public function tambahinfoppdb()
+    {
+        $infoppdb = infoppdb::all();
+        return view('ppdb.infoppdb.tambahinfoppdb', compact('infoppdb'));
+    }
+    public function prosestambahinfoppdb(Request $request)
+    {
+        $this->validate($request, [
+            'deskripsi_infoppdb' => 'required',
+        ], [
+            'deskripsi_infoppdb' => 'harus diisi',
+        ]);
+        $infoppdb = infoppdb::create([
+            'deskripsi_infoppdb' => $request->deskripsi_infoppdb,
+        ]);
+        return redirect()->route('infoppdb')->with('success', 'Data Berhasil Di Tambahkan');
+    }
+    public function editinfoppdb($id)
+    {
+        $infoppdb = infoppdb::findOrFail($id);
+        return view('ppdb.infoppdb.editinfoppdb', compact('infoppdb'));
+    }
+    public function proseseditinfoppdb(Request $request, $id)
+    {
+        $infoppdb = infoppdb::find($id);
+        $infoppdb->update([
+            'deskripsi_infoppdb' => $request->deskripsi_infoppdb,
+        ]);
+        return redirect()->route('infoppdb')->with('success', 'Data Berhasil Di Edit');
+    }
+
+    public function deleteinfoppdb($id)
+    {
+        $infoppdb = infoppdb::find($id);
+        $infoppdb->delete();
+        return redirect()->route('infoppdb')->with('success', 'Data Berhasil Di Hapus');
     }
 }

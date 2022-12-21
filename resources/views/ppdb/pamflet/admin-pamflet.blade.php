@@ -13,12 +13,12 @@
         <div class="container">
             <div class="page-header">
                 <div class="page-title">
-                    <h3>Biaya </h3>
+                    <h3>Welcome </h3>
                     <div class="crumbs">
                         <ul id="breadcrumbs" class="breadcrumb">
                             <li><a href="index.html"><i class="flaticon-home-fill"></i></a></li>
-                            <li><a href="#">PPDB</a></li>
-                            <li class="active"><a href="#">Biaya</a></li>
+                            <li><a href="#">Pamflet PPDB</a></li>
+                            <li class="active"><a href="#">Pamflet PPDB</a></li>
                         </ul>
                     </div>
                 </div>
@@ -30,10 +30,10 @@
                         <div class="widget-header">
                             <div class="row">
                                 <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                    <h4>Form Biaya </h4>
+                                    <h4>Pamflet PPDB</h4>
                                 </div>
                                 <div>
-                                    <a href="/tambahbiaya" class="btn btn-primary "
+                                    <a href="/tambahpamflet" class="btn btn-primary mb-3 "
                                         id="kt_account_profile_details_submit" style="margin-left: 30px;">Tambah
                                         +</a>
                                 </div>
@@ -46,12 +46,7 @@
                                     <thead>
                                         <tr>
                                             <th scope="col">No</th>
-                                            <th scope="col">Gelombang</th>
-                                            <th scope="col">Penjelasan</th>
-                                            <th scope="col">Biaya</th>
-                                            <th scope="col">Tanggal Mulai</th>
-                                            <th scope="col">Tanggal Ditutup</th>
-                                            <th scope="col">Tanggal Pengumuman</th>
+                                            <th scope="col">Foto Pamflet</th>
                                             <th scope="col">Aksi</th>
                                         </tr>
                                     </thead>
@@ -60,21 +55,18 @@
                                         @php
                                             $no = 1;
                                         @endphp
-                                        @foreach ($data3 as $d)
+                                        @foreach ($pamflet as $d)
                                             <tr>
                                                 <th>{{ $no++ }}</th>
-                                                <td>{{ $d->gelombang }}</td>
-                                                <td>{{ $d->penjelasan }}</td>
-                                                <td>Rp.{{ number_format($d['biaya'], 2, '.', '.') }}</td>
-                                                <td>{{ $d->jadwal_mulai }}</td>
-                                                <td>{{ $d->jadwal_ditutup }}</td>
-                                                <td>{{ $d->tanggal_pengumuman }}</td>
+                                                <td>
+                                                    <img src="{{ asset('fotomahasiswa/' . $d->foto_pamflet) }}" alt="" style="width: 80px;">
+                                                </td>
 
 
                                                 <td class="align-center">
                                                     <ul class="table-controls">
                                                         <li>
-                                                            <a href="/editbiaya/{{ $d->id }}"
+                                                            <a href="/editpamflet/{{ $d->id }}"
                                                                 data-toggle="tooltip" data-placement="top" title="Edit">
                                                                 <i class="flaticon-edit"></i>
                                                             </a>
@@ -82,7 +74,7 @@
                                                         <li>
                                                             <a href="#" class="delete fire"
                                                                 data-id="{{ $d->id }}"
-                                                                data-nama="{{ $d->gelombang }}" data-toggle="tooltip"
+                                                                data-nama="{{ $d->foto_pamflet }}" data-toggle="tooltip"
                                                                 data-placement="top" title="Delete">
                                                                 <i class="flaticon-delete-5"></i>
                                                             </a>
@@ -113,14 +105,14 @@
 
                 swal({
                         title: "Apa kamu yakin ingin menghapus data ini?",
-                        text: "Kamu akan menghapus data dengan gelombang  " + nama + "! ",
+                        text: "Kamu akan menghapus data dengan foto  " + nama + "! ",
                         icon: "warning",
                         buttons: true,
                         dangerMode: true,
                     })
                     .then((willDelete) => {
                         if (willDelete) {
-                            window.location = "/deletebiaya/" + id + ""
+                            window.location = "/deletepamflet/" + id + ""
                              swal("Data berhasil dihapus!", {
                                icon: "success",
                              });

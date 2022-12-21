@@ -4,11 +4,11 @@
             <div class="col-md-12">
                 <div class="mobile-button"><span></span></div>
                 <div id="site-header-inner" class="flex">
-                    <div id="site-logo" class="clearfix">
-                        <div id="site-logo-inner">
-                            <img id="logo_header" src="{{ asset('landing/html/bidzend/assets/images/logo/muhi2.png') }}"
+                    <div class="clearfix">
+                        <div id="site--inner">
+                            <img id="logo_header" src="{{ asset('landing/html/bidzend/assets/images/avatar/muhi2.png') }}"
                                 alt="" width="300" height="300"
-                                data-retina="{{ asset('landing/html/bidzend/assets/images/logo/muhi2.png') }}"
+                                data-retina="{{ asset('landing/html/bidzend/assets/images/avatar/muhi2.png') }}"
                                 data-width="200" data-height="200">
                         </div>
                     </div>

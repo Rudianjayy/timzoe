@@ -53,6 +53,7 @@
                                         <tr>
                                             
                                             <th>No</th>
+                                            <th>Nama</th>
                                             <th>Order ID</th>
                                             <th class="text-center">Harga</th>
                                             <th class="text-center">Metode Pembayaran</th>
@@ -68,6 +69,7 @@
                                         @foreach ($pricing as $pc)
                                             <tr>
                                                 <td>{{ $no++ }}</td>
+                                                <td>{{ $pc->users->name }}</td>
                                                 <td>{{ $pc->order_id }}</td>
                                                 <td>{{ $pc->gross_amount }}</td>
                                                 <td>{{ $pc->payment_type }}</td>

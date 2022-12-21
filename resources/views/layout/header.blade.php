@@ -23,7 +23,7 @@
                 </a>
                 <div class="dropdown-menu position-absolute" aria-labelledby="notificationDropdown">
                     <a class="dropdown-item title" href="javascript:void(0);">
-                        <i class="flaticon-bell-13 mr-3"></i> <span>Kamu punya {{ $total_status }} notofikasi
+                        <i class="flaticon-bell-13 mr-3"></i> <span>Kamu punya {{ $total_status }} notifikasi
                             baru</span>
                     </a>
 
@@ -66,10 +66,12 @@
                 <a class="dropdown-item" href="/profiladmin">
                     <i class="mr-1 flaticon-user-6"></i> <span>Profil</span>
                 </a>
+                @if (auth()->user()->role == 'admin') 
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="/historypembayaran">
                     <i class="flaticon-log-2"></i> <span>Histori Pembayaran</span>
                 </a>
+                @endif
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="/logout" onclick="return confirm('Anda yakin ingin logout?')">
                     <i class="flaticon-log-2"></i> <span>Log Out</span>

@@ -109,7 +109,7 @@
             var nama = $(this).attr('data-nama');
             swal({
                     title: "Yakin Mau Hapus?",
-                    text: "Kamu Akan Menghapus Data Agama dengan nama " + nama + " ",
+                    text: "Kamu Akan Menghapus Data dengan nama " + nama + " ",
                     icon: "warning",
                     buttons: true,
                     dangerMode: true,

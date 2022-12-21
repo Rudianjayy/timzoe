@@ -1,6 +1,19 @@
-*, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
-.clearfix:before, .clearfix:after {display: table;  content: ''; }
-.clearfix:after { clear: both; }
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.clearfix:before,
+.clearfix:after {
+	display: table;
+	content: '';
+}
+
+.clearfix:after {
+	clear: both;
+}
 
 .hidden {
 	position: absolute;
@@ -43,17 +56,18 @@
 
 
 .bg-1 .pricing-section__title {
-    color: #3b3f5c;
+	color: #3b3f5c;
 }
+
 .bg-5 .pricing-section__title {
-    color: #3b3f5c;
+	color: #3b3f5c;
 }
 
 .pricing-section a {
 	color: #333;
 }
 
-.pricing-section a:hover, 
+.pricing-section a:hover,
 .pricing-section a:focus {
 	color: #000;
 }
@@ -98,10 +112,10 @@
 	left: 50%;
 	width: 1px;
 	height: 100%;
-	background: rgba(255,255,255,0.2);
+	background: rgba(255, 255, 255, 0.2);
 	content: '';
-	-webkit-transform: rotate3d(0,0,1,22.5deg);
-	transform: rotate3d(0,0,1,22.5deg);
+	-webkit-transform: rotate3d(0, 0, 1, 22.5deg);
+	transform: rotate3d(0, 0, 1, 22.5deg);
 }
 
 .codrops-icon {
@@ -181,9 +195,9 @@
 .bg-7 {
 	/*background: linear-gradient(45deg, #7e67e5, #02cbdf);*/
 	/*background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);*/
-        color: #fff;
-        /*background: #6156ce;*/
-        background: #8882C4;
+	color: #fff;
+	/*background: #6156ce;*/
+	background: #8882C4;
 }
 
 .bg-8 {
@@ -192,13 +206,13 @@
 }
 
 .bg-10 {
-        background: #fff;
+	background: #fff;
 	color: #555;
 }
 
 .bg-11 {
 	background: #f7faf9;
-        color: #555;
+	color: #555;
 }
 
 .bg-12 {
@@ -212,13 +226,13 @@
 }
 
 .bg-12 a {
-	color: #fff; 
+	color: #fff;
 	font-weight: 600;
 }
 
 .bg-12 a:hover,
 .bg-12 a:focus {
-	color: rgba(0,0,0,0.3);
+	color: rgba(0, 0, 0, 0.3);
 }
 
 /* Related demos */

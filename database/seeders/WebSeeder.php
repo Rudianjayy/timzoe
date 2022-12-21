@@ -92,6 +92,9 @@ class WebSeeder extends Seeder
             'judul_iduka' => 'Judul',
             'deskripsi_iduka' => 'Deskripsi',
         ]);
+        DB::table('infoppdbs')->insert([
+            'deskripsi_infoppdb' => 'Deskripsi',
+        ]);
 
 
 

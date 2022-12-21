@@ -154,7 +154,7 @@ img.img-thumbnail.rounded-circle {
 .table .badge-danger {
     border-radius: 30px;
     padding: 6px;
-    width: 80px;
+    width: 143px;
 }
 .table .badge-primary {
     border-radius: 30px;
@@ -164,7 +164,7 @@ img.img-thumbnail.rounded-circle {
 .table .badge-warning {
     border-radius: 30px;
     padding: 6px;
-    width: 80px;
+    width: 105px;
 }
 .table-striped tbody tr:nth-of-type(odd) td {
     background-color: #f1f3f1!important;

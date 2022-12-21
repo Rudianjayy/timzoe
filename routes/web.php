@@ -31,13 +31,12 @@ use App\Http\Controllers\UpjtekajeController;
 use App\Http\Controllers\FooteerduaController;
 use App\Http\Controllers\KompetensiController;
 use App\Http\Controllers\ProfiladminController;
-use App\Http\Controllers\DataidentitasController;
 use App\Http\Controllers\ProfilSekolahController;
 use App\Http\Controllers\FotokompetensiController;
 use App\Http\Controllers\IdentitasSekolahController;
 use App\Http\Controllers\WelcomeController;
-use App\Models\Formulir;
-
+use App\Models\Biaya;
+use App\Models\Pamfletppdb;
 
 /*
 |--------------------------------------------------------------------------
@@ -83,16 +82,6 @@ Route::post('/updatepassword', [ProfiladminController::class, 'updatepassword'])
 Route::post('/crop', [ProfiladminController::class, 'crop'])->name('crop');
 Route::post('/cropbg', [ProfiladminController::class, 'cropbg'])->name('cropbg');
 //dashboard admin
-Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
-    //dashboard
-    Route::get('/welcome', function () {
-        $berita = Muhinews::count();
-        $galery = Album::count();
-        $prestasi = Prestasi::count();
-        $mitra = Mitra::count();
-        return view('welcome', compact('berita', 'galery', 'prestasi', 'mitra'));
-    })->middleware('auth');
-});
 
 
 
@@ -139,7 +128,6 @@ Route::get('/deletedeskripsipendaftaran/{id}', [PpdbController::class, 'deletede
 
 
 //syaratpendaftaran
-Route::get('/syaratdaftar', [PpdbController::class, 'syaratdaftar'])->name('syaratdaftar');
 Route::get('/adminsyaratdaftar', [PpdbController::class, 'adminsyaratdaftar'])->name('adminsyaratdaftar');
 Route::get('/editsyaratdaftar/{id}', [PpdbController::class, 'editsyaratdaftar'])->name('editsyaratdaftar');
 Route::post('/editproses12', [PpdbController::class, 'editproses12'])->name('editproses12');
@@ -150,7 +138,6 @@ Route::get('/deletesyaratdaftar/{id}', [PpdbController::class, 'deletesyaratdaft
 
 //kontak
 
-Route::get('/kontak',[PpdbController::class, 'kontak'])->name('kontak');
 Route::get('/adminkontak',[PpdbController::class, 'adminkontak'])->name('adminkontak');
 Route::get('/editkontak/{id}',[PpdbController::class, 'editkontak'])->name('editkontak');
 Route::post('/editproses14',[PpdbController::class, 'editproses14'])->name('editproses14');
@@ -211,7 +198,6 @@ Route::post('/updatepassword',[ProfiladminController::class, 'updatepassword'])-
 
 
 //Iduka
-Route::get('/iduka', [IdukaController::class, 'index'])->name('iduka');
 Route::get('/idukaadmin', [IdukaController::class, 'indexadmin'])->name('idukaadmin');
 Route::get('/tambahiduka', [IdukaController::class, 'tambahiduka'])->name('tambahiduka');
 Route::post('/idukaproses', [IdukaController::class, 'idukaproses'])->name('idukaproses');
@@ -252,20 +238,6 @@ Route::get('/deletecarapendaftaran/{id}', [PpdbController::class, 'deletecarapen
 
 
 
-Route::get('/profilsekolah', [ProfilSekolahController::class, 'profilsekolah'])->name('profilsekolah');
-
-
-//crud yang bisa diakses oleh admin, user tidak bisa
-Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
-    //dashboard
-    Route::get('/welcome', function () {
-        $berita = Muhinews::count();
-        $galery = Album::count();
-        $prestasi = Prestasi::count();
-        $mitra = Mitra::count();
-        return view('welcome', compact('berita', 'galery', 'prestasi', 'mitra'));
-    })->middleware('auth');
-
     //tentangkami
     //profilsekolah
     Route::get('/profilsekolahadmin', [ProfilSekolahController::class, 'profilsekolahadmin'])->name('profilsekolahadmin');
@@ -276,7 +248,6 @@ Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
     Route::get('/deleteprofilsekolah/{id}', [ProfilSekolahController::class, 'deleteprofilsekolah'])->name('deleteprofilsekolah');
 
     //visimisi
-    Route::get('/visimisi', [ProfilSekolahController::class, 'visimisi'])->name('visimisi');
     Route::get('/visimisiadmin', [ProfilSekolahController::class, 'visimisiadmin'])->name('visimisiadmin');
     Route::get('/tambahvisimisi', [ProfilSekolahController::class, 'tambahvisimisi'])->name('tambahvisimisi');
     Route::post('/prosesvisimisi', [ProfilSekolahController::class, 'prosesvisimisi'])->name('prosesvisimisi');
@@ -287,7 +258,6 @@ Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
 
 
     //identitassekolah
-    Route::get('/identitas_sekolah', [IdentitasSekolahController::class, 'identitassekolah'])->name('identitassekolah');
     Route::get('/identitas_admin', [IdentitasSekolahController::class, 'identitassekolahadmin'])->name('identitassekolahadmin');
     Route::get('/tambahidentitas', [IdentitasSekolahController::class, 'tambahidentitas'])->name('tambahidentitas');
     Route::post('/identitasproses', [IdentitasSekolahController::class, 'identitasproses'])->name('identitasproses');
@@ -297,14 +267,13 @@ Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
 
 
     //fasilitas sekolah dan crud
-    Route::get('/fasilitassekolah', [FasilitasController::class, 'fasilitassekolah'])->name('fasilitassekolah');
     Route::get('/fasilitasadmin', [FasilitasController::class, 'fasilitasadmin'])->name('fasilitasadmin');
     Route::get('/detailfoto/{id}', [FasilitasController::class, 'detailfoto'])->name('detailfoto');
     Route::get('/tambahfasilitas', [FasilitasController::class, 'tambahfasilitas'])->name('tambahfasilitas');
     Route::post('/prosesfasilitas', [FasilitasController::class, 'prosesfasilitas'])->name('prosesfasilitas');
     Route::get('/editfasilitas/{id}', [FasilitasController::class, 'editfasilitas'])->name('editfasilitas');
     Route::post('/editprosesfasilitas/{id}', [FasilitasController::class, 'editprosesfasilitas'])->name('editprosesfasilitas');
-    Route::get('/deletefasilitas/{id}', [FasilitasController::class, 'deletefasilitas'])->name('deleteidentitas');
+    Route::get('/deletefasilitas/{id}', [FasilitasController::class, 'deletefasilitas'])->name('deletefasilitas');
 
 
 
@@ -319,7 +288,6 @@ Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
     Route::get('/deletekalender/{id}', [KurikulumController::class, 'deletekalender'])->name('deletekalender');
 
 
-    Route::get('/jadwalkegiatan', [KurikulumController::class, 'jadwalkegiatan'])->name('jadwalkegiatan');
     Route::get('/jadwalkegiatanadmin', [KurikulumController::class, 'jadwalkegiatanadmin'])->name('jadwalkegiatanadmin');
     Route::get('/tambahjadwalkegiatan', [KurikulumController::class, 'tambahjadwalkegiatan'])->name('tambahjadwalkegiatan');
     Route::post('/jadwalkegiatanproses', [KurikulumController::class, 'jadwalkegiatanproses'])->name('jadwalkegiatanproses');
@@ -330,7 +298,6 @@ Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
 
 
     //kelulusan
-    Route::get('/kelsan ', [KurikulumController::class, 'kelsan'])->name('kelsan');
     Route::get('/adminkelulusan', [KurikulumController::class, 'adminkelulusan'])->name('adminkelulusan');
     Route::get('/tambahkelulusan', [KurikulumController::class, 'tambahkelulusan'])->name('tambahkelulusan');
     Route::post('/tambahproseskelulusan', [KurikulumController::class, 'tambahproseskelulusan'])->name('tambahproseskelulusan');
@@ -358,7 +325,6 @@ Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
 
 
     Route::get('/detaildeskripsi/{id}', [AkademiController::class, 'detaildeskripsi'])->name('detaildeskripsi');
-    Route::get('/indexakademi', [AkademiController::class, 'indexakademi'])->name('indexakademi');
     Route::get('/detailakademi/{id}', [AkademiController::class, 'detailakademi'])->name('detailakademi');
     Route::get('/dataakademi', [AkademiController::class, 'loby6'])->name('dataakademi');
     Route::get('/tambahakademi', [AkademiController::class, 'tambahakademi'])->name('tambahakademi');
@@ -369,7 +335,6 @@ Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
 
 
 
-    Route::get('/ekstra', [KesiswaanController::class, 'ekstra'])->name('ekstra');
     Route::get('/ekstrakulikuleradmin', [KesiswaanController::class, 'ekstrakulikuleradmin'])->name('ekstrakulikuleradmin');
     Route::get('/tambahekstrakulikuler', [KesiswaanController::class, 'tambahekstrakulikuler'])->name('tambahekstrakulikuler');
     Route::post('/ekstrakulikulerproses1', [KesiswaanController::class, 'ekstrakulikulerproses1'])->name('ekstrakulikulerproses1');
@@ -399,7 +364,6 @@ Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
 
 
 
-    Route::get('/osis', [KesiswaanController::class, 'osis'])->name('osis');
     Route::get('/osisadmin', [KesiswaanController::class, 'osisadmin'])->name('osisadmin');
     Route::get('/tambahosis', [KesiswaanController::class, 'tambahosis'])->name('tambahosis');
     Route::post('/osisproses3', [KesiswaanController::class, 'osisproses3'])->name('osisproses3');
@@ -407,7 +371,6 @@ Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
     Route::post('/editproses5/{id}', [KesiswaanController::class, 'editproses5'])->name('editproses5');
     Route::get('/deleteosis/{id}', [KesiswaanController::class, 'deleteosis'])->name('deleteosis');
 
-    Route::get('/alumni', [KesiswaanController::class, 'alumni'])->name('alumni');
     Route::get('/alumniadmin', [KesiswaanController::class, 'alumniadmin'])->name('alumniadmin');
     Route::get('/tambahalumni', [KesiswaanController::class, 'tambahalumni'])->name('tambahalumni');
     Route::post('/tambahalumniproses', [KesiswaanController::class, 'tambahalumniproses'])->name('tambahalumniproses');
@@ -419,7 +382,6 @@ Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
 
 
     //muhinews
-    Route::get('/muhinews', [MuhinewsController::class, 'index'])->name('muhinews');
     Route::get('/muhinewsadmin', [MuhinewsController::class, 'indexadmin'])->name('muhinewsadmin');
     Route::get('/detailmuhinews/{id}', [MuhinewsController::class, 'detailmuhinews'])->name('detailmuhinews');
     Route::get('/tambahmuhinews', [MuhinewsController::class, 'tambahmuhinews'])->name('tambahmuhinews');
@@ -448,7 +410,6 @@ Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
 
 
     //Iduka
-    Route::get('/iduka', [IdukaController::class, 'index'])->name('iduka');
     Route::get('/idukaadmin', [IdukaController::class, 'indexadmin'])->name('idukaadmin');
     Route::get('/tambahiduka', [IdukaController::class, 'tambahiduka'])->name('tambahiduka');
     Route::post('/idukaproses', [IdukaController::class, 'idukaproses'])->name('idukaproses');
@@ -505,7 +466,6 @@ Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
     Route::post('/editproses/{id}', [AlbumController::class, 'editproses'])->name('editproses');
     Route::get('/deletealbum/{id}', [AlbumController::class, 'deletealbum'])->name('deletealbum');
     //kompetensikeahlian
-    Route::get('/kompetensi', [KompetensiController::class, 'kompetensi'])->name('kompetensi');
 
     Route::get('/kompetensiadmin', [KompetensiController::class, 'kompetensiadmin'])->name('kompetensiadmin');
     Route::get('/tambahkompetensi', [KompetensiController::class, 'tambahkompetensi'])->name('tambahkompetensi');
@@ -554,8 +514,6 @@ Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
 
 
     //upj
-    Route::get('/indexupj', [UpjController::class, 'indexupj'])->name('indexupj');
-    Route::get('/upj', [UpjtekajeController::class, 'upj'])->name('upj');
     Route::get('/adminupj', [UpjController::class, 'adminupj'])->name('adminupj');
     Route::get('/tambahupj', [UpjController::class, 'tambahupj'])->name('tambahupj');
     Route::post('/upjproses', [UpjController::class, 'upjproses'])->name('upjproses');
@@ -568,7 +526,7 @@ Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
     Route::post('/upjproses2', [UpjController::class, 'upjproses2'])->name('upjproses2');
     Route::get('/editupj2/{id}', [UpjController::class, 'editupj2'])->name('editupj2');
     Route::post('/editupjproses2/{id}', [UpjController::class, 'editupjproses2'])->name('editupjproses2');
-    Route::get('/deleteupj2/{id}', [UpjController::class, 'deleteupj2'])->name('delete');
+    Route::get('/deleteupj2/{id}', [UpjController::class, 'deleteupj2'])->name('deleteupj2');
 
     Route::get('/adminupjslider', [UpjtekajeController::class, 'loby23'])->name('adminupjslider');
     Route::get('/editupjslider/{id}', [UpjtekajeController::class, 'editupjslider'])->name('editupjslider');
@@ -577,7 +535,6 @@ Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
 
 
 
-    Route::get('/indexbsi', [UpjController::class, 'indexbsi'])->name('indexbsi');
     Route::get('/adminbsi', [UpjController::class, 'loby8'])->name('adminbsi');
     Route::get('/tambahbsi', [UpjController::class, 'tambahbsi'])->name('tambahbsi');
     Route::post('/submitdata8', [UpjController::class, 'submitdata8'])->name('submitdata8');
@@ -587,8 +544,6 @@ Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
 
 
 
-
-    Route::get('/indexmuhiprint', [UpjController::class, 'indexmuhiprint'])->name('indexmuhiprint');
     Route::get('/adminmuhiprint', [UpjController::class, 'loby9'])->name('adminmuhiprint');
     Route::get('/tambahmuhiprint', [UpjController::class, 'tambahmuhiprint'])->name('tambahmuhiprint');
     Route::post('/submitdata9', [UpjController::class, 'submitdata9'])->name('submitdata9');
@@ -599,7 +554,6 @@ Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
 
 
 
-    Route::get('/indexpegadaian', [UpjController::class, 'indexpegadaian'])->name('indexpegadaian');
     Route::get('/adminpegadaian', [UpjController::class, 'loby10'])->name('adminpegadaian');
     Route::get('/tambahpegadaian', [UpjController::class, 'tambahpegadaian'])->name('tambahpegadaian');
     Route::post('/submitdata10', [UpjController::class, 'submitdata10'])->name('submitdata10');
@@ -608,8 +562,6 @@ Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
     Route::get('/deletepegadaian/{id}', [UpjController::class, 'deletepegadaian'])->name('deletepegadaian');
 
 
-
-    Route::get('/indexsuryamart', [UpjController::class, 'indexsuryamart'])->name('indexsuryamart');
     Route::get('/adminsuryamart', [UpjController::class, 'loby11'])->name('adminsuryamart');
     Route::get('/tambahsuryamart', [UpjController::class, 'tambahsuryamart'])->name('tambahsuryamart');
     Route::post('/submitdata11', [UpjController::class, 'submitdata11'])->name('submitdata11');
@@ -619,8 +571,6 @@ Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
 
 
 
-
-    Route::get('/indexedotel', [UpjController::class, 'indexedotel'])->name('indexedotel');
     Route::get('/adminedotel', [UpjController::class, 'loby12'])->name('adminedotel');
     Route::get('/tambahedotel', [UpjController::class, 'tambahedotel'])->name('tambahedotel');
     Route::post('/submitdata12', [UpjController::class, 'submitdata12'])->name('submitdata12');
@@ -706,14 +656,18 @@ Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
     Route::get('/editupjfooter/{id}', [UpjtekajeController::class, 'editupjfooter'])->name('editupjfooter');
     Route::post('/submitedit21/{id}', [UpjtekajeController::class, 'submitedit21'])->name('submitedit21');
     Route::get('/deleteupjfooter/{id}', [UpjtekajeController::class, 'deleteupjfooter'])->name('deleteupjfooter');
-});
+
+
+   
 
 
 
 
 
 
-//index yang bisa diakses user dan admin
+
+
+
 Route::group(['middleware' => ['auth', 'hakakses:admin,user']], function () {
 
     Route::get('/welcome', function () {
@@ -736,8 +690,93 @@ Route::group(['middleware' => ['auth', 'hakakses:admin,user']], function () {
     Route::get('/editprofiladmin', [ProfiladminController::class, 'editprofiladmin'])->name('editprofiladmin');
     Route::post('/updateprofiladmin', [ProfiladminController::class, 'updateprofiladmin'])->name('updateprofiladmin');
 });
-Route::group(['middleware' => ['auth', 'hakakses:admin,user,operator1,operator2']], function () {
 
+
+
+
+
+
+
+
+
+
+//guest
+
+Route::get('/profilsekolah', [ProfilSekolahController::class, 'profilsekolah'])->name('profilsekolah');
+
+Route::get('/visimisi', [ProfilSekolahController::class, 'visimisi'])->name('visimisi');
+
+Route::get('/indexupj', [UpjController::class, 'indexupj'])->name('indexupj');
+
+Route::get('/upj', [UpjtekajeController::class, 'upj'])->name('upj');
+
+Route::get('/iduka', [IdukaController::class, 'index'])->name('iduka');
+
+Route::get('/identitas_sekolah', [IdentitasSekolahController::class, 'identitassekolah'])->name('identitassekolah');
+
+Route::get('/fasilitassekolah', [FasilitasController::class, 'fasilitassekolah'])->name('fasilitassekolah');
+
+Route::get('/kompetensi', [KompetensiController::class, 'kompetensi'])->name('kompetensi');
+
+Route::get('/muhinews', [MuhinewsController::class, 'index'])->name('muhinews');
+
+Route::get('/iduka', [IdukaController::class, 'index'])->name('iduka');
+
+Route::get('/kelsan ', [KurikulumController::class, 'kelsan'])->name('kelsan');
+
+Route::get('/jadwalkegiatan', [KurikulumController::class, 'jadwalkegiatan'])->name('jadwalkegiatan');
+
+Route::get('/indexakademi', [AkademiController::class, 'indexakademi'])->name('indexakademi');
+
+Route::get('/ekstra', [KesiswaanController::class, 'ekstra'])->name('ekstra');
+
+Route::get('/osis', [KesiswaanController::class, 'osis'])->name('osis');
+
+Route::get('/alumni', [KesiswaanController::class, 'alumni'])->name('alumni');
+
+Route::get('/indexbsi', [UpjController::class, 'indexbsi'])->name('indexbsi');
+
+Route::get('/indexmuhiprint', [UpjController::class, 'indexmuhiprint'])->name('indexmuhiprint');
+
+Route::get('/indexpegadaian', [UpjController::class, 'indexpegadaian'])->name('indexpegadaian');
+
+Route::get('/indexsuryamart', [UpjController::class, 'indexsuryamart'])->name('indexsuryamart');
+
+Route::get('/indexedotel', [UpjController::class, 'indexedotel'])->name('indexedotel');
+
+
+
+
+Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
+    //dashboard
+
+    Route::get('/adminpamflet', [WelcomeController::class, 'adminpamflet'])->name('adminpamflet');
+    Route::get('/tambahpamflet', [WelcomeController::class, 'tambahpamflet'])->name('tambahpamflet');
+    Route::post('/prosestambahpamflet', [WelcomeController::class, 'prosestambahpamflet'])->name('prosestambahpamflet');
+    Route::get('/editpamflet/{id}', [WelcomeController::class, 'editpamflet'])->name('editpamflet');
+    Route::post('/editprosespamflet/{id}', [WelcomeController::class, 'editprosespamflet'])->name('editprosespamflet');
+    Route::get('/deletepamflet/{id}', [WelcomeController::class, 'deletepamflet'])->name('deletepamflet');
+
+    Route::get('/langkah', [PpdbController::class, 'langkah'])->name('langkah');
+    Route::get('/tambahlangkah', [PpdbController::class, 'tambahlangkah'])->name('tambahlangkah');
+    Route::post('/prosestambahlangkah', [PpdbController::class, 'prosestambahlangkah'])->name('prosestambahlangkah');
+    Route::get('/editlangkah/{id}', [PpdbController::class, 'editlangkah'])->name('editlangkah');
+    Route::post('/proseseditlangkah/{id}', [PpdbController::class, 'proseseditlangkah'])->name('proseseditlangkah');
+    Route::get('/deletelangkah/{id}', [PpdbController::class, 'deletelangkah'])->name('deletelangkah');
+
+    Route::get('/infoppdb', [PpdbController::class, 'infoppdb'])->name('infoppdb');
+    Route::get('/tambahinfoppdb', [PpdbController::class, 'tambahinfoppdb'])->name('tambahinfoppdb');
+    Route::post('/prosestambahinfoppdb', [PpdbController::class, 'prosestambahinfoppdb'])->name('prosestambahinfoppdb');
+    Route::get('/editinfoppdb/{id}', [PpdbController::class, 'editinfoppdb'])->name('editinfoppdb');
+    Route::post('/proseseditinfoppdb/{id}', [PpdbController::class, 'proseseditinfoppdb'])->name('proseseditinfoppdb');
+    Route::get('/deleteinfoppdb/{id}', [PpdbController::class, 'deleteinfoppdb'])->name('deleteinfoppdb');
+    
+    Route::get('/adminformulir', [PpdbController::class, 'adminformulir'])->name('adminformulir');
+    Route::get('/adminformulirditerima', [PpdbController::class, 'adminformulirditerima'])->name('adminformulirditerima');
+    Route::get('/adminformulirditolak', [PpdbController::class, 'adminformulirditolak'])->name('adminformulirditolak');
+    Route::get('/deleteformulir/{id}', [PpdbController::class, 'deleteformulir'])->name('deleteformulir');
+    Route::get('/historypembayaran', [PpdbController::class, 'historypembayaran'])->name('historypembayaran');
+    Route::get('/ajaxgrafik', [WelcomeController::class, 'ajaxgrafik'])->name('ajaxgrafik');
     Route::get('/welcome', function () {
         $berita = Muhinews::count();
         $galery = Album::count();
@@ -745,15 +784,33 @@ Route::group(['middleware' => ['auth', 'hakakses:admin,user,operator1,operator2'
         $mitra = Mitra::count();
         return view('welcome', compact('berita', 'galery', 'prestasi', 'mitra'));
     })->middleware('auth');
+});
+
+//admin
+Route::group(['middleware' => ['auth', 'hakakses:admin,operator1,operator2']], function () {
+
+    Route::get('/welcome', function () {
+        $berita = Muhinews::count();
+        $galery = Album::count();
+        $prestasi = Prestasi::count();
+        $mitra = Mitra::count();
+        $data3 = Biaya::all();
+        return view('welcome', compact('berita', 'galery', 'prestasi', 'mitra','biaya'));
+    })->middleware('auth');
 
     Route::get('/adminupjfooter', [UpjtekajeController::class, 'loby21'])->name('adminupjfooter');
     Route::post('/submitdata21', [UpjtekajeController::class, 'submitdata21'])->name('submitdata21');
     Route::get('/editupjfooter/{id}', [UpjtekajeController::class, 'editupjfooter'])->name('editupjfooter');
     Route::post('/submitedit21/{id}', [UpjtekajeController::class, 'submitedit21'])->name('submitedit21');
     Route::get('/deleteupjfooter/{id}', [UpjtekajeController::class, 'deleteupjfooter'])->name('deleteupjfooter');
+
+    Route::get('/adminpamflet', [WelcomeController::class, 'adminpamflet'])->name('adminpamflet');
+    Route::get('/tambahpamflet', [WelcomeController::class, 'tambahpamflet'])->name('tambahpamflet');
+    Route::post('/prosestambahpamflet', [WelcomeController::class, 'prosestambahpamflet'])->name('prosestambahpamflet');
+    Route::get('/editpamflet/{id}', [WelcomeController::class, 'editpamflet'])->name('editpamflet');
+    Route::post('/editprosespamflet/{id}', [WelcomeController::class, 'editprosespamflet'])->name('editprosespamflet');
+    Route::get('/deletepamflet/{id}', [WelcomeController::class, 'deletepamflet'])->name('deletepamflet');
 });
-
-
 
 Route::group(['middleware' => ['auth', 'hakakses:admin,user']], function () {
 
@@ -762,22 +819,28 @@ Route::group(['middleware' => ['auth', 'hakakses:admin,user']], function () {
         return view('welcome');
     })->middleware('auth');
 
-    
-    
+
     Route::get('/welcome', [WelcomeController::class, 'welcome'])->name('welcome');
-    Route::get('/ajaxgrafik', [WelcomeController::class, 'ajaxgrafik'])->name('ajaxgrafik');
 
 
 
-    Route::get('/adminformulir', [PpdbController::class, 'adminformulir'])->name('adminformulir');
     Route::get('/userformulir', [PpdbController::class, 'userformulir'])->name('userformulir');
     Route::get('/history', [PpdbController::class, 'history'])->name('history');
-    Route::get('/historypembayaran', [PpdbController::class, 'historypembayaran'])->name('historypembayaran');
-    Route::get('/adminformulirditerima', [PpdbController::class, 'adminformulirditerima'])->name('adminformulirditerima');
-    Route::get('/adminformulirditolak', [PpdbController::class, 'adminformulirditolak'])->name('adminformulirditolak');
     Route::get('/tambahfrmulir', [PpdbController::class, 'tambahfrmulir'])->name('tambahfrmulir');
     Route::post('/submitdata27', [PpdbController::class, 'submitdata27'])->name('submitdata27');
-    Route::get('/deleteformulir/{id}', [PpdbController::class, 'deleteformulir'])->name('deleteformulir');
 
+    Route::get('/detailformulir/{id}', [PpdbController::class, 'detailformulir'])->name('detailformulir');
 
 });
+
+
+
+
+
+
+
+
+
+
+
+

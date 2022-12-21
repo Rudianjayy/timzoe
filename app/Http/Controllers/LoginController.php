@@ -7,7 +7,7 @@ use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
-use GrahamCampbell\ResultType\Success;
+use GrahamCampbell\ResultType\success;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 

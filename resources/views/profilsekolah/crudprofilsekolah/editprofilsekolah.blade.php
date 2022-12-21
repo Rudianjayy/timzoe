@@ -50,22 +50,7 @@
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
-                                <section style="padding-top:60px;">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="card">
-                                                    <div class="card-header">
-                                                        Deskripsi Lanjutan
-                                                    </div>
-                                                    <div class="card-body">
-                                                        <textarea name="deskripsi_lanjutan" id="mytextarea"></textarea>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
+                              
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Foto :</label>
                                     <input type="file" name="foto_simuhi" class="form-control" id="exampleInputEmail1"

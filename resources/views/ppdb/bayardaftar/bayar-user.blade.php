@@ -140,7 +140,12 @@
                                                     transition: background 0.3s;">Proses</button>
                                                     @elseif($status_pay->status == 'settlement')
                                                     <button class="btn btn-success btn-rounded mb-4 mr-2 pay-button" data-toggle="modal" data-target="#fadeinModal">Selesai</button>
-                                                    <a href="/tambahformulir"  class="btn btn-primary btn-rounded mb-4 mr-2 pay-button">Isi Formulir</a>
+                                                    @if ($status_formulir == null)
+                                                        <a href="/tambahformulir"  class="btn btn-primary btn-rounded mb-4 mr-2 pay-button">Isi Formulir</a>
+                                                    @else
+                                                        <a href="/userformulir"  class="btn btn-primary btn-rounded mb-4 mr-2 pay-button">data anda</a>
+                                                    @endif
+                                                    
                                                     <a href="/history"  class="btn btn-dark btn-rounded mb-4 mr-2 pay-button">Riwayat Pembayaran</a>
                                                     @endif
                                                     

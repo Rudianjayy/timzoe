@@ -20,7 +20,7 @@ class ApiController extends Controller
         // dd($order);
         if($json->transaction_status == 'settlement'){
             return $order->update(['status' => $json->transaction_status]);
-        }
+        }       
         return true;
     }
     

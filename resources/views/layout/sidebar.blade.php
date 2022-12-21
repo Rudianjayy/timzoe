@@ -455,41 +455,19 @@
                             <a href="/admininfo"> Informasi</a>
                         </li>
                         <li>
-                            <a href="/adminlangkah">Langkah Pendaftaran</a>
+                            <a href="/langkah">Langkah Pendaftaran</a>
                         </li>
                     </ul>
                 </li>
             @endif
             @if (auth()->user()->role == 'user')
-                <li class="menu-title">PPDB</li>
-                <li class="menu">
-                    <a href="#bayar" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                        <div class="">
-                            <i class="flaticon-menu-list"></i>
-                            <span>Tabel Bayar</span>
-                        </div>
-                        <div>
-                            <i class="flaticon-right-arrow"></i>
-                        </div>
-                    </a>
-                    <ul class="collapse submenu list-unstyled" id="bayar" data-parent="#accordionExample">
-                        <li>
-                            <a href="/bayaruser">Tabel Bayar</a>
-                        </li>
-                    </ul>
-                </li>
-       
-
-
-
-                @php
-                    $status_pay = App\Models\Payment::where('id_user', Auth::user()->id)->first();
-                @endphp
-                <li class="menu">
-
-
-                    @if ($status_pay == null) 
-                    <a href="#tentangkami" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" hidden>
+            @php
+                $status_pay = App\Models\Payment::where('id_user', Auth::user()->id)->first();
+            @endphp
+            <li class="menu">
+                @if ($status_pay == null)
+                    <a href="#tentangkami" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"
+                        hidden>
 
                         <div class="">
                             <i class="flaticon-menu-list"></i>
@@ -499,7 +477,7 @@
                             <i class="flaticon-right-arrow"></i>
                         </div>
                     </a>
-                    @elseif ($status_pay->status == 'settlement')
+                @elseif ($status_pay->status == 'settlement')
                     <a href="#tentangkami" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
 
                         <div class="">
@@ -510,46 +488,47 @@
                             <i class="flaticon-right-arrow"></i>
                         </div>
                     </a>
-                    @endif
-                    <ul class="collapse submenu list-unstyled" id="tentangkami" data-parent="#accordionExample">
-                        @php
-                            $formulir_bayar = App\Models\Formulir::where('id_user',Auth::user()->id)->get();
-                        @endphp
-                        <li>
-
-                            @if ($status_pay == null)
-                                <a href="/bayaruser" hidden>Isi Formulir</a>
-                            @elseif($status_pay->status == 'settlement')
-                                <a href="/tambahformulir">Isi Formulir</a>
-                            @elseif($formulir_bayar == null)
-                                <a href="/userformulir" >Formulir Anda</a>
-                            @endif
-                        </li>
-
-                    </ul>   
-                </li>
-
-                @if ($status_pay->status == 'settlement')
-                    
-                <li class="menu">
-                    <a href="#History" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                        <div class="">
-                            <i class="flaticon-menu-list"></i>
-                            <span>Riwayat Pembayaran</span>
-                        </div>
-                        <div>
-                            <i class="flaticon-right-arrow"></i>
-                        </div>
-                    </a>
-                    <ul class="collapse submenu list-unstyled" id="History" data-parent="#accordionExample">
-                        <li>
-                            <a href="/history"> Riwayat Pembayaran</a>
-                        </li>
-
-                    </ul>
-                </li>
                 @endif
-            @endif
+                <ul class="collapse submenu list-unstyled" id="tentangkami" data-parent="#accordionExample">
+                    @php
+                        $formulir_bayar = App\Models\Formulir::where('id_user', Auth::user()->id)->get();
+                    @endphp
+                    <li>
+
+                        @if ($status_pay == null)
+                            <a href="/bayaruser" hidden>Isi Formulir</a>
+                        @elseif($status_pay->status == 'pending')
+                            <a href="/bayaruser">Isi Formulir</a>
+                        @elseif($status_pay->status == 'settlement' && $formulir_bayar == null)
+                            <a href="/tambahformulir">Isi Formulir</a>
+                        @elseif($formulir_bayar)
+                            <a href="/userformulir">Formulir Anda</a>
+                        @endif
+                    </li>
+
+                </ul>
+            </li>
+            @if ($status_pay == null)
+                @elseif ($status_pay->status == 'settlement')
+                    <li class="menu">
+                        <a href="#History" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <div class="">
+                                <i class="flaticon-menu-list"></i>
+                                <span>Riwayat Pembayaran</span>
+                            </div>
+                            <div>
+                                <i class="flaticon-right-arrow"></i>
+                            </div>
+                        </a>
+                        <ul class="collapse submenu list-unstyled" id="History" data-parent="#accordionExample">
+                            <li>
+                                <a href="/history"> Riwayat Pembayaran</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                @endif
+        @endif
 
 
 
@@ -575,6 +554,46 @@
                     </ul>
                 </li>
             @endif
+            @if (auth()->user()->role == 'admin')
+                <li class="menu-title">Welcome</li>
+                <li class="menu">
+                    <a href="#welcome" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <div class="">
+                            <i class="flaticon-menu-list"></i>
+                            <span>Welcome</span>
+                        </div>
+                        <div>
+                            <i class="flaticon-right-arrow"></i>
+                        </div>
+                    </a>
+                    <ul class="collapse submenu list-unstyled" id="welcome" data-parent="#accordionExample">
+                        <li>
+                            <a href="/adminpamflet"> Pamflet PPDB</a>
+                        </li>
+
+                    </ul>
+                </li>
+            @endif
+            @if (auth()->user()->role == 'admin')
+            <li class="menu-title">Info PPDB</li>
+            <li class="menu">
+                <a href="#InfoPPDB" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <div class="">
+                        <i class="flaticon-menu-list"></i>
+                        <span>Info PPDB</span>
+                    </div>
+                    <div>
+                        <i class="flaticon-right-arrow"></i>
+                    </div>
+                </a>
+                <ul class="collapse submenu list-unstyled" id="InfoPPDB" data-parent="#accordionExample">
+                    <li>
+                        <a href="/infoppdb"> Info PPDB</a>
+                    </li>
+
+                </ul>
+            </li>
+        @endif
 
             {{-- @if (auth()->user()->role == 'user')
                 <li class="menu-title">Operator</li>

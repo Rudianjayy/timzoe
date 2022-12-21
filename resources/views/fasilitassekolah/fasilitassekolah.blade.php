@@ -78,7 +78,7 @@
                             <div class="service-one__single">
                                 <div class="service-one__icon">
                                     <div class="service-one__icon-inner">
-                                        <img class="zoom" src="{{ asset('fotomahasiswa/' . $y->foto_sampul) }}" alt="" style="width: 250px; height:130px;">
+                                        <img class="zoom" src="{{ asset('fotomahasiswa/' . $y->foto) }}" alt="" style="width: 250px; height:130px;">
                                     </div><!-- /.service-one__icon-inner -->
                                 </div><!-- /.service-one__icon -->
                                 <div class="service-one__content">

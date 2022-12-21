@@ -100,7 +100,6 @@
                                             <option value="kristen">Kristen</option>
                                             <option value="hindu">Hindu</option>
                                             <option value="budha">Budha</option>
-                                            <option value="jawa">Jawa</option>
                                         </select>
                                         @error('agama')
                                             <div class="alert alert-danger">{{ $message }}</div>
@@ -295,15 +294,18 @@
 
 
                                 <!-- step 4 -->
+                                @foreach ($infoppdb as $i )
                                 <fieldset>
-                                    <h4>Info</h4>
+                                    <h4 style="margin-right:60px;" class="text-center">Info</h4>
+                                    <p>{!! $i->deskripsi_infoppdb !!}</p>
                                     <div class="f1-buttons">
                                         <button type="button" class="btn btn-warning btn-previous"><i
                                                 class="fa fa-arrow-left"></i> Sebelumnya</button>
                                         <button type="submit" class="btn btn-primary btn-submit"><i
-                                                class="fa fa-save"></i> Submit</button>
-                                    </div>
-                                </fieldset>
+                                            class="fa fa-save"></i> Kirim</button>
+                                        </div>
+                                    </fieldset>
+                                    @endforeach
                             </form>
 
                         </div>

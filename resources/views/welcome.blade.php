@@ -30,7 +30,7 @@
             opacity: 1 !important;
             top: 40px !important;
         }
-
+88
         .table td,
         .table th {
             border-top: 1px solid #f1f3f1;
@@ -279,7 +279,9 @@
                             </div>
                         </div>
                     </div>
-                    @elseif($status_pay->status == 'settlement')
+                    @else
+
+                    @if($status_pay->status == 'settlement')
                     <div class="row">
                         <div class="col-lg-12 col-md-12 mt-3">
                             <blockquote class="blockquote">
@@ -541,7 +543,7 @@
                     "fillColors": "#5247bd",
                     "lineColor": "#5247bd"
                 }],
-                "chartCursor": {
+                 "chartCursor": {
                     "categoryBalloonEnabled": false,
                     "cursorAlpha": 0,
                     "zoomable": false

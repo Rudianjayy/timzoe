@@ -37,7 +37,7 @@ return new class extends Migration
             $table->string('prestasi');
             $table->string('ukuran_kaos');
             $table->string('jurusan');
-            $table->string('status');
+            $table->string('status')->nullable();
             $table->string('barcode');
             $table->timestamps();
         });

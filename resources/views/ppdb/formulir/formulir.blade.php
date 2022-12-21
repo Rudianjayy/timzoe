@@ -40,9 +40,17 @@
                                     <h4>Formulir Pendaftaran yang Pending</h4>
                                 </div>
                                 <div>
+<<<<<<< HEAD
                                     <a href="/tambahformulir" class="btn btn-primary "
                                         id="kt_account_profile_details_submit" style="margin-left: 30px;">Tambah
                                         +</a>
+=======
+                                    {{-- <a href="/tambahformulir" class="btn btn-primary "
+                                        id="kt_account_profile_details_submit" style="margin-left: 30px;">Tambah
+                                        +</a> --}}
+
+                                        <a href="#" class="btn btn-danger" id="hapusSemua" style="margin-left: 30px;">Hapus Pilihan</a>
+>>>>>>> 9b2f01be2e8d7a6ecb29ec0797d735aad53442a2
                                 </div>
                             </div>
                         </div>
@@ -51,6 +59,7 @@
                                 <table id="ecommerce-product-list" class="table  table-bordered">
                                     <thead>
                                         <tr>
+                                            <th scope="col"><input type="checkbox" id="chkCheckAll"></th>
                                             <th scope="col">#</th>
                                             <th scope="col">Nama Peserta</th>
                                             <th scope="col">Jenis kelamin</th>
@@ -85,7 +94,8 @@
                                             $no = 1;
                                         @endphp
                                         @foreach ($data4 as $i)
-                                            <tr>
+                                            <tr id="sid{{ $i->id }}">
+                                                <td><input type="checkbox" name="ids" class="checkBoxClass" value="{{ $i->id }}"></td>
                                                 <th>{{ $no++ }}</th>
                                                 <td>{{ $i->nama_peserta }}</td>
                                                 <td>{{ $i->jeniskelamin }}</td>
@@ -195,6 +205,38 @@
                         swal("Data tidak jadi dihapus!");
                     }
                 });
+        });
+    </script>
+
+    <script>
+        $(function(e){
+            $("#chkCheckAll").click(function(){
+                $(".checkBoxClass").prop('checked',$(this).prop('checked'));
+            });
+
+            $("#hapusSemua").click(function(e){
+                e.preventDefault();
+                var allids = [];
+
+                $("input:checkbox[name=ids]:checked").each(function(){
+                    allids.push($(this).val());
+                });
+
+
+                $.ajax({
+                    url:"{{ route('student.deleteSelected') }}",
+                    type:"DELETE",
+                    data:{
+                        _token:$("input[name=_token]").val(),
+                        ids:allids
+                    },
+                    success:function(response){
+                        $.each(allids,function(key,val){
+                            $("#sid"+val).remove();
+                        })
+                    }
+                });
+            })
         });
     </script>
 

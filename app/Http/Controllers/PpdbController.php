@@ -596,6 +596,12 @@ class PpdbController extends Controller
         return redirect('adminformulir')->with('toast_error', ' Data Berhasil di Hapus!');
     }
 
+    public function deletePendaftarDipilih(Request $request){
+        $ids = $request->ids;
+        Formulir::whereIn('id',$ids)->delete();
+        return response()->json(['success'=>"Pendaftar dihapus"]);
+    }
+
 
 
 

@@ -68,11 +68,5 @@
 
 
 
-    <!-- END PAGE LEVEL PLUGINS -->
-    <link href="{{ asset('admintemp/adminnew/riski/nopan/plugins/notification/toastr/toastr.min.css') }}" rel="stylesheet" type="text/css" />
-    <!-- END PAGE LEVEL PLUGINS -->
-
-    <!--  BEGIN CUSTOM STYLE FILE  -->
-    <link href="{{ asset('admintemp/adminnew/riski/nopan/assets/css/ui-kit/custom-notification.css') }}" rel="stylesheet" type="text/css" />
-    <!--  END CUSTOM STYLE FILE  -->    
+     
 </head>

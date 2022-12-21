@@ -779,7 +779,7 @@ Route::group(['middleware' => ['auth', 'hakakses:admin,user']], function () {
         $data3 = Biaya::all();
         $pamflet= Pamfletppdb::all();
         // dd($formulir);
-        $status = Formulir::select(DB::raw("COUNT(*) as status"))
+        $status = Formulir::where('status', 'diterima')->select(DB::raw("COUNT(*) as status"))
         ->GroupBy(DB::raw("Year(created_at)"))
         ->pluck('status');
 
@@ -797,4 +797,6 @@ Route::group(['middleware' => ['auth', 'hakakses:admin,user']], function () {
     Route::get('/tambahfrmulir', [PpdbController::class, 'tambahfrmulir'])->name('tambahfrmulir');
     Route::post('/submitdata27', [PpdbController::class, 'submitdata27'])->name('submitdata27');
     Route::get('/deleteformulir/{id}', [PpdbController::class, 'deleteformulir'])->name('deleteformulir');
+
+    Route::delete('/selected-students',[PpdbController::class, 'deletePendaftarDipilih'])->name('student.deleteSelected');
 });

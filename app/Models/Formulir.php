@@ -10,4 +10,6 @@ class Formulir extends Model
     use HasFactory;
 
     protected $guarded = [];
+
+    
 }

@@ -55,8 +55,8 @@
                 </div>
             </div>
 
-            @if (auth()->user()->role == 'admin')
-                <div class="row layout-spacing ">
+             @if (auth()->user()->role == 'admin')
+                {{-- <div class="row layout-spacing ">
 
                     <div class="col-xl-3 mb-xl-0 col-lg-6 mb-4 col-md-6 col-sm-6">
                         <div class="widget-content-area  data-widgets br-4">
@@ -123,7 +123,7 @@
                         </div>
                     </div>
 
-                </div>
+                </div> --}}
 
                 <div class="col-lg-12 layout-spacing">
                     <div class="statbox widget box box-shadow">
@@ -343,8 +343,8 @@
                                                 <td>{{ $d->jadwal_ditutup }}</td>
                                                 @if ($d->jadwal_mulai < now() && $d->jadwal_ditutup > now())
                                                     <td class="text-center"> <a href="#"
-                                                           
-                                                        
+
+
                                                             class="btn btn-outline-primary delete fire">Pilih</a> </td>
                                                 @else
                                                     <td class="text-center"><span
@@ -494,7 +494,7 @@
                 title: {
                     text: 'Grafik bulanan'
                 },
-                xAxis: {
+                Axis: {
                     categories: {!! $bulan !!}
                 },
                 yAxis: {
@@ -633,7 +633,7 @@
                 ]
             };
 
-            // Load data into the ECharts instance 
+            // Load data into the ECharts instance
             chartBasic.setOption(option);
 
             $(window).on('resize', function() {

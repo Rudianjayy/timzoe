@@ -1,69 +1,45 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
-    
-<!-- Mirrored from themesbrand.com/veltrix/layouts/pages-404.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 22 Sep 2022 08:13:44 GMT -->
+<!-- Mirrored from designreset.com/preview-equation/default-light/pages_error404.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Oct 2022 08:39:12 GMT -->
 <head>
-
-        <meta charset="utf-8">
-        <title>404 | Veltrix - Admin & Dashboard Template</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
-        <meta content="Themesbrand" name="author">
-        <!-- App favicon -->
-        <link rel="shortcut icon" href="assets/images/favicon.ico">
-
-        <!-- Bootstrap Css -->
-        <link href="{{ asset('admin/zoee/layouts/assets/css/bootstrap.min.css') }}" id="bootstrap-style" rel="stylesheet" type="text/css">
-        <!-- Icons Css -->
-        <link href="{{ asset('admin/zoee/layouts/assets/css/icons.min.css') }}" rel="stylesheet" type="text/css">
-        <!-- App Css-->
-        <link href="{{ asset('admin/zoee/layouts/assets/css/app.min.css') }}" id="app-style" rel="stylesheet" type="text/css">
-
-    </head>
-
-    <body>
-
-        <div class="authentication-bg d-flex align-items-center pb-0 vh-100">
-            <div class="content-center w-100">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-xl-10">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="row align-items-center">
-                                        <div class="col-lg-4 ms-auto">
-                                            <div class="ex-page-content">
-                                                <h1 class="text-dark display-1 mt-4">404!</h1>
-                                                <h4 class="mb-4">Sorry, page not found</h4>
-                                                <p class="mb-5">It will be as simple as Occidental in fact, it will be Occidental to an English person</p>
-                                                <a class="btn btn-primary mb-5 waves-effect waves-light" href="/"><i class="mdi mdi-home"></i> Back to Dashboard</a>
-                                            </div>
-                                
-                                        </div>
-                                        <div class="col-lg-5 mx-auto">
-                                            <img src="{{ asset('admin/zoee/layouts/assets/images/error.png') }}" alt="" class="img-fluid mx-auto d-block">
-                                        </div>
-                                    </div>
-                                </div><!-- end cardbody -->
-                            </div><!-- end card -->
-                        </div><!-- end col -->
-                    </div><!--end row-->
-                </div>
-                <!-- end container -->
-            </div>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <title>Error 404-1 | Equation - Multipurpose Bootstrap Dashboard Template </title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico"/>
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="{{ asset('admin/zoee/layouts/assets/css/loader.css') }}" rel="stylesheet" type="text/css" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('admin/zoee/layouts/assets/css/plugins.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('admin/zoee/layouts/assets/css/pages/error/style-400.css') }}" rel="stylesheet" type="text/css" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+</head>
+<body class="error404 text-center">
+    <div id="eq-loader">
+      <div class="eq-loader-div">
+          <div class="eq-loading dual-loader mx-auto mb-5"></div>
+      </div>
+    </div>
+    <div class="container-fluid  error-content">
+        <div class="">
+            <p class="mini-text mb-3">Ooops!</p>
+            <img src="{{ asset('admin/zoee/layouts/assets/images/error.png') }}" alt="" class="img-fluid mx-auto d-block">
+            <h1 class="error-number">404</h1>
+            <p class="error-des mb-0">Page Not Found!</p>
+            <p class="error-text mb-4 mt-1">This page is not available</p>
+            <a href="index.html" class="btn btn-gradient-info btn-rounded mt-4">Go Back</a>
         </div>
+    </div>
+    <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
+    <script src="{{ asset('admin/zoee/layouts/assets/libs/js/libs/jquery-3.1.1.min.js') }}"></script>
+    <script src="{{ asset('admin/zoee/layouts/assets/libs/js/loader.js') }}"></script>
+    <script src="{{ asset('admin/zoee/layouts/assets/libs/js/popper.min.js') }}"></script>
+    <script src="{{ asset('admin/zoee/layouts/assets/libs/js/bootstrap.min.js') }}"></script>
+    <!-- END GLOBAL MANDATORY SCRIPTS -->
+</body>
 
-        <!-- JAVASCRIPT -->
-        <script src="{{ asset('admin/zoee/layouts/assets/libs/jquery/jquery.min.js') }}"></script>
-        <script src="{{ asset('admin/zoee/layouts/assets/libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-        <script src="{{ asset('admin/zoee/layouts/assets/libs/metismenu/metisMenu.min.js') }}"></script>
-        <script src="{{ asset('admin/zoee/layouts/assets/libs/simplebar/simplebar.min.js') }}"></script>
-        <script src="{{ asset('admin/zoee/layouts/assets/libs/node-waves/waves.min.js') }}"></script>
-
-        <script src="assets/js/app.js"></script>
-
-    </body>
-
-<!-- Mirrored from themesbrand.com/veltrix/layouts/pages-404.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 22 Sep 2022 08:13:45 GMT -->
+<!-- Mirrored from designreset.com/preview-equation/default-light/pages_error404.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Oct 2022 08:39:13 GMT -->
 </html>
+

@@ -6,7 +6,7 @@
     <head>
         @include('layout.css')
 
-        
+
     </head>
 
     <body>
@@ -33,7 +33,7 @@
                 <div class="modal-content">
                     <div class="modal-body">
                             <div class="widget-content widget-content-area br-4 p-0">
- 
+
                                 <div class="customer-bal-summary">
                                     <div class="c-b-s-header mt-3 mb-3">
                                         <h5 class="text-center" >Keterangan status pembayaran</h5>
@@ -42,9 +42,9 @@
                                         <h6 class="text-center text-danger" >Kode Transaksi Anda : {{ $status_pay -> order_id }}</h6>
                                         @endif
                                     </div>
- 
+
                                     <div class="c-b-s-body">
- 
+
                                         <div class="tab-content">
                                             <div class="tab-pane active" role="tabpanel" aria-labelledby="c-b-s-monthly-tab">
                                                 <div class="table-responsive customer-bal-summary-scroll-monthly">
@@ -66,7 +66,7 @@
                                                             </tr>
                                                             <tr>
                                                                 <td class="text-center"><span class="badge badge-pills badge-secondary">Belum  Aktif</span></td>
-                                                                <td class="customer-name">Pembayaran Belum Di Buka</td>
+                                                                <td class="customer-name    ">Pembayaran Belum di Buka</td>
                                                             </tr>
                                                             <tr>
                                                                 <td class="text-center"><span class="badge badge-pills badge-primary">Isi Formulir</span></td>
@@ -84,12 +84,12 @@
                                                     </table>
                                                 </div>
                                             </div>
- 
+
                                         </div>
- 
+
                                     </div>
                                 </div>
- 
+
                             </div>
                     </div>
                 </div>
@@ -127,7 +127,7 @@
                                                     @if ($status_pay == null )
                                                     <button class="pricing__action mx-auto mb-4 pay-button" data-biaya_id={{ $pc->id }} data-biaya_gelombang={{ $pc->gelombang }} data-biaya={{ (int)$pc->biaya }}>Bayar Sekarang</button>
                                                     @elseif($status_pay->status == 'pending')
-                                                    <button type="button" class="btn btn-warning btn-rounded mb-4 mr-2 pay-button" data-toggle="modal" data-target="#fadeinModal" 
+                                                    <button type="button" class="btn btn-warning btn-rounded mb-4 mr-2 pay-button" data-toggle="modal" data-target="#fadeinModal"
                                                     style="text-transform: uppercase;
                                                     flex: none;
                                                     /* padding: 12px 36px; */
@@ -143,7 +143,7 @@
                                                     <a href="/tambahformulir"  class="btn btn-primary btn-rounded mb-4 mr-2 pay-button">Isi Formulir</a>
                                                     <a href="/history"  class="btn btn-dark btn-rounded mb-4 mr-2 pay-button">History</a>
                                                     @endif
-                                                    
+
                                                 @else
                                                 <button class="pricing__action mx-auto mb-4 pay-button" data-toggle="modal" data-target="#fadeinModal">Belum Aktif</button>
                                                 @endif
@@ -200,7 +200,7 @@
                 $.ajax({
                     method: 'post',
                     url: "{{ URL::to('/api/bayaruser/show') }}",
-                    data: data, 
+                    data: data,
                     dataType: 'JSON',
                     success: function(e) {
 

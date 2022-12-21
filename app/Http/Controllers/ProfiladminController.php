@@ -72,14 +72,14 @@ class ProfiladminController extends Controller
     public function updatepassword(request $request)
     {
         $request->validate([
-            'password_lama' => 'required|min:6|max:100',
-            'password' => 'required|min:6|max:100',
+            'password_lama' => 'required|min:3|max:100',
+            'password' => 'required|min:3|max:100',
             'password_confirmation' => 'required',
         ], [
             'password_lama.required' => 'password lama harus diisi',
-            'password_lama.min' => 'password lama harus diisi lebih dari 6',
+            'password_lama.min' => 'password lama harus diisi lebih dari 3',
             'password.required' => 'password baru harus diisi',
-            'password.min' => 'password lama harus lebih dari 6',
+            'password.min' => 'password lama harus lebih dari 3',
             'password.confirmed.required' => 'password tidak sama',
             'password_confirmation.required' => 'password harus diisi',
         ]);

@@ -67,7 +67,7 @@
                 <li class="menu">
 
 
-                    @if ($status_pay == null) 
+                    @if ($status_pay == null)
                     <a href="#tentangkami" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" hidden>
 
                         <div class="">
@@ -107,7 +107,7 @@
                             @endif
                         </li>
 
-                    </ul>   
+                    </ul>
                 </li>
             @endif
             {{-- @if (auth()->user()->role == 'admin')
@@ -524,9 +524,32 @@
                             <i class="flaticon-right-arrow"></i>
                         </div>
                     </a>
-                    <ul class="collapse submenu list-unstyled" id="bayar" data-parent="#accordionExample">
+                    <ul class="collapse submenu plist-unstyled" id="bayar" data-parent="#accordionExample">
                         <li>
                             <a href="/bayaruser">Tabel Bayar</a>
+                        </li>
+                    </ul>
+                </li>
+            @endif
+
+
+
+
+            @if (auth()->user()->role == 'user')
+                <li class="menu-title">PPDB</li>
+                <li class="menu">
+                    <a href="#formulir" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <div class="">
+                            <i class="flaticon-menu-list"></i>
+                            <span>Formulir</span>
+                        </div>
+                        <div>
+                            <i class="flaticon-right-arrow"></i>
+                        </div>
+                    </a>
+                    <ul class="collapse submenu list-unstylxed" id="formulir" data-parent="#accordionExample">
+                        <li>
+                            <a href="/tambahformulir">Formulir</a>
                         </li>
                     </ul>
                 </li>

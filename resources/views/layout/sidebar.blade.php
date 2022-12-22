@@ -29,6 +29,7 @@
 
                 </ul> --}}
             </li>
+
             @if (auth()->user()->role == 'admin')
                 <li class="menu-title">Menu</li>
                 <li class="menu">
@@ -66,20 +67,6 @@
                         <a href="#tentangkami" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"
                             hidden>
 
-<<<<<<< HEAD
-
-                    @if ($status_pay == null)
-                    <a href="#tentangkami" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" hidden>
-
-                        <div class="">
-                            <i class="flaticon-menu-list"></i>
-                            <span>Formulir</span>
-                        </div>
-                        <div>
-                            <i class="flaticon-right-arrow"></i>
-                        </div>
-                    </a>
-=======
                             <div class="">
                                 <i class="flaticon-menu-list"></i>
                                 <span>Formulir</span>
@@ -88,7 +75,6 @@
                                 <i class="flaticon-right-arrow"></i>
                             </div>
                         </a>
->>>>>>> 9b2f01be2e8d7a6ecb29ec0797d735aad53442a2
                     @elseif ($status_pay->status == 'settlement')
                         <a href="#tentangkami" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
 
@@ -235,9 +221,6 @@
                         </li>
                         <li>
                             <a href="/fotomouadmin">Foto Mou</a>
-                        </li>
-                        <li>
-                            <a href="/albumiduka">Album Mou</a>
                         </li>
                     </ul>
                 </li>
@@ -606,7 +589,6 @@
                         <li>
                             <a href="/adminpamflet"> Pamflet PPDB</a>
                         </li>
-
                     </ul>
                 </li>
             @endif

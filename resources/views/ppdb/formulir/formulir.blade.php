@@ -40,17 +40,11 @@
                                     <h4>Formulir Pendaftaran yang Pending</h4>
                                 </div>
                                 <div>
-<<<<<<< HEAD
-                                    <a href="/tambahformulir" class="btn btn-primary "
-                                        id="kt_account_profile_details_submit" style="margin-left: 30px;">Tambah
-                                        +</a>
-=======
                                     {{-- <a href="/tambahformulir" class="btn btn-primary "
                                         id="kt_account_profile_details_submit" style="margin-left: 30px;">Tambah
                                         +</a> --}}
 
                                         <a href="#" class="btn btn-danger" id="hapusSemua" style="margin-left: 30px;">Hapus Pilihan</a>
->>>>>>> 9b2f01be2e8d7a6ecb29ec0797d735aad53442a2
                                 </div>
                             </div>
                         </div>

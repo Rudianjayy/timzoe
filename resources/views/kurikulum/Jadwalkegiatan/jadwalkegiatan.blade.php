@@ -95,7 +95,6 @@
                                             <th scope="col">Nama Kegiatan</th>
                                             <th scope="col">Waktu</th>
                                             <th scope="col">Tempat</th>
-                                            <th scope="col">Aksi</th>
                                         </tr>
                                     </thead>
 
@@ -111,7 +110,6 @@
                                                 <td>{{ $d->namakegiatan }}</td>
                                                 <td>{{ $d->waktu }}</td>
                                                 <td>{{ $d->tempat }}</td>
-                                                {{-- <td>{{ $d->created_at->format('D M Y') }}</td> --}}
 
 
                                                 <td class="align-center">

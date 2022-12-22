@@ -37,11 +37,11 @@
                                 <div class="col-xl-12 col-md-12 col-sm-12 col-12">
                                     <h4>Footer </h4>
                                 </div>
-                                {{--  <div>
+                                <div>
                                     <a href="/tambahfotoslider" class="btn btn-primary mt-5"
                                         id="kt_account_profile_details_submit" style="margin-left: 30px;">Tambah
                                         +</a>
-                                </div>  --}}
+                                </div>
                             </div>
                         </div>
                         <div class="widget-content widget-content-area">

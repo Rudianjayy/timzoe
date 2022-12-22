@@ -87,7 +87,7 @@
                                                                 data-toggle="tooltip" data-placement="top" title="Delete">
                                                                 <i class="flaticon-delete-5"></i>
                                                             </a>
-                                                        </li> 
+                                                        </li>
                                                     </ul>
                                                 </td>
                                             </tr>

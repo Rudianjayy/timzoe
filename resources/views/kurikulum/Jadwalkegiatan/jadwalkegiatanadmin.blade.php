@@ -49,7 +49,6 @@
                                         <th scope="col">Nama Kegiatan</th>
                                         <th scope="col">Waktu</th>
                                         <th scope="col">Tempat</th>
-                                        <th scope="col">Aksi</th>
                                     </tr>
                                 </thead>
 

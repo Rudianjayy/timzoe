@@ -44,7 +44,7 @@
                                 <table id="ecommerce-product-list" class="table  table-bordered">
                                     <div>
                                         <a href="/tambahosis" class="btn btn-primary mt-5"
-                                            id="kt_account_profile_details_submit">Tambah
+                                            id="">Tambah
                                             +</a>
                                     </div>
                                     <thead>
@@ -70,8 +70,6 @@
                                                         style="width: 50px;">
                                                 </td>
                                                 <td>{!! $d->deskripsi_osis !!}</td>
-
-
                                                 <td class="align-center">
                                                     <ul class="table-controls">
                                                         <li>

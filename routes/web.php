@@ -389,13 +389,6 @@ Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
     Route::get('/deleteekstra/{id}', [EkstrakulikulerBlogController::class, 'deleteekstra'])->name('deleteekstra');
 
 
-    Route::get('/detailekstrakulikuler/{id}', [DetailEkstrakulikulerController::class, 'detailekstrakulikuler'])->name('detailekstrakulikuler');
-    Route::get('/admindetailekstrakulikuler', [DetailEkstrakulikulerController::class, 'admindetailekstrakulikuler'])->name('admindetailekstrakulikuler');
-    Route::get('/tambahdetailekstrakulikuler', [DetailEkstrakulikulerController::class, 'tambahdetailekstrakulikuler'])->name('tambahdetailekstrakulikuler');
-    Route::post('/tambahdetail1', [DetailEkstrakulikulerController::class, 'tambahdetail1'])->name('tambahdetail1');
-    Route::get('/editdetailekstrakulikuler/{id}', [DetailEkstrakulikulerController::class, 'editdetailekstrakulikuler'])->name('editdetailekstrakulikuler');
-    Route::post('/editdetail1/{id}', [DetailEkstrakulikulerController::class, 'editdetail1'])->name('editdetail1');
-    Route::get('/deletedetail/{id}', [DetailEkstrakulikulerController::class, 'deletedetail'])->name('deletedetail');
 
 
 

@@ -106,7 +106,7 @@
                 }
                 100% {
                     background-image: url('{{ asset('fotomahasiswa/' . $ul->foto_slider2) }}');
-                } 
+                }
             }
             @endforeach
 
@@ -351,7 +351,7 @@
 
         {{-- <div class="inner-container">
             <div class="row">
-                <iframe class="map-contact" src="https://maps.google.com/maps?q=smk%20muhammadiyah%201%20genteng&#038;t=m&#038;z=10&#038;output=embed&#038;iwloc=near" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe class="map-contact" src="https://maps.google.com/maps?q=smk%20muhammadiyah%201%20genteng&#038;t=m&#038;z=10&#038;output=embed&#038;iwloc=near" width="1200" height="700" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div> --}}
 

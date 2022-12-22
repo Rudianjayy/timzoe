@@ -3,7 +3,6 @@
 @section('content')
     @include('layout.css')
 
-
     @if (auth()->user()->role == 'admin')
         <title>Admin | SMK Muhammadiyah 1 Genteng</title>
     @endif
@@ -30,7 +29,7 @@
             opacity: 1 !important;
             top: 40px !important;
         }
-88
+
         .table td,
         .table th {
             border-top: 1px solid #f1f3f1;
@@ -41,12 +40,9 @@
         }
     </style>
 
-
     <link rel="icon" type="image/x-icon" href="{{ asset('admintemp/adminnew/riski/nopan/assets/img/favicon.ico') }}" />
 
-
     <body>
-
 
         <div class="container">
             <div class="page-header">
@@ -55,8 +51,8 @@
                 </div>
             </div>
 
-             @if (auth()->user()->role == 'admin')
-                {{-- <div class="row layout-spacing ">
+            @if (auth()->user()->role == 'admin')
+                <div class="row layout-spacing ">
 
                     <div class="col-xl-3 mb-xl-0 col-lg-6 mb-4 col-md-6 col-sm-6">
                         <div class="widget-content-area  data-widgets br-4">
@@ -123,7 +119,7 @@
                         </div>
                     </div>
 
-                </div> --}}
+                </div>
 
                 <div class="col-lg-12 layout-spacing">
                     <div class="statbox widget box box-shadow">
@@ -168,9 +164,8 @@
             @endif
 
 
-
             @if (auth()->user()->role == 'admin')
-                <div class="row layout-spacing">
+                {{-- <div class="row layout-spacing">
                     <div class="col-lg-12">
                         <div class="statbox widget box box-shadow">
                             <div class="widget-header">
@@ -191,7 +186,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
                 <div class="row layout-spacing">
                     <div class="col-lg-12">
                         <div class="statbox widget box box-shadow">
@@ -199,7 +194,7 @@
 
                                 <div class="row">
                                     <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                        <h4>Grafik Siswa Daftar Pertahun</h4>
+                                        <h4>Grafik Siswa Daftar Pertahun penting</h4>
                                     </div>
 
                                 </div>
@@ -279,9 +274,7 @@
                             </div>
                         </div>
                     </div>
-                    @else
-
-                    @if($status_pay->status == 'settlement')
+                    @elseif($status_pay->status == 'settlement')
                     <div class="row">
                         <div class="col-lg-12 col-md-12 mt-3">
                             <blockquote class="blockquote">
@@ -364,92 +357,353 @@
                 </div>
 
             </div>
-            <div class="row" id="cancel-row">
+            @php
+                $formulir = App\Models\Formulir::where('id_user', Auth::user()->id)->first();
+            @endphp
 
-                <div class="col-xl-12 col-lg-12 col-sm-12  layout-spacing">
-                    <div class="statbox widget box box-shadow">
-                        <div class="widget-header">
-                            <div class="row">
-                                <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                    <h4>Alur Pendaftaran</h4>
-                                    <p style="margin-left:15px;">Periksa alur pendaftaran kalian melalui langkah berikut
-                                        ini.</p>
+            @if($formulir == null)
+                    <div class="row" id="cancel-row">
+
+                        <div class="col-xl-12 col-lg-12 col-sm-12  layout-spacing">
+                            <div class="statbox widget box box-shadow">
+                                <div class="widget-header">
+                                    <div class="row">
+                                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                            <h4>Alur Pendaftaran</h4>
+                                            <p style="margin-left:15px;">Periksa alur pendaftaran kalian melalui langkah berikut
+                                                ini.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content widget-content-area">
+                                    <div class="row layout-spacing ">
+
+                                        <div class="col-xl-3 mb-xl-0 col-lg-6 mb-4 col-md-6 col-sm-6">
+                                            <div class="widget-content-area  data-widgets br-4">
+                                                <div class="widget  t-sales-widget">
+                                                    <div class="media">
+
+                                                        <div class="media-body text-right">
+                                                            <p class="widget-text mb-0">Gelombang</p>
+                                                            <br>
+                                                        </div>
+                                                        <br>
+                                                    </div>
+                                                    <p class="widget-total-stats mt-2">Pilih jalur pendaftaran</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-3 mb-xl-0 col-lg-6 mb-4 col-md-6 col-sm-6">
+                                            <div class="widget-content-area  data-widgets br-4">
+                                                <div class="widget  t-order-widget">
+                                                    <div class="media">
+
+                                                        <div class="media-body text-right">
+                                                            <p class="widget-text mb-0">Pembayaran</p>
+                                                            <br>
+                                                        </div>
+                                                    </div>
+                                                    <p class="widget-total-stats mt-2">Membayar Biaya Pendaftaran</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 mb-sm-0 mb-4">
+                                            <div class="widget-content-area  data-widgets br-4">
+                                                <div class="widget  t-customer-widget">
+                                                    <div class="media">
+
+                                                        <div class="media-body text-right">
+                                                            <p class="widget-text mb-0">Data Identitas</p>
+                                                            <br>
+                                                        </div>
+                                                    </div>
+                                                    <p class="widget-total-stats mt-2">Isi data profil diri</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+
+                                            <div class="widget-content-area  data-widgets br-4">
+                                                <div class="widget  t-income-widget">
+                                                    <div class="media">
+
+                                                        <div class="media-body text-right">
+                                                            <p class="widget-text mb-0">Menunggu Persetujuan</p>
+                                                            <br>
+                                                        </div>
+                                                    </div>
+                                                    <p class="widget-total-stats mt-2">Menunggu Persetujuan Dari Admin</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="widget-content widget-content-area">
-                            <div class="row layout-spacing ">
 
-                                <div class="col-xl-3 mb-xl-0 col-lg-6 mb-4 col-md-6 col-sm-6">
-                                    <div class="widget-content-area  data-widgets br-4">
-                                        <div class="widget  t-sales-widget">
-                                            <div class="media">
+                    </div>
+            @elseif ($formulir->status == null )
+                    <div class="row" id="cancel-row">
 
-                                                <div class="media-body text-right">
-                                                    <p class="widget-text mb-0">Gelombang</p>
-                                                    <br>
-                                                </div>
-                                                <br>
-                                            </div>
-                                            <p class="widget-total-stats mt-2">Pilih jalur pendaftaran</p>
+                        <div class="col-xl-12 col-lg-12 col-sm-12  layout-spacing">
+                            <div class="statbox widget box box-shadow">
+                                <div class="widget-header">
+                                    <div class="row">
+                                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                            <h4>Alur Pendaftaran</h4>
+                                            <p style="margin-left:15px;">Periksa alur pendaftaran kalian melalui langkah berikut
+                                                ini.</p>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="widget-content widget-content-area">
+                                    <div class="row layout-spacing ">
 
-                                <div class="col-xl-3 mb-xl-0 col-lg-6 mb-4 col-md-6 col-sm-6">
-                                    <div class="widget-content-area  data-widgets br-4">
-                                        <div class="widget  t-order-widget">
-                                            <div class="media">
+                                        <div class="col-xl-3 mb-xl-0 col-lg-6 mb-4 col-md-6 col-sm-6">
+                                            <div class="widget-content-area  data-widgets br-4">
+                                                <div class="widget  t-sales-widget">
+                                                    <div class="media">
 
-                                                <div class="media-body text-right">
-                                                    <p class="widget-text mb-0">Pembayaran</p>
-                                                    <br>
+                                                        <div class="media-body text-right">
+                                                            <p class="widget-text mb-0">Gelombang</p>
+                                                            <br>
+                                                        </div>
+                                                        <br>
+                                                    </div>
+                                                    <p class="widget-total-stats mt-2">Pilih jalur pendaftaran</p>
                                                 </div>
                                             </div>
-                                            <p class="widget-total-stats mt-2">Membayar Biaya Pendaftaran</p>
                                         </div>
-                                    </div>
-                                </div>
 
-                                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 mb-sm-0 mb-4">
-                                    <div class="widget-content-area  data-widgets br-4">
-                                        <div class="widget  t-customer-widget">
-                                            <div class="media">
+                                        <div class="col-xl-3 mb-xl-0 col-lg-6 mb-4 col-md-6 col-sm-6">
+                                            <div class="widget-content-area  data-widgets br-4">
+                                                <div class="widget  t-order-widget">
+                                                    <div class="media">
 
-                                                <div class="media-body text-right">
-                                                    <p class="widget-text mb-0">Data Identitas</p>
-                                                    <br>
+                                                        <div class="media-body text-right">
+                                                            <p class="widget-text mb-0">Pembayaran</p>
+                                                            <br>
+                                                        </div>
+                                                    </div>
+                                                    <p class="widget-total-stats mt-2">Membayar Biaya Pendaftaran</p>
                                                 </div>
                                             </div>
-                                            <p class="widget-total-stats mt-2">Isi data profil diri</p>
                                         </div>
-                                    </div>
-                                </div>
 
-                                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+                                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 mb-sm-0 mb-4">
+                                            <div class="widget-content-area  data-widgets br-4">
+                                                <div class="widget  t-customer-widget">
+                                                    <div class="media">
 
-                                    <div class="widget-content-area  data-widgets br-4">
-                                        <div class="widget  t-income-widget">
-                                            <div class="media">
-
-                                                <div class="media-body text-right">
-                                                    <p class="widget-text mb-0">Menunggu Persetujuan</p>
-                                                    <br>
+                                                        <div class="media-body text-right">
+                                                            <p class="widget-text mb-0">Data Identitas</p>
+                                                            <br>
+                                                        </div>
+                                                    </div>
+                                                    <p class="widget-total-stats mt-2">Isi data profil diri</p>
                                                 </div>
                                             </div>
-                                            <p class="widget-total-stats mt-2">Menunggu Persetujuan Dari Admin</p>
                                         </div>
+
+                                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+
+                                            <div class="widget-content-area  data-widgets br-4">
+                                                <div class="widget  t-income-widget">
+                                                    <div class="media">
+
+                                                        <div class="media-body text-right">
+                                                            <p class="widget-text mb-0">Menunggu Persetujuan</p>
+                                                            <br>
+                                                        </div>
+                                                    </div>
+                                                    <p class="widget-total-stats mt-2">Menunggu Persetujuan Dari Admin</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </div>
+                            </div>
+                        </div>
 
+                    </div>
+
+            @elseif ($formulir->status == 'pending')
+
+                <div class="row" id="cancel-row">
+
+                    <div class="col-xl-12 col-lg-12 col-sm-12  layout-spacing">
+                        <div class="statbox widget box box-shadow">
+                            <div class="widget-header">
+                                <div class="row">
+                                    <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                        <h4>Alur Pendaftaran</h4>
+                                        <p style="margin-left:15px;">Periksa alur pendaftaran kalian melalui langkah berikut
+                                            ini.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="widget-content widget-content-area">
+                                <div class="row layout-spacing ">
+
+                                    <div class="col-xl-3 mb-xl-0 col-lg-6 mb-4 col-md-6 col-sm-6">
+                                        <div class="widget-content-area  data-widgets br-4">
+                                            <div class="widget  t-sales-widget">
+                                                <div class="media">
+
+                                                    <div class="media-body text-right">
+                                                        <p class="widget-text mb-0">Gelombang</p>
+                                                        <br>
+                                                    </div>
+                                                    <br>
+                                                </div>
+                                                <p class="widget-total-stats mt-2">Pilih jalur pendaftaran</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-3 mb-xl-0 col-lg-6 mb-4 col-md-6 col-sm-6">
+                                        <div class="widget-content-area  data-widgets br-4">
+                                            <div class="widget  t-order-widget">
+                                                <div class="media">
+
+                                                    <div class="media-body text-right">
+                                                        <p class="widget-text mb-0">Pembayaran</p>
+                                                        <br>
+                                                    </div>
+                                                </div>
+                                                <p class="widget-total-stats mt-2">Membayar Biaya Pendaftaran</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 mb-sm-0 mb-4">
+                                        <div class="widget-content-area  data-widgets br-4">
+                                            <div class="widget  t-customer-widget">
+                                                <div class="media">
+
+                                                    <div class="media-body text-right">
+                                                        <p class="widget-text mb-0">Data Identitas</p>
+                                                        <br>
+                                                    </div>
+                                                </div>
+                                                <p class="widget-total-stats mt-2">Isi data profil diri</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+
+                                        <div class="widget-content-area  data-widgets br-4">
+                                            <div class="widget  t-income-widget">
+                                                <div class="media">
+
+                                                    <div class="media-body text-right">
+                                                        <p class="widget-text mb-0">Menunggu Persetujuan</p>
+                                                        <br>
+                                                    </div>
+                                                </div>
+                                                <p class="widget-total-stats mt-2">Menunggu Persetujuan Dari Admin</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
+            @elseif($formulir->status == 'diterima')
 
-            </div>
+                    <div class="row" id="cancel-row">
+                        <div class="col-xl-12 col-lg-12 col-sm-12  layout-spacing">
+                            <div class="statbox widget box box-shadow">
+                                <div class="widget-header">
+                                    <div class="row">
+                                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                            <h4>Alur Pendaftaran</h4>
+                                            <p style="margin-left:15px;">Periksa alur pendaftaran kalian melalui langkah berikut
+                                                ini.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content widget-content-area">
+                                    <div class="row layout-spacing ">
+
+                                        <div class="col-xl-3 mb-xl-0 col-lg-6 mb-4 col-md-6 col-sm-6">
+                                            <div class="widget-content-area  data-widgets br-4">
+                                                <div class="widget  t-sales-widget">
+                                                    <div class="media">
+
+                                                        <div class="media-body text-right">
+                                                            <p class="widget-text mb-0">Gelombang</p>
+                                                            <br>
+                                                        </div>
+                                                        <br>
+                                                    </div>
+                                                    <p class="widget-total-stats mt-2">Pilih jalur pendaftaran</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-3 mb-xl-0 col-lg-6 mb-4 col-md-6 col-sm-6">
+                                            <div class="widget-content-area  data-widgets br-4">
+                                                <div class="widget  t-order-widget">
+                                                    <div class="media">
+
+                                                        <div class="media-body text-right">
+                                                            <p class="widget-text mb-0">Pembayaran</p>
+                                                            <br>
+                                                        </div>
+                                                    </div>
+                                                    <p class="widget-total-stats mt-2">Membayar Biaya Pendaftaran</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 mb-sm-0 mb-4">
+                                            <div class="widget-content-area  data-widgets br-4">
+                                                <div class="widget  t-customer-widget">
+                                                    <div class="media">
+
+                                                        <div class="media-body text-right">
+                                                            <p class="widget-text mb-0">Data Identitas</p>
+                                                            <br>
+                                                        </div>
+                                                    </div>
+                                                    <p class="widget-total-stats mt-2">Isi data profil diri</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+
+                                            <div class="widget-content-area  data-widgets br-4">
+                                                <div class="widget  t-income-widget">
+                                                    <div class="media">
+
+                                                        <div class="media-body text-right">
+                                                            <p class="widget-text mb-0">Menunggu Persetujuan</p>
+                                                            <br>
+                                                        </div>
+                                                    </div>
+                                                    <p class="widget-total-stats mt-2">Menunggu Persetujuan Dari Admin</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            @endif
         </div>
-
 
 
 
@@ -496,7 +750,7 @@
                 title: {
                     text: 'Grafik bulanan'
                 },
-                Axis: {
+                xAxis: {
                     categories: {!! $bulan !!}
                 },
                 yAxis: {
@@ -513,7 +767,6 @@
                     name: 'Jumlah Pendaftar',
                     data: {!! $status !!}
                 }]
-
 
             });
         </script>
@@ -543,7 +796,7 @@
                     "fillColors": "#5247bd",
                     "lineColor": "#5247bd"
                 }],
-                 "chartCursor": {
+                "chartCursor": {
                     "categoryBalloonEnabled": false,
                     "cursorAlpha": 0,
                     "zoomable": false
@@ -560,7 +813,6 @@
                 }
             });
         </script>
-
 
 
 
@@ -646,6 +898,7 @@
         </script> --}}
 
 
-
     </body>
 @endsection
+
+

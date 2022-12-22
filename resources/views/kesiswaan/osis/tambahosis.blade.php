@@ -16,7 +16,7 @@
             <div class="card-body">
               <form action="/osisproses3" method="POST" enctype="multipart/form-data">
                 @csrf
-               
+
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Judul IPM/OSIS :</label>
                     <input type="text" name="judul_osis" class="form-control" id="exampleInputEmail1"

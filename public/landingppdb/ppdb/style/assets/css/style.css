@@ -110,7 +110,10 @@ html {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   line-height: 1.9em;
-  overflow-x: hidden; }
+  overflow-x: hidden; 
+    scroll-behavior: smooth;
+  }
+  
 
 h1,
 h2,
@@ -5171,7 +5174,7 @@ a.cs-demo__box.cs-style1:hover {
     left: 0;
     top: 0;
     border-radius: inherit;
-    background-color: #5e2ced;
+    background-color: #0b82aa;
     opacity: 0.9; }
   .cs-portfolio.cs-style1 .cs-portfolio__title {
     font-size: 24px;
@@ -5479,7 +5482,7 @@ ul.page-numbers {
   .cs-pricing__table.cs-style1 .cs-btn {
     width: 100%; }
   .cs-pricing__table.cs-style1:hover {
-    background-color: #263a5d; }
+    background-color: #0b82aa ; }
     .cs-pricing__table.cs-style1:hover .cs-pricing__table__title,
     .cs-pricing__table.cs-style1:hover .cs-pricing__table__feature {
       color: #fff; }
@@ -9043,7 +9046,7 @@ a:focus {
 --------------------------------------------------------------*/
 
 .blog-grid {
-	padding-top: 170px;
+	padding-top: 67px;
 	padding-bottom: 170px;
 }
 
@@ -9242,7 +9245,7 @@ a:focus {
 .blog-details__main img {
 	border-radius: 10px;
 	margin-top: 50px;
-	margin-bottom: 50px;
+	margin-bottom: 0px;
 }
 
 .blog-details__main .blog-two__meta {
@@ -10308,7 +10311,6 @@ a:focus {
 .portfolio-two__image {
 	overflow: hidden;
 	position: relative;
-	background-color: var(--thm-black);
 	border-radius: 10px;
 	border-bottom-left-radius: 0;
 	border-bottom-right-radius: 0;
@@ -10425,7 +10427,7 @@ a:focus {
 }
 
 .portfolio-column {
-	padding-top: 170px;
+	padding-top: 130px;
 }
 
 /*-------------------------------------------------------------- 
@@ -11009,28 +11011,7 @@ a:focus {
 	line-height: 40px;
 }
 
-.faq-one .accrodion-title h4::before {
-	content: '\f309';
-	font-family: 'Font Awesome 5 Pro';
-	font-weight: 400;
-	width: 40px;
-	height: 40px;
-	color: #fff;
-	font-size: 16px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-	border-radius: 50%;
-	background-image: linear-gradient(-45deg, #dc88ff 0%, #8035ff 100%);
-	transition: transform 500ms ease;
-	transform: rotate(0deg);
-	position: absolute;
-	top: 50%;
-	left: 0;
-	transform: rotate(0deg) translateY(-50%);
-	transform-origin: top;
-}
+
 
 .faq-one .accrodion:nth-child(2) .accrodion-title h4::before {
 	background-image: linear-gradient(-45deg, #ffbc45 0%, #ff5959 100%);
@@ -11829,7 +11810,7 @@ a:focus {
 
 .service-three {
 	padding-top: 170px;
-	padding-bottom: 130px;
+	padding-bottom: 0px;
 	position: relative;
 }
 
@@ -12651,4 +12632,5 @@ a:focus {
 	position: relative;
 	bottom: 15px;
 }
+
 

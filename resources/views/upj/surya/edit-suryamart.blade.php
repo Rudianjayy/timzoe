@@ -7,7 +7,7 @@
     </head>
 
     <body>
-        <h1 style="color: black" class="text-center mb-4">Edit Suryamaart</h1>
+        <h1 style="color: black" class="text-center mb-4">Edit Suryamart</h1>
 
         <div class="container">
 

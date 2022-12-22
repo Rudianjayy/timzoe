@@ -173,9 +173,7 @@
                         <li>
                             <a href="/fotomouadmin">Foto Mou</a>
                         </li>
-                        <li>
-                            <a href="/albumiduka">Album Mou</a>
-                        </li>
+                       
                     </ul>
                 </li>
             @endif
@@ -491,10 +489,9 @@
                 @endif
                 <ul class="collapse submenu list-unstyled" id="tentangkami" data-parent="#accordionExample">
                     @php
-                        $formulir_bayar = App\Models\Formulir::where('id_user', Auth::user()->id)->get();
+                        $formulir_bayar = App\Models\Formulir::where('id_user', Auth::user()->id)->first();
                     @endphp
                     <li>
-
                         @if ($status_pay == null)
                             <a href="/bayaruser" hidden>Isi Formulir</a>
                         @elseif($status_pay->status == 'pending')

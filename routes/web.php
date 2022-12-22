@@ -771,9 +771,13 @@ Route::group(['middleware' => ['auth', 'hakakses:admin']], function () {
     Route::post('/proseseditinfoppdb/{id}', [PpdbController::class, 'proseseditinfoppdb'])->name('proseseditinfoppdb');
     Route::get('/deleteinfoppdb/{id}', [PpdbController::class, 'deleteinfoppdb'])->name('deleteinfoppdb');
     
+
+    Route::get('/detailformuliradmin/{id}', [PpdbController::class, 'detailformuliradmin'])->name('detailformuliradmin');
+    Route::get('/detailditerima/{id}', [PpdbController::class, 'detailditerima'])->name('detailditerima');
     Route::get('/adminformulir', [PpdbController::class, 'adminformulir'])->name('adminformulir');
     Route::get('/adminformulirditerima', [PpdbController::class, 'adminformulirditerima'])->name('adminformulirditerima');
     Route::get('/adminformulirditolak', [PpdbController::class, 'adminformulirditolak'])->name('adminformulirditolak');
+    Route::get('/detailformulirditolak/{id}', [PpdbController::class, 'detailformulirditolak'])->name('detailformulirditolak');
     Route::get('/deleteformulir/{id}', [PpdbController::class, 'deleteformulir'])->name('deleteformulir');
     Route::get('/historypembayaran', [PpdbController::class, 'historypembayaran'])->name('historypembayaran');
     Route::get('/ajaxgrafik', [WelcomeController::class, 'ajaxgrafik'])->name('ajaxgrafik');
@@ -828,9 +832,13 @@ Route::group(['middleware' => ['auth', 'hakakses:admin,user']], function () {
     Route::get('/history', [PpdbController::class, 'history'])->name('history');
     Route::get('/tambahfrmulir', [PpdbController::class, 'tambahfrmulir'])->name('tambahfrmulir');
     Route::post('/submitdata27', [PpdbController::class, 'submitdata27'])->name('submitdata27');
-
+    Route::get('/deleteformulir/{id}', [PpdbController::class, 'deleteformulir'])->name('deleteformulir');
     Route::get('/detailformulir/{id}', [PpdbController::class, 'detailformulir'])->name('detailformulir');
 
+
+    Route::delete('/selected-students',[PpdbController::class, 'deletePendaftarDipilih'])->name('student.deleteSelected');
+
+    Route::post('/aksiTest', [PpdbController::class, 'aksiTest'])->name('test');    
 });
 
 

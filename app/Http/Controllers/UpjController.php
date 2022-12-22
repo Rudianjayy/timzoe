@@ -577,7 +577,7 @@ class UpjController extends Controller
         return redirect()->route('adminedotel')->with('success', ' Data Berhasil di Tambahkan!');
     }
 
-    public function editedoel($id)
+    public function editedotel($id)
     {
 
         $data5 = Edotel::findOrFail($id);

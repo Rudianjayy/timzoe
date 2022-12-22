@@ -19,7 +19,7 @@ use App\Models\Personaljurusan;
 class LandingController extends Controller
 {
     public function index () {
-        $data = Album::all();
+        $data = Album::paginate(6);
         $k = Muhinews::paginate(6);
         $d = Muhinews::paginate(6);
         $f = Muhinews::paginate(3);

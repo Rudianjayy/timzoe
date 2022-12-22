@@ -51,31 +51,11 @@
                                 <table id="ecommerce-product-list" class="table  table-bordered">
                                     <thead>
                                         <tr>
-                                            <th scope="col">#</th>
+                                            <th scope="col">No.</th>
                                             <th scope="col">Nama Peserta</th>
-                                            <th scope="col">Jenis kelamin</th>
-                                            <th scope="col">Tempat Lahir</th>
-                                            <th scope="col">Tanggal Lahir</th>
-                                            <th scope="col">Agama</th>
                                             <th scope="col">NISN</th>
-                                            <th scope="col">NIK</th>
-                                            <th scope="col">NOKK</th>
-                                            <th scope="col">Foto KK</th>
-                                            <th scope="col">Status</th>
-                                            <th scope="col">Alamat Rumah</th>
-                                            <th scope="col">Nama Ayah</th>
-                                            <th scope="col">Nama Ibu</th>
-                                            <th scope="col">Pekerjaan Ayah</th>
-                                            <th scope="col">Pekerjaan Ibu</th>
-                                            <th scope="col">Sekolah Asal</th>
-                                            <th scope="col">Notelpon Siswa</th>
-                                            <th scope="col">Notelpon Orangtua</th>
-                                            <th scope="col">Prestasi</th>
-                                            <th scope="col">Ukuran Kaos</th>
-                                            <th scope="col">Jurusan</th>
-
-                                            <th scope="col">Kode QR</th>
-
+                                            <th class="text-center" scope="col">Detail Pendaftar</th>
+                                            <th class="text-center" scope="col">Kode QR</th>
                                             <th scope="col">Status</th>
                                         </tr>
                                     </thead>
@@ -87,34 +67,11 @@
                                             <tr>
                                                 <th>{{ $no++ }}</th>
                                                 <td>{{ $i->nama_peserta }}</td>
-                                                <td>{{ $i->jeniskelamin }}</td>
-                                                <td>{{ $i->tempat_lahir }}</td>
-                                                <td>{{ $i->tanggal_lahir }}</td>
-                                                <td>{{ $i->agama }}</td>
                                                 <td>{{ $i->nisn }}</td>
-                                                <td>{{ $i->nik }}</td>
-                                                <td>{{ $i->nokk }}</td>
-                                                <td>
-                                                    <a href="{{ asset('fotomahasiswa/' . $i->foto_kk) }}"
-                                                        data-lightbox="whatever">
-                                                        <img src="{{ asset('fotomahasiswa/' . $i->foto_kk) }}"
-                                                            alt="" style="width: 80px;">
-                                                    </a>
+                                                <td class="text-center">
+                                                    <a class="btn btn-outline-primary"
+                                                        href="/detailditerima/{{ $i->id }}">Detail Pendaftar</a>
                                                 </td>
-
-                                                <td>{{ $i->status_anak }}</td>
-                                                <td>{{ $i->alamat_rumah }}</td>
-                                                <td>{{ $i->nama_ayah }}</td>
-                                                <td>{{ $i->nama_ibu }}</td>
-                                                <td>{{ $i->pekerjaan_ayah }}</td>
-                                                <td>{{ $i->pekerjaan_ibu }}</td>
-                                                <td>{{ $i->sekolah_asal }}</td>
-                                                <td>{{ $i->notelpon_siswa }}</td>
-                                                <td>{{ $i->notelpon_orangtua }}</td>
-                                                <td>{{ $i->prestasi }}</td>
-                                                <td>{{ $i->ukuran_kaos }}</td>
-                                                <td>{{ $i->jurusan }}</td>
-
                                                 @if ($i->status == 'diterima')
                                                     <td>
                                                         <div class="visible-print text-center">
@@ -129,30 +86,7 @@
                                                         class="badge badge-pills outline-badge-success">{{ $i->status }}</span>
                                                 </td>
 
-                                                @if ($i->status == 'pending')
-                                                    <td class="align-center">
-                                                        <ul class="table-controls">
-                                                            <form action="/setuju/{{ $i->id }}" method="POST">
-                                                                @csrf
-                                                                <input type="hidden" name="nisn" `
-                                                                    value="{{ $i->nisn }}">
-                                                                <li>
-                                                                    <button type="submit" title="Terima">
-                                                                        <i class="flaticon-single-circle-tick"></i>
-                                                                    </button>
-                                                                </li>
-                                                            </form>
-                                                            <form action="/tolak/{{ $i->id }}" method="POST">
-                                                                @csrf
-                                                                <li>
-                                                                    <button type="submit" title="Tolak">
-                                                                        <i class="flaticon-circle-cross"></i>
-                                                                    </button>
-                                                                </li>
-                                                            </form>
-                                                        </ul>
-                                                    </td>
-                                                @endif
+
                                             </tr>
                                         @endforeach
                                     </tbody>
@@ -166,7 +100,7 @@
 
     </body>
     @include('layout.script')
-    
+
 
     <script src="{{ asset('dist/js/lightbox-plus-jquery.min.js') }}"></script>
     <script>

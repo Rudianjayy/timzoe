@@ -514,7 +514,18 @@ class PpdbController extends Controller
         $fo =Formulir::findOrFail($id);
         return view('ppdb.formulir.detailformulir',compact('fo'));
     }
-
+    public function detailformuliradmin($id){
+        $data4 = Formulir::findOrFail($id);
+        return view('ppdb.formulir.detailformuliradmin',compact('data4'));
+    }
+    public function detailditerima($id){
+        $data4 = Formulir::findOrFail($id);
+        return view('ppdb.formulir.detail-formulir-diterima',compact('data4'));
+    }
+    public function detailformulirditolak($id){
+        $data4 = Formulir::findOrFail($id);
+        return view('ppdb.formulir.detailformulirditolak',compact('data4'));
+    }
 
     public function setuju(Request $request, $id)
     {
@@ -535,10 +546,12 @@ class PpdbController extends Controller
         return redirect()->back()->with('success', 'status berhasil diubah');
     }
 
-    public function tambahformulir()
+    public function tambahformulir(Request $request)
     {
         $infoppdb = infoppdb::all();
         $status_pay = Payment::where('id_user', Auth::user()->id)->first();
+
+       
         return view('ppdb.formulir.tambah-formulir', compact('status_pay','infoppdb'));
     }
 
@@ -555,7 +568,7 @@ class PpdbController extends Controller
         //     'nokk' =>'required',
         //     'foto_kk' =>'required',
         //     'foto_bukti' =>'required',
-        //     'status' =>'required',
+        //     'status_anak' =>'required',
         //     'alamat_rumah' =>'required',
         //     'nama_ayah' =>'required',
         //     'nama_ibu' =>'required',
@@ -567,9 +580,9 @@ class PpdbController extends Controller
         //     'prestasi' =>'required',
         //     'ukuran_kaos' =>'required',
         //     'jurusan' =>'required',
-
-
         // ]);
+
+
         $biaya = Payment::where('id_user', Auth::user()->id)->first();
         $data4 = Formulir::create([
             'id_user' => Auth::User()->id,
@@ -614,6 +627,12 @@ class PpdbController extends Controller
         $data4 = Formulir::find($id);
         $data4->delete();
         return redirect('adminformulir')->with('toast_error', ' Data Berhasil di Hapus!');
+    }
+
+    public function deletePendaftarDipilih(Request $request){
+        $ids = $request->ids;
+        Formulir::whereIn('id',$ids)->delete();
+        return response()->json(['success'=>"Pendaftar dihapus"]);
     }
 
 
@@ -899,4 +918,16 @@ class PpdbController extends Controller
         $infoppdb->delete();
         return redirect()->route('infoppdb')->with('success', 'Data Berhasil Di Hapus');
     }
+
+
+    // percobaan 
+    public function aksiTest(Request $request){
+        // dd($request);
+        foreach($request->ids as $id){
+            $siswa = Formulir::find($id);
+            $siswa->update(['status' => $request->status]);
+        }
+        return back();
+    }
+    // end percobaan 
 }

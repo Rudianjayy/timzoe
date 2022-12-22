@@ -25,8 +25,8 @@
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
 
-                                    <button type="submit" class="btn btn-primary mt-3">Submit</button>
-                                    <a href="/kalenderakademiadmin" class="btn btn-danger mt-3">Kembali</a>
+                                    <button type="submit" class="btn btn-primary mb-3">Submit</button>
+                                    <a href="/kalenderakademiadmin" class="btn btn-danger mb-3">Kembali</a>
                             </form>
                         </div>
                     </div>

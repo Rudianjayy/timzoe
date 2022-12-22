@@ -91,7 +91,7 @@
                                     <span>-</span> --}}
                                     <a href="blog-details.html">Diterbitkan :{{ $gd->created_at }}</a>
                                 </div><!-- /.blog-two__meta -->
-                                <img src="{{ asset('fotomahasiswa/' . $gd->foto_gadai) }}" class="img-fluid" alt="">
+                                <center><img src="{{ asset('fotomahasiswa/' . $gd->foto_gadai) }}" class="img-fluid" alt="" style="width:650px; height:352px;"></center>
                                 {{-- <h3>Additional Services that will <br> Grow Business</h3> --}}
                                 <p>{!! $gd->deskripsi_gadai !!} </p>
 
@@ -250,7 +250,7 @@
                                                 <img src="{{ asset('fotomahasiswa/' . $mb->foto) }}" alt="">
                                             </div><!-- /.sidebar__post-image -->
                                             <div class="sidebar__post-content">
-                                                <h3><a href="/muhiblog/{{ $mb->id }}">{{ $mb->deskripsi_muhinews }}</a></h3>
+                                                <h3><a href="/muhiblog/{{ $mb->id }}">{{ $mb->judul }}</a></h3>
                                                 <span>{{ $mb->created_at }}</span>
                                             </div><!-- /.sidebar__post-content -->
                                         </div><!-- /.sidebar__post-single -->

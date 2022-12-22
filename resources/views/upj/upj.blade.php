@@ -59,7 +59,7 @@
                     </div><!-- /.logo-box -->
 
                     <div class="main-nav__main-navigation">
-                        <ul class="main-nav__navigation-box">
+                        <ul class="main-nav__navigation-box" style="margin-left: 77px;">
                             <li><a href="#home">Beranda</a></li>
                             <li><a href="#tentang">Tentang Kami</a></li>
                             <li><a href="#keunggulan">Keunggulan</a></li>
@@ -114,7 +114,7 @@
 
         @foreach ($us as $ul )
 
-        <section class="SLIDE_BG" id='home'>
+        <section style="margin-bottom:36px;" class="SLIDE_BG" id='home'>
             <!-- <div class="banner">
                 <img class="img-slider1" src="{{ asset('fotomahasiswa/' . $ul->foto_slider1) }}" >
             </div>
@@ -391,7 +391,7 @@
 
         <footer class="site-footer-upj">
 
-            <div class="site-footer__upper">
+            <div class="site-footer__upper" style="background-color: blue;">
                 <div class="container">
                     <div class="row">
                         @foreach ($uf as $uf )

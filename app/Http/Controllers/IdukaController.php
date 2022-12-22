@@ -154,7 +154,7 @@ class IdukaController extends Controller
 
 
 
-        return redirect()->route('fotimouadmin')->with('success',' Data Berhasil di Tambahkan!');
+        return redirect()->route('fotomouadmin')->with('success',' Data Berhasil di Tambahkan!');
     }
 
     public function editadminfotomou($id){
@@ -217,94 +217,94 @@ class IdukaController extends Controller
 
 
 
-    //ALBUM IDUKA
+    // //ALBUM IDUKA
 
-    public function albumiduka(){
-        $data3 = Albumiduka::all();
-        return view('iduka.albumiduka.album-iduka', compact('data3'));
-    }
+    // public function albumiduka(){
+    //     $data3 = Albumiduka::all();
+    //     return view('iduka.albumiduka.album-iduka', compact('data3'));
+    // }
 
-    public function tambahalbumfoto(){
-        return view('iduka.albumiduka.tambah-album-iduka');
-    }
+    // public function tambahalbumfoto(){
+    //     return view('iduka.albumiduka.tambah-album-iduka');
+    // }
 
-    public function submitdata30(Request $request){
-        // dd($request->all());
-        $this->validate($request,[
-            'foto_otkp' =>'required',
-            'foto_otkp' =>'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
-            'foto_tjkt' =>'required',
-            'foto_tjkt' =>'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
-            'foto_akl' =>'required',
-            'foto_akl' =>'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
-            'foto_ph' =>'required',
-            'foto_ph' =>'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
-            'foto_dkv' =>'required',
-            'foto_dkv' =>'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
-            'foto_pplg' =>'required',
-            'foto_pplg' =>'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
-
-
-        ],[
-            'foto_otkp.required' =>'Harus diisi',
-            'foto_otkp.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
-            'foto_tjkt.required' =>'Harus diisi',
-            'foto_tjkt.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
-            'foto_akl.required' =>'Harus diisi',
-            'foto_akl.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
-            'foto_ph.required' =>'Harus diisi',
-            'foto_ph.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
-            'foto_dkv.required' =>'Harus diisi',
-            'foto_dkv.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
-            'foto_pplg.required' =>'Harus diisi',
-            'foto_pplg.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
+    // public function submitdata30(Request $request){
+    //     // dd($request->all());
+    //     $this->validate($request,[
+    //         'foto_otkp' =>'required',
+    //         'foto_otkp' =>'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
+    //         'foto_tjkt' =>'required',
+    //         'foto_tjkt' =>'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
+    //         'foto_akl' =>'required',
+    //         'foto_akl' =>'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
+    //         'foto_ph' =>'required',
+    //         'foto_ph' =>'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
+    //         'foto_dkv' =>'required',
+    //         'foto_dkv' =>'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
+    //         'foto_pplg' =>'required',
+    //         'foto_pplg' =>'required|mimes:jpg,jpeg,bmp,gif,png,webp|max:1024',
 
 
-
-        ]);
-        $data3 = Albumiduka::create([
-            'foto_otkp' =>$request->foto_otkp,
-            'foto_tjkt' =>$request->foto_tjkt,
-            'foto_akl' =>$request->foto_akl,
-            'foto_ph' =>$request->foto_ph,
-            'foto_dkv' =>$request->foto_dkv,
-            'foto_pplg' =>$request->foto_pplg,
-        ]);
-            if($request->hasFile('foto_otkp')){
-                $request->file('foto_otkp')->move('fotomahasiswa/', $request->file('foto_otkp')->getClientOriginalName());
-                $data3->foto_otkp = $request->file('foto_otkp')->getClientOriginalName();
-                $data3->save();
-            }
-            if($request->hasFile('foto_tjkt')){
-                $request->file('foto_tjkt')->move('fotomahasiswa/', $request->file('foto_tjkt')->getClientOriginalName());
-                $data3->foto_tjkt = $request->file('foto_tjkt')->getClientOriginalName();
-                $data3->save();
-            }
-            if($request->hasFile('foto_akl')){
-                $request->file('foto_akl')->move('fotomahasiswa/', $request->file('foto_akl')->getClientOriginalName());
-                $data3->foto_akl = $request->file('foto_akl')->getClientOriginalName();
-                $data3->save();
-            }
-            if($request->hasFile('foto_ph')){
-                $request->file('foto_ph')->move('fotomahasiswa/', $request->file('foto_ph')->getClientOriginalName());
-                $data3->foto_ph = $request->file('foto_ph')->getClientOriginalName();
-                $data3->save();
-            }
-            if($request->hasFile('foto_dkv')){
-                $request->file('foto_dkv')->move('fotomahasiswa/', $request->file('foto_dkv')->getClientOriginalName());
-                $data3->foto_dkv = $request->file('foto_dkv')->getClientOriginalName();
-                $data3->save();
-            }
-            if($request->hasFile('foto_pplg')){
-                $request->file('foto_pplg')->move('fotomahasiswa/', $request->file('foto_pplg')->getClientOriginalName());
-                $data3->foto_pplg = $request->file('foto_pplg')->getClientOriginalName();
-                $data3->save();
-            }
+    //     ],[
+    //         'foto_otkp.required' =>'Harus diisi',
+    //         'foto_otkp.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
+    //         'foto_tjkt.required' =>'Harus diisi',
+    //         'foto_tjkt.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
+    //         'foto_akl.required' =>'Harus diisi',
+    //         'foto_akl.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
+    //         'foto_ph.required' =>'Harus diisi',
+    //         'foto_ph.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
+    //         'foto_dkv.required' =>'Harus diisi',
+    //         'foto_dkv.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
+    //         'foto_pplg.required' =>'Harus diisi',
+    //         'foto_pplg.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
 
 
 
-        return redirect()->route('albumiduka')->with('success',' Data Berhasil di Tambahkan!');
-    }
+    //     ]);
+    //     $data3 = Albumiduka::create([
+    //         'foto_otkp' =>$request->foto_otkp,
+    //         'foto_tjkt' =>$request->foto_tjkt,
+    //         'foto_akl' =>$request->foto_akl,
+    //         'foto_ph' =>$request->foto_ph,
+    //         'foto_dkv' =>$request->foto_dkv,
+    //         'foto_pplg' =>$request->foto_pplg,
+    //     ]);
+    //         if($request->hasFile('foto_otkp')){
+    //             $request->file('foto_otkp')->move('fotomahasiswa/', $request->file('foto_otkp')->getClientOriginalName());
+    //             $data3->foto_otkp = $request->file('foto_otkp')->getClientOriginalName();
+    //             $data3->save();
+    //         }
+    //         if($request->hasFile('foto_tjkt')){
+    //             $request->file('foto_tjkt')->move('fotomahasiswa/', $request->file('foto_tjkt')->getClientOriginalName());
+    //             $data3->foto_tjkt = $request->file('foto_tjkt')->getClientOriginalName();
+    //             $data3->save();
+    //         }
+    //         if($request->hasFile('foto_akl')){
+    //             $request->file('foto_akl')->move('fotomahasiswa/', $request->file('foto_akl')->getClientOriginalName());
+    //             $data3->foto_akl = $request->file('foto_akl')->getClientOriginalName();
+    //             $data3->save();
+    //         }
+    //         if($request->hasFile('foto_ph')){
+    //             $request->file('foto_ph')->move('fotomahasiswa/', $request->file('foto_ph')->getClientOriginalName());
+    //             $data3->foto_ph = $request->file('foto_ph')->getClientOriginalName();
+    //             $data3->save();
+    //         }
+    //         if($request->hasFile('foto_dkv')){
+    //             $request->file('foto_dkv')->move('fotomahasiswa/', $request->file('foto_dkv')->getClientOriginalName());
+    //             $data3->foto_dkv = $request->file('foto_dkv')->getClientOriginalName();
+    //             $data3->save();
+    //         }
+    //         if($request->hasFile('foto_pplg')){
+    //             $request->file('foto_pplg')->move('fotomahasiswa/', $request->file('foto_pplg')->getClientOriginalName());
+    //             $data3->foto_pplg = $request->file('foto_pplg')->getClientOriginalName();
+    //             $data3->save();
+    //         }
+
+
+
+    //     return redirect()->route('albumiduka')->with('success',' Data Berhasil di Tambahkan!');
+    // }
 
 
 

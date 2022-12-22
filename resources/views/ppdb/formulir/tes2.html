@@ -1,0 +1,29 @@
+<!--Model-->
+
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Post extends Model
+{
+    protected $fillable = [
+        'title',
+        'description',
+        'body'
+    ];
+
+    use HasFactory;
+}
+
+
+<!--Controller-->
+
+public function multiDelete(Request $request) 
+{
+    Post::whereIn('id', $request->get('selected'))->delete();
+
+    return response("Selected post(s) deleted successfully.", 200);
+}

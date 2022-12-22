@@ -80,7 +80,7 @@
 
                                 <a href="javascript: void(0);">Diterbitkan :{{ $data->created_at }}</a>
                             </div><!-- /.blog-two__meta -->
-                          <center> <img src="{{ asset('fotojurusan/' . $data->foto) }}" class="img-fluid" alt="" ></center>
+                          <center> <img style="width:301px; height:253px;" src="{{ asset('fotojurusan/' . $data->foto) }}" class="img-fluid" alt=""></center>
                             <h3>{{ $data->nama_kompetensi2 }}</h3>
                             <p>{!! $data->deskripsi_kompetensi2!!} </p>
 
@@ -151,7 +151,8 @@
                                             <img src="{{ asset('fotomahasiswa/' . $mb->foto) }}" alt="">
                                         </div><!-- /.sidebar__post-image -->
                                         <div class="sidebar__post-content">
-                                            <h3><a href="/muhiblog/{{ $mb->id }}">{{ $mb->deskripsi_muhinews }}</a></h3>
+                                      
+                                            <h3><a href="/muhiblog/{{ $mb->id }}">{{ $mb->judul }}</a></h3>
                                             <span>{{ $mb->created_at }}</span>
                                         </div><!-- /.sidebar__post-content -->
                                     </div><!-- /.sidebar__post-single -->

@@ -10,7 +10,7 @@
 
     <meta charset="utf-8">
     <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
-    <title>Smk Muhammadiyah 1 Genteng</title>
+    <title>SMK Muhammadiyah 1 Genteng</title>
     <meta name="author" content="themesflat.com">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -153,11 +153,11 @@
                                 </div>
                                 <div class="accrodion">
                                     <div class="accrodion-title">
-                                        <label for="" class="youtube"><i class="fab fa-youtube"></i></label>
                                         <h4>Youtube :</h4>
                                     </div>
                                     <div class="accrodion-content">
                                         <div class="inner">
+                                            <label for="" class="youtube"><i class="fab fa-youtube"></i></label>
                                             <p>{{ $i->facebook }}</p>
                                         </div><!-- /.inner -->
                                     </div>

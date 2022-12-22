@@ -19,21 +19,17 @@
 
     <link rel="stylesheet" type="text/css" href="{{ asset('landing/html/bidzend/assets/css/responsive.css') }}">
 
+
+    <link rel="shortcut icon" href="{{ asset('landing/html/bidzend/assets/icon/muhilog.png') }}">
+    <link rel="apple-touch-icon-precomposed" href="{{ asset('landing/html/bidzend/assets/icon/muhilog.png') }}">
     <link rel="shortcut icon" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
     <link rel="apple-touch-icon-precomposed" href="{{ asset('landing/html/bidzend/assets/images/icon/muhi.png') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&amp;display=swap">
-    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/animate.css') }}">
-    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap-datepicker.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/bootstrap-select.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/fontawesome-all.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/hover-min.css') }}">
-    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/swiper.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/jquery.mCustomScrollbar.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/magnific-popup.css') }}">
-    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/owl.carousel.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/owl.theme.default.min.css') }}">
+
+
+
 
     <!-- Template Styles -->
     <link rel="stylesheet" href="{{ asset('landingppdb/ppdb/style/assets/css/style.css') }}">
@@ -67,35 +63,39 @@
                     </div>
                 </div>
             </section>
-            <section class="service-one">
+            <div id="portfolio">
                 <div class="container">
-                    <div class="block-title text-center">
-                        <h3>Fasilitas Sekolah<br> <span>SMK Muhammadiyah 1 Genteng</span></h3>
-                    </div><!-- /.block-title text-center -->
-                    <div class="row high-gutters">
-                        @foreach ($q as $y )
-                        <div class="col-lg-6 col-md-12 wow fadeInLeft" data-wow-duration="1500ms">
-                            <div class="service-one__single">
-                                <div class="service-one__icon">
-                                    <div class="service-one__icon-inner">
-                                        <img class="zoom" src="{{ asset('fotomahasiswa/' . $y->foto) }}" alt="" style="width: 250px; height:130px;">
-                                    </div><!-- /.service-one__icon-inner -->
-                                </div><!-- /.service-one__icon -->
-                                <div class="service-one__content">
-                                    <!-- <a href="/detailfoto/{{ $y->id }}"> -->
-                                        <h3>{{$y->judul_fasilitas}}</h3>
-                                    <!-- </a> -->
-                                    <p>{!!$y->deskripsi!!}</p>
-                                </div><!-- /.service-one__content -->
-                            </div><!-- /.service-one__single -->
-                        </div><!-- /.col-lg-6 col-md-12 -->
-                        @endforeach
-                        <div class="col-md-12">
-                            {!! $q->links() !!}
+                  <div class="cs-section__heading cs-style1 text-center">
+                    <h2 style="margin-top: 30px;" class="cs-section__title wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">Fasilitas Sekolah</h2>
+                    <div class="cs-height__25 cs-height__lg__15"></div>
+                  </div>
+                  <div class="cs-height__70 cs-height__lg__50"></div>
+                  <div class="row">
+                    @foreach ($q as $y )
+                    <div class="col-lg-4 col-sm-6">
+                      <a href="#" class="cs-portfolio cs-style1">
+                        <img src="{{ asset('fotomahasiswa/' . $y->foto) }}" alt="" style="width:366px; height:368px;">
+                        <div class="cs-portfolio__info">
+                          <div class="cs-portfolio__info__up">
+                            <h2 class="cs-portfolio__title">{{ $y->judul_fasilitas }}</h2>
+                            <div class="cs-portfolio__subtitle" style="color: white;">{!! $y->deskripsi !!}</div>
+                          </div>
+                          <div class="cs-portfolio__info__down">
+                            
+                          </div>
+                          <div class="cs-portfolio__info__bg"></div>
                         </div>
-                    </div><!-- /.row -->
-                </div><!-- /.container -->
-            </section><!-- /.service-one -->
+                      </a>
+                      <div class="cs-height__30 cs-height__lg__30"></div>
+                    </div><!-- .col -->
+                    @endforeach
+                    </div><!-- .col -->
+                  </div>
+                 
+                </div>
+              </div>
+              <div class="cs-height__130 cs-height__lg__70"></div>
+        
         </div>
     </div>
     @include('koneksi.footer')

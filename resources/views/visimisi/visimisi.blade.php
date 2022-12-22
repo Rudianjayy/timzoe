@@ -92,14 +92,6 @@
                         </center>
                     </div><!-- /.blog-details__main -->
                     @endforeach
-                    <div class="blog-details__meta" style="margin-right: 400px;">
-                        <h4 style="margin-left: 260px;">Bagikan</h4>
-                        <div class="blog-details__social">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-google-plus-g"></i></a>
-                        </div><!-- /.blog-details__social -->
-                    </div><!-- /.blog-details__meta -->
                 </div><!-- /.col-lg-8 -->
                 <div class="col-lg-4">
                     <div class="sidebar sidebar__right">

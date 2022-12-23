@@ -83,7 +83,7 @@
                                 </div>
                                 <div class="blog-one__content">
                                     <div class="blog-one__meta">
-                                        <h4>{{$d->judul}}</h4>
+                                        <h4 style="font-size: 15px; font-weight:500">{{$d->judul}}</h4>
                                     </div><!-- /.blog-one__meta -->
                                     <p>{{$d->created_at}}</p>
                                     <p style="overflow:hidden; text-overflow:ellipsis; width:330px; height:60px; position:relative; margin-bottom:20px; -webkit-line-clamp: 2; -webkit-box-orient: vertical; display: -webkit-box; word-break: break-word;">{{$d->deskripsi_muhinews}}</p>

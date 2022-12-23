@@ -20,6 +20,7 @@ return new class extends Migration
             $table->bigInteger('biaya');
             $table->string('jadwal_mulai');
             $table->string('jadwal_ditutup');
+            $table->string('tanggal_pengumuman');
             $table->timestamps();
         });
     }

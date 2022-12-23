@@ -84,34 +84,7 @@
                             <img src="{{ asset('fotomahasiswa/' . $blog->foto) }}" class="img-fluid" alt="" style="width: 700px; height:360px;">
                             <p>{!!$blog->deskripsi_detail!!}</p>
                         </div><!-- /.comment-one -->
-                        <div class="contact-two__form-wrap">
-                            <h3>Leave a Comment</h3>
-
-                            <form action="http://ashik.templatepath.net/inovex-html-files/assets/inc/sendemail.php" class="contact-one__form">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <input type="text" placeholder="Your Name*">
-                                    </div><!-- /.col-md-6 -->
-                                    <div class="col-md-6">
-                                        <input type="text" placeholder="Email*">
-                                    </div><!-- /.col-md-6 -->
-                                    <div class="col-md-6">
-                                        <input type="text" placeholder="Phone">
-                                    </div><!-- /.col-md-6 -->
-                                    <div class="col-md-6">
-                                        <input type="text" placeholder="Subject">
-                                    </div><!-- /.col-md-6 -->
-                                    <div class="col-md-12">
-                                        <textarea name="message" placeholder="Massage"></textarea><!-- /# -->
-                                    </div><!-- /.col-md-12 -->
-                                    <div class="col-md-12 text-left">
-                                        <button type="submit" class="thm-btn contact-one__btn">Send Now</button>
-                                    </div><!-- /.col-md-12 -->
-                                </div><!-- /.row -->
-                            </form><!-- /.contact-one__form -->
-
-                        </div><!-- /.contact-two__form-wrap -->
-
+                    
                     </div><!-- /.col-lg-8 -->
                     <div class="col-lg-4">
                         <div class="sidebar sidebar__right">
@@ -143,19 +116,7 @@
                                     @endforeach
                                 </div><!-- /.sidebar__post-wrap -->
                             </div><!-- /.sidebar__single -->
-                            <div class="sidebar__single sidebar__tags">
-                                <h3 class="sidebar__title">Tags</h3>
-                                <div class="sidebar__tags-wrapper">
-                                    <a href="#">Marketing</a>
-                                    <a href="#">Business</a>
-                                    <a href="#">Digital</a>
-                                    <a href="#">App Design</a>
-                                    <a href="#">Web Desing</a>
-                                    <a href="#">Optimization</a>
-                                    <a href="#">Social</a>
-                                    <a href="#">SMM</a>
-                                </div><!-- /.sidebar__tags-wrapper -->
-                            </div><!-- /.sidebar__single -->
+                           
                         </div><!-- /.sidebar -->
                     </div><!-- /.col-lg-4 -->
                 </div><!-- /.row -->

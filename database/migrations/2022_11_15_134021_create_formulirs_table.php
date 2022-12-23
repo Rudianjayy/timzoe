@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('id_user');
             $table->string('nama_peserta');
-            $table->enum('jeniskelamin', ['laki-laki','perempuan']);
+            $table->enum('tambah', ['laki-laki','perempuan']);
             $table->string('tempat_lahir');
             $table->string('tanggal_lahir');
             $table->string('agama');
@@ -39,6 +39,7 @@ return new class extends Migration
             $table->string('jurusan');
             $table->string('status')->nullable();
             $table->string('barcode');
+            $table->foreignId('tanggal_pengumuman')->nullable();
             $table->timestamps();
         });
     }

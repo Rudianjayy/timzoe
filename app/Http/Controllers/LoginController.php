@@ -7,7 +7,7 @@ use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
-use GrahamCampbell\ResultType\Success;
+use GrahamCampbell\ResultType\success;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 
@@ -55,12 +55,12 @@ class LoginController extends Controller
             'remember_token' => Str::random(60),
 
         ]);
-        return redirect('/login')->with('success','Berhasil daftar!');
+        return redirect('/login')->with('toast_success','Berhasil daftar!');
     }
 
     public function logout(){
         Auth::logout();
-        return redirect('login')->with('success', 'Anda berhasil logout!');
+        return redirect('login')->with('toast_success', 'Anda berhasil logout!');
     }
 
 
@@ -174,7 +174,7 @@ class LoginController extends Controller
 
 
 
-
+ 
 
 
 

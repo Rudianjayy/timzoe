@@ -12,6 +12,7 @@
         @include('layout.css')
         <title>Admin - Formulir</title>
         <link rel="stylesheet" href="{{ asset('dist/css/lightbox.css') }}">
+
     </head>
 
     <body>
@@ -39,17 +40,21 @@
                                 <div class="col-xl-12 col-md-12 col-sm-12 col-12">
                                     <h4>Formulir Pendaftaran yang Pending</h4>
                                 </div>
-                                <div>
+                                <div style="margin-left: 32px; margin-bottom:7px;">
                                     {{-- <a href="/tambahformulir" class="btn btn-primary "
                                         id="kt_account_profile_details_submit" style="margin-left: 30px;">Tambah
                                         +</a> --}}
 
-                                        <a href="#" class="btn btn-danger" id="hapusSemua" style="margin-left: 30px;">Hapus Pilihan</a>
+                                    {{-- <a href="#" class="btn btn-danger" id="hapusSemua" style="margin-left: 30px;">Hapus Pilihan</a> --}}
+
+                                    <button id="diterima" class="btn btn-success">Setujui</button>
+                                    <button id="ditolak" class="btn btn-danger">Ditolak</button>
                                 </div>
                             </div>
                         </div>
                         <div class="widget-content widget-content-area">
                             <div class="table-responsive mb-4">
+<<<<<<< HEAD
                                 <table id="ecommerce-product-list" class="table  table-bordered">
                                     <thead>
                                         <tr>
@@ -127,13 +132,45 @@
                                                             {!! QrCode::size(100)->generate($i->nisn) !!}
                                                             {{-- <p>Scan me to return to the original page.</p> --}}
                                                         </div>
+=======
+                                <form id="form" action="{{ route('test') }}" method="POST">
+                                    @csrf
+                                    <input type="hidden" name="status" id="status" value="">
+                                    <table id="ecommerce-product-list" class="table  table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-center" scope="col"><input type="checkbox"
+                                                        id="chkCheckAll"></th>
+                                                <th class="text-center" scope="col">No</th>
+                                                <th class="text-center" scope="col">Nama Peserta</th>
+                                                <th class="text-center" scope="col">NISN</th>
+                                                <th class="text-center" scope="col">Detail Data</th>
+                                                <th class="text-center" scope="col">Status</th>
+                                                {{-- <th class="text-center" scope="col">Aksi</th> --}}
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @php
+                                                $no = 1;
+                                            @endphp
+                                            @foreach ($data4 as $i)
+                                                <tr id="sid{{ $i->id }}">
+                                                    <td class="text-center"><input type="checkbox" name="ids[]"
+                                                            class="checkBoxClass" value="{{ $i->id }}"></td>
+                                                    <td class="text-center">{{ $no++ }}</td>
+                                                    <td class="text-center">{{ $i->nama_peserta }}</td>
+                                                    <td class="text-center">{{ $i->nisn }}</td>
+                                                    <td class="text-center">
+                                                        <a class="btn btn-outline-primary"
+                                                            href="/detailformuliradmin/{{ $i->id }}">Detail
+                                                            Pendaftar</a>
                                                     </td>
-                                                @else
-                                                    <td></td>
-                                                @endif
-                                                <td><span class="badge badge-pills outline-badge-warning">{{ $i->status }}</span></td>
+                                                    <td class="text-center"><span
+                                                            class="badge badge-pills outline-badge-warning">{{ $i->status }}</span>
+>>>>>>> 878269c8e64252dea53d97fcbc3b495bcdf84a03
+                                                    </td>
 
-                                                @if ($i->status == 'pending')
+                                                    {{-- @if ($i->status == 'pending')
                                                     <td class="align-center">
                                                         <ul class="table-controls">
                                                             <form action="/setuju/{{ $i->id }}" method="POST">
@@ -156,80 +193,55 @@
                                                             </form>
                                                         </ul>
                                                     </td>
-                                                @endif
-                                            </tr>
-                                        @endforeach
-                                    </tbody>
-                                </table>
+                                                @endif --}}
+                                                </tr>
+                                            @endforeach
+                                        </tbody>
+                                    </table>
+                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+
         </div>
 
     </body>
     @include('layout.script')
+
     <script src="{{ asset('dist/js/lightbox-plus-jquery.min.js') }}"></script>
     <script>
         @if (Session::has('success'))
             toastr.success("{{ Session::get('success') }}")
         @endif
     </script>
-    <script>
-        $('.delete').click(function() {
-            var id = $(this).attr('data-id');
-            var nama = $(this).attr('data-nama');
 
 
-            swal({
-                    title: "Apa kamu yakin ingin menghapus data ini?",
-                    text: "Kamu akan menghapus data dengan album  " + nama + "! ",
-                    icon: "warning",
-                    buttons: true,
-                    dangerMode: true,
-                })
-                .then((willDelete) => {
-                    if (willDelete) {
-                        window.location = "/deleteformulir/" + id + ""
-                        swal("Data berhasil dihapus!", {
-                            icon: "success",
-                        });
-                    } else {
-                        swal("Data tidak jadi dihapus!");
-                    }
-                });
-        });
-    </script>
+
 
     <script>
-        $(function(e){
-            $("#chkCheckAll").click(function(){
-                $(".checkBoxClass").prop('checked',$(this).prop('checked'));
+        $(function(e) {
+            $("#chkCheckAll").click(function() {
+                $(".checkBoxClass").prop('checked', $(this).prop('checked'));
             });
-
-            $("#hapusSemua").click(function(e){
-                e.preventDefault();
-                var allids = [];
-
-                $("input:checkbox[name=ids]:checked").each(function(){
-                    allids.push($(this).val());
-                });
-
-
-                $.ajax({
-                    url:"{{ route('student.deleteSelected') }}",
-                    type:"DELETE",
-                    data:{
-                        _token:$("input[name=_token]").val(),
-                        ids:allids
-                    },
-                    success:function(response){
-                        $.each(allids,function(key,val){
-                            $("#sid"+val).remove();
-                        })
-                    }
-                });
+            $('#diterima').click(function() {
+                var k = window.confirm('apakah anda yakin ingin menerima?')
+                if(k){
+                    
+                    $('#status').val('diterima')
+                    $('#form').submit()
+                }
+            })
+            $('#ditolak').click(function() {
+                var k = window.confirm('apakah anda yakin ingin menolak?')
+                if(k){
+                    
+                    $('#status').val('ditolak')
+                $('#form').submit()
+                }
+               
             })
         });
     </script>

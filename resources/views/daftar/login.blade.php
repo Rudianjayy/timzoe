@@ -97,10 +97,12 @@
 
     {{-- @include('layout.validasi') --}}
 
-    {{-- @include('sweetalert::alert') --}}
 
+    @include('sweetalert::alert')
+    
     @include('layout.script')
 
+   
 
 
     <script>
@@ -122,5 +124,7 @@
         toastr.success("{{ Session::get('success') }}")
     @endif
 </script>
+
+
 
 </html>

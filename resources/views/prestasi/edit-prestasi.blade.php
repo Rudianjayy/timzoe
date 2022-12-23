@@ -30,22 +30,13 @@
                                     @enderror
                                 </div>
 
-                                <div style="padding-top:60px;">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="card">
-                                                    <div class="card-header">
-                                                        Judul Prestasi
-                                                    </div>
-                                                    <div class="card-body">
-
-                                                        <textarea name="judul_prestasi" id="mytextarea">{!! $data->judul_prestasi !!}</textarea>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Judul Prestasi :</label>
+                                    <input type="text" name="judul_prestasi" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" value="{{ $data->judul_prestasi }}">
+                                    @error('judul_prestasi')
+                                        <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
                                 </div>
 
                                 <div style="padding-top:60px;">

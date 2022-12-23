@@ -51,6 +51,7 @@
                                             <th scope="col">Biaya</th>
                                             <th scope="col">Tanggal Mulai</th>
                                             <th scope="col">Tanggal Ditutup</th>
+                                            <th scope="col">Tanggal Pengumuman</th>
                                             <th scope="col">Aksi</th>
                                         </tr>
                                     </thead>
@@ -67,6 +68,7 @@
                                                 <td>Rp.{{ number_format($d['biaya'], 2, '.', '.') }}</td>
                                                 <td>{{ $d->jadwal_mulai }}</td>
                                                 <td>{{ $d->jadwal_ditutup }}</td>
+                                                <td>{{ $d->tanggal_pengumuman }}</td>
 
 
                                                 <td class="align-center">

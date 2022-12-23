@@ -1884,8 +1884,8 @@ blockquote .author::before {
 }
 
 .sc-heading.style-2 .content-right .sc-button {
-    margin-top: 17px;
-    padding: 17px 38px;
+    margin-top: 0px;
+    padding: 10px 38px;
 }
 
 .sc-heading.style-2 .content-right .sc-button span {

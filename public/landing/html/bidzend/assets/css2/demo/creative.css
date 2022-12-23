@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;display=swap");
+.cs-primary__font,
+.form-submit #submit,
+.comment-list .fn,
+.comment-list .comment-meta,
+.cs-counter__number,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Playfair Display', serif; }
+
+body {
+  background-color: #3a125a;
+  color: #f2f2f2; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.cs-list.cs-style1,
+.cs-btn.cs-style2,
+.cs-btn.cs-style2.cs-type2,
+.cs-post.cs-style1 .cs-post__title a:hover,
+.cs-post__meta.cs-style1 a:hover,
+.cs-post__meta.cs-style1 i,
+.cs-sidebar__item.widget_categories a:hover,
+.cs-sidebar__item.widget_archive a:hover,
+.cs-sidebar__item.widget_pages a:hover,
+.cs-sidebar__item.widget_meta a:hover,
+.cs-sidebar__item.widget_nav_menu a:hover,
+.cs-recent__posts .cs-recent__post__title a:hover,
+.cs-portfolio__details ul strong,
+.comment-list .fn,
+.comment-list .comment-meta,
+.comment-list .reply a,
+.comment-list .reply a:hover,
+.comment-list .fn a:hover,
+.comment-list .comment-meta a:hover {
+  color: #fff; }
+
+.cs-btn.cs-style2.cs-type2:hover,
+.cs-post.cs-style1 .cs-post__title a:hover,
+.cs-post__meta.cs-style1 a:hover,
+.cs-post__meta.cs-style1 i,
+.cs-sidebar__item.widget_categories a:hover,
+.cs-sidebar__item.widget_archive a:hover,
+.cs-sidebar__item.widget_pages a:hover,
+.cs-sidebar__item.widget_meta a:hover,
+.cs-sidebar__item.widget_nav_menu a:hover,
+.cs-recent__posts .cs-recent__post__title a:hover,
+.comment-list .reply a:hover,
+.comment-list .fn a:hover,
+.comment-list .comment-meta a:hover {
+  opacity: 0.7; }
+
+.cs-footer.cs-style1.cs-color2 {
+  background-color: #1a0828; }
+
+.cs-nav .cs-nav__list a {
+  color: #3a125a; }
+
+.cs-page__head.cs-style1,
+.cs-text__box__with__counter.cs-color1,
+.cs-cta.cs-style1.cs-color2,
+.cs-icon__box.cs-style1 .cs-icon__box__in,
+.cs-post.cs-style1,
+.tagcloud a,
+ul.page-numbers .page-numbers,
+.cs-btn.cs-style1.cs-color1,
+.rt-comment__wrapper,
+.comment-respond {
+  background: #1C1028; }
+
+.comment-list .comment-meta:before {
+  background-color: rgba(255, 255, 255, 0.7); }
+
+.cs-portfolio__details ul {
+  background: rgba(28, 16, 40, 0.2); }
+
+.cs-post.cs-style1,
+.rt-comment__wrapper,
+.comment-respond {
+  box-shadow: none; }
+
+.cs-icon__box.cs-style1 .cs-icon__box__in,
+.tagcloud a {
+  border-color: #1C1028; }
+
+.tagcloud a:hover,
+ul.page-numbers .page-numbers.current {
+  color: #1C1028;
+  border-color: #fff;
+  background-color: #fff; }
+
+.cs-icon__box.cs-style1 .cs-icon__box__icon svg {
+  fill: #5cbe2d; }
+
+.cs-icon__box.cs-style1:hover .cs-icon__box__btn__icon,
+.cs-list.cs-style1 li > i {
+  color: #5cbe2d; }
+
+.cs-btn.cs-style1.cs-color3:hover {
+  color: #1C1028; }
+
+.cs-form.cs-style2 .cs-form__field {
+  background-color: transparent;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.4); }
+  .cs-form.cs-style2 .cs-form__field:focus {
+    border-color: #fff; }
+
+.cs-btn.cs-style1.cs-color1:hover {
+  background-color: #fff;
+  border-color: #fff;
+  color: #1C1028; }
+
+.cs-btn.cs-style1.cs-color2 {
+  border-color: #fff;
+  color: #fff; }
+  .cs-btn.cs-style1.cs-color2:hover {
+    background-color: #fff;
+    color: #1C1028; }
+
+.cs-parallax.cs-style1:not(.cs-footer) .cs-parallax__shape.cs-position5.cs-type1 svg path:first-child {
+  stroke: rgba(255, 255, 255, 0.1); }
+.cs-parallax.cs-style1:not(.cs-footer) .cs-parallax__shape.cs-position5.cs-type1 svg path:last-child {
+  fill: rgba(255, 255, 255, 0.1); }
+
+.cs-parallax.cs-style8:not(.cs-footer) .cs-parallax__shape.cs-position1 svg path,
+.cs-parallax.cs-style8:not(.cs-footer) .cs-parallax__shape.cs-position2 svg path,
+.cs-parallax.cs-style9:not(.cs-footer) .cs-parallax__shape.cs-position1 svg path,
+.cs-parallax.cs-style9:not(.cs-footer) .cs-parallax__shape.cs-position2 svg path {
+  fill: rgba(255, 255, 255, 0.1); }
+
+/*# sourceMappingURL=creative.css.map */

@@ -102,7 +102,6 @@
                                 <p>
                                     {{ $dp->deskripsi_slider }}
                                 </p>
-
                             </div>
                         </div>
                         @endforeach

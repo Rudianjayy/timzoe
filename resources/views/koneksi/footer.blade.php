@@ -44,8 +44,7 @@
                         @foreach ($link as $pp)
                             <li><a href="{{ $pp->link }}">{{ $pp->judul }}</a></li>
                         @endforeach
-
-                        <li><a href="#">PPDB</a></li>
+                        <li><a href="/pendaftaran">PPDB</a></li>
 
                     </ul>
                 </div>

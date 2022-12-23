@@ -61,6 +61,14 @@
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Tanggal Pengumuman :</label>
+                                    <input type="date" name="tanggal_pengumuman" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp">
+                                    @error('tanggal_pengumuman')
+                                        <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
 
                                 <button type="submit" class="btn btn-primary">Submit</button>
                                 <a href="/adminbiaya" class="btn btn-danger">Kembali</a>

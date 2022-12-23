@@ -1,5 +1,7 @@
 @extends('layout.main')
 
+
+
 @section('content')
 
     <head>
@@ -41,8 +43,10 @@
                                         <p>Biodata</p>
                                     </div>
                                     <div class="f1-step">
-                                        <div class="f1-step-icon"><i class="fa fa-home"></i></div>
-                                        <p>Alamat</p>
+                                        <div class="f1-step-icon"><i style="margin-top: 10px;
+                                            margin-left: 10px;
+                                            font-size: 19px;" class="flaticon-bulb"></i></div>
+                                        <p>Info</p>
                                     </div>
 
                                 </div>
@@ -96,7 +100,6 @@
                                             <option value="kristen">Kristen</option>
                                             <option value="hindu">Hindu</option>
                                             <option value="budha">Budha</option>
-                                            <option value="jawa">Jawa</option>
                                         </select>
                                         @error('agama')
                                             <div class="alert alert-danger">{{ $message }}</div>
@@ -291,29 +294,18 @@
 
 
                                 <!-- step 4 -->
+                                @foreach ($infoppdb as $i )
                                 <fieldset>
-                                    <h4>Sosial Media</h4>
-                                    <div class="form-group">
-                                        <label>Facebook</label>
-                                        <input type="text" name="facebook" placeholder="Facebook"
-                                            class="form-control">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Twitter</label>
-                                        <input type="text" name="twitter" placeholder="Twitter" class="form-control">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Google plus</label>
-                                        <input type="text" name="google_plus" placeholder="Google plus"
-                                            class="form-control">
-                                    </div>
+                                    <h4 style="margin-right:60px;" class="text-center">Info</h4>
+                                    <p>{!! $i->deskripsi_infoppdb !!}</p>
                                     <div class="f1-buttons">
                                         <button type="button" class="btn btn-warning btn-previous"><i
                                                 class="fa fa-arrow-left"></i> Sebelumnya</button>
                                         <button type="submit" class="btn btn-primary btn-submit"><i
-                                                class="fa fa-save"></i> Submit</button>
-                                    </div>
-                                </fieldset>
+                                            class="fa fa-save"></i> Kirim</button>
+                                        </div>
+                                    </fieldset>
+                                    @endforeach
                             </form>
 
                         </div>

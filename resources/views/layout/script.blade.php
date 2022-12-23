@@ -189,10 +189,13 @@
         });
     </script>
 
-<script src="{{ asset('admintemp/adminnew/riski/nopan/plugins/notification/toastr/toastr.min.js') }}"></script>
-<!-- END PAGE LEVEL PLUGINS -->
-<!--  BEGIN CUSTOM SCRIPTS FILE  -->
-<script src="{{ asset('admintemp/adminnew/riski/nopan/assets/js/ui-kit/notification/custom-toastr.js') }}"></script>
-<!--  END CUSTOM SCRIPTS FILE  -->    
+    <script src="{{ asset('admintemp/adminnew/riski/nopan/plugins/notification/toastr/toastr.min.js') }}"></script>
+    <!-- END PAGE LEVEL PLUGINS -->
+    <!--  BEGIN CUSTOM SCRIPTS FILE  -->
+    <script src="{{ asset('admintemp/adminnew/riski/nopan/assets/js/ui-kit/notification/custom-toastr.js') }}"></script>
+    <!--  END CUSTOM SCRIPTS FILE  -->    
+    <script src="{{ asset('admintemp/adminnew/riski/nopan/assets/js/custom.js') }}"></script>
 
+    
+   
 </body>

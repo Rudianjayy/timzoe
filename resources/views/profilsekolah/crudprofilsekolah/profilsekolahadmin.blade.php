@@ -82,12 +82,21 @@
                                                                 <i class="flaticon-edit"></i>
                                                             </a>
                                                         </li>
+<<<<<<< HEAD
                                                          <li>
                                                             <a href="/deleteprofilsekolah/{{ $q->id }}"
                                                                 data-toggle="tooltip" data-placement="top" title="Delete">
                                                                 <i class="flaticon-delete-5"></i>
                                                             </a>
                                                         </li>
+=======
+                                                            {{-- <li>
+                                                                <a href="/deleteprofilsekolah/{{ $q->id }}"
+                                                                    data-toggle="tooltip" data-placement="top" title="Delete">
+                                                                    <i class="flaticon-delete-5"></i>
+                                                                </a>
+                                                            </li>  --}}
+>>>>>>> 878269c8e64252dea53d97fcbc3b495bcdf84a03
                                                     </ul>
                                                 </td>
                                             </tr>

@@ -3,18 +3,20 @@
 namespace App\Http\Controllers;
 
 use App\Models\info;
+use App\Models\User;
 use App\Models\biaya;
 use App\Models\kontak;
 use App\Models\footeer;
 use App\Models\Payment;
 use App\Models\Formulir;
+use App\Models\infoppdb;
 use App\Models\Footeerdua;
+use App\Models\Pamfletppdb;
 use App\Models\syaratdaftar;
 use Illuminate\Http\Request;
 use App\Models\Carapendaftaran;
 use App\Models\Langkahpendaftaran;
 use App\Models\Deskripsipendaftaran;
-use App\Models\Pamfletppdb;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -122,9 +124,9 @@ class PpdbController extends Controller
                 ],
             ),
             'customer_details' => array(
-                // 'first_name' => $request->user_name,
-                // 'email' => $request->user_email,
-                // 'phone' => $request->user_telepon,
+                'first_name' => $request->user_name,
+                'email' => $request->user_email,
+                'phone' => $request->user_telepon,
             ),
         );
 
@@ -155,6 +157,10 @@ class PpdbController extends Controller
         $order->pdf_url = isset($json->pdf_url) ? $json->pdf_url : null;
 
         return $order->save() ? redirect(url('/bayaruser'))->with('alert-success', 'Berhasil Berlangganan') : redirect(url('/bayaruser'))->with('alert-failed', 'Terjadi Kesalahan');
+    }
+    public function historypembayaran(){
+        $pricing = Payment::all();  
+        return view('ppdb.formulir.historypembayaran', compact('pricing'));
     }
 
 
@@ -497,7 +503,29 @@ class PpdbController extends Controller
 
         return view('ppdb.formulir.formulir-user', compact('data4','status_pay'));
     }
+    public function history()
+    {
+        $pricing = Payment::where('id_user', Auth::user()->id)->get();
+        $status_pay = Payment::where('id_user',Auth::user()->id)->first();
 
+        return view('ppdb.formulir.history', compact('pricing','status_pay'));
+    }
+    public function detailformulir($id){
+        $fo =Formulir::findOrFail($id);
+        return view('ppdb.formulir.detailformulir',compact('fo'));
+    }
+    public function detailformuliradmin($id){
+        $data4 = Formulir::findOrFail($id);
+        return view('ppdb.formulir.detailformuliradmin',compact('data4'));
+    }
+    public function detailditerima($id){
+        $data4 = Formulir::findOrFail($id);
+        return view('ppdb.formulir.detail-formulir-diterima',compact('data4'));
+    }
+    public function detailformulirditolak($id){
+        $data4 = Formulir::findOrFail($id);
+        return view('ppdb.formulir.detailformulirditolak',compact('data4'));
+    }
 
     public function setuju(Request $request, $id)
     {
@@ -518,10 +546,13 @@ class PpdbController extends Controller
         return redirect()->back()->with('success', 'status berhasil diubah');
     }
 
-    public function tambahformulir()
+    public function tambahformulir(Request $request)
     {
+        $infoppdb = infoppdb::all();
         $status_pay = Payment::where('id_user', Auth::user()->id)->first();
-        return view('ppdb.formulir.tambah-formulir', compact('status_pay'));
+
+       
+        return view('ppdb.formulir.tambah-formulir', compact('status_pay','infoppdb'));
     }
 
     public function submitdata27(Request $request)
@@ -537,7 +568,7 @@ class PpdbController extends Controller
         //     'nokk' =>'required',
         //     'foto_kk' =>'required',
         //     'foto_bukti' =>'required',
-        //     'status' =>'required',
+        //     'status_anak' =>'required',
         //     'alamat_rumah' =>'required',
         //     'nama_ayah' =>'required',
         //     'nama_ibu' =>'required',
@@ -549,9 +580,10 @@ class PpdbController extends Controller
         //     'prestasi' =>'required',
         //     'ukuran_kaos' =>'required',
         //     'jurusan' =>'required',
-
-
         // ]);
+
+
+        $biaya = Payment::where('id_user', Auth::user()->id)->first();
         $data4 = Formulir::create([
             'id_user' => Auth::User()->id,
             'nama_peserta' => $request->nama_peserta,
@@ -576,6 +608,7 @@ class PpdbController extends Controller
             'ukuran_kaos' => implode(',', $request->ukuran_kaos),
             'jurusan' => $request->jurusan,
             'status' => 'pending',
+            'id_biaya' => $biaya -> id_biaya,
 
         ]);
 
@@ -613,8 +646,9 @@ class PpdbController extends Controller
     {
         $pricing = biaya::all();
         $status_pay = Payment::where('id_user',Auth::user()->id)->first();
+        $status_formulir = Formulir::where('id_user',Auth::user()->id)->first();
 
-        return view('ppdb.bayardaftar.bayar-user',compact('pricing','status_pay'));
+        return view('ppdb.bayardaftar.bayar-user',compact('pricing','status_pay','status_formulir'));
     }
 
 
@@ -643,6 +677,7 @@ class PpdbController extends Controller
             'penjelas' => $request->penjelas,
             'jadwal_mulai' => $request->jadwal_mulai,
             'jadwal_ditutup' => $request->jadwal_ditutup,
+            'tanggal_pengumuman' => $request->tanggal_pengumuman,
 
         ]);
 
@@ -652,7 +687,8 @@ class PpdbController extends Controller
 
     public function tambahbiaya()
     {
-        return view('ppdb.biaya.tambahbiaya');
+        $pengumum = Biaya::all();
+        return view('ppdb.biaya.tambahbiaya',compact('pengumum'));
     }
 
     public function submitprosesbiaya(Request $request)
@@ -663,11 +699,13 @@ class PpdbController extends Controller
             'penjelasan' => 'required',
             'jadwal_mulai' => 'required',
             'jadwal_ditutup' => 'required',
+            'tanggal_pengumuman' => 'required',
         ], [
             'gelombang.required' => 'Harus diisi',
             'penjelasan.required' => 'Harus diisi',
             'jadwal_mulai.required' => 'Harus diisi',
             'jadwal_ditutup.required' => 'Harus diisi',
+            'tanggal_pengumuman.required' => 'Harus diisi',
 
         ]);
         $data3 = biaya::create([
@@ -676,6 +714,7 @@ class PpdbController extends Controller
             'jadwal_mulai' => $request->jadwal_mulai,
             'jadwal_ditutup' => $request->jadwal_ditutup,
              'biaya' => $request->biaya,
+             'tanggal_pengumuman' => $request->tanggal_pengumuman,
             // dd($request->biaya)
 
         ]);
@@ -781,10 +820,10 @@ class PpdbController extends Controller
 
 
 
-    public function adminlangkah()
+    public function langkah()
     {
         $langkah = Langkahpendaftaran::all();
-        return view('ppdb.langkahpendaftaran.adminlangkah', compact('langkah'));
+        return view('ppdb.langkahpendaftaran.langkah', compact('langkah'));
     }
     public function tambahlangkah()
     {
@@ -804,7 +843,7 @@ class PpdbController extends Controller
             'judul_langkah' => $request->judul_langkah,
             'deskripsi_langkah' => $request->deskripsi_langkah,
         ]);
-        return redirect()->route('adminlangkah')->with('success', 'Data Berhasil Di Tambahkan');
+        return redirect()->route('langkah')->with('success', 'Data Berhasil Di Tambahkan');
     }
     public function editlangkah($id)
     {
@@ -818,14 +857,14 @@ class PpdbController extends Controller
             'judul_langkah' => $request->judul_langkah,
             'deskripsi_langkah' => $request->deskripsi_langkah,
         ]);
-        return redirect()->route('adminlangkah')->with('success', 'Data Berhasil Di Edit');
+        return redirect()->route('langkah')->with('success', 'Data Berhasil Di Edit');
     }
 
     public function deletelangkah($id)
     {
         $langkah = Langkahpendaftaran::find($id);
         $langkah->delete();
-        return redirect()->route('adminlangkah')->with('success', 'Data Berhasil Di Hapus');
+        return redirect()->route('langkah')->with('success', 'Data Berhasil Di Hapus');
     }
 
 
@@ -837,59 +876,58 @@ class PpdbController extends Controller
 
 
 
-
-    public function adminpamflet()
+    public function infoppdb()
     {
-        $pamflet = Pamfletppdb::all();
-        return view('ppdb.pamflet.admin-pamflet', compact('pamflet'));
+        $infoppdb = infoppdb::all();
+        return view('ppdb.infoppdb.infoppdb', compact('infoppdb'));
     }
-
-    public function tambahpamflet()
+    public function tambahinfoppdb()
     {
-        $pamflet = Pamfletppdb::all();
-        return view('ppdb.pamflet.tambah-pamflet', compact('pamflet'));
+        $infoppdb = infoppdb::all();
+        return view('ppdb.infoppdb.tambahinfoppdb', compact('infoppdb'));
     }
-    public function prosestambahpamflet(Request $request)
+    public function prosestambahinfoppdb(Request $request)
     {
         $this->validate($request, [
-            'foto_pamflet' =>'required|mimes:jpg,jpeg,bmp,gif,png,webp',
+            'deskripsi_infoppdb' => 'required',
         ], [
-            'foto_pamflet.required' =>'Harus diisi',
-            'foto_pamflet.mimes' =>'Harus jpg,jpeg,bmp,gif,png,webp',
+            'deskripsi_infoppdb' => 'harus diisi',
         ]);
-        $pamflet = Pamfletppdb::create([
-            'foto_pamflet' => $request->foto_pamflet,
+        $infoppdb = infoppdb::create([
+            'deskripsi_infoppdb' => $request->deskripsi_infoppdb,
         ]);
-        if ($request->hasFile('foto_pamflet')) {
-            $request->file('foto_pamflet')->move('fotomahasiswa/', $request->file('foto_pamflet')->getClientOriginalName());
-            $pamflet->foto_pamflet = $request->file('foto_pamflet')->getClientOriginalName();
-            $pamflet->save();
-        }
-        return redirect()->route('adminpamflet')->with('success', 'Data Berhasil Di Tambahkan');
+        return redirect()->route('infoppdb')->with('success', 'Data Berhasil Di Tambahkan');
     }
-    public function editpamflet($id)
+    public function editinfoppdb($id)
     {
-        $pamflet = Pamfletppdb::findOrFail($id);
-        return view('ppdb.pamflet.edit-pamflet', compact('pamflet'));
+        $infoppdb = infoppdb::findOrFail($id);
+        return view('ppdb.infoppdb.editinfoppdb', compact('infoppdb'));
     }
-    public function editprosespamflet(Request $request, $id)
+    public function proseseditinfoppdb(Request $request, $id)
     {
-        $pamflet = Pamfletppdb::find($id);
-        $pamflet->update([
-            'foto_pamflet' => $request->foto_pamflet,
+        $infoppdb = infoppdb::find($id);
+        $infoppdb->update([
+            'deskripsi_infoppdb' => $request->deskripsi_infoppdb,
         ]);
-        if ($request->hasFile('foto_pamflet')) {
-            $request->file('foto_pamflet')->move('fotomahasiswa/', $request->file('foto_pamflet')->getClientOriginalName());
-            $pamflet->foto_pamflet = $request->file('foto_pamflet')->getClientOriginalName();
-            $pamflet->save();
-        }
-        return redirect()->route('adminpamflet')->with('success', 'Data Berhasil Di Edit');
+        return redirect()->route('infoppdb')->with('success', 'Data Berhasil Di Edit');
     }
 
-    public function deletepamflet($id)
-    { 
-        $pamflet = Pamfletppdb::find($id);
-        $pamflet->delete();
-        return redirect()->route('adminpamflet')->with('success', 'Data Berhasil Di Hapus');
+    public function deleteinfoppdb($id)
+    {
+        $infoppdb = infoppdb::find($id);
+        $infoppdb->delete();
+        return redirect()->route('infoppdb')->with('success', 'Data Berhasil Di Hapus');
     }
+
+
+    // percobaan 
+    public function aksiTest(Request $request){
+        // dd($request);
+        foreach($request->ids as $id){
+            $siswa = Formulir::find($id);
+            $siswa->update(['status' => $request->status]);
+        }
+        return back();
+    }
+    // end percobaan 
 }

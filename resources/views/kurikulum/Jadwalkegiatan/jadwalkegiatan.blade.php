@@ -112,24 +112,7 @@
                                                 <td>{{ $d->tempat }}</td>
 
 
-                                                <td class="align-center">
-                                                    <ul class="table-controls">
-                                                        <li>
-                                                            <a href="/editjadwalkegiatan/{{ $d->id }}" data-toggle="tooltip"
-                                                                data-placement="top" title="Edit">
-                                                                <i class="flaticon-edit"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" class="delete fire"
-                                                                data-id="{{ $d->id }}"
-                                                                data-nama="{{ $d->namakegiatan }}" data-toggle="tooltip"
-                                                                data-placement="top" title="Delete">
-                                                                <i class="flaticon-delete-5"></i>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </td>
+                                             
                                             </tr>
                                         @endforeach
                                     </tbody>

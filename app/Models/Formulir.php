@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Biaya;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Formulir extends Model
 {
@@ -11,5 +12,9 @@ class Formulir extends Model
 
     protected $guarded = [];
 
-    
+    public function biayass(){
+        return $this->belongsTo(Biaya::class,'id_biaya', 'id');
+    }
+
 }
+ 
